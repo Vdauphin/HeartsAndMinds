@@ -167,6 +167,7 @@ class Params {
 		texts[]={"No","Yes", "Log only"}; 
 		default = 0; 
 	};
+<<<<<<< HEAD
 	class btc_p_engineer
     {
     //paramsArray[22]
@@ -174,5 +175,14 @@ class Params {
         values[]={0,1}; 
         texts[]={"No","Yes"}; 
         default = 1; 
+=======
+	class btc_p_marker
+    {
+    //paramsArray[22]
+        title = "Show Helicopter marker :";
+        values[]={0,1}; 
+        texts[]={"No","Yes"}; 
+        default = 0; 
+>>>>>>> patch-7
     };
 };
