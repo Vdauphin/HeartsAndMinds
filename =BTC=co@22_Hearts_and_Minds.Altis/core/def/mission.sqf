@@ -9,6 +9,7 @@ _info_chance = (paramsArray select 6);
 _p_rep = (paramsArray select 7);
 btc_p_set_skill  = if ((paramsArray select 9) == 0) then {false} else {true};
 btc_p_debug  = (paramsArray select 20);
+btc_p_engineer  = (paramsArray select 21);
 
 //btc_wounds_mod = isClass(configFile >> "cfgPatches" >> "BTC_wounds");
 btc_acre_mod = isClass(configFile >> "cfgPatches" >> "acre_main");
