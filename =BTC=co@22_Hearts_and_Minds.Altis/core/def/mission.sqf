@@ -448,7 +448,7 @@ btc_lift_HUD_y  = 0.825;// * safezoneH + safezoneY;
 
 //Mil
 btc_player_side           = west;
-btc_player_motorized = [btc_veh_1,btc_veh_2,btc_veh_3,btc_veh_4,btc_veh_5,btc_veh_6,btc_veh_7,btc_veh_8,btc_veh_9,btc_veh_10];
+btc_player_motorized = [btc_veh_1,btc_veh_2,btc_veh_3,btc_veh_4,btc_veh_5,btc_veh_6,btc_veh_7,btc_veh_8,btc_veh_9,btc_veh_10,btc_veh_11,btc_veh_12,btc_veh_13];
 
 switch (true) do 
 {
