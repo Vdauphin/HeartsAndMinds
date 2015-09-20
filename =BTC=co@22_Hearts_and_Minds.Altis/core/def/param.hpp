@@ -174,6 +174,7 @@ class Params {
         values[]={0,1}; 
         texts[]={"No","Yes"}; 
         default = 1; 
+	};
 	class btc_p_marker
     {
     //paramsArray[22]
