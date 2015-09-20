@@ -37,8 +37,14 @@ _marker setMarkerColor "ColorRed";
 if (_resp) then 
 {
 	sleep (_this select 2);
-	
-	deleteVehicle _veh;
+	if (200 > ((getPos _veh) distance _v_pos)) then 
+	{ 
+	deleteVehicle _veh; //remove werck if is too close to the initial spawn
+	} 
+	else 
+	{
+	_veh spawn {sleep 600;deleteVehicle _this;}; //keep werck
+	};
 
 	_veh = _v_type createVehicle _v_pos;
 	_veh setDir _v_dir;
