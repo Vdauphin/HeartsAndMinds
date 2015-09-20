@@ -45,3 +45,11 @@ _action = ["Repair_wreck", "Repair wreck", "", {[btc_create_object_point] spawn 
 //Re-deploy
 _action = ["fob_redeploy", "Re-deploy", "", {[] spawn btc_fnc_fob_redeploy}, {true}, {}, [], [0.4,0,0.4], 5] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
+
+//Side mission
+_action = ['SEN_DCG','Side','',{},{true}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+_action = ['Abort_side','Abort side mission','',{[] spawn btc_fnc_side_abort;},{(btc_side_assigned)}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;	
+_action = ['Request_side','Request side mission','',{[] spawn btc_fnc_side_request;},{(!(btc_side_assigned))}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;
