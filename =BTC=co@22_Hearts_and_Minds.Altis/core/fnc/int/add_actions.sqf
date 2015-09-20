@@ -46,6 +46,7 @@ _action = ["Repair_wreck", "Repair wreck", "", {[btc_create_object_point] spawn 
 _action = ["fob_redeploy", "Re-deploy", "", {[] spawn btc_fnc_fob_redeploy}, {true}, {}, [], [0.4,0,0.4], 5] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
 
+<<<<<<< HEAD
 //Side mission
 _action = ['SEN_DCG','Side','',{},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -53,3 +54,41 @@ _action = ['Abort_side','Abort side mission','',{[] spawn btc_fnc_side_abort;},{
 [player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;	
 _action = ['Request_side','Request side mission','',{[] spawn btc_fnc_side_request;},{(!(btc_side_assigned))}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;
+=======
+//Tow Hook
+waituntil{!isNil {btc_type_motorized}}; // wait for define.sqf  === Vdauphin
+_action1 = ["iniHook", "Hook", "", {btc_int_target = (_this select 0); btc_int_target spawn btc_fnc_log_hook;}, {(isNull ((_this select 0) getVariable ["tow",objNull]))}] call ace_interact_menu_fnc_createAction;
+_action2 = ["iniTow", "Tow", "", {btc_int_target = (_this select 0); btc_int_target spawn btc_fnc_log_tow;}, 
+{
+(isNull ((_this select 0) getVariable ["tow",objNull]) && (!isNull btc_log_vehicle_selected && {btc_log_vehicle_selected != (_this select 0)}) && ([(_this select 0),btc_log_vehicle_selected] call btc_fnc_log_can_tow))
+}] call ace_interact_menu_fnc_createAction;
+_action3 = ["iniunhook", "Unhook", "", {btc_int_target = (_this select 0); btc_int_target spawn btc_fnc_log_unhook;}, {(!isNull ((_this select 0) getVariable ["tow",objNull]))}] call ace_interact_menu_fnc_createAction;
+
+{
+if (!(_x iskindof "Air")) then 
+	{
+		[_x, 0, ["ACE_MainActions"], _action1] call ace_interact_menu_fnc_addActionToClass;
+		[_x, 0, ["ACE_MainActions"], _action2] call ace_interact_menu_fnc_addActionToClass;
+		[_x, 0, ["ACE_MainActions"], _action3] call ace_interact_menu_fnc_addActionToClass;
+	};
+} foreach btc_type_motorized;
+{
+if (!(_x iskindof "Air")) then 	
+	{
+		[_x, 0, ["ACE_MainActions"], _action1] call ace_interact_menu_fnc_addActionToClass;
+		[_x, 0, ["ACE_MainActions"], _action2] call ace_interact_menu_fnc_addActionToClass;
+		[_x, 0, ["ACE_MainActions"], _action3] call ace_interact_menu_fnc_addActionToClass;
+	};
+} foreach btc_civ_type_veh;
+_array = [];
+{
+_y=typeof _x;
+if (!(_y iskindof "Air") && !(_y in _array)) then 
+	{
+		_array = _array + [_y];
+		[_y, 0, ["ACE_MainActions"], _action1] call ace_interact_menu_fnc_addActionToClass;
+		[_y, 0, ["ACE_MainActions"], _action2] call ace_interact_menu_fnc_addActionToClass;
+		[_y, 0, ["ACE_MainActions"], _action3] call ace_interact_menu_fnc_addActionToClass;
+	};
+} foreach btc_player_motorized;
+>>>>>>> patch-6
