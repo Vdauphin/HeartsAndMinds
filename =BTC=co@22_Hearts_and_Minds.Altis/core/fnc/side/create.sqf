@@ -7,7 +7,7 @@ _side = btc_side_list_use select (floor random count btc_side_list_use);
 
 btc_side_list_use = btc_side_list_use - [_side];
 
-_side = 3;
+
 
 btc_side_aborted = false;
 btc_side_done = false;
