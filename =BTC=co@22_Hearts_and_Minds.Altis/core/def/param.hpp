@@ -169,7 +169,7 @@ class Params {
 	};
 	class btc_p_marker
     {
-    //paramsArray[21]
+    //paramsArray[22]
         title = "Show Helicopter marker :";
         values[]={0,1}; 
         texts[]={"No","Yes"}; 
