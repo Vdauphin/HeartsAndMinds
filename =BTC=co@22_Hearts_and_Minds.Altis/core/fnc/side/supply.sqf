@@ -31,7 +31,7 @@ _marker setmarkertype "hd_flag";
 _marker setmarkertext "Supplies";
 _marker setMarkerSize [0.6, 0.6];
 
-waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || count (nearestObjects [_pos, ["Land_Cargo20_red_F"], 30]) > 0)};
+waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || count (nearestObjects [_pos, [btc_supplies_mat], 30]) > 0)};
 
 {deletemarker _x} foreach [_area,_marker];
 
@@ -45,12 +45,12 @@ if (btc_side_aborted || btc_side_failed) exitWith
 
 [3,"btc_fnc_task_set_done",true] spawn BIS_fnc_MP;
 
-if (count (nearestObjects [_pos, ["Land_Cargo20_red_F"], 30]) > 0) then
+if (count (nearestObjects [_pos, [btc_supplies_mat], 30]) > 0) then
 {
 	_pos spawn
 	{
 		private "_obj";
-		_obj = (nearestObjects [_this, ["Land_Cargo20_red_F"], 30]) select 0;
+		_obj = (nearestObjects [_this, [btc_supplies_mat], 30]) select 0;
 		
 		waitUntil {sleep 5; ({_x distance _this < 300} count playableUnits == 0)};
 		

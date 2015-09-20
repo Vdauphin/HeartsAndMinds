@@ -267,6 +267,9 @@ btc_info_cache_def = _cache_info_def;
 btc_info_cache_ratio = _cache_info_ratio;
 btc_info_hideout_radius = 4000;
 
+//Supplies
+btc_supplies_mat ="B_Slingload_01_Ammo_F";
+
 //Log
 btc_construction_array =
 [
@@ -328,7 +331,7 @@ btc_construction_array =
 		],
 		[
 			//"Supplies"
-			"Land_Cargo20_red_F"
+			btc_supplies_mat
 		],
 		[
 			//FOB
@@ -381,7 +384,7 @@ btc_log_def_cc =
 	"B_UGV_01_rcws_F",4,
 	"B_UGV_01_F",4,
 	"Land_CargoBox_V1_F",0,
-	"Land_Cargo20_red_F",0,
+	btc_supplies_mat,0,
 	btc_fob_mat,0,
 	"Land_Cargo20_military_green_F",20,
 	"Land_Cargo40_military_green_F",40,
@@ -398,7 +401,7 @@ btc_log_def_rc =
 [
 	"Land_BagBunker_Small_F",5,
 	"Land_CargoBox_V1_F",9999,
-	"Land_Cargo20_red_F",10,
+	btc_supplies_mat,10,
 	btc_fob_mat,10,
 	"Land_Cargo20_military_green_F",20,
 	"Land_Cargo40_military_green_F",40
