@@ -320,6 +320,12 @@ btc_construction_array =
 			//"Ammobox"
 			"Box_NATO_Ammo_F",
 			"Box_NATO_Support_F",
+			"ACE_medicalSupplyCrate_advanced",
+			"ACE_medicalSupplyCrate",
+			"B_supplyCrate_F",
+			"B_CargoNet_01_ammo_F",
+			"ACE_Wheel",
+			"FlexibleTank_01_forest_F",
 			"Box_NATO_AmmoVeh_F"
 			
 		],
