@@ -45,6 +45,7 @@ _action = ["Repair_wreck", "Repair wreck", "", {[btc_create_object_point] spawn 
 //Re-deploy
 _action = ["fob_redeploy", "Re-deploy", "", {[] spawn btc_fnc_fob_redeploy}, {true}, {}, [], [0.4,0,0.4], 5] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
+<<<<<<< HEAD
 
 //Side mission
 _action = ['SEN_DCG','Side','',{},{true}] call ace_interact_menu_fnc_createAction;
@@ -90,3 +91,11 @@ if (!(_y iskindof "Air") && !(_y in _array)) then
 		[_y, 0, ["ACE_MainActions"], _action3] call ace_interact_menu_fnc_addActionToClass;
 	};
 } foreach btc_player_motorized;
+=======
+//Flag Teleport
+_action = ["Teleport", "Teleport", "", {[] spawn btc_fnc_fob_redeploy;}, {true}] call ace_interact_menu_fnc_createAction;
+[btc_fob_flag, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+// Mount FOB
+_action = ["Mount_FOB", "Mount FOB", "", {btc_int_target = (_this select 0); btc_int_target spawn btc_fnc_fob_create;}, { ((_this select 0) distance (getMarkerPos "btc_base") > 1000)}] call ace_interact_menu_fnc_createAction;
+[btc_fob_mat, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+>>>>>>> patch-5

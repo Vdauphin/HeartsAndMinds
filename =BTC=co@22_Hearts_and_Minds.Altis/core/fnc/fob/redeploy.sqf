@@ -22,7 +22,7 @@ createDialog "btc_fob_redeploy";
 waitUntil {dialog};
 
 _idc = 778;
-if (btc_p_redeploy_base) then {lbAdd [ _idc, "Base"];};
+lbAdd [ _idc, "Base"];
 
 {_index = lbAdd [ _idc, _x ];} foreach _fobs;
 
