@@ -32,7 +32,7 @@ _action = ["Search_intel", "Search for intel", "", {(_this select 0) spawn btc_f
 //IEDs
 _action = ["Check_IED", "Check for IED", "", {(_this select 0) spawn btc_fnc_ied_check_for;}, {true}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_type_ieds;		
-_action = ["Disarm_IED", "Disarm IED", "", {(_this select 0) spawn btc_fnc_ied_disarm;}, {((_this select 0) getVariable ["active",false] && {"ToolKit" in items player})}] call ace_interact_menu_fnc_createAction;
+_action = ["Disarm_IED", "Disarm IED", "", {(_this select 0) spawn btc_fnc_ied_disarm;}, {((_this select 0) getVariable ["active",false] && {"ACE_DefusalKit" in items player})}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_type_ieds;		
 
 //Log point
@@ -45,6 +45,7 @@ _action = ["Repair_wreck", "Repair wreck", "", {[btc_create_object_point] spawn 
 //Re-deploy
 _action = ["fob_redeploy", "Re-deploy", "", {[] spawn btc_fnc_fob_redeploy}, {true}, {}, [], [0.4,0,0.4], 5] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
+<<<<<<< HEAD
 
 //Side mission
 _action = ['SEN_DCG','Side','',{},{true}] call ace_interact_menu_fnc_createAction;
@@ -53,3 +54,5 @@ _action = ['Abort_side','Abort side mission','',{[] spawn btc_fnc_side_abort;},{
 [player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;	
 _action = ['Request_side','Request side mission','',{[] spawn btc_fnc_side_request;},{(!(btc_side_assigned))}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions","SEN_DCG"], _action] call ace_interact_menu_fnc_addActionToObject;
+=======
+>>>>>>> patch-3
