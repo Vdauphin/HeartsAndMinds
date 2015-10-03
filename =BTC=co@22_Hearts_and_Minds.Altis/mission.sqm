@@ -49,6 +49,7 @@ class Mission
 		"A3_Air_F_Heli_Light_01",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Structures_F_Mil_Flags",
+		"A3_Soft_F_Bootcamp_Offroad_01",
 		"a3_map_altis"
 	};
 	randomSeed=6599878;
@@ -826,7 +827,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=21;
+		items=23;
 		class Item0
 		{
 			position[]={8303.3174,76.190857,10075.396};
@@ -977,7 +978,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
-			text="btc_veh_10";
+			text="btc_helo_3";
 			init="this setVariable [""btc_dont_delete"",true]";
 		};
 		class Item14
@@ -1038,7 +1039,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			skill=0.60000002;
-			text="btc_veh_14";
+			text="btc_helo_2";
 			init="this setVariable [""btc_dont_delete"",true]";
 		};
 		class Item20
@@ -1049,6 +1050,29 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			skill=0.60000002;
+		};
+		class Item21
+		{
+			position[]={8346.6484,74.000488,10093.693};
+			azimut=325.379;
+			id=50;
+			side="EMPTY";
+			vehicle="B_G_Offroad_01_repair_F";
+			leader=1;
+			skill=0.60000002;
+			text="btc_veh_14";
+			init="this setVariable [""btc_dont_delete"",true];";
+		};
+		class Item22
+		{
+			position[]={8293.5859,76.316422,10095.834};
+			azimut=140.77901;
+			id=51;
+			side="EMPTY";
+			vehicle="B_MRAP_01_hmg_F";
+			skill=0.60000002;
+			text="btc_veh_10";
+			init="this setVariable [""btc_dont_delete"",true]";
 		};
 	};
 	class Markers
