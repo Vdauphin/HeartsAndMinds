@@ -1,1 +1,0 @@
-_this createVehicle [getpos btc_create_object_point select 0,getpos btc_create_object_point select 1,0];
