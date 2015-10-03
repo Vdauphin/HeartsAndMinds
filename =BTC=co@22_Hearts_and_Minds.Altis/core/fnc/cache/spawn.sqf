@@ -13,9 +13,7 @@ btc_cache_obj setPos btc_cache_pos;
 clearWeaponCargoGlobal btc_cache_obj;clearItemCargoGlobal btc_cache_obj;clearMagazineCargoGlobal btc_cache_obj;
 btc_cache_obj addEventHandler ["HandleDamage", btc_fnc_cache_hd_cache];
 
-if (btc_debug_log) then {
-	diag_log format ["CACHE SPAWNED: ID %1 POS %2",btc_cache_n,btc_cache_pos];
-};
+if (btc_debug_log) then {diag_log format ["CACHE SPAWNED: ID %1 POS %2",btc_cache_n,btc_cache_pos];};
 
 if (btc_debug) then {
 	player sideChat format ["Cache spawned in %1",btc_cache_pos];
@@ -24,5 +22,4 @@ if (btc_debug) then {
 	format ["%1", btc_cache_pos] setmarkertypelocal "mil_unknown";
 	format ["%1", btc_cache_pos] setMarkerTextLocal format ["Cache %1", btc_cache_n];
 	format ["%1", btc_cache_pos] setMarkerSizeLocal [0.8, 0.8];
-
 };

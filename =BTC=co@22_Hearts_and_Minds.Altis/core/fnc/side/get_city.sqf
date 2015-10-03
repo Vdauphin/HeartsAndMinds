@@ -1,4 +1,5 @@
-//{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
+
+private ["_useful","_city","_pos"];
 
 _useful = [];
 {if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
@@ -23,8 +24,7 @@ _city setVariable ["spawn_more",true];
 waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || !(_city getVariable ["occupied",false]))};
 
 
-if (btc_side_aborted || btc_side_failed) exitWith
-{
+if (btc_side_aborted || btc_side_failed) exitWith {
 	[6,"btc_fnc_task_fail",true] spawn BIS_fnc_MP;
 	btc_side_assigned = false;publicVariable "btc_side_assigned";
 };

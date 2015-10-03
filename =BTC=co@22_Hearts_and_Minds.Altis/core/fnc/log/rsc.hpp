@@ -25,7 +25,7 @@
 				sizeEx = 0.03;
 				colorBackground[] = {0, 0, 0, 0};
 				colorText[] = {1, 1, 1, 1};
-				text = "img\rsc\lift\igui_radar_air_ca.paa";
+				text = "core\img\rsc\lift\igui_radar_air_ca.paa";
 			};
 			class Img_Obj
 			{
@@ -42,7 +42,7 @@
 				sizeEx = 0.04;
 				colorBackground[] = {0, 0, 0, 0};
 				colorText[] = {1, 1, 1, 1};
-				text = "img\rsc\lift\obj.paa";
+				text = "core\img\rsc\lift\obj.paa";
 			};
 			class Pic_Obj
 			{

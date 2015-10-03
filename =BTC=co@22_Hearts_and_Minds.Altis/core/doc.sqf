@@ -72,7 +72,7 @@ The hideouts are the place where the Oplitas organize their movement.<br/> They 
 If you notice a lot of activity in an area, probably there is an hideout closeby.<br/>
 If you want to defeat the Oplitas tou need to destroy all their hideouts.<br/>
 Here an example of an hideout:<br/><br/>
-<img image='img\hideout.jpg' width='256' height='256'/><br/><br/>
+<img image='core\img\hideout.jpg' width='256' height='256'/><br/><br/>
 To destroy an hideout just place a satchel near the ammo box and blow it off!
 	"]
 ];
