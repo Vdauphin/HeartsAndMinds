@@ -11,6 +11,8 @@
 */
 //closeDialog 0;
 
+private ["_order","_unit","_gesture","_pos"];
+
 _order = _this select 0;
 _unit = objNull;
 if (count _this > 1) then {_unit = _this select 1;};

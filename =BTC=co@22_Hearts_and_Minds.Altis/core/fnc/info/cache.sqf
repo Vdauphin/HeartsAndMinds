@@ -1,18 +1,17 @@
 
+private ["_pos","_marker"];
+
 if (isNull btc_cache_obj) exitWith {};
 
-_pos = 
-[
+_pos = [
 	((btc_cache_pos select 0) + (random btc_cache_info - random btc_cache_info)),
 	((btc_cache_pos select 1) + (random btc_cache_info - random btc_cache_info))
 ];
 
-if !(_this select 0) then 
-{
+if !(_this select 0) then {
 	private "_axis";
 	_axis = getNumber (configfile >> "CfgWorlds" >> worldName >> "mapSize") / 2;
-	_pos = 
-	[
+	_pos = [
 		(_axis + (random (btc_cache_info + _axis))),
 		(_axis + (random (btc_cache_info + _axis)))
 	];

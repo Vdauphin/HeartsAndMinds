@@ -13,11 +13,3 @@ call compile preprocessFile "core\init_common.sqf";
 if (!isDedicated) then {
 	call compile preprocessFile "core\init_player.sqf";
 };
-
-if (btc_debug) then {
-	onMapSingleClick "if (vehicle player == player) then {player setpos _pos} else {vehicle player setpos _pos}";
-	player allowDamage false;
-	
-	btc_marker_debug_cond = true;
-	[] spawn btc_fnc_marker_debug;
-};

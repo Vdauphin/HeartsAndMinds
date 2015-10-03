@@ -56,7 +56,14 @@ if (count _data_units > 0) then {
 		
 		_trigger = createTrigger["EmptyDetector",getPos _city];
 		_trigger setTriggerArea[(_radius_x+_radius_y),(_radius_x+_radius_y),0,false];
-		_trigger setTriggerActivation["EAST","NOT PRESENT",false];
+		if (str(btc_enemy_side)=="GUER") then 
+        	{
+        		_trigger setTriggerActivation["GUER","NOT PRESENT",false];
+        	}
+		else 
+        	{
+        		_trigger setTriggerActivation["EAST","NOT PRESENT",false];
+        	};
 		_trigger setTriggerStatements ["this", format ["[%1] spawn btc_fnc_city_set_clear",(_this select 0)], ""];
 		_city setVariable ["trigger",_trigger];
 	
