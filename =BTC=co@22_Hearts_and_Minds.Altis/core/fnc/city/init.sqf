@@ -44,7 +44,7 @@ for "_i" from 0 to (count _locations - 1) do {
 		_trigger = createTrigger["EmptyDetector",getPos _city];
 		_trigger setTriggerArea[(_radius_x+_radius_y) + btc_city_radius,(_radius_x+_radius_y) + btc_city_radius,0,false];
 		_trigger setTriggerActivation["WEST","PRESENT",true];
-		_trigger setTriggerStatements ["this", format ["[%1] spawn btc_fnc_city_activate",_id], format ["[%1] spawn btc_fnc_city_de_activate",_id]];
+		_trigger setTriggerStatements ["this && !btc_db_is_saving", format ["[%1] spawn btc_fnc_city_activate",_id], format ["[%1] spawn btc_fnc_city_de_activate",_id]];
 		
 		if (btc_debug) then	{//_debug
 			private ["_marker"];

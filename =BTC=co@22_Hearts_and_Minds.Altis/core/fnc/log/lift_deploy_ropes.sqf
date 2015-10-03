@@ -1,5 +1,5 @@
 
-closeDialog 0;
+private "_heli";
 
 btc_ropes_deployed = true;
 btc_lifted = false;

@@ -1,14 +1,13 @@
 
+private ["_city","_pos","_roads","_marker","_veh_type","_veh"];
+
 _city = btc_city_all select (floor random count btc_city_all);
 
 _pos = [getPos _city, 100] call btc_fnc_randomize_pos;
 
 _roads = _pos nearRoads 300;
 
-if (count _roads > 0) then
-{
-	_pos = getPos (_roads select (floor random count _roads));
-};
+if (count _roads > 0) then {_pos = getPos (_roads select (floor random count _roads));};
 
 btc_side_aborted = false;
 btc_side_done = false;
@@ -44,8 +43,7 @@ waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || (_veh getHit "wheel_
 
 {deletemarker _x} foreach [_area,_marker];
 
-if (btc_side_aborted || btc_side_failed || !Alive _veh) exitWith
-{
+if (btc_side_aborted || btc_side_failed || !Alive _veh) exitWith {
 	[5,"btc_fnc_task_fail",true] spawn BIS_fnc_MP;
 	btc_side_assigned = false;publicVariable "btc_side_assigned";
 };
@@ -54,8 +52,7 @@ if (btc_side_aborted || btc_side_failed || !Alive _veh) exitWith
 
 [5,"btc_fnc_task_set_done",true] spawn BIS_fnc_MP;
 
-_veh spawn
-{
+_veh spawn {
 	
 	waitUntil {sleep 5; ({_x distance _this < 300} count playableUnits == 0)};
 	

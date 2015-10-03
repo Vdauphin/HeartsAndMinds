@@ -1,37 +1,25 @@
-private ["_key","_dir"];
-if (count _this > 1) then
-{
-	_key   = _this select 1;
-	_shift = _this select 2;
-	_ctrl  = _this select 3;
-	_alt   = _this select 4;
-	//player globalchat format ["%1 - %2",_key,_this];
-	switch (true) do
-	{
-		case (_key == 14) : {btc_log_place_end = true;};
-		case (_key == 30 && !_alt && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) - 0.1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) + 0.1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 32 && !_alt && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) + 0.1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) - 0.1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 31 && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) - 0.1,(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) + 0.1,(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 17 && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) + 0.1,(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) - 0.1,(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 44 && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) - 0.1];if (abs (((btc_log_place_central_pos) select 2) - ((getposATL btc_log_place_obj) select 2)) > btc_log_place_placement_area) then {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) + 0.1];};};
-		case (_key == 16 && !_ctrl && !_shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) + 0.1];if (abs (((btc_log_place_central_pos) select 2) - ((getposATL btc_log_place_obj) select 2)) > btc_log_place_placement_area) then {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) - 0.1];};};
-		case (_key == 30 && _alt && !_ctrl) : {_dir = getdir btc_log_place_obj;btc_log_place_obj setDir (_dir - 1);};
-		case (_key == 32 && _alt && !_ctrl) : {_dir = getdir btc_log_place_obj;btc_log_place_obj setDir (_dir + 1);};
-		case (_key == 46) : {if (btc_log_place_camera_cond) then {btc_log_place_camera_cond = false;} else {btc_log_place_camera_cond = true;};};
-		case (_key == 49) : {if (btc_log_place_camera_nvg) then {btc_log_place_camera_nvg = false;} else {btc_log_place_camera_nvg = true;};};	
+/*
+	16 Q
+	44 Z
+	30 A
+	32 D
+	45 X
+	46 C
+*/
+	
+private ["_key","_shift","_ctrl","_alt"];
+	
+_key   = _this select 1;
+_shift = _this select 2;
+_ctrl  = _this select 3;
+_alt   = _this select 4;
+	
+_turbo = if (_shift) then {1} else {0};
 
-		case (_key == 30 && !_alt && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) - 1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) + 1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 32 && !_alt && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) + 1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0) - 1,(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 31 && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) - 1,(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) + 1,(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 17 && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) + 1,(getposATL btc_log_place_obj select 2)];if ([btc_log_place_central_pos,btc_log_place_obj] call BIS_fnc_distance2D > btc_log_place_placement_area) then {player sideChat "Out of the placement zone!";btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1) - 1,(getposATL btc_log_place_obj select 2)];};};
-		case (_key == 44 && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) - 1];if (abs (((btc_log_place_central_pos) select 2) - ((getposATL btc_log_place_obj) select 2)) > btc_log_place_placement_area) then {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) + 1];};};
-		case (_key == 16 && !_ctrl && _shift) : {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) + 1];if (abs (((btc_log_place_central_pos) select 2) - ((getposATL btc_log_place_obj) select 2)) > btc_log_place_placement_area) then {btc_log_place_obj setpos [(getpos btc_log_place_obj select 0),(getpos btc_log_place_obj select 1),(getposATL btc_log_place_obj select 2) - 1];};};
-
-		case (btc_log_place_camera_cond && _key == 30 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 0) - 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [_n,btc_log_place_cam_rel_pos select 1,btc_log_place_cam_rel_pos select 2];};};
-		case (btc_log_place_camera_cond && _key == 32 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 0) + 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [_n,btc_log_place_cam_rel_pos select 1,btc_log_place_cam_rel_pos select 2];};};
-		case (btc_log_place_camera_cond && _key == 31 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 1) - 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [btc_log_place_cam_rel_pos select 0,_n,btc_log_place_cam_rel_pos select 2];};};
-		case (btc_log_place_camera_cond && _key == 17 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 1) + 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [btc_log_place_cam_rel_pos select 0,_n,btc_log_place_cam_rel_pos select 2];};};
-		case (btc_log_place_camera_cond && _key == 44 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 2) - 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [btc_log_place_cam_rel_pos select 0,btc_log_place_cam_rel_pos select 1,_n];};};
-		case (btc_log_place_camera_cond && _key == 16 && _ctrl) : {private ["_n"];_n = (btc_log_place_cam_rel_pos select 2) + 0.5;if !((abs _n) > btc_log_place_placement_area) then {btc_log_place_cam_rel_pos = [btc_log_place_cam_rel_pos select 0,btc_log_place_cam_rel_pos select 1,_n];};};
-	};
+switch (true) do {	
+	case (_key == 16) : {if (btc_log_placing_h > btc_log_placing_max_h) exitWith {true};btc_log_placing_h = btc_log_placing_h + 0.1 + (_turbo/2);btc_log_placing_obj attachTo [player,[0,btc_log_placing_d,btc_log_placing_h]];true};
+	case (_key == 44) : {if (btc_log_placing_h < - 2) exitWith {true};btc_log_placing_h = btc_log_placing_h - 0.1 - (_turbo/2);btc_log_placing_obj attachTo [player,[0,btc_log_placing_d,btc_log_placing_h]];true};
+	case (_key == 45) : {btc_log_placing_dir = btc_log_placing_dir + 0.5 + _turbo;btc_log_placing_obj setDir btc_log_placing_dir;true};
+	case (_key == 46) : {btc_log_placing_dir = btc_log_placing_dir - 0.5 - _turbo;btc_log_placing_obj setDir btc_log_placing_dir;true};
+	default {false};
 };
