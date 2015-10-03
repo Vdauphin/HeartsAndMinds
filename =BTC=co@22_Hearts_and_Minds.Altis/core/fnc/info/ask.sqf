@@ -33,7 +33,6 @@ switch (true) do {
 	case (_random >= 8) : {_info = "CACHE";};
 };
 
-
 switch (_info_type) do {
 	case "REAL" : {
 		switch (_info) do {

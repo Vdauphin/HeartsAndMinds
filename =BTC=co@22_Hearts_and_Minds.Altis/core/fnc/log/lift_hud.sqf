@@ -10,13 +10,12 @@ _array_hud = [_radar,_obj_img,_obj_pic,_arrow,_obj_name];
 {_x ctrlShow true;} foreach _array_hud;_obj_img ctrlShow false;
 _can_lift = false;
 
-_arrow_up   = "img\rsc\lift\arrow_up_ca.paa";
-_arrow_down = "img\rsc\lift\arrow_down_ca.paa";
-_complete   = "img\rsc\lift\objective_complete_ca.paa";
-_incomplete = "img\rsc\lift\objective_incomplete_ca.paa";
+_arrow_up   = "core\img\rsc\lift\arrow_up_ca.paa";
+_arrow_down = "core\img\rsc\lift\arrow_down_ca.paa";
+_complete   = "core\img\rsc\lift\objective_complete_ca.paa";
+_incomplete = "core\img\rsc\lift\objective_incomplete_ca.paa";
 
-while {(Alive player && vehicle player != player) && btc_log_hud} do
-{
+while {(Alive player && vehicle player != player) && btc_log_hud} do {
 	private ["_cargo"];
 	_array = [vehicle player] call btc_fnc_log_get_liftable;
 	_cargo_array = nearestObjects [vehicle player, _array, 30];
@@ -24,8 +23,7 @@ while {(Alive player && vehicle player != player) && btc_log_hud} do
 	if (count _cargo_array > 0 && driver (_cargo_array select 0) == player) then {_cargo_array set [0,0];_cargo_array = _cargo_array - [0];};
 	if (count _cargo_array > 0) then {_cargo = _cargo_array select 0;} else {_cargo = objNull;};
 	if (({_cargo isKindOf _x} count _array) > 0) then {_can_lift = true;} else {_can_lift = false;};
-	if (!isNull _cargo) then
-	{
+	if (!isNull _cargo) then {
 		_cargo_pos = getPosATL _cargo;
 		_rel_pos   = (vehicle player) worldToModel _cargo_pos;
 		_cargo_x   = _rel_pos select 0;
@@ -34,8 +32,7 @@ while {(Alive player && vehicle player != player) && btc_log_hud} do
 		_obj_img ctrlShow true;
 		_hud_x   = _cargo_x / 100;
 		_hud_y   = 0;
-		switch (true) do
-		{
+		switch (true) do {
 			case (_cargo_y < 0): {_hud_y = (abs _cargo_y) / 100};
 			case (_cargo_y > 0): {_hud_y = (0 - _cargo_y) / 100};
 		};

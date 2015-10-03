@@ -1,7 +1,6 @@
 _city = objNull;
 
-if (count _this > 0) then {_city = _this;} else 
-{
+if (count _this > 0) then {_city = _this;} else {
 	private ["_useful","_id"];
 	_useful = [];
 	{
@@ -34,8 +33,7 @@ _city setVariable ["ho",_hideout];
 _city setVariable ["ho_pos",_pos];
 _city setVariable ["ho_units_spawned",false];
 
-if (btc_debug) then 
-{
+if (btc_debug) then {
 	//Marker
 	_marker = createmarker [format ["btc_hideout_%1", _pos], _pos];
 	format ["btc_hideout_%1", _pos] setmarkertypelocal "mil_unknown";
@@ -44,10 +42,7 @@ if (btc_debug) then
 	(format ["loc_%1",_city getVariable "id"]) setMarkerColor "ColorRed";
 };
 
-if (btc_debug_log) then
-{
-	diag_log format ["btc_fnc_mil_create_hideout: _this = %1 ; POS %2 ID %3",_this,_pos,btc_hideouts_id];
-};
+if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_hideout: _this = %1 ; POS %2 ID %3",_this,_pos,btc_hideouts_id];};
 
 btc_hideouts_id = btc_hideouts_id + 1;
 btc_hideouts = btc_hideouts + [_hideout];

@@ -9,8 +9,8 @@ class Params {
 	class btc_p_en {
 	//paramsArray[1]
         title = "Enemy type:";
-		values[]={0,1}; 
-		texts[]={"Guerrilla (A3)","CAF"}; 
+        values[]={0,1,2}; 
+	    texts[]={"Guerrilla (A3)","CAF","AAF (A3)"};
 		default = 0; 
 	};
 	class btc_p_ied {
@@ -57,10 +57,10 @@ class Params {
 	};	
     class btc_p_redeploy {
 	//paramsArray[8]
-        title = "Allow re-deploy at base:";
+        title = "Allow re-deploy?";
 		values[]={0,1}; 
 		texts[]={"No","Yes"}; 
-		default = 0; 
+		default = 1; 
 	};
     class btc_p_set_skill {
 	//paramsArray[9]
@@ -152,5 +152,19 @@ class Params {
         values[]={0,1}; 
         texts[]={"No","Yes"}; 
         default = 0; 
+    };
+	class btc_p_load {
+    //paramsArray[22]
+        title = "Load the savegame (if available)";
+        values[]={0,1}; 
+        texts[]={"No","Yes"}; 
+        default = 1; 
+    };
+	class btc_p_rev {
+    //paramsArray[23]
+        title = "Revive time:";
+        values[]={0,60,120,180,240,300,600,900,1200,999999}; 
+        texts[]={"0","60","120","180","240","300","600","900","1200","999999"}; 
+        default = 600; 
     };
 };

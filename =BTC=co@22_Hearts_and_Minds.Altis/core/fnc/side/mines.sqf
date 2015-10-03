@@ -1,4 +1,5 @@
-//{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
+
+private ["_useful","_city","_pos","_area","_marker","_mines"];
 
 _useful = [];
 {if (_x getVariable ["type",""] != "NameLocal" && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
@@ -33,8 +34,7 @@ _marker setMarkerSize [0.6, 0.6];
 
 _mines = [];
 
-for "_i" from 1 to (5 + round random 5) do
-{
+for "_i" from 1 to (5 + round random 5) do {
 	private ["_type","_m_pos"];
 	_type = "ATMine";
 	if (random 1 > 0.6) then {_type = "APERSMine";};
@@ -47,8 +47,7 @@ waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || ({!isNull _x} count 
 
 {deletemarker _x} foreach [_area,_marker];
 
-if (btc_side_aborted || btc_side_failed) exitWith
-{
+if (btc_side_aborted || btc_side_failed) exitWith {
 	[4,"btc_fnc_task_fail",true] spawn BIS_fnc_MP;
 	btc_side_assigned = false;publicVariable "btc_side_assigned";
 	{if (!isNull _x) then {deleteVehicle _x}} foreach _mines;

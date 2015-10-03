@@ -1,15 +1,16 @@
 //[0,_ied,player]
+
+private ["_id","_target","_asker","_data"];
+
 _id = _this select 0;
 _target = _this select 1;
 _asker  = _this select 2;
 
 _data = [];
 
-switch (_id) do
-{
+switch (_id) do {
 	case 0 : {_data = _target getVariable ["active",true];};
-	case 1 : 
-	{
+	case 1 : {
 		private "_hd";
 		_hd = objNull;
 		{if (_x distance _asker < 3000) then {_hd = _x;};} foreach btc_hideouts;

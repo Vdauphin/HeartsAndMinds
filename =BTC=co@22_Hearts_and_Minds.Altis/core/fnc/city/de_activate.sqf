@@ -3,6 +3,8 @@ private ["_city","_radius_x","_radius_y","_radius","_has_en","_trigger","_data_u
 
 _city = btc_city_all select (_this select 0);
 
+if !(_city getVariable ["active",false]) exitWith {};
+
 waitUntil {!(_city getVariable ["activating",false])};
 
 hint ("DE-Activate " + str(_this));
