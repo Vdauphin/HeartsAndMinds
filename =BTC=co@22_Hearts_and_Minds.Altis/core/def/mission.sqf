@@ -356,13 +356,13 @@ switch (true) do
 	};
 	case (_p_en == 1 && isClass(configFile >> "cfgVehicles" >> "CAF_AG_ME_T_AK47")) :
 	{
-		btc_type_units            = ["CAF_AG_ME_AK47","CAF_AG_ME_T_AK74","CAF_AG_ME_T_PKM","CAF_AG_ME_T_RPK74","CAF_AG_ME_T_RPG","CAF_AG_ME_T_GL"];
-		btc_type_crewmen          = "CAF_AG_ME_T_AK47";
-		btc_type_vehicles         = ["CAF_AG_ME_T_Offroad_armed_01"];
-		btc_type_motorized        = ["CAF_AG_ME_T_Offroad","I_Truck_02_transport_F","CAF_AG_ME_T_Offroad_armed_01","CAF_AG_ME_T_van_01"];
-		btc_type_mg = ["O_HMG_01_F","O_HMG_01_high_F"];
-		btc_type_gl = ["O_GMG_01_F","O_GMG_01_high_F"];
-		btc_civ_type_units  = ["CAF_AG_ME_CIV","CAF_AG_ME_CIV_02","CAF_AG_ME_CIV_03","CAF_AG_ME_CIV_04"];
+		btc_type_units            = ["CAF_AG_ME_AK47","CAF_AG_ME_T_AK74","CAF_AG_ME_T_PKM","CAF_AG_ME_T_RPK74","CAF_AG_ME_T_RPG","CAF_AG_ME_T_GL","CAF_AG_ME_T_SVD"];
+        btc_type_crewmen          = "CAF_AG_ME_T_AK47";
+        btc_type_vehicles         = ["O_Quadbike_01_F","I_G_Offroad_01_F","I_G_Offroad_01_armed_F","CAF_AG_ME_T_Offroad_armed_01"];
+        btc_type_motorized        = ["I_G_Offroad_01_F","I_G_Offroad_01_armed_F","CAF_AG_ME_T_Offroad","O_Truck_02_transport_F","O_Truck_02_covered_F","CAF_AG_ME_T_Offroad_armed_01","CAF_AG_ME_T_van_01"];
+        btc_type_mg = ["O_HMG_01_F","O_HMG_01_high_F","O_Mortar_01_F"];
+        btc_type_gl = ["O_GMG_01_F","O_GMG_01_high_F","O_static_AA_F"];
+        btc_civ_type_units  = ["CAF_AG_ME_CIV","CAF_AG_ME_CIV_02","CAF_AG_ME_CIV_03","CAF_AG_ME_CIV_04"];
 	};
 	default
 	{
