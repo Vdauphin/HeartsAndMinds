@@ -5,11 +5,19 @@ if (count btc_hideouts == 0) exitWith {};
 
 private ["_ho","_pos","_marker","_array"];
 
-_ho = btc_hq_red getVariable ["info_hideout",objNull];
+_hd = [btc_hq_red getVariable ["info_hideout",objNull], btc_hq_green getVariable ["info_hideout",objNull]] select (str(btc_enemy_side)=="GUER");
+
 
 if (isNull _ho) then {
 	_ho = btc_hideouts select (floor random count btc_hideouts);
-	btc_hq_red setVariable ["info_hideout",_ho];
+	if (str(btc_enemy_side)=="GUER") then 
+	{
+		btc_hq_green setVariable ["info_hideout",_hd];
+	}
+	else 
+	{
+		btc_hq_red setVariable ["info_hideout",_hd];
+	};
 };
 
 _pos = [
