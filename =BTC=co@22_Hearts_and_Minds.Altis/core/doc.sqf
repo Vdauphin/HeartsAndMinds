@@ -79,7 +79,7 @@ To destroy an hideout just place a satchel near the ammo box and blow it off!
 
 player createDiaryRecord ["Documentation", ["IED", "
 Any object could be an IED,	approach it carefully and examine it with your interaction menu.<br/>
-If you have a toolkit you can try to disarm it, remember that engineers have better chances to disarm an IED.<br/>
+If you have a defusal kit you can try to disarm it, remember that engineers have better chances to disarm an IED.<br/>
 You can also blow them off with high caliber and explosive satchels.
 	"]
 ];
