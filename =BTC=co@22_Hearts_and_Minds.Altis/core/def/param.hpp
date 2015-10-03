@@ -9,8 +9,8 @@ class Params {
 	class btc_p_en {
 	//paramsArray[1]
         title = "Enemy type:";
-		values[]={0,1}; 
-		texts[]={"Guerrilla (A3)","CAF"}; 
+        values[]={0,1,2}; 
+	    texts[]={"Guerrilla (A3)","CAF","AAF (A3)"};
 		default = 0; 
 	};
 	class btc_p_ied {
