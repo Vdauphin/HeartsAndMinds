@@ -7,6 +7,11 @@ author = Giallustio;
 onLoadName = Hearts and Minds;
 onLoadMission = www.blacktemplars.altervista.org;
 
+// ============= debug ============  Vdauphin
+enableDebugConsole = 1;
+// ============= debug ============ end Vdauphin
+
+
 class Header
 {
 	gameType = COOP;
