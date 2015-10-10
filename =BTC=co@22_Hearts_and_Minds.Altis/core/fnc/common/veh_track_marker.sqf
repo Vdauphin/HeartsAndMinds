@@ -12,7 +12,7 @@ _v_dir = getDir _veh;
 
 if (_veh isKindOf "Man") then {_is_vehicle = false;};
 
-_type = "mil_triangle";
+_type = "Empty";
 _color = "ColorGreen";
 _sleep = 5;
 
@@ -23,9 +23,6 @@ _marker setMarkerDir (getDir _veh);
 
 while {Alive _veh} do {
 	sleep _sleep;
-	if (speed _veh > 50) then {_sleep = 2;} else {_sleep = 5;};
-	_marker setMarkerPos (getPos _veh);
-	_marker setMarkerDir (getDir _veh);
 };
 
 _marker setMarkerColor "ColorRed";
