@@ -85,7 +85,7 @@ _action = ["fob_redeploy", "Re-deploy", "", {[] spawn btc_fnc_fob_redeploy}, {bt
 _action = ["side_mission","Side mission","",{},{!(isNil {player getVariable "side_mission"})}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-_action = ["side_mission","Abort","",{[] spawn btc_fnc_side_abort},{!(isNil {player getVariable "side_mission"}) && {btc_side_assigned}}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission","Abort","",{[] call btc_fnc_side_abort},{!(isNil {player getVariable "side_mission"}) && {btc_side_assigned}}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
 _action = ["side_mission","Request","",{[] spawn btc_fnc_side_request},{!(isNil {player getVariable "side_mission"}) && {!btc_side_assigned}}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;

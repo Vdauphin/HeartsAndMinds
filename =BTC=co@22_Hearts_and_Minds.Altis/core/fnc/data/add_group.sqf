@@ -24,21 +24,21 @@ _city setVariable ["occupied",true];
 
 if (btc_debug) then {(format ["loc_%1",_city getVariable "id"]) setMarkerColor "ColorRed";};
 
-if (_city getVariable ["marker",""] != "") then {(_city getVariable ["marker",""]) setMarkerColor "ColorRed";_marker setMarkerAlpha 0.3;};
+if (_city getVariable ["marker",""] != "") then {_marker = _city getVariable ["marker",""]; _marker setMarkerColor "ColorRed";_marker setMarkerAlpha 0.3;};
 
 if !(_city getVariable ["active",false]) then
 {
 	private ["_n","_data_units","_data_group"];
-	
+
 	_n = random 1;
-	
+
 	while {(count (waypoints _group)) > 0} do
 	{
 		deleteWaypoint ((waypoints _group) select 0);
-	};	
-	
+	};
+
 	[_group,_city,600,(random 1)] call btc_fnc_mil_addWP;
-	
+
 	_data_units = _city getVariable ["data_units",[]];
 	_data_group = _group call btc_fnc_data_get_group;
 	_data_units pushBack _data_group;

@@ -10,11 +10,11 @@ if (count _this > 0) then {_city = _this;} else {
 		//"NameVillage","NameCity","NameCityCapital","NameLocal","Hill"
 		if (
 			!(_x getVariable ["active",false]) &&
-			{_x distance (getMarkerPos btc_respawn_marker) > btc_hideout_safezone} && 
-			{!(_x getVariable ["has_ho",false])} && 
+			{_x distance (getMarkerPos btc_respawn_marker) > btc_hideout_safezone} &&
+			{!(_x getVariable ["has_ho",false])} &&
 			(
 				_x getVariable ["type",""] == "NameLocal" ||
-				{_x getVariable ["type",""] == "Hill"} || 
+				{_x getVariable ["type",""] == "Hill"} ||
 				{_x getVariable ["type",""] == "NameVillage"}
 			)
 		) then {_useful = _useful + [_x];};
@@ -28,7 +28,7 @@ _pos = [_pos, 0, 300, 13, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
 
 if (count _pos == 0) then {_pos = getPos _city;};
 
-[_pos,btc_composition_hideout] call btc_fnc_create_composition;
+[_pos,(random 360),btc_composition_hideout] call btc_fnc_create_composition;
 
 _hideout = nearestObject [_pos, "C_supplyCrate_F"];
 clearWeaponCargoGlobal _hideout;clearItemCargoGlobal _hideout;clearMagazineCargoGlobal _hideout;

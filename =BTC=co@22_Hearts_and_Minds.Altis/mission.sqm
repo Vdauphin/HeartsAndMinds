@@ -749,7 +749,7 @@ class Mission
 					id=26;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
-					name ="btc_curator";
+					text="btc_curator";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
