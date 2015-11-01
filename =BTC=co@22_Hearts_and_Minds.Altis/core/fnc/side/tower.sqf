@@ -48,10 +48,11 @@ _tower_type = _btc_type_tower select (floor (random (count _btc_type_tower)));
 
 _tower = createVehicle [_tower_type, _pos, [], 0, "NONE"];
 _tower setDir (_direction);
+_tower setPos (_pos);
 
 _statics = btc_type_gl + btc_type_mg;
 [[(_pos select 0) + (sin(_direction)*5), (_pos select 1) + (cos(_direction)*5), (_pos select 2)],_statics,_direction] call btc_fnc_mil_create_static;
-[[(_pos select 0) - (sin(_direction)*5), (_pos select 1) - (cos(_direction)*5), (_pos select 2)],_statics,-_direction] call btc_fnc_mil_create_static;
+[[(_pos select 0) - (sin(_direction)*5), (_pos select 1) - (cos(_direction)*5), (_pos select 2)],_statics,_direction + 180] call btc_fnc_mil_create_static;
 
 waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || !Alive _tower )};
 
