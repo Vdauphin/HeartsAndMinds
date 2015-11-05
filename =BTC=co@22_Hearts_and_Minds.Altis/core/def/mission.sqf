@@ -205,7 +205,6 @@ btc_construction_array =
 		],
 		[
 			//"Ammobox"
-			"rhsusf_mags_crate",
 			"Box_NATO_Ammo_F",
 			"Box_NATO_Support_F",
 			"ACE_medicalSupplyCrate_advanced",
