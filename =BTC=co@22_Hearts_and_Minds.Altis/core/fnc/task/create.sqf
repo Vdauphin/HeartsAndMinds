@@ -63,4 +63,22 @@ switch (_this select 0) do
 		player setVariable ["task_7",_task];
 		["TaskAssigned",["New task assigned!",("Destroy tower in " + (_this select 2))]] call bis_fnc_showNotification;
 	};
+	case 8 :
+	{
+		private "_task";
+		_task = player createSimpleTask [("Medical emergency call in " + (_this select 2))];
+		_task setSimpleTaskDescription [format ["A civilian is calling for a medic in %1, treat and wait for patient stabilization ",(_this select 2)],("Medical emergency call in " + (_this select 2)),("Medical emergency call in " + (_this select 2))];
+		_task setSimpleTaskDestination (_this select 1);
+		player setVariable ["task_8",_task];
+		["TaskAssigned",["New task assigned!",("Medical emergency call in " + (_this select 2))]] call bis_fnc_showNotification;
+	};
+	case 9 :
+	{
+		private "_task";
+		_task = player createSimpleTask [("Destroy checkpoints in " + (_this select 2))];
+		_task setSimpleTaskDescription [format ["Checkpoints has been located in %1. Local population is asking for your help to destroy it!",(_this select 2)],("Destroy checkpoints in " + (_this select 2)),("Destroy checkpoints in " + (_this select 2))];
+		_task setSimpleTaskDestination (_this select 1);
+		player setVariable ["task_9",_task];
+		["TaskAssigned",["New task assigned!",("Destroy checkpoints in " + (_this select 2))]] call bis_fnc_showNotification;
+	};
 };

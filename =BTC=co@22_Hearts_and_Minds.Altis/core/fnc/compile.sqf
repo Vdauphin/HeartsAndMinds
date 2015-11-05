@@ -28,7 +28,9 @@ if (isServer) then {
 	btc_fnc_civ_populate = compile preprocessFile "core\fnc\civ\populate.sqf";
 	btc_fnc_civ_traffic_add_WP = compile preprocessFile "core\fnc\civ\traffic_add_WP.sqf";
 	btc_fnc_civ_traffic_create = compile preprocessFile "core\fnc\civ\traffic_create.sqf";
-	btc_fnc_civ_traffic_hd = compile preprocessFile "core\fnc\civ\traffic_hd.sqf";
+	btc_fnc_civ_traffic_eh = compile preprocessFile "core\fnc\civ\traffic_eh.sqf";
+	btc_fnc_civ_traffic_eh_remove = compile preprocessFile "core\fnc\civ\traffic_eh_remove.sqf";
+	btc_fnc_civ_unit_create = compile preprocessFile "core\fnc\civ\unit_create.sqf";
 
 	//DATA
 	btc_fnc_data_add_group = compile preprocessFile "core\fnc\data\add_group.sqf";
@@ -40,10 +42,11 @@ if (isServer) then {
 	btc_fnc_db_delete = compile preprocessFile "core\fnc\db\delete.sqf";
 
 	//EH
-	btc_fnc_eh_helo_respawn = compile preprocessFile "core\fnc\eh\helo_respawn.sqf";
-	//btc_fnc_eh_veh_add_respawn = compile preprocessFile "core\fnc\eh\veh_add_respawn.sqf";
+	//btc_fnc_eh_helo_respawn = compile preprocessFile "core\fnc\eh\helo_respawn.sqf";
+	btc_fnc_eh_veh_add_respawn = compile preprocessFile "core\fnc\eh\veh_add_respawn.sqf";
 	btc_fnc_eh_veh_killed = compile preprocessFile "core\fnc\eh\veh_killed.sqf";
 	btc_fnc_eh_veh_respawn = compile preprocessFile "core\fnc\eh\veh_respawn.sqf";
+	btc_fnc_eh_unit_init = compile preprocessFile "core\fnc\eh\unit_init.sqf";
 
 	//IED
 	btc_fnc_ied_boom = compile preprocessFile "core\fnc\ied\boom.sqf";
@@ -87,6 +90,7 @@ if (isServer) then {
 	btc_fnc_rep_hd = compile preprocessFile "core\fnc\rep\hd.sqf";
 	btc_fnc_rep_hh = compile preprocessFile "core\fnc\rep\hh.sqf";
 	btc_fnc_rep_killed = compile preprocessFile "core\fnc\rep\killed.sqf";
+	btc_fnc_rep_remove_eh = compile preprocessFile "core\fnc\rep\remove_eh.sqf";
 
 	//SIDE
 	btc_fnc_side_create = compile preprocessFileLineNumbers "core\fnc\side\create.sqf";
@@ -94,7 +98,9 @@ if (isServer) then {
 	btc_fnc_side_mines = compile preprocessFileLineNumbers "core\fnc\side\mines.sqf";
 	btc_fnc_side_supply = compile preprocessFileLineNumbers "core\fnc\side\supply.sqf";
 	btc_fnc_side_vehicle = compile preprocessFileLineNumbers "core\fnc\side\vehicle.sqf";
+	btc_fnc_side_civtreatment = compile preprocessFileLineNumbers "core\fnc\side\civtreatment.sqf";
 	btc_fnc_side_tower = compile preprocessFileLineNumbers "core\fnc\side\tower.sqf";
+	btc_fnc_side_checkpoint = compile preprocessFileLineNumbers "core\fnc\side\checkpoint.sqf";
 };
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
 

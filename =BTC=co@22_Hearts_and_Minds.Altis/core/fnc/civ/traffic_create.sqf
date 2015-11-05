@@ -38,9 +38,15 @@ if (count (_pos nearRoads 500) > 0) then {_Spos = getPos ((_pos nearRoads 500) s
 _veh = createVehicle [_veh_type, _Spos, [], 0, "NONE"];
 _unit_type createUnit [_pos, _group, "this moveinDriver _veh;this assignAsDriver _veh;"];
 
-_veh setVariable ["driver",leader _group];
-_veh addEventHandler ["HandleDamage", btc_fnc_civ_traffic_hd];
+_1 = _veh addEventHandler ["HandleDamage", {_this call btc_fnc_civ_traffic_eh}];
+_2 = _veh addEventHandler ["Fuel", {_this call btc_fnc_civ_traffic_eh}];
+_3 = _veh addEventHandler ["GetOut", {_this call btc_fnc_civ_traffic_eh}];
+//_4 = (leader _group) addEventHandler ["HandleDamage", {_this call btc_fnc_civ_traffic_eh}];
+//_5 = (leader _group) addEventHandler ["Killed", {_this call btc_fnc_civ_traffic_eh}];
 
-{_x call btc_fnc_rep_add_eh;_x setVariable ["traffic",_veh];} foreach units _group;
+_veh setVariable ["eh", [_1,_2,_3/*,4,5*/]];
+_veh setVariable ["driver", leader _group];
+
+{/*_x call btc_fnc_rep_add_eh;*/_x setVariable ["traffic",_veh];} foreach units _group;
 
 [_group,_area] call btc_fnc_civ_traffic_add_WP;

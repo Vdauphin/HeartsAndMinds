@@ -9,4 +9,9 @@ class Extended_InitPost_EventHandlers {
             init = "_this call btc_fnc_eh_veh_init";
         };
     };
+	class Man {
+		class ADDON {
+			init = "_this call btc_fnc_eh_unit_init";
+		};
+	};
 };
