@@ -74,6 +74,15 @@ if (count _data_units > 0) then {
 
 if (_city getVariable ["spawn_more",false]) then {
 	_city setVariable ["spawn_more",false];
+	private ["_pos","_p"];
+	switch (typeName _city) do {
+		case "ARRAY" :{_pos = _city;};
+		case "STRING":{_pos = getMarkerPos _city;};
+		case "OBJECT":{_pos = position _city;};
+	};
+	for "_i" from 1 to (3 + round random 3) do {
+		_p = [[_pos, _radius] call btc_fnc_randomize_pos, 0, 100, 13, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
+		[[(_p select 0) , (_p select 1), 0]] call btc_fnc_mil_create_motorized;};
 	for "_i" from 1 to (2 + round random 3) do {[_city,_radius,(4 + random 3),(random 1)] call btc_fnc_mil_create_group;};
 };
 
