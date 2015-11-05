@@ -29,9 +29,9 @@ if (!_is_init) then {
 	diag_log format ["_ratio_ied %1 - p %2",_ratio_ied,_ratio_ied * btc_p_ied];
 	_ratio_ied = _ratio_ied * btc_p_ied;
 	if (_ratio_ied > 0) then {[_city,_radius,((_ratio_ied/ 2) + (random _ratio_ied))] call btc_fnc_ied_init_area};
-	
+
 	_ieds = _city getVariable ["ieds",[]];
-	
+
 	_city setVariable ["initialized",true];
 };
 
@@ -53,16 +53,16 @@ if (count _data_units > 0) then {
 		//hint ("SPAWNING" + str(_groups) + " ---- " + str(_n));
 		//for "_i" from 1 to (_groups) do {[_city,_radius,(random _ratio),(random 1)] spawn btc_fnc_mil_create_group;sleep 0.5;};
 		for "_i" from 1 to (_groups) do {[_city,_radius,(random _ratio),(random 1)] call btc_fnc_mil_create_group;};
-		
+
 		_trigger = createTrigger["EmptyDetector",getPos _city];
 		_trigger setTriggerArea[(_radius_x+_radius_y),(_radius_x+_radius_y),0,false];
 		_trigger setTriggerActivation[str(btc_enemy_side),"NOT PRESENT",false];
 		_trigger setTriggerStatements ["this", format ["[%1] spawn btc_fnc_city_set_clear",(_this select 0)], ""];
 		_city setVariable ["trigger",_trigger];
-	
+
 	};
 	//spawn mini task (ammo cache, ieds, injured civ)
-	
+
 	//spawn civilians
 	if (_type != "Hill") then {
 		private ["_factor","_n"];
@@ -88,25 +88,33 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned",false])}) then {
 	_city setVariable ["ho_units_spawned",true];
 	//_pos = _city getVariable ["ho_pos",getPos _city];ho
 	_pos = _city getVariable ["ho_pos", getpos _city];
-	[_pos,20,(10 + random 6),0.8] call btc_fnc_mil_create_group;
-	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
-	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
+	[[(_pos select 0) + 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
 	_random = (random 1);
 	switch (true) do {
-		case (_random < 0.3) : {};
+		case (_random < 0.3) : {
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+		};
 		case (_random > 0.3) : {
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) - 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
 			private ["_statics"];
 			_statics = btc_type_gl + btc_type_mg;
 			//format position
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
 		};
 		case (_random > 0.75) : {
+			[[(_pos select 0) - 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) + 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
 			private ["_statics"];
 			_statics = btc_type_gl + btc_type_mg;
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
-			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;	
+			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;
 		};
 	};
+	[_pos,20,(10 + random 6),0.8] call btc_fnc_mil_create_group;
+	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
+	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
 };
 
 if (count _ieds > 0) then {
@@ -146,7 +154,7 @@ if (btc_civ_veh_active < btc_civ_max_veh) then {
 	if (btc_debug_log) then	{diag_log format ["btc_fnc_city_activate: (traffic) _n = %1 _av %2 _d %3 _r %4",_n,_av,_d,_r];};
 };
 
-//Suicider 
+//Suicider
 _city = btc_city_all select (_this select 0);
 if !(_city getVariable ["has_suicider",false]) then {
 	if ((time - btc_ied_suic_spawned) > btc_ied_suic_time && {random 1000 > btc_global_reputation}) then {
