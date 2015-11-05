@@ -9,7 +9,7 @@ _type = typeOf _vehicle;
 _pos = getPos _vehicle;
 _dir = getDir _vehicle;
 
-_vehicle setVariable ["data_respawn",[_type,_pos,_dir,_has_marker]];
+_vehicle setVariable ["data_respawn",[_type,_pos,_dir,_time,_has_marker]];
 _vehicle addEventHandler ["Killed", {_this call btc_fnc_eh_veh_respawn}];
 /*
 waitUntil {sleep 10; (!Alive _vehicle)};
