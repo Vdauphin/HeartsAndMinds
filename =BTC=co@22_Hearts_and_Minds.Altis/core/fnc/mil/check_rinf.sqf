@@ -26,7 +26,7 @@ _pos = [_pos, 0, 300, 13, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
 
 if (count _pos == 0) then {_pos = getPos _city;};
 
-[_pos,btc_composition_hideout] call btc_fnc_create_composition;
+[_pos,(random 360),btc_composition_hideout] call btc_fnc_create_composition;
 
 _hideout = nearestObject [_pos, "C_supplyCrate_F"];
 clearWeaponCargoGlobal _hideout;clearItemCargoGlobal _hideout;clearMagazineCargoGlobal _hideout;

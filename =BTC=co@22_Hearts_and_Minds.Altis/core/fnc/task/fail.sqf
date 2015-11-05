@@ -42,4 +42,20 @@ switch _this do
 		["TaskFailed",["Side mission failed!","The tower has not been destroyed"]] call bis_fnc_showNotification;
 		player setVariable ["task_7",nil];
 	};
+	case 8 :
+	{
+		private "_task";
+		_task = player getVariable "task_8";
+		_task setTaskState "FAILED";
+		["TaskFailed",["Side mission failed!","The patient has not been stabilized"]] call bis_fnc_showNotification;
+		player setVariable ["task_8",nil];
+	};
+	case 9 :
+	{
+		private "_task";
+		_task = player getVariable "task_9";
+		_task setTaskState "FAILED";
+		["TaskFailed",["Side mission failed!","Checkpoints have not been destroyed"]] call bis_fnc_showNotification;
+		player setVariable ["task_9",nil];
+	};
 };
