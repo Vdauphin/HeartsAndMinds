@@ -132,7 +132,7 @@ btc_w_civs = ["V_Rangemaster_belt","arifle_Mk20_F","30Rnd_556x45_Stanag","hgun_A
 btc_cache_type = "Box_East_Ammo_F";
 
 //FOB
-btc_fob_mat = "Land_Cargo20_blue_F";
+btc_fob_mat = "Land_Cargo10_blue_F";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
@@ -154,7 +154,7 @@ btc_info_cache_ratio = _cache_info_ratio;
 btc_info_hideout_radius = 4000;
 
 //Supplies
-btc_supplies_mat ="Land_Cargo20_red_F";
+btc_supplies_mat ="B_Slingload_01_Ammo_F";
 
 //Log
 btc_construction_array =
