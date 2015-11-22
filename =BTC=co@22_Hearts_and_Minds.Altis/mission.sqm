@@ -752,6 +752,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="btc_curator";
+					init="this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];";
 				};
 			};
 		};

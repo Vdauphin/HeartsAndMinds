@@ -4,5 +4,5 @@
 waitUntil {!(isNil "btc_int_action_result")};
 
 if (btc_int_action_result) then {
-	[[_this,player],"btc_fnc_info_has_intel",_this] spawn BIS_fnc_MP;
+	[[_this,player],"btc_fnc_info_has_intel",false] spawn BIS_fnc_MP;
 };

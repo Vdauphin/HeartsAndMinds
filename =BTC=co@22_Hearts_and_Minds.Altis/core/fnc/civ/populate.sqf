@@ -43,6 +43,6 @@ for "_i" from 0 to _n do
 	_group = createGroup civilian;
 	_group createUnit [_unit_type, getPos _house, [], 0, "NONE"];
 	_group spawn btc_fnc_civ_addWP;
-	//{_x call BTC_fnc_rep_add_eh} foreach units _group;
+	{_x call btc_fnc_civ_unit_create} foreach units _group;
 	_houses = _houses - [_house];
 };

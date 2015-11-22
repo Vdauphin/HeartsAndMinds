@@ -25,7 +25,7 @@ _group spawn btc_fnc_civ_addWP;
 
 _group setSpeedMode "LIMITED";
 
-//{_x call btc_fnc_rep_add_eh} foreach units _group;
+{_x call btc_fnc_civ_unit_create} foreach units _group;
 
 if (BTC_debug_log) then {
 	diag_log format ["BTC_fnc_civ_create: _this = %1 ; POS %2 UNITS N %3",_this,_pos,count units _group];

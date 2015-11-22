@@ -17,6 +17,6 @@ _gunner moveInGunner _static;
 _gunner setBehaviour "COMBAT";
 _gunner setCombatMode "RED";
 
-//_gunner call btc_fnc_mil_unit_create;
+_gunner call btc_fnc_mil_unit_create;
 
 if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_static: _this = %1 ; POS %2 _type %3",_this,_pos,_type];};	

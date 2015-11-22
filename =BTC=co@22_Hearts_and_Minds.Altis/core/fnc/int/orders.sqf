@@ -1,15 +1,3 @@
-/*
-		{(_ui displayCtrl _x) ctrlShow false;} foreach [9995,9996];
-		(_ui displayCtrl 9991) ctrlSetText "Stop";
-		(_ui displayCtrl 9991) buttonSetAction "[1] spawn btc_fnc_int_orders";
-		(_ui displayCtrl 9992) ctrlSetText "Get down";
-		(_ui displayCtrl 9992) buttonSetAction "[2] spawn btc_fnc_int_orders";
-		(_ui displayCtrl 9994) ctrlSetText "Go away";
-		(_ui displayCtrl 9994) buttonSetAction "[3] spawn btc_fnc_int_orders";
-		(_ui displayCtrl 9993) ctrlSetText "Hands up";
-		(_ui displayCtrl 9993) buttonSetAction "[4] spawn btc_fnc_int_orders";
-*/
-//closeDialog 0;
 
 private ["_order","_unit","_gesture","_pos"];
 

@@ -36,7 +36,6 @@ class RscTitles {
 
 #include "core\sounds\sounds.hpp"
 
-
 #include "core\def\param.hpp"
 
 #include "core\def\functions.hpp"

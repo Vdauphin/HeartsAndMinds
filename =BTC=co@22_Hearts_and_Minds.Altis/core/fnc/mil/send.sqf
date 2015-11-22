@@ -53,6 +53,6 @@ switch (_this select 2) do {
 		_wp_3 setWaypointType "SENTRY";
 		_wp setWaypointStatements ["true","(group this) spawn btc_fnc_data_add_group;"];
 		
-		//{_x call btc_fnc_mil_unit_create} foreach units _group;
+		{_x call btc_fnc_mil_unit_create} foreach units _group;
 	};
 };

@@ -47,6 +47,6 @@ _3 = _veh addEventHandler ["GetOut", {_this call btc_fnc_civ_traffic_eh}];
 _veh setVariable ["eh", [_1,_2,_3/*,4,5*/]];
 _veh setVariable ["driver", leader _group];
 
-{/*_x call btc_fnc_rep_add_eh;*/_x setVariable ["traffic",_veh];} foreach units _group;
+{_x call btc_fnc_civ_unit_create;_x setVariable ["traffic",_veh];} foreach units _group;
 
 [_group,_area] call btc_fnc_civ_traffic_add_WP;

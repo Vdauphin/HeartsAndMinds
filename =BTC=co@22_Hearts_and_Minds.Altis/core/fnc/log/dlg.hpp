@@ -78,8 +78,8 @@ class btc_log_dlg_create
 			idc = -1;
 			text = "Apply"; 
 			action = "_spawn = [] spawn btc_fnc_log_create_apply";
-			x = 0;
-			y = 0.25;
+			x = 0 * safezoneW + safezoneX;
+			y = 0.25 * safezoneH + safezoneY;
 			default = true;
 		};
 		class btc_log_dlg_Close : btc_dlg_button 
@@ -87,26 +87,26 @@ class btc_log_dlg_create
 			idc = -1;
 			text = "Close"; 
 			action = "closeDialog 0;";
-			x = 0.2;
-			y = 0.25;
+			x = 0.2 * safezoneW + safezoneX;
+			y = 0.25 * safezoneH + safezoneY;
 			default = true;
 		};
 		class btc_log_dlg_main_class : btc_dlg_comboBox 
 		{
 			idc = 71;
 			onLBSelChanged = "_spawn = [] spawn btc_fnc_log_create_change_target";
-			x = 0; 
-			y = 0;
-			w = 0.4; 
-			h = 0.055;
+			x = 0 * safezoneW + safezoneX; 
+			y = 0 * safezoneH + safezoneY;
+			w = 0.4 * safezoneW; 
+			h = 0.055 * safezoneH;
 		};
 		class btc_log_dlg_sub_class : btc_dlg_comboBox 
 		{
 			idc = 72;
-			x = 0; 
-			y = 0.1;
-			w = 0.4; 
-			h = 0.055;
+			x = 0 * safezoneW + safezoneX; 
+			y = 0.1 * safezoneH + safezoneY;
+			w = 0.4 * safezoneW; 
+			h = 0.055 * safezoneH;
 		};
 	};
 };

@@ -77,4 +77,4 @@ switch (true) do {
 	};
 };
 
-//{_x spawn btc_fnc_mil_unit_create} foreach units _group;
+{_x call btc_fnc_mil_unit_create} foreach units _group;

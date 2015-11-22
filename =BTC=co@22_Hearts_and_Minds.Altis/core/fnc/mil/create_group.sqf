@@ -56,7 +56,7 @@ if (!_in_house) then {
 
 if ((position leader _group) distance [0,0,0] < 50) then {{_x setpos _rpos;} foreach units _group;};
 
-//{_x call btc_fnc_mil_unit_create;} foreach units _group;
+{_x call btc_fnc_mil_unit_create;} foreach units _group;
 
 if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_group: _this = %1 ; POS %2 UNITS N %3",_this,_rpos,count units _group];};	
 

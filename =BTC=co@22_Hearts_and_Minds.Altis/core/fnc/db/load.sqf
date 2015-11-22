@@ -193,7 +193,7 @@ diag_log format ["5: %1",(_x select 5)];
 {
 	private "_veh";
 	_veh = (_x select 0) createVehicle (_x select 1);
-	btc_vehicles = btc_vehicles + [_veh];
+	btc_vehicles pushBack _veh;
 	_veh addEventHandler ["Killed", {_this call btc_fnc_eh_veh_killed}];
 	_veh setVariable ["btc_dont_delete",true];
 	_veh setDir (_x select 2);
