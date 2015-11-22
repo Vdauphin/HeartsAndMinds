@@ -14,6 +14,7 @@ if (isServer) then {
 	btc_fnc_randomize_pos = compile preprocessFile "core\fnc\common\randomize_pos.sqf";
 	btc_fnc_set_owner = compile preprocessFile "core\fnc\common\set_owner.sqf";
 	btc_fnc_task_patrol = compile preprocessFile "core\fnc\common\task_patrol.sqf";
+	btc_fnc_road_direction = compile preprocessFile "core\fnc\common\road_direction.sqf";
 
 	//CITY
 	btc_fnc_city_activate = compile preprocessFile "core\fnc\city\activate.sqf";
