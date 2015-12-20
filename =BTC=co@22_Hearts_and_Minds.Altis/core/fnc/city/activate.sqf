@@ -95,6 +95,15 @@ if (count _data_units > 0) then {
 
 if (_city getVariable ["spawn_more",false]) then {
 	_city setVariable ["spawn_more",false];
+	private ["_pos","_p"];
+	switch (typeName _city) do {
+		case "ARRAY" :{_pos = _city;};
+		case "STRING":{_pos = getMarkerPos _city;};
+		case "OBJECT":{_pos = position _city;};
+	};
+	for "_i" from 1 to (3 + round random 3) do {
+		_p = [[_pos, _radius] call btc_fnc_randomize_pos, 0, 100, 13, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
+		[[(_p select 0) , (_p select 1), 0]] call btc_fnc_mil_create_motorized;};
 	for "_i" from 1 to (2 + round random 3) do {[_city,_radius,(4 + random 3),(random 1)] call btc_fnc_mil_create_group;};
 };
 
@@ -109,25 +118,33 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned",false])}) then {
 	_city setVariable ["ho_units_spawned",true];
 	//_pos = _city getVariable ["ho_pos",getPos _city];ho
 	_pos = _city getVariable ["ho_pos", getpos _city];
-	[_pos,20,(10 + random 6),0.8] call btc_fnc_mil_create_group;
-	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
-	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
+	[[(_pos select 0) + 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
 	_random = (random 1);
 	switch (true) do {
-		case (_random < 0.3) : {};
+		case (_random < 0.3) : {
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+		};
 		case (_random > 0.3) : {
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) - 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
 			private ["_statics"];
 			_statics = btc_type_gl + btc_type_mg;
 			//format position
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
 		};
 		case (_random > 0.75) : {
+			[[(_pos select 0) - 20,(_pos select 1) + 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) - 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
+			[[(_pos select 0) + 20,(_pos select 1) - 20,0]] call btc_fnc_mil_create_motorized;
 			private ["_statics"];
 			_statics = btc_type_gl + btc_type_mg;
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
 			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;
 		};
 	};
+	[_pos,20,(10 + random 6),0.8] call btc_fnc_mil_create_group;
+	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
+	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
 };
 
 if (count _ieds > 0) then {

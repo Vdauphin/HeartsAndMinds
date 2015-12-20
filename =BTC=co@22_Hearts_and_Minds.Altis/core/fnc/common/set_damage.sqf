@@ -10,24 +10,24 @@ private ["_unit","_unconsciousTime","_selection","_type"];
 
 _unit = _this select 0;
 _selection = [
-    "head",
-    "body",
-    "hand_l",
-    "hand_r",
-    "leg_l",
-    "leg_r"
+	"head",
+	"body",
+	"hand_l",
+	"hand_r",
+	"leg_l",
+	"leg_r"
 ];
 _type = [
-    "bullet",
-    "grenade",
-    "explosive",
-    "shell"
+	"bullet",
+	"grenade",
+	"explosive",
+	"shell"
 ];
 if (ace_medical_level isEqualTo 1) then {
 	_unconsciousTime = 120 + round (random 600);
 	[_unit,true,_unconsciousTime,true] call ace_medical_fnc_setUnconscious;
 	for "_i" from 0 to 2 do {
-		[_unit, (_selection select (random ((count _selection) - 1))), 0.7 + (random 0.15), objNull, (_type select (random ((count _type) - 1)))] call ace_medical_fnc_handleDamage;
+		[_unit, (_selection select (random ((count _selection) - 1))), 0.7 + (random 0.15), objNull, (_type select (random ((count _type) - 1))),-1] call ace_medical_fnc_handleDamage;
 	};
 	[{
 		params ["_args","_id"];

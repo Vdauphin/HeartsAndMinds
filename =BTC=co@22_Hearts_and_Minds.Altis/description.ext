@@ -1,11 +1,13 @@
 disabledAI=1;
 respawn = "BASE";
-respawndelay = "3";
+respawndelay = "30";
 
 loadScreen = "core\img\btc.paa";
 author = Giallustio;
 onLoadName = Hearts and Minds;
 onLoadMission = www.blacktemplars.altervista.org;
+
+enableDebugConsole = 1;
 
 class Header
 {

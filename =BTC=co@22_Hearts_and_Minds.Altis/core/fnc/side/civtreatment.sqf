@@ -55,6 +55,7 @@ if ( _r < 1) then {
 	_phone_type = btc_type_phone select (floor (random (count btc_type_phone)));
 	_veh = createVehicle [_phone_type, _vehpos, [], 0, "NONE"];
 	_veh setDir (random 360);
+	_fx = objNull;
 };
 
 _unit_type = btc_civ_type_units select (floor random count btc_civ_type_units);
@@ -81,8 +82,9 @@ if (btc_side_aborted || btc_side_failed || !Alive _unit) exitWith {
 	btc_side_assigned = false;publicVariable "btc_side_assigned";
 	{_x spawn {
 	waitUntil {sleep 5; ({_x distance _this < 300} count playableUnits == 0)};
+	{deleteVehicle _x;} forEach (_this getVariable ["effects", []]);
 	deleteVehicle _this;
-	};} forEach [_unit,_veh];
+	};} forEach [_unit,_veh,_fx];
 };
 
 15 call btc_fnc_rep_change;
@@ -92,7 +94,8 @@ if (btc_side_aborted || btc_side_failed || !Alive _unit) exitWith {
 _unit setUnitPos "UP";
 {_x spawn {
 	waitUntil {sleep 5; ({_x distance _this < 300} count playableUnits == 0)};
+	{deleteVehicle _x;} forEach (_this getVariable ["effects", []]);
 	deleteVehicle _this;
-};} forEach [_unit,_veh];
+};} forEach [_unit,_veh,_fx];
 
 btc_side_assigned = false;publicVariable "btc_side_assigned";

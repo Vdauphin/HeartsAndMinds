@@ -34,7 +34,7 @@ while {!btc_fob_dlg} do {
 	sleep 0.1;
 };*/
 
-waitUntil {!dialog};
+waitUntil {(!dialog || btc_fob_dlg)};
 
 if (!btc_fob_dlg) exitWith {forceMap false;};
 

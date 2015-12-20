@@ -24,7 +24,7 @@ if (isServer) then {
 
 	//CIV
 	btc_fnc_civ_add_weapons = compile preprocessFile "core\fnc\civ\add_weapons.sqf";
-	btc_fnc_civ_addWP = compile preprocessFile "core\fnc\civ\addWP.sqf";
+	btc_fnc_civ_addWP = compile preprocessFileLineNumbers "core\fnc\civ\addWP.sqf";
 	btc_fnc_civ_create = compile preprocessFile "core\fnc\civ\create.sqf";
 	btc_fnc_civ_get_weapons = compile preprocessFile "core\fnc\civ\get_weapons.sqf";
 	btc_fnc_civ_populate = compile preprocessFile "core\fnc\civ\populate.sqf";
@@ -82,6 +82,7 @@ if (isServer) then {
 	btc_fnc_mil_set_skill = compile preprocessFile "core\fnc\mil\set_skill.sqf";
 	btc_fnc_mil_unit_create = compile preprocessFile "core\fnc\mil\unit_create.sqf";
 	btc_fnc_mil_unit_killed = compile preprocessFile "core\fnc\mil\unit_killed.sqf";
+	btc_fnc_mil_create_motorized = compile preprocessFile "core\fnc\mil\create_motorized.sqf";
 
 	//REP
 	btc_fnc_rep_add_eh = compile preprocessFile "core\fnc\rep\add_eh.sqf";
@@ -108,6 +109,7 @@ if (isServer) then {
 //COMMON
 //btc_fnc_veh_track_marker = compile preprocessFile "core\fnc\common\veh_track_marker.sqf";
 
+
 //DB
 btc_fnc_db_add_veh = compile preprocessFile "core\fnc\db\add_veh.sqf";
 
@@ -118,7 +120,7 @@ btc_fnc_eh_CuratorObjectPlaced = compile preprocessFile "core\fnc\eh\CuratorObje
 //INT
 btc_fnc_int_change_var = compile preprocessFile "core\fnc\int\change_var.sqf";
 btc_fnc_int_orders_give = compile preprocessFile "core\fnc\int\orders_give.sqf";
-btc_fnc_int_orders_behaviour = compile preprocessFile "core\fnc\int\orders_behaviour.sqf";
+btc_fnc_int_orders_behaviour = compile preprocessFileLineNumbers "core\fnc\int\orders_behaviour.sqf";
 btc_fnc_int_ans_var = compile preprocessFile "core\fnc\int\ans_var.sqf";
 btc_fnc_int_ask_var = compile preprocessFile "core\fnc\int\ask_var.sqf";
 
@@ -196,6 +198,7 @@ if (!isDedicated) then {
 	btc_fnc_info_hideout_asked = compile preprocessFile "core\fnc\info\hideout_asked.sqf";
 	btc_fnc_info_search_for_intel = compile preprocessFile "core\fnc\info\search_for_intel.sqf";
 	btc_fnc_info_troops = compile preprocessFile "core\fnc\info\troops.sqf";
+	btc_fnc_info_ask_reputation = compile preprocessFile "core\fnc\info\ask_reputation.sqf";
 
 	//TASK
 	btc_fnc_task_create = compile preprocessFileLineNumbers "core\fnc\task\create.sqf";
