@@ -2,7 +2,7 @@ if !(isClass(configFile >> "cfgPatches" >> "inidbi2")) exitWith {[[11, "saved"],
 
 "delete" call OO_fnc_inidbi;
 
-private ["_cities_status","_fobs","_name","_city_status","_array_ho","_data","_ho_markers","_array_cache","_fobs","_array_veh","_cargo","_array_obj","_marker","_lereste","_nb_cities_array","_step","_temp_save","_data_units"];
+private ["_cities_status","_fobs","_name","_city_status","_array_ho","_data","_ho_markers","_array_cache","_array_veh","_cargo","_array_obj","_marker","_data_units"];
 
 hint "saving...";
 [[8],"btc_fnc_show_hint"] spawn BIS_fnc_MP;
@@ -20,18 +20,12 @@ hint "saving...2";
 //City status
 hint "saving City status";
 _cities_status = [];
-_nb_cities_data_units = [[],[]];
 {
 	//[151,false,false,true,false,false,[]]
-	private ["_id"];
 	_city_status = [];
-	_id = (_x getVariable "id");
-	_city_status pushBack _id ;
-	(_nb_cities_data_units select 0) pushBack _id;
+	_city_status pushBack (_x getVariable "id");
 	//_city_status pushBack (_x getVariable "name");
-
 	_city_status pushBack (_x getVariable "initialized");
-
 	_city_status pushBack (_x getVariable "spawn_more");
 	_city_status pushBack (_x getVariable "occupied");
 
@@ -41,7 +35,7 @@ _nb_cities_data_units = [[],[]];
 			_x set [7,getPos (_x select 7)];
 		};
 	} forEach _data_units;
-	(_nb_cities_data_units select 1) pushBack ([_data_units,"cities",format ["city_%1_data_units",(_city_status select 0)]] call btc_fnc_db_save_array);
+	_city_status pushBack _data_units;
 
 	_city_status pushBack (_x getVariable ["has_ho",false]);
 	_city_status pushBack (_x getVariable ["ho_units_spawned",false]);
@@ -50,14 +44,10 @@ _nb_cities_data_units = [[],[]];
 	_cities_status pushBack _city_status;
 	//diag_log format ["SAVE: %1 - %2",(_x getVariable "id"),(_x getVariable "occupied")];
 } foreach btc_city_all;
-["write", ["cities", "nb_cities_data_units", _nb_cities_data_units]] call OO_fnc_inidbi;
-
-_nb_cities_status = [[_cities_status,"cities","cities_status"] call btc_fnc_db_save_array];
-["write", ["cities", "nb_cities_status", _nb_cities_status]] call OO_fnc_inidbi;
-
+["write", ["cities", "nb_cities_status", [_cities_status,"cities","cities_status"] call btc_fnc_db_save_array]] call OO_fnc_inidbi;
 
 //HIDEOUT
-hint "saving HIDEOUT";
+//hint "saving HIDEOUT";
 _array_ho = [];
 {
 	_data = [];
@@ -82,7 +72,7 @@ _array_ho = [];
 ["write", ["cities", "ho_sel", (btc_hq getVariable ["info_hideout",objNull]) getVariable ["id",0] ]] call OO_fnc_inidbi;
 
 //CACHE
-hint "saving CACHE";
+//hint "saving CACHE";
 _array_cache = [];
 _array_cache pushback (getposATL btc_cache_obj);
 _array_cache pushback (btc_cache_n);
@@ -134,20 +124,20 @@ _array_veh = [];
 _array_obj = [];
 {
 	if !(!isNil {_x getVariable "loaded"} || !Alive _x || isNull _x) then {
-	_data = [];
-	_data pushBack (typeOf _x);
-	_data pushBack (getPosASL _x);
-	_data pushBack (getDir _x);
-	_cargo = [];
-	{_cargo pushBack (typeOf _x)} foreach (_x getVariable ["cargo",[]]);
-	_data pushBack _cargo;
-	_array_obj pushBack _data;
+		_data = [];
+		_data pushBack (typeOf _x);
+		_data pushBack (getPosASL _x);
+		_data pushBack (getDir _x);
+		_cargo = [];
+		{_cargo pushBack (typeOf _x)} foreach (_x getVariable ["cargo",[]]);
+		_data pushBack _cargo;
+		_array_obj pushBack _data;
 	};
 } foreach btc_log_obj_created;
 ["write", ["base", "objs", _array_obj]] call OO_fnc_inidbi;
 
 //
-hint "saving...3";
-[[9],"btc_fnc_show_hint"] spawn BIS_fnc_MP;
+//hint "saving...3";
+//[[9],"btc_fnc_show_hint"] spawn BIS_fnc_MP;
 
 btc_db_is_saving = false;

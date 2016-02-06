@@ -45,6 +45,8 @@ if (isServer) then {
 	btc_fnc_db_save = compile preprocessFile "core\fnc\db\save.sqf";
 	btc_fnc_db_delete = compile preprocessFile "core\fnc\db\delete.sqf";
 	btc_fnc_db_save_array = compile preprocessFile "core\fnc\db\save_array.sqf";
+	btc_fnc_db_array_to_string = compile preprocessFile "core\fnc\db\array_to_string.sqf";
+	btc_fnc_db_string_to_array = compile preprocessFile "core\fnc\db\string_to_array.sqf";
 
 	//EH
 	//btc_fnc_eh_helo_respawn = compile preprocessFile "core\fnc\eh\helo_respawn.sqf";

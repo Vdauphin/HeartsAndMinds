@@ -1,17 +1,18 @@
 if !(isClass(configFile >> "cfgPatches" >> "inidbi2")) exitWith {[[11, "loaded"],"btc_fnc_show_hint"] spawn BIS_fnc_MP;};
 
-private ["_cities_status","_fobs","_name","_city_status","_array_ho","_data","_ho_markers","_array_cache","_fobs","_array_veh","_cargo","_array_obj","_marker","_ho","_data_units"];
+private ["_cities_status","_name","_array_ho","_array_cache","_fobs","_marker","_ho","_data_units"];
 
 setDate (["read", ["mission_Param", "date", date]] call OO_fnc_inidbi);
 
 //CITIES
-_nb_cities_status = ((["read", ["cities", "nb_cities_status", [0]]] call OO_fnc_inidbi) select 0) - 1;
+_nb_cities_status = (["read", ["cities", "nb_cities_status", 0]] call OO_fnc_inidbi) - 1;
 _cities_status = [];
 for "_i" from 0 to _nb_cities_status do {
-	_cities_status append (["read", ["cities", format ["cities_status_%1",_i], [] ]] call OO_fnc_inidbi);
+	_cities_status pushBack (["read", ["cities", format ["cities_status_%1",_i], "" ]] call OO_fnc_inidbi);
 };
 
-_nb_cities_data_units = ["read", ["cities", "nb_cities_data_units", [[],[]] ]] call OO_fnc_inidbi;
+_cities_status = _cities_status call btc_fnc_db_string_to_array;
+
 //diag_log format ["_cities_status: %1",_cities_status];
 {
 /*
@@ -38,13 +39,7 @@ _nb_cities_data_units = ["read", ["cities", "nb_cities_data_units", [[],[]] ]] c
 	_city setVariable ["spawn_more",(_x select 2)];
 	_city setVariable ["occupied",(_x select 3)];
 
-	_element = (_nb_cities_data_units select 1) select ((_nb_cities_data_units select 0) find _id);
-	_data_units = [];
-	if (_element > 0) then {
-		for "_i" from 0 to _element do {
-			_data_units append (["read", ["cities", format ["city_%1_data_units_%2",_id,_i], [] ]] call OO_fnc_inidbi);
-		};
-	};
+	_data_units = (_x select 4);
 	{
 		if ((_x select 0) isEqualTo 3) then {
 			_x set [7,([_x select 7,3] call btc_fnc_getHouses) select 0];
@@ -52,9 +47,9 @@ _nb_cities_data_units = ["read", ["cities", "nb_cities_data_units", [[],[]] ]] c
 	} forEach _data_units;
 	_city setVariable ["data_units",_data_units];
 
-	_city setVariable ["has_ho",(_x select 4)];
-	_city setVariable ["ho_units_spawned",(_x select 5)];
-	_city setVariable ["ieds",(_x select 6)];
+	_city setVariable ["has_ho",(_x select 5)];
+	_city setVariable ["ho_units_spawned",(_x select 6)];
+	_city setVariable ["ieds",(_x select 7)];
 
 	if (btc_debug) then	{//_debug
 
