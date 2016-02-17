@@ -19,14 +19,15 @@ class Mission
 		"RHS_US_A2_AirImport",
 		"rhsusf_c_rg33",
 		"ace_cargo",
-		"ace_medical",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"ace_respawn",
 		"ace_captives",
 		"ace_repair",
 		"A3_Modules_F_Multiplayer",
-		"A3_Characters_F_INDEP"
+		"A3_Characters_F_INDEP",
+		"ace_advanced_ballistics",
+		"ace_winddeflection",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -34,13 +35,14 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
 		"ace_cargo",
-		"ace_medical",
 		"3DEN",
 		"a3_modules_f_curator_curator",
 		"ace_respawn",
 		"ace_captives",
 		"ace_repair",
 		"A3_Characters_F_INDEP",
+		"ace_advanced_ballistics",
+		"ace_winddeflection",
 		"rhsusf_c_hmmwv",
 		"rhsusf_vehicles",
 		"RHS_US_A2Port_Armor",
@@ -107,7 +109,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8320.2334,75.940002,10044.377};
+					position[]={8072.48,71.481018,9865.5137};
 					azimut=180;
 					id=1;
 					side="EAST";
@@ -576,146 +578,6 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8276.8887,58.607044,9963.0215};
-					class args
-					{
-						items=13;
-						class Item0
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="level";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="medicSetting";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="allowLitterCreation";
-						};
-						class Item3
-						{
-							value="1800";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="litterCleanUpDelay";
-						};
-						class Item4
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableScreams";
-						};
-						class Item5
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="playerDamageThreshold";
-						};
-						class Item6
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="AIDamageThreshold";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableUnconsciousnessAI";
-						};
-						class Item8
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="remoteControlledAI";
-						};
-						class Item9
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="preventInstaDeath";
-						};
-						class Item10
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="bleedingCoefficient";
-						};
-						class Item11
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="painCoefficient";
-						};
-						class Item12
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="keepLocalSettingsSynced";
-						};
-					};
-					id=24;
-					side="LOGIC";
-					vehicle="ACE_moduleMedicalSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item25
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8284.0361,57.350582,9962.9541};
-					class args
-					{
-						items=3;
-						class Item0
-						{
-							value="1";
-							parentCls="ACE_moduleReviveSettings";
-							typeName="enableRevive";
-						};
-						class Item1
-						{
-							value="120";
-							parentCls="ACE_moduleReviveSettings";
-							typeName="maxReviveTime";
-						};
-						class Item2
-						{
-							value="-1";
-							parentCls="ACE_moduleReviveSettings";
-							typeName="amountOfReviveLives";
-						};
-					};
-					id=25;
-					side="LOGIC";
-					vehicle="ACE_moduleReviveSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item26
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={8255.6289,55.908749,9942.9063};
 					class args
 					{
@@ -745,7 +607,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=26;
+					id=24;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -756,7 +618,7 @@ class Mission
 				};
 			};
 		};
-		class Item27
+		class Item25
 		{
 			side="LOGIC";
 			class Vehicles
@@ -781,7 +643,7 @@ class Mission
 							typeName="RemoveDeadBodiesDisconnected";
 						};
 					};
-					id=27;
+					id=25;
 					side="LOGIC";
 					vehicle="ACE_ModuleRespawn";
 					leader=1;
@@ -790,7 +652,7 @@ class Mission
 				};
 			};
 		};
-		class Item28
+		class Item26
 		{
 			side="LOGIC";
 			class Vehicles
@@ -821,7 +683,7 @@ class Mission
 							typeName="requireSurrender";
 						};
 					};
-					id=28;
+					id=26;
 					side="LOGIC";
 					vehicle="ace_captives_moduleSettings";
 					leader=1;
@@ -830,7 +692,7 @@ class Mission
 				};
 			};
 		};
-		class Item29
+		class Item27
 		{
 			side="LOGIC";
 			class Vehicles
@@ -855,7 +717,7 @@ class Mission
 							typeName="role";
 						};
 					};
-					id=29;
+					id=27;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignRepairFacility";
 					leader=1;
@@ -866,7 +728,7 @@ class Mission
 				};
 			};
 		};
-		class Item30
+		class Item28
 		{
 			side="LOGIC";
 			class Vehicles
@@ -933,7 +795,7 @@ class Mission
 							typeName="wheelRepairRequiredItems";
 						};
 					};
-					id=30;
+					id=28;
 					side="LOGIC";
 					vehicle="ACE_moduleRepairSettings";
 					leader=1;
@@ -942,7 +804,7 @@ class Mission
 				};
 			};
 		};
-		class Item31
+		class Item29
 		{
 			side="WEST";
 			class Vehicles
@@ -950,9 +812,9 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8321.8301,75.940002,10044.296};
+					position[]={8074.0767,71.488876,9865.4326};
 					azimut=180;
-					id=31;
+					id=29;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					leader=1;
@@ -962,7 +824,7 @@ class Mission
 				};
 			};
 		};
-		class Item32
+		class Item30
 		{
 			side="GUER";
 			class Vehicles
@@ -970,15 +832,143 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8323.3779,75.940002,10044.296};
+					position[]={8075.6245,71.494965,9865.4326};
 					azimut=180;
-					id=32;
+					id=30;
 					side="GUER";
 					vehicle="I_soldier_F";
 					leader=1;
 					skill=0.60000002;
 					text="btc_hq_green";
 					init="if (isServer) then {this enableSimulation false;hideObjectGlobal this;this allowDamage false;};";
+				};
+			};
+		};
+		class Item31
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8282.9766,57.551399,9962.9941};
+					class args
+					{
+						items=10;
+						class Item0
+						{
+							value="0";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="enabled";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="simulateForSnipers";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="simulateForGroupMembers";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="simulateForEveryone";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="disabledInFullAutoMode";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="ammoTemperatureEnabled";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="barrelLengthInfluenceEnabled";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="bulletTraceEnabled";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="simulationInterval";
+						};
+						class Item9
+						{
+							value="3000";
+							parentCls="ace_advanced_ballistics_ModuleSettings";
+							typeName="simulationRadius";
+						};
+					};
+					id=31;
+					side="LOGIC";
+					vehicle="ace_advanced_ballistics_ModuleSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item32
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8277.0547,58.537991,9962.7119};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="1";
+							parentCls="ace_winddeflection_ModuleSettings";
+							typeName="enabled";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ace_winddeflection_ModuleSettings";
+							typeName="vehicleEnabled";
+						};
+						class Item2
+						{
+							value="0.05";
+							parentCls="ace_winddeflection_ModuleSettings";
+							typeName="simulationInterval";
+						};
+						class Item3
+						{
+							value="3000";
+							parentCls="ace_winddeflection_ModuleSettings";
+							typeName="simulationRadius";
+						};
+					};
+					id=32;
+					side="LOGIC";
+					vehicle="ace_winddeflection_ModuleSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
@@ -1131,7 +1121,7 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={8209.9434,76.416351,10021.622};
+			position[]={8213.5498,76.487816,10024.03};
 			azimut=-27.934999;
 			id=46;
 			side="EMPTY";
@@ -1142,7 +1132,7 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={8209.9336,76.380455,10022.721};
+			position[]={8213.54,76.510483,10025.129};
 			azimut=51.220901;
 			id=47;
 			side="EMPTY";

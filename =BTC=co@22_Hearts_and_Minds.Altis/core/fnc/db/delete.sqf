@@ -1,14 +1,16 @@
 
-profileNamespace setVariable ["btc_hm_date",nil];
-profileNamespace setVariable ["btc_hm_cities",nil];
-profileNamespace setVariable ["btc_hm_ho",nil];
-profileNamespace setVariable ["btc_hm_ho_sel",nil];
-profileNamespace setVariable ["btc_hm_cache",nil];
-profileNamespace setVariable ["btc_hm_rep",nil];
-profileNamespace setVariable ["btc_hm_fobs",nil];
-profileNamespace setVariable ["btc_hm_vehs",nil];
-profileNamespace setVariable ["btc_hm_objs",nil];
-profileNamespace setVariable ["btc_hm_db",nil];
+_name = worldName;
+
+profileNamespace setVariable [format ["btc_hm_%1_date",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_cities",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_ho",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_ho_sel",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_cache",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_rep",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_fobs",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_vehs",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_objs",_name],nil];
+profileNamespace setVariable [format ["btc_hm_%1_db",_name],nil];
 
 saveProfileNamespace;
 

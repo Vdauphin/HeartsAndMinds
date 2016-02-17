@@ -21,7 +21,14 @@ _radius = (_radius_x+_radius_y)/2;
 
 if (!_is_init) then {
 	private ["_ratio_ied","_ratio"];
-	_ratio = (switch _type do {case "Hill" : {random 1};case "NameLocal" : {random 2.5};case "NameVillage" : {random 3.5};case "NameCity" : {random 5};case "NameCityCapital" : {random 6};});
+	_ratio = (switch _type do {
+		case "Hill" : {random 1};
+		case "NameLocal" : {random 2.5};
+		case "NameVillage" : {random 3.5};
+		case "NameCity" : {random 5};
+		case "NameCityCapital" : {random 6};
+		case "NameMarine" : {0};
+		});
 	_ratio_ied = _ratio;
 	if (_has_en) then {_ratio_ied = _ratio_ied * 1.5;} else {_ratio_ied = _ratio_ied * 0.75;};
 	if (_has_ho) then {_ratio_ied = _ratio_ied * 2;};
@@ -29,9 +36,9 @@ if (!_is_init) then {
 	diag_log format ["_ratio_ied %1 - p %2",_ratio_ied,_ratio_ied * btc_p_ied];
 	_ratio_ied = _ratio_ied * btc_p_ied;
 	if (_ratio_ied > 0) then {[_city,_radius,((_ratio_ied/ 2) + (random _ratio_ied))] call btc_fnc_ied_init_area};
-	
+
 	_ieds = _city getVariable ["ieds",[]];
-	
+
 	_city setVariable ["initialized",true];
 };
 
@@ -43,7 +50,15 @@ if (count _data_units > 0) then {
 } else {
 	private ["_ratio"];
 	//spawn bad guys "NameVillage","NameCity","NameCityCapital","NameLocal"
-	_ratio = (switch _type do {case "Hill" : {0.6};case "NameLocal" : {0.75};case "NameVillage" : {1};case "NameCity" : {2};case "NameCityCapital" : {4}; default {0.1};});
+	_ratio = (switch _type do {
+		case "Hill" : {0.6};
+		case "NameLocal" : {0.75};
+		case "NameVillage" : {1};
+		case "NameCity" : {2};
+		case "NameCityCapital" : {4};
+		case "NameMarine" : {0.6};
+		default {0.1};
+		});
 	if (_has_en) then
 	{
 		private ["_groups","_n","_trigger"];
@@ -53,20 +68,26 @@ if (count _data_units > 0) then {
 		//hint ("SPAWNING" + str(_groups) + " ---- " + str(_n));
 		//for "_i" from 1 to (_groups) do {[_city,_radius,(random _ratio),(random 1)] spawn btc_fnc_mil_create_group;sleep 0.5;};
 		for "_i" from 1 to (_groups) do {[_city,_radius,(random _ratio),(random 1)] call btc_fnc_mil_create_group;};
-		
+
 		_trigger = createTrigger["EmptyDetector",getPos _city];
 		_trigger setTriggerArea[(_radius_x+_radius_y),(_radius_x+_radius_y),0,false];
 		_trigger setTriggerActivation[str(btc_enemy_side),"NOT PRESENT",false];
 		_trigger setTriggerStatements ["this", format ["[%1] spawn btc_fnc_city_set_clear",(_this select 0)], ""];
 		_city setVariable ["trigger",_trigger];
-	
+
 	};
 	//spawn mini task (ammo cache, ieds, injured civ)
-	
+
 	//spawn civilians
 	if (_type != "Hill") then {
 		private ["_factor","_n"];
-		_factor = (switch _type do {case "NameLocal" : {0.5};case "NameVillage" : {1.5};case "NameCity" : {3};case "NameCityCapital" : {6}; default {1};});
+		_factor = (switch _type do {
+			case "NameLocal" : {0.5};
+			case "NameVillage" : {1.5};
+			case "NameCity" : {3};
+			case "NameCityCapital" : {6};
+			default {1};
+			});
 		_n = 3 * _factor;
 		[_city,(_radius/3),_n] call btc_fnc_civ_populate;
 	};
@@ -104,7 +125,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned",false])}) then {
 			private ["_statics"];
 			_statics = btc_type_gl + btc_type_mg;
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
-			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;	
+			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;
 		};
 	};
 };
@@ -146,7 +167,7 @@ if (btc_civ_veh_active < btc_civ_max_veh) then {
 	if (btc_debug_log) then	{diag_log format ["btc_fnc_city_activate: (traffic) _n = %1 _av %2 _d %3 _r %4",_n,_av,_d,_r];};
 };
 
-//Suicider 
+//Suicider
 _city = btc_city_all select (_this select 0);
 if !(_city getVariable ["has_suicider",false]) then {
 	if ((time - btc_ied_suic_spawned) > btc_ied_suic_time && {random 1000 > btc_global_reputation}) then {

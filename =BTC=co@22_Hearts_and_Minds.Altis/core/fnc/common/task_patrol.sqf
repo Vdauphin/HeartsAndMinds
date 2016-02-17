@@ -1,8 +1,15 @@
+
+private ["_pos","_area","_behav","_allowwater"];
+
 _group = _this select 0;
 _pos = _this select 1;
 _area = _this select 2;
 _behav = _this select 3;
-
+if (count _this > 3) then {
+	_allowwater = _this select 4;
+} else {
+	_allowwater = false;
+};
 _group setBehaviour _behav;
 {_x setBehaviour _behav;} foreach units _group;
 
@@ -11,7 +18,7 @@ _prevPos = _pos;
 for "_i" from 0 to (2 + (floor (random 3))) do
 {
 	private ["_wp", "_newPos"];
-	_newPos = [_prevPos, 50, _area, 1, 0, 60 * (pi / 180), 0, []] call BIS_fnc_findSafePos;
+	_newPos = [_prevPos, 50, _area, 1, [0,1] select _allowwater, 60 * (pi / 180), 0, []] call BIS_fnc_findSafePos;
 
 	_prevPos = _newPos;
 

@@ -12,7 +12,7 @@ hint "saving...";
 
 btc_db_is_saving = true;
 
-profileNamespace setVariable ["btc_hm_date",date];
+profileNamespace setVariable [format ["btc_hm_%1_date",_name],date];
 
 for "_i" from 0 to (count btc_city_all - 1) do {
 	private "_s";
@@ -43,7 +43,7 @@ _cities_status = [];
 	_cities_status pushBack _city_status;
 	//diag_log format ["SAVE: %1 - %2",(_x getVariable "id"),(_x getVariable "occupied")];
 } foreach btc_city_all;
-profileNamespace setVariable ["btc_hm_cities",_cities_status];
+profileNamespace setVariable [format ["btc_hm_%1_cities",_name],_cities_status];
 
 //HIDEOUT
 _array_ho = [];
@@ -66,9 +66,9 @@ _array_ho = [];
 	diag_log format ["HO %1 DATA %2",_x,_data];
 	_array_ho pushBack _data;
 } foreach btc_hideouts;
-profileNamespace setVariable ["btc_hm_ho",_array_ho];
+profileNamespace setVariable [format ["btc_hm_%1_ho",_name],_array_ho];
 
-profileNamespace setVariable ["btc_hm_ho_sel",(btc_hq getVariable ["info_hideout",objNull])];
+profileNamespace setVariable [format ["btc_hm_%1_ho_sel",_name],(btc_hq getVariable ["info_hideout",objNull])];
 
 //CACHE
 _array_cache = [];
@@ -83,10 +83,10 @@ _cache_markers = [];
 	_cache_markers pushBack _data;
 } foreach btc_cache_markers;
 _array_cache pushback (_cache_markers);
-profileNamespace setVariable ["btc_hm_cache",_array_cache];
+profileNamespace setVariable [format ["btc_hm_%1_cache",_name],_array_cache];
 
 //rep status
-profileNamespace setVariable ["btc_hm_rep",btc_global_reputation];
+profileNamespace setVariable [format ["btc_hm_%1_rep",_name],btc_global_reputation];
 //FOBS
 _fobs = [];
 {
@@ -94,7 +94,7 @@ _fobs = [];
 	_pos = getMarkerPos _x;
 	_fobs pushBack [_x,_pos];
 } foreach btc_fobs;
-profileNamespace setVariable ["btc_hm_fobs",_fobs];
+profileNamespace setVariable [format ["btc_hm_%1_fobs",_name],_fobs];
 
 //Vehicles status
 _array_veh = [];
@@ -111,7 +111,7 @@ _array_veh = [];
 	_array_veh pushBack _data;
 	//diag_log format ["VEH %1 DATA %2",_x,_data];
 } foreach btc_vehicles;
-profileNamespace setVariable ["btc_hm_vehs",_array_veh];
+profileNamespace setVariable [format ["btc_hm_%1_vehs",_name],_array_veh];
 
 //Objects status
 _array_obj = [];
@@ -126,10 +126,10 @@ _array_obj = [];
 	_data pushBack _cargo;
 	_array_obj pushBack _data;
 } foreach btc_log_obj_created;
-profileNamespace setVariable ["btc_hm_objs",_array_obj];
+profileNamespace setVariable [format ["btc_hm_%1_objs",_name],_array_obj];
 
 //
-profileNamespace setVariable ["btc_hm_db",true];
+profileNamespace setVariable [format ["btc_hm_%1_db",_name],true];
 saveProfileNamespace;
 hint "saving...3";
 [[9],"btc_fnc_show_hint"] spawn BIS_fnc_MP;

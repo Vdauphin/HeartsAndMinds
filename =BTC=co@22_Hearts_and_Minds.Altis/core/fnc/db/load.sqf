@@ -1,10 +1,12 @@
 
 private ["_cities_status","_fobs","_fobs_loaded"];
 
-setDate (profileNamespace getVariable ["btc_hm_date",date]);
+_name = worldName;
+
+setDate (profileNamespace getVariable [format ["btc_hm_%1_date",_name],date]);
 
 //CITIES
-_cities_status = profileNamespace getVariable ["btc_hm_cities",[]];
+_cities_status = profileNamespace getVariable [format ["btc_hm_%1_cities",[]];
 //diag_log format ["_cities_status: %1",_cities_status];
 
 {
@@ -63,7 +65,7 @@ _cities_status = profileNamespace getVariable ["btc_hm_cities",[]];
 	} foreach (_x getVariable ["markers",[]]);
 	_data pushback (_cache_markers);
 */
-_array_ho = profileNamespace getVariable ["btc_hm_ho",[]];
+_array_ho = profileNamespace getVariable [format ["btc_hm_%1_ho",_name],[]];
 
 {
 	_pos = (_x select 0);
@@ -105,7 +107,7 @@ _array_ho = profileNamespace getVariable ["btc_hm_ho",[]];
 	btc_hideouts = btc_hideouts + [_hideout];
 } foreach _array_ho;
 
-_ho = profileNamespace getVariable ["btc_hm_ho_sel",objNull];
+_ho = profileNamespace getVariable [format ["btc_hm_%1_ho_sel",_name],objNull];
 btc_hq setVariable ["info_hideout",_ho];
 
 if (count btc_hideouts == 0) then {[] execVM "core\fnc\common\final_phase.sqf";};
@@ -115,7 +117,7 @@ if (count btc_hideouts == 0) then {[] execVM "core\fnc\common\final_phase.sqf";}
 btc_cache_cities = + btc_city_all;
 btc_cache_markers = [];
 
-_array_cache = profileNamespace getVariable ["btc_hm_cache",[]];
+_array_cache = profileNamespace getVariable [format ["btc_hm_%1_cache",_name],[]];
 
 btc_cache_pos = _array_cache select 0;
 btc_cache_n = _array_cache select 1;
@@ -147,10 +149,10 @@ if (btc_debug) then {
 };
 
 //REP
-btc_global_reputation = profileNamespace getVariable ["btc_hm_rep",0];
+btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep",_name],0];
 
 //FOB
-_fobs = profileNamespace getVariable ["btc_hm_fobs",[]];
+_fobs = profileNamespace getVariable [format ["btc_hm_%1_fobs",_name],[]];
 _fobs_loaded = [];
 
 {
@@ -180,7 +182,7 @@ btc_fobs = _fobs_loaded;
 {deleteVehicle _x} foreach btc_vehicles;
 btc_vehicles = [];
 
-_vehs = profileNamespace getVariable ["btc_hm_vehs",[]];
+_vehs = profileNamespace getVariable [format ["btc_hm_%1_vehs",_name],[]];
 /*
 {diag_log format ["0: %1",(_x select 0)];
 diag_log format ["1: %1",(_x select 1)];
@@ -221,7 +223,7 @@ diag_log format ["5: %1",(_x select 5)];
 	_array_obj pushBack _data;
 */
 //btc_log_obj_created = [];
-_objs = profileNamespace getVariable ["btc_hm_objs",[]];
+_objs = profileNamespace getVariable [format ["btc_hm_%1_objs",_name],[]];
 {
 	private "_obj";
 	_obj = (_x select 0) createVehicle (_x select 1);

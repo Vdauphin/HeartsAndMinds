@@ -1,5 +1,5 @@
 
-private ["_city","_area","_n","_wp","_pos","_rpos","_unit_type","_group","_in_house"];
+private ["_city","_area","_n","_wp","_pos","_rpos","_unit_type","_group","_in_house","_pos_iswater"];
 
 _city = _this select 0;
 _area = _this select 1;
@@ -14,9 +14,14 @@ switch (typeName _city) do {
 	case "OBJECT":{_pos = position _city;};
 };
 
-_rpos = [_pos, _area] call btc_fnc_randomize_pos;
+_rpos = [_pos, _area, btc_p_sea] call btc_fnc_randomize_pos;
 
-_unit_type = btc_type_units select (floor random count btc_type_units);
+_pos_iswater = (surfaceIsWater _rpos);
+if (_pos_iswater) then {
+	_unit_type = btc_type_divers select (floor random count btc_type_divers);
+} else {
+	_unit_type = btc_type_units select (floor random count btc_type_units);
+};
 
 _group = createGroup btc_enemy_side;
 _group createUnit [_unit_type, _rpos, [], 0, "NONE"];
@@ -29,13 +34,13 @@ switch (true) do {
 		_houses = [_rpos,50] call btc_fnc_getHouses;
 		if (count _houses > 0) then	{
 			_in_house = true;
-			_house = _houses select (floor random count _houses);	
+			_house = _houses select (floor random count _houses);
 			[_group,_house] spawn btc_fnc_house_addWP;
 			_group setVariable ["inHouse",_house];
-		} else {[_group,_rpos,_area,"SAFE"] spawn btc_fnc_task_patrol;};
+		} else {[_group,_rpos,_area,"SAFE",_pos_iswater] spawn btc_fnc_task_patrol;};
 	};
 	case (_wp > 0.3 && _wp < 0.75) : {
-		[_group,_rpos,(_area*2),"AWARE"] spawn btc_fnc_task_patrol;
+		[_group,_rpos,(_area*2),"AWARE",_pos_iswater] spawn btc_fnc_task_patrol;
 	};
 	case (_wp > 0.75) :	{
 		private ["_wpa"];
@@ -47,7 +52,7 @@ switch (true) do {
 };
 if (!_in_house) then {
 	for "_i" from 0 to _n do {
-		_unit_type = btc_type_units select (floor random count btc_type_units);
+		_unit_type = [btc_type_units select (floor random count btc_type_units), btc_type_divers select (floor random count btc_type_divers) ] select _pos_iswater;
 		_group createUnit [_unit_type, _rpos, [], 0, "NONE"];
 		sleep 0.5;
 	};
@@ -58,6 +63,6 @@ if ((position leader _group) distance [0,0,0] < 50) then {{_x setpos _rpos;} for
 
 {_x call btc_fnc_mil_unit_create;} foreach units _group;
 
-if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_group: _this = %1 ; POS %2 UNITS N %3",_this,_rpos,count units _group];};	
+if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_group: _this = %1 ; POS %2 UNITS N %3",_this,_rpos,count units _group];};
 
 _group

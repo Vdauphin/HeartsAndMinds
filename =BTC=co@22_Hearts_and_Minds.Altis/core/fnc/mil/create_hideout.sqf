@@ -1,5 +1,5 @@
 
-private ["_city","_pos","_hideout"];
+private ["_city","_pos","_radius","_hideout","_random_pos"];
 
 _city = objNull;
 
@@ -23,8 +23,10 @@ if (count _this > 0) then {_city = _this;} else {
 	_city = _useful select _id;
 };
 
-_pos = [getPos _city, 300] call btc_fnc_randomize_pos;
-_pos = [_pos, 0, 300, 13, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
+_radius = (((_city getVariable ["RadiusX",0]) + (_city getVariable ["RadiusY",0]))/2) - 100;
+
+_random_pos = [getPos _city, _radius] call btc_fnc_randomize_pos;
+_pos = [_random_pos, 0, 100, 2, 0, 0.5, 0] call BIS_fnc_findSafePos;//5????
 
 if (count _pos == 0) then {_pos = getPos _city;};
 
@@ -58,3 +60,5 @@ if (btc_debug_log) then {diag_log format ["btc_fnc_mil_create_hideout: _this = %
 
 btc_hideouts_id = btc_hideouts_id + 1;
 btc_hideouts = btc_hideouts + [_hideout];
+
+true

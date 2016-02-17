@@ -7,7 +7,7 @@ if (btc_db_load && {profileNamespace getVariable ["btc_hm_db",false]}) then {
 
 	[] execVM "core\fnc\cache\init.sqf";
 	
-	[] spawn {{waitUntil {!isNull _x};_x addEventHandler ["Killed", {_this call btc_fnc_eh_veh_killed}];} foreach btc_vehicles;};
+	[] spawn {{waitUntil {!isNull _x};_x addMPEventHandler ["MPKilled", {if (isServer) then {_this call btc_fnc_eh_veh_killed};}];} foreach btc_vehicles;};
 };
 	
 [btc_helo_1,30,true] spawn btc_fnc_eh_veh_add_respawn;

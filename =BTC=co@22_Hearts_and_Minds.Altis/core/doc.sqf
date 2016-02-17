@@ -13,8 +13,8 @@ Note: the playSound ['',true] command is bugged, so if you are deaf you will not
 ];
 
 player createDiaryRecord ["Documentation", ["Vehicles", "
-When a vehicle is destroyed it will not respawn in base, you need to tow it back to base and repair it near the logistic point. (Interacti with the red box)<br/>
-The GostHawk is the only exception, it will respawn after 30 seconds.
+When a vehicle is destroyed it will not respawn in base, you need to tow or lift it back to base and repair it near the logistic point (Interact with the red box). Helicopter wreck can only be lifted. <br/>
+The Chinook is the only exception, it will respawn after 30 seconds.
 	"]
 ];
 
@@ -27,7 +27,7 @@ If you don't want to complete a task, you can always abort it with the self inte
 
 player createDiaryRecord ["Documentation", ["FOB", "
 FOB<br/><br/>
-In this mission a FOB is a forward spawn point, to create a FOB approach the red box at the logistic point and require a blu container.<br/>
+In this mission a FOB is a forward spawn point, to create a FOB approach the red box at the logistic point and require a blue container.<br/>
 Move it where you want to deploy a new FOB and interact with it to set it up. Keep in mind that you can not deploy a FOB close to the main base (2.500m) and the terrain needs to be flat.<br/><br/>
 You can re-deploy at the new location interacting with the flag.
 	"]
@@ -87,13 +87,19 @@ You can also blow them off with high caliber and explosive satchels.
 player createDiaryRecord ["Documentation", ["Intel", "
 Intel can be retrieved in two ways:<br/>
 - Searching dead bodies<br/>
+- Interrogate prisoner<br/>
 - Talking to civilians<br/><br/>
 Keep in mind that only the interpreter can talk to civilians and they can lie if your reputation level is low.<br/><br/>
-When you find an intel from a dead body, a marker will appear in the map.<br/>
+When you find an intel from a dead body or interrogate a prisoner, a marker will appear in the map. Remember, prisoner have a random number of intel more or less interesting.<br/>
 There are two types of marker:<br/>
 - Red question mark: ammo cache intel<br/>
 - Red esclamation mark: hideout intel<br/><br/><br/>
 When you destroy an hideout or an ammo cache, all the markers related to it will be deleted.
+	"]
+];
+
+player createDiaryRecord ["Documentation", ["Reputation", "
+Reputation can be ask to civilian<br/>
 	"]
 ];
 
@@ -104,10 +110,16 @@ Your options are:<br/>
 - STOP<br/>
 - GET DOWN<br/>
 - GO AWAY<br/><br/>
-	
+
 If you want to give an order just to one unit, interact with it (user action 2).
 	"]
 ];
+
+player createDiaryRecord ["Documentation", ["Traffic", "
+Civilian are travelling by car across cities. If your reputation is higher than normal, you can ask a lift to a location choosed on map. If you bump into enemies, don't worry, the civilian driver will do the best to hide you in the car. <br/>
+	"]
+];
+
 player createDiaryRecord ["Documentation", ["Gear", "
 You can choose your gear at the red box inside the base.<br/>
 Use your user action 2 to change your gear.
@@ -120,7 +132,7 @@ Use ACE 3 interactions system.
 ];
 
 player createDiaryRecord ["Documentation", [
-	"Version", 
+	"Version",
 	format ["Version %1",btc_version]
 	]
 ];

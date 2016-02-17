@@ -1,8 +1,8 @@
 
-private ["_useful","_city","_pos","_road","_roads","_marker","_statics","_tower_type","_tower","_roadConnectedTo","_connectedRoad","_direction"];
+private ["_useful","_city","_pos","_road","_roads","_marker","_statics","_tower_type","_tower","_direction"];
 
 _useful = [];
-{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
+{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"} && (_x getVariable ["type",""] != "NameMarine")) then {_useful = _useful + [_x];};} foreach btc_city_all;
 
 if (count _useful == 0) exitWith {[] spawn btc_fnc_side_create;};
 
@@ -16,9 +16,7 @@ if (count _roads > 0) then {_road = (_roads select (floor random count _roads));
 	_pos = getPos _road;
 	};
 
-_roadConnectedTo = roadsConnectedTo _road;
-_connectedRoad = _roadConnectedTo select 0;
-_direction = [_road, _connectedRoad] call BIS_fnc_dirTo;
+_direction = [_road] call btc_fnc_road_direction;
 
 btc_side_aborted = false;
 btc_side_done = false;
@@ -43,8 +41,7 @@ _marker setmarkertype "hd_flag";
 _marker setmarkertext "Radio Tower";
 _marker setMarkerSize [0.6, 0.6];
 
-_btc_type_tower = ["Land_Communication_F","Land_TTowerBig_1_F","Land_TTowerBig_2_F"];
-_tower_type = _btc_type_tower select (floor (random (count _btc_type_tower)));
+_tower_type = btc_type_tower select (floor (random (count btc_type_tower)));
 
 _tower = createVehicle [_tower_type, _pos, [], 0, "NONE"];
 _tower setDir (_direction);

@@ -2,7 +2,7 @@
 private ["_useful","_city","_pos","_area","_marker"];
 
 _useful = [];
-{if (_x getVariable ["type",""] != "NameLocal" && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
+{if (_x getVariable ["type",""] != "NameLocal" && {_x getVariable ["type",""] != "Hill"} && (_x getVariable ["type",""] != "NameMarine")) then {_useful = _useful + [_x];};} foreach btc_city_all;
 
 if (count _useful == 0) then {_useful = + btc_city_all;};
 
@@ -49,9 +49,9 @@ if (count (nearestObjects [_pos, [btc_supplies_mat], 30]) > 0) then {
 	_pos spawn {
 		private "_obj";
 		_obj = (nearestObjects [_this, [btc_supplies_mat], 30]) select 0;
-		
+
 		waitUntil {sleep 5; ({_x distance _this < 300} count playableUnits == 0)};
-		
+
 		deleteVehicle _obj;
 	};
 };

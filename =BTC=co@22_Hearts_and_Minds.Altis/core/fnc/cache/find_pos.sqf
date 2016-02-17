@@ -5,13 +5,13 @@ if (count btc_hideouts == 0) exitWith {};
 
 _useful = [];
 _house = objNull;
-{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
+{if (_x getVariable ["occupied",false] && {_x getVariable ["type",""] != "NameLocal"} && {_x getVariable ["type",""] != "Hill"} && {_x getVariable ["type",""] != "NameMarine"}) then {_useful = _useful + [_x];};} foreach btc_city_all;
 
 if (count _useful == 0) then {_useful = btc_city_all;};
 
 _id = floor random count _useful;
 _city = _useful select _id;
-if (_city getVariable ["type",""] == "NameLocal" || _city getVariable ["type",""] == "Hill") exitWith {[] call btc_fnc_cache_find_pos;};
+if (_city getVariable ["type",""] == "NameLocal" || _city getVariable ["type",""] == "Hill" || _city getVariable ["type",""] == "NameMarine") exitWith {[] call btc_fnc_cache_find_pos;};
 btc_cache_cities set [_id,0];
 btc_cache_cities = btc_cache_cities - [0];
 /*
