@@ -4,7 +4,21 @@ private ["_type","_array_pos","_array_type","_side","_array_dam","_behaviour","_
 _type 		= _this select 0;
 _array_pos  = _this select 1;
 _array_type = _this select 2;
-_side		= _this select 3;
+switch (_this select 3) do
+{
+	case "CIV":
+	{
+		_side = civilian;
+	};
+	case "UNKNOWN":
+	{
+		_side = sideUnknown;
+	};
+	default
+	{
+		_side = call compile (_this select 3);
+	};
+};
 _array_dam  = _this select 4;
 _behaviour  = _this select 5;
 _array_wp   = _this select 6;
@@ -75,7 +89,7 @@ if (_type == 5) then {
 		while {Alive _suicider && !isNull _suicider && !_cond} do {
 			sleep 5;
 			if (count (getpos _suicider nearEntities ["SoldierWB", 25]) > 0) then {_cond = true;_suicider spawn btc_fnc_ied_suicider_active};
-		};	
+		};
 	};
 };
 

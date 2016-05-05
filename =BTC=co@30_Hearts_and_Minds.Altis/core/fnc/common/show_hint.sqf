@@ -38,4 +38,7 @@ switch (_type) do {
 	case 10 : {
 		hint "Database deleted!";
 	};
+	case 11 : {
+		hint ("Game not " + (_this select 1) + " because @iniDB isn't lauched server side!");
+	};
 };
