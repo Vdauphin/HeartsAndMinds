@@ -9,8 +9,6 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db",worldNa
 } else {
 	for "_i" from 1 to btc_hideout_n do {[] call btc_fnc_mil_create_hideout;};
 
-	setTimeMultiplier btc_p_acctime;
-
 	[] execVM "core\fnc\cache\init.sqf";
 
 	[] spawn {
@@ -21,6 +19,8 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db",worldNa
 		} foreach btc_vehicles;
 	};
 };
+
+setTimeMultiplier btc_p_acctime;
 
 call btc_fnc_db_autosave;
 
