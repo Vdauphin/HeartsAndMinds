@@ -56,4 +56,12 @@ switch true do {
 		_action = ["Cut_ropes","Cut ropes","\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa",{[] spawn btc_fnc_log_lift_destroy_ropes;},{btc_ropes_deployed && {((driver vehicle player) isEqualTo player)}}] call ace_interact_menu_fnc_createAction;
 		[_type, 1, ["ACE_SelfActions"], _action,true] call ace_interact_menu_fnc_addActionToClass;
 	};
+	case (_type isKindOf "Ship") : {
+		private ["_action"];
+		//Lift
+		_action = ["Deploy_ropes","Deploy ropes","\A3\Structures_F_Heli\VR\Helpers\Data\VR_Symbol_Heli_Slingloading_CA.paa",{[] spawn btc_fnc_log_lift_deploy_ropes;},{!btc_ropes_deployed && {((driver vehicle player) isEqualTo player)}}] call ace_interact_menu_fnc_createAction;
+		[_type, 1, ["ACE_SelfActions"], _action,true] call ace_interact_menu_fnc_addActionToClass;
+		_action = ["Cut_ropes","Cut ropes","\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa",{[] spawn btc_fnc_log_lift_destroy_ropes;},{btc_ropes_deployed && {((driver vehicle player) isEqualTo player)}}] call ace_interact_menu_fnc_createAction;
+		[_type, 1, ["ACE_SelfActions"], _action,true] call ace_interact_menu_fnc_addActionToClass;
+	};
 };

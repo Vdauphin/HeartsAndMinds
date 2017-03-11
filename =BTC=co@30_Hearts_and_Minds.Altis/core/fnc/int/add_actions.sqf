@@ -54,21 +54,20 @@ _action = ["Civil_Get_down","Get down","\A3\ui_f\data\igui\cfg\simpleTasks\types
 _action = ["Civil_Go_away","Go away","\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa",{[3] call btc_fnc_int_orders;},{(vehicle player isEqualTo player)}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions","Civil_Orders"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-
 _action = ["Civil_Orders","Civil Orders","\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa",{},{true}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Civil_Stop", "Stop", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[1,(_this select 0)] call btc_fnc_int_orders;}, {Alive (_this select 0)}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions","Civil_Orders"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions","Civil_Orders"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Civil_Get_down", "Get down", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[2,(_this select 0)] call btc_fnc_int_orders;}, {Alive (_this select 0)}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions","Civil_Orders"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions","Civil_Orders"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Civil_taxi", "Taxi", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[4,(_this select 0)] spawn btc_fnc_int_orders;}, {((Alive (_this select 0)) && !((vehicle (_this select 0)) isEqualTo (_this select 0)))}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions","Civil_Orders"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions","Civil_Orders"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Civil_Go_away", "Go away", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[3,(_this select 0)] call btc_fnc_int_orders;}, {Alive (_this select 0)}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions","Civil_Orders"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions","Civil_Orders"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Ask_Info", "Ask info", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[(_this select 0),false] spawn btc_fnc_info_ask;}, {Alive (_this select 0) && {[(_this select 0)] call ace_common_fnc_isAwake} && {side (_this select 0) isEqualTo civilian}}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Ask_Reputation", "Ask Reputation", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[(_this select 0)] spawn btc_fnc_info_ask_reputation;}, {Alive (_this select 0) && {[(_this select 0)] call ace_common_fnc_isAwake} && {side (_this select 0) isEqualTo civilian}}] call ace_interact_menu_fnc_createAction;
-{[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} foreach btc_civ_type_units;
+["Civilian", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 //Side missions
 _action = ["side_mission","Side mission","\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa",{},{!(isNil {player getVariable "side_mission"})}] call ace_interact_menu_fnc_createAction;

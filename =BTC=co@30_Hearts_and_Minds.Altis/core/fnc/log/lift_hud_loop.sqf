@@ -30,10 +30,10 @@ if (({_cargo isKindOf _x} count _array) > 0) then {_can_lift = true;} else {_can
 
 if (!isNull _cargo) then {
 	_cargo_pos = getPosATL _cargo;
-	_rel_pos   = (_chopper) worldToModel _cargo_pos;
+	_rel_pos   = _chopper worldToModel _cargo_pos;
 	_cargo_x   = _rel_pos select 0;
 	_cargo_y   = _rel_pos select 1;
-	_cargo_z   = _rel_pos select 2;
+	_cargo_z   = ((getPosATL _chopper) select 2) - (_cargo_pos select 2);
 	_obj_img ctrlShow true;
 	_hud_x   = _cargo_x / 100;
 	switch (true) do {

@@ -34,3 +34,7 @@ addMissionEventHandler ["HandleDisconnect",{
 setTimeMultiplier btc_p_acctime;
 
 {[_x,30,false] spawn btc_fnc_eh_veh_add_respawn;} forEach btc_helo;
+
+if (btc_p_side_mission_cycle) then {
+	[true] spawn btc_fnc_side_create;
+};
