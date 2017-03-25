@@ -23,10 +23,7 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db",worldNa
 call btc_fnc_db_autosave;
 
 addMissionEventHandler ["HandleDisconnect",{
-	if ((_this select 0) in (entities "HeadlessClient_F")) then 	{
-		//Remove HC player when disconnect
-		deleteVehicle (_this select 0);
-	};
+	deleteVehicle (_this select 0);
 }];
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
