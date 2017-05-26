@@ -1,0 +1,36 @@
+if (hasInterface) then {
+        MG_ARSENAL_GENERAL = ["gen"] call compile preprocessFileLineNumbers "MG-Arsenal\CompileLoadouts.sqf";
+        _arsenalItems = (MG_ARSENAL_GENERAL select 0);
+        _arsenalBackpacks = (MG_ARSENAL_GENERAL select 1);
+        _arsenalWeapons = (MG_ARSENAL_GENERAL select 2);
+        _arsenalMagazines = (MG_ARSENAL_GENERAL select 3);
+
+        if (player getVariable ["sniper", false]) then {    // this setVariable ["sniper", true];
+                MG_ARSENAL_SNIPER = ["sniper"] call compile preprocessFileLineNumbers "MG-Arsenal\CompileLoadouts.sqf";
+                { _arsenalItems pushBackUnique _x;} forEach (MG_ARSENAL_SNIPER select 0);
+                { _arsenalBackpacks pushBackUnique _x;} forEach (MG_ARSENAL_SNIPER select 1);
+                { _arsenalWeapons pushBackUnique _x;} forEach (MG_ARSENAL_SNIPER select 2);
+                { _arsenalMagazines pushBackUnique _x;} forEach (MG_ARSENAL_SNIPER select 3);
+                hint "BOOM!!! Headshot";
+        };
+        if (player getVariable ["engineer", false]) then {    // this setVariable ["engineer", true];
+                MG_ARSENAL_ENGINEER = ["engineer"] call compile preprocessFileLineNumbers "MG-Arsenal\CompileLoadouts.sqf";
+                { _arsenalItems pushBackUnique _x;} forEach (MG_ARSENAL_ENGINEER select 0);
+                { _arsenalBackpacks pushBackUnique _x;} forEach (MG_ARSENAL_ENGINEER select 1);
+                { _arsenalWeapons pushBackUnique _x;} forEach (MG_ARSENAL_ENGINEER select 2);
+                { _arsenalMagazines pushBackUnique _x;} forEach (MG_ARSENAL_ENGINEER select 3);
+                hint "Trust me, I'm an engineer";
+        };
+        if (player getVariable ["helipilot", false]) then {    // this setVariable ["logipilot", true];
+                MG_ARSENAL_HELIPILOT = ["helipilot"] call compile preprocessFileLineNumbers "MG-Arsenal\CompileLoadouts.sqf";
+                { _arsenalItems pushBackUnique _x;} forEach (MG_ARSENAL_HELIPILOT select 0);
+                { _arsenalBackpacks pushBackUnique _x;} forEach (MG_ARSENAL_HELIPILOT select 1);
+                { _arsenalWeapons pushBackUnique _x;} forEach (MG_ARSENAL_HELIPILOT select 2);
+                { _arsenalMagazines pushBackUnique _x;} forEach (MG_ARSENAL_HELIPILOT select 3);
+                hint "Just another delivery";
+        };
+        [ btc_gear_object, _arsenalItems, false] call BIS_fnc_addVirtualItemCargo;
+        [ btc_gear_object, _arsenalBackpacks, false] call BIS_fnc_addVirtualBackpackCargo;
+        [ btc_gear_object, _arsenalWeapons, false] call BIS_fnc_addVirtualWeaponCargo;
+        [ btc_gear_object, _arsenalMagazines, false] call BIS_fnc_addVirtualMagazineCargo;
+};

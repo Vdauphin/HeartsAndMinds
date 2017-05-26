@@ -13,6 +13,15 @@
     </a>
 </p>
 
+This mission is a modified game for Matriarch Gaming Clan to play.
+Modifications:
+1. Changed all units to RHSUSAF
+2. Added Slot/Vehicle/Arsenal restrictions
+3. Added Zeus Game Master
+4. Other mods added to enhance realism
+5. ACE settings tweaked to a more Hardcore gameplay
+
+
 Hearts and Minds is a cooperative mission that aims to recreate a post war environment based on an insurgency gameplay.
 CSAT forces retreated from Altis and NATO deployed units and vehicles to help the local population.
 A new formed group, known as "Oplitas", is againts the NATO intervention and it is ready to fight back.

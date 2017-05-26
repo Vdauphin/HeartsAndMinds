@@ -31,10 +31,10 @@ for "_i" from 0 to (count _locations - 1) do {
 
 		if (btc_city_blacklist find _name >= 0) exitWith {};
 
-	/*
+
 		//if you want a safe area
-		if (_position distance getMarkerPos "YOUR_MARKER_AREA" < 500) exitWith {};
-	*/
+		if (_position distance getMarkerPos "btc_base" < 500) exitWith {};
+
 
 		_city = "Land_Ammobox_rounds_F" createVehicle _position;
 		_city hideObjectGlobal true;

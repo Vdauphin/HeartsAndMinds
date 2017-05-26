@@ -11,7 +11,7 @@ class Params {
 		title = "			Set the start time:";
 		values[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
 		texts[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"};
-		default = 12;
+		default = 15;
 	};
 	class btc_p_acctime {
 	//paramsArray[2]
@@ -74,7 +74,7 @@ class Params {
 		title = "			IEDs ratio:";
 		values[]={0, 1, 2, 3};
 		texts[]={"Off","Low","Normal","High"};
-		default = 2;
+		default = 1;
 	};
 	class btc_p_engineer {
 	//paramsArray[11]
@@ -95,7 +95,7 @@ class Params {
 		title = "			Hideout numbers:";
 		values[]={99,1,2,3,4,5};
 		texts[]={"Random","1","2","3","4","5"};
-		default = 5;
+		default = 3;
 	};
 	class btc_p_cache_info_def {
 	//paramsArray[14]
@@ -137,7 +137,7 @@ class Params {
 	   title = "			Medical Level";
 	   values[] = {1,2};
 	   texts[] = {"Basic","Advanced"};
-	   default = 1;
+	   default = 2;
 	};
 	class btc_p_adv_wounds {
 		//paramsArray[20]
@@ -256,14 +256,14 @@ class Params {
 		title = "			Rearm Level:";
 		values[]={0,1,2};
 		texts[]={"Entire vehicle","Entire magazine","Amount based on caliber"};
-		default = 1;
+		default = 2;
 	};
 	class btc_p_sea {
 	//paramsArray[37]
 		title = "			Extend battlefield to sea:";
 		values[] = {0,1};
 		texts[] = {"Off","On"};
-		default = 1;
+		default = 0;
 	};
 	class btc_p_city_radius {
 	//paramsArray[38]

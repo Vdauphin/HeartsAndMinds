@@ -1,7 +1,9 @@
 
 private ["_city","_is_init","_data_units","_type","_radius_x","_radius_y","_has_en","_has_ho","_ieds","_radius","_number_patrol_active","_number_civ_veh_active"];
 
-hint ("Activate " + str(_this));
+if (btc_debug) then {
+    hint ("Activate " + str(_this));
+};
 
 _city = btc_city_all select (_this select 0);
 
@@ -117,18 +119,19 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned",false])}) then {
 	[_pos,20,(10 + random 6),0.8] call btc_fnc_mil_create_group;
 	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
 	[_pos,120,(1 + random 2),0.5] call btc_fnc_mil_create_group;
+	[[(_pos select 0) + 7,(_pos select 1) + 20,0],mg2_type_mechanized,45] call btc_fnc_mil_create_static;
 	_random = (random 1);
 	switch (true) do {
 		case (_random < 0.3) : {};
 		case (_random > 0.3) : {
 			private ["_statics"];
-			_statics = btc_type_gl + btc_type_mg;
+			_statics = btc_type_gl + btc_type_mg + mg2_type_mechanized;
 			//format position
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
 		};
 		case (_random > 0.75) : {
 			private ["_statics"];
-			_statics = btc_type_gl + btc_type_mg;
+			_statics = btc_type_gl + btc_type_mg + mg2_type_mechanized;
 			[[(_pos select 0) + 7,(_pos select 1) + 7,0],_statics,45] call btc_fnc_mil_create_static;
 			[[(_pos select 0) - 7,(_pos select 1) - 7,0],_statics,225] call btc_fnc_mil_create_static;
 		};

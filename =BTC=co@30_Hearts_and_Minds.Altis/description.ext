@@ -1,6 +1,6 @@
 
 loadScreen = "core\img\btc.paa";
-author = Giallustio;
+author = Giallustio modded by AwesomestMaximus;
 onLoadName = Hearts and Minds;
 onLoadMission = www.blacktemplars.altervista.org;
 
@@ -31,3 +31,19 @@ class RscTitles {
 #include "core\def\functions.hpp"
 
 #include "core\fnc\eh\extended_InitPost_EH.hpp"
+
+
+// Slot Restrictions
+// Defining the mission end screen for reserved slots
+class CfgDebriefing
+{
+	class Restricted
+	{
+		title = "Not Authorised";
+		subtitle = "You do not have the required training to use this slot";
+		description = "Move to a different slot to play or contact an MG-Admin for more information";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
