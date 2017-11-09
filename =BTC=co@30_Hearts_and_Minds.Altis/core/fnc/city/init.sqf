@@ -16,11 +16,16 @@ for "_i" from 0 to (count _locations - 1) do {
 		_position = getarray(_current >> "position");
 		if (surfaceIsWater _position) then {
 			if !(_type isEqualTo "NameMarine") then {
-				_area = 50;
-				for "_i" from 0 to 3 do {
-					_new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
-					if (count _new_position == 2) exitWith {_position = _new_position;};
-					_area = _area * 2;
+				private _church = nearestTerrainObjects [_position, ["CHURCH"], 470];
+				if (_church isEqualTo []) then {
+					_area = 50;
+					for "_i" from 0 to 3 do {
+						_new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
+						if (count _new_position == 2) exitWith {_position = _new_position;};
+						_area = _area * 2;
+					};
+				} else {
+					_position = getPos (_church select 0);
 				};
 			};
 		};

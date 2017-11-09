@@ -17,10 +17,5 @@ if (getText (configFile >> "cfgVehicles" >> (_this select 0) >> "displayName") i
 _obj setVectorUp _vector;
 _obj setPosASL _pos;
 
-if ((_this select 0) isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") then {
-	{
-		_obj setObjectTextureGlobal [ _foreachindex, _x ];
-	} forEach ["a3\air_f_heli\heli_transport_04\data\heli_transport_04_pod_ext01_black_co.paa","a3\air_f_heli\heli_transport_04\data\heli_transport_04_pod_ext02_black_co.paa"];
-};
 btc_log_obj_created pushBack _obj;
 btc_curator addCuratorEditableObjects [[_obj], false];

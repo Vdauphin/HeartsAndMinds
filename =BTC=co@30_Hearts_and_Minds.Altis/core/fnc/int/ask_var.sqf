@@ -21,6 +21,7 @@ switch (_id) do {
 	case 6 : {_data = btc_fobs;};
 	case 7 : {_data = btc_construction_array;};
 	case 8 : {_data = count btc_hideouts;};
+	case 9 : {_data = [_target] call btc_fnc_db_saveObjectStatus;};
 };
 
 [_data] remoteExec ["btc_fnc_int_ans_var", _asker, false];

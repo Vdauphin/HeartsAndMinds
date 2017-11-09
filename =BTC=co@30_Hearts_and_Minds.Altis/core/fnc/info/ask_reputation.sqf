@@ -1,4 +1,4 @@
-if (isNil {player getVariable "interpreter"}) exitWith {hint "I can't understand what is saying";};
+if (isNil {player getVariable "interpreter"}) exitWith {hint (localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER");}; //I can't understand what is saying
 
 private ["_man","_rep","_chance","_info","_info_type","_random","_text","_ho_left"];
 
@@ -18,23 +18,23 @@ if ((round random 1) isEqualTo 1) then {
 
 	waitUntil {!(isNil "btc_int_ask_data")};
 
-	_ho_left = format ["I heard about %1 hideouts left.", btc_int_ask_data];
+	_ho_left = format [(localize "STR_BTC_HAM_CON_INFO_ASKREP_HIDEOUTS"), btc_int_ask_data]; //I heard about %1 hideouts left.
 } else {
 	_ho_left = "";
 };
 
 switch (true) do {
-	case (_rep < 200) : {_info_type = "very low";};
-	case (_rep >= 200 && _rep < 500) : {_info_type = "low";};
-	case (_rep >= 500 && _rep < 750) : {_info_type = "normal";};
-	case (_rep >= 750) : {_info_type = "high";};
+	case (_rep < 200) : {_info_type = (localize "STR_BTC_HAM_CON_INFO_ASKREP_VLOW");}; //very low
+	case (_rep >= 200 && _rep < 500) : {_info_type = (localize "STR_BTC_HAM_CON_INFO_ASKREP_LOW");}; //low
+	case (_rep >= 500 && _rep < 750) : {_info_type = (localize "STR_BTC_HAM_CON_INFO_ASKREP_NORMAL");}; //normal
+	case (_rep >= 750) : {_info_type = (localize "STR_BTC_HAM_CON_INFO_ASKREP_HIGH");}; //high
 };
 
 _chance = (random 100);
 switch (true) do {
-	case (_chance < 30) : {_text = "Sir, your reputation is";};
-	case (_chance >= 30 && _chance < 60) : {_text = "Hello ! Your reputation is";};
-	case (_chance >= 60) : {_text = format ["I am %1 and I think your reputation is", name _man];};
+	case (_chance < 30) : {_text = (localize "STR_BTC_HAM_CON_INFO_ASKREP_ASK1");}; //Sir, your reputation is
+	case (_chance >= 30 && _chance < 60) : {_text = (localize "STR_BTC_HAM_CON_INFO_ASKREP_ASK2");}; //Hello ! Your reputation is
+	case (_chance >= 60) : {_text = format [(localize "STR_BTC_HAM_CON_INFO_ASKREP_ASK3"), name _man];}; //I am %1 and I think your reputation is
 };
 
 hint format ["%1 %2. %3", _text, _info_type, _ho_left];

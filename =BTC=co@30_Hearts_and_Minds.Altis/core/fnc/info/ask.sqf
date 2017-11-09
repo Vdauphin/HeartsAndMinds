@@ -1,4 +1,4 @@
-if (isNil {player getVariable "interpreter"}) exitWith {hint "I can't understand what is saying";};
+if (isNil {player getVariable "interpreter"}) exitWith {hint (localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER");}; //I can't understand what is saying
 
 private ["_man","_rep","_chance","_info","_info_type","_random","_complain","_isInterrogate"];
 
@@ -8,15 +8,15 @@ _isInterrogate = _this select 1;
 if !(_man call ace_medical_fnc_isInStableCondition) exitWith {
 	_random = (round random 3);
 	_complain = switch _random do {
-		case 0 : {"Help me!"};
-		case 1 : {"I am suffering!"};
-		case 2 : {"Injure!"};
-		case 3 : {"I have open wound!"};
+		case 0 : {(localize "STR_BTC_HAM_CON_INFO_ASK_WOUNDED1")}; //Help me!
+		case 1 : {(localize "STR_BTC_HAM_CON_INFO_ASK_WOUNDED2")}; //I am suffering!
+		case 2 : {(localize "STR_BTC_HAM_CON_INFO_ASK_WOUNDED3")}; // Injure!
+		case 3 : {(localize "STR_BTC_HAM_CON_INFO_ASK_WOUNDED4")}; //I have open wound!
 	};
 	hint format ["%1 %2", name _man, _complain];
 };
 
-if ((!isNil {_man getVariable "btc_already_asked"}) || (_man getVariable ["btc_already_interrogated",false])) exitWith {hint format ["%1 I already answered to your question!", name _man];};
+if ((!isNil {_man getVariable "btc_already_asked"}) || (_man getVariable ["btc_already_interrogated",false])) exitWith {hint format [(localize "STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS"), name _man];}; //%1 I already answered to your question!
 
 if ((round random 3) >= 2 || !_isInterrogate) then {
 	_man setVariable ["btc_already_asked",true];
@@ -41,7 +41,7 @@ switch !(_isInterrogate) do {
 	case (_chance >= 600) : {_info_type = "REAL";};
 };
 if (_isInterrogate) then {_info_type = "REAL";};
-if (_info_type == "NO") exitWith {hint format ["%1: I've no information for you", name _man];};
+if (_info_type == "NO") exitWith {hint format [(localize "STR_BTC_HAM_CON_INFO_ASK_NOINFO"), name _man];}; //%1: I've no information for you
 
 _random = random 10;
 switch (true) do {
@@ -60,7 +60,7 @@ switch (_info_type) do {
 				[(name _man),true] spawn btc_fnc_info_hideout_asked;
 			};
 			case "CACHE" : {
-				hint format ["%1: I'll show you some hint on the map", name _man];
+				hint format [(localize "STR_BTC_HAM_CON_INFO_ASK_CACHEMAP"), name _man]; //%1: I'll show you some hint on the map
 				sleep 2;
 				[true,1] remoteExec ["btc_fnc_info_cache", 2];
 			};
@@ -75,7 +75,7 @@ switch (_info_type) do {
 				[(name _man),false] spawn btc_fnc_info_hideout_asked;
 			};
 			case "CACHE" : {
-				hint format ["%1: I'll show you some hint on the map", name _man];
+				hint format [(localize "STR_BTC_HAM_CON_INFO_ASK_CACHEMAP"), name _man]; //%1: I'll show you some hint on the map
 				sleep 2;
 				[false,1] remoteExec ["btc_fnc_info_cache", 2];
 			};

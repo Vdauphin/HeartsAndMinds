@@ -33,12 +33,12 @@ btc_side_jip_data = [12,_pos1,_city1 getVariable "name"];
 //// Create markers \\\\
 _marker1 = createmarker [format ["sm_2_%1",_pos1],_pos1];
 _marker1 setmarkertype "hd_flag";
-_marker1 setmarkertext "Convoy start";
+_marker1 setmarkertext (localize "STR_BTC_HAM_SIDE_CONVOY_MRKSTART"); //Convoy start
 _marker1 setMarkerSize [0.6, 0.6];
 
 _marker2 = createmarker [format ["sm_2_%1",_pos2],_pos2];
 _marker2 setmarkertype "hd_flag";
-_marker2 setmarkertext "Convoy end";
+_marker2 setmarkertext (localize "STR_BTC_HAM_SIDE_CONVOY_MRKEND"); //Convoy end
 _marker2 setMarkerSize [0.6, 0.6];
 
 _area = createmarker [format ["sm_%1",_pos2],_pos2];
@@ -77,6 +77,7 @@ for "_i" from 0 to (2 + round random 2) do {
 	_pos1 = getPos _road;
 };
 
+units _group joinSilent _group;
 {_x call btc_fnc_mil_unit_create} foreach units _group;
 
 _group setBehaviour "SAFE";
@@ -88,7 +89,7 @@ _wp setWaypointSpeed "LIMITED";
 _wp setWaypointFormation "COLUMN";
 _wp setWaypointStatements ["true", "btc_side_failed = true"];
 
-{player commandChat "Convoy has left the starting point!"} remoteExec ["call", -2];
+{player commandChat (localize "STR_BTC_HAM_SIDE_CONVOY_STARTCHAT")} remoteExec ["call", -2]; //Convoy has left the starting point!
 
 waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || ({ canMove _x } count _vehs == 0) || (_group isEqualTo grpNull))};
 

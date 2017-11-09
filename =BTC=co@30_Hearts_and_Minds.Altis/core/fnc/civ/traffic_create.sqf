@@ -35,6 +35,7 @@ if ((_pos nearRoads 200) isEqualTo []) then {
 };
 
 _veh = createVehicle [_veh_type, _Spos, [], 0, "FLY"];
+[_veh, "", []] call BIS_fnc_initvehicle;
 
 _group = createGroup [civilian, true];
 (selectRandom btc_civ_type_units) createUnit [_Spos, _group, "this moveinDriver _veh; this assignAsDriver _veh;"];

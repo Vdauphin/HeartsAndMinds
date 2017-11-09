@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8250.9043,117.55215,10056.634};
-		dir[]={0.63489479,-0.76769865,-0.087500997};
-		up[]={0.76053244,0.64078408,-0.10481572};
-		aside[]={-0.13653453,-2.9675721e-007,-0.99068516};
+		pos[]={8332.7754,117.25275,10068.063};
+		dir[]={0.053734943,-0.82017767,0.5696947};
+		up[]={0.077020578,0.57209378,0.81656778};
+		aside[]={0.99564278,3.8654252e-007,-0.093911856};
 	};
 };
 binarizationWanted=0;
@@ -315,7 +315,7 @@ class Mission
 			dataType="Marker";
 			position[]={8323.1348,73.933266,10113.239};
 			name="btc_log_point";
-			text="Logistic Point";
+			text=$STR_BTC_HAM_MSQM_MRK_LOGPOINT;
 			type="mil_flag";
 			colorName="ColorGreen";
 			a=0.5;
@@ -688,14 +688,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8320.2842,75.246689,10105.996};
-				angles[]={0.05461248,5.6770415,6.2631893};
+				angles[]={0.054611351,5.6770496,6.2631841};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage false;";
+				init="call{this allowDamage false; this enableSimulation false;}";
 				name="btc_create_object";
 			};
 			id=13;
@@ -756,6 +756,7 @@ class Mission
 			};
 			id=16;
 			type="RHS_AH64D";
+			atlOffset=-0.159729;
 		};
 		class Item13
 		{
@@ -909,7 +910,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""side_mission"",true]";
-						description="Officer";
+						description=$STR_BTC_HAM_MSQM_OFFICER;
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -943,7 +944,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""interpreter"",true]";
-						description="Interpreter";
+						description=$STR_BTC_HAM_MSQM_INTERPRETER;
 						isPlayable=1;
 					};
 					id=29;
@@ -977,7 +978,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						description="Engineer";
+						description=$STR_BTC_HAM_MSQM_ENGINEER;
 						isPlayable=1;
 					};
 					id=31;
@@ -2356,8 +2357,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8308.083,77.353279,10095.771};
-				angles[]={0.082478598,0.94293159,6.2245855};
+				position[]={8308.083,78.147247,10095.771};
+				angles[]={0.08248426,0.94293159,6.224577};
 			};
 			side="Empty";
 			flags=4;
@@ -2368,8 +2369,7 @@ class Mission
 				name="btc_veh_9";
 			};
 			id=145;
-			type="rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy";
-			atlOffset=7.6293945e-005;
+			type="rhsusf_M1078A1P2_B_M2_D_open_fmtv_usarmy";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2399,8 +2399,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8288.5078,78.799316,10081.821};
-				angles[]={0.058598064,0.94293159,6.2179461};
+				position[]={8288.5078,79.64241,10081.821};
+				angles[]={0.058590703,0.94293159,6.2179446};
 			};
 			side="Empty";
 			flags=4;
@@ -2411,8 +2411,7 @@ class Mission
 				name="btc_veh_8";
 			};
 			id=146;
-			type="rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy";
-			atlOffset=-0.049995422;
+			type="rhsusf_M1078A1P2_B_M2_D_open_fmtv_usarmy";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2453,8 +2452,8 @@ class Mission
 				name="btc_veh_15";
 			};
 			id=152;
-			type="rhsusf_M1078A1P2_B_d_fmtv_usarmy";
-			atlOffset=0.073997498;
+			type="rhsusf_M1078A1P2_B_D_fmtv_usarmy";
+			atlOffset=-0.095359802;
 			class CustomAttributes
 			{
 				class Attribute0

@@ -4,13 +4,13 @@ class btc_fob_create
 	movingEnable = 1;
 	onLoad = "uiNamespace setVariable [""btc_fob_create"", _this select 0];";
 	objects[] = {};
-	class controlsBackground 
+	class controlsBackground
 	{
 
 	};
-	class controls 
+	class controls
 	{
-		class btc_fob_dlg_background : btc_dlg_RscText 
+		class btc_fob_dlg_background : btc_dlg_RscText
 		{
 			idc = -1;
 			x = 0.35 * safezoneW + safezoneX;
@@ -20,7 +20,7 @@ class btc_fob_create
 			colorBackground[] = {0, 0, 0, 0.65};
 			text = "";
 		};
-		class btc_fob_dlg_text : btc_dlg_RscText 
+		class btc_fob_dlg_text : btc_dlg_RscText
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -29,7 +29,7 @@ class btc_fob_create
 			w = 0.3 * safezoneW;
 			h = 0.025 * safezoneH;
 			colorText[] = {1, 1, 1, 1};
-			text = "Name the FOB:";
+			text = $STR_BTC_HAM_O_FOB_DLG_T_NAMEFOB; //Name the FOB:
 		};
 		class btc_fob_dlg_name : btc_dlg_RscEdit
 		{
@@ -40,9 +40,9 @@ class btc_fob_create
 			w = 0.3 * safezoneW;
 			h = 0.025 * safezoneH;
 		};
-		class btc_fob_dlg_apply : btc_dlg_button 
+		class btc_fob_dlg_apply : btc_dlg_button
 		{
-			text = "Apply"; 
+			text = $STR_BTC_HAM_O_FOB_DLG_T_APPLY; //Apply
 			action = "btc_fob_dlg = true;";
 			x = 0.45 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -57,13 +57,13 @@ class btc_fob_redeploy
 	movingEnable = 1;
 	onLoad = "uiNamespace setVariable [""btc_fob_redeploy"", _this select 0];";
 	objects[] = {};
-	class controlsBackground 
+	class controlsBackground
 	{
 
 	};
-	class controls 
+	class controls
 	{
-		class btc_fob_dlg_re_background : btc_dlg_RscText 
+		class btc_fob_dlg_re_background : btc_dlg_RscText
 		{
 			idc = -1;
 			x = 0.4 * safezoneW + safezoneX;
@@ -73,7 +73,7 @@ class btc_fob_redeploy
 			colorBackground[] = {0, 0, 0, 0.65};
 			text = "";
 		};
-		class btc_fob_dlg_re_text : btc_dlg_RscText 
+		class btc_fob_dlg_re_text : btc_dlg_RscText
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -82,7 +82,7 @@ class btc_fob_redeploy
 			w = 0.2 * safezoneW;
 			h = 0.025 * safezoneH;
 			colorText[] = {1, 1, 1, 1};
-			text = "Select the FOB:";
+			text = $STR_BTC_HAM_O_FOB_DLG_T_SELECTFOB; //STR_BTC_HAM_O_FOB_DLG_T_SELECTFOB
 		};
 		class btc_fob_dlg_re_fobs: btc_dlg_comboBox
 		{
@@ -93,9 +93,9 @@ class btc_fob_redeploy
 			h = 0.017 * safezoneH;
 			onLBSelChanged  = "[] call btc_fnc_fob_lb_change";
 		};
-		class btc_fob_dlg_apply : btc_dlg_button 
+		class btc_fob_dlg_apply : btc_dlg_button
 		{
-			text = "Apply"; 
+			text = $STR_BTC_HAM_O_FOB_DLG_T_APPLY; //Apply
 			action = "btc_fob_dlg = true;";
 			x = 0.45 * safezoneW + safezoneX;
 			y = 0.125 * safezoneH + safezoneY;

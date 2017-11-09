@@ -32,6 +32,7 @@ if (!isNil {_group getVariable "stop"}) then {_type_db = 2;};
 if (!isNil {_group getVariable "inHouse"}) then {_type_db = 3;_array_veh = _group getVariable "inHouse";};
 if (!isNil {_group getVariable "getWeapons"}) then {_type_db = 4;};
 if (!isNil {_group getVariable "suicider"}) then {_type_db = 5;};
+if (!isNil {_group getVariable "btc_data_inhouse"}) then {_type_db = 6;_array_veh = _group getVariable "btc_data_inhouse";};
 /*
 if (!isNil {_group getVariable "btc_rebel"}) then {_type_db = 3;};
 if (!isNil {_group getVariable "btc_terrorist"}) then {_type_db = 4;};

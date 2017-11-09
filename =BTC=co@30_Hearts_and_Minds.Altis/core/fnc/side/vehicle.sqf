@@ -29,7 +29,7 @@ _area setmarkercolor "colorBlue";
 
 _marker = createmarker [format ["sm_2_%1",_pos],_pos];
 _marker setmarkertype "hd_flag";
-_marker setmarkertext "Vehicle needs assistance";
+_marker setmarkertext (localize "STR_BTC_HAM_SIDE_VEHICLE_MRK"); // Vehicle needs assistance
 _marker setMarkerSize [0.6, 0.6];
 
 _veh_type = selectRandom btc_civ_type_veh;

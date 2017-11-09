@@ -6,16 +6,16 @@ btc_log_placing_obj = _this;
 [btc_log_placing_obj,player] remoteExec ["btc_fnc_set_owner", 2];
 
 hint composeText [
-	"Q/Z to raise/lower the object",
+	(localize "STR_BTC_HAM_LOG_PLACE_HINT1"), //Q/Z to raise/lower the object
 	lineBreak,
-	"X/C to rotate the object",
+	(localize "STR_BTC_HAM_LOG_PLACE_HINT2"), //X/C to rotate the object
 	lineBreak,
-	"Shift to increase the movement"
+	(localize "STR_BTC_HAM_LOG_PLACE_HINT3") //X/C to rotate the object
 ];
 
 btc_log_placing = true;
 btc_log_placing_dir = 180;
-btc_log_release = player addAction [("<t color=""#ED2744"">" + ("Release") + "</t>"),{btc_log_placing = false;}, [], 9, true, false, "", "true"];
+btc_log_release = player addAction [("<t color=""#ED2744"">" + (localize "STR_BTC_HAM_LOG_PLACE_RELEASE") + "</t>"),{btc_log_placing = false;}, [], 9, true, false, "", "true"]; //Release
 btc_log_place_EH_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", btc_fnc_log_place_key_down];
 
 [player] call ace_weaponselect_fnc_putWeaponAway;

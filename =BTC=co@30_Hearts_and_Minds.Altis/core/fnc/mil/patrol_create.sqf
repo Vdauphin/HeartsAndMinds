@@ -53,11 +53,13 @@ sleep 5 + random 10;
 switch (true) do {
 	case ((_random isEqualTo 1) && !_pos_iswater) : {
 		_n_units   = 4 + (round random 8);
-		_group createUnit [(btc_type_units select 0), _pos, [], 0, "NONE"];(leader _group) setpos _pos;
+		_pos = [_pos,0,50,10,false] call btc_fnc_findsafepos;
+		[_group createUnit [(btc_type_units select 0), _pos, [], 0, "NONE"]] joinSilent _group;
+		(leader _group) setpos _pos;
 		for "_i" from 1 to _n_units do {
 			private ["_unit_type"];
 			_unit_type = selectRandom btc_type_units;
-			_group createUnit [_unit_type, _pos, [], 0, "NONE"];
+			[_group createUnit [_unit_type, _pos, [], 0, "NONE"]] joinSilent _group;
 			sleep 1;
 		};
 		_spawn = [_group,_area,_pos_iswater] spawn btc_fnc_mil_patrol_addWP;
@@ -90,6 +92,7 @@ switch (true) do {
 				_unit_type createUnit [_newZone, _group, "this moveinCargo _veh;this assignAsCargo _veh;"];
 			};
 		};
+		units _group joinSilent _group;
 
 		_1 = _veh addEventHandler ["Fuel", {_this call btc_fnc_mil_patrol_eh}];
 		_veh setVariable ["eh", [_1/*,_2,_3,4,5*/]];

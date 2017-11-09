@@ -1,7 +1,4 @@
 
-private ["_local","_obj"];
-
-_obj = _this select 0;
-_local = _this select 1;
+params ["_obj","_local"];
 
 _obj setOwner (owner _local);

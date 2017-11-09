@@ -6,7 +6,7 @@ btc_int_ask_data = nil;
 
 waitUntil {!(isNil "btc_int_ask_data")};
 
-if (!isNull btc_int_ask_data) exitWith {hint "This vehicle is already attached to another!"};
+if (!isNull btc_int_ask_data) exitWith {hint (localize "STR_BTC_HAM_LOG_TOW_ALREADYTOWED");}; //This vehicle is already attached to another!
 
 private _posASL = getPosASL btc_log_vehicle_selected;
 private _pos = getPos btc_log_vehicle_selected;
@@ -36,8 +36,9 @@ _simulation enableSimulation true;
 [_tower,"tow",btc_log_vehicle_selected] remoteExec ["btc_fnc_int_change_var", 2];
 [btc_log_vehicle_selected,"tow",_tower] remoteExec ["btc_fnc_int_change_var", 2];
 
-_tower addEventHandler ["RopeBreak", {
+private _eh = _tower addEventHandler ["RopeBreak", {
 	(_this select 0) removeEventHandler ["RopeBreak", _thisEventHandler];
+	(_this select 0) setVariable ["btc_eh", nil];
 	(_this select 0) spawn btc_fnc_log_unhook;
-	deleteVehicle (_this select 2);
-}];};
+}];
+_tower setVariable ["btc_eh", _eh];

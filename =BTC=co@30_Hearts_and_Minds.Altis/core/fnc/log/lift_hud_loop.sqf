@@ -23,8 +23,13 @@ _array = [_chopper] call btc_fnc_log_get_liftable;
 _cargo_array = nearestObjects [_chopper, _array, 30];
 if (count _array == 0) then {_cargo_array = [];};
 _cargo_array = _cargo_array - [_chopper];
-if (count _cargo_array > 0 && ((_cargo_array select 0) isKindOf "ACE_friesGantry") OR (typeof (_cargo_array select 0) isEqualTo "ACE_friesAnchorBar")) then {_cargo_array deleteAt 0;};
-if (count _cargo_array > 0) then {_cargo = _cargo_array select 0;} else {_cargo = objNull;};
+_cargo_array = _cargo_array select {
+	!(
+	_x isKindOf "ACE_friesGantry" ||
+	(typeof _x) isEqualTo "ACE_friesAnchorBar" ||
+	_x isKindOf "ace_fastroping_helper")
+};
+if (_cargo_array isEqualTo []) then {_cargo = objNull;} else {_cargo = _cargo_array select 0;};
 
 if (({_cargo isKindOf _x} count _array) > 0) then {_can_lift = true;} else {_can_lift = false;};
 

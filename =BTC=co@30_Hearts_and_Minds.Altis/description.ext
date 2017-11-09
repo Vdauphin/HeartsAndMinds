@@ -1,8 +1,8 @@
 
 loadScreen = "core\img\btc.paa";
-author = Giallustio;
-onLoadName = Hearts and Minds;
-onLoadMission = www.blacktemplars.altervista.org;
+author = $STR_BTC_HAM_DESCR_AUTHOR;
+onLoadName = $STR_BTC_HAM_DESCR_NAME;
+onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 
 #include "core\def\dlg_def.hpp"
 
@@ -25,6 +25,8 @@ class RscTitles {
 #include "core\sounds\sounds.hpp"
 
 #include "core\def\param.hpp"
+
+#include "core\fnc\mil\aiskill.hpp"
 
 #include "core\fnc\task\tasktypes.hpp"
 

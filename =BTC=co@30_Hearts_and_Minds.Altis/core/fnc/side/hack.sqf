@@ -26,7 +26,7 @@ _city setVariable ["spawn_more",true];
 
 private _marker = createmarker [format ["sm_2_%1",_pos],_pos];
 _marker setmarkertype "hd_flag";
-_marker setmarkertext "Terminal";
+_marker setmarkertext (localize "STR_BTC_HAM_SIDE_HACK_MRK"); //Terminal
 _marker setMarkerSize [0.6, 0.6];
 
 //// Create terminal \\\\
@@ -37,7 +37,7 @@ private _launchsite = createVehicle ["Land_PenBlack_F", _pos, [], 0, "FLY"];
 
 //// Add interaction on Terminal \\\\
 [[_terminal],{
-	private _action = ["Open","Start Hacking","\A3\ui_f\data\igui\cfg\simpleTasks\types\intel_ca.paa",{
+	private _action = ["Open",(localize "STR_BTC_HAM_SIDE_HACK_ACEACTION"),"\A3\ui_f\data\igui\cfg\simpleTasks\types\intel_ca.paa",{ //Start Hacking
 		[_this select 0,3] call BIS_fnc_dataTerminalAnimate;
 		{btc_side_done = true} remoteExec ["call", 0];
 	},{!btc_side_done}] call ace_interact_menu_fnc_createAction;
@@ -60,7 +60,7 @@ _groups apply {_x setBehaviour "CARELESS"};
 
 [_terminal, _launchsite modelToWorld [0,100,10]] remoteExec ["btc_fnc_log_place_create_camera", -2];
 
-{player commandChat "Defend the terminal until the missile is hacked!"} remoteExec ["call", -2];
+{player commandChat (localize "STR_BTC_HAM_SIDE_HACK_STARTCHAT")} remoteExec ["call", -2]; //Defend the terminal until the missile is hacked!
 
 waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || ({_x isEqualTo grpNull} count _groups > 0) || !(_city getVariable ["active", false]))};
 if (btc_side_aborted || btc_side_failed) exitWith {

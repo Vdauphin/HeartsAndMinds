@@ -33,7 +33,7 @@ btc_side_jip_data = [8,_pos,_city getVariable "name"];
 //// Create marker \\\\
 _marker = createmarker [format ["sm_2_%1",_pos],_pos];
 _marker setmarkertype "hd_flag";
-_marker setmarkertext "Civil need help";
+_marker setmarkertext (localize "STR_BTC_HAM_SIDE_CIVTREAT_MRK"); // Civil need help
 _marker setMarkerSize [0.6, 0.6];
 
 //// Create civ on _pos \\\\

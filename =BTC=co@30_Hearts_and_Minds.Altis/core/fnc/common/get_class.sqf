@@ -51,5 +51,6 @@ private _values = [];
 for "_i" from 0 to (count _all) - 1 do {
 	_values pushBack _i;
 };
+_texts = _values apply {Format ["%1 -%2",_x,_texts select _x]};
 
 [_allauthor,_texts,_all apply {_x select 1},_values]

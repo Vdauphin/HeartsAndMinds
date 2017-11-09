@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4158.9448,177.51308,4027.7251};
-		dir[]={0.25513843,-0.88122654,-0.39815569};
-		up[]={0.47545677,0.47268689,-0.74197125};
-		aside[]={-0.84204131,-1.0278891e-006,-0.53958178};
+		pos[]={4238.0225,23.444588,3976.3384};
+		dir[]={0.0033626116,-0.12773004,0.9918986};
+		up[]={0.00043315504,0.99179304,0.12790467};
+		aside[]={1.0000873,-7.9231859e-007,-0.0033897087};
 	};
 };
 binarizationWanted=0;
@@ -318,7 +318,7 @@ class Mission
 			dataType="Marker";
 			position[]={4253.5,6.159635e+026,3990.375};
 			name="btc_log_point";
-			text="Logistic Point";
+			text=$STR_BTC_HAM_MSQM_MRK_LOGPOINT;
 			type="mil_flag";
 			colorName="ColorGreen";
 			a=0.5;
@@ -373,20 +373,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4245.125,19.768351,3990.25};
-				angles[]={0,3.7038274,0.04796192};
+				position[]={4245.125,19.769165,3990.25};
+				angles[]={0,3.7038331,0.047961645};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage false;";
+				init="call{this allowDamage false;  this enableSimulation false;}";
 				name="btc_create_object";
 			};
 			id=13;
 			type="Land_CargoBox_V1_F";
-			atlOffset=-0.00081443787;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -513,7 +512,7 @@ class Mission
 			};
 			id=16;
 			type="RHS_AH64D";
-			atlOffset=-0.0017585754;
+			atlOffset=-0.16130447;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -851,7 +850,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""side_mission"",true]";
-						description="Officer";
+						description=$STR_BTC_HAM_MSQM_OFFICER;
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -948,7 +947,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""interpreter"",true]";
-						description="Interpreter";
+						description=$STR_BTC_HAM_MSQM_INTERPRETER;
 						isPlayable=1;
 					};
 					id=29;
@@ -1043,7 +1042,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						description="Engineer";
+						description=$STR_BTC_HAM_MSQM_ENGINEER;
 						isPlayable=1;
 					};
 					id=31;
@@ -3866,8 +3865,8 @@ class Mission
 				name="btc_veh_15";
 			};
 			id=241;
-			type="rhsusf_M1078A1P2_B_wd_fmtv_usarmy";
-			atlOffset=-0.10919762;
+			type="rhsusf_M1078A1P2_B_WD_fmtv_usarmy";
+			atlOffset=-0.27951813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3897,7 +3896,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4233.0352,20.829935,3999.2961};
+				position[]={4233.0352,21.638979,3999.2959};
 				angles[]={0,3.3611374,0.0079936078};
 			};
 			side="Empty";
@@ -3909,8 +3908,7 @@ class Mission
 				name="btc_veh_8";
 			};
 			id=244;
-			type="rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy";
-			atlOffset=-0.0189991;
+			type="rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3940,7 +3938,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4240.4565,20.907434,3995.7302};
+				position[]={4240.4561,21.697552,3995.7307};
 				angles[]={6.2805324,3.3253233,0.016004669};
 			};
 			side="Empty";
@@ -3952,7 +3950,7 @@ class Mission
 				name="btc_veh_9";
 			};
 			id=245;
-			type="rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy";
+			type="rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy";
 			class CustomAttributes
 			{
 				class Attribute0

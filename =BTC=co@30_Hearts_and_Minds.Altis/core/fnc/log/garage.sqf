@@ -1,5 +1,5 @@
 
-if (count (nearestObjects [_this select 0,["All"],5]) > 1) exitWith {hint "Clear the area before create another object!"};
+if (count (nearestObjects [_this select 0,["All"],5]) > 1) exitWith {hint (localize "STR_BTC_HAM_LOG_BASICS_CLEARAREA")}; //Clear the area before create another object!
 
 disableSerialization;
 uiNamespace setVariable [ "current_garage", ( _this select 0 ) ];

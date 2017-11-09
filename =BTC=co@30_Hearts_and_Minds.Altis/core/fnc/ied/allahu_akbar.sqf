@@ -13,7 +13,8 @@ if (Alive _suicider && [_suicider] call ace_common_fnc_isAwake) then {
 	params ["_suicider"];
 	if (Alive _suicider && [_suicider] call ace_common_fnc_isAwake) then {
 		{deleteVehicle _x;} forEach attachedObjects _suicider;
-		"Bo_GBU12_LGB_MI10" createVehicle getPos _suicider;
-		[getPos _suicider] call btc_fnc_deaf_earringing;
+		private _pos =  getPos _suicider;
+		"Bo_GBU12_LGB_MI10" createVehicle [_pos select 0, _pos select 1, 0.1 + (_pos select 2)];
+		[_pos] call btc_fnc_deaf_earringing;
 	};
 }, [_suicider], 1.4] call CBA_fnc_waitAndExecute;

@@ -22,7 +22,7 @@ _ui = uiNamespace getVariable "btc_log_dlg";
 //player setVariable ["btc_int_busy",true];
 
 _cargo = btc_int_ask_data;
-_text = ("Vehicle: " + getText (configFile >> "cfgVehicles" >> typeof _veh >> "displayName") + format ["  CC: %1/%2",[_veh,_cargo] call btc_fnc_log_check_cc,[_veh] call btc_fnc_log_get_cc]);
+_text = format [(localize "STR_BTC_HAM_LOG_CHECKC_VEHICLE"),(getText (configFile >> "cfgVehicles" >> typeof _veh >> "displayName")),[_veh,_cargo] call btc_fnc_log_check_cc,[_veh] call btc_fnc_log_get_cc]; //Vehicle: %1  | CC: %2/%3
 
 (_ui displayCtrl 990) ctrlSetText _text;
 

@@ -26,7 +26,7 @@ _group = createGroup civilian;
 _group createUnit [_unit_type, _rpos, [], 0, "NONE"];
 (leader _group) setpos _rpos;
 
-_group spawn btc_fnc_civ_addWP;
+[_group] spawn btc_fnc_civ_addWP;
 
 _group setVariable ["suicider",true];
 

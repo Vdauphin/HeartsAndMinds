@@ -5,9 +5,14 @@ _chopper = vehicle player;
 _array = [_chopper] call btc_fnc_log_get_liftable;
 _cargo_array = nearestObjects [_chopper, _array, 30];
 _cargo_array = _cargo_array - [_chopper];
-if (count _cargo_array > 0 && ((_cargo_array select 0) isKindOf "ACE_friesGantry") OR (typeof (_cargo_array select 0) isEqualTo "ACE_friesAnchorBar")) then {_cargo_array deleteAt 0;};
-if (count _cargo_array > 0) then {_cargo = _cargo_array select 0;} else {_cargo = objNull;};
-if (isNull _cargo) exitWith {};
+_cargo_array = _cargo_array select {
+	!(
+	_x isKindOf "ACE_friesGantry" ||
+	(typeof _x) isEqualTo "ACE_friesAnchorBar" ||
+	_x isKindOf "ace_fastroping_helper")
+};
+if (_cargo_array isEqualTo []) exitWith {};
+_cargo = _cargo_array select 0;
 
 private ["_rope","_max_cargo","_mass","_support","_bbr_z"];
 
@@ -49,25 +54,17 @@ if (btc_debug) then {hint format ["boundingBoxReal : %1 rope length : %2", _bbr,
 _max_cargo  = getNumber (configFile >> "cfgVehicles" >> typeof _chopper >> "slingLoadMaxCargoMass");
 _mass = getMass _cargo;
 
-if !(local _cargo) then {
-	[[_cargo, player],{(_this select 0) setOwner owner (_this select 1);}] remoteExec ["call", 2];
-	waitUntil {local _cargo};
-};
-
+[_cargo, player] remoteExec ["btc_fnc_set_owner", 2];
+btc_lifted = true;
+sleep 1;
 if ((_mass + 400) > _max_cargo) then {
-	private "_new_mass";
-	_cargo setVariable ["mass",_mass];
-	_new_mass = (_max_cargo - 1000);
+	private _new_mass = (_max_cargo - 1000);
 	if (_new_mass < 0) then {_new_mass = 50;};
-	_cargo setMass _new_mass;
-	//if (local _cargo) then {_cargo setMass _new_mass;} else {[[_cargo,_new_mass],"btc_fnc_log_set_mass",_cargo] spawn BIS_fnc_MP;};
+	[_cargo,_new_mass] remoteExec ["btc_fnc_log_set_mass", _cargo];
 };
 
 _chopper setVariable ["cargo",_cargo];
 
-btc_lifted = true;
-
 waitUntil {sleep 5; (!Alive player || !Alive _cargo || !btc_lifted || vehicle player == player)};
 
-//if (local _cargo) then {_cargo setMass _mass;} else {[[_cargo,_mass],"btc_fnc_log_set_mass",_cargo] spawn BIS_fnc_MP;};
-_cargo setMass _mass;
+[_cargo,_mass] remoteExec ["btc_fnc_log_set_mass", _cargo];

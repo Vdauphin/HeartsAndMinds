@@ -27,12 +27,11 @@ if (_type == 1) then {
 	} foreach units _group;
 };
 
+units _group joinSilent _group;
 (units _group) apply {_x enableSimulation true};
 
 //[waypointPosition _x,waypointType _x,waypointSpeed _x,waypointFormation _x,waypointCombatMode _x,waypointBehaviour _x]
-if (_side == civilian && {vehicle leader _group == leader _group}) then {
-	_group spawn btc_fnc_civ_addWP;
-} else {
+if !(_side == civilian && {vehicle leader _group == leader _group}) then {
 	if (count (_array_wp select 1) > 1) then {
 		{
 			//diag_log text format ["TEST X %1",_x];
@@ -54,7 +53,8 @@ if (_type == 2) then {
 };
 if (_type == 3) then {
 	while {(count (waypoints _group)) > 0} do { deleteWaypoint ((waypoints _group) select 0); };
-	[_group,_array_veh] spawn btc_fnc_house_addWP;
+	[_group, nearestObject [(units _group) select 0, _array_veh]] spawn btc_fnc_house_addWP;
+	_group setVariable ["inHouse", _array_veh];
 };
 if (_type == 4) then {[[0,0,0],0,units _group] spawn btc_fnc_civ_get_weapons;};
 if (_type == 5) then {
@@ -72,6 +72,11 @@ if (_type == 5) then {
 			if (count (getpos _suicider nearEntities ["SoldierWB", 25]) > 0) then {_cond = true;_suicider spawn btc_fnc_ied_suicider_active};
 		};
 	};
+};
+if (_type == 6) then {
+	while {(count (waypoints _group)) > 0} do { deleteWaypoint ((waypoints _group) select 0); };
+	[_group, _array_veh select 0] spawn btc_fnc_civ_addWP;
+	_group setVariable ["btc_data_inhouse", _array_veh];
 };
 
 _group setBehaviour (_behaviour select 0);

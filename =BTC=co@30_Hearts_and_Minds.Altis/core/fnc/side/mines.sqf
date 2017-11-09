@@ -28,7 +28,7 @@ _area setmarkercolor "colorBlue";
 
 _marker = createmarker [format ["sm_2_%1",_pos],_pos];
 _marker setmarkertype "hd_flag";
-_marker setmarkertext "Mines";
+_marker setmarkertext (localize "STR_BTC_HAM_SIDE_MINES_MRK"); //Mines
 _marker setMarkerSize [0.6, 0.6];
 
 _mines = [];
@@ -42,7 +42,7 @@ for "_i" from 1 to (5 + round random 5) do {
 	_mines pushBack _m;
 };
 
-waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || ({_x distance _pos > 100} count playableUnits == 0))};
+waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || ({_x distance _pos < 200} count playableUnits > 0))};
 
 _closest = [_city,btc_city_all select {!(_x getVariable ["active",false])},false] call btc_fnc_find_closecity;
 for "_i" from 1 to (round random 2) do {

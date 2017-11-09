@@ -36,7 +36,7 @@ _area setmarkercolor "colorBlue";
 
 _marker = createmarker [format ["sm_2_%1",_pos],_pos];
 _marker setmarkertype "hd_flag";
-_marker setmarkertext "Radio Tower";
+_marker setmarkertext (localize "STR_BTC_HAM_SIDE_TOWER_MRK"); //Radio Tower
 _marker setMarkerSize [0.6, 0.6];
 
 //// Randomise composition \\\\

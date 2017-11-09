@@ -72,6 +72,7 @@ if ((random 1) > _ratio) then
 		_unit_type createUnit [_start_pos, _group, "this moveinCargo _veh;this assignAsCargo _veh;"];
 	};
 
+	units _group joinSilent _group;
 	_group selectLeader (driver _veh);
 
 	_wp = _group addWaypoint [_pos, 60];

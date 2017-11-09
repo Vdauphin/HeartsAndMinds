@@ -130,19 +130,8 @@ profileNamespace setVariable [format ["btc_hm_%1_vehs",_name],_array_veh];
 //Objects status
 _array_obj = [];
 {
-	if !(!isNil {_x getVariable "loaded"} || !Alive _x || isNull _x) then {
-		private ["_data","_cargo","_cont"];
-		_data = [];
-		_data pushBack (typeOf _x);
-		_data pushBack (getPosASL _x);
-		_data pushBack (getDir _x);
-		_data pushBack (_x getVariable ["ace_rearm_magazineClass",""]);
-		_cargo = [];
-		{_cargo pushBack [(typeOf _x),(_x getVariable ["ace_rearm_magazineClass",""]),[getWeaponCargo _x,getMagazineCargo _x,getItemCargo _x]]} foreach (_x getVariable ["cargo",[]]);
-		_data pushBack _cargo;
-		_cont = [getWeaponCargo _x,getMagazineCargo _x,getItemCargo _x];
-		_data pushBack _cont;
-
+	private _data = [_x] call btc_fnc_db_saveObjectStatus;
+	if !(_data isEqualTo []) then {
 		_array_obj pushBack _data;
 	};
 } foreach btc_log_obj_created;

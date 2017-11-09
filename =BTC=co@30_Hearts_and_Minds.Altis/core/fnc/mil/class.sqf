@@ -22,8 +22,6 @@ _factions = _factions apply {if !isClass(configFile >> "CfgFactionClasses" >> _x
 
 _enemy_side		= [east,west,independent,civilian] select getNumber(configfile >> "CfgFactionClasses" >> (_factions select 0) >> "side");
 
-//Select only faction from the same side
-_factions = _factions select {([east,west,independent,civilian] select getNumber(configfile >> "CfgFactionClasses" >> _x >> "side")) isEqualTo _enemy_side};
 //Prevent selecting same side as player side
 if (_enemy_side isEqualTo btc_player_side) exitWith {
 	[["IND_G_F"], _en_AA, _en_tank] call btc_fnc_mil_class;
@@ -61,9 +59,24 @@ if (_enemy_side isEqualTo btc_player_side) exitWith {
 //Final filter unwanted units type
 if !(_en_AA) then {
 	//Remove Anti-Air Units
-	_type_units		= _type_units select {(_x find "AA_") isEqualTo -1};
+	_type_units		= _type_units select {
+		private _unit = _x;
+		private _weapons = getarray(configfile >> "CfgVehicles" >> _unit >> "weapons");
+
+		private _isAA = _weapons apply {
+			private _weapon = _x;
+			private _magazines = getarray(configfile >> "CfgWeapons" >> _weapon >> "magazines");
+			private _ammo = "";
+			if !(_magazines isEqualTo []) then 	{
+				_ammo =	gettext(configfile >> "CfgMagazines" >> _magazines select 0 >> "ammo");
+			};
+			(getnumber(configfile >> "CfgAmmo" >> _ammo >> "aiAmmoUsageFlags") isEqualTo 256);
+		};
+		if (btc_debug_log) then {diag_log format ["btc_fnc_mil_class %1 Weapons: %2 isAA: %3", _unit, _weapons , _isAA];};
+		!(true in _isAA)
+	};
 };
-_type_units		= _type_units select {((_x find "_Pilot_") isEqualTo -1) && ((_x find "_Survivor_") isEqualTo -1) && ((_x find "_Story") isEqualTo -1) && ((_x find "_base") isEqualTo -1) && ((_x find "_unarmed_") isEqualTo -1) && ((_x find "_VR_") isEqualTo -1)};
+_type_units		= _type_units select {((_x find "pilot_") isEqualTo -1) && ((_x find "_Pilot_") isEqualTo -1) && ((_x find "_Survivor_") isEqualTo -1) && ((_x find "_Story") isEqualTo -1) && ((_x find "_base") isEqualTo -1) && ((_x find "_unarmed_") isEqualTo -1) && ((_x find "_VR_") isEqualTo -1)};
 _type_crewmen	= _type_units select 0;
 _type_motorized = (_type_motorized select {(_x find "UAV") isEqualTo -1}) select {(_x find "UGV")  isEqualTo -1};
 _type_motorized_armed = (_type_motorized_armed select {(_x find "UAV") isEqualTo -1}) select {(_x find "UGV")  isEqualTo -1};

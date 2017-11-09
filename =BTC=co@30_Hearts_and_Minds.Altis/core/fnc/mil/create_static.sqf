@@ -13,6 +13,7 @@ _static setpos _pos;
 _group = createGroup btc_enemy_side;
 _unit_type = selectRandom btc_type_units;
 _gunner = _group createUnit [_unit_type, _pos, [], 0, "NONE"];
+[_gunner] joinSilent _group;
 _gunner moveInGunner _static;
 _gunner setBehaviour "COMBAT";
 _gunner setCombatMode "RED";
