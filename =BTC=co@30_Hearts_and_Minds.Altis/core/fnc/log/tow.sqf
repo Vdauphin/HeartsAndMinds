@@ -8,15 +8,18 @@ waitUntil {!(isNil "btc_int_ask_data")};
 
 if (!isNull btc_int_ask_data) exitWith {hint "This vehicle is already attached to another!"};
 
-private _simulation = createVehicle ["Land_Pallet_F", getPos btc_log_vehicle_selected , [], 0, "CAN_COLLIDE"];
+private _posASL = getPosASL btc_log_vehicle_selected;
+private _pos = getPos btc_log_vehicle_selected;
+private _bottom = abs(btc_log_vehicle_selected worldtoModel _pos select 2); //more accurate than boundingBoxReal btc_log_vehicle_selected select 0 select 2
+if (_pos select 2 < -0.1) then {btc_log_vehicle_selected setpos [_posASL select 0, _posASL select 1, 0]};
+
+private _simulation = createVehicle ["Land_Pallet_F", _pos , [], 0, "CAN_COLLIDE"];
 _simulation enableSimulation false;
-private _pos = getPosASL btc_log_vehicle_selected;
-if (((getpos btc_log_vehicle_selected) select 2) < -0.05) then {_pos = [_pos select 0, _pos select 1, (_pos select 2) - ((getpos btc_log_vehicle_selected) select 2)]};
-_simulation setPosASL _pos;
+_simulation setPosASL _posASL;
 _simulation setDir getDir btc_log_vehicle_selected;
 _simulation setVectorUp vectorUp btc_log_vehicle_selected;
 
-btc_log_vehicle_selected attachTo [_simulation, [0, 0,  0.2 + ((btc_log_vehicle_selected modelToWorld [0,0,0]) select 2) - ((_simulation modelToWorld [0,0,0]) select 2)]];
+btc_log_vehicle_selected attachTo [_simulation, [0, 0, _bottom]];
 
 private _model_rear_tower = ([_tower] call btc_fnc_log_hitch_points) select 1;
 private _model_front_selected = ([btc_log_vehicle_selected] call btc_fnc_log_hitch_points) select 0;
