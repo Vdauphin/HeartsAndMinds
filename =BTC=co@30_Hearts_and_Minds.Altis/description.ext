@@ -1,8 +1,8 @@
 
 loadScreen = "core\img\btc.paa";
-author = Giallustio;
-onLoadName = Hearts and Minds;
-onLoadMission = www.blacktemplars.altervista.org;
+author = RaptorFIVE™;
+onLoadName = Hearts and Mines;
+onLoadMission = Wer suchet der findet, wer drauftritt verschwindet!;
 
 #include "core\def\dlg_def.hpp"
 

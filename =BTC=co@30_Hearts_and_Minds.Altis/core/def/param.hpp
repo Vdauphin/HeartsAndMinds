@@ -231,13 +231,13 @@ class Params {
 		title = "			Add armed vehicles in Hideout:";
 		values[] = {0,1};
 		texts[] = {"Off","On"};
-		default = 0;
+		default = 1;
 	};
 	class btc_p_veh_armed_spawn_more {
 		title = "			Add armed vehicles in Side mission/Cache:";
 		values[] = {0,1};
 		texts[] = {"Off","On"};
-		default = 0;
+		default = 1;
 	};
 	class btc_p_side_mission_cycle {
 		title = "			Side mission cycle:";
@@ -261,19 +261,19 @@ class Params {
 		title = "			Rearm Level:";
 		values[]={0,1,2};
 		texts[]={"Entire vehicle","Entire magazine","Amount based on caliber"};
-		default = 1;
+		default = 0;
 	};
 	class btc_p_garage {
 		title = "			Activate garage for admin:";
 		values[]={0,1};
 		texts[]={"Off","On"};
-		default = 0;
+		default = 1;
 	};
 	class btc_p_city_radius {
 		title = "			Spawn city radius offset:";
 		values[]={0,1,2,3,4,5,6,7,8};
 		texts[]={"0 m","100 m","200 m","300 m (Default: Altis, Tanoa)","400 m","500 m (Takistan)","600 m","700 m","800 m"};
-		default = 3;
+		default = 4;
 	};
 	class btc_p_trigger {
 		title = "			Disable city activation when a plane or helicopter (>190Km/h) is flying above:";
