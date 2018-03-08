@@ -618,7 +618,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
                 <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization </Original>
-                <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf das sein Zustand sich stabilisiert </German>
+                <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert </German>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_FAILED_TEXT">
                 <Original>The patient was not stabilized</Original>
