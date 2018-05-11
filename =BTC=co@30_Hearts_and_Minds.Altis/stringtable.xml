@@ -993,7 +993,7 @@
         </Container>
         <Container name="Action(ACE): Veh. Init">
             <Key ID="STR_BTC_HAM_ACTION_VEHINIT_TOW">
-                <Original>Make this the Tow Tehicle</Original>
+                <Original>Make this the Tow Vehicle</Original>
                 <German>Abschleppen</German>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_VEHINIT_HOOK">
