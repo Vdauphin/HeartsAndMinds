@@ -11,7 +11,7 @@ _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
 /* Remove comments and insert UIDs into the whitelist to exempt individuals from this script */
 _uid = getPlayerUID player;
-_whitelist = [];
+_whitelist = ["123"];
 
 if (_uid in Pilotid) exitWith {};
 
@@ -28,24 +28,24 @@ while { true } do {
 				_forbidden = [_veh turretUnit [0]];
 				if(player in _forbidden) then {
 					if (!_iampilot) then {
-						hint "只有飞行员能上飞机副驾驶位";
+						hint "Only pilot can fly";
 						player action ["getOut",_veh];
 					};
 				};
 			if(!_iampilot) then {
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
-					hint "只有飞行员能上飞机驾驶位";
+					hint "Only pilot can fly";
 					player action ["getOut", _veh];
 				};
 			};
 		};
 //		if(!(_veh isKindOf "Helicopter" || _veh isKindOf "Plane")&& !(_veh isKindOf "Quadbike_01_base_F")) then {
 //			if(_iampilot) then {
-//			hint "飞行员只能上飞机";
+//			hint "Only pilot can fly";
 //			player action ["getOut", _veh];
 //			};
-//		};//如果不允许飞行员上其它载具则放开注释
+//		};//pilots can only fly
 	};
 };
 
