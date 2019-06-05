@@ -339,6 +339,7 @@
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB">
                 <Original>Probability for a city to be free:</Original>
                 <German>Wahrscheinlichkeit, dass eine Stadt unbesetzt ist:</German>
+                <Chinesesimp>城市被解放的可能性：</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY">
                 <Original>Enemy density:</Original>
