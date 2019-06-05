@@ -1998,7 +1998,7 @@
                 <Chinesesimp>找不到要删除的对象<Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_LPDELETE">
-                <Original>无法删除后勤点未创建的对象</Original>
+                <Original>Can't delete object not created by Logistic Point</Original>
                 <German>Objekt konnte nicht gelöscht werden, da es nicht am Logisik-Punkt erstellt worden ist</German>
                 <Chinesesimp>找不到要删除的对象<Chinesesimp>
             </Key>
