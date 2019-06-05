@@ -339,6 +339,7 @@
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB">
                 <Original>Probability for a city to be free:</Original>
                 <German>Wahrscheinlichkeit, dass eine Stadt unbesetzt ist:</German>
+                <Chinesesimp>解放城市的可能性：</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY">
                 <Original>Enemy density:</Original>
@@ -1995,10 +1996,12 @@
             <Key ID="STR_BTC_HAM_LOG_DELETE">
                 <Original>No object to delete found</Original>
                 <German>Kein Objekt zum löschen gefunden</German>
+                <Chinesesimp>找不到要删除的对象</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_LPDELETE">
                 <Original>Can't delete object not created by Logistic Point</Original>
                 <German>Objekt konnte nicht gelöscht werden, da es nicht am Logisik-Punkt erstellt worden ist</German>
+                <Chinesesimp>无法删除后勤点未创建的对象</Chinesesimp>
             </Key>
         </Container>
         <Container name="Logistic: Tow ">
