@@ -3,7 +3,7 @@
 * ## Introduction :
 This mission is built for **dedicated server only**. You will found here some basic and specific informations related to _Hearts and Minds_ mission.
 
-Servers list : [arma3.swec.se](https://arma3.swec.se/server/list?mquery=hearts+and+minds)
+Servers list : [arma3.swec.se](https://arma3.swec.se/server/list?mquery=hearts+and+minds) | [battlemetrics.com](https://www.battlemetrics.com/servers/search?q=hearts+and+minds&game=arma3) | [arma3-servers.net](http://get-to-post.nickj.org/?https://arma3-servers.net/search/?keyword=hearts+and+minds) | [gametracker.com](https://www.gametracker.com/search/arma3/?query=hearts+and+minds)
 
 * ## Mission gameplay documentation
 	* ### [Guide to rearming](http://vdauphin.github.io/HeartsAndMinds/Guide-to-rearming)
