@@ -54,3 +54,5 @@ class Extended_InitPost_EventHandlers {
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+unsafeCVL = 1;
