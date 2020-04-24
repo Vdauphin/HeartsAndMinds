@@ -26,6 +26,12 @@ params [
     ["_allowlist", btc_log_obj_created, [[]]]
 ];
 
+// Allow deleting bodybag
+if ((typeOF _veh) isEqualTo "ACE_bodyBagObject") exitWith { 
+    deleteVehicle _veh; 
+    //["R.I.P"] remoteExecCall ["CBA_fnc_notify", remoteExecutedOwner]; 
+};
+
 if !(_veh in _allowlist) exitWith {
     [17] remoteExecCall ["btc_fnc_show_hint", remoteExecutedOwner];
 };
