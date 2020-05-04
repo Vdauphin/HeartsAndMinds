@@ -94,7 +94,15 @@ btc_delay_createUnit = btc_delay_createUnit + 0.3;
     };
 
     [{
-        _this call btc_fnc_mil_unit_create;
+        switch (side (_this select 0)) do {
+            case btc_enemy_side: {
+                _this call btc_fnc_mil_unit_create;
+            };
+            case civilian: {
+                _this call btc_fnc_civ_unit_create;
+            };
+            default {};
+        };
     }, [_group], btc_delay_createUnit] call CBA_fnc_waitAndExecute;
 
     btc_delay_createUnit = btc_delay_createUnit - 0.3;

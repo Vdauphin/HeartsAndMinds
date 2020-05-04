@@ -73,7 +73,6 @@ btc_civilian_id = btc_civilian_id - 1;
 }] call btc_fnc_delay_createVehicle;
 
 [{
-    [_this select 0] call btc_fnc_civ_unit_create;
     _this call btc_fnc_patrol_init;
     [[_this select 0]] call btc_fnc_set_groupsOwner;
 }, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_createUnit] call CBA_fnc_waitAndExecute;
