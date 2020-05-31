@@ -636,11 +636,11 @@ switch (_p_en) do {
     case "IND_C_F" : {
         btc_type_motorized = btc_type_motorized + ["I_G_Offroad_01_repair_F", "I_G_Offroad_01_F", "I_G_Quadbike_01_F", "I_G_Van_01_fuel_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F", "I_G_Offroad_01_F"];
-        btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
     };
         case "RHS_FACTION_VDV" : {
         btc_type_motorized_armed = btc_type_motorized_armed + ["rhs_t90a_tv", "rhs_t80u", "rhs_t14_tv", "RHS_Su25SM_vvsc", "RHS_Ka52_vvsc", "rhs_zsu234_aa"];
         btc_type_boats = btc_type_boats + ["rhs_btr60_vv", "rhs_brm1k_vv"];
+        btc_type_units = btc_type_units - ["rhs_vdv_crew", "rhs_vdv_combatcrew", "rhs_vdv_armoredcrew", "rhs_vdv_crew_commander", "rhs_vdv_des_at", "rhs_vdv_des_arifleman", "rhs_vdv_des_efreitor", "rhs_vdv_des_junior_sergeant", "rhs_vdv_des_driver", "rhs_vdv_des_driver_armored", "rhs_vdv_des_rifleman", "rhs_vdv_des_rifleman_asval", "rhs_vdv_des_grenadier", "rhs_vdv_des_LAT", "rhs_vdv_des_RShG2", "rhs_vdv_des_grenadier_rpg", "rhs_vdv_des_strelok_rpg_assist", "rhs_vdv_des_medic", "rhs_vdv_des_crew", "rhs_vdv_des_combatcrew", "rhs_vdv_des_armoredcrew", "rhs_vdv_des_crew_commander", "rhs_vdv_des_machinegunner", "rhs_vdv_des_machinegunner_assistant", "rhs_vdv_des_officer", "rhs_vdv_des_officer_armored", "rhs_vdv_des_rifleman_lite", "rhs_vdv_des_engineer", "rhs_vdv_des_aa", "rhs_vdv_des_marksman", "rhs_vdv_des_marksman_asval", "rhs_vdv_fiora_crew", "rhs_vdv_fiora_combatcrew", "rhs_vdv_fiora_armoredcrew", "rhs_vdv_fiora_crew_commander", "rhs_vdv_mfiora_crew", "rhs_vdv_mfiora", "rhs_vdv_mfiora_combatcrew", "rhs_vdv_mfiora_armoredcrew", "rhs_vdv_mfiora_crew_commander"];
     };
 };
 
