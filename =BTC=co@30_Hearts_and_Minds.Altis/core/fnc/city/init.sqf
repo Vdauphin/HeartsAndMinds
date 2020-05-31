@@ -61,14 +61,14 @@ for "_id" from 0 to (count _locations - 1) do {
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
-        /*
+        
         //if you want a safe area
-        if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 500, 500, 0, false]) exitWith {};
-        */
+        if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 2500, 2500, 0, false]) exitWith {};
+        
 
         if (_radius_x < 80 || _radius_y < 80) then {
-            _radius_x = 80;
-            _radius_y = 80;
+            _radius_x = 500;
+            _radius_y = 500;
         };
 
         [_position, _type, _name, _radius_x, _radius_y, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
@@ -76,7 +76,7 @@ for "_id" from 0 to (count _locations - 1) do {
 };
 
 if !(isNil "btc_custom_loc") then {
-    {_x call btc_fnc_city_create} forEach btc_custom_loc;
+    {_x call btc_fnc_city_create;} forEach btc_custom_loc;
 };
 
 btc_city_all = btc_city_all apply {if (isNil "_x") then {objNull} else {_x}};

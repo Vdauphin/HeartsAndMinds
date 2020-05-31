@@ -1,8 +1,8 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
-onLoadName = $STR_BTC_HAM_DESCR_NAME;
-onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
+loadScreen = "core\img\sof.jpg";
+author = "[SoF]John-117 / [SoF]Canprod / VDauphin";
+onLoadName = Spirit Of Fire - Projet OTAN;
+onLoadMission = La Norvège a fait appel à l'OTAN suite à son incapacité à se défendre face à l'incursion de forces russes revendiquant le territoire proche de la frontière, aidez ce pays à repousser l'ennemi. ;
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"

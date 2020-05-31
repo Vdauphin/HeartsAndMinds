@@ -26,7 +26,7 @@ params [
     ["_create_object", btc_create_object, [objNull]]
 ];
 
-private _color = [1, 0.5, 0,1];
+private _color = [1, 1, 1,1];
 
 private _gear_object_pos = getPos _gear_object;
 _gear_object_pos params ["_gear_object_pos_x", "_gear_object_pos_y", "_gear_object_pos_z"];
@@ -44,6 +44,6 @@ if (!isNil "btc_helo_1") then {
     _array pushBack ['\A3\ui_f\data\map\vehicleicons\iconhelicopter_ca.paa', [0.7, 0, 0,1], getPos btc_helo_1, 1.1, 1.1, 0, localize "STR_BTC_HAM_INTRO_ONLYRESPAWN", 1]; //Only Respawnable
 };
 
-[getMarkerPos "btc_base", localize "STR_BTC_HAM_INTRO_LOADINGTXT", 20, 30, 240, 0, _array, 0] call BIS_fnc_establishingShot;
+[getMarkerPos "btc_base", localize "STR_BTC_HAM_INTRO_LOADINGTXT",100, 0, 0, 0, _array, 0] call BIS_fnc_establishingShot;
 
 enableSaving [false, false];

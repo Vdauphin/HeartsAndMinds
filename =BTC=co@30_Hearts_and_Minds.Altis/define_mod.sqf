@@ -1,9 +1,32 @@
 btc_custom_loc = [
-/*
-    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS X(Number),RADIUS X(Number),IS OCCUPIED(Bool)]
-    Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
-    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,800,true]
-*/
+
+[[2288,7341,0],"NameVillage","Ostrivka",300,300,true],
+[[5446,4532,0],"NameVillage","Lymany",300,300,true],
+[[6512,8263,0],"NameCity","Petrivka",300,300,true],
+[[10530,3375,0],"NameVillage","Kairy",300,300,true],
+[[9071,16388,0],"NameVillage","Osnova",300,300,true],
+[[7622,10993,0],"NameCity","Kalynivka",300,300,true],
+[[10940,13113,0],"Airport","Usine Sputnik",500,500,true],
+[[11681,10203,0],"NameVillage","Carrière Est",300,300,true],
+[[10858,11066,0],"NameVillage","Carrière Nord",300,300,true],
+[[10427,10451,0],"NameVillage","Carrière Ouest",300,300,true],
+[[10630,9543,0],"NameVillage","Carrière Sud",300,300,true],
+[[15060,14090,0],"NameCity","Quartier Sud",400,400,true],
+[[14399,14299,0],"NameCity","Quartier Ouest",400,400,true],
+[[16882,15594,0],"Airport","Aéroport National Mokket",500,500,true],
+[[8033,8200,0],"NameVillage","Prirechny",300,300,true],
+[[17015,14887,0],"NameVillage","Nautsi",300,300,true],
+[[13800,11968,0],"NameVillage","Verkhnetoulomski",300,300,true],
+[[13885,10368,0],"NameVillage","Mine Tulomskiy Ouest",300,300,true],
+[[14660,10559,0],"NameVillage","Mine Tulomskiy Est",300,300,true],
+[[16088,6854,0],"Airport","Port de Mourmansk",300,300,true],
+[[16568,4233,0],"NameCity","Baie de Teriberka",300,300,true],
+[[14535,8155,0],"NameCity","Erika",300,300,true],
+[[13664,7941,0],"NameVillage","Ostrov",400,400,true],
+[[11827,16258,0],"NameLocal","Pirenga",300,300,true],
+[[12543,16285,0],"NameLocal","Laplandsky",300,300,true],
+[[6325,17640,0],"NameLocal","Nivankyui",500,500,true]
+
 ];
 
 /*

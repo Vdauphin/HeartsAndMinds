@@ -129,9 +129,9 @@ if (isServer) then {
     if (btc_hideout_n isEqualTo 99) then {
         btc_hideout_n = round random 5;
     };
-    btc_hideout_safezone = 4000;
-    btc_hideout_range = 3500;
-    btc_hideout_rinf_time = 600;
+    btc_hideout_safezone = 7000;
+    btc_hideout_range = 3000;
+    btc_hideout_rinf_time = 300;
     btc_hideout_cap_time = 1800;
     btc_hideout_cap_checking = false;
 
@@ -153,11 +153,11 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 3000;
 
     //Rep
     btc_global_reputation = _p_rep;
-    btc_rep_militia_call_time = 600;
+    btc_rep_militia_call_time = 300;
     btc_rep_militia_called = - btc_rep_militia_call_time;
 
     //Chem
@@ -315,6 +315,7 @@ if (isServer) then {
     btc_groundWeaponHolder = [];
 };
 
+diag_log "0";
 //Civ
 // Get all faction from mod there are currently running
 //copyToClipboard str (["CIV"] call btc_fnc_get_class);
@@ -373,6 +374,7 @@ btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_gr
 
 if (isServer) then {
     //Player
+    diag_log "1";
     missionNamespace setVariable ["btc_player_side", west, true];
     missionNamespace setVariable ["btc_respawn_marker", "respawn_west", true];
 
@@ -390,7 +392,7 @@ if (isServer) then {
         )
     });
     ([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static", "_magazines_static"];
-
+    diag_log "2";
     ([btc_vehicles + btc_helo] call btc_fnc_log_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
 
     btc_construction_array =
@@ -408,6 +410,16 @@ if (isServer) then {
         [
             [
                 //"Fortifications"
+                "Fortress1",
+                "Fortress2",
+                "Hedgehog",
+                "Hhedgehog_concreteBig",
+                "Land_BagFence_01_long_green_F",
+                "UK3CB_BAF_Static_L111A1_Deployed_High",
+                "UK3CB_BAF_Static_L134A1_Deployed_High",
+                "UK3CB_BAF_Static_L7A2_Deployed_High",
+                "UK3CB_BAF_Static_L16_Deployed_High",
+                "Land_Trench_01_forest_F",
                 "Land_BagBunker_Small_F",
                 "Land_BagFence_Corner_F",
                 "Land_BagFence_End_F",
@@ -429,7 +441,14 @@ if (isServer) then {
                 "Land_Mil_WallBig_Corner_F",
                 "Land_PortableLight_double_F",
                 "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "B_Slingload_01_Fuel_F",
+                "Land_Fort_Watchtower",
+                "Land_fortified_nest_big",
+                "Land_fort_bagfence_long",
+                "Land_fort_bagfence_Corner",
+                "Land_fort_bagfence_Round",
+                "Land_LampHalogen_F",
+                "WarfareBDepot"
             ],
             _rearming_static + _magazines_static,
             [
@@ -460,6 +479,7 @@ if (isServer) then {
             ]
         ] + _rearming_magazines
     ];
+    diag_log "3";
     publicVariable "btc_construction_array";
 };
 

@@ -1,5 +1,13 @@
 [] call compile preprocessFileLineNumbers "core\doc.sqf";
 
+if !(isNil "btc_custom_loc") then {
+    {
+        _x params ["_pos", "_cityType", "_cityName", "_sizeX", "_sizeY"];
+        private _location = createLocation [_cityType, _pos, _sizeX, _sizeY];
+        _location setText _cityName;
+    } forEach btc_custom_loc;
+};
+
 [{!isNull player}, {
 
     player addRating 9999;
