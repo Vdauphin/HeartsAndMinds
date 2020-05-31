@@ -28,6 +28,7 @@ closeDialog 0;
 
 btc_log_create_obj = _create_obj;
 if ([btc_log_create_obj] call btc_fnc_checkArea) exitWith {};
+player setVariable ["btc_log_create_obj", btc_log_create_obj];
 
 disableSerialization;
 closeDialog 0;

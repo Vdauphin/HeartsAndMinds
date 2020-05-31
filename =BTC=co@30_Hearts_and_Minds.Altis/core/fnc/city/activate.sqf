@@ -110,12 +110,31 @@ if !(_data_units isEqualTo []) then {
         case "NameCity" : {7};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
-        case "NameMarine" : {1};
+        case "NameMarine" : {3};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _radius, 1 + round random [0, 1, 2] , random 1] call btc_fnc_mil_create_group;};
+        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
+            [_city, _radius, 1 + round random [0, 1, 2] , random 1] call btc_fnc_mil_create_group;
+        };
+        for "_i" from 1 to (round random 2) do {
+            private _pos = [getPos _city, (_radius_x + _radius_y)/4] call btc_fnc_randomize_pos;
+            private _road = _pos nearRoads 80;
+            _road = _road select {isOnRoad _x};
+            if !(_road isEqualTo []) then {
+                private _road = selectRandom _road;
+                _pos = getPos _road;
+                private _statics = btc_type_gl + btc_type_mg;
+
+                private _direction = [_road] call btc_fnc_road_direction;
+
+                _pos params ["_x", "_y", "_z"];
+                private _posStatic = [_x -2.39185*cos(-_direction) - 2.33984*sin(-_direction), _y  + 2.33984 *cos(-_direction) -2.39185*sin(-_direction), _z];
+                private _static = [_posStatic, _statics, _direction + 180] call btc_fnc_mil_create_static;
+                _static setPos _posStatic;
+            };
+        };
     };
 
     //Spawn civilians

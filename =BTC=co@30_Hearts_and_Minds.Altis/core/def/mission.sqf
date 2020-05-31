@@ -129,9 +129,9 @@ if (isServer) then {
     if (btc_hideout_n isEqualTo 99) then {
         btc_hideout_n = round random 5;
     };
-    btc_hideout_safezone = 4000;
-    btc_hideout_range = 3500;
-    btc_hideout_rinf_time = 600;
+    btc_hideout_safezone = 7000;
+    btc_hideout_range = 3000;
+    btc_hideout_rinf_time = 300;
     btc_hideout_cap_time = 1800;
     btc_hideout_cap_checking = false;
 
@@ -153,11 +153,11 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 3000;
 
     //Rep
     btc_global_reputation = _p_rep;
-    btc_rep_militia_call_time = 600;
+    btc_rep_militia_call_time = 300;
     btc_rep_militia_called = - btc_rep_militia_call_time;
 
     //Chem
@@ -262,8 +262,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16];
-    btc_helo = [btc_helo_1];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40, btc_veh_41, btc_veh_42, btc_veh_43, btc_veh_44, btc_veh_45, btc_veh_46, btc_veh_47, btc_veh_48, btc_veh_49, btc_veh_50, btc_veh_51, btc_veh_52, btc_veh_53, btc_veh_54];
+    btc_helo = [];
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -315,6 +315,7 @@ if (isServer) then {
     btc_groundWeaponHolder = [];
 };
 
+diag_log "0";
 //Civ
 // Get all faction from mod there are currently running
 //copyToClipboard str (["CIV"] call btc_fnc_get_class);
@@ -329,12 +330,12 @@ _allclasse = [[_p_civ_veh]] call btc_fnc_civ_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
-btc_w_civs = ["V_Rangemaster_belt", "arifle_Mk20_F", "30Rnd_556x45_Stanag", "hgun_ACPC2_F", "9Rnd_45ACP_Mag"];
+btc_w_civs = ["V_Rangemaster_belt", "sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets", "hgun_ACPC2_F", "9Rnd_45ACP_Mag"];
 btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
-btc_fob_structure = "Land_Cargo_HQ_V1_F";
+btc_fob_structure = "USMC_WarfareBAircraftFactory";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
 
@@ -373,6 +374,7 @@ btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_gr
 
 if (isServer) then {
     //Player
+    diag_log "1";
     missionNamespace setVariable ["btc_player_side", west, true];
     missionNamespace setVariable ["btc_respawn_marker", "respawn_west", true];
 
@@ -390,7 +392,7 @@ if (isServer) then {
         )
     });
     ([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static", "_magazines_static"];
-
+    diag_log "2";
     ([btc_vehicles + btc_helo] call btc_fnc_log_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
 
     btc_construction_array =
@@ -408,6 +410,16 @@ if (isServer) then {
         [
             [
                 //"Fortifications"
+                "Fortress1",
+                "Fortress2",
+                "Hedgehog",
+                "Hhedgehog_concreteBig",
+                "Land_BagFence_01_long_green_F",
+                "UK3CB_BAF_Static_L111A1_Deployed_High",
+                "UK3CB_BAF_Static_L134A1_Deployed_High",
+                "UK3CB_BAF_Static_L7A2_Deployed_High",
+                "UK3CB_BAF_Static_L16_Deployed_High",
+                "Land_Trench_01_forest_F",
                 "Land_BagBunker_Small_F",
                 "Land_BagFence_Corner_F",
                 "Land_BagFence_End_F",
@@ -429,7 +441,14 @@ if (isServer) then {
                 "Land_Mil_WallBig_Corner_F",
                 "Land_PortableLight_double_F",
                 "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "B_Slingload_01_Fuel_F",
+                "Land_Fort_Watchtower",
+                "Land_fortified_nest_big",
+                "Land_fort_bagfence_long",
+                "Land_fort_bagfence_Corner",
+                "Land_fort_bagfence_Round",
+                "Land_LampHalogen_F",
+                "WarfareBDepot"
             ],
             _rearming_static + _magazines_static,
             [
@@ -460,6 +479,7 @@ if (isServer) then {
             ]
         ] + _rearming_magazines
     ];
+    diag_log "3";
     publicVariable "btc_construction_array";
 };
 
@@ -528,7 +548,7 @@ btc_fnc_log_get_nottowable = {
 
     switch (true) do {
         //The tower is a tank so it can't tow: plane and helicopter
-        case (_tower isKindOf "Tank") : {["Plane", "Helicopter"];};
+        case (_tower isKindOf "Tank") : {["Plane"];};
         case (_tower isKindOf "Truck_F") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Truck") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Ship") : {[];};
@@ -618,6 +638,10 @@ switch (_p_en) do {
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F", "I_G_Offroad_01_F"];
         btc_type_units = btc_type_units - ["rhs_vdv_crew", "rhs_vdv_combatcrew", "rhs_vdv_armoredcrew", "rhs_vdv_crew_commander", "rhs_vdv_des_at", "rhs_vdv_des_arifleman", "rhs_vdv_des_efreitor", "rhs_vdv_des_junior_sergeant", "rhs_vdv_des_driver", "rhs_vdv_des_driver_armored", "rhs_vdv_des_rifleman", "rhs_vdv_des_rifleman_asval", "rhs_vdv_des_grenadier", "rhs_vdv_des_LAT", "rhs_vdv_des_RShG2", "rhs_vdv_des_grenadier_rpg", "rhs_vdv_des_strelok_rpg_assist", "rhs_vdv_des_medic", "rhs_vdv_des_crew", "rhs_vdv_des_combatcrew", "rhs_vdv_des_armoredcrew", "rhs_vdv_des_crew_commander", "rhs_vdv_des_machinegunner", "rhs_vdv_des_machinegunner_assistant", "rhs_vdv_des_officer", "rhs_vdv_des_officer_armored", "rhs_vdv_des_rifleman_lite", "rhs_vdv_des_engineer", "rhs_vdv_des_aa", "rhs_vdv_des_marksman", "rhs_vdv_des_marksman_asval", "rhs_vdv_fiora_crew", "rhs_vdv_fiora_combatcrew", "rhs_vdv_fiora_armoredcrew", "rhs_vdv_fiora_crew_commander", "rhs_vdv_mfiora_crew", "rhs_vdv_mfiora", "rhs_vdv_mfiora_combatcrew", "rhs_vdv_mfiora_armoredcrew", "rhs_vdv_mfiora_crew_commander"];
     };
+        case "RHS_FACTION_VDV" : {
+        btc_type_motorized_armed = btc_type_motorized_armed + ["rhs_t90a_tv", "rhs_t80u", "rhs_t14_tv", "RHS_Su25SM_vvsc", "RHS_Ka52_vvsc", "rhs_zsu234_aa"];
+        btc_type_boats = btc_type_boats + ["rhs_btr60_vv", "rhs_brm1k_vv"];
+    };
 };
 
 //Chem
@@ -632,7 +656,7 @@ btc_rep_bonus_cache = 100;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 25;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
+btc_rep_bonus_mil_killed = 1;
 
 btc_rep_malus_civ_hd = - 10;
 btc_rep_malus_civ_killed = - 10;
