@@ -67,10 +67,13 @@ for "_id" from 0 to (count _locations - 1) do {
         
 
         if (_radius_x < 80 || _radius_y < 80) then {
-            _radius_x = 200;
-            _radius_y = 200;
+            _radius_x = 100;
+            _radius_y = 100;
         };
-
+                if (_radius_x > 400 || _radius_y > 400) then {
+            _radius_x = 400;
+            _radius_y = 400;
+        };
         [_position, _type, _name, _radius_x, _radius_y, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
     };
 };
