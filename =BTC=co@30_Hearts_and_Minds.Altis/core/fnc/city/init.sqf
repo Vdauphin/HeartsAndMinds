@@ -70,7 +70,7 @@ for "_id" from 0 to (count _locations - 1) do {
             _radius_x = 100;
             _radius_y = 100;
         };
-                if (_radius_x > 400 || _radius_y > 400) then {
+        if (_radius_x > 400 || _radius_y > 400) then {
             _radius_x = 400;
             _radius_y = 400;
         };
