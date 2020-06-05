@@ -1300,6 +1300,9 @@
                 <Portuguese>Solicitar veículo</Portuguese>
                 <Chinesesimp>申请载具</Chinesesimp>
             </Key>
+            <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REFUELSOURCE">
+                <Original>Refuel fuel source</Original>
+            </Key>
         </Container>
         <Container name="Action(ACE): FOB">
             <Key ID="STR_BTC_HAM_ACTION_FOB_MOUNT">

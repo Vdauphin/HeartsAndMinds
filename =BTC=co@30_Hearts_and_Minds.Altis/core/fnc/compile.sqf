@@ -327,6 +327,7 @@ if (!isDedicated) then {
     btc_fnc_log_repair_wreck = compile preprocessFileLineNumbers "core\fnc\log\repair_wreck.sqf";
     btc_fnc_log_copy = compile preprocessFileLineNumbers "core\fnc\log\copy.sqf";
     btc_fnc_log_paste = compile preprocessFileLineNumbers "core\fnc\log\paste.sqf";
+    btc_fnc_log_refuelSource = compile preprocessFileLineNumbers "core\fnc\log\refuelSource.sqf";
 
     //REP
     btc_fnc_rep_treatment = compile preprocessFileLineNumbers "core\fnc\rep\treatment.sqf";
