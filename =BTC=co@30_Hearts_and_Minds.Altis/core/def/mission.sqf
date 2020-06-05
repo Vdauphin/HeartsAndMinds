@@ -447,8 +447,7 @@ if (isServer) then {
                 "Land_fort_bagfence_long",
                 "Land_fort_bagfence_Corner",
                 "Land_fort_bagfence_Round",
-                "Land_LampHalogen_F",
-                "WarfareBDepot"
+                "Land_LampHalogen_F"
             ],
             _rearming_static + _magazines_static,
             [
@@ -475,7 +474,8 @@ if (isServer) then {
             [
                 //"Vehicle logistic"
                 "ACE_Wheel",
-                "ACE_Track"
+                "ACE_Track",
+                "Land_CanisterFuel_F"
             ]
         ] + _rearming_magazines
     ];
@@ -540,7 +540,13 @@ btc_log_def_rc = [
     btc_fob_mat, 8,
     "Land_Cargo20_military_green_F", 8,
     "B_Slingload_01_Fuel_F", 20,
-    "Land_Pod_Heli_Transport_04_medevac_black_F", 8
+    "Land_Pod_Heli_Transport_04_medevac_black_F", 8,
+    "Land_Fort_Watchtower", 5,
+    "Land_fortified_nest_big", 2,
+    "Land_fort_bagfence_long", 2,
+    "Land_fort_bagfence_Corner", 2,
+    "Land_fort_bagfence_Round", 2,
+    "Land_LanpHalogen_F", 2
 ];
 
 btc_fnc_log_get_nottowable = {
