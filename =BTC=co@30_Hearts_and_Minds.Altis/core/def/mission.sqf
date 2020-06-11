@@ -262,7 +262,7 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40, btc_veh_41, btc_veh_42, btc_veh_43, btc_veh_44, btc_veh_45, btc_veh_46, btc_veh_47, btc_veh_48, btc_veh_49, btc_veh_50, btc_veh_51, btc_veh_52, btc_veh_53, btc_veh_54, btc_veh_55, btc_veh_56, btc_veh_57];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40, btc_veh_41, btc_veh_42, btc_veh_43, btc_veh_44, btc_veh_45, btc_veh_46, btc_veh_47, btc_veh_48, btc_veh_49, btc_veh_50, btc_veh_51, btc_veh_52, btc_veh_53, btc_veh_54, btc_veh_55, btc_veh_56, btc_veh_57, btc_veh_58, btc_veh_59];
     btc_helo = [];
 
     // The two arrays below are prefixes of buildings and their multiplier.
