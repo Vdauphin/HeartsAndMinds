@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2261;
+		nextID=2262;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=273;
+		nextID=286;
 	};
 	class Camera
 	{
-		pos[]={741.95526,102.16933,3204.0508};
-		dir[]={0.28314003,-0.89958596,0.33288252};
-		up[]={0.58285606,0.43663433,0.68525803};
-		aside[]={0.76181889,3.5678822e-006,-0.64798051};
+		pos[]={9088.625,46.629036,4595.4453};
+		dir[]={0.34422943,-0.7204957,0.60219568};
+		up[]={0.35762274,0.69326472,0.62563848};
+		aside[]={0.86828136,4.1934254e-006,-0.49633634};
 	};
 };
 binarizationWanted=0;
@@ -42933,25 +42933,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -42983,6 +42964,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
 				};
 			};
 		};
@@ -46110,7 +46110,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=910;
+		items=911;
 		class Item0
 		{
 			dataType="Object";
@@ -73044,7 +73044,7 @@ class Mission
 			};
 			id=1639;
 			type="rksla3_puma_hc1_2gpmg";
-			atlOffset=-0.021194458;
+			atlOffset=-0.010786057;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -73087,7 +73087,7 @@ class Mission
 			};
 			id=1640;
 			type="rksla3_puma_hc1_1gpmg";
-			atlOffset=-0.021208763;
+			atlOffset=-0.010800362;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -86336,8 +86336,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={747.34064,17.832073,3256.7781};
-				angles[]={6.2786312,0.93413508,6.1946793};
+				position[]={747.341,17.831749,3256.7778};
+				angles[]={6.2786303,0.93413508,6.1946793};
 			};
 			side="Empty";
 			flags=4;
@@ -86345,11 +86345,10 @@ class Mission
 			{
 				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
 				name="btc_bigShower_1";
-				disableSimulation=1;
 			};
 			id=2104;
 			type="DeconShower_02_F";
-			atlOffset=-0.02368927;
+			atlOffset=-0.024000168;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -87372,6 +87371,140 @@ class Mission
 			colorName="ColorYellow";
 			id=2260;
 			atlOffset=0.00029850006;
+		};
+		class Item910
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9109.4961,3.1517115,4623.3252};
+				angles[]={6.2695365,0,0.0090931654};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2261;
+			type="Misc_Backpackheap";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=3;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="UK3CB_BAF_B_Bergen_MTP_Rifleman_XL_A";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="B_UAV_01_backpack_F";
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="B_SCBA_01_F";
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };
