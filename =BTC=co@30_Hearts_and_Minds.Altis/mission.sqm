@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2262;
+		nextID=2264;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=286;
+		nextID=299;
 	};
 	class Camera
 	{
-		pos[]={9088.625,46.629036,4595.4453};
-		dir[]={0.34422943,-0.7204957,0.60219568};
-		up[]={0.35762274,0.69326472,0.62563848};
-		aside[]={0.86828136,4.1934254e-006,-0.49633634};
+		pos[]={767.31,61.734489,3196.1394};
+		dir[]={-0.33429581,-0.74759996,0.57410181};
+		up[]={-0.37625882,0.66395479,0.64615464};
+		aside[]={0.86428112,4.0799714e-006,0.50326014};
 	};
 };
 binarizationWanted=0;
@@ -42933,6 +42933,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -42964,25 +42983,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -73044,7 +73044,7 @@ class Mission
 			};
 			id=1639;
 			type="rksla3_puma_hc1_2gpmg";
-			atlOffset=-0.010786057;
+			atlOffset=0.017000198;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -73087,7 +73087,7 @@ class Mission
 			};
 			id=1640;
 			type="rksla3_puma_hc1_1gpmg";
-			atlOffset=-0.010800362;
+			atlOffset=0.016985893;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -86344,7 +86344,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
-				name="btc_bigShower_1";
+				name="btc_bigShower";
 			};
 			id=2104;
 			type="DeconShower_02_F";
@@ -86499,14 +86499,14 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={744.34534,15.621103,3260.5344};
-				angles[]={0,1.0142221,0};
+				position[]={744.34497,15.621471,3260.5339};
+				angles[]={0,1.0142282,0};
 			};
-			areaSize[]={16.065449,0,18.596779};
+			areaSize[]={30,0,30};
 			flags=1;
 			id=2143;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=1.1696434;
+			atlOffset=1.170001;
 			class CustomAttributes
 			{
 				class Attribute0
