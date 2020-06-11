@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.4">
-        <img src="https://img.shields.io/badge/Version-1.20.4-blue.svg?style=flat-square" alt="H&M Version">
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.5">
+        <img src="https://img.shields.io/badge/Version-1.20.5-blue.svg?style=flat-square" alt="H&M Version">
     </a>
     <a href="http://www.somsubhra.com/github-release-stats/?username=vdauphin&repository=HeartsAndMinds">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">
