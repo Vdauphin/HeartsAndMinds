@@ -1,8 +1,8 @@
 
 loadScreen = "core\img\sof.jpg";
-author = "[SoF]John-117 / [SoF]Canprod / VDauphin";
+author = "[SoF]John-117 / [SoF]Canprod / VDauphin / Tony4298";
 onLoadName = Spirit Of Fire - Projet OTAN;
-onLoadMission = La Norvège a fait appel à l'OTAN suite à son incapacité à se défendre face à l'incursion de forces russes revendiquant le territoire proche de la frontière, aidez ce pays à repousser l'ennemi. ;
+onLoadMission = La Finlande a fait appel à l'OTAN suite à son incapacité à se défendre face à l'incursion de forces russes revendiquant le territoire proche de la frontière, aidez ce pays à repousser l'ennemi. ;
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"
@@ -52,3 +52,13 @@ class Extended_InitPost_EventHandlers {
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+disableChannels[] = {
+	{0, false, false}, //--- Global Chat
+	{1, false, false}, //--- Side Chat
+	{2, false, false}, //--- Command Chat
+	{3, true, true}, //--- Group Chat
+	{4, false, false}, //--- Vehicle Chat
+	{5, false, false}, //--- Direct Chat
+	{6, true, true} //--- System Chat
+};
