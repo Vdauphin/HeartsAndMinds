@@ -54,11 +54,11 @@ wreckManagerMode = 0;
 corpseManagerMode = 0;
 
 disableChannels[] = {
-	{0, false, false}, //--- Global Chat
-	{1, false, false}, //--- Side Chat
-	{2, false, false}, //--- Command Chat
+	{0, true, true}, //--- Global Chat
+	{1, true, true}, //--- Side Chat
+	{2, true, true}, //--- Command Chat
 	{3, true, true}, //--- Group Chat
-	{4, false, false}, //--- Vehicle Chat
-	{5, false, false}, //--- Direct Chat
+	{4, true, true}, //--- Vehicle Chat
+	{5, true, true}, //--- Direct Chat
 	{6, true, true} //--- System Chat
 };
