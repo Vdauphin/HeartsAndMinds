@@ -106,7 +106,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
             if (!(_x in _contaminated)) then {
                 _unitContaminate append [_x];
             }
-        } forEach _units inAreaArray [_pos, btc_chem_maxrange, btc_chem_maxrange, 0, false, btc_chem_maxrange];
+        } forEach (_units inAreaArray [_pos, btc_chem_maxrange, btc_chem_maxrange, 0, false, btc_chem_maxrange]);
     } forEach _contaminated;
 
     // If no units get contaminated stop here
