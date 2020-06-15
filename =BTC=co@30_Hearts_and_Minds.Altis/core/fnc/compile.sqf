@@ -200,6 +200,7 @@ btc_fnc_house_addWP_loop = compile preprocessFileLineNumbers "core\fnc\common\ho
 
 //CHEM
 btc_fnc_chem_damage = compile preprocessFileLineNumbers "core\fnc\chem\damage.sqf";
+btc_fnc_chem_getProtectionLevel = compile preprocessFileLineNumbers "core\fnc\chem\getProtectionLevel.sqf";
 btc_fnc_chem_deconShowerAnimLarge = {(_this select 0) setVariable ["BIN_Shower_Stop",false]; _this call BIN_fnc_deconShowerAnimLarge;};
 
 //DEBUG

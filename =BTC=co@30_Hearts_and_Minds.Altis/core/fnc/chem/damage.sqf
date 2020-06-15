@@ -33,49 +33,8 @@ params [
 private _googles = goggles _unit;
 private _backpack = backpack _unit;
 private _uniform = toLower uniform _unit;
-private _protection = 0;
 
-if (
-    [
-        "G_Respirator_base_F"
-    ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
-) then {
-    _protection = _protection + selectRandom [0.15, 0.3]; // Less protection than respirator
-} else {
-    if (
-        [
-            "G_RegulatorMask_base_F",
-            "G_AirPurifyingRespirator_01_base_F",
-            "GP21_GasmaskPS",
-            "GP5Filter_RaspiratorPS",
-            "GP7_RaspiratorPS",
-            "SE_M17",
-            "Hamster_PS",
-            "SE_S10",
-            "MK502"
-        ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
-    ) then {
-        _protection = _protection + 0.3;
-    };
-};
-if (
-    [
-        "B_SCBA_01_base_F",
-        "B_CombinationUnitRespirator_01_Base_F"
-    ] findIf {_backpack isKindOf _x} > -1
-) then {
-    _protection = _protection + 0.1;
-};
-if !(_uniform isEqualTo "") then {
-    _protection = _protection + 0.5;
-    if (
-        [
-            "cbrn"
-        ] findIf {_x in _uniform} > -1
-    ) then {
-        _protection = _protection + 0.1;
-    };
-};
+private _protection = [_unit, _cfgGlasses call btc_fnc_chem_getProtectionLevel;
 
 if (_protection >= 1) exitWith {_this};
 
