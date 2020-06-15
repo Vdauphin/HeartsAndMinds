@@ -29,10 +29,13 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
 
     if (_contaminated isEqualTo []) exitWith {};
     
-    // Check if all contaminated units are alive
+    // Check if any legacy objects were added and assign a chem level to those
     {
-        if(!alive _x) then {
-
+        if(_x getVariable ["btc_chem_level", -1] == -1) then {
+            if (btc_debug || btc_debug_log) then {
+                [format ["Legacy chem object: %1", _x], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+            };
+            _x setVariable ["btc_chem_level", 1 + btc_chem_spreadReduction, true];
         };
     } forEach _contaminated;
 
@@ -101,7 +104,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
             _x setVariable ["btc_chem_level", _spreadLevel max _targetChemlevel, true];
 
             if (!(_x in _contaminated)) then {
-                _unitContaminate append _x;
+                _unitContaminate append [_x];
             }
         } forEach _units inAreaArray [_pos, btc_chem_maxrange, btc_chem_maxrange, 0, false, btc_chem_maxrange];
     } forEach _contaminated;
