@@ -27,6 +27,7 @@ if (isServer) then {
     btc_fnc_chem_checkLoop = compile preprocessFileLineNumbers "core\fnc\chem\checkLoop.sqf";
     btc_fnc_chem_propagate = compile preprocessFileLineNumbers "core\fnc\chem\propagate.sqf";
     btc_fnc_chem_handleShower = compile preprocessFileLineNumbers "core\fnc\chem\handleShower.sqf";
+    btc_fnc_chem_reduceContamination = compile preprocessFileLineNumbers "core\fnc\chem\reduceContamination.sqf";
 
     //SPECT
     btc_fnc_spect_checkLoop = compile preprocessFileLineNumbers "core\fnc\spect\checkLoop.sqf";
