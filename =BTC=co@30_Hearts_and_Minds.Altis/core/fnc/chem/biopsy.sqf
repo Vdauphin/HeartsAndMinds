@@ -29,9 +29,10 @@ params [
 if !(_success) exitWith {_this};
 
 private _obj = _data select 0;
+private _chemlevel = _obj getVariable ["btc_chem_level", 0];
 ([
     localize "STR_BTC_HAM_O_CHEM_NOTCONTA",
     localize "STR_BTC_HAM_O_CHEM_CONTA"
-] select (_obj in btc_chem_contaminated)) call CBA_fnc_notify;
+] select (_chemlevel > 0)) call CBA_fnc_notify;
 
 _this
