@@ -634,6 +634,13 @@ switch (_p_en) do {
 
 //Chem
 btc_chem_range = 3;
+btc_chem_maxrange = 20;
+btc_chem_maxrange_value = 0.001;
+btc_chem_spreadReduction = 0.2;
+
+
+// Value is automaticly calculated based on btc_chem_maxrange
+btc_chem_expcoefficent = (ln (btc_chem_maxrange_value)) / btc_chem_maxrange^2;
 
 //Spect
 btc_spect_range = 1000;
