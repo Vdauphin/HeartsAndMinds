@@ -25,17 +25,27 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
 
 [{
     params ["_args", "_id"];
-    _args params ["_contaminated", "_decontaminate", "_range", "_bodyParts", "_cfgGlasses"];
+    _args params ["_contaminated", "_decontaminate", "_bodyParts", "_cfgGlasses"];
 
     if (_contaminated isEqualTo []) exitWith {};
+    
+    // Check if all contaminated units are alive
+    {
+        if(!alive _x) then {
+
+        };
+    } forEach _contaminated;
 
     private _allUnitsUAV = [];
     {
         _allUnitsUAV append crew _x;
     } forEach allUnitsUAV;
+
     private _units = allUnits - _allUnitsUAV;
     private _objtToDecontaminate = [];
     private _unitsContaminated = _contaminated select {_x in _units};
+
+    // Check if objects are within a shower and are losing chem level
     {
         (0 boundingBoxReal _x) params ["_p1", "_p2"];
         private _maxWidth = abs ((_p2 select 0) - (_p1 select 0));
@@ -48,49 +58,66 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         };
         _objtToDecontaminate append (_sorted inAreaArray [_pos, _maxWidth/2, _maxLength/2, getDir _x, true, _maxHeight]);
     } forEach (_decontaminate select {_x animationSourcePhase "valve_source" isEqualTo 1});
+
+    // Loop through all objects that have been identified to be decontaminated
     {
-        if (!(local _x) && {_x in _units}) then {
-            ["btc_chem_decontaminated", [_x], _x] call CBA_fnc_targetEvent;
-        };
-        _contaminated deleteAt (_contaminated find _x);
-        {
-            if (!(local _x) && {_x in _units}) then {
-                ["btc_chem_decontaminated", [_x], _x] call CBA_fnc_targetEvent;
-            };
+        if([_x] call btc_fnc_chem_reduceContamination) then {
             _contaminated deleteAt (_contaminated find _x);
-            {
+        };
+
+        {
+            if([_x] call btc_fnc_chem_reduceContamination) then {
                 _contaminated deleteAt (_contaminated find _x);
-            } forEach (_x getVariable ["ace_cargo_loaded", []]);
+                {
+                    _x setVariable ["btc_chem_level", 0, true];  // On the second layer, objects are either _contamined or not.
+                    _contaminated deleteAt (_contaminated find _x);
+                } forEach (_x getVariable ["ace_cargo_loaded", []]);   
+            };
         } forEach ((_x getVariable ["ace_cargo_loaded", []]) + crew _x);
-        publicVariable "btc_chem_contaminated";
     } forEach _objtToDecontaminate;
 
+    // Send new list of contaminated objects to all players
+    publicVariable "btc_chem_contaminated";
+
+    // If no contaminated units remain, no propagation can happen so exit now
     if (_contaminated isEqualTo []) exitWith {};
 
+    // Array to store new contaminated units
     private _unitContaminate = [];
+
+    // Loop over all units contaminated
     {
-        if (_x in _units) then {
-            _range = _range / 2;
-        };
-        private _pos = getPosWorld _x;
-        _unitContaminate append (_units inAreaArray [_pos, _range, _range, 0, false, 2 + (_pos select 2)]);
+        // Assign the current source to variable
+        private _source = _x;
+
+        // Get source position and chem level
+        private _pos = getPosWorld _source;
+        private _chemlevel = _source getVariable ["btc_chem_level", 0];
+
+        // Find all possible targets within range and loop through them
+        {
+            private _spreadLevel = [_source, _chemlevel, _x] call btc_fnc_chem_getSpreadLevel;
+            private _targetChemlevel = _x getVariable ["btc_chem_level", 0];
+            _x setVariable ["btc_chem_level", _spreadLevel max _targetChemlevel, true];
+
+            if (!(_x in _contaminated)) then {
+                _unitContaminate append _x;
+            }
+        } forEach _units inAreaArray [_pos, _range, _range, 0, false, _range];
     } forEach _contaminated;
 
+    // If no units get contaminated stop here
     if (_unitContaminate isEqualTo []) exitWith {};
-    private _periode = 3 / count _unitContaminate;
+
+    // Add the new contaminated units to the global list
     {
-        private _notAlready = _contaminated pushBackUnique _x > -1;
-        if (_notAlready) then {
-            publicVariable "btc_chem_contaminated";
-        };
-        if (local _x) then {
-            [{
-                _this call btc_fnc_chem_damage;
-            }, [_x, _notAlready, _bodyParts, _cfgGlasses], _forEachIndex * _periode] call CBA_fnc_waitAndExecute;
-        } else {
-            if (_notAlready) then {
-                [_x] remoteExecCall ["btc_fnc_chem_damageLoop", _x];
-            };
+        _contaminated pushBackUnique _x;
+        if (btc_debug || btc_debug_log) then {
+            [format ["Start: %1", _x], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
         };
     } forEach _unitContaminate;
-}, 3.1, [btc_chem_contaminated, btc_chem_decontaminate, btc_chem_range, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
+
+    // Send new list of contaminated objects to all players
+    publicVariable "btc_chem_contaminated";
+
+}, 3.1, [btc_chem_contaminated, btc_chem_decontaminate, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
