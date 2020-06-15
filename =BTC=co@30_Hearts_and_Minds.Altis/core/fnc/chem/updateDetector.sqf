@@ -35,12 +35,6 @@ Author:
         _obj ctrlAnimateModel ["Threat_Level_Source", 0, true];
     };
 
-    private _level = selectMin (btc_chem_contaminated apply {player distance _x});
-    if (_level < btc_chem_range) then {
-        _level = 1;
-    } else {
-        _level = (floor (btc_chem_range / _level * 10)) / 10;
-    };
-
+    private _level = selectMax (btc_chem_contaminated apply {[_x, _x getVariable ["btc_chem_level", 0], player] call  btc_fnc_chem_getSpreadLevel});
     _obj ctrlAnimateModel ["Threat_Level_Source", _level, true]; //Displaying a threat level (value between 0.0 and 1.0)
 }, 0.3, _this] call CBA_fnc_addPerFrameHandler;
