@@ -37,7 +37,7 @@ params [
 
 if !(_isReal) then {
     private _axis = getNumber (configfile >> "CfgWorlds" >> worldName >> "mapSize") / 2;
-    _cache_obj = [[_axis, _axis, 0], _radius + _axis] call CBA_fnc_randPos;
+    _cache_obj = [[_axis, _axis, 0], _axis] call CBA_fnc_randPos;
 };
 
 private _intelId = [1];

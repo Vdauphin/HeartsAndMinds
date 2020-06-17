@@ -7,7 +7,7 @@ change-template: '- $TITLE (@$AUTHOR).'
 template: |
     Requires [ACE3](http://www.armaholic.com/page.php?id=28557).
 
-    _[Optionals :](https://github.com/Vdauphin/HeartsAndMinds/files/3138932/All.Hearts.and.Minds.mods.zip)_
+    _[Optionals :](https://github.com/Vdauphin/HeartsAndMinds/files/4348942/All.Hearts.and.Minds.mods.zip)_
     - [RHS USAF](http://www.armaholic.com/page.php?id=27149), [RHS AFRF](http://www.armaholic.com/page.php?id=27150), [RHS GREF](http://www.armaholic.com/page.php?id=30998), [RHS SAF](http://www.armaholic.com/page.php?id=32203),
     - [RDS A2 Civilian Pack mod](https://forums.bistudio.com/topic/170165-rds-a2-civilian-pack/),
     - [CUP units and vehicles mod](https://forums.bistudio.com/topic/179326-community-upgrade-project-cup/), [Community Factions Project](https://github.com/tupolov/cfp/releases),
@@ -16,9 +16,9 @@ template: |
     - [Taliban Fighters by EricJ](http://www.armaholic.com/page.php?id=29543),
     - [The Unsung Vietnam War Mod](http://www.armaholic.com/page.php?id=29948),
     - [Iron Front 3 Lite](http://www.armaholic.com/page.php?id=24714), [Face of War WW2](http://www.armaholic.com/page.php?id=31945),
-    - [Operation: TREBUCHET](http://www.armaholic.com/page.php?id=28614), [OPCAN - OPTRE Reskin Pack](http://www.armaholic.com/page.php?id=29718).
+    - [Operation: TREBUCHET](http://www.armaholic.com/page.php?id=28614), [Operation: TREBUCHET First Contact](https://steamcommunity.com/workshop/filedetails/?id=1572627279), [OPCAN - OPTRE Reskin Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=2016312756).
 
-    [Changelog](https://github.com/Vdauphin/HeartsAndMinds/milestone/41?closed=1):
+    [Changelog](https://github.com/Vdauphin/HeartsAndMinds/milestone/58?closed=1):
 
     - Mission.sqm/Param.hpp not changed.
     $CHANGES

@@ -37,7 +37,10 @@ _pos = [_pos, 0, 50, 13, 0, 60 * (pi / 180), 0] call btc_fnc_findsafepos;
 
 _city setVariable ["spawn_more", true];
 
-private _heli_type = typeOf selectRandom ((btc_vehicles + btc_helo) select {_x isKindOf "air"});
+private _heli_type = typeOf selectRandom ((btc_vehicles + btc_helo) select {
+    _x isKindOf "air" &&
+    getNumber(configFile >> "CfgVehicles" >> typeOf _x >> "isUav") isEqualTo 0
+});
 private _heli = createVehicle [_heli_type, _pos, [], 0, "NONE"];
 _heli setVariable ["btc_dont_delete", true];
 _heli setVariable ["ace_cookoff_enableAmmoCookoff", false, true];

@@ -24,7 +24,7 @@ params [
     ["_obj", objNull, [objNull]]
 ];
 
-btc_log_obj_created pushBack _obj;
+if (btc_log_obj_created pushBackUnique _obj isEqualTo -1) exitWith {};
 btc_curator addCuratorEditableObjects [[_obj], false];
 
 if (

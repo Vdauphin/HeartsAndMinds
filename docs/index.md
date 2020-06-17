@@ -3,11 +3,10 @@
 * ## Introduction :
 This mission is built for **dedicated server only**. You will found here some basic and specific informations related to _Hearts and Minds_ mission.
 
-Servers list : [arma3.swec.se](https://arma3.swec.se/server/list?mquery=hearts+and+minds)
-
 * ## Mission gameplay documentation
 	* ### [Guide to rearming](http://vdauphin.github.io/HeartsAndMinds/Guide-to-rearming)
 	* ### [InGame Documentation](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation)
+	* ### [Action has consequences](http://vdauphin.github.io/HeartsAndMinds/Action-has-consequences)
 * ## Mission editing
 	* ### [Change MAP of H&M](http://vdauphin.github.io/HeartsAndMinds/Change-MAP-of-Hearts-and-Minds)
 	* ### [Prevent AI from spawning near the base](http://vdauphin.github.io/HeartsAndMinds/Prevent-AI-from-spawning-near-the-base)

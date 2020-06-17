@@ -33,3 +33,4 @@ if (btc_p_chem) then {
 };
 
 ["GroundWeaponHolder", "InitPost", {btc_groundWeaponHolder append _this}] call CBA_fnc_addClassEventHandler;
+["acex_fortify_objectPlaced", {[_this select 2] call btc_fnc_log_CuratorObjectPlaced_s}] call CBA_fnc_addEventHandler;

@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _veh = [my_vehicle] call btc_fnc_log_server_repair_wreck;
+        _veh = [my_vehicle] spawn btc_fnc_log_server_repair_wreck;
     (end)
 
 Author:

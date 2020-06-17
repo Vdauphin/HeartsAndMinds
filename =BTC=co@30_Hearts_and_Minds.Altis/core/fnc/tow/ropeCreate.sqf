@@ -38,8 +38,13 @@ if (!isNull btc_int_ask_data) exitWith {(localize "STR_BTC_HAM_LOG_TOW_ALREADYTO
 private _model_rear_tower = ([_tower] call btc_fnc_tow_hitch_points) select 1;
 private _model_front_selected = ([btc_log_vehicle_selected] call btc_fnc_tow_hitch_points) select 0;
 private _relative_pos = - (_model_front_selected select 1) + (_model_rear_tower select 1) - ((btc_log_vehicle_selected modelToWorld _model_front_selected) distance (_tower modelToWorld _model_rear_tower));
+private _attachTo_pos = if (_tower isKindOf "Ship") then {
+    [0, (-(_model_front_selected select 1) + (_model_rear_tower select 1) - 3), 0]
+} else {
+    [0, _relative_pos, 0.2 + ((btc_log_vehicle_selected modelToWorld [0, 0, 0]) select 2) - ((_tower modelToWorld [0, 0, 0]) select 2)]
+};
 
-btc_log_vehicle_selected attachTo [_tower, [0, _relative_pos, 0.2 + ((btc_log_vehicle_selected modelToWorld [0, 0, 0]) select 2) - ((_tower modelToWorld [0, 0, 0]) select 2)]];
+btc_log_vehicle_selected attachTo [_tower, _attachTo_pos];
 
 private _pos_rear = _tower modelToWorld _model_rear_tower;
 private _pos_front = btc_log_vehicle_selected modelToWorld _model_front_selected;

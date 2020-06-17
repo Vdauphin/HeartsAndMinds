@@ -75,7 +75,7 @@ closeDialog 0;
 
     if (isNull _mat) exitWith {};
 
-    private _pos = getPos _mat;
+    private _pos = getPosATL _mat;
     private _direction = getDir _mat;
     private _FOB_name = "FOB " + _name;
 

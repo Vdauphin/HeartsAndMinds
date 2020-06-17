@@ -46,3 +46,9 @@ _toRemove append (allGroups select {
 });
 
 _toRemove call CBA_fnc_deleteEntity;
+
+while {objNull in btc_chem_contaminated} do {
+    btc_chem_contaminated deleteAt (
+        btc_chem_contaminated find objNull
+    )
+};

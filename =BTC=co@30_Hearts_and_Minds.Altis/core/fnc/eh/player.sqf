@@ -41,6 +41,18 @@ _player addEventHandler ["WeaponAssembled", {
 
     _this
 }];
+_player addEventHandler ["WeaponAssembled", {
+    params [
+        ["_player", objNull, [objNull]],
+        ["_static", objNull, [objNull]]
+    ];
+
+    if !(_static isKindOf "StaticWeapon") exitWith {_this};
+    [_static] remoteExecCall ["btc_fnc_log_init", 2];
+}];
+["ace_csw_deployWeaponSucceeded", {
+    _this remoteExecCall ["btc_fnc_log_init", [0, 2] select isDedicated];
+}] call CBA_fnc_addEventHandler;
 
 if (btc_p_chem) then {
      // Add biopsy

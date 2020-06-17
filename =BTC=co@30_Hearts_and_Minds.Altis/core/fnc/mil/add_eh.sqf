@@ -3,16 +3,16 @@
 Function: btc_fnc_mil_add_eh
 
 Description:
-    Fill me when you edit me !
+    Add EH to military unit.
 
 Parameters:
-    _unit - [Object]
+    _unit - Unit. [Object]
 
 Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_add_eh;
+        [cursorObject] call btc_fnc_mil_add_eh;
     (end)
 
 Author:

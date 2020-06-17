@@ -3,7 +3,7 @@
 Function: btc_fnc_mil_check_cap
 
 Description:
-    Fill me when you edit me !
+    Capture city around with a time cooler.
 
 Parameters:
 
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_check_cap;
+        [] call btc_fnc_mil_check_cap;
     (end)
 
 Author:

@@ -3,16 +3,16 @@
 Function: btc_fnc_mil_set_skill
 
 Description:
-    Fill me when you edit me !
+    Set skills to a unit.
 
 Parameters:
-    _unit - [Object]
+    _unit - Unit to set skill. [Object]
 
 Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_set_skill;
+        [cursorObject] call btc_fnc_mil_set_skill;
     (end)
 
 Author:

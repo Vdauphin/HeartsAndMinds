@@ -3,18 +3,28 @@
 Function: btc_fnc_mil_class
 
 Description:
-    Fill me when you edit me !
+    Find class name from a specific faction.
 
 Parameters:
-    _factions - [Array]
-    _en_AA - [Boolean]
-    _en_tank - [Boolean]
+    _factions - Faction names. [Array]
+    _en_AA - Allow Anti Air enemies. [Boolean]
+    _en_tank - Allow tank vehicles. [Boolean]
 
 Returns:
+    _array - Array of:
+        _enemy_side - Enemy side. [side]
+        _type_units - All units class name. [Array]
+        _type_divers - All divers class name. [Array]
+        _type_crewmen - Crew class name. [String]
+        _type_boats - All boats class name. [Array]
+        _type_motorized - All vehicles class name. [Array]
+        _type_motorized_armed - All vehicles with turret class name. [Array]
+        _type_mg - All machines gun class name. [Array]
+        _type_gl - All grenades launcher class name. [Array]
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_class;
+        [["IND_F"]] call btc_fnc_mil_class;
     (end)
 
 Author:

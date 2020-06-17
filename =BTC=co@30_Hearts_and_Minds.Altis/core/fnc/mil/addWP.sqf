@@ -3,20 +3,20 @@
 Function: btc_fnc_mil_addWP
 
 Description:
-    Fill me when you edit me !
+    Add waypoint to allready created units.
 
 Parameters:
-    _group - [Group]
-    _city - [Object]
-    _area - [Number]
-    _wp - [Number]
-    _wp_ratios - [Array]
+    _group - Group of enemies. [Group]
+    _city - City to patrol around. [Object]
+    _area - Area to patrol around. [Number]
+    _wp - Type of wp: in house, patrol or sentry. [Number]
+    _wp_ratios - Ratios between each type of waypoints. [Array]
 
 Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_addWP;
+        [group cursorObject, btc_city_all select 0, 200] call btc_fnc_mil_addWP;
     (end)
 
 Author:

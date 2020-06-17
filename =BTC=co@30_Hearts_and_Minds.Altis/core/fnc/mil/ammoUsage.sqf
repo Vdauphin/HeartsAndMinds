@@ -3,17 +3,18 @@
 Function: btc_fnc_mil_ammoUsage
 
 Description:
-    Fill me when you edit me !
+    Check if a type of unit use a certain type of ammo base on item type and aiAmmoUsageFlags (Tells the AI how to use this Ammo.).
 
 Parameters:
-    _typeof_unit - [String]
-    _itemType_ammo_usageAllowed - [Array]
+    _typeof_unit - Type of unit. [String]
+    _itemType_ammo_usageAllowed - Array of item type and aiAmmoUsageFlags. [Array]
 
 Returns:
+    _bool - True if unit use this type of weapon or ammo. [Boolean]
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_ammoUsage;
+        [typeOf player, ["AssaultRifle", "", [false, "Rifle_Long_Base_F"]]] call btc_fnc_mil_ammoUsage;
     (end)
 
 Author:

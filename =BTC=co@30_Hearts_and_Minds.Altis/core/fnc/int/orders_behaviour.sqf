@@ -47,6 +47,7 @@ switch (_order) do {
     };
     case 2 : {
         doStop _unit;
+        if (vehicle _unit != _unit) exitWith {};
         [_unit, "", 2] call ace_common_fnc_doAnimation;
         _unit setUnitPos "DOWN";
     };

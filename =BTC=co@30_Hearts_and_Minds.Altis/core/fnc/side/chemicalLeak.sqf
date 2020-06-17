@@ -150,6 +150,7 @@ for "_i" from 1 to (5 + round random 5) do {
         btc_chem_contaminated pushBack _hazmat;
         publicVariable "btc_chem_contaminated";
     };
+    btc_log_obj_created deleteAt (btc_log_obj_created find _hazmat);
 };
 
 private _bring_taskID = _taskID + "br";

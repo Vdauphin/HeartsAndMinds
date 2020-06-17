@@ -15,6 +15,7 @@ Returns:
     _fuelSource - Fuel cargo and hook. [Array]
     _pylons - Array of pylon. [Array]
     _isContaminated - Is chemically contaminated. [Boolean]
+    _supplyVehicle - Is supply vehicle and current supply count. [Boolean]
 
 Examples:
     (begin example)
@@ -39,5 +40,9 @@ private _fuelSource = [
 ];
 private _pylons = getPylonMagazines _vehicle;
 private _isContaminated = _vehicle in btc_chem_contaminated;
+private _supplyVehicle = [
+    [_vehicle] call ace_rearm_fnc_isSource,
+    _vehicle getVariable ["ace_rearm_currentSupply", -1]
+];
 
-[_customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated]
+[_customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle]

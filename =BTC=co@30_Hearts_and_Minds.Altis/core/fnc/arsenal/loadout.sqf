@@ -80,7 +80,7 @@ private _cargo_uniform = [["acc_flashlight", 1], ["ACE_EarPlugs", 1], ["ACE_Cabl
 
 //Tweak uniform medical item depends on medical parameters
 private _medical = [["ACE_fieldDressing", 3], ["ACE_tourniquet", 4], ["ACE_morphine", 3]];
-_medical pushBack (if (_advancedBandages) then {
+_medical pushBack (if (_advancedBandages > 0) then {
     ["ACE_packingBandage", 4]
 } else {
     ["ACE_fieldDressing", 4]
@@ -122,7 +122,7 @@ private _launcher = [_launcher, _launcher_AA] select (_type isEqualTo 5);
 //Backpack content
 //Tweak backpack medical item depends on medical parameters
 private _backpackMedical = [["ACE_fieldDressing", 10], ["ACE_morphine", 12], ["ACE_bloodIV", 2], ["ACE_bloodIV_250", 2], ["ACE_bloodIV_500", 1]];
-_backpackMedical append (if (_advancedBandages) then {
+_backpackMedical append (if (_advancedBandages > 0) then {
     [["ACE_packingBandage", 15], ["ACE_elasticBandage", 10], ["ACE_quikclot", 10]]
 } else {
     [["ACE_fieldDressing", 10]]

@@ -37,4 +37,8 @@ if (getText (configFile >> "cfgVehicles" >> _objec_type >> "displayName") isEqua
 _obj setVectorUp _vector;
 _obj setPosASL _pos;
 
+if (getNumber(configFile >> "CfgVehicles" >> _objec_type >> "isUav") isEqualTo 1) then {
+    createVehicleCrew _obj;
+};
+
 [_obj] call btc_fnc_log_init;

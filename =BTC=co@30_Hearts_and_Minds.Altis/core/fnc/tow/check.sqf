@@ -43,6 +43,6 @@ if (btc_debug) then {
     btc_arrow_2 setPosASL AGLtoASL (_towed modelToWorldVisual _model_front);
 };
 
-private _can_tow = (_distance > 1.3) && (_distance < 5);
+private _can_tow = (_distance > 1.3) && (_distance < [5, 24] select (_tower isKindOf "Ship"));
 
 _can_tow
