@@ -63,7 +63,8 @@ private _fx = createVehicle ["test_EmptyObjectForSmoke", _pos, [], 0, "CAN_COLLI
 private _group = createGroup btc_player_side;
 _group setVariable ["no_cache", true];
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
-_crew createUnit [_pos, _group];
+private _crew_unit = _group createUnit [_crew, _pos, [], 25, "NONE"];
+_crew_unit setVariable ["btc_dont_delete", true];
 
 [_taskID, 13, getPos _city, _city getVariable "name"] call btc_fnc_task_create;
 private _find_taskID = _taskID + "mv";

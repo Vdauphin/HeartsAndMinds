@@ -54,6 +54,7 @@ private _group_officer = createGroup btc_enemy_side;
 _group_officer setVariable ["no_cache", true];
 private _officerType = selectRandom btc_type_units;
 private _officer = _group_officer createUnit [_officerType, _pos, [], 0, "CAN_COLLIDE"];
+_officer setVariable ["btc_dont_delete", true];
 [_group_officer] call btc_fnc_mil_unit_create;
 
 //// Data side mission
