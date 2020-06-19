@@ -54,11 +54,12 @@ wreckManagerMode = 0;
 corpseManagerMode = 0;
 
 disableChannels[] = {
-	{0, true, true}, //--- Global Chat
+	{0, false, false}, //--- Global Chat
 	{1, true, true}, //--- Side Chat
 	{2, true, true}, //--- Command Chat
 	{3, true, true}, //--- Group Chat
 	{4, true, true}, //--- Vehicle Chat
-	{5, true, true}, //--- Direct Chat
-	{6, true, true} //--- System Chat
+	{5, true, false}, //--- Direct Chat
+	{6, false, false} //--- System Chat
 };
+respawnButton = 0; // 0: disabled - 1: enabled. Default: 1
