@@ -127,7 +127,7 @@ profileNamespace setVariable [format ["btc_hm_%1_rep", _name], btc_global_reputa
 private _fobs = [];
 {
     if !(isNull ((btc_fobs select 2) select _forEachIndex)) then {
-        private _pos = getMarkerPos _x;
+        private _pos = getMarkerPos [_x, true];
         private _direction = getDir ((btc_fobs select 1) select _forEachIndex);
         _fobs pushBack [markerText _x, _pos, _direction];
     };

@@ -1302,6 +1302,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REFUELSOURCE">
                 <Original>Refuel fuel source</Original>
+                <Chinesesimp>为燃油卡车补给燃料</Chinesesimp>
             </Key>
         </Container>
         <Container name="Action(ACE): FOB">
