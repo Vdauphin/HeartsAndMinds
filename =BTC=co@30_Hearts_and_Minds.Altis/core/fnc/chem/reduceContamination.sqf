@@ -7,10 +7,10 @@ Description:
 
 Parameters:
     _unit - Unit to reduce contamination level. [Object]
-	_decreaseLevel - By how much the contamination level should decrease (Default: 0.1). [Number]
+    _decreaseLevel - By how much the contamination level should decrease (Default: 0.1). [Number]
 
 Returns:
-	_isDecontaminated - Is the target decontaminated. [Boolean]
+    _isDecontaminated - Is the target decontaminated. [Boolean]
 
 Examples:
     (begin example)
@@ -24,7 +24,7 @@ Author:
 
 params [
     ["_unit", player, [objNull]],
-	["_decreaseLevel", 0.1, [0]]
+    ["_decreaseLevel", 0.1, [0]]
 ];
 
 // Reduce chem level instead of instant decontamine.
