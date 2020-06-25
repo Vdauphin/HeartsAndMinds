@@ -28,4 +28,4 @@ private _handle = [{
             ["btc_chem_applydamage", [_this], _this] call CBA_fnc_targetEvent;
         }, _x, random 2] call CBA_fnc_WaitAndExecute;
     } forEach _contaminated;
-}, 3, [btc_chem_contaminated] call CBA_fnc_addPerFrameHandler;
+}, 3, [btc_chem_contaminated]] call CBA_fnc_addPerFrameHandler;
