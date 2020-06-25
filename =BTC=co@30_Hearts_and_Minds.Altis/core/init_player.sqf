@@ -2,8 +2,8 @@
 btc_map_mapIllumination = ace_map_mapIllumination;
 if !(isNil "btc_custom_loc") then {
     {
-        _x params ["_pos", "_cityType", "_cityName", "_sizeX", "_sizeY"];
-        private _location = createLocation [_cityType, _pos, _sizeX, _sizeY];
+        _x params ["_pos", "_cityType", "_cityName", "_radius"];
+        private _location = createLocation [_cityType, _pos, _radius, _radius];
         _location setText _cityName;
     } forEach btc_custom_loc;
 };
