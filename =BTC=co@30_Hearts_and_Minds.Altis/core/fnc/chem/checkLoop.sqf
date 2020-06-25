@@ -94,7 +94,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         private _source = _x;
 
         // Get source position and chem level
-        private _pos = getPosWorld _source;
+        private _pos = getPos _source;
         private _chemlevel = _source getVariable ["btc_chem_level", 1.0];
 
         // Find all possible targets within range and loop through them
