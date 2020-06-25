@@ -28,11 +28,13 @@ params [
 
 if (_item in btc_chem_contaminated) then {
     if ((btc_chem_contaminated pushBackUnique _vehicle) > -1) then {
+        _vehicle setVariable ["btc_chem_level", ((_item getVariable "btc_chem_level") - btc_chem_spreadReduction) max 0, true];
         publicVariable "btc_chem_contaminated";
     };
 } else {
     if (_vehicle in btc_chem_contaminated) then {
         if ((btc_chem_contaminated pushBackUnique _item) > -1) then {
+            _item setVariable ["btc_chem_level", ((_vehicle getVariable "btc_chem_level") - btc_chem_spreadReduction) max 0, true];
             publicVariable "btc_chem_contaminated";
         };
     };
