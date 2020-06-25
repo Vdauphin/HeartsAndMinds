@@ -35,6 +35,7 @@ Author:
         _obj ctrlAnimateModel ["Threat_Level_Source", 0, true];
     };
 
-    private _level = selectMax (btc_chem_contaminated apply {[_x, _x getVariable ["btc_chem_level", 0], player] call  btc_fnc_chem_getSpreadLevel});
+    private _level = selectMax (btc_chem_contaminated apply {[_x, _x getVariable ["btc_chem_level", 0], player] call btc_fnc_chem_getSpreadLevel});
+    _level = (round (_level * 100)) / 100;
     _obj ctrlAnimateModel ["Threat_Level_Source", _level, true]; //Displaying a threat level (value between 0.0 and 1.0)
 }, 0.3, _this] call CBA_fnc_addPerFrameHandler;
