@@ -29,6 +29,7 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldN
 [] call btc_fnc_eh_server;
 [btc_ied_list] call btc_fnc_ied_fired_near;
 [] call btc_fnc_chem_checkLoop;
+[] call btc_fnc_chem_damageLoop;
 [] call btc_fnc_chem_handleShower;
 [] call btc_fnc_spect_checkLoop;
 if (btc_p_db_autoRestart > 0) then {
