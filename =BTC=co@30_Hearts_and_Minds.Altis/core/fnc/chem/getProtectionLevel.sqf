@@ -32,6 +32,17 @@ private _googles = goggles _unit;
 private _backpack = backpack _unit;
 private _uniform = toLower uniform _unit;
 
+if !(_uniform isEqualTo "") then {
+    _protection = _protection + 0.2;
+    if (
+        [
+            "cbrn"
+        ] findIf {_x in _uniform} > -1
+    ) then {
+        _protection = _protection + 0.2;
+    };
+};
+
 if (
     [
         "G_Respirator_base_F"
@@ -41,7 +52,6 @@ if (
 } else {
     if (
         [
-            "G_RegulatorMask_base_F",
             "G_AirPurifyingRespirator_01_base_F",
             "GP21_GasmaskPS",
             "GP5Filter_RaspiratorPS",
@@ -52,26 +62,18 @@ if (
             "MK502"
         ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
     ) then {
-        _protection = _protection + 0.3;
-    };
-};
-if (
-    [
-        "B_SCBA_01_base_F",
-        "B_CombinationUnitRespirator_01_Base_F"
-    ] findIf {_backpack isKindOf _x} > -1
-) then {
-    _protection = _protection + 0.1;
-};
-if !(_uniform isEqualTo "") then {
-    _protection = _protection + 0.5;
-    if (
+        _protection = _protection + 0.4;
+    } else if (
+        ([
+            "G_RegulatorMask_base_F"
+        ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1) && {
         [
-            "cbrn"
-        ] findIf {_x in _uniform} > -1
-    ) then {
-        _protection = _protection + 0.1;
+            "B_SCBA_01_base_F",
+            "B_CombinationUnitRespirator_01_Base_F"
+        ] findIf {_backpack isKindOf _x} > -1}
+    ) {
+        _protection = _protection + 0.6;
     };
 };
 
-_protection
+_protection min 1.0
