@@ -64,17 +64,20 @@ if (
         ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
     ) then {
         _maskLevel = 2;
-    } else if (
-        ([
-            "G_RegulatorMask_base_F"
-        ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1) && {
-        [
-            "B_SCBA_01_base_F",
-            "B_CombinationUnitRespirator_01_Base_F"
-        ] findIf {_backpack isKindOf _x} > -1}
-    ) {
-        _maskLevel = 3;
+    } else {
+        if (
+            ([
+                "G_RegulatorMask_base_F"
+             ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1) && {
+             [
+                "B_SCBA_01_base_F",
+                "B_CombinationUnitRespirator_01_Base_F"
+            ] findIf {_backpack isKindOf _x} > -1 }
+        ) then {
+            _maskLevel = 3;
+        };
     };
 };
 
-(btc_chem_protectionMatrix select _uniformLevel) select _maskLevel
+private _protectionLevel = btc_chem_protectionMatrix select _uniformLevel select _maskLevel;
+_protectionLevel
