@@ -633,16 +633,13 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_range = 3;
-btc_chem_maxrange = 20;
-btc_chem_maxrange_value = 0.001;
-btc_chem_spreadReduction = 0.2;
-
-btc_chem_protectionMatrix = [[0.0, 0.3, 0.5, 0.6], [0.3, 0.6, 0.8, 0.9], [0.4, 0.7, 0.9, 1.0]];
-
+btc_chem_maxrange = 25;
+btc_chem_spreadReduction = 0.25;
+btc_chem_protectionMatrix = [[0.0, 0.1, 0.2, 0.35], [0.1, 0.35, 0.5, 0.75], [0.1, 0.35, 0.9, 1.0]];
 
 // Value is automaticly calculated based on btc_chem_maxrange
-btc_chem_expcoefficent = (ln (btc_chem_maxrange_value)) / btc_chem_maxrange^2;
+btc_chem_levelDependentCoefficents = [[-35 / btc_chem_maxrange^4, 84 / btc_chem_maxrange^5, -70 / btc_chem_maxrange^6, 20 / btc_chem_maxrange^7, 1]];
+btc_chem_IndependentCoefficents = [[3 / (20 * btc_chem_maxrange^3), -39 / (100 * btc_chem_maxrange^4), 17 / (50 * btc_chem_maxrange^5), -1 / (10 * btc_chem_maxrange^6), 0]];
 
 //Spect
 btc_spect_range = 1000;

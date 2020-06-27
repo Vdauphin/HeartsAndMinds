@@ -36,7 +36,13 @@ private _distance = _source distance _target;
 if (_distance >= btc_chem_maxrange) exitWith { 0 };
 
 // Calculate spread value at position
-private _spreadLevel = _chemlevel * exp (btc_chem_expcoefficent * _distance^2);
+private _distanceValues = matrixTranspose ([[4, 5, 6, 7, 0] apply {_distance ^ _x}]);
+
+private _levelDependentValues = (btc_chem_levelDependentCoefficents matrixMultiply _distanceValues) select 0 select 0;
+
+private _independentValues = (btc_chem_IndependentCoefficents matrixMultiply _distanceValues) select 0 select 0;
+
+private _spreadLevel = _levelDependentValues * _chemlevel + _independentValues;
 
 // Reduce the spread value by the given reduction
 _spreadLevel = (_spreadLevel - btc_chem_spreadReduction) max 0;
