@@ -638,6 +638,8 @@ btc_chem_maxrange = 20;
 btc_chem_maxrange_value = 0.001;
 btc_chem_spreadReduction = 0.2;
 
+btc_chem_protectionMatrix = [[0.0, 0.3, 0.5, 0.6], [0.3, 0.6, 0.8, 0.9], [0.4, 0.7, 0.9, 1.0]];
+
 
 // Value is automaticly calculated based on btc_chem_maxrange
 btc_chem_expcoefficent = (ln (btc_chem_maxrange_value)) / btc_chem_maxrange^2;

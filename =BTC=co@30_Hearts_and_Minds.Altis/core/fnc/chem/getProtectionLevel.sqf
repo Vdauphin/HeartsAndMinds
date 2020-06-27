@@ -26,20 +26,21 @@ params [
     ["_cfgGlasses", configNull, [configNull]]
 ];
 
-private _protection = 0;
+private _uniformLevel = 0;
+private _maskLevel = 0;
 
 private _googles = goggles _unit;
 private _backpack = backpack _unit;
 private _uniform = toLower uniform _unit;
 
 if !(_uniform isEqualTo "") then {
-    _protection = _protection + 0.2;
+    _uniformLevel =  1;  // Differences come from the masks!
     if (
         [
             "cbrn"
         ] findIf {_x in _uniform} > -1
     ) then {
-        _protection = _protection + 0.2;
+        _uniformLevel = 2;
     };
 };
 
@@ -48,7 +49,7 @@ if (
         "G_Respirator_base_F"
     ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
 ) then {
-    _protection = _protection + 0.2; // Less protection than respirator
+    _maskLevel = 1;
 } else {
     if (
         [
@@ -62,7 +63,7 @@ if (
             "MK502"
         ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
     ) then {
-        _protection = _protection + 0.4;
+        _maskLevel = 2;
     } else if (
         ([
             "G_RegulatorMask_base_F"
@@ -72,8 +73,8 @@ if (
             "B_CombinationUnitRespirator_01_Base_F"
         ] findIf {_backpack isKindOf _x} > -1}
     ) {
-        _protection = _protection + 0.6;
+        _maskLevel = 3;
     };
 };
 
-_protection min 1.0
+(btc_chem_protectionMatrix select _uniformLevel) select _maskLevel
