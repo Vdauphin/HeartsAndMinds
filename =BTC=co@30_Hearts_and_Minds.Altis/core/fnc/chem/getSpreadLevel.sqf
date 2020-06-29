@@ -32,8 +32,8 @@ params [
 // Calculate the real (3D) distance between source and target
 private _distance = _source distance _target;
 
-// If distance is greater then the max range, the spread is zero
-if (_distance >= btc_chem_maxrange) exitWith { 0 };
+// If distance is greater then the max range or chemlevel below spread reduction, the spread is zero
+if (_distance >= btc_chem_maxrange || _chemlevel <= btc_chem_spreadReduction) exitWith { 0 };
 
 // Calculate spread value at position
 private _distanceValues = matrixTranspose ([[4, 5, 6, 7, 0] apply {_distance ^ _x}]);

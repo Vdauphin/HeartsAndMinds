@@ -3,7 +3,7 @@
 Function: btc_fnc_chem_reduceContamination
 
 Description:
-    Apply chemical damage constantly.
+    Reduce the contamination level of an object during decontamination.
 
 Parameters:
     _unit - Unit to reduce contamination level. [Object]

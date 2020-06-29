@@ -19,6 +19,8 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
+if !(btc_p_chem) exitWith {};
+
 private _handle = [{
     params ["_args", "_handle"];
     private _contaminated = _args select 0;

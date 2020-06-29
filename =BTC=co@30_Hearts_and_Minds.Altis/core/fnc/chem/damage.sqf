@@ -33,8 +33,6 @@ private _contaminationLevel = _unit getVariable ["btc_chem_level", 0];
 
 if (_protection >= _contaminationLevel) exitWith {_this};
 
-if ((random 1 > 0)) then {  // TODO: Tweak the threshold
-    [_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "stab"] call ace_medical_fnc_addDamageToUnit; // ropeburn
-};
+[_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "stab"] call ace_medical_fnc_addDamageToUnit; // ropeburn
 
 _this

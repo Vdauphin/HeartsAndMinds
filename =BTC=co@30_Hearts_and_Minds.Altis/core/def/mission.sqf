@@ -633,7 +633,7 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_maxrange = 25;
+btc_chem_maxRange = 25;
 btc_chem_spreadReduction = 0.25;
 btc_chem_protectionMatrix = [[0.0, 0.1, 0.2, 0.35], [0.1, 0.35, 0.5, 0.75], [0.1, 0.35, 0.9, 1.0]];
 

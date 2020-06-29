@@ -31,7 +31,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     
     // Check if any legacy objects were added and assign a chem level to those
     {
-        if(_x getVariable ["btc_chem_level", -1] == -1) then {
+        if (_x getVariable ["btc_chem_level", -1] == -1) then {
             if (btc_debug || btc_debug_log) then {
                 [format ["Legacy chem object: %1", _x], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
             };
@@ -64,12 +64,12 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
 
     // Loop through all objects that have been identified to be decontaminated
     {
-        if([_x] call btc_fnc_chem_reduceContamination) then {
+        if ([_x] call btc_fnc_chem_reduceContamination) then {
             _contaminated deleteAt (_contaminated find _x);
         };
 
         {
-            if([_x] call btc_fnc_chem_reduceContamination) then {
+            if ([_x] call btc_fnc_chem_reduceContamination) then {
                 _contaminated deleteAt (_contaminated find _x);
                 {
                     _x setVariable ["btc_chem_level", 0, true];  // On the second layer, objects are either _contamined or not.
@@ -79,11 +79,8 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         } forEach ((_x getVariable ["ace_cargo_loaded", []]) + crew _x);
     } forEach _objtToDecontaminate;
 
-    // Send new list of contaminated objects to all players
-    publicVariable "btc_chem_contaminated";
-
     // If no contaminated units remain, no propagation can happen so exit now
-    if (_contaminated isEqualTo []) exitWith {};
+    if (_contaminated isEqualTo []) exitWith { publicVariable "btc_chem_contaminated"; };
 
     // Array to store new contaminated units
     private _unitContaminate = [];
@@ -104,9 +101,9 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
             _x setVariable ["btc_chem_level", _spreadLevel max _targetChemlevel, true];
 
             if (!(_x in _contaminated)) then {
-                _unitContaminate append [_x];
+                _unitContaminate pushBack _x;
             }
-        } forEach (_units inAreaArray [_pos, btc_chem_maxrange, btc_chem_maxrange, 0, false, btc_chem_maxrange]);
+        } forEach (_units inAreaArray [_pos, btc_chem_maxRange, btc_chem_maxRange, 0, false, btc_chem_maxRange]);
     } forEach _contaminated;
 
     // If no units get contaminated stop here
