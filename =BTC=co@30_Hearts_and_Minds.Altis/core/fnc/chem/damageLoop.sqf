@@ -36,7 +36,7 @@ private _handle = [{
             }, [_x, _bodyParts, _cfgGlasses], _aiCounter * _periode] call CBA_fnc_waitAndExecute;
             _aiCounter = _aiCounter + 1;
         } else {
-            ["btc_chem_applydamage", [_x], _x] call CBA_fnc_targetEvent;
+            ["btc_chem_applyDamage", [_x], _x] call CBA_fnc_targetEvent;
         };
 
         if (btc_debug || btc_debug_log) then {
