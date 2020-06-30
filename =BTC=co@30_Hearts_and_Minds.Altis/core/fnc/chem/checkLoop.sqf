@@ -109,13 +109,13 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     // If no units get contaminated stop here
     if (_unitContaminate isEqualTo []) exitWith {};
 
-    // Add the new contaminated units to the global list
-    {
-        _contaminated pushBackUnique _x;
-        if (btc_debug || btc_debug_log) then {
-            [format ["Start: %1", _x], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
-        };
-    } forEach _unitContaminate;
+    // Append the contaminated units to the global list
+    _contaminated append _unitContaminate;
+
+    // If debug is enabled log the new contaminated units
+    if (btc_debug || btc_debug_log) then {
+        [format ["Start: %1", _unitContaminate], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+    };
 
     // Send new list of contaminated objects to all players
     publicVariable "btc_chem_contaminated";
