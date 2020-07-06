@@ -637,9 +637,9 @@ btc_chem_maxRange = 25;
 btc_chem_spreadReduction = 0.25;
 btc_chem_protectionMatrix = [[0.0, 0.1, 0.2, 0.35], [0.1, 0.35, 0.5, 0.75], [0.1, 0.35, 0.9, 1.0]];
 
-// Value is automaticly calculated based on btc_chem_maxrange
-btc_chem_levelDependentCoefficents = [[-35 / btc_chem_maxrange^4, 84 / btc_chem_maxrange^5, -70 / btc_chem_maxrange^6, 20 / btc_chem_maxrange^7, 1]];
-btc_chem_IndependentCoefficents = [[3 / (20 * btc_chem_maxrange^3), -39 / (100 * btc_chem_maxrange^4), 17 / (50 * btc_chem_maxrange^5), -1 / (10 * btc_chem_maxrange^6), 0]];
+// Value is automaticly calculated based on btc_chem_maxRange
+btc_chem_levelDependentCoefficents = [[-35 / btc_chem_maxRange^4, 84 / btc_chem_maxRange^5, -70 / btc_chem_maxRange^6, 20 / btc_chem_maxRange^7, 1]];
+btc_chem_IndependentCoefficents = [[3 / (20 * btc_chem_maxRange^3), -39 / (100 * btc_chem_maxRange^4), 17 / (50 * btc_chem_maxRange^5), -1 / (10 * btc_chem_maxRange^6), 0]];
 
 //Spect
 btc_spect_range = 1000;

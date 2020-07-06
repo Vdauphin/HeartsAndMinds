@@ -26,7 +26,9 @@ private _handle = [{
     params ["_args", "_handle"];
     _args params ["_contaminated", "_bodyParts", "_cfgGlasses"];
 
-    private _period = 3 / ({local _x} count _contaminated);
+    if (_contaminated isEqualTo []) exitWith {};
+
+    private _periode = 3 / ({local _x} count _contaminated);
     private _aiCounter = 0;
 
     {
