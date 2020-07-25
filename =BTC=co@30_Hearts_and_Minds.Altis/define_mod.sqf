@@ -13,7 +13,7 @@ btc_custom_loc = [
 [[10630,9543,0],"NameVillage","Carrière Sud",300,300,true],
 [[15060,14090,0],"NameCity","Quartier Sud",400,400,true],
 [[14399,14299,0],"NameCity","Quartier Ouest",400,400,true],
-[[16882,15594,0],"Airport","Aéroport National Mokket",500,500,true],
+[[15431,16705,0],"Airport","Aéroport National Mokket",500,500,true],
 [[8033,8200,0],"NameVillage","Prirechny",300,300,true],
 [[17015,14887,0],"NameVillage","Nautsi",300,300,true],
 [[13800,11968,0],"NameVillage","Verkhnetoulomski",300,300,true],
