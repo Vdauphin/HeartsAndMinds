@@ -106,7 +106,7 @@ if !(_data_units isEqualTo []) then {
     private _max_number_group = (switch _type do {
         case "Hill" : {1};
         case "NameLocal" : {2};
-        case "NameVillage" : {3};
+        case "NameVillage" : {6};
         case "NameCity" : {7};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
@@ -135,8 +135,13 @@ if !(_data_units isEqualTo []) then {
                 _static setPos _posStatic;
             };
         };
+        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
+        for "_i" from 1 to (1 + round random 2) do {
+        [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], 2] call CBA_fnc_waitAndExecute;
+        };
     };
-
+    
+    
     //Spawn civilians
     if (_type != "Hill") then {
         private _max_number_group = (switch _type do {

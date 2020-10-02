@@ -57,7 +57,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_CTYPE"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         texts[]={"0 - EricJ: Afghan Civilians (Side: CIV)","1 - Bohemia Interactive: Civils (Side: CIV)","2 - Bohemia Interactive: Autre (Side: CIV)","3 -CFP Drew: Civilians (Afghanistan) (Side: CIV)","4 -CFP Drew: Civilians (African Christian) (Side: CIV)","5 -CFP Drew: Civilians (African Islamic) (Side: CIV)","6 -CFP Drew: Civilians (Asian) (Side: CIV)","7 -CFP Drew: Civilians (Middle Eastern) (Side: CIV)","8 -CUP_Units Community Upgrade Project: Civilians (Russian) (Side: CIV)","9 -CUP_Vehicles Community Upgrade Project: Civilians (Chernarus) (Side: CIV)","10 -CUP_Vehicles Community Upgrade Project: Civilians (Sahrani) (Side: CIV)","11 -CUP_Vehicles Community Upgrade Project: Civilians (Takistan) (Side: CIV)","12 -gm Global Mobilization: East Germany (Side: CIV)","13 -gm Global Mobilization: West Germany (Side: CIV)","14 -LIB Reyhard & Joarius: 40s Civilians (Side: CIV)","15 -LOP_LeightsOPFOR Project OPFOR: Civilians (African) (Side: CIV)","16 -LOP_LeightsOPFOR Project OPFOR: Civilians (Eastern European) (Side: CIV)","17 -LOP_LeightsOPFOR Project OPFOR: Civilians (Middle Eastern) (Side: CIV)","18 -OPTRE Article 2 Studios: IDAP (Side: CIV)","19 -OPTRE Bohemia Interactive: Civilians (UEG) (Side: CIV)","20 -RDS_CIV_PACK RDS (BIS A2 Port): Russians (Side: CIV)","21 -UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Civilians (Side: CIV)","22 -UK3CB_Factions www.3commandobrigade.com: 3CB Takistan Civilians (Side: CIV)","23 -UNSUNG Bohemia Interactive: Vietnamese (UNSUNG) (Side: CIV)"};
-        default = 1;
+        default = 15;
     };
     class btc_p_civ_veh { // Civil vehicle type:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_CTYPEVEH"]);
@@ -75,7 +75,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB"]);
         values[]={0,10,20,30,40,45,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","45%","50%","60%","70%","80%","90%","100%"};
-        default = 30;
+        default = 0;
     };
     class btc_p_mil_group_ratio { // Enemy density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
@@ -111,7 +111,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_PATROL_MAX"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,17};
         texts[]={"1","2","3","4","5","6","7","8","9","10","17"};
-        default = 17;
+        default = 20;
     };
     class btc_p_civ_max_veh { // Maximum number of civilian patrol:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIV_MAX_VEH"]);
@@ -159,7 +159,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_HIDE_NUMBERS"]);
         values[]={99,1,2,3,4,5};
         texts[]={$STR_3DEN_ATTRIBUTES_OBJECTTEXTURE_RANDOM_TEXT,"1","2","3","4","5"}; //texts[]={"Random","1","2","3","4","5"};
-        default = 5;
+        default = 7;
     };
     class btc_p_cache_info_def { // Info cache distance:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DISTANCE"]);
@@ -273,7 +273,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SEA"]);
         values[] = {0,1};
         texts[] = {$STR_DISABLED,$STR_ENABLED};
-        default = 1;
+        default = 0;
     };
     class btc_p_chem { // Chemical warfare
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM"]);
@@ -339,7 +339,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_SPAWNRAD"]);
         values[]={0,1,2,3,4,5,6,7,8};
         texts[]={"0 m","100 m","200 m",$STR_BTC_HAM_PARAM_OTHER_SPAWNRAD_DEF,"400 m","500 m (Takistan)","600 m","700 m","800 m"}; // texts[]={"0 m","100 m","200 m","300 m","400 m","500 m (Takistan)","600 m","700 m","800 m"};
-        default = 4;
+        default = 5;
     };
     class btc_p_trigger { // Disable city activation when a plane or helicopter (>190Km/h) is flying above:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_DISABLESPAWN"]);

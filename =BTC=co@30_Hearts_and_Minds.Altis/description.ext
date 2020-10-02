@@ -2,7 +2,7 @@
 loadScreen = "core\img\sof.jpg";
 author = "[SoF]John-117 / [SoF]Canprod / VDauphin / Tony4298";
 onLoadName = Spirit Of Fire - Projet OTAN;
-onLoadMission = La Finlande a fait appel à l'OTAN suite à son incapacité à se défendre face à l'incursion de forces russes revendiquant le territoire proche de la frontière, aidez ce pays à repousser l'ennemi. ;
+onLoadMission = L'armée russe vient en aide aux milices insurgées en Afrique noire, aussi bien militairement qu'en fournissant du matériel, vous devez trouver où ont été entreposées les armes et les détruire tout en reprenant le contrôle de la région. ;
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"

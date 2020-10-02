@@ -175,6 +175,20 @@ private _array_obj = [];
 });
 profileNamespace setVariable [format ["btc_hm_%1_objs", _name], _array_obj];
 
+//Player Tags
+private _tags = btc_tags select {alive (_x select 0)};
+private _tags_properties = _tags apply {
+    private _tag = _x select 0;
+    [
+        getPosASL _tag,
+        [vectorDir _tag, vectorUp _tag],
+        _x select 1,
+        typeOf (_x select 2),
+        typeOf _tag
+    ]
+};
+profileNamespace setVariable [format ["btc_hm_%1_tags", _name], _tags_properties];
+
 //Player Markers
 private _player_markers = allMapMarkers select {(_x select [0, 15]) isEqualTo "_USER_DEFINED #"};
 private _markers_properties = _player_markers apply {

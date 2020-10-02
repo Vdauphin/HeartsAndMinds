@@ -78,7 +78,7 @@
                 <Chinesesimp>无头客户端与数据库</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_HEADLESS_TEXT">
-                <Original>&lt;img image='\a3\ui_f\data\map\vehicleicons\iconvirtual_ca.paa' width='20' height='20'/&gt; This mission automatically uses one Headless client when available.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/&gt; This mission has a database system. Enemy units, towns, hideouts, cache, objects created or static weapons assembled by players or Zeus, vehicles, players markers (not lines) on global channel are saved. All admin can save mission progress at any time with his self interaction key.</Original>
+                 <Original>&lt;img image='\a3\ui_f\data\map\vehicleicons\iconvirtual_ca.paa' width='20' height='20'/&gt; This mission automatically uses one Headless client when available.&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\data_f_warlords\Data\preview_cp_transfer.jpg' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/&gt; This mission has a database system. Enemy units, towns, hideouts, cache, objects created or static weapons assembled by players or Zeus, vehicles, tag, players markers (not lines) on global channel are saved. All admin can save mission progress at any time with his self interaction key.&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\data_f_mark\Images\mark_popupImage_01_ca.paa' width='355' height='200' /&gt;</Original>
                 <Spanish>&lt;img image='\a3\ui_f\data\map\vehicleicons\iconvirtual_ca.paa' width='20' height='20'/&gt; Esta mision usa automaticamente un Headless client si está disponible .&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/&gt; Esta misión tiene un sistema de base de datos. Se guardan unidades enemigas, ciudades, escondites, caché, objetos creados por jugadores o Zeus, vehículos, marcadores de jugadores (no líneas) en el canal global. Todos los administradores pueden guardar el progreso de la misión en cualquier momento con su clave de auto interacción.</Spanish>
                 <German>&lt;img image='\a3\ui_f\data\map\vehicleicons\iconvirtual_ca.paa' width='20' height='20'/&gt; Sollte ein Headless Client vorhanden sein, so wird dieser durch die Mission automatisch genutzt.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/&gt; Diese Mission verfügt über ein eingenes Datenbanksystem, in welcher folgende Dinge gespeichert werden: feindliche Einheiten, Städte, Verstecke, feindliche Waffenlager, Fahrzeuge, vom Spieler oder vom Zeus erstelle Objecte und Marker (keine Linien) vom Spieler im Globalen-Channel. Jeder Admin kann zu jeder Zeit den Missionsfortschritt über das Eigen-Interaktionsmenü speichern.</German>
                 <Portuguese>&lt;img image='\a3\ui_f\data\map\vehicleicons\iconvirtual_ca.paa' width='20' height='20'/&gt; Esta missão usa automaticamente um cliente Headless quando disponível.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/&gt; Esta missão tem um sistema de banco de dados. Unidades inimigas, cidades, esconderijos, cache, objetos criados por jogadores ou Zeus, veículos, marcação de jogadores (sem linhas) no canal global são salvos. O administrador pode salvar o progresso da missão a qualquer momento usando botão de interação.</Portuguese>
@@ -1411,6 +1411,11 @@
                 <German>&lt;t color='#ff1111'&gt;Arsenal (ACE)&lt;/t&gt;</German>
                 <Portuguese>&lt;t color='#ff1111'&gt;Arsenal (ACE)&lt;/t&gt;</Portuguese>
                 <Chinesesimp>&lt;t color='#ff1111'&gt;军火库(ACE)&lt;/t&gt;</Chinesesimp>
+            </Key>
+        </Container>
+        <Container name="Action(ACE): Tag">
+            <Key ID="STR_BTC_HAM_ACTION_REMOVETAG">
+                <Original>Remove tag</Original>
             </Key>
         </Container>
         <Container name="Action(ACE): Veh. Init">

@@ -1,28 +1,28 @@
 
 /* ----------------------------------------------------------------------------
 Function: btc_fnc_mil_create_hideout
-
 Description:
-    Fill me when you edit me !
-
+    Create hideout randomnly or with defined position.
 Parameters:
-    _pos - [Array]
-    _id_hideout - [Number]
-    _rinf_time - [Number]
-    _cap_time - [Number]
-    _id - [Number]
-    _markers_saved - [Array]
-
+    _pos - Poisition of the hideout. [Array]
+    _id_hideout - Id of the hideout. [Number]
+    _rinf_time - Not used. [Number]
+    _cap_time - Time for next capture of city around. [Number]
+    _id - Id of the city where the hideout is. [Number]
+    _markers_saved - Merkers find by player. [Array]
 Returns:
-
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_create_hideout;
+        [] call btc_fnc_mil_create_hideout;
     (end)
-
+    (begin example)
+        selectMin (btc_hideouts apply {
+            private _ho = _x;
+            selectMin ((btc_hideouts - [_ho]) apply {_x distance _ho})
+        })
+    (end)
 Author:
     Giallustio
-
 ---------------------------------------------------------------------------- */
 
 params [
@@ -37,13 +37,25 @@ params [
 private _city = objNull;
 if (_pos isEqualTo []) then {
     private _useful = btc_city_all select {(
-            !(isNull _x) &&
-            {!(_x getVariable ["active", false])} &&
-            {_x distance (getMarkerPos "YOUR_MARKER_AREA") > btc_hideout_safezone} &&
-            {!(_x getVariable ["has_ho", false])} &&
-            {_x getVariable ["type", ""] in ["NameLocal", "Hill", "NameVillage", "Airport"]}
-        )};
-    _city = selectRandom _useful;
+        !(isNull _x) &&
+        {!(_x getVariable ["active", false])} &&
+        {_x distance (getMarkerPos btc_respawn_marker) > btc_hideout_safezone} &&
+        {!(_x getVariable ["has_ho", false])} &&
+        {_x getVariable ["type", ""] in ["NameLocal", "Hill", "NameVillage", "Airport"]}
+    )};
+    private _inHoRange = btc_city_all select {
+        !(isNull _x) &&
+        {
+            private _city = _x;
+            (selectMin (btc_hideouts apply {_x distance _city})) < btc_hideout_minRange
+        }
+    };
+    private _usefulRange = _useful - _inHoRange;
+    if (_usefulRange isEqualTo []) then {
+        _city = selectRandom _useful;
+    } else {
+        _city = selectRandom _usefulRange;
+    };
 
     private _radius = ((_city getVariable ["RadiusX", 0]) + (_city getVariable ["RadiusY", 0]))/2;
     private _random_pos = [getPos _city, _radius] call btc_fnc_randomize_pos;
