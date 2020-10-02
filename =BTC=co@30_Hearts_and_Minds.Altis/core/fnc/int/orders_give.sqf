@@ -38,7 +38,7 @@ _units = _units select {!(group _x getVariable ["suicider", false]) && ((side _x
     } else {
         _wp_pos
     };
-    [_x, _order, _wp_pos_i] spawn btc_fnc_int_orders_behaviour;
+    [_x, _order, _wp_pos_i] remoteExec ["btc_fnc_int_orders_behaviour", _x];
 } forEach _units;
 
 true

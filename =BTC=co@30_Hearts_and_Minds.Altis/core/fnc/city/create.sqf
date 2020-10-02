@@ -15,7 +15,7 @@ Parameters:
     _id - ID of the city in the cfgworlds. [Number]
 
 Returns:
-    _city - City created [Onject]
+    _city - City created [Object]
 
 Examples:
     (begin example)

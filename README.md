@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.6">
-        <img src="https://img.shields.io/badge/Version-1.20.6-blue.svg?style=flat-square" alt="H&M Version">
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.7">
+        <img src="https://img.shields.io/badge/Version-1.20.7-blue.svg?style=flat-square" alt="H&M Version">
     </a>
     <a href="http://www.somsubhra.com/github-release-stats/?username=vdauphin&repository=HeartsAndMinds">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">
@@ -24,35 +24,35 @@ Online [wiki available](http://vdauphin.github.io/HeartsAndMinds/).
 - **Dedicated server support only**
 - Dynamic battlefield
     - Enemies and civilian spawn randomly
-    - Random patrol and traffic
+    - Random patrol and [traffic](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#traffic)
     - Dynamic caching system to save performance
     - Extend battlefield to sea (you are not safe on sea!)
-- Reputation system
+- [Reputation system](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#reputation)
     - Realistic IED/Suicide/Drone bomber system
     - Civilian interaction
-        - Orders
+        - [Orders/drop leaflets](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#civil-orders)
         - Request a lift
-        - Discussion (interpreter)
+        - Discussion ([interpreter](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#intel))
         - Fleeing
-    - More than 17 side mission
+    - More than 17 [side mission](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#side-mission)
 - Deep ACE3 support
     - Use mainly ACE interaction
     - Rearm system
     - ACEX Fortify
 - Logistic system
-    - Tow
-    - Lift
-    - Repair destroyed vehicles
-    - FOB/Rallypoints
+    - [Tow](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#towing-system)
+    - [Sling loading](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#sling-loading)
+    - Repair [destroyed vehicles](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#respawn)
+    - [FOB/Rallypoints](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#fobrallypoint)
 - Gameplay elements
-    - Intel about cache and hideout
-    - Chemical Warfare
-    - Spectrum devices
+    - [Intel](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#intel) about cache and hideout
+    - [Chemical Warfare](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#chemical-warfare)
+    - [Spectrum devices](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#spectrum-devices)
 - Under the hood
     - A lot of optional gameplay
-    - More than 284 enemies and 24 civilians factions available
-    - Full saving Database (even player markers)
-    - Easy map change
+    - More than 315 enemies and 27 civilians factions available
+    - Full saving Database ([even player markers](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#headless--database))
+    - Easy map change (See [here](http://vdauphin.github.io/HeartsAndMinds/Change-MAP-of-Hearts-and-Minds))
     - Auto Headless support
 - Something I forgot for sure
 

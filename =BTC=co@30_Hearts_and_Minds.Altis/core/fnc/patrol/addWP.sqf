@@ -36,13 +36,18 @@ private _vehicle = vehicle leader _group;
 if (_vehicle isKindOf "Air" || _vehicle isKindOf "LandVehicle") then {
     _vehicle setFuel 1;
 };
-_group setBehaviour "SAFE";
 
+private _behaviorMode = "SAFE";
+private _combatMode = "RED";
+if (side _group isEqualTo civilian) then {
+    _behaviorMode = "CARELESS";
+    _combatMode = "BLUE";
+};
 if (_vehicle isKindOf "Air") then {
-    [_group, _pos, -1, "MOVE", "UNCHANGED", "RED", "LIMITED", "STAG COLUMN", _waypointStatements, [0, 0, 0], 20] call CBA_fnc_addWaypoint;
+    [_group, _pos, -1, "MOVE", _behaviorMode, _combatMode, "LIMITED", "STAG COLUMN", _waypointStatements, [0, 0, 0], 20] call CBA_fnc_addWaypoint;
 
 } else {
-    [_group, _pos, -1, "MOVE", "UNCHANGED", "RED", "LIMITED", "STAG COLUMN", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
+    [_group, _pos, -1, "MOVE", _behaviorMode, _combatMode, "LIMITED", "STAG COLUMN", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
     for "_i" from 0 to (2 + (floor (random 3))) do {
         private _newPos = [_pos, 150] call CBA_fnc_randPos;
         [_group, _newPos, -1, "MOVE", "UNCHANGED", "RED", "UNCHANGED", "NO CHANGE", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;

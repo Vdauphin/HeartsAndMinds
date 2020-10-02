@@ -57,7 +57,7 @@ if ((random 1) > _ratio) then {
     [_group, _pos, -1, "SAD", nil, nil, nil, nil, nil, nil, 60] call CBA_fnc_addWaypoint;
 
     if (btc_debug_log) then {
-        [format ["MOT %1/%2 POS %3", _group, typeOf _veh, _pos], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["MOT %1 POS %2", _group, _pos], __FILE__, [false]] call btc_fnc_debug_message;
     };
 } else {
     //INF
