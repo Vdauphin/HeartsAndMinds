@@ -105,9 +105,9 @@ if !(_data_units isEqualTo []) then {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do {
         case "Hill" : {1};
-        case "NameLocal" : {2};
-        case "NameVillage" : {6};
-        case "NameCity" : {7};
+        case "NameLocal" : {4};
+        case "NameVillage" : {7};
+        case "NameCity" : {10};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
         case "NameMarine" : {3};

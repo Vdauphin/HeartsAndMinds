@@ -41,8 +41,8 @@ if (
     _veh_type in btc_etat_islamic ||
     _veh_type isKindOf "StaticWeapon"
 ) then {
-    _type_units = ["LOP_BH_Infantry_TL", "LOP_BH_Infantry_AR", "LOP_BH_Infantry_Rifleman_lite", "LOP_BH_Infantry_AT", "LOP_BH_Infantry_SL", "LOP_ISTS_OPF_Infantry_Rifleman_5", "LOP_ISTS_OPF_Infantry_AR", "LOP_ISTS_OPF_Infantry_SL", "LOP_ISTS_OPF_Infantry_Marksman", "LOP_ISTS_OPF_Infantry_Rifleman_3", "LOP_ISTS_OPF_Infantry_AT"];
-    _type_crewmen = "LOP_BH_Infantry_Rifleman_lite";
+    _type_units = ["rhs_vdv_aa", "rhs_vdv_at", "rhs_vdv_arifleman", "rhs_vdv_efreitor", "rhs_vdv_machinegunner", "rhs_vdv_grenadier", "rhs_vdv_sergeant", "rhs_vdv_LAT"];
+    _type_crewmen = "LOP_ISTS_OPF_Infantry_Rifleman_6";
 };
 
 private _needdiver = getText (configFile >> "CfgVehicles" >> _veh_type >> "simulation") isEqualTo "submarinex";

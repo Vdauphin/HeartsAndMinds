@@ -1,8 +1,8 @@
 
 loadScreen = "core\img\sof.jpg";
-author = "[SoF]John-117 / [SoF]Canprod / VDauphin / Tony4298";
+author = "[SoF]John-117 / [SoF]Canprod / VDauphin / [SoF]Tony4298";
 onLoadName = Spirit Of Fire - Projet OTAN;
-onLoadMission = L'armée russe vient en aide aux milices insurgées en Afrique noire, aussi bien militairement qu'en fournissant du matériel, vous devez trouver où ont été entreposées les armes et les détruire tout en reprenant le contrôle de la région. ;
+onLoadMission = Vous êtes déployé sur une île africaine pour effectuer de la contre-insurrection contre des milices ayant du soutien de l'armée russe, contribuez à libérer cette région. ;
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"

@@ -1,19 +1,10 @@
 btc_custom_loc = [
 
-[[15423,10379,0],"Airport","Hidio",400,400,true],
-[[2797,3346,0],"NameVillage","Faza",300,300,true],
-[[10241,6852,0],"NameVillage","Mambore",300,300,true],
-[[11801,8535,0],"NameCityCapital","Dodori",400,400,true],
-[[3252,2406,0],"NameCity","Turo",400,400,true],
-[[758,2735,0],"NameCity","Mbuyu",500,500,true],
-[[2707,15705,0],"NameCity","Mwingi",500,500,true],
-[[6726,13192,0],"Airport","Dol Dol",500,500,true],
-[[9579,12932,0],"NameCity","Bartabwa",300,300,true],
-[[10063,4125,0],"NameCityCapital","Abomsa",500,500,true],
-[[12837,6683,0],"NameCityCapital","Seto",600,600,true],
-[[13462,4022,0],"NameCity","Yangarakata",400,400,true],
-[[1566,12269,0],"NameVillage","Nzoro",300,300,true],
-[[7802,1617,0],"Airport","Serowe",400,400,true]
+[[14113,16531,0],"Airport","Camp Galileo",400,400,true],
+[[7937,8213,0],"NameLocal","Ruines de Chamberlain",300,300,true],
+[[3837,12591,0],"NameVillage","Zougou",300,300,true],
+[[19287,11521,0],"NameVillage","Check Point Alpha",500,500,true],
+[[1692,15378,0],"NameCity","Camp PointBreak",500,500,true]
 
 ];
 
