@@ -42,7 +42,16 @@ _vehProperties set [5, false];
 _vehicle setVariable ["data_respawn", [_type, _pos, _dir, _time, _vector] + _vehProperties];
 
 if ((isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled")) && !(typeOf _vehicle isEqualTo "RHS_UH1Y_d")) then {[_vehicle] call ace_fastroping_fnc_equipFRIES};
-_vehicle addMPEventHandler ["MPKilled", {if (isServer) then {[_this select 0] call btc_fnc_eh_veh_respawn};}];
+_vehicle addMPEventHandler ["MPKilled", {
+    params ["_unit"];
+    if (
+        isServer &&
+        {_unit getVariable ["btc_killed", true]} // https://feedback.bistudio.com/T149510
+    ) then {
+        _unit setVariable ["btc_killed", false];
+        [_unit] call btc_fnc_eh_veh_respawn;
+    };
+}];
 if (_p_chem) then {
     _vehicle addEventHandler ["GetIn", {
         [_this select 0, _this select 2] call btc_fnc_chem_propagate;

@@ -82,7 +82,7 @@ private _triggers = [];
     //// Create trigger \\\\
     private _trigger = createTrigger ["EmptyDetector", getPos _city];
     _trigger setVariable ["unit", _x];
-    _trigger setTriggerArea [50, 50, 0, false];
+    _trigger setTriggerArea [50, 50, 0, false, 10];
     _trigger setTriggerActivation [str btc_player_side, "PRESENT", false];
     _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;", _find_taskID, _back_taskID, _taskID], ""];
     _trigger attachTo [_x, [0, 0, 0]];

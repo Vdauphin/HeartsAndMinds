@@ -44,5 +44,5 @@ private _houses = [_pos, 50] call btc_fnc_getHouses;
 if (_houses isEqualTo []) then {
     [] call btc_fnc_cache_find_pos
 } else {
-    selectRandom (selectRandom _houses buildingPos -1)
+    ASLToATL AGLToASL selectRandom (selectRandom _houses buildingPos -1)
 }

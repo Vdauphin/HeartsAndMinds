@@ -32,7 +32,14 @@ if !(isServer) exitWith {
 
 btc_vehicles pushBackUnique _veh;
 _veh addMPEventHandler ["MPKilled", {
-    if (isServer) then {_this call btc_fnc_eh_veh_killed};
+    params ["_unit"];
+    if (
+        isServer &&
+        {_unit getVariable ["btc_killed", true]} // https://feedback.bistudio.com/T149510
+    ) then {
+        _unit setVariable ["btc_killed", false];
+        _this call btc_fnc_eh_veh_killed;
+    };
 }];
 if ((isNumber (configfile >> "CfgVehicles" >> typeOf _veh >> "ace_fastroping_enabled")) && !(typeOf _veh isEqualTo "RHS_UH1Y_d")) then {
     [_veh] call ace_fastroping_fnc_equipFRIES

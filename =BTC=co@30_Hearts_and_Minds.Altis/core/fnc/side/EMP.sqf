@@ -111,6 +111,8 @@ for "_i" from 0 to (1 + round random 2) do {
             }, [_fx], 120] call CBA_fnc_waitAndExecute;
             btc_spect_emp deleteAt (btc_spect_emp find _box);
             publicVariable "btc_spect_emp";
+        } else {
+            0
         };
     }, [_destroy_taskID]] call CBA_fnc_addBISEventHandler;
 };

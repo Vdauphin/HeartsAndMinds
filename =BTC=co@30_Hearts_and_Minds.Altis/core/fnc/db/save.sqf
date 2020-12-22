@@ -171,7 +171,8 @@ private _array_obj = [];
     };
 } forEach (btc_log_obj_created select {
     !(isObjectHidden _x) &&
-    (objectParent _x) isEqualTo objNull
+    isNull objectParent _x &&
+    isNull isVehicleCargo _x
 });
 profileNamespace setVariable [format ["btc_hm_%1_objs", _name], _array_obj];
 

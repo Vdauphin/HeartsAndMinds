@@ -2,8 +2,6 @@
 
 ## [![Alt text for your video](http://img.youtube.com/vi/FPnpk7J5nUg/0.jpg)](https://www.youtube.com/watch?v=FPnpk7J5nUg)
 
-## [![Alt text for your video](http://img.youtube.com/vi/P0R2D9MzN3A/0.jpg)](https://www.youtube.com/watch?v=P0R2D9MzN3A)
-
 ## [![Alt text for your video](http://img.youtube.com/vi/OEryfSE4wJ8/0.jpg)](https://www.youtube.com/watch?v=OEryfSE4wJ8&index=7&list=PLCO73-XpzlLQ3Y6qi0Zjoc8i6WHDBqVZs)
 
 ## [![Alt text for your video](http://img.youtube.com/vi/U4083w96Nxo/0.jpg)](https://www.youtube.com/watch?v=U4083w96Nxo)

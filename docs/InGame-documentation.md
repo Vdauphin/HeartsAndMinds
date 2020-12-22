@@ -29,7 +29,7 @@ You can analyze an object, vehicle or man with ED-1E drone to determine if it is
 ### Electromagnetic field:
 There are two types of electromagnetic field from UAV or electromagnetic pulse (EMP). UAV emit electromagnetic field from 390MHz to 500MHz due to device transmission. Electromagnetic pulse are used as weapon to create electronic failure to vehicles. The range of frequency is from 78MHz to 89MHz and is powerfull enough to turn off light, engine and avionic devices.
 ### Protection:
-Electromagnetic field from UAV are safe but EMP have a range of 500m where vehicles with engine turn ON will be affected. 
+Electromagnetic field from UAV are safe but EMP have a range of 500m where vehicles with engine turn ON will be affected.
 ### Detection:
 You can detect the origin of electromagnetic field with spectrum devices. The amplitude of the peak depend on the distance and angle between the emiter and the antenna. The maximum range is 1000m.
 
@@ -75,7 +75,7 @@ At the logistic point you can require new objects (like ammo, fortifications, su
 - Use ACE 3 Cargo system.
 
 ### Towing system:
-To tow a vehicle interact with it and select the option 'HOOK'.After that place the tow vehicle in front of it and select 'TOW' in the interaction menu.
+To tow a vehicle interact with it and select the option 'HOOK'. After that place the tow vehicle in front of it and select 'TOW' in the interaction menu.
 If the two vehicles are too far away or the vehicle can't tow that load (Car can't tow truck or tank), the option will be disabled.
 To unhook interact with one of the two vehicles and select the option 'UNHOOK'.
 
