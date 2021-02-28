@@ -110,8 +110,8 @@ if !(_data_units isEqualTo []) then {
         case "BorderCrossing" : {3};
         case "NameLocal" : {4};
         case "StrongpointArea" : {6};
-        case "NameVillage" : {7};
-        case "NameCity" : {10};
+        case "NameVillage" : {5};
+        case "NameCity" : {6};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
         case "NameMarine" : {0};
@@ -133,13 +133,13 @@ if !(_data_units isEqualTo []) then {
 
         if (_has_en) then {
             private _max_number_group = (switch _type do {
-                case "VegetationFir" : {3};
+                case "VegetationFir" : {2};
                 case "BorderCrossing" : {3};
-                case "NameLocal" : {4};
+                case "NameLocal" : {2};
                 case "StrongpointArea" : {6};
-                case "NameVillage" : {7};
-                case "NameCity" : {10};
-                case "NameCityCapital" : {10};
+                case "NameVillage" : {4};
+                case "NameCity" : {7};
+                case "NameCityCapital" : {7};
                 case "Airport" : {2};
                 default {0};
             });
@@ -174,7 +174,7 @@ if (btc_p_animals_group_ratio > 0) then {
             case "NameLocal" : {3};
             case "NameVillage" : {2};
             case "NameCity" : {1};
-            case "NameCityCapital" : {0};
+            case "NameCityCapital" : {3};
             case "Airport" : {0};
             case "NameMarine" : {0};
             default {0};

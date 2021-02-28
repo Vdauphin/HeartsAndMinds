@@ -27,7 +27,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_ASAVE"]);
         values[]={0,1};
         texts[]={$STR_DISABLED,$STR_ENABLED}; // texts[]={"Off","On"};
-        default = 0;
+        default = 1;
     };
     class btc_p_db_autoRestart { // Auto restart/shutdown server (Must define in server.cfg: serverCommandPassword = "btc_password")
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_ARESTART"]);
@@ -63,7 +63,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_RALLYTIMER"]);
         values[]={0,5,10,30,60};
         texts[]={$STR_DISABLED,"5 min","10 min","30 min","60 min"};
-        default = 30;
+        default = 0;
     };
     class btc_p_respawn_arsenal { // ACE Arsenal available on respawn after been killed:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_ENABLEARSENAL"]);
@@ -333,7 +333,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM"]);
         values[] = {0,1,2,3,4};
         texts[] = {$STR_DISABLED,1,2,3,4};
-        default = 0;
+        default = 3;
     };
     class btc_p_arsenal_title { // << Arsenal options >>
         title = $STR_BTC_HAM_PARAM_ARSENAL_TITLE;
