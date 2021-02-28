@@ -128,7 +128,7 @@ if (isServer) then {
 
     //Database
     btc_db_load = _p_db;
-    btc_db_serverCommandPassword = "ta47"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
+    btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
 
     //Hideout
     btc_hideouts = [];
@@ -577,7 +577,7 @@ btc_fnc_log_get_nottowable = {
 
     switch (true) do {
         //The tower is a tank so it can't tow: plane and helicopter
-        case (_tower isKindOf "Tank") : {["Plane"];};
+        case (_tower isKindOf "Tank") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Truck_F") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Truck") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Ship") : {[];};
@@ -680,7 +680,7 @@ btc_spect_updateOn = -1;
 btc_rep_bonus_cache = 100;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 15;
-btc_rep_bonus_hideout = 150;
+btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 0.25;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
