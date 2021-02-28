@@ -1,0 +1,60 @@
+
+loadScreen = "core\img\btc.paa";
+author = "Giallustio";
+onLoadName = $STR_BTC_HAM_DESCR_NAME;
+onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
+enabledebugconsole = 1;
+
+#include "core\fnc\common\dlg.hpp"
+#include "core\fnc\fob\dlg.hpp"
+#include "core\fnc\log\dlg.hpp"
+#include "core\fnc\debug\defines.hpp"
+
+class RscTitles {
+    class Default {
+        idd = -1;
+        fadein = 0;
+        fadeout = 0;
+        duration = 0;
+    };
+    #include "core\fnc\lift\rsc.hpp"
+    #include "core\fnc\debug\dlg.hpp"
+};
+
+#include "core\def\param.hpp"
+
+#include "core\fnc\mil\aiskill.hpp"
+
+#include "core\fnc\task\taskTypes.hpp"
+
+class CfgFunctions {
+    #include "core\fnc\eh\functions.hpp"
+    // add your own functions below
+};
+
+// CBA XEH
+class Extended_PreInit_EventHandlers {
+    #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+};
+
+class Extended_InitPost_EventHandlers {
+    class LandVehicle {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Air {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Ship {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+};
+
+respawn = "BASE";
+respawnDelay = 2;
+respawnDialog = 0;
+respawnOnStart = 0;
+respawnTemplates[] = {"MenuPosition"};
+
+// Disable BI wreck system (H&M handle it internally)
+wreckManagerMode = 0;
+corpseManagerMode = 0;
