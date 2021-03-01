@@ -3,22 +3,13 @@
 ## Headless & Database
 This mission automatically uses one Headless client when available.
 
-This mission has a database system. Enemy units, towns, hideouts, cache, objects created or static weapons assembled by players or Zeus, vehicles, players markers (not lines) on global channel are saved. All admin can save mission progress at any time with his self interaction key.
-
-
-## Wounds
-Use the interaction menu to treat your wounds. Keep in mind that all the actions will be available, even if you do not need them. It is always recommended examine first.
-
-
-## Deafness
-Use the earplugs to protect your ears to avoid combat deafness. You can put them on with your self interaction key.
-
+This mission has a database system. Enemy units, towns, hideouts, cache, objects created or static weapons assembled by players or Zeus, vehicles, vehicle in vehicle, tag, players markers on global channel are saved. All admin can save mission progress at any time with his self interaction key.
 
 ## Chemical Warfare
 ### Chemical agent:
 A chemical agent can be found in the battlefield at cache location for example. When an object is contaminated, the chemical agent propagates to people around (in a circle of 3m). Those people will be hurt constantly until they died or found a decontaminating shower (available at the logistic point) to clean up their body. When they are contaminated, they can propagate it to other people around (in a circle of 1.5m) or vehicle if they get inside. Keep in mind, dead body stay contaminated but body bag will isolate it. Also, a contaminated object loaded as cargo will contaminate the container or vehicle.
 ### Protection:
-Use CBRN gear (uniform, mask and breather backpack) to protect you from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect.
+Use CBRN gear (uniform, respirator mask and breather backpack) for full protection from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect. Simple mask and simple uniform can reduce from 65% to 80% the probability to take damage.
 ### Decontaminate:
 You can use a small shower to decontaminate units only. Use the big shower for objects, vehicles and objects loaded as cargo. To activate them, just stay under the shower.
 ### Detection:
@@ -36,7 +27,7 @@ You can detect the origin of electromagnetic field with spectrum devices. The am
 
 ## Vehicles
 ### Respawn:
-When a vehicle is destroyed it will not respawn in base, you need to tow or lift it back to base and repair it near the logistic point (Interact with the red box). Helicopter wrecks can only be lifted. The Chinook is the only exception, it will respawn after 30 seconds.
+When a vehicle is destroyed it will not respawn in base, you need to tow, use vehicle in vehicle or lift it back to base and repair it near the logistic point (Interact with the red box). Helicopter wrecks can only be lifted. The Chinook is the only exception, it will respawn after 30 seconds.
 ### Rearm:
 You can also rearm them by spawning the corresponding caliber at logistic point (Interact with the red box, select the vehicle type and caliber). Carry the ammo created and interact with the vehicle to rearm. This only works if rearming is setting on entire magazine or amount based on caliber (not for entire vehicle setting).
 
@@ -47,16 +38,15 @@ A side mission can be requested by the officer with his self interaction menu.
 If you don't want to complete a task, you can always abort it with the self interaction menu.
 
 
-## FOB/Rallypoint
+## Respawn position
 - FOB:
 	In this mission a FOB is a forward spawn point, to create a FOB approach the red box at the logistic point and require a blue container.
 	- Deploy:
-	Move it where you want to deploy a new FOB and interact with it to set it up. Keep in mind that you can not deploy a FOB close to the main base (2.500m) and the terrain needs to be flat.
+		Move it where you want to deploy a new FOB and interact with it to set it up. Keep in mind that you can not deploy a FOB close to the main base (2.500m) and the terrain needs to be flat.
 	- Dismantle:
-	You can dismantle a FOB by interacting with the flag on the HQ roof.
-
+		You can dismantle a FOB by interacting with the flag on the HQ roof.
 - Rallypoint:
-	You can also use the Zeus rallypoint backpack available in Arsenal. Those have a limited number of respawn.
+	You can also use the Zeus rallypoint backpack available in Arsenal but they have some limitation. After some times or after player disconnected, rallypoint will self-destruct.
 
 
 ## Sling loading
@@ -79,6 +69,9 @@ To tow a vehicle interact with it and select the option 'HOOK'. After that place
 If the two vehicles are too far away or the vehicle can't tow that load (Car can't tow truck or tank), the option will be disabled.
 To unhook interact with one of the two vehicles and select the option 'UNHOOK'.
 
+### Vehicle in vehicle system:
+BI Vehicle in Vehicle (ViV) system is extended to allow load of any vehicle in a vehicle. To move ViV use the towing system. To unload, move in driver seat of the tower vehicle and select in scroll menu "unload all objects".
+
 ### Place option:
 With this option you can move heavy objects to build small outpost or base.
 When you select the option an hint will show all the keys required to move the object.
@@ -93,9 +86,16 @@ To destroy an hideout just place a satchel near the ammo box, it's close to the 
 
 
 ## IED
-Any object could be an IED, approach it carefully (DO NOT rotate while you are walking: prefer walk, stop, rotate, walk again etc). Turn On your mine detector (VMH3 or VMMH3) and search for a charge in a circle of 2 meter around.
-If you are an engineer and have a defusal kit, you can disarm it.
-You can also blow them off with high caliber and explosive satchels.
+Any object could be an IED or a fake IED.
+
+### Detection:
+Approach IED carefully (DO NOT rotate while you are walking: prefer walk, stop, rotate, walk again etc). Turn On your mine detector (VMH3 or VMMH3) and search for a charge in a circle of 2 meter around.
+
+### Defuse:
+If you are an engineer and have a defusal kit, you can disarm it. You can also blow them off with high caliber and explosive satchels.
+
+### Clean up
+You can remove wreck or object around IED or fake IED by driving a Nemmera in their direction.
 
 
 ## Intel
@@ -115,12 +115,12 @@ When you destroy an hideout or an ammo cache, all the markers related to it will
 
 
 ## Reputation
-Reputation can be ask to civilian. Bad actions cause bad effects.
-
-Helping the local population, fighting the Oplitas, disarming IED will rise your reputation; killing civilians, mutilate alive/dead civilian, firing near civilians for no reason, damaging/destroying buildings, losing vehicles, respawns will decrease your reputation. At the beginning you have a very low reputation level, so civilians won't help you revealing important information about Oplitas, they will likely lie instead.
-
-Aborting a side mission does not affect reputation.
-
+### System:
+At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian.
+### Good actions:
+Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
+### Bad actions:
+Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, damaging/destroying buildings, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 
 ## Civil Orders
 Any player can give orders to civilians. To do this, just open your self interaction menu and select 'ORDERS' or use one of the shortcuts. Shortcuts can changed under 'configure >> controls>> configure addons >> Hearts and Minds: Mission (drop down menu)'. Your options are:
@@ -134,11 +134,3 @@ You can also drop leaflets to ask all civilians in a circle of 200m to evacuate 
 
 ## Traffic
 Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.
-
-
-## Gear
-You can choose your gear at the red box inside the base. Located at the spawn point.
-
-
-## Interaction
-Use ACE 3 interactions system.

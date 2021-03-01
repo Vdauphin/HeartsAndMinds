@@ -7,23 +7,21 @@ assignees: ''
 
 ---
 
-(Use English only.)
+<!-- Use English only. -->
 
-## Before reporting
+<!-- ## Before reporting
 
-If you have found an issue with Hearts and Minds please make sure that Hearts and Minds really is the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3`, `@ace` and `@RHSUSAF` on a stable and unchanged Hearts and minds available [here](https://github.com/Vdauphin/HeartsAndMinds/releases) on a dedicated server.
+If you have found an issue with Hearts and Minds please make sure that Hearts and Minds really is the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3` and `@ace` on a stable and unchanged Hearts and minds available [here](https://github.com/Vdauphin/HeartsAndMinds/releases) on a dedicated server. -->
 
 **Arma 3 Version:** `x.xx` (stable / rc / dev)
 **CBA Version:** `3.x.x` (stable / dev + commit hash)
 **ACE3 Version:** `3.x.x` (stable / dev + commit hash)
-**RHS USAF Version:** `0.x.x` (stable / dev + commit hash)
 **Hearts and minds Version:** `1.x.x` (stable / dev + commit hash)
 
 **Mods:**
 ```
 - CBA_A3
 - ace
-- RHS USAF
 ```
 
 **Description:**
