@@ -577,7 +577,7 @@ btc_fnc_log_get_nottowable = {
 
     switch (true) do {
         //The tower is a tank so it can't tow: plane and helicopter
-        case (_tower isKindOf "Tank") : {["Plane", "Helicopter"];};
+        case (_tower isKindOf "Tank") : {["Plane"];};
         case (_tower isKindOf "Truck_F") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Truck") : {["Plane", "Helicopter"];};
         case (_tower isKindOf "Ship") : {[];};
