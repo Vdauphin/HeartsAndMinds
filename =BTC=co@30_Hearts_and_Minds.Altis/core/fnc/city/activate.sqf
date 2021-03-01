@@ -59,6 +59,9 @@ private _has_ho = _city getVariable ["has_ho", false];
 private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _radius/2;
 
+
+private _buildings = nearestObjects [_city, ["Building"], _radius]; 
+playSound3d [getMissionPath "core\sounds\IslamicCTP_1.ogg", _buildings select 0, false, getPosASL (_buildings select 0), 5, 1, 600];
 if (!(_city getVariable ["initialized", false])) then {
     private _ratio = (switch _type do {
         case "Hill" : {random 1};
@@ -105,22 +108,26 @@ if !(_data_units isEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do {
-        case "Hill" : {1};
-        case "VegetationFir" : {1};
-        case "BorderCrossing" : {2};
-        case "NameLocal" : {2};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3};
-        case "NameCity" : {7};
+        case "Hill" : {3};
+        case "VegetationFir" : {2};
+        case "BorderCrossing" : {3};
+        case "NameLocal" : {4};
+        case "StrongpointArea" : {6};
+        case "NameVillage" : {7};
+        case "NameCity" : {10};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
-        case "NameMarine" : {1};
+        case "NameMarine" : {0};
         default {0};
     });
 
     if (_has_en) then {
         for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
             [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;
+        };
+        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
+        for "_i" from 1 to (1 + round random 2) do {
+            [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_fnc_mil_send] call btc_fnc_delay_exec;
         };
     };
 
@@ -129,13 +136,13 @@ if !(_data_units isEqualTo []) then {
 
         if (_has_en) then {
             private _max_number_group = (switch _type do {
-                case "VegetationFir" : {1};
-                case "BorderCrossing" : {2};
-                case "NameLocal" : {1};
-                case "StrongpointArea" : {2};
-                case "NameVillage" : {2};
-                case "NameCity" : {4};
-                case "NameCityCapital" : {5};
+                case "VegetationFir" : {3};
+                case "BorderCrossing" : {3};
+                case "NameLocal" : {4};
+                case "StrongpointArea" : {6};
+                case "NameVillage" : {7};
+                case "NameCity" : {10};
+                case "NameCityCapital" : {10};
                 case "Airport" : {2};
                 default {0};
             });
@@ -144,17 +151,17 @@ if !(_data_units isEqualTo []) then {
 
         // Spawn civilians
         private _max_number_group = (switch _type do {
-            case "VegetationFir" : {1};
+            case "VegetationFir" : {3};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {3};
+            case "NameLocal" : {5};
             case "StrongpointArea" : {0};
-            case "NameVillage" : {6};
+            case "NameVillage" : {8};
             case "NameCity" : {10};
             case "NameCityCapital" : {19};
             case "Airport" : {6};
             default {2};
         });
-        [+_houses, round (_p_civ_group_ratio * random _max_number_group), _city] call btc_fnc_civ_populate;
+        [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate;
     };
 };
 if (btc_p_animals_group_ratio > 0) then {
