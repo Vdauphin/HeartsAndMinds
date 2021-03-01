@@ -59,6 +59,9 @@ private _has_ho = _city getVariable ["has_ho", false];
 private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _radius/2;
 
+
+private _buildings = nearestObjects [_city, ["Building"], _radius]; 
+playSound3d [getMissionPath "core\sounds\IslamicCTP_1.ogg", _buildings select 0, false, getPosASL (_buildings select 0), 5, 1, 600];
 if (!(_city getVariable ["initialized", false])) then {
     private _ratio = (switch _type do {
         case "Hill" : {random 1};
