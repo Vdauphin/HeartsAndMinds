@@ -700,7 +700,7 @@ class Mission
 			dataType="Marker";
 			position[]={8300.7275,76.093613,10061.531};
 			name="respawn_west";
-			text=$STR_BTC_HAM_INTRO_ARSENAL_REDEPLOY;
+			text=Arsenal/Re-deploy;
 			type="Empty";
 			id=0;
 		};
@@ -717,7 +717,7 @@ class Mission
 			dataType="Marker";
 			position[]={8323.1348,73.933266,10113.239};
 			name="btc_log_point";
-			text=$STR_BTC_HAM_MSQM_MRK_LOGPOINT;
+			text=Logistic Point;
 			type="mil_flag";
 			colorName="ColorGreen";
 			a=0.5;
@@ -1056,7 +1056,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""interpreter"",true]";
-						description=$STR_BTC_HAM_MSQM_INTERPRETER;
+						description=Interpreter;
 						isPlayable=1;
 					};
 					id=29;
