@@ -26,6 +26,7 @@ params [
 
 if !(player getVariable ["interpreter", false]) exitWith {
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER"] call btc_fnc_showSubtitle;
+    playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 btc_int_ask_data = nil;
@@ -41,10 +42,10 @@ if ((round random 1) isEqualTo 1) then {
 };
 
 private _info_type = switch (true) do {
-    case (_rep < 200): {localize "STR_BTC_HAM_CON_INFO_ASKREP_VLOW"};
-    case (_rep >= 200 && _rep < 500): {localize "STR_BTC_HAM_CON_INFO_ASKREP_LOW"};
-    case (_rep >= 500 && _rep < 750): {toLower localize "str_terrain_12_5"};
-    case (_rep >= 750): {localize "str_terrain_6_25"};
+    case (_rep < 200): {localize "STR_BTC_HAM_CON_INFO_ASKREP_VLOW"}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+    case (_rep >= 200 && _rep < 500): {localize "STR_BTC_HAM_CON_INFO_ASKREP_LOW"}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+    case (_rep >= 500 && _rep < 750): {toLower localize "str_terrain_12_5"}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+    case (_rep >= 750): {localize "str_terrain_6_25"}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 private _text = selectRandom [

@@ -28,6 +28,9 @@ params [
 
 if !(player getVariable ["interpreter", false]) exitWith {
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER"] call btc_fnc_showSubtitle;
+    /* Son si la personne n'est pas un interprètre */
+    playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+
 };
 
 if !(_man call ace_medical_status_fnc_isInStableCondition) exitWith {
@@ -38,6 +41,8 @@ if !(_man call ace_medical_status_fnc_isInStableCondition) exitWith {
         localize "STR_BTC_HAM_CON_INFO_ASK_WOUNDED4"
     ];
     [name _man, _complain] call btc_fnc_showSubtitle;
+    /* Son du mec bléssé qui crie de douleur */
+    playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 if (
@@ -45,6 +50,8 @@ if (
     _man getVariable ["btc_already_interrogated", false]
 ) exitWith {
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS"] call btc_fnc_showSubtitle;
+    /* Son après que le mec soit déjà intérogé */
+    playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 if ((round random 3) >= 2 || !_isInterrogate) then {
@@ -64,13 +71,14 @@ private _rep = btc_int_ask_data;
 private _chance = (random 300) + (random _rep) + _rep/2;
 private _info_type = "";
 switch !(_isInterrogate) do {
-    case (_chance < 200) : {_info_type = "NO";};
-    case (_chance >= 200 && _chance < 600) : {_info_type = "FAKE";};
-    case (_chance >= 600) : {_info_type = "REAL";};
+    case (_chance < 200) : {_info_type = "NO";}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+    case (_chance >= 200 && _chance < 600) : {_info_type = "FAKE";}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
+    case (_chance >= 600) : {_info_type = "REAL";}; playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 if (_isInterrogate) then {_info_type = "REAL";};
 if (_info_type isEqualTo "NO") exitWith {
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASK_NOINFO"] call btc_fnc_showSubtitle;
+    playSound3d [getMissionPath "core\sounds\gopnik.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 private _final_phase = (count btc_hideouts) isEqualTo 0;
@@ -84,13 +92,16 @@ _info_type = _info_type isEqualTo "REAL";
 switch (_info) do {
     case "TROOPS" : {
         [_man, _info_type] call btc_fnc_info_troops;
+        playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
     };
     case "HIDEOUT" : {
         [name _man, _info_type] call btc_fnc_info_hideout_asked;
+        playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
     };
     case "CACHE" : {
         [name _man, localize "STR_BTC_HAM_CON_INFO_ASK_CACHEMAP"] call btc_fnc_showSubtitle;
         sleep 2;
         [_info_type] remoteExecCall ["btc_fnc_info_cache", 2];
+        playSound3d [getMissionPath "core\sounds\libelule.ogg", _man, false, getPosASL (_man), 5, 1, 10];
     };
 };

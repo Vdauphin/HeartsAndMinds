@@ -167,12 +167,13 @@ if !(_data_units isEqualTo []) then {
 // test remplacer civil
 //[getPos _city, 300] call btc_fnc_civ_get_weapons;
 //[[getPos _city, 300], btc_fnc_civ_get_weapons] call btc_fnc_delay_exec;
-if (btc_global_reputation < 150) then {
-    playSound3d [getMissionPath "core\sounds\IslamicCTP_1.ogg", _buildings select 0, false, getPosASL (_buildings select 0), 5, 1, 600];
+if (btc_global_reputation < 200) then {
+    private _rand = random 1
+    if(_rand == 0) then {playSound3d [getMissionPath "core\sounds\IslamicCTP_1.ogg", _buildings select 0, false, getPosASL (_buildings select 0), 5, 1, 600];
     [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;
     [[getPos _city, 300], btc_fnc_civ_get_weapons] call btc_fnc_delay_exec;
-    systemChat "test 1";
-};
+    systemChat "test 1";}};
+
 if (btc_p_animals_group_ratio > 0) then {
     if !(_data_animals isEqualTo []) then {
         {
