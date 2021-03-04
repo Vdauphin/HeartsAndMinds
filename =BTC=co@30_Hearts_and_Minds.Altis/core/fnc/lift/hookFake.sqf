@@ -55,6 +55,7 @@ _simulation enableSimulation true;
 clearWeaponCargoGlobal _simulation;
 clearItemCargoGlobal _simulation;
 clearMagazineCargoGlobal _simulation;
+clearBackpackCargoGlobal _simulation;
 _simulation setObjectTextureGlobal [0, ""];
 _simulation setObjectTextureGlobal [1, ""];
 

@@ -28,11 +28,13 @@ params [
 clearWeaponCargoGlobal _objects;
 clearItemCargoGlobal _objects;
 clearMagazineCargoGlobal _objects;
+clearBackpackCargoGlobal _objects;
 
 _inventory params [
     ["_weap_obj", [], [[]]],
     ["_mags_obj", [], [[]]],
-    ["_items_obj", [], [[]]]
+    ["_items_obj", [], [[]]],
+    ["_backpack_obj", [], [[]]]
 ];
 
 {
@@ -46,3 +48,7 @@ _inventory params [
 {
     _objects addItemCargoGlobal [_x, (_items_obj select 1) select _forEachIndex];
 } forEach (_items_obj select 0);
+
+{
+    _objects addBackpackCargoGlobal [_x, (_backpack_obj select 1) select _forEachIndex];
+} forEach (_backpack_obj select 0);

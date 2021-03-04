@@ -39,12 +39,12 @@ if !(!alive _object || isNull _object) then {
         _cargo pushBack (if (_x isEqualType "") then {
             [_x, "", [[], [], []]]
         } else {
-            [typeOf _x, _x getVariable ["ace_rearm_magazineClass", ""], [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x]]
+            [typeOf _x, _x getVariable ["ace_rearm_magazineClass", ""], [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x, getBackpackCargo _x]]
         });
     } forEach (_object getVariable ["ace_cargo_loaded", []]);
     _data pushBack _cargo;
     //Inventory
-    private _cont = [getWeaponCargo _object, getMagazineCargo _object, getItemCargo _object];
+    private _cont = [getWeaponCargo _object, getMagazineCargo _object, getItemCargo _object, getBackpackCargo _object];
     _data pushBack _cont;
     _data pushBack [vectorDir _object, vectorUp _object];
     _data pushBack (_object in btc_chem_contaminated);

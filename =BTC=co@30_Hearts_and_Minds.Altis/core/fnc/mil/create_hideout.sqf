@@ -86,6 +86,7 @@ private _hideout = [_pos] call btc_fnc_mil_create_hideout_composition;
 clearWeaponCargoGlobal _hideout;
 clearItemCargoGlobal _hideout;
 clearMagazineCargoGlobal _hideout;
+clearBackpackCargoGlobal _hideout;
 
 _hideout setVariable ["id", _id_hideout];
 _hideout setVariable ["rinf_time", _rinf_time];

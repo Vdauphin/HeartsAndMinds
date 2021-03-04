@@ -149,11 +149,11 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
         _cargo pushBack (if (_x isEqualType "") then {
             [_x, "", [[], [], []]]
         } else {
-            [typeOf _x, _x getVariable ["ace_rearm_magazineClass", ""], [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x], _x in btc_chem_contaminated]
+            [typeOf _x, _x getVariable ["ace_rearm_magazineClass", ""], [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x, getBackpackCargo _x], _x in btc_chem_contaminated]
         });
     } forEach (_x getVariable ["ace_cargo_loaded", []]);
     _data pushBack _cargo;
-    private _cont = [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x];
+    private _cont = [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x, getBackpackCargo _x];
     _data pushBack _cont;
     _data append ([_x] call btc_fnc_getVehProperties);
     _data pushBack (_x getVariable ["btc_EDENinventory", []]);

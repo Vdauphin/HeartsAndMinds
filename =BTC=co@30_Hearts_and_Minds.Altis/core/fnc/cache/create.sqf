@@ -44,6 +44,7 @@ btc_cache_obj setDir (random 360);
 clearWeaponCargoGlobal btc_cache_obj;
 clearItemCargoGlobal btc_cache_obj;
 clearMagazineCargoGlobal btc_cache_obj;
+clearBackpackCargoGlobal btc_cache_obj;
 
 [btc_cache_obj, "HandleDamage", btc_fnc_cache_hd] remoteExecCall ["CBA_fnc_addBISEventHandler", 0, true];
 
