@@ -717,7 +717,7 @@ class Mission
 			dataType="Marker";
 			position[]={5955.5889,85.28373,11613.609};
 			name="respawn_west";
-			text=Arsenal/Re-deploy;
+			text="Arsenal/Re-deploy";
 			type="Empty";
 			id=0;
 			atlOffset=2.2437286;
@@ -735,7 +735,7 @@ class Mission
 			dataType="Marker";
 			position[]={5977.9961,83.040001,11665.317};
 			name="btc_log_point";
-			text=Logistic Point;
+			text="Logistic Point";
 			type="mil_flag";
 			colorName="ColorGreen";
 			a=0.5;
