@@ -132,7 +132,7 @@ if !(_data_units isEqualTo []) then {
     };
 
     if !(_type in ["Hill", "NameMarine"]) then {
-        private _houses = ([position _city, _spawningRadius/3] call btc_fnc_getHouses) call BIS_fnc_arrayShuffle;
+        private _houses = ([position _city, _spawningRadius/1] call btc_fnc_getHouses) call BIS_fnc_arrayShuffle;
 
         if (_has_en) then {
             private _max_number_group = (switch _type do {
