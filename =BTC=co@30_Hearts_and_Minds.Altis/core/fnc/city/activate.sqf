@@ -112,11 +112,11 @@ if !(_data_units isEqualTo []) then {
         case "VegetationFir" : {2};
         case "BorderCrossing" : {3};
         case "NameLocal" : {4};
-        case "StrongpointArea" : {6};
-        case "NameVillage" : {7};
-        case "NameCity" : {10};
-        case "NameCityCapital" : {15};
-        case "Airport" : {15};
+        case "StrongpointArea" : {4};
+        case "NameVillage" : {5};
+        case "NameCity" : {6};
+        case "NameCityCapital" : {12};
+        case "Airport" : {10};
         case "NameMarine" : {0};
         default {0};
     });
@@ -153,15 +153,16 @@ if !(_data_units isEqualTo []) then {
         private _max_number_group = (switch _type do {
             case "VegetationFir" : {3};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {5};
+            case "NameLocal" : {20};
             case "StrongpointArea" : {0};
-            case "NameVillage" : {8};
+            case "NameVillage" : {10};
             case "NameCity" : {10};
-            case "NameCityCapital" : {19};
+            case "NameCityCapital" : {20};
             case "Airport" : {6};
-            default {2};
+            default {10};
         });
         [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate;
+        
     };
 };
 // test remplacer civil
