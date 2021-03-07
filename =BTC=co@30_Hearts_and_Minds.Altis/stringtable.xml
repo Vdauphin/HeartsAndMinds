@@ -64,7 +64,7 @@
                 <German>Respawnt bei Zertörung</German>
                 <Portuguese>Único Respawnável</Portuguese>
                 <Chinesesimp>可重生载具</Chinesesimp>
-                <French>Seulement redéploiement</French>
+                <French>Seul à réapparaitre</French>
             </Key>
             <Key ID="STR_BTC_HAM_INTRO_LOADINGTXT">
                 <Original>Base overview. Loading ...</Original>
