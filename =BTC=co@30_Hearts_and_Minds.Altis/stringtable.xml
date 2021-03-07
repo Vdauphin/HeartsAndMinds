@@ -730,7 +730,7 @@
                 <German>Arsenal beschränken (Siehe /define_mod.sqf):</German>
                 <Chinesesimp>军火库限制 (见 /define_mod.sqf):</Chinesesimp>
                 <Portuguese>Restringir arsenal (Veja /define_mod.sqf):</Portuguese>
-                <French>Arsenal restrictif (See /define_mod.sqf)</French>
+                <French>Arsenal restreint (Voir /define_mod.sqf)</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR_REMOVEONLY">
                 <Original>Remove only (works only with ACE3-Arsenal)</Original>
