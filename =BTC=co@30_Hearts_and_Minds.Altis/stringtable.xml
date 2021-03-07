@@ -808,11 +808,6 @@
                 <Chinesesimp>当飞机或直升机(&gt;190Km/h)飞掠城市上空时, 不激活城市:</Chinesesimp>
                 <French>Désactiver l'activation de la ville lorsqu'un avion ou un hélicoptère vole à (&gt;190Km/h) au-dessus d'une zone:</French>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_OTHER_CITYFREE">
-                <Original>City will be free if number of enemies is equal or lower than:</Original>
-                <Chinesesimp>城镇将会被解放, 当敌军数量小于或等于:</Chinesesimp>
-                <French>La ville sera libre si le nombre d'ennemis est égal ou inférieur à:</French>
-            </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS">
                 <Original>Autodetect Headless client:</Original>
                 <German>Headless-Client automatisch erkennen:</German>
