@@ -235,7 +235,7 @@
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Zivlisten sind mit Fahrzeugen in den Städten unterwegs. Wenn Sie ein hohes Ansehen in der Bevölkerung genießen, so sind Zivlisten auch gerne mal dazu bereit Sie mitzunehmen (nutzen sie die Karte um den Zivlisten zu zeigen wo sie hinwollen). Sollten Sie dabei durch Zufall auf Feinde stoßen, so wird der Zivilist sein Bestes geben um sie im Fahrzeug zu verstecken.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civis estarão viajando de veículo pelo mapa, entre uma cidade e outra. Se sua reputação com a população local for alta, eles estarão dispostos a levá-lo a qualuqer lugar do mapa (use o mapa para mostrar onde você quer ir). Se vocês encontrarem uma patrulha inimiga, o civil fará todo possível para te esconder no veículo.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Portuguese>
                 <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; 平民会在城市间开车穿梭。如果你的声誉够高, 平民会乐意载你一程(用地图指出你要去的地方)。如果你在途中遭遇了Oplitas巡逻队, 不要担心, 平民会尽其所能地把你藏在车里。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Chinesesimp>
-                <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</French>
+                <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Les civils se déplacent de ville en ville en véhicule. Si votre réputation est supérieure à "normal", vous pouvez demander lui demander de vous servir de taxi. Si en cours de route/arrivé à votre destination des ennemis sont présents, ne paniquez pas! Votre conducteur fera en sorte de vous cacher du mieux possible.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</French>
             </Key>
         </Container>
         <Container name="Documentation: Chemical warfare">
@@ -383,7 +383,7 @@
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY">
                 <Original>Enemy static density:</Original>
                 <Chinesesimp>敌军固定式武器密度:</Chinesesimp>
-                <French>Densité des armes static enemy:</French>
+                <French>Densité des armes statiques ennemies:</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY">
                 <Original>Civilian density:</Original>
@@ -737,7 +737,7 @@
                 <German>Nur entfernen (funktioniert nur beim ACE3-Arsenal)</German>
                 <Chinesesimp>仅移除 (仅对ACE3军火库生效)</Chinesesimp>
                 <Portuguese>Apenas remover (funciona apenas com o ACE3-Arsenal)</Portuguese>
-                <French>Seulement supprimer (works only with ACE3-Arsenal)</French>
+                <French>Blacklist (fonctionne seulement avec ACE3-Arsenal)</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_AUTOLOADOUT">
                 <Original>Predefined loadouts (See /define_mod.sqf)</Original>
@@ -757,7 +757,7 @@
                 <German>Nach der Rolle des Spielers beschränken (geht nur mit dem ACE3-Arsenal)</German>
                 <Chinesesimp>根据玩家角色限制 (仅对ACE3军火库生效)</Chinesesimp>
                 <Portuguese>Filtrar à função do jogador (funciona apenas com o ACE3-Arsenal)</Portuguese>
-                <French>Filter en fonction du rôle du joueur (works only with ACE3-Arsenal)</French>
+                <French>Filtrer en fonction du rôle du joueur (fonctionne seulement avec ACE3-Arsenal)</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_GARAGEADMIN">
                 <Original>Activate garage for admin:</Original>
