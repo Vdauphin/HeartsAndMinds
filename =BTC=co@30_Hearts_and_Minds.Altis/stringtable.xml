@@ -402,7 +402,7 @@
                 <German>Feinddichte in Gebäuden:</German>
                 <Chinesesimp>建筑物中的敌军密度:</Chinesesimp>
                 <Portuguese>Densidade de militares em construções:</Portuguese>
-                <French>Densité des enemies dans les maison:</French>
+                <French>Densité des ennemies dans les maisons:</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPAWN_ARMEDHIDEOUT">
                 <Original>Add armed vehicles in Hideout:</Original>
