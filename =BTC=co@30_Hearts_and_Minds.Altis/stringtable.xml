@@ -546,7 +546,7 @@
             <Key ID="STR_BTC_HAM_RESP_FOBTOBASE">
                 <Original>Allow respawn from FOB to base:</Original>
                 <Chinesesimp>允许从FOB重新部署至基地</Chinesesimp>
-                <French>Autoriser la réapparition sur FOB à la base::</French>
+                <French>Autoriser la réapparition sur FOB à la base:</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLY">
                 <Original>FOB and Rallypoint</Original>
