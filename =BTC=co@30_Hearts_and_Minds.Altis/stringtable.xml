@@ -292,7 +292,7 @@
             <Key ID="STR_BTC_HAM_PARAM_DB_ARESTART">
                 <Original>Auto restart/shutdown server (Must define in server.cfg: serverCommandPassword = "btc_password")</Original>
                 <Chinesesimp>自动重启/关闭服务器(必须在server.cfg中定义: serverCommandPassword = "btc_password")</Chinesesimp>
-                <French>Serveur de redémarrage / arrêt automatique (Doit être défine dans server.cfg: serverCommandPassword = "btc_password")</French>
+                <French>Redémarrage / arrêt automatique du serveur (Doit être défini dans server.cfg: serverCommandPassword = "btc_password")</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_DB_SHUTDOWN">
                 <Original>Shutdown</Original>
