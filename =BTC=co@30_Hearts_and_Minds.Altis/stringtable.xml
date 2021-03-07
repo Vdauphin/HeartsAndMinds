@@ -1632,7 +1632,7 @@
             <Key ID="STR_BTC_HAM_ACTION_BIRESPAWN">
                 <Original>BI respawn</Original>
                 <Chinesesimp>BI重生</Chinesesimp>
-                <French>ARMA 3 respawn</French>
+                <French>BI respawn</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYBASE">
                 <Original>Re-deploy base</Original>
