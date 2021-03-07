@@ -227,7 +227,7 @@
                 <German>Straßenverkehr</German>
                 <Portuguese>Trânsito</Portuguese>
                 <Chinesesimp>交通</Chinesesimp>
-                <French>Traffic</French>
+                <French>Circulation</French>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_TRAFFIC_TEXT">
                 <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Original>
