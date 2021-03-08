@@ -2004,7 +2004,7 @@
                 <German>Zu Nahe an der Haupt-Basis!</German>
                 <Portuguese>Muito perto da base principal!</Portuguese>
                 <Chinesesimp>与主基地距离太近!</Chinesesimp>
-                <French>Trop près de la base principale!</French>
+                <French>Trop près de la base principale !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_CAREA">
                 <Original>Clear the area before mounting the FOB, %1</Original>
