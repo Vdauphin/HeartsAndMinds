@@ -2098,7 +2098,7 @@
                 <German>Waffenlager zerstört!</German>
                 <Portuguese>Depósito destruído!</Portuguese>
                 <Chinesesimp>武器箱已摧毁!</Chinesesimp>
-                <French>Cache d'arme détruite!</French>
+                <French>Cache d'arme détruite !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_1">
                 <Original>Intel about an ammo cache found!</Original>
