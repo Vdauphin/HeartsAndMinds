@@ -2359,7 +2359,7 @@
             <Key ID="STR_BTC_HAM_TOW_TFAR">
                 <Original>Too far!</Original>
                 <Chinesesimp>距离太远!</Chinesesimp>
-                <French>Trop loin!</French>
+                <French>Trop loin !</French>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_ALREADYTOWED">
                 <Original>This vehicle is already attached to another!</Original>
