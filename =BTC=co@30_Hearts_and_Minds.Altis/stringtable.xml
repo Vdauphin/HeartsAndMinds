@@ -1947,7 +1947,7 @@
                 <German>Ich bin kein Taxifahrer!</German>
                 <Portuguese>Eu não sou taxista!</Portuguese>
                 <Chinesesimp>我又不是开出租车的!</Chinesesimp>
-                <French>Je ne suis pas chauffeur de taxi!</French>
+                <French>Je ne suis pas chauffeur de taxi !</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_NEG4">
                 <Original>No! I go where I want!</Original>
