@@ -2275,7 +2275,7 @@
                 <German>Container und Inhalt kopiert! Bereich freimachen, um neuen einzufügen.</German>
                 <Portuguese>Contêiner e carga copiados! Limpe a área para colar.</Portuguese>
                 <Chinesesimp>集装箱及其货物已记录! 清空该区域以创建一个复制品。</Chinesesimp>
-                <French>Conteneur et cargaison copiés! Nettoyez la zone avant de faire un coller.</French>
+                <French>Conteneur et cargaison copiés ! Nettoyez la zone avant de faire un coller.</French>
             </Key>
         </Container>
         <Container name="Other: Endmission">
