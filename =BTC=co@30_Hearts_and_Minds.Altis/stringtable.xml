@@ -1080,7 +1080,7 @@
                 <German>Hacke eine Prototyp-Rakete mit einem in %1 verfügbaren Terminal. Verteidige deine Position, bis der Prozess abgeschlossen ist!</German>
                 <Portuguese>Hackei o terminal de protótipo de míssil em %1. Defenda sua posição até que o processo seja concluído!</Portuguese>
                 <Chinesesimp>在 %1 地区对一枚带有控制终端的导弹原型进行黑客入侵。守住你的位置, 直到入侵完成!</Chinesesimp>
-                <French>Piratez un prototype de missile avec un terminal disponible dans %1. Défendez votre position jusqu'à ce que le processus soit terminé!</French>
+                <French>Piratez un prototype de missile avec un terminal disponible dans %1. Défendez votre position jusqu'à ce que le processus soit terminé !</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_DESC">
                 <Original>Use the terminal to launch the hack.</Original>
