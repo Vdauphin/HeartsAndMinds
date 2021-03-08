@@ -1218,7 +1218,7 @@
                 <German>Die Bewohner der Stadt %1 sind am verdusten und verhungern. Versorgen Sie die Bürger mit den nötigen Nahrungsmitteln. Den benötigten Nachschubcontainer finden sie am Versorgungspunkt.</German>
                 <Portuguese>O população de %1 estão passando fome! Forneça suprimentos! Os suprimentos podem ser solicitados no ponto logístico.</Portuguese>
                 <Chinesesimp>%1 的居民正在挨饿, 在后勤点生成一些救援物资并带给他们!</Chinesesimp>
-                <French>Les citoyens de %1 sont sur le point de mourir de faim et de soif, apportez-leur la nourriture et l'eau potable présentes dans le conteneur de ravitaillement au point logistique!</French>
+                <French>Les citoyens de %1 sont sur le point de mourir de faim et de soif, apportez-leur la nourriture et l'eau potable présentes dans le conteneur de ravitaillement au point logistique !</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_MOVE_DESC">
                 <Original>Move to the supply location with supplies available at the logistic point.</Original>
