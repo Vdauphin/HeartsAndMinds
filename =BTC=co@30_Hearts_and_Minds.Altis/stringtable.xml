@@ -2044,7 +2044,7 @@
                 <German>Geh ein wenig zurück! Die FOB wird aufgebaut</German>
                 <Portuguese>Afaste-se! Montando a FOB</Portuguese>
                 <Chinesesimp>后退! FOB装配中</Chinesesimp>
-                <French>Reculez! Construction de la FOB en cours</French>
+                <French>Reculez ! Construction de la FOB en cours</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_DISMANTLE_H_PROC">
                 <Original>Dismantle, move out ...</Original>
