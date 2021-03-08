@@ -2036,7 +2036,7 @@
                 <German>Der Name wird bereits verwendet!</German>
                 <Portuguese>O nome já está em uso!</Portuguese>
                 <Chinesesimp>该名称已被使用!</Chinesesimp>
-                <French>Nom déjà utilisé!</French>
+                <French>Nom déjà utilisé !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_WIP">
                 <Original>Get back! Mounting FOB</Original>
