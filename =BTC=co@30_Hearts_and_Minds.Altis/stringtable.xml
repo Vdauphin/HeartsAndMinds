@@ -2146,7 +2146,7 @@
                 <German>%1 wurde bereitgestellt!</German>
                 <Portuguese>Implantando em %1</Portuguese>
                 <Chinesesimp>%1 已部署!</Chinesesimp>
-                <French>%1 a été déployé!</French>
+                <French>%1 a été déployé !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_8">
                 <Original>Saving in progress... Please wait</Original>
