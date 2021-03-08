@@ -2241,7 +2241,7 @@
                 <German>Befehle (Zivilisten): Geh weg!</German>
                 <Portuguese>Ordem ao Civil: Vá embora!</Portuguese>
                 <Chinesesimp>命令平民: 走开!</Chinesesimp>
-                <French>Ordre civil: partez!</French>
+                <French>Ordre civil: partez !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_SHORTC_GOAWAY_NOTE">
                 <Original>Order a civilian to go away</Original>
