@@ -1642,7 +1642,7 @@
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
                 <Original>Re-deploy FOB/vehicles</Original>
                 <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
-                <French>Ce redéployer à la FOB/vehicles</French>
+                <French>Se redéployer sur FOB/vehicles</French>
             </Key>
         </Container>
         <Container name="Action : Arsenal (BIS)">
