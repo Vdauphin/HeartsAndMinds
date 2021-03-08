@@ -1038,7 +1038,7 @@
                 <German>Bewaffneter Konvoi unterwegs nach %1</German>
                 <Portuguese>Destrua o comboio armado inimigo %1</Portuguese>
                 <Chinesesimp>摧毁进攻 %1 地区的Oplitas车队</Chinesesimp>
-                <French>Intercepter le convoi d'Oplitas %1</French>
+                <French>Détruire le convoi d'Oplitas attaquant %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
                 <Original>An armed Oplitas convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
