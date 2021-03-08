@@ -2267,7 +2267,7 @@
                 <German>Kein Container gefunden!</German>
                 <Portuguese>Não há contêiner em volta!</Portuguese>
                 <Chinesesimp>附近没有集装箱!</Chinesesimp>
-                <French>Pas de conteneur dans les parages!</French>
+                <French>Pas de conteneur autour !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COPY_SUCCSESS">
                 <Original>Container and cargo copied! Clear the area to paste.</Original>
