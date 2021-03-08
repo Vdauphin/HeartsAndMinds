@@ -1004,7 +1004,7 @@
                 <German>Medizinischer Notruf aus %1</German>
                 <Portuguese>Chamada de emergência médica em %1</Portuguese>
                 <Chinesesimp>位于 %1 地区的紧急医疗求助</Chinesesimp>
-                <French>Appel d'urgence médicale dans la ville de %1</French>
+                <French>Appel d'urgence médicale dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
                 <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization </Original>
