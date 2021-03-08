@@ -2106,7 +2106,7 @@
                 <German>Informationen über ein Waffenlager gefunden!</German>
                 <Portuguese>Informação sobre um depósito de armas encontrada!</Portuguese>
                 <Chinesesimp>发现了关于弹药箱的情报!</Chinesesimp>
-                <French>Intel à propos d'une cache d'arme trouvée!</French>
+                <French>Intel à propos d'une cache d'arme trouvée !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_2">
                 <Original>Hideout destroyed! %1 remaining</Original>
