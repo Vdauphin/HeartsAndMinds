@@ -1731,7 +1731,7 @@
                 <German>Ich habe gehört, dass es noch %1 Verstecke gibt.</German>
                 <Portuguese>Ouvi dizer que há ainda %1 esconderijo(s) por perto.</Portuguese>
                 <Chinesesimp>我听说还剩 %1 个藏匿点。</Chinesesimp>
-                <French>J'ai entendu dire qu'il restez %1 planque(s)</French>
+                <French>J'ai entendu dire qu'il reste %1 planque(s)</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_VLOW">
                 <Original>very low</Original>
