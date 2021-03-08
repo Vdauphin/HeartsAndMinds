@@ -2170,7 +2170,7 @@
                 <German>Datenbank gelöscht!</German>
                 <Portuguese>Banco de Dados deletado!</Portuguese>
                 <Chinesesimp>数据库已删除!</Chinesesimp>
-                <French>Base de données supprimée!</French>
+                <French>Base de données supprimée !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_14">
                 <Original>We got a picture of the building where the cache is:</Original>
