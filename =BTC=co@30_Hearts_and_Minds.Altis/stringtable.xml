@@ -2114,7 +2114,7 @@
                 <German>Versteck zerstört! Verbleiben noch %1</German>
                 <Portuguese>Esconderijo destruído! Restando %1</Portuguese>
                 <Chinesesimp>藏匿点已摧毁! 还有 %1 处剩余</Chinesesimp>
-                <French>Planque détruite! %1 restant</French>
+                <French>Planque détruite ! %1 restant</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_3">
                 <Original>This body does not have any intel</Original>
