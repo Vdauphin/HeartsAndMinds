@@ -1637,7 +1637,7 @@
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYRALLY">
                 <Original>Re-deploy rallypoints</Original>
                 <Chinesesimp>重新部署至集合点</Chinesesimp>
-                <French>Ce redéployer au point de ralliement</French>
+                <French>Se redéployer au point de ralliement</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
                 <Original>Re-deploy FOB/vehicles</Original>
