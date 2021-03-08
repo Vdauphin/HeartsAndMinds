@@ -1022,7 +1022,7 @@
                 <German>Der Konvoi ist losgefahren!</German>
                 <Portuguese>O comboio deixou o ponto de partida!</Portuguese>
                 <Chinesesimp>车队已经离开起点!</Chinesesimp>
-                <French>Le convoi a quitté le point de départ!</French>
+                <French>Le convoi a quitté le point de départ !</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_MRKEND">
                 <Original>Convoy End</Original>
