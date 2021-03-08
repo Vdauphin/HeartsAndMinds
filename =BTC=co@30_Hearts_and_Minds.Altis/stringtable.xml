@@ -1996,7 +1996,7 @@
                 <German>Das Gebiet ist nicht Flach genug!</German>
                 <Portuguese>A área não é plana o suficiente!</Portuguese>
                 <Chinesesimp>此区域不够平坦!</Chinesesimp>
-                <French>La zone n'est pas assez plate!</French>
+                <French>La zone n'est pas assez plane !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_DBASE">
                 <Original>Too close at the main base!</Original>
