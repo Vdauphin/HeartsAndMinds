@@ -1803,7 +1803,7 @@
                 <German>I habe offene Wunden!</German>
                 <Portuguese>Eu tenho feridas abertas!</Portuguese>
                 <Chinesesimp>我受了外伤!</Chinesesimp>
-                <French>J'ai une plaie ouverte!</French>
+                <French>J'ai une plaie ouverte !</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS">
                 <Original>I already answered to your question!</Original>
