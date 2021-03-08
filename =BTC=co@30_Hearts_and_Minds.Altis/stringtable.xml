@@ -744,7 +744,7 @@
                 <German>Vorgefertigte Loadouts (Siehe /define_mod.sqf)</German>
                 <Chinesesimp>预设装备 (见 /define_mod.sqf)</Chinesesimp>
                 <Portuguese>Loadouts prédefinidos (Veja /define_mod.sqf)</Portuguese>
-                <French>Équipements pré-définie (See /define_mod.sqf)</French>
+                <French>Équipements pré-définie (Voir /define_mod.sqf)</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_RMVWEAPONS">
                 <Original>Remove all weapons</Original>
