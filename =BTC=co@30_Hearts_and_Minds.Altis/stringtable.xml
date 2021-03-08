@@ -2259,7 +2259,7 @@
                 <German>Kein kopierter Container gefunden!</German>
                 <Portuguese>O contêiner não foi copiado!</Portuguese>
                 <Chinesesimp>未记录集装箱内容!</Chinesesimp>
-                <French>Aucun conteneur copié!</French>
+                <French>Aucun conteneur copié !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COPY_NOCONTAINER">
                 <Original>No container around!</Original>
