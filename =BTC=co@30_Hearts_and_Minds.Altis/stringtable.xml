@@ -1723,7 +1723,7 @@
                 <German>Ich verstehe nicht was Sie sagen</German>
                 <Portuguese>Não consigo entender o que está dizendo</Portuguese>
                 <Chinesesimp>我不明白你在说什么。</Chinesesimp>
-                <French>Je comprend whallouh frère</French>
+                <French>Je ne comprends pas ce qu'il dit</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_HIDEOUTS">
                 <Original>I heard about %1 hideouts left.</Original>
