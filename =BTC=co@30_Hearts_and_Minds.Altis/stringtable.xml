@@ -1134,7 +1134,7 @@
                 <German>Es gibt ein Minenfeld in der Nähe von %1, räumen Sie es!</German>
                 <Portuguese>Campo minado próximo a %1. Limpe-os!</Portuguese>
                 <Chinesesimp>%1 附近有雷区, 把它们清除掉!</Chinesesimp>
-                <French>Il y a un champ de mines près de %1, nettoyez-le!</French>
+                <French>Il y a un champ de mines près de %1, nettoyez-le !</French>
             </Key>
         </Container>
         <Container name="Rescue">
