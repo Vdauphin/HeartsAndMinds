@@ -1296,7 +1296,7 @@
                 <German>Fahrzeug braucht Unterstützung in der Nähe von %1</German>
                 <Portuguese>Veículos necessitando de assistência em %1</Portuguese>
                 <Chinesesimp>%1 附近的载具需要援助</Chinesesimp>
-                <French>Le véhicule a besoin d'assistance à proximité de %1</French>
+                <French>Un véhicule a besoin d'assistance à proximité de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
                 <Original>A vehicle damaged by an IED needs assistance near %1! Repair it!</Original>
