@@ -1322,7 +1322,7 @@
                 <German>%1 wurde von der Oplitas erobert! Die lokale Bevölkerung wird terrorisiert, greifen Sie ein!</German>
                 <Portuguese>Os inimigos estão conquistando a cidade %1. A população local está sendo aterrorizada. Ajude-os!</Portuguese>
                 <Chinesesimp>%1 已被Oplitas占领! 当地居民受到恐吓, 他们正在请求帮助!</Chinesesimp>
-                <French>La ville de %1 a été conquise par les Oplitas! La population locale est terrorisée, elle demande de l'aide!</French>
+                <French>La ville de %1 a été conquise par les Oplitas ! La population locale est terrorisée, elle demande de l'aide !</French>
             </Key>
         </Container>
         <Container name="Kill">
