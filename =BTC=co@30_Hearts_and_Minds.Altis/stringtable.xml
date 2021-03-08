@@ -1612,7 +1612,7 @@
                 <German>Zugewiesene Mission abbrechen</German>
                 <Portuguese>Abortar</Portuguese>
                 <Chinesesimp>中止</Chinesesimp>
-                <French>Abandonner la mission secondaire attribué</French>
+                <French>Abandonner l'assignée</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_SIDEMISSION_REQ">
                 <Original>Request</Original>
