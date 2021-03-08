@@ -1562,7 +1562,7 @@
                 <German>Stopp!</German>
                 <Portuguese>Pare!</Portuguese>
                 <Chinesesimp>站住!</Chinesesimp>
-                <French>Halte!</French>
+                <French>Halte !</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_ORDERS_GETDOWN">
                 <Original>Get down!</Original>
