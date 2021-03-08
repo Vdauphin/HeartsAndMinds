@@ -1348,7 +1348,7 @@
                 <Original>Kill %1 in %2.</Original>
                 <German>Töten Sie %1 in %2.</German>
                 <Chinesesimp>在 %2 地区杀死 %1。</Chinesesimp>
-                <French>Tué %1 dans la ville de %2.</French>
+                <French>Tuez %1 dans la ville de %2.</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DOGTAG_TITLE">
                 <Original>Take dog tag</Original>
