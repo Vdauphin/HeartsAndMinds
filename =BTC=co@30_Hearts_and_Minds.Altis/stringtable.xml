@@ -1843,7 +1843,7 @@
                 <German>Hier in der Gegend gibt es keine Verstecke!</German>
                 <Portuguese>Não há esconderijo por aqui!</Portuguese>
                 <Chinesesimp>附近没有藏匿点!</Chinesesimp>
-                <French>Il n'y a pas de planque par ici!</French>
+                <French>Il n'y a pas de planque par ici !</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG">
                 <Original>Diary log</Original>
