@@ -1873,7 +1873,7 @@
                 <German>Ich habe mehrer bewaffnete Personen in Richtung %1, ca. %2m entfernt, gesehen</German>
                 <Portuguese>Eu vi um movimento de milícia em %1, há %2 metros daqui</Portuguese>
                 <Chinesesimp>我在 %1 见到过民兵活动, 离这大约 %2 米</Chinesesimp>
-                <French>J'ai vu un mouvement de milice %1, a %2 mètre d'ici</French>
+                <French>J'ai vu un mouvement de milice %1, à %2 mètre d'ici</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_TROOPS_FALSE">
                 <Original>I didn't see any militia movement in this area!</Original>
