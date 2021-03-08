@@ -2336,7 +2336,7 @@
                 <German>Der Bereich muss sauber sein, bevor Sie etwas neues anfordern!</German>
                 <Portuguese>Limpe a área antes de criar outro objeto!</Portuguese>
                 <Chinesesimp>在创建新的物件前, 该区域必须清空!</Chinesesimp>
-                <French>Nettoyez la zone avant de créer un autre objet!</French>
+                <French>Nettoyez la zone avant de créer un autre objet !</French>
             </Key>
         </Container>
         <Container name="Tow">
