@@ -1304,7 +1304,7 @@
                 <German>Ein Fahrzeug wurde durch eine IED beschädigt und braucht nun Unterstützung in der Nähe von %1! Repariere Sie es!</German>
                 <Portuguese>Um veículo foi danificado por um IED precisa de reparo em %1! Conserte-o!</Portuguese>
                 <Chinesesimp>一辆被IED损坏的载具在 %1 附近等待援助! 修好它!</Chinesesimp>
-                <French>AUn véhicule endommagé par un IED a besoin d'une assistance à proximité de %1! Répare le!</French>
+                <French>Un véhicule endommagé par un EEI a besoin d'une assistance à proximité de %1 ! Répare le !</French>
             </Key>
         </Container>
         <Container name="Conquer">
