@@ -1072,7 +1072,7 @@
                 <German>Rakete hacken in der Nähe von %1</German>
                 <Portuguese>Hackeie o míssil em %1</Portuguese>
                 <Chinesesimp>入侵 %1 地区的导弹控制终端</Chinesesimp>
-                <French>Piraté le missile à proximité %1</French>
+                <French>Piratez le missile a proximité de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
                 <Original>Hack a prototype missile with a terminal available in %1. Defend your position until the process is done!</Original>
