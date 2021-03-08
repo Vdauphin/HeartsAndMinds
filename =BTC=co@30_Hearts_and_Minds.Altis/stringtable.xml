@@ -1236,7 +1236,7 @@
                 <Original>Unload supplies available inside the supplies container.</Original>
                 <German>Entladen Sie alle Nachschubgüter aus der Versorgungslieferung.</German>
                 <Chinesesimp>从集装箱中卸载救援物资。</Chinesesimp>
-                <French>Déchargez les fournitures disponibles à l'intérieur du conteneur de fournitures.</French>
+                <French>Déchargez les fournitures disponibles dans le conteneur de fournitures.</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_UNLOAD_TITLE">
                 <Original>Unload supplies</Original>
