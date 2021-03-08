@@ -2447,7 +2447,7 @@
                 <German>Das ist kein Wrack!</German>
                 <Portuguese>Isso não é um carcaça!</Portuguese>
                 <Chinesesimp>这不是残骸!</Chinesesimp>
-                <French>Ce n'est pas une épave!</French>
+                <French>Ce n'est pas une épave !</French>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_RWRECK_ISHELO">
                 <Original>This wreck will respawn</Original>
