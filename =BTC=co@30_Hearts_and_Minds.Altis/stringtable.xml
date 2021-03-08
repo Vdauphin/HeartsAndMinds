@@ -2028,7 +2028,7 @@
                 <German>FOB benennen!</German>
                 <Portuguese>Não feche a caixa de diálogo com esc</Portuguese>
                 <Chinesesimp>命名FOB!</Chinesesimp>
-                <French>Nommez votre FOB!</French>
+                <French>Nommez votre FOB !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_NAMENOTA">
                 <Original>Name already in use!</Original>
