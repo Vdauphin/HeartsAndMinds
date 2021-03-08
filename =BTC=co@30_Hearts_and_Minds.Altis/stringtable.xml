@@ -1012,7 +1012,7 @@
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert </German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
                 <Chinesesimp>%1 地区的一位平民正在呼叫医疗支援, 治疗并护理患者, 直至其伤势稳定。</Chinesesimp>
-                <French>Un civil appelle un médecin dans %1, soigne et attender la stabilisation du patient</French>
+                <French>Un civil appelle un médecin dans %1, soignez et attendez la stabilisation du patient</French>
             </Key>
         </Container>
         <Container name="Convoy">
