@@ -1404,7 +1404,7 @@
                 <Original>Locate contaminated objects</Original>
                 <German>Kontaminierte Objekte lokalisieren</German>
                 <Chinesesimp>确定受污染物体的位置</Chinesesimp>
-                <French>Localiser les objets contaminés</French>
+                <French>Localisez les objets contaminés</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_LOCATE_DESC">
                 <Original>Locate contaminated objects. The ED-1E drone can help you to identify contaminated objects by biopsy.</Original>
