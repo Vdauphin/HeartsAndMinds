@@ -914,7 +914,7 @@
                 <German>Ein feindlicher Offizier ist in einem getarnten Konvoi unterwegs. Finden und bringen Sie ihn in die Basis für weitere Befragungen. Er ist einer der Hauptverantwortlichen für die Terrorisierung der lokalen Bevölkerung!</German>
                 <Portuguese>Um Oficial está viajando em um comboio camuflado. Encontre e traga-o para base para interrogatório. Ele é um dos principais responsáveis por aterrorizar a população local!</Portuguese>
                 <Chinesesimp>一名敌军军官已经伪装起来, 随同车队进行转移。找到他并把他带回基地, 进行进一步的审问。他是当地恐怖主义活动的主要责任人之一!</Chinesesimp>
-                <French>Capturez un officier voyageant dans un convoi, puis amenez-le à la base pour l'interroger. Il est responsable de la terreur de la population locale</French>
+                <French>Capturez un officier voyageant dans un convoi, puis amenez-le à la base pour l'interroger. Il terrorise la population locale</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_SURRENDER_DESC">
                 <Original>Surrender the officer.</Original>
