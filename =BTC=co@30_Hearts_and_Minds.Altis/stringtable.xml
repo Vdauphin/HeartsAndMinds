@@ -1336,7 +1336,7 @@
                 <Original>Assassinate %1 in %2, then bring his dog tag to the base for identification. He is responsible for terrorizing the local population!</Original>
                 <German>Eliminieren Sie %1 in %2 und sichern Sie seine Hundemarke zur Identifizierung. Er ist der Hauptverantwortliche für den Terror in der Region!</German>
                 <Chinesesimp>在 %2 地区刺杀 %1, 然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Chinesesimp>
-                <French>Assassiner %1 dasn a ville de %2, puis apportez sa plaque d'identité à la base pour identification. Il est responsable de la terreur de la population locale!</French>
+                <French>Assassiner %1 dans la ville de %2, puis apportez sa plaque d'identité à la base pour identification. Il est terrorise la population locale!</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_TITLE">
                 <Original>Kill %1</Original>
