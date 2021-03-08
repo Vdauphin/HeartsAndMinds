@@ -2367,7 +2367,7 @@
                 <German>Dieses Fahrzeug zieht bereits ein anderes Fahrzeug!</German>
                 <Portuguese>Este veículo já está atracado a outro!</Portuguese>
                 <Chinesesimp>这辆载具已经连接一辆载具了!</Chinesesimp>
-                <French>Ce véhicule est déjà attaché à un autre!</French>
+                <French>Ce véhicule est déjà attaché à un autre !</French>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_WAIT">
                 <Original>Towing in progress, please wait...</Original>
