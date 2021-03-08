@@ -1881,7 +1881,7 @@
                 <German>Ich habe keine bewaffneten Personen in der Nähe gesehen!</German>
                 <Portuguese>Eu não vi nenhum movimento de milícia nesta área!</Portuguese>
                 <Chinesesimp>我没有在这块地方见到过任何民兵活动!</Chinesesimp>
-                <French>Je n'ai vu aucun mouvement de milice dans ce secteur!</French>
+                <French>Je n'ai vu aucun mouvement de milice dans ce secteur !</French>
             </Key>
         </Container>
         <Container name="Conversations: Orders">
