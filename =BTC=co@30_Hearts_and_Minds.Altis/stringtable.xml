@@ -1116,7 +1116,7 @@
                 <German>Befreien Sie eine Geisel in %1 aus den Händen der Terroristen. Die lokale Bevölkerung bittet um Ihre Hilfe!</German>
                 <Portuguese>Liberte o civil refém em %1 das mãos dos terroristas. A população local está pedindo sua ajuda!</Portuguese>
                 <Chinesesimp>解救 %1 地区的人质。当地居民正在请求你的帮助!</Chinesesimp>
-                <French>Libérez un otage civil dans %1. La population locale demande votre aide!</French>
+                <French>Libérez un otage civil dans %1. La population locale demande votre aide !</French>
             </Key>
         </Container>
         <Container name="Mines">
