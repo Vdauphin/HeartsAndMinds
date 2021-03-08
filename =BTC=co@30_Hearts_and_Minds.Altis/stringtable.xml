@@ -1046,7 +1046,7 @@
                 <German>Ein bewaffneter Konvoi der Oplitas will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
                 <Portuguese>Um comboio armado inimigo vai atacar %1. Proteja a população local dentruindo o comboio antes que ele chegue</Portuguese>
                 <Chinesesimp>一队Oplitas武装车队将要攻打 %1。当地居民请求在其抵达之前将其摧毁!</Chinesesimp>
-                <French>Un convoi armé d'Oplitas va attaquer %1. La population locale demande votre aide pour la détruire avant qu'elle n'arrive!</French>
+                <French>Un convoi armé d'Oplitas va attaquer %1. La population locale demande votre aide pour la détruire avant qu'elle n'arrive !</French>
             </Key>
         </Container>
         <Container name="Hack">
