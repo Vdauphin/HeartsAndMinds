@@ -764,7 +764,7 @@
                 <German>Virtuelle Garage für den Admin:</German>
                 <Portuguese>Garagem virtual para o administrador:</Portuguese>
                 <Chinesesimp>为管理员启用虚拟车库</Chinesesimp>
-                <French>Activé le garage pour les admins:</French>
+                <French>Activer le garage pour les admins:</French>
             </Key>
         </Container>
         <Container name="Parameters: Other">
