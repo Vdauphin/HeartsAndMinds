@@ -2346,7 +2346,7 @@
                 <German>Can't tow!&lt;br/&gt;(Folgende Fahrzeuge können nicht gezogen werden: %1)</German>
                 <Portuguese>Can't tow!&lt;br/&gt;(Este veículo não pode rebocar %1)</Portuguese>
                 <Chinesesimp>无法拖车!&lt;br/&gt;(当前载具(后车)无法牵引如下类型的载具: %1)</Chinesesimp>
-                <French>Impossible de remorquer!&lt;br/&gt;(Ce véhicule ne peut pas remorquer %1)</French>
+                <French>Impossible de remorquer !&lt;br/&gt;(Ce véhicule ne peut pas remorquer %1)</French>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_HOOK">
                 <Original>Interact with a vehicle to tow it!</Original>
