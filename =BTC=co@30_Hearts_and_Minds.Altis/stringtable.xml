@@ -1286,7 +1286,7 @@
                 <German>Ein Unterwassergenerator wurde in der Nähe von %1 aufgeklärt. Die zivile Bevölkerung bittet um die Zerstörung des Aggregats!</German>
                 <Portuguese>O gerador subaquático foi localizado em %1. A população local está pedindo sua ajuda para destruí-lo!</Portuguese>
                 <Chinesesimp>%1 地区发现了一部水下发电机。当地居民请求您将其摧毁。</Chinesesimp>
-                <French>Un générateur sous-marin a été localisé dans %1. La population locale demande votre aide pour le détruire!</French>
+                <French>Un générateur sous-marin a été localisé dans %1. La population locale demande votre aide pour le détruire !</French>
             </Key>
         </Container>
         <Container name="Vehicle">
