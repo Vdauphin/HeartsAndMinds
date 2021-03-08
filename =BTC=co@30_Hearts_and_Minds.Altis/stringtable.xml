@@ -1939,7 +1939,7 @@
                 <German>Raus aus meinem Auto! Du bist hier nicht willkommen.</German>
                 <Portuguese>Saia do meu carro! Você não é bem-vindo.</Portuguese>
                 <Chinesesimp>滚出我的车, 这里不欢迎你。</Chinesesimp>
-                <French>Sors de ma voiture! Tu n'es pas le bienvenu.</French>
+                <French>Sors de ma voiture ! Tu n'es pas le bienvenu.</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_NEG3">
                 <Original>I am not a taxi driver!</Original>
