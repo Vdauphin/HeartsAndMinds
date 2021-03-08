@@ -723,7 +723,7 @@
                 <German>BIS - Vanilla und ACE 3 (Maus-Rad-Menü)</German>
                 <Portuguese>BIS - Vanilla e ACE 3 (rolando botão do meio do mouse)</Portuguese>
                 <Chinesesimp>BIS - 原版 和 ACE 3 (鼠标滚轮动作菜单)</Chinesesimp>
-                <French>BIS - Vanilla and ACE 3 (action sur la roulette de souris)</French>
+                <French>BIS - Vanilla et ACE 3 (action sur la roulette de souris)</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR">
                 <Original>Restrict arsenal (See /define_mod.sqf):</Original>
