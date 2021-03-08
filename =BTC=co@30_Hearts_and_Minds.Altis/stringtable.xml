@@ -2354,7 +2354,7 @@
                 <German>Interagieren Sie mit dem Zug-Fahrzeug, um es abzuschleppen!</German>
                 <Portuguese>Interaja com o veículo para rebocá-lo!</Portuguese>
                 <Chinesesimp>与牵引车(前车)互动以牵引它!</Chinesesimp>
-                <French>Interagissez avec un véhicule pour le remorquer!</French>
+                <French>Interagissez avec un véhicule pour le remorquer !</French>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_TFAR">
                 <Original>Too far!</Original>
