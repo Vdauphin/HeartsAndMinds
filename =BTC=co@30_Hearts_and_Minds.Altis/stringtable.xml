@@ -1342,7 +1342,7 @@
                 <Original>Kill %1</Original>
                 <German>Töte %1</German>
                 <Chinesesimp>杀死 %1</Chinesesimp>
-                <French>Tué %1</French>
+                <French>Tuez %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_DESC">
                 <Original>Kill %1 in %2.</Original>
