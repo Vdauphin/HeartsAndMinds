@@ -2130,7 +2130,7 @@
                 <German>Informationen über ein Versteck gefunden!</German>
                 <Portuguese>Informação sobre esconderijo encontrada!</Portuguese>
                 <Chinesesimp>发现了关于藏匿点的情报!</Chinesesimp>
-                <French>Intel à propos d'une planque trouvée!</French>
+                <French>Intel à propos d'une planque trouvée !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
                 <Original>In the last hideout we found important intel about all the cities occupied by the Oplitas! Size the last positions held by the enemies and defeat them once and for all</Original>
