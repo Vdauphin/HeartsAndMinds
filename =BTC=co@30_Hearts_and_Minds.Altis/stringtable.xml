@@ -1056,7 +1056,7 @@
                 <German>Verteidigt das Terminal, bis die Rakete gehackt erfolgreich gehackt ist!</German>
                 <Portuguese>Defenda o terminal até que o míssil seja hackeado!</Portuguese>
                 <Chinesesimp>保护终端, 直到导弹系统被成功入侵!</Chinesesimp>
-                <French>Défendez le terminal jusqu'à ce que le missile soit piraté!</French>
+                <French>Défendez le terminal jusqu'à ce que le missile soit piraté !</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_ACEACTION">
                 <Original>Start Hacking</Original>
