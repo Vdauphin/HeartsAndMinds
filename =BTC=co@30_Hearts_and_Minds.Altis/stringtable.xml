@@ -1923,7 +1923,7 @@
                 <German>Der Zielort muss an Land sein.</German>
                 <Portuguese>A área selecionada deve ser em terra.</Portuguese>
                 <Chinesesimp>所选区域必须在陆地上。</Chinesesimp>
-                <French>La zone sélectionnée doit être au niveau du sol.</French>
+                <French>La zone sélectionnée doit être sur terre.</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_NEG1">
                 <Original>I hate you! Get out!</Original>
