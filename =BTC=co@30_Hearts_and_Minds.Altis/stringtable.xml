@@ -1152,7 +1152,7 @@
                 <German>MAYDAY-MAYDAY, ein Pilot stürzte mit seinem Helikopter in der Nähe von %1 ab. Sie haben den Befehl ihn zu retten und sicher zur Basis zurückzubringen!</German>
                 <Portuguese>MAYDAY-MAYDAY, um piloto caiu com seu helicóptero próximo a %1. O comando solicitou sua ajuda para resgatá-lo e trazê-lo de volta a base!</Portuguese>
                 <Chinesesimp>MAYDAY-MAYDAY, 一架直升机在 %1 附近坠毁。指挥部正在请求你的帮助。前去搜救这名飞行员, 并将其带回基地!</Chinesesimp>
-                <French>MAYDAY-MAYDAY, un pilote a écrasé son hélicoptère près de %1. Le commandement demande votre aide pour secourir et le ramener à la base!</French>
+                <French>MAYDAY-MAYDAY, un pilote a écrasé son hélicoptère près de %1. Le commandement demande votre aide pour secourir et le ramener à la base !</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_DESC">
                 <Original>Find the pilot of the helicopter. It should be around the helicopter wreck.</Original>
