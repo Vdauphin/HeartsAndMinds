@@ -2209,7 +2209,7 @@
                 <German>Befehle (Zivilisten): Stopp!</German>
                 <Portuguese>Ordem ao civil: Pare!</Portuguese>
                 <Chinesesimp>命令平民: 站住!</Chinesesimp>
-                <French>Ordre civil: halte!</French>
+                <French>Ordre civil: halte !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_SHORTC_STOP_NOTE">
                 <Original>Order a civilian to stop</Original>
