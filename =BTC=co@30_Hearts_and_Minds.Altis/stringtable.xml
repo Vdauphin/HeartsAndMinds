@@ -1416,7 +1416,7 @@
                 <Original>Clean contaminated objects</Original>
                 <German>Kontaminierte Objekte reinigen</German>
                 <Chinesesimp>清理受污染的物体</Chinesesimp>
-                <French>Nettoyer les objets contaminés</French>
+                <French>Nettoyez les objets contaminés</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_MOVE_DESC">
                 <Original>Load contaminated objects in containers. Move the container or objects inside a big shower. Note: you can load this container inside a vehicle and move the vehicle under the shower. This clean up the vehicle, crew and cargo.</Original>
