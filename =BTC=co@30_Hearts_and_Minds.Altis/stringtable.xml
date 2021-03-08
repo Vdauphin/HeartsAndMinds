@@ -1811,7 +1811,7 @@
                 <German>Ich habe Ihnen bereits alles gesagt!</German>
                 <Portuguese>Eu já respondi a sua pergunta!</Portuguese>
                 <Chinesesimp>我已经回答过你的问题了!</Chinesesimp>
-                <French>J'ai déjà répondu à votre question!</French>
+                <French>J'ai déjà répondu à votre question !</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_NOINFO">
                 <Original>I've no information for you</Original>
