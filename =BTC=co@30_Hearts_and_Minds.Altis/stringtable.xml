@@ -1819,7 +1819,7 @@
                 <German>Ich habe keine Informationen für Sie.</German>
                 <Portuguese>Eu não tenho informações para você</Portuguese>
                 <Chinesesimp>我没有你要的情报</Chinesesimp>
-                <French>Je n'ai aucune information pour toi zeubi</French>
+                <French>Je n'ai aucune information pour toi</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_CACHEMAP">
                 <Original>I'll show you some hint on the map</Original>
