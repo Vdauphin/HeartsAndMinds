@@ -1260,7 +1260,7 @@
                 <German>Ein Funkturm der Oplitas befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
                 <Portuguese>A torre de comunicação inimiga foi localizada em %1. A população local está pedindo sua ajuda para destruí-las. (Use a mochila de explosivos M183)</Portuguese>
                 <Chinesesimp>%1 地区发现了一座 Oplitas 通讯信号塔。当地居民请求您将其摧毁。(使用一个M183炸药包)</Chinesesimp>
-                <French>Une tour de communication Oplitas a été localisée dans %1. La population locale demande votre aide pour le détruire! (Utilisez une sacoche explosive M183)</French>
+                <French>Une tour de communication Oplitas a été localisée dans %1. La population locale demande votre aide pour le détruire ! (Utilisez une sacoche explosive M183)</French>
             </Key>
         </Container>
         <Container name="Underwater generator">
