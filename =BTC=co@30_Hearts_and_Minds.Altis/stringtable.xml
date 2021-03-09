@@ -2176,7 +2176,7 @@
                 <Original>We got a picture of the building where the cache is:</Original>
                 <German>Wir haben ein Bild von dem Gebäude, in dem sich das Waffenlager befinden soll:</German>
                 <Chinesesimp>我们有一张武器箱所在房屋的照片:</Chinesesimp>
-                <French>Nous avons une photo du bâtiment où se trouve la cache d'arme:</French>
+                <French>Nous avons une photo du bâtiment où se trouve la cache d'arme :</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_15">
                 <Original>We got a picture of the something around the cache:</Original>
