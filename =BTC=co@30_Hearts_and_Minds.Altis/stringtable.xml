@@ -2182,7 +2182,7 @@
                 <Original>We got a picture of the something around the cache:</Original>
                 <German>Wir haben ein Bild von der näheren Umgebung des Waffenlagers:</German>
                 <Chinesesimp>我们有一张武器箱所在地的照片:</Chinesesimp>
-                <French>Nous avons une image de quelque chose autour de la cache d'arme:</French>
+                <French>Nous avons une image de quelque chose autour de la cache d'arme :</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_TASK_NOSIDE">
                 <Original>No side mission assigned</Original>
