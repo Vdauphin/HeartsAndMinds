@@ -129,8 +129,8 @@ _action = ["Civil_Go_away", localize "STR_BTC_HAM_ACTION_ORDERS_GOAWAY", "\A3\ui
     [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
     _action = ["Ask_Reputation", localize "STR_BTC_HAM_ACTION_ORDERS_ASKREP", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {[_target] spawn btc_fnc_info_ask_reputation;}, {alive _target && {[_target] call ace_common_fnc_isAwake} && {side _target isEqualTo civilian}}] call ace_interact_menu_fnc_createAction;
     [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-    _action = ["Give_WaterBottle", "Donnez une bouteille d'eau", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
-    [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+    _action = ["Give_banana", "Donnez une banane", "\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa", {if([player, "ACE_Banana"] call CBA_fnc_removeItem)then {systemChat "merci"}}, {true}] call ace_interact_menu_fnc_createAction;
+    [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass; // https://cbateam.github.io/CBA_A3/docs/files/common/fnc_addItem-sqf.html#CBA_fnc_addItem
     
 
     //remove ace3 "get down" order
