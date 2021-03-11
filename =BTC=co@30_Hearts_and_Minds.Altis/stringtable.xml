@@ -2162,7 +2162,7 @@
                 <German>Spiel wurde gespeichert!</German>
                 <Portuguese>Jogo salvo com sucesso!</Portuguese>
                 <Chinesesimp>游戏已保存!</Chinesesimp>
-                <French>Le partie a été enregistrée !</French>
+                <French>La partie a été enregistrée !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_10">
                 <Original>Database deleted!</Original>
