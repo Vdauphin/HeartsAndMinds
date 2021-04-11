@@ -1,6 +1,6 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+loadScreen = "core\img\sof.jpg";
+author = "Vdauphin / Canprod / Tony4298";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
