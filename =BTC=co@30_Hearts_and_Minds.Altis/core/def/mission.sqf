@@ -510,7 +510,7 @@ if (isServer) then {
             [
                 //"Vehicle logistic"
                 "ACE_Wheel",
-                "ACE_Track"
+                "ACE_Track",
                 "Land_CanisterFuel_F"
             ]
         ] + _rearming_magazines
