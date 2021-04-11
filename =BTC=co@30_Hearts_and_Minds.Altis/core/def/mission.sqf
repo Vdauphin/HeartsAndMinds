@@ -453,6 +453,11 @@ if (isServer) then {
         [
             [
                 //"Fortifications"
+                "UK3CB_BAF_Static_L111A1_Deployed_High",
+                "UK3CB_BAF_Static_L134A1_Deployed_High",
+                "UK3CB_BAF_Static_L7A2_Deployed_High",
+                "UK3CB_BAF_Static_L16_Deployed_High",
+                "UK3CB_UN_B_Kornet",
                 "Land_BagBunker_Small_F",
                 "Land_BagFence_Corner_F",
                 "Land_BagFence_End_F",
@@ -506,6 +511,7 @@ if (isServer) then {
                 //"Vehicle logistic"
                 "ACE_Wheel",
                 "ACE_Track"
+                "Land_CanisterFuel_F"
             ]
         ] + _rearming_magazines
     ];
