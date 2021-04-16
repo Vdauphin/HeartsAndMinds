@@ -27,15 +27,15 @@ params [
 ];
 
 if !([_tower, _vehicleSelected] call btc_fnc_tow_check) exitWith {};
-private _allReadyLoaded = (getVehicleCargo _tower) findIf {isObjectHidden _x} isEqualTo -1;
+private _alreadyLoaded = (getVehicleCargo _tower) findIf {isObjectHidden _x} isEqualTo -1;
 if (
     _allReadyLoaded &&
     {_tower setVehicleCargo _vehicleSelected}
 ) exitWith {};
 
 private _canViV_wreck = false;
-if (_allReadyLoaded) then {
-    private _fakeVehicle = "Land_WaterTank_F" createVehicleLocal [0, 0, 0];
+if (_alreadyLoaded) then {
+    private _fakeVehicle = "Land_Shoot_House_Tunnel_Stand_F" createVehicleLocal [0, 0, 0];
     _canViV_wreck = _tower canVehicleCargo _fakeVehicle isEqualTo [true, true];
     deleteVehicle _fakeVehicle;
 };

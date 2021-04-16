@@ -28,7 +28,7 @@ params [
 
 if (_tower setVehicleCargo _vehicleSelected) exitWith {true};
 
-private _hideVehicle = createVehicle ["Land_WaterTank_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+private _hideVehicle = createVehicle ["Land_Shoot_House_Tunnel_Stand_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 _hideVehicle hideObjectGlobal true;
 
 private _model_selected = (0 boundingBoxReal _vehicleSelected) select 1;
