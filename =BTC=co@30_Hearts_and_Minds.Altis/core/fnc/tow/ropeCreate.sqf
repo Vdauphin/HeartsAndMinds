@@ -35,7 +35,7 @@ if (
 
 private _canViV_wreck = false;
 if (_alreadyLoaded) then {
-    private _fakeVehicle = "Land_Shoot_House_Tunnel_Stand_F" createVehicleLocal [0, 0, 0];
+    private _fakeVehicle = "B_LSV_01_unarmed_F" createVehicleLocal [0, 0, 0];
     _canViV_wreck = _tower canVehicleCargo _fakeVehicle isEqualTo [true, true];
     deleteVehicle _fakeVehicle;
 };
