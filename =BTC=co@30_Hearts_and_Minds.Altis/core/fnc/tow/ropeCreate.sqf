@@ -29,7 +29,7 @@ params [
 if !([_tower, _vehicleSelected] call btc_fnc_tow_check) exitWith {};
 private _alreadyLoaded = (getVehicleCargo _tower) findIf {isObjectHidden _x} isEqualTo -1;
 if (
-    _allReadyLoaded &&
+    _alreadyLoaded &&
     {_tower setVehicleCargo _vehicleSelected}
 ) exitWith {};
 

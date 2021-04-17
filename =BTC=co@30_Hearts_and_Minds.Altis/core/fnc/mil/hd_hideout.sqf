@@ -44,7 +44,6 @@ if (
     {_damage > 0.6}
 ) then {
     _hideout setVariable ["btc_fnc_mil_hd_hideout_fired", true];
-    
     btc_hideouts deleteAt (btc_hideouts find _hideout);
     publicVariable "btc_hideouts";
 

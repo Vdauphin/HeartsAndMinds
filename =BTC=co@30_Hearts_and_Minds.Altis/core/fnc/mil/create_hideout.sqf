@@ -81,7 +81,9 @@ if (btc_debug) then {deleteMarker format ["loc_%1", _id];};
 deleteVehicle (_city getVariable ["trigger_player_side", objNull]);
 
 [_pos, btc_hideouts_radius, _city, _city getVariable "occupied", _city getVariable "name", _city getVariable "type", _city getVariable "id"] call btc_fnc_city_trigger_player_side;
-_pos findEmptyPositionReady [0, _city getVariable ["radius", 100]];
+[{
+    (_this select 0) findEmptyPositionReady (_this select 1)
+}, {}, [_pos, [0, _city getVariable ["radius", 100]]], 5 * 60] call CBA_fnc_waitUntilAndExecute;
 
 private _hideout = [_pos] call btc_fnc_mil_create_hideout_composition;
 clearWeaponCargoGlobal _hideout;

@@ -27,7 +27,6 @@ params [
 ];
 
 private _simulation = createVehicle ["Box_EAF_AmmoVeh_F", getPosATL _cargo, [], 0, "CAN_COLLIDE"];
-_simulation enableSimulation false;
 (getPosATL _cargo) params ["_x", "_y", "_z"];
 _simulation setPosATL [_x, _y, [_z, 0] select (_z < -0.05)];
 _simulation setDir getDir _cargo;
@@ -40,18 +39,9 @@ _chopper addEventHandler ["RopeBreak", {
 
     _object1 removeEventHandler ["RopeBreak", _thisEventHandler];
     btc_lifted = false;
-    {
-        detach _x;
-        _x setVectorUp surfaceNormal getPosATL _x;
-        (getPosATL _x) params ["_xx", "_yy", "_zz"];
-        if (_zz < -0.05) then {
-            _x setPosATL [_xx, _yy, 0];
-        };
-    } forEach attachedObjects _object2;
     deleteVehicle _object2;
 }];
 
-_simulation enableSimulation true;
 clearWeaponCargoGlobal _simulation;
 clearItemCargoGlobal _simulation;
 clearMagazineCargoGlobal _simulation;

@@ -38,21 +38,23 @@ for "_id" from 0 to (count _locations - 1) do {
 
     if (_type in _cities) then {
         private _position = getArray (_current >> "position");
-        if (surfaceIsWater _position) then {
-            if !(_type isEqualTo "NameMarine") then {
-                private _church = nearestTerrainObjects [_position, ["CHURCH"], 470];
-                if (_church isEqualTo []) then {
-                    private _area = 50;
-                    for "_i" from 0 to 3 do {
-                        private _new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
-                        if (count _new_position isEqualTo 2) exitWith {
-                            _position = _new_position;
-                        };
-                        _area = _area * 2;
+        if (
+            surfaceIsWater _position &&
+            {!(_type isEqualTo "NameMarine")} &&
+            {getTerrainHeightASL _position < - 1}
+        ) then {
+            private _church = nearestTerrainObjects [_position, ["CHURCH"], 470];
+            if (_church isEqualTo []) then {
+                private _area = 50;
+                for "_i" from 0 to 3 do {
+                    private _new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
+                    if (count _new_position isEqualTo 2) exitWith {
+                        _position = _new_position;
                     };
-                } else {
-                    _position = getPos (_church select 0);
+                    _area = _area * 2;
                 };
+            } else {
+                _position = getPos (_church select 0);
             };
         };
         private _name = getText(_current >> "name");

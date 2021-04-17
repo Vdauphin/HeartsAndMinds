@@ -53,7 +53,9 @@ if (btc_p_sea) then {
     _city setVariable ["hasbeach", ((selectBestPlaces [_position, 0.8 * _radius, "sea", 10, 1]) select 0 select 1) isEqualTo 1];
 };
 
-_position findEmptyPositionReady [0, _radius];
+[{
+    (_this select 0) findEmptyPositionReady (_this select 1)
+}, {}, [_position, [0, _radius]], 5 * 60] call CBA_fnc_waitUntilAndExecute;
 
 btc_city_all set [_id, _city];
 [_position, _radius, _city, _has_en, _name, _type, _id] call btc_fnc_city_trigger_player_side;
