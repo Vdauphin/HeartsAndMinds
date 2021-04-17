@@ -479,7 +479,10 @@ if (isServer) then {
                 "Land_Mil_WallBig_Corner_F",
                 "Land_PortableLight_double_F",
                 "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "B_Slingload_01_Fuel_F",
+                "Land_HBarrierTower_F",
+                "Land_HBarrierWall_corner_F",
+                "Land_HBarrierWall6_F"
             ],
             _rearming_static + _magazines_static,
             [

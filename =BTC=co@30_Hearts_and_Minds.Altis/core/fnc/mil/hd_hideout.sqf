@@ -38,7 +38,13 @@ params [
 
 private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
 
-if (_explosive && {_damage > 0.6}) then {
+if (
+    _explosive &&
+    {!(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false])} &&
+    {_damage > 0.6}
+) then {
+    _hideout setVariable ["btc_fnc_mil_hd_hideout_fired", true];
+    
     btc_hideouts deleteAt (btc_hideouts find _hideout);
     publicVariable "btc_hideouts";
 

@@ -31,7 +31,7 @@ Author:
 
         private _l = createVehicle [_type, getPosATL _obj, [], 0, "CAN_COLLIDE"];
         [_l] call btc_fnc_log_init;
-        private _isloaded = [_l, _obj] call ace_cargo_fnc_loadItem;
+        private _isloaded = [_l, _obj, false] call ace_cargo_fnc_loadItem;
         if (btc_debug_log) then {
             [format ["Object loaded: %1 in veh/container %2 IsLoaded: %3", _l, _obj, _isloaded], __FILE__, [false]] call btc_fnc_debug_message;
         };
@@ -50,4 +50,4 @@ Author:
 
     //set inventory content for weapons, magazines and items
     [_obj, _inventory] call btc_fnc_log_setCargo;
-}, _this] call CBA_fnc_waitAndExecute;
+}, _this, 0.1] call CBA_fnc_waitAndExecute;
