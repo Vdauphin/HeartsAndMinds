@@ -2369,16 +2369,6 @@
                 <Chinesesimp>这辆载具已经连接一辆载具了!</Chinesesimp>
                 <French>Ce véhicule est déjà attaché à un autre !</French>
             </Key>
-            <Key ID="STR_BTC_HAM_TOW_WAIT">
-                <Original>Towing in progress, please wait...</Original>
-                <Chinesesimp>正在拖车, 请稍后...</Chinesesimp>
-                <French>Remorquage en cours, veuillez patienter...</French>
-            </Key>
-            <Key ID="STR_BTC_HAM_TOW_DONE">
-                <Original>Towing done</Original>
-                <Chinesesimp>拖车完成</Chinesesimp>
-                <French>Remorquage terminé</French>
-            </Key>
         </Container>
         <Container name="Logistic: Lift deploy ropes ">
             <Key ID="STR_BTC_HAM_LOG_LDR_ACTIONHUD">

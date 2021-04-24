@@ -26,7 +26,7 @@ params [
     ["_chopper", objNull, [objNull]]
 ];
 
-private _simulation = createVehicle ["Box_EAF_AmmoVeh_F", getPosATL _cargo, [], 0, "CAN_COLLIDE"];
+private _simulation = createVehicle ["Land_Pod_Heli_Transport_04_box_F", getPosATL _cargo, [], 0, "CAN_COLLIDE"];
 (getPosATL _cargo) params ["_x", "_y", "_z"];
 _simulation setPosATL [_x, _y, [_z, 0] select (_z < -0.05)];
 _simulation setDir getDir _cargo;

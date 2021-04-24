@@ -39,27 +39,16 @@ if ((_array findIf {_towed isKindOf _x}) != -1) exitWith {
     false
 };
 
-private _model_rear = ([_tower] call btc_fnc_tow_hitch_points) select 1;
-private _dirSelected = getDir _towed;
-private _model_selected = (0 boundingBoxReal _towed) select 1;
-private _model_front_selected = ([_towed] call btc_fnc_log_get_corner_points) select 2;
-private _offset = if (_model_selected select 1 > 3.06) then {
-    (_model_selected select 1) - 3.06
-} else {
-    (_model_front_selected select 1) - (_model_selected select 1)
-};
-private _posFlat = _towed getPos [_offset + 3 /*size of Truck_01_Rack_F*/, _dirSelected];
-_posFlat set [2, 0.2 + ((getPosATL _towed) select 2)];
-private _distance = _posFlat distance (_tower modelToWorld _model_rear);
-private _distanceTowed = _towed distance (_tower modelToWorld _model_rear);
+private _model_rear_tower = ([_tower] call btc_fnc_tow_hitch_points) select 1;
+private _model_front_towed = ([_towed] call btc_fnc_tow_hitch_points) select 0;
+private _pos_rearTower = _tower modelToWorld _model_rear_tower;
+private _pos_frontTowed = _towed modelToWorld _model_front_towed;
 
-private _safeDistance = [_distance > 1.3, _distance < [5, 24] select (_tower isKindOf "Ship")];
-if (_safeDistance isEqualTo [true, false]) exitWith {
+if (
+        _pos_rearTower distance _pos_frontTowed < 5 &&
+        {!([_pos_rearTower, ((getDir _tower) + 180) mod 360, 100, _pos_frontTowed] call BIS_fnc_inAngleSector)}
+) exitWith {
     (localize "STR_BTC_HAM_TOW_TFAR") call CBA_fnc_notify;
-    false
-};
-if (_distanceTowed < _offset + 3 || _safeDistance isEqualTo [false, true]) exitWith {
-    (localize "str_a3_showcase_vtol_x11_taruclose_xia_0") call CBA_fnc_notify;
     false
 };
 
