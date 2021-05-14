@@ -127,9 +127,11 @@ btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep", _
 btc_vehicles = [];
 
 private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []]);
-{
-    [_x] call btc_fnc_db_loadObjectStatus;
-} forEach _objs;
+[{ // Can't use ace_cargo for objects created during first frame.
+    {
+        [_x] call btc_fnc_db_loadObjectStatus;
+    } forEach _this;
+}, _objs] call CBA_fnc_execNextFrame;
 
 //VEHICLES
 private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name], []]);

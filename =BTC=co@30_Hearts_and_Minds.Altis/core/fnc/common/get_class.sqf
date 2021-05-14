@@ -59,6 +59,9 @@ private _alldlc = [];
                 _dlc = (_allfaction select _index) select [0, (_allfaction select _index) find "_"];
             };
         };
+        if (count _dlc isEqualTo 1) then {
+            _dlc = "";
+        };
         _alldlc pushBack _dlc;
     };
 } forEach _allvehicles;
@@ -66,21 +69,37 @@ private _alldlc = [];
 //Create an array of all information get
 private _all = [];
 {
-    _all pushBack [_alldlc select _foreachindex, _x, _allside select _foreachindex, _allauthor select _foreachindex];
-} forEach _allfaction;
+    if ( //Select faction depending on side CIV or Enemy
+        (_allside select _foreachindex) in _faction_list &&
+        (getNumber (_cfgFactionClasses >> _alldlc select _foreachindex >> "side") in [0, 1, 2, 3])
+    ) then {
 
-//Select faction depending on side CIV or Enemy
-_all = _all select {(_x select 2) in _faction_list && (getNumber(_cfgFactionClasses >> _x select 0 >> "side") in [0, 1, 2, 3])};
+        //Return the text usefull in param.hpp
+        private _factionInfo = format [
+            "%1: %2 (Side: %3)",
+            _allauthor select _foreachindex,
+            getText (_cfgFactionClasses >> _x >> "displayName"),
+            [East, West, Independent, Civilian] select (_allside select _foreachindex)
+        ];
+
+        if ((_alldlc select _foreachindex) isNotEqualTo "") then {
+            _factionInfo = format [
+                "%1 %2",
+                _alldlc select _foreachindex,
+                _factionInfo
+            ];
+        };
+
+        _all pushBack [_factionInfo, _alldlc select _foreachindex, _x, _allside select _foreachindex, _allauthor select _foreachindex];
+    };
+} forEach _allfaction;
 _all sort true;
 
-//Return the text which be use in param.hpp
-private _texts = _all apply {format ["%3 %4: %1 (Side: %2)", getText(_cfgFactionClasses >> _x select 1 >> "displayName"), [East, West, Independent, Civilian] select (_x select 2), _x select 0, _x select 3]};
-
-_allauthor = _all apply {_x select 0};
+_alldlc = _all apply {_x select 1};
 private _values = [];
 for "_i" from 0 to (count _all) - 1 do {
     _values pushBack _i;
 };
-_texts = _values apply {format ["%1 -%2", _x, _texts select _x]};
+_texts = _values apply {format ["%1 - %2", _x, (_all select _x) select 0]};
 
-[_allauthor arrayIntersect _allauthor, _texts, _all apply {_x select 1}, _values]
+[_alldlc arrayIntersect _alldlc, _texts, _all apply {_x select 2}, _values]

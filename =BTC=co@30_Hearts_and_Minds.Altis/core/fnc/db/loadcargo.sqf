@@ -50,4 +50,4 @@ Author:
 
     //set inventory content for weapons, magazines and items
     [_obj, _inventory] call btc_fnc_log_setCargo;
-}, _this, 0.1] call CBA_fnc_waitAndExecute;
+}, _this] call CBA_fnc_execNextFrame;
