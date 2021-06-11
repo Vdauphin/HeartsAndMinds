@@ -1,12 +1,12 @@
 <p align="center">
     <img src="https://data.bistudio.com/assets/img/badges/medal/MWFMP.png" width="85">
-    <img src="http://www.armaholic.com/datas/users/btc_revive_a3_4.png" width="210">
+    <img src="https://user-images.githubusercontent.com/14364400/120066018-bd52ed80-c074-11eb-87d6-61cdeada32f8.png" width="210">
     <img src="https://data.bistudio.com/assets/img/badges/medal/MWFMP.png" width="85">
 </p>
 
 <p align="center">
-    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.21.3">
-        <img src="https://img.shields.io/badge/Version-1.21.3-blue.svg?style=flat-square" alt="H&M Version">
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.21.4">
+        <img src="https://img.shields.io/badge/Version-1.21.4-blue.svg?style=flat-square" alt="H&M Version">
     </a>
     <a href="https://somsubhra.github.io/github-release-stats/?username=vdauphin&repository=HeartsAndMinds&page=1&per_page=300">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">

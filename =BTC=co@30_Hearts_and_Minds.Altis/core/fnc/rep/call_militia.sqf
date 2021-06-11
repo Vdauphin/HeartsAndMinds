@@ -32,7 +32,7 @@ private _players = if (isMultiplayer) then {playableUnits} else {switchableunits
 private _start_pos = objNull;
 private _hideouts = btc_hideouts inAreaArray [_pos, 2000, 2000];
 if !(_hideouts isEqualTo []) then {
-    _hideouts = _hideouts select {_players inAreaArray [getPosWorld _hideout, 500, 500] isEqualTo []};
+    _hideouts = _hideouts select {_players inAreaArray [getPosWorld _x, 500, 500] isEqualTo []};
     if !(_hideouts isEqualTo []) then {_start_pos = selectRandom _hideouts};
 };
 

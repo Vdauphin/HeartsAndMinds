@@ -1,5 +1,5 @@
 
-btc_version = [1, 21, 3];
+btc_version = [1, 21, 4];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
 //Param
@@ -131,7 +131,7 @@ if (isServer) then {
     btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
 
     //Hideout
-    btc_hideouts = [];
+    btc_hideouts = []; publicVariable "btc_hideouts";
     btc_hideouts_id = 0;
     btc_hideouts_radius = 800;
     btc_hideout_n = _hideout_n;

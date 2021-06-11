@@ -72,7 +72,7 @@ for "_i" from 0 to (1 + round random 2) do {
         if (random 1 > 0.5) then {
             private _direction = random 360;
             private _statics = btc_type_gl + btc_type_mg;
-            [_pos getPos [5, _direction], _statics, _direction] call btc_fnc_mil_create_static;
+            [_pos getPos [5, _direction], _statics, _direction, [], _city] call btc_fnc_mil_create_static;
         };
     };
 

@@ -79,10 +79,10 @@ for "_i" from 1 to (1 + round random 2) do {
     //// Create checkpoint with static at _pos \\\\
     _pos params ["_x", "_y", "_z"];
     private _posStatic = [_x -2.39185*cos(-_direction) - 2.33984*sin(-_direction), _y  + 2.33984 *cos(-_direction) -2.39185*sin(-_direction), _z];
-    [_posStatic, _statics, _direction + 180] call btc_fnc_mil_create_static;
+    [_posStatic, _statics, _direction + 180, [], _city] call btc_fnc_mil_create_static;
 
     private _posStatic = [_x + 2.72949*cos(-_direction) - -2.03857*sin(-_direction), _y -2.03857*cos(-_direction) +2.72949*sin(-_direction), _z];
-    [_posStatic, _statics, _direction] call btc_fnc_mil_create_static;
+    [_posStatic, _statics, _direction, [], _city] call btc_fnc_mil_create_static;
 
     _composition append ([_pos, _direction, _composition_checkpoint] call btc_fnc_create_composition);
 
