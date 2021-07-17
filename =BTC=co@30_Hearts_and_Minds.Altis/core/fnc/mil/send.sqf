@@ -41,12 +41,10 @@ switch (_typeOf_patrol) do {
     case 0 : {
         _group = ([_pos, 150, 3 + round random 6, 1] call btc_mil_fnc_create_group) select 0;
         _group setVariable ["no_cache", true];
-        [_group] call CBA_fnc_clearWaypoints;
     };
     case 1 : {
         _group = createGroup btc_enemy_side;
         _group setVariable ["no_cache", true];
-        [_group] call CBA_fnc_clearWaypoints;
 
         if (_veh_type isEqualTo "") then {_veh_type = selectRandom btc_type_motorized};
         private _return_pos = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos;
@@ -58,6 +56,7 @@ switch (_typeOf_patrol) do {
 [{
     params ["_group", "_typeOf_patrol", "_dest", "_infFormation"];
 
+    [_group] call CBA_fnc_clearWaypoints;
     switch (_typeOf_patrol) do {
         case 0 : {
             [_group, _dest, -1, "MOVE", "AWARE", "RED", "FULL", _infFormation, "(group this) call btc_data_fnc_add_group;", nil, 60] call CBA_fnc_addWaypoint;

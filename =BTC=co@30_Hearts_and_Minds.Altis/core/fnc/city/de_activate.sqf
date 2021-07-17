@@ -117,9 +117,7 @@ if !(_city getVariable ["active", false]) exitWith {};
     _city setVariable ["data_tags", _data_tags];
     _city setVariable ["active", false];
 
-    if (!btc_hideout_cap_checking) then {
-        [] call btc_mil_fnc_check_cap;
-    };
+    [] call btc_mil_fnc_check_cap;
 
     [] call btc_city_fnc_cleanUp;
 
