@@ -26,11 +26,12 @@ params [
     ["_radius", 100, [0]]
 ];
 
-private _structures = (nearestTerrainObjects [_pos, ["House", "BUNKER", "FORTRESS"], _radius]) select {getText(configOf _x >> "editorSubcategory") isEqualTo "EdSubcat_Military"};
-
-private _useful = _structures select {(
+private _objects = nearestTerrainObjects [_pos, ["House", "BUNKER", "FORTRESS", "TRANSMITTER"], _radius];
+private _objects = _objects select {
     (_x buildingPos -1) isNotEqualTo [] &&
     {damage _x isEqualTo 0}
-)};
+};
 
-_useful
+private _structures = _objects select {getText (configOf _x >> "editorSubcategory") isEqualTo "EdSubcat_Military"};
+
+[_structures, _objects]

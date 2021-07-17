@@ -66,8 +66,8 @@ private _storagebladder = (selectRandom btc_type_storagebladder) createVehicle [
 
 [_taskID, 11, _generator, [_city getVariable "name", typeOf _generator]] call btc_task_fnc_create;
 
-private _group = [_pos, 8, 1 + round random 5,0.8] call btc_mil_fnc_create_group;
-[_pos, 20, 2 + round random 4, 0.5] call btc_mil_fnc_create_group;
+private _group = [_pos, 8, 1 + round random 5, 1] call btc_mil_fnc_create_group;
+[_pos, 20, 2 + round random 4, 1] call btc_mil_fnc_create_group;
 
 _pos = getPosASL _generator;
 (leader (_group select 0)) setPosASL [_x, _y, _z + 1 + random 1];

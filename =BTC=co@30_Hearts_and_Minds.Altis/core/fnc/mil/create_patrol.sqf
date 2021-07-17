@@ -76,7 +76,7 @@ private _delay = switch (_random) do {
     case 1 : {
         _pos = [_pos, 0, 150, 10, false] call btc_fnc_findsafepos;
 
-        [_group, _pos, 5 + (round random 8)] call btc_mil_fnc_createUnits;
+        [_group, _pos, 5 + (round random 4)] call btc_mil_fnc_createUnits;
         0
     };
     case 2 : {

@@ -13,7 +13,6 @@ Parameters:
     _p_animals_group_ratio - Animal density. [Number]
     _p_civ_max_veh - Maximum number of civilian patrol. [Number]
     _p_patrol_max - Maximum number of enemy patrol. [Number]
-    _wp_ratios - Ratio of spawned group in and out houses. [Array]
 
 Returns:
 
@@ -34,10 +33,8 @@ params [
     ["_p_civ_group_ratio", btc_p_civ_group_ratio, [0]],
     ["_p_animals_group_ratio", btc_p_animals_group_ratio, [0]],
     ["_p_civ_max_veh", btc_p_civ_max_veh, [0]],
-    ["_p_patrol_max", btc_p_patrol_max, [0]],
-    ["_wp_ratios", btc_p_mil_wp_ratios, [[]]]
+    ["_p_patrol_max", btc_p_patrol_max, [0]]
 ];
-_wp_ratios params ["_wp_house", "_wp_sentry"];
 
 private _city = btc_city_all select _id;
 if (_city getVariable "activating") exitWith {};
@@ -61,20 +58,20 @@ private _spawningRadius = _cachingRadius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
     private _ratio = (switch _type do {
-        case "Hill" : {random 1};
-        case "VegetationFir" : {random 1};
-        case "BorderCrossing" : {random 2};
-        case "NameLocal" : {random 2.5};
-        case "StrongpointArea" : {random 3};
-        case "NameVillage" : {random 3.5};
-        case "NameCity" : {random 5};
-        case "NameCityCapital" : {random 6};
+        case "Hill" : {1};
+        case "VegetationFir" : {1};
+        case "BorderCrossing" : {2};
+        case "NameLocal" : {2.5};
+        case "StrongpointArea" : {3};
+        case "NameVillage" : {3.5};
+        case "NameCity" : {5};
+        case "NameCityCapital" : {6};
         case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
     });
 
-    private _ratio_ied = _ratio;
+    private _ratio_ied = random _ratio;
     if (_has_en) then {
         _ratio_ied = _ratio_ied * 1.5;
     } else {
@@ -104,23 +101,30 @@ if (_data_units isNotEqualTo []) then {
     } forEach _data_units;
 } else {
     // Maximum number of enemy group
-    private _max_number_group = (switch _type do {
-        case "Hill" : {1};
-        case "VegetationFir" : {1};
-        case "BorderCrossing" : {2};
-        case "NameLocal" : {2};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3};
-        case "NameCity" : {7};
-        case "NameCityCapital" : {15};
-        case "Airport" : {15};
-        case "NameMarine" : {1};
+    private _numberOfGroup = (switch _type do {
+        case "Hill" : {3};
+        case "VegetationFir" : {3};
+        case "BorderCrossing" : {5};
+        case "NameLocal" : {5};
+        case "StrongpointArea" : {6};
+        case "NameVillage" : {6};
+        case "NameCity" : {12};
+        case "NameCityCapital" : {24};
+        case "Airport" : {24};
+        case "NameMarine" : {3};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
-            [_city, _spawningRadius, 1 + round random 2, random 1] call btc_mil_fnc_create_group;
+        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup;
+        private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
+        for "_i" from 1 to round _finalNumberOfGroup do {
+            [
+                _city,
+                [_spawningRadius, _spawningRadius/3] select (_i <= _numberOfHouseGroup),
+                2 + round random 1,
+                [[1,2] selectRandomWeighted [0.7, 0.3], 0] select (_i <= _numberOfHouseGroup)
+            ] call btc_mil_fnc_create_group;
         };
     };
 
@@ -128,22 +132,22 @@ if (_data_units isNotEqualTo []) then {
         private _houses = [_city, _spawningRadius/3] call btc_city_fnc_getHouses;
 
         if (_has_en) then {
-            private _max_number_group = (switch _type do {
-                case "VegetationFir" : {1};
-                case "BorderCrossing" : {2};
-                case "NameLocal" : {1};
-                case "StrongpointArea" : {2};
-                case "NameVillage" : {2};
-                case "NameCity" : {4};
-                case "NameCityCapital" : {5};
-                case "Airport" : {2};
+            private _numberOfStatic = (switch _type do {
+                case "VegetationFir" : {2};
+                case "BorderCrossing" : {4};
+                case "NameLocal" : {2};
+                case "StrongpointArea" : {4};
+                case "NameVillage" : {4};
+                case "NameCity" : {8};
+                case "NameCityCapital" : {10};
+                case "Airport" : {4};
                 default {0};
             });
-            [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city] call btc_mil_fnc_create_staticOnRoof;
+            [+_houses, round (_p_mil_static_group_ratio * _numberOfStatic), _city] call btc_mil_fnc_create_staticOnRoof;
         };
 
         // Spawn civilians
-        private _max_number_group = (switch _type do {
+        private _numberOfCivi = (switch _type do {
             case "VegetationFir" : {1};
             case "BorderCrossing" : {0};
             case "NameLocal" : {3};
@@ -154,7 +158,7 @@ if (_data_units isNotEqualTo []) then {
             case "Airport" : {6};
             default {2};
         });
-        [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_civ_fnc_populate;
+        [+_houses, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;
     };
 };
 if (btc_p_animals_group_ratio > 0) then {
@@ -164,7 +168,7 @@ if (btc_p_animals_group_ratio > 0) then {
         } forEach _data_animals;
     } else {
         // Spawn animals
-        private _max_number_animalsGroup = (switch _type do {
+        private _numberOfAnimalsGroup = (switch _type do {
             case "Hill" : {3};
             case "VegetationFir" : {3};
             case "NameLocal" : {3};
@@ -175,7 +179,7 @@ if (btc_p_animals_group_ratio > 0) then {
             case "NameMarine" : {0};
             default {0};
         });
-        for "_i" from 1 to (round (random _max_number_animalsGroup)) do {
+        for "_i" from 1 to _numberOfAnimalsGroup do {
             private _pos = [_city, _spawningRadius/3] call CBA_fnc_randPos;
             for "_i" from 1 to (round (random 3)) do {
                 [selectRandom btc_animals_type, [_pos, 6] call CBA_fnc_randPos, nil, _city] call btc_delay_fnc_createAgent;
@@ -186,8 +190,15 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 3))) do {
-        [_city, _spawningRadius, 4 + round random 3, random 1] call btc_mil_fnc_create_group;
+    private _finalNumberOfGroup = _p_mil_group_ratio * 5;
+    private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
+    for "_i" from 1 to round _finalNumberOfGroup do {
+        [
+            _city,
+            [_spawningRadius, _spawningRadius/3] select (_i <= _numberOfHouseGroup),
+            4 + round random 3,
+            [1, 0] select (_i <= _numberOfHouseGroup)
+        ] call btc_mil_fnc_create_group;
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
@@ -204,8 +215,8 @@ if (
     if (_city inArea [btc_cache_pos, _cachingRadius, _cachingRadius, 0, false]) then {
         btc_cache_obj setVariable ["btc_cache_unitsSpawned", true];
 
-        [btc_cache_pos, 8, 3, _wp_house] call btc_mil_fnc_create_group;
-        [btc_cache_pos, 60, 4, _wp_sentry] call btc_mil_fnc_create_group;
+        [btc_cache_pos, 8, 3, 0] call btc_mil_fnc_create_group;
+        [btc_cache_pos, 60, 4, 2] call btc_mil_fnc_create_group;
         if (btc_p_veh_armed_spawn_more) then {
             private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
             for "_i" from 1 to (1 + round random 3) do {
@@ -218,9 +229,9 @@ if (
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
     private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1] call btc_mil_fnc_create_group;
-    [_pos, 120, 1 + round random 2, _wp_sentry] call btc_mil_fnc_create_group;
-    [_pos, 120, 1 + round random 2, _wp_sentry] call btc_mil_fnc_create_group;
+    [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 2] call btc_mil_fnc_create_group;
+    [_pos, 120, 1 + round random 2, 2] call btc_mil_fnc_create_group;
+    [_pos, 120, 1 + round random 2, 2] call btc_mil_fnc_create_group;
     private _random = random 1;
     switch (true) do {
         case (_random <= 0.3) : {};
