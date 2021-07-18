@@ -211,8 +211,8 @@ class Params {
     };
     class btc_p_hideout_n { // Hideout numbers:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_HIDE_NUMBERS"]);
-        values[]={99,1,2,3,4,5};
-        texts[]={$STR_3DEN_ATTRIBUTES_OBJECTTEXTURE_RANDOM_TEXT,"1","2","3","4","5"}; //texts[]={"Random","1","2","3","4","5"};
+        values[]={99,0,1,2,3,4,5};
+        texts[]={$STR_3DEN_ATTRIBUTES_OBJECTTEXTURE_RANDOM_TEXT,"0","1","2","3","4","5","6","7","8","9","10"}; //texts[]={"Random","0","1","2","3","4","5"};
         default = 5;
     };
     class btc_p_cache_info_def { // Info cache distance:

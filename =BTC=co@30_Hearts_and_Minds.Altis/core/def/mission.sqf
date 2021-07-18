@@ -144,7 +144,7 @@ if (isServer) then {
     btc_hideouts_radius = 800;
     btc_hideout_n = _hideout_n;
     if (btc_hideout_n isEqualTo 99) then {
-        btc_hideout_n = round random 5;
+        btc_hideout_n = round random 10;
     };
     btc_hideout_safezone = 4000;
     btc_hideout_range = 3500;
