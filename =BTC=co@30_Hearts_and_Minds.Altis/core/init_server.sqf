@@ -55,3 +55,7 @@ if (btc_p_side_mission_cycle > 0) then {
 {
     ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\a3\Modules_F_Curator\Data\portraitSmoke_ca.paa"] call ace_tagging_fnc_addCustomTag;
 } forEach ["ACE_SpraypaintRed"];
+
+if (btc_p_respawn_ticketsAtStart >= 0) then {
+    [btc_player_side, btc_p_respawn_ticketsAtStart] call BIS_fnc_respawnTickets;
+};

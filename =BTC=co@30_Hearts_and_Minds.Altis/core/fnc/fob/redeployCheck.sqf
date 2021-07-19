@@ -34,4 +34,12 @@ if (
     false
 };
 
+if (
+    btc_p_respawn_ticketsAtStart >= 0 &&
+    {([btc_player_side] call BIS_fnc_respawnTickets) <= 0}
+) exitWith {
+    [[localize "STR_BTC_HAM_O_FOB_CANTREDEPLOY"], ["No more respawn tickets"]] call CBA_fnc_notify;
+    false
+};
+
 true

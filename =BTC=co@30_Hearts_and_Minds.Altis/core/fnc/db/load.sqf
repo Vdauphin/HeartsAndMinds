@@ -208,6 +208,11 @@ private _id = ["ace_tagCreated", {
 } forEach _tags_properties;
 ["ace_tagCreated", _id] call CBA_fnc_removeEventHandler;
 
+//Player respawn tickets
+if (btc_p_respawn_ticketsAtStart >= 0) then {
+    btc_p_respawn_ticketsAtStart = profileNamespace getVariable [format ["btc_hm_%1_respawnTickets", _name], btc_p_respawn_ticketsAtStart];
+};
+
 //Player Markers
 private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1_markers", _name], []]);
 {

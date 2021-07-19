@@ -83,6 +83,11 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
         _params call btc_log_fnc_delete
     }, {true}, {}, [_helipad], [0, 0, 0.4], 5] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
+    _action = ["Bodybag", "Get body bag", "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa", {
+        params ["", "", "_params"];
+        _params call btc_fob_fnc_recoverBodyBag;
+    }, {true}, {}, [_helipad], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
+    [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 } forEach [[btc_create_object, btc_create_object_point]];
 
 //Logistic
@@ -164,6 +169,7 @@ _actions pushBack ["redeploy", localize "STR_BTC_HAM_ACTION_BIRESPAWN", "\A3\ui_
     if ([] call btc_fob_fnc_redeployCheck) then {
         player setPos [10, 10, 10];
         player hideObject true;
+        [btc_player_side, 1] call BIS_fnc_respawnTickets;
         forceRespawn player;
     };
 }, {!btc_log_placing}];

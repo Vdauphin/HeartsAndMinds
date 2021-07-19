@@ -207,6 +207,12 @@ private _tags_properties = _tags apply {
 };
 profileNamespace setVariable [format ["btc_hm_%1_tags", _name], +_tags_properties];
 
+//Player respawn tickets
+if (btc_p_respawn_ticketsAtStart >= 0) then {
+    private _respawnTickets = [btc_player_side] call BIS_fnc_respawnTickets;
+    profileNamespace setVariable [format ["btc_hm_%1_respawnTickets", _name], _respawnTickets];
+};
+
 //Player Markers
 private _player_markers = allMapMarkers select {"_USER_DEFINED" in _x};
 private _markers_properties = _player_markers apply {
