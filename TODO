@@ -1,0 +1,18 @@
+To do for Hearts and minds before public release:
+
+    - Setup Dev server for playable test
+    - Create vehicle + build menu permissions system based on UID's
+    - Fix documentation, currently poor english.
+    - Remove Vehicle respawns from options (DONE)
+    - Setup Ops Base
+    - Setup Start Vehicles
+    - Setup Player Slots
+    - Add Fluers resupply script
+        - Create box for CRBN gear
+
+
+DISCUSSION:
+    - Do we add CCP?
+    - Do we fix deployable radio item, or just add it.
+    - New potentially necessary roles
+    - general discussion about what the change would mean.
