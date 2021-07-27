@@ -15,7 +15,7 @@
         title = __EVAL(format ["      %1", localize "STR_USRACT_TIME_INC"]);
         values[]={1,2,3,4,5,6,7,8,9,10,11,12};
         texts[]={"1","2","3","4","5","6","7","8","9","10","11","12"};
-        default = 5;
+        default = 3;
     };
     class btc_p_load { // Load the savegame (if available)
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_LOAD"]);
@@ -211,9 +211,9 @@
     };
     class btc_p_hideout_n { // Hideout numbers:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_HIDE_NUMBERS"]);
-        values[]={99,1,2,3,4,5};
+        values[]={99,1,2,3,4,5,7};
         texts[]={$STR_3DEN_ATTRIBUTES_OBJECTTEXTURE_RANDOM_TEXT,"1","2","3","4","5"}; //texts[]={"Random","1","2","3","4","5"};
-        default = 4;
+        default = 7;
     };
     class btc_p_cache_info_def { // Info cache distance:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DISTANCE"]);

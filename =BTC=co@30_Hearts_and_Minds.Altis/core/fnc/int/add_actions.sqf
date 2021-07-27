@@ -86,6 +86,13 @@ _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\ig
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} forEach btc_log_def_loadable;
 _action = ["Place", localize "STR_ACE_Dragging_Carry", "\z\ace\addons\dragging\UI\icons\box_carry.paa", {_target call btc_fnc_log_place}, {!btc_log_placing}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} forEach btc_log_def_placeable;
+//test 
+_action = ["Temps", "Mettre le jour", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {((6 - daytime + 24) % 24) remoteExec ["skipTime",0]},{true}] call ace_interact_menu_fnc_createAction;
+["Land_PCSet_Intel_01_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+_action = ["Temps", "Mettre la nuit", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {((22 - daytime + 24) % 24) remoteExec ["skipTime"],0},{true}] call ace_interact_menu_fnc_createAction;
+["Land_PCSet_Intel_01_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+_action = ["Alarme", "Sonnez", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[[getMissionPath "core\sounds\cobra_siren_7s.ogg", player]] remoteExec ["playSound3D"]},{true}] call ace_interact_menu_fnc_createAction;
+["Land_Laptop_02_unfolded_F", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 //Shower
 _action = ["Shower_act", getText(configfile >> "CfgVehicles" >> "DeconShower_01_F" >> "UserActions" >> "Activate" >> "displayName"), "", {player playActionNow 'PutDown'; [_target, 1.5, 9] remoteExec ["BIN_fnc_deconShowerAnim", 0]}, {alive _target AND {_target animationSourcePhase 'valve_source' isEqualTo 0}}] call ace_interact_menu_fnc_createAction;
@@ -156,6 +163,7 @@ if (btc_debug) then {
 };
 
 //Re-deploy
+
 private _actions = [];
 _actions pushBack ["redeploy", localize "STR_BTC_HAM_ACTION_BIRESPAWN", "\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa", {
     if ([] call btc_fnc_fob_redeployCheck) then {
@@ -175,7 +183,8 @@ _actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB", "\A3\Ui_f\d
     if (btc_p_respawn_fromFOBToBase) then {
         [btc_fob_flag, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
     };
-} forEach _actions;
+} 
+forEach _actions;
 {
     _x params ["_cardinal", "_degrees"];
 
@@ -199,3 +208,4 @@ if (btc_p_arsenal_Type > 0) then {
     };
 };
 if !(btc_p_arsenal_Restrict isEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_fnc_arsenal_data;};
+
