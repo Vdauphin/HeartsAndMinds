@@ -43,11 +43,11 @@ private _array = getPos _suicider nearEntities [btc_player_type, 30];
 if (_array isEqualTo []) exitWith {};
 
 private _expl1 = "DemoCharge_Remote_Ammo" createVehicle (position _suicider);
-_expl1 attachTo [_suicider, [-0.1, 0.1, 0.15], "Pelvis"];
+_expl1 attachTo [_suicider, [-0.1, 0.1, 0.15], "Pelvis", true];
 private _expl2 = "DemoCharge_Remote_Ammo" createVehicle (position _suicider);
-_expl2 attachTo [_suicider, [0, 0.15, 0.15], "Pelvis"];
+_expl2 attachTo [_suicider, [0, 0.15, 0.15], "Pelvis", true];
 private _expl3 = "DemoCharge_Remote_Ammo" createVehicle (position _suicider);
-_expl3 attachTo [_suicider, [0.1, 0.1, 0.15], "Pelvis"];
+_expl3 attachTo [_suicider, [0.1, 0.1, 0.15], "Pelvis", true];
 
 [_expl1, _expl2, _expl3] remoteExecCall ["btc_fnc_ied_belt", 0];
 

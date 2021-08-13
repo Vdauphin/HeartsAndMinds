@@ -70,7 +70,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     private _unitContaminate = [];
     {
         if (_x in _units) then {
-            _range = _range / 2;
+            _range = _range / 1.5;
         };
         private _pos = getPosWorld _x;
         _unitContaminate append (_units inAreaArray [_pos, _range, _range, 0, false, 2 + (_pos select 2)]);

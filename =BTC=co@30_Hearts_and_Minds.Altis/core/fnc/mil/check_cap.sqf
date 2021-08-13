@@ -36,11 +36,12 @@ if (_cap_to isEqualTo []) exitWith {
     private _hd = _x;
     private _in_range = btc_city_all inAreaArray [getPosWorld _hd, btc_hideout_range, btc_hideout_range];
 
-    if (_in_range isEqualTo []) exitWith {
+    if (_in_range isEqualTo []) then {
         btc_hideout_cap_checking = false;
         if (btc_debug_log) then {
             [format ["exit no in range = %1", _hd getVariable "id"], __FILE__, [false]] call btc_fnc_debug_message;
         };
+        continue;
     };
 
     private _closest = [_hd, _in_range, true] call btc_fnc_find_closecity;
@@ -49,11 +50,12 @@ if (_cap_to isEqualTo []) exitWith {
         [format ["_in_range = %1", _in_range], __FILE__, [false]] call btc_fnc_debug_message;
     };
 
-    if (_closest isEqualTo []) exitWith {
+    if (_closest isEqualTo []) then {
         btc_hideout_cap_checking = false;
         if (btc_debug_log) then {
             [format ["exit null _closest = %1", _hd getVariable "id"], __FILE__, [false]] call btc_fnc_debug_message;
         };
+        continue;
     };
 
     if (btc_debug_log) then {

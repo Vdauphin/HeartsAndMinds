@@ -155,7 +155,7 @@ if (_units select {alive _x} isEqualTo []) then {
 } forEach _triggers;
 [[], [_heli, _fx, _group] + _units] call btc_fnc_delete;
 
-if (_taskID call BIS_fnc_taskState in ["CANCELED", "FAIL"]) exitWith {};
+if (_taskID call BIS_fnc_taskState in ["CANCELED", "FAILED"]) exitWith {};
 
 _rep call btc_fnc_rep_change;
 
