@@ -39,7 +39,7 @@
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_ARESTARTTIME"]);
         values[]={1,2,3,4,5,6,7,8,9,10,11,12,24,48,72};
         texts[]={"1h","2h","3h","4h","5h","6h","7h","8h","9h","10h","11h","12h","24h","48h","72h"};
-        default = 24;
+        default = 48;
     };
     class btc_p_respawn_title { // << Respawn options >>
         title = $STR_BTC_HAM_RESP_TITLE;
