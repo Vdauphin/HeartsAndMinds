@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tag_initArea
+Function: btc_tag_fnc_initArea
 
 Description:
     Initialize positions of tags.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_tag_initArea;
+        _result = [] call btc_tag_fnc_initArea;
     (end)
 
 Author:
@@ -42,13 +42,13 @@ for "_i" from 1 to (_n * 1.5) do {
     if !(surfaceIsWater _sel_pos) then {
         if (isNil "_road" || {isNull _road}) then {
             private _roads = _sel_pos nearRoads 50;
-            if !(_roads isEqualTo []) then {
+            if (_roads isNotEqualTo []) then {
                 _road = selectRandom _roads;
             };
         } else {
             private _connected = roadsConnectedTo _road;
             if (_connected isEqualTo []) then {
-                _sel_pos = ([_road, -1] call btc_fnc_ied_randomRoadPos) select 0;
+                _sel_pos = ([_road, -1] call btc_ied_fnc_randomRoadPos) select 0;
                 _road = objNull;
             } else {
                 _sel_dir = _road getDir (_connected select 0);

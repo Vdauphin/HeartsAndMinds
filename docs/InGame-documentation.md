@@ -7,9 +7,9 @@ This mission has a database system. Enemy units, towns, hideouts, cache, objects
 
 ## Chemical Warfare
 ### Chemical agent:
-A chemical agent can be found in the battlefield at cache location for example. When an object is contaminated, the chemical agent propagates to people around (in a circle of 3m). Those people will be hurt constantly until they died or found a decontaminating shower (available at the logistic point) to clean up their body. When they are contaminated, they can propagate it to other people around (in a circle of 2m) or vehicle if they get inside. Keep in mind, dead body stay contaminated but body bag will isolate it. Also, a contaminated object loaded as cargo will contaminate the container or vehicle.
+A chemical agent can be found in the battlefield at cache location for example. When an object is contaminated, the chemical agent propagates to people around (in a circle of 3m). Those people will be hurt constantly and get pain until they died or found a decontaminating shower (available at the logistic point) to clean up their body. When they are contaminated, they can propagate it to other people around (in a circle of 2m) or vehicle if they get inside. Keep in mind, dead body stay contaminated but body bag will isolate it. Also, a contaminated object loaded as cargo will contaminate the container or vehicle.
 ### Protection:
-Use CBRN gear (uniform, respirator mask and breather backpack) for full protection from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect. Simple mask and simple uniform can reduce from 65% to 80% the probability to take damage.
+Use CBRN gear (uniform, respirator mask and breather backpack) for full protection from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect. Simple mask and simple uniform can reduce from 65% to 80% the probability to take damage. The pain from breathing while contaminated can be avoid with a simple mask.
 ### Decontaminate:
 You can use a small shower to decontaminate units only. Use the big shower for objects, vehicles and objects loaded as cargo. To activate them, just stay under the shower.
 ### Detection:
@@ -24,6 +24,11 @@ Electromagnetic field from UAV are safe but EMP have a range of 500m where vehic
 ### Detection:
 You can detect the origin of electromagnetic field with spectrum devices. The amplitude of the peak depend on the distance and angle between the emiter and the antenna. The maximum range is 1000m.
 
+## Door locked
+###House doors:
+Civilian house door can be close. Depend on reputation level, civilian will lock their door and stay inside. Under low, all doors are locked, above normal, all door are unlocked. 
+###Break locked door:
+You can still enter by breaking door lock with a wirecutter.
 
 ## Vehicles
 ### Respawn:
@@ -103,6 +108,7 @@ Intel can be retrieved in the following:
 - Searching dead bodies
 - Interrogate prisoner
 - Talking to civilians
+- Search house for camera
 
 Keep in mind that only the interpreter can talk to civilians and they can lie if your reputation level is low.
 When you find an intel from a dead body or interrogate a prisoner, a marker will appear in the map. Remember, prisoner have a random number of intel more or less interesting.
@@ -118,9 +124,9 @@ When you destroy an hideout or an ammo cache, all the markers related to it will
 ### System:
 At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian.
 ### Good actions:
-Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
+Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
 ### Bad actions:
-Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, damaging/destroying buildings, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
+Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 
 ## Civil Orders
 Any player can give orders to civilians. To do this, just open your self interaction menu and select 'ORDERS' or use one of the shortcuts. Shortcuts can changed under 'configure >> controls>> configure addons >> Hearts and Minds: Mission (drop down menu)'. Your options are:

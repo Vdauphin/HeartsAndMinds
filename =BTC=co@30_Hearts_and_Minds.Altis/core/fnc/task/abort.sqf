@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_task_abort
+Function: btc_task_fnc_abort
 
 Description:
     Abort a side mission.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["btc_dft"] call btc_fnc_task_abort;
+        ["btc_dft"] call btc_task_fnc_abort;
     (end)
 
 Author:
@@ -32,4 +32,4 @@ if (_task_id in ["btc_m", "btc_dty", "btc_dft"]) exitWith {
     localize "STR_BTC_HAM_O_TASK_NOTASIDE" call CBA_fnc_notify;
 };
 
-[_task_id, "CANCELED"] remoteExecCall ["btc_fnc_task_setState", 2];
+[_task_id, "CANCELED"] remoteExecCall ["btc_task_fnc_setState", 2];

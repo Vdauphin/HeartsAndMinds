@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_cache_create_attachto
+Function: btc_cache_fnc_create_attachto
 
 Description:
     Attach holder to an object at the desired position.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_cache_obj, "groundWeaponHolder" createVehicle btc_cache_obj, "TOP"] call btc_fnc_cache_create_attachto;
+        [btc_cache_obj, "groundWeaponHolder" createVehicle btc_cache_obj, "TOP"] call btc_cache_fnc_create_attachto;
     (end)
 
 Author:

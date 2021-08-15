@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_playersInAreaCityGroup
+Function: btc_patrol_fnc_playersInAreaCityGroup
 
 Description:
     Check if player is around the active city or leader of the patrol.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [selectRandom btc_city_all, group cursorTarget] call btc_fnc_patrol_playersInAreaCityGroup;
+        [selectRandom btc_city_all, group cursorTarget] call btc_patrol_fnc_playersInAreaCityGroup;
     (end)
 
 Author:

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_veh_respawn
+Function: btc_veh_fnc_respawn
 
 Description:
     Respawn the vehicle passed in parameter.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_veh_respawn;
+        [cursorObject] call btc_veh_fnc_respawn;
     (end)
 
 Author:
@@ -63,22 +63,22 @@ _data pushBack (_vehicle getVariable ["btc_EDENinventory", []]);
         _vehicle setPosASL _pos;
         _vehicle setVectorDirAndUp _vectorPos;
 
-        if (getNumber(configFile >> "CfgVehicles" >> _type >> "isUav") isEqualTo 1) then {
+        if (unitIsUAV _vehicle) then {
             createVehicleCrew _vehicle;
         };
 
         [_vehicle, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle] call btc_fnc_setVehProperties;
-        if !(_EDENinventory isEqualTo []) then {
+        if (_EDENinventory isNotEqualTo []) then {
             _vehicle setVariable ["btc_EDENinventory", _EDENinventory];
-            [_vehicle, _EDENinventory] call btc_fnc_log_setCargo;
+            [_vehicle, _EDENinventory] call btc_log_fnc_inventorySet;
         };
 
-        [_vehicle, _time] call btc_fnc_veh_addRespawn;
+        [_vehicle, _time] call btc_veh_fnc_addRespawn;
     }, _data, 1] call CBA_fnc_waitAndExecute;
 }, [_vehicle, _data], _data select 3] call CBA_fnc_waitAndExecute;
 
 if (isServer) then {
-    [btc_rep_malus_veh_killed, _instigator] call btc_fnc_rep_change;
+    [btc_rep_malus_veh_killed, _instigator] call btc_rep_fnc_change;
 } else {
-    [btc_rep_malus_veh_killed, _instigator] remoteExecCall ["btc_fnc_rep_change", 2];
+    [btc_rep_malus_veh_killed, _instigator] remoteExecCall ["btc_rep_fnc_change", 2];
 };

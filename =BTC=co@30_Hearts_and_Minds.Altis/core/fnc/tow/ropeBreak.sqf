@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tow_ropeBreak
+Function: btc_tow_fnc_ropeBreak
 
 Description:
     Handle towing rope when they break.

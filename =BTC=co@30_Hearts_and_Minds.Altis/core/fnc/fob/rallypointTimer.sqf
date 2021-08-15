@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_fob_rallypointTimer
+Function: btc_fob_fnc_rallypointTimer
 
 Description:
     Create a timer and when timer is up, trigger self destruction.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_fob_rallypointTimer;
+        [cursorObject] call btc_fob_fnc_rallypointTimer;
     (end)
 
 Author:

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_effect_smoke
+Function: btc_ied_fnc_effect_smoke
 
 Description:
     Create a smoke effect.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [getPos player] call btc_fnc_ied_effect_smoke;
+        [getPos player] call btc_ied_fnc_effect_smoke;
     (end)
 
 Author:
@@ -34,7 +34,7 @@ _posASL = [_x, _y, getTerrainHeightASL _pos];
     private _smokePlu = selectRandom [6, 8, 10];
     for "_i" from 0 to (_smokePlu -1) do {
         private _selection = selectRandom ["sand", "gray", "brown"];
-        [_pos, _posASL, _selection] spawn btc_fnc_ied_effect_color_smoke;
+        [_pos, _posASL, _selection] spawn btc_ied_fnc_effect_color_smoke;
     };
 };
 

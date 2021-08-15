@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_effect_rocks
+Function: btc_ied_fnc_effect_rocks
 
 Description:
     Add rocks effect, some rock fall from the sky.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [player] call btc_fnc_ied_effect_rocks;
+        [player] call btc_ied_fnc_effect_rocks;
     (end)
 
 Author:

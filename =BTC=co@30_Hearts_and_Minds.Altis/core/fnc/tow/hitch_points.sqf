@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tow_hitch_points
+Function: btc_tow_fnc_hitch_points
 
 Description:
     Get point to attach rope.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorOject] call btc_fnc_tow_hitch_points;
+        [cursorOject] call btc_tow_fnc_hitch_points;
     (end)
 
 Author:
@@ -25,7 +25,7 @@ params [
     ["_vehicle", objNull, [objNull]]
 ];
 
-([_vehicle] call btc_fnc_log_get_corner_points) params [
+([_vehicle] call btc_log_fnc_get_corner_points) params [
     "_rearCorner",
     "_rearCorner2",
     "_frontCorner",

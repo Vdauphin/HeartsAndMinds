@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_debug_graph
+Function: btc_debug_fnc_graph
 
 Description:
     https://forums.bohemia.net/forums/topic/204157-display-graph-in-dialog/
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_debug_graph;
+        _result = [] call btc_debug_fnc_graph;
     (end)
 
 Author:
@@ -34,6 +34,6 @@ private _maxFps = 60;
 private _maxWidth = ctrlPosition _GRPframes select 2;
 private _width = _maxWidth/300;
 
-[btc_fnc_debug_fps, [0.5, 0.1] select (isServer), [_display, _maxFps, _maxWidth, _width, _barArray, _GRPframes, _TXTfps]] call CBA_fnc_addPerFrameHandler;
+[btc_debug_fnc_fps, [0.5, 0.1] select (isServer), [_display, _maxFps, _maxWidth, _width, _barArray, _GRPframes, _TXTfps]] call CBA_fnc_addPerFrameHandler;
 
-[btc_fnc_debug_units, 1, [_display, _TXTunits]] call CBA_fnc_addPerFrameHandler;
+[btc_debug_fnc_units, 1, [_display, _TXTunits]] call CBA_fnc_addPerFrameHandler;

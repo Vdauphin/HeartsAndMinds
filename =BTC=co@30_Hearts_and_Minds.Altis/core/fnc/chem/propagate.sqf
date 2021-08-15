@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_chem_propagate
+Function: btc_chem_fnc_propagate
 
 Description:
     Propagate from the item or vehicle contaminated to the item or vehicle not contaminated.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject, vehicle player] call btc_fnc_chem_propagate;
+        [cursorObject, vehicle player] call btc_chem_fnc_propagate;
     (end)
 
 Author:

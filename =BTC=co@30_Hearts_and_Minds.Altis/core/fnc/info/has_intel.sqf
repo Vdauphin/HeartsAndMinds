@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_has_intel
+Function: btc_info_fnc_has_intel
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject, player] remoteExecCall ["btc_fnc_info_has_intel", 2];
+        [cursorObject, player] remoteExecCall ["btc_info_fnc_has_intel", 2];
     (end)
 
 Author:
@@ -27,15 +27,22 @@ params [
 ];
 
 if (btc_debug_log) then {
-    [format ["%1", _body getVariable "intel"], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["%1", _body getVariable "intel"], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
-if (_body getVariable ["intel", false] && !(_body getVariable ["btc_already_interrogated", false])) then {
+if (
+    _body isKindOf "Items_base_F" || (
+    _body getVariable ["intel", false] &&
+    !(_body getVariable ["btc_already_interrogated", false]))
+) then {
     _body setVariable ["intel", false];
+    if (_body isKindOf "Items_base_F") then {
+        _body call CBA_fnc_deleteEntity;
+    };
     if (isServer) then    {
-        [_asker] call btc_fnc_info_give_intel;
+        [_asker] call btc_info_fnc_give_intel;
     } else {
-        [_asker] remoteExecCall ["btc_fnc_info_give_intel", 2];
+        [_asker] remoteExecCall ["btc_info_fnc_give_intel", 2];
     };
 } else {
     [3] remoteExecCall ["btc_fnc_show_hint", _asker];

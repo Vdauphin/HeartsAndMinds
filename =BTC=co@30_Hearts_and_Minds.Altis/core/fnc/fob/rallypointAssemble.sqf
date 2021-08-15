@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_fob_rallypointAssemble
+Function: btc_fob_fnc_rallypointAssemble
 
 Description:
     Handle assembling and disassembling of BI rallypoint.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["WeaponAssembled", [player, cursorObject]] call btc_fnc_fob_rallypointAssemble;
+        ["WeaponAssembled", [player, cursorObject]] call btc_fob_fnc_rallypointAssemble;
     (end)
 
 Author:
@@ -34,7 +34,7 @@ switch (_nameEH) do {
         ];
 
         if !(_rallyPoint isKindOf "Camping_base_F") exitWith {_this};
-        _rallyPoint remoteExecCall ["btc_fnc_fob_rallypointTimer", 2];
+        _rallyPoint remoteExecCall ["btc_fob_fnc_rallypointTimer", 2];
         [
             [format [localize "STR_BTC_HAM_O_FOB_SELFDESTRUCTION", btc_p_rallypointTimer]],
             ["<img size='1' image='\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa' align='center'/>"]

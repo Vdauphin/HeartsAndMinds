@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_delete
+Function: btc_log_fnc_delete
 
 Description:
     Delete object created by logistic point.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_create_object_point] call btc_fnc_log_delete;
+        [btc_create_object_point] call btc_log_fnc_delete;
     (end)
 
 Author:
@@ -38,4 +38,4 @@ if (_array isEqualTo []) exitWith {
     ] call CBA_fnc_notify;
 };
 
-[_array select 0] remoteExecCall ["btc_fnc_log_server_delete", [2]];
+[_array select 0] remoteExecCall ["btc_log_fnc_server_delete", [2]];

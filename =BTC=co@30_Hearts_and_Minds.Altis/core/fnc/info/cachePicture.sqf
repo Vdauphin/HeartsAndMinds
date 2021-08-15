@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_cachePicture
+Function: btc_info_fnc_cachePicture
 
 Description:
     Add picture to the diary.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [typeOf player, 0] call btc_fnc_info_cachePicture;
+        [typeOf player, 0] call btc_info_fnc_cachePicture;
     (end)
 
 Author:

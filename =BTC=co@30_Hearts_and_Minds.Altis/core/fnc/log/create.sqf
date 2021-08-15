@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_create
+Function: btc_log_fnc_create
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_create;
+        _result = [] call btc_log_fnc_create;
     (end)
 
 Author:
@@ -35,7 +35,7 @@ createDialog "btc_log_dlg_create";
 
 waitUntil {dialog};
 
-call btc_fnc_log_create_load;
+call btc_log_fnc_create_load;
 
 private _class = lbData [72, lbCurSel 72];
 private _selected = _class;

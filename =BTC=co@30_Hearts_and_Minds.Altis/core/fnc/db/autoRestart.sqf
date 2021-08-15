@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_autoRestart
+Function: btc_db_fnc_autoRestart
 
 Description:
     Save or not and restart/shutdown server.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [4] call btc_fnc_db_autoRestart;
+        [4] call btc_db_fnc_autoRestart;
     (end)
 
 Author:
@@ -35,9 +35,9 @@ private _serverCommand = if (_p_autoRestart in [1, 3]) then {
 };
 
 if (_p_autoRestart > 2) then {
-    [] call btc_fnc_db_save;
+    [] call btc_db_fnc_save;
 };
 
 if !(_serverCommandPassword serverCommand _serverCommand) then {
-    ["Invalid password", __FILE__, [true, true, true]] call btc_fnc_debug_message;
+    ["Invalid password", __FILE__, [true, true, true]] call btc_debug_fnc_message;
 };

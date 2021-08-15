@@ -1,9 +1,9 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_data_spawn_group
+Function: btc_data_fnc_spawn_group
 
 Description:
-    Create group previously saved by btc_fnc_data_get_group.
+    Create group previously saved by btc_data_fnc_get_group.
 
 Parameters:
     _data_unit - All data listed above. [Array]
@@ -22,7 +22,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_data_spawn_group;
+        _result = [] call btc_data_fnc_spawn_group;
     (end)
 
 Author:
@@ -47,11 +47,11 @@ _data_unit params [
 
 private _delay = 0;
 if (_type isEqualTo 5) exitWith {
-    [_city, 100, _array_pos select 0, _array_type select 0] call btc_fnc_ied_suicider_create;
+    [_city, 100, _array_pos select 0, _array_type select 0] call btc_ied_fnc_suicider_create;
     _delay
 };
 if (_type isEqualTo 7) exitWith {
-    [_city, 100, _array_pos select 0] call btc_fnc_ied_drone_create;
+    [_city, 100, _array_pos select 0] call btc_ied_fnc_drone_create;
     _delay
 };
 
@@ -59,10 +59,10 @@ private _group = createGroup _side;
 _group setVariable ["btc_city", _city];
 if (_type isEqualTo 1) then {
     _array_veh params ["_typeOf", "_posATL", "_dir", "_fuel", ["_vectorUp", []]];
-    _delay = [_group, _typeOf, _array_type, _posATL, _dir, _fuel, _vectorUp] call btc_fnc_delay_createVehicle;
+    _delay = [_group, _typeOf, _array_type, _posATL, _dir, _fuel, _vectorUp] call btc_delay_fnc_createVehicle;
 } else {
     for "_i" from 0 to (count _array_pos - 1) do {
-        [_group, _array_type select _i, _array_pos select _i, "CAN_COLLIDE"] call btc_fnc_delay_createUnit;
+        [_group, _array_type select _i, _array_pos select _i, "CAN_COLLIDE"] call btc_delay_fnc_createUnit;
         //_u setDamage (_array_dam select _i);
     };
 };
@@ -95,7 +95,7 @@ if (_type isEqualTo 1) then {
             ];
             [_group, _position, -1, _type, _behaviour, _combat, _speed, _formation, "", _timeout, _compRadius] call CBA_fnc_addWaypoint;
         } forEach (_array_wp select 1);
-        if !(_array_wp select 1 isEqualTo []) then {
+        if (_array_wp select 1 isNotEqualTo []) then {
             _group setCurrentWaypoint [_group, _array_wp select 0];
         };
     };
@@ -103,11 +103,11 @@ if (_type isEqualTo 1) then {
         [_group, nearestObject [_array_pos select 0, _array_veh]] call btc_fnc_house_addWP;
         _group setVariable ["btc_inHouse", _array_veh];
     };
-    if (_type isEqualTo 4) then {[[0, 0, 0], 0, units _group] call btc_fnc_civ_get_weapons;};
+    if (_type isEqualTo 4) then {[[0, 0, 0], 0, units _group] call btc_civ_fnc_get_weapons;};
     if (_type isEqualTo 6) then {
-        [_group, _array_veh select 0] call btc_fnc_civ_addWP;
+        [_group, _array_veh select 0] call btc_civ_fnc_addWP;
         _group setVariable ["btc_data_inhouse", _array_veh];
     };
-}, [_data_unit, _group], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
+}, [_data_unit, _group], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
 
 _delay

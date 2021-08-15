@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_get_cc
+Function: btc_log_fnc_get_cc
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_get_cc;
+        _result = [] call btc_log_fnc_get_cc;
     (end)
 
 Author:

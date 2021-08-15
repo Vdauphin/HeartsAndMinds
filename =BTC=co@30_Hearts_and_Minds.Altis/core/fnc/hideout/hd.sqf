@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_hd_hideout
+Function: btc_hideout_fnc_hd
 
 Description:
     Fill me when you edit me !
@@ -18,7 +18,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_hd_hideout;
+        _result = [] call btc_hideout_fnc_hd;
     (end)
 
 Author:
@@ -40,15 +40,15 @@ private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") 
 
 if (
     _explosive &&
-    {!(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false])} &&
+    {!(_hideout getVariable ["btc_mil_fnc_hd_hideout_fired", false])} &&
     {_damage > 0.6}
 ) then {
-    _hideout setVariable ["btc_fnc_mil_hd_hideout_fired", true];
+    _hideout setVariable ["btc_mil_fnc_hd_hideout_fired", true];
 
     btc_hideouts deleteAt (btc_hideouts find _hideout);
     publicVariable "btc_hideouts";
 
-    [btc_rep_bonus_hideout, _instigator] call btc_fnc_rep_change;
+    [btc_rep_bonus_hideout, _instigator] call btc_rep_fnc_change;
 
     private _id = _hideout getVariable "id";
     private _marker = createMarker [format ["btc_hideout_%1_destroyed", _id], getPos _hideout];
@@ -73,7 +73,7 @@ if (
     //Notification
     [2, count btc_hideouts] remoteExecCall ["btc_fnc_show_hint", 0];
     if (btc_debug_log) then {
-        [format ["_this = %1 ; POS %2 ID %3", _this, getPos _hideout, _id], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["_this = %1 ; POS %2 ID %3", _this, getPos _hideout, _id], __FILE__, [false]] call btc_debug_fnc_message;
     };
 } else {
     0

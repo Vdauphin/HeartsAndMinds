@@ -1,9 +1,9 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_check
+Function: btc_ied_fnc_check
 
 Description:
-    Contantly check if player is around by calling btc_fnc_ied_checkLoop. If yes, trigger the explosion.
+    Contantly check if player is around by calling btc_ied_fnc_checkLoop. If yes, trigger the explosion.
 
 Parameters:
     _city - City where IED has been created. [Object]
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [_city, _ieds] call btc_fnc_ied_check;
+        [_city, _ieds] call btc_ied_fnc_check;
     (end)
 
 Author:
@@ -27,15 +27,15 @@ params [
 private _array = _city getVariable ["ieds", []];
 if (_array isEqualTo []) exitWith {};
 
-private _ieds = _array apply {_x call btc_fnc_ied_create};
+private _ieds = _array apply {_x call btc_ied_fnc_create};
 
 if (btc_debug) then {
-    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
+    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
 };
 if (btc_debug_log) then {
-    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
-private _ieds_check = _ieds select {!((_x select 2) isEqualTo objNull)};
+private _ieds_check = _ieds select {(_x select 2) isNotEqualTo objNull};
 
-[_city, _ieds, _ieds_check] call btc_fnc_ied_checkLoop;
+[_city, _ieds, _ieds_check] call btc_ied_fnc_checkLoop;

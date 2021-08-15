@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_chem_damageLoop
+Function: btc_chem_fnc_damageLoop
 
 Description:
     Apply chemical damage constantly.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_chem_damageLoop;
+        [] call btc_chem_fnc_damageLoop;
     (end)
 
 Author:
@@ -34,7 +34,7 @@ private _handle = [{
     if !(alive _unit) exitWith {
         ["btc_chem_decontaminated", [_unit]] call CBA_fnc_localEvent;
     };
-    _this set [0, _args call btc_fnc_chem_damage];
+    _this set [0, _args call btc_chem_fnc_damage];
 }, 3, [_unit, _notAlready, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
 
 ["btc_chem_decontaminated", {
@@ -46,11 +46,11 @@ private _handle = [{
         [_handle] call CBA_fnc_removePerFrameHandler;
 
         if (btc_debug || btc_debug_log) then {
-            [format ["Stop: %1", _handle], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+            [format ["Stop: %1", _handle], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
         };
     };
 }, [_handle, _unit]] call CBA_fnc_addEventHandlerArgs;
 
 if (btc_debug || btc_debug_log) then {
-    [format ["Start: %1", _handle], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+    [format ["Start: %1", _handle], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
 };

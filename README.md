@@ -34,7 +34,7 @@ Online [wiki available](http://vdauphin.github.io/HeartsAndMinds/).
         - Request a lift
         - Discussion ([interpreter](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#intel))
         - Fleeing
-    - More than 18 [side mission](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#side-mission)
+    - More than 19 [side mission](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#side-mission)
 - Deep ACE3 support
     - Use mainly ACE interaction
     - Rearm system
@@ -63,7 +63,7 @@ The militia has an unknown number of hideouts in the island that need to be dest
 They have also ammo caches in various locations, destroy them to weaken its power.
 
 Bad actions cause bad effects.
-Infact there's a reputation system: helping the local population, fighting the "Oplitas", disarming IED will rise your reputation; killing civilians, mutilate alive/dead civilian, firing near civilians for no reason, damaging/destroying buildings, losing vehicles, respawns will decrease your reputation.
+Infact there's a reputation system: helping the local population, fighting the "Oplitas", disarming IED will rise your reputation; killing civilians, mutilate alive/dead civilian, firing near civilians for no reason, remove banana, damaging/destroying buildings, breaking locked door, losing vehicles, respawns will decrease your reputation.
 At the beginning you have a very low reputation level, so civilians won't help you revealing important information about Oplitas, they will likely lie instead.
 
 <p align="center">

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_spect_disableDevice
+Function: btc_spect_fnc_disableDevice
 
 Description:
     Disable spectrum device.
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_spect_disableDevice;
+        [] call btc_spect_fnc_disableDevice;
     (end)
 
 Author:

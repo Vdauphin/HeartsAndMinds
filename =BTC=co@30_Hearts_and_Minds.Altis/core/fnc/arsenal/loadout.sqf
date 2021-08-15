@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_arsenal_loadout
+Function: btc_arsenal_fnc_loadout
 
 Description:
     Generate a loadout from an array of defined loadout depending on trait, medical level, color and hour of the day.
@@ -17,7 +17,7 @@ Returns:
 
 Examples:
     (begin example)
-        _rifleman_loadout = [0] call btc_fnc_arsenal_loadout;
+        _rifleman_loadout = [0] call btc_arsenal_fnc_loadout;
     (end)
     (begin example)
         [] spawn {
@@ -26,7 +26,7 @@ Examples:
                 {
                     private _j = _x;
                     {
-                        player setUnitLoadout ([_i, _j, _x] call btc_fnc_arsenal_loadout);
+                        player setUnitLoadout ([_i, _j, _x] call btc_arsenal_fnc_loadout);
                         sleep 1;
                     } forEach [false,true];
                 } forEach [0,1,2,3];
@@ -166,7 +166,7 @@ if (_fractures > 0) then {
 private _cargos = [
     [],
     [_backpack, [["SmokeShellGreen", 3, 1], ["SmokeShellPurple", 1, 1]] + _backpackMedical],
-    [_backpack, [["ToolKit", 1], ["ACE_EntrenchingTool", 1]]],
+    [_backpack, [["ToolKit", 1], ["ACE_EntrenchingTool", 1], ["ACE_wirecutter", 1]]],
     [_backpack, [["ACE_DefusalKit", 1], ["ACE_Clacker", 2], ["ACE_SpraypaintRed", 1], ["DemoCharge_Remote_Mag", 2, 1], [["ACE_VMM3", "", "", "", [], [], ""], 1], ["ACE_EntrenchingTool", 1]]],
     [_backpack, [[_launcherMagazines param [1, _launcherMagazine], 1, _launcherCount], [_launcherMagazine, 1, _launcherCount]]],
     [_backpack_big, [[_launcherMagazine, 2, _launcherCount]]],

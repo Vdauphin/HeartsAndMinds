@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_civ_evacuate
+Function: btc_civ_fnc_evacuate
 
 Description:
     Evacuate civlians around a position in an area of 200 to a safe position.
@@ -13,7 +13,7 @@ Returns:
     _civilians - Civlians found. [Array]
 Examples:
     (begin example)
-        _civilians = [getPos player] call btc_fnc_civ_evacuate;
+        _civilians = [getPos player] call btc_civ_fnc_evacuate;
     (end)
 
 Author:
@@ -26,7 +26,7 @@ params [
     ["_position_evac", [], [[]]]
 ];
 
-private _civilians = (allUnits select {side _x isEqualTo civilian}) inAreaArray [_position, 200, 200];
+private _civilians = (units civilian) inAreaArray [_position, 200, 200];
 
 if (_position_evac isEqualTo []) then {
     private _safe = (nearestTerrainObjects [_position, ["CHURCH", "CHAPEL"], 400]);
@@ -44,7 +44,7 @@ if (_position_evac isEqualTo []) then {
 };
 
 {
-    [group _x, _position_evac, 20] call btc_fnc_civ_addWP;
+    [group _x, _position_evac, 20] call btc_civ_fnc_addWP;
 } forEach _civilians;
 
 _civilians

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_create_hideout_composition
+Function: btc_hideout_fnc_create_composition
 
 Description:
     Create a random hideout composition.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [getPos (allPlayers#0)] call btc_fnc_mil_create_hideout_composition;
+        _result = [getPos (allPlayers#0)] call btc_hideout_fnc_create_composition;
     (end)
 
 Author:

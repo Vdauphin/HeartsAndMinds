@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_ask
+Function: btc_info_fnc_ask
 
 Description:
     Ask information to an IA.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_info_ask;
+        [cursorObject] call btc_info_fnc_ask;
     (end)
 
 Author:
@@ -55,7 +55,7 @@ if ((round random 3) >= 2 || !_isInterrogate) then {
 //NO < 200 . FAKE < 600 . REAL > 600
 
 btc_int_ask_data = nil;
-["btc_global_reputation"] remoteExecCall ["btc_fnc_int_ask_var", 2];
+["btc_global_reputation"] remoteExecCall ["btc_int_fnc_ask_var", 2];
 
 waitUntil {!(isNil "btc_int_ask_data")};
 
@@ -83,14 +83,14 @@ private _info = selectRandomWeighted [
 _info_type = _info_type isEqualTo "REAL";
 switch (_info) do {
     case "TROOPS" : {
-        [_man, _info_type] call btc_fnc_info_troops;
+        [_man, _info_type] call btc_info_fnc_troops;
     };
     case "HIDEOUT" : {
-        [name _man, _info_type] call btc_fnc_info_hideout_asked;
+        [name _man, _info_type] call btc_info_fnc_hideout_asked;
     };
     case "CACHE" : {
         [name _man, localize "STR_BTC_HAM_CON_INFO_ASK_CACHEMAP"] call btc_fnc_showSubtitle;
         sleep 2;
-        [_info_type] remoteExecCall ["btc_fnc_info_cache", 2];
+        [_info_type] remoteExecCall ["btc_info_fnc_cache", 2];
     };
 };
