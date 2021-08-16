@@ -2,6 +2,7 @@ enableSaving [false, false];
 
 [] call compile preprocessFileLineNumbers "core\def\mission.sqf";
 [] call compile preprocessFileLineNumbers "define_mod.sqf";
+[] call compileFinal preprocessFileLineNumbers "core\FireTeams\init.sqf";
 
 if (isServer) then {
     [] call compile preprocessFileLineNumbers "core\init_server.sqf";
