@@ -57,7 +57,17 @@ if (
     ) then {
         _protection = _protection + 0.3;
     };
-};
+
+    // Custom Function to avoid DLC Requirement
+    if (
+      [
+        "M40_Gas_mask_nbc_v1_d"
+      ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
+        ) then {
+          _protection = _protection + 1;
+        };
+      };
+      
 if (
     isPlayer _unit &&
     {_protection isEqualTo 0}

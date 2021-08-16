@@ -28,7 +28,7 @@ Author:
         if (
             _key in actionKeys "Watch" &&
             {!visibleWatch} &&
-            {"ChemicalDetector_01_watch_F" in (assignedItems player)}
+            {"ItemWatch" in (assignedItems player)}
         ) then {
             private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
             private _obj = _ui displayCtrl 101;
