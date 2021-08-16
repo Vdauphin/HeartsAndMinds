@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_cache_create
+Function: btc_cache_fnc_create
 
 Description:
     Create a cache at btc_cache_pos position.
@@ -16,7 +16,7 @@ Examples:
     (begin example)
         [] spawn {
             for [{_i=1},{_i<=360},{_i=_i+10}] do {
-                [player getpos [10, _i], true, 0.7] call btc_fnc_cache_create;
+                [player getpos [10, _i], true, 0.7] call btc_cache_fnc_create;
             };
         };
     (end)
@@ -46,13 +46,13 @@ clearItemCargoGlobal btc_cache_obj;
 clearMagazineCargoGlobal btc_cache_obj;
 clearBackpackCargoGlobal btc_cache_obj;
 
-[btc_cache_obj, "HandleDamage", btc_fnc_cache_hd] remoteExecCall ["CBA_fnc_addBISEventHandler", 0, true];
+[btc_cache_obj, "HandleDamage", btc_cache_fnc_hd] remoteExecCall ["CBA_fnc_addBISEventHandler", 0, true];
 
 if (_isChem) then {
     btc_chem_contaminated pushBack btc_cache_obj;
     publicVariable "btc_chem_contaminated";
     private _holder = createSimpleObject [selectRandom (btc_cache_type select 1), _cache_pos];
-    [btc_cache_obj, _holder, "TOP", -0.47] call btc_fnc_cache_create_attachto;
+    [btc_cache_obj, _holder, "TOP", -0.47] call btc_cache_fnc_create_attachto;
 } else {
     private _pos_type_array = ["TOP", "FRONT", "CORNER_L", "CORNER_R"];
 
@@ -63,16 +63,16 @@ if (_isChem) then {
 
         private _pos_type = selectRandom _pos_type_array;
         _pos_type_array = _pos_type_array - [_pos_type];
-        [btc_cache_obj, _holder, _pos_type] call btc_fnc_cache_create_attachto;
+        [btc_cache_obj, _holder, _pos_type] call btc_cache_fnc_create_attachto;
     };
 };
 
 if (btc_debug_log) then {
-    [format ["ID %1 POS %2", btc_cache_n, _cache_pos], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["ID %1 POS %2", btc_cache_n, _cache_pos], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
 if (btc_debug) then {
-    [format ["in %1", _cache_pos], __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
+    [format ["in %1", _cache_pos], __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
     //Marker
     private _marker = createMarker [format ["%1", _cache_pos], _cache_pos];
     _marker setMarkerType "mil_unknown";

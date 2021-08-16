@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_droneLoop
+Function: btc_ied_fnc_droneLoop
 
 Description:
     Search for soldier around the drone during a patrol. If soldier are in range, activate the drone.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [_driver_drone, _rpos, _area, _trigger] call btc_fnc_ied_droneLoop;
+        [_driver_drone, _rpos, _area, _trigger] call btc_ied_fnc_droneLoop;
     (end)
 
 Author:
@@ -37,7 +37,7 @@ Author:
             };
         } else {
             if (_trigger isEqualTo []) then {
-                _trigger pushBack ([_driver_drone] call btc_fnc_ied_drone_active);
+                _trigger pushBack ([_driver_drone] call btc_ied_fnc_drone_active);
             };
 
             if (btc_debug) then {
@@ -45,13 +45,13 @@ Author:
             };
             (vehicle _driver_drone) doMove (ASLtoAGL getPosASL (_array select 0));
         };
-        _this call btc_fnc_ied_droneLoop;
+        _this call btc_ied_fnc_droneLoop;
     } else {
         deleteVehicle (_trigger deleteAt 0);
         _group setVariable ["btc_ied_drone", false];
 
         if (btc_debug_log) then {
-            [format ["_driver_drone = %1 POS %2 END LOOP", _driver_drone, getPos _driver_drone], __FILE__, [false]] call btc_fnc_debug_message;
+            [format ["_driver_drone = %1 POS %2 END LOOP", _driver_drone, getPos _driver_drone], __FILE__, [false]] call btc_debug_fnc_message;
         };
     };
 }, _this, 5] call CBA_fnc_waitAndExecute;

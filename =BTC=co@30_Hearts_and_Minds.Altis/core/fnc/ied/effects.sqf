@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_effects
+Function: btc_ied_fnc_effects
 
 Description:
     Create effects on player (smoke, rock, shock wave ...).
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_ied_effects;
+        _result = [] call btc_ied_fnc_effects;
     (end)
 
 Author:
@@ -26,7 +26,7 @@ params [
     ["_caller", player, [objNull]]
 ];
 
-[_pos, _caller] spawn btc_fnc_ied_effect_blurEffect;
-[_pos] spawn btc_fnc_ied_effect_smoke;
-[_pos] spawn btc_fnc_ied_effect_rocks;
-[_pos] spawn btc_fnc_ied_effect_shock_wave;
+[_pos, _caller] spawn btc_ied_fnc_effect_blurEffect;
+[_pos] spawn btc_ied_fnc_effect_smoke;
+[_pos] spawn btc_ied_fnc_effect_rocks;
+[_pos] spawn btc_ied_fnc_effect_shock_wave;

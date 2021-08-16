@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_cacheMarker
+Function: btc_info_fnc_cacheMarker
 
 Description:
     Create intel marker.
@@ -17,7 +17,7 @@ Returns:
 Examples:
     (begin example)
         [[btc_cache_pos, btc_cache_info] call CBA_fnc_randPos,
-         btc_cache_info] call btc_fnc_info_cacheMarker;
+         btc_cache_info] call btc_info_fnc_cacheMarker;
     (end)
 
 Author:

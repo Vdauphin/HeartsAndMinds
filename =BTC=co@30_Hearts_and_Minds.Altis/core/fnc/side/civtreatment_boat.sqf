@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_side_civtreatment_boat
+Function: btc_side_fnc_civtreatment_boat
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] spawn btc_fnc_side_civtreatment_boat;
+        [] spawn btc_side_fnc_civtreatment_boat;
     (end)
 
 Author:
@@ -25,9 +25,13 @@ params [
 ];
 
 //// Choose a Marine location \\\\
-private _useful = btc_city_all select {!(isNull _x) && _x getVariable ["type", ""] isEqualTo "NameMarine" || _x getVariable ["hasbeach", false]};
+private _useful = btc_city_all select {
+    !isNull _x &&
+    _x getVariable ["type", ""] isEqualTo "NameMarine" ||
+    _x getVariable ["hasbeach", false]
+};
 
-if (_useful isEqualTo []) exitWith {[] spawn btc_fnc_side_create;};
+if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 
 private _city = selectRandom _useful;
 private _pos = getPos _city;
@@ -50,14 +54,24 @@ private _index = 1 + floor (random (_veh emptyPositions "cargo"));
 _unit assignAsCargoIndex [_veh, _index];
 _unit moveinCargo [_veh, _index];
 
-[_taskID, 10, _unit, [_city getVariable "name", _veh_type]] call btc_fnc_task_create;
+[_taskID, 10, _unit, [_city getVariable "name", _veh_type]] call btc_task_fnc_create;
 
 sleep 1;
-waitUntil {sleep 5; (_taskID call BIS_fnc_taskCompleted || !(playableUnits inAreaArray [getPosWorld _unit, 5000, 5000] isEqualTo []))};
+waitUntil {sleep 5; 
+    _taskID call BIS_fnc_taskCompleted ||
+    playableUnits inAreaArray [getPosWorld _unit, 5000, 5000] isNotEqualTo []
+};
 
 [_unit] call btc_fnc_set_damage;
 
-waitUntil {sleep 5; (_taskID call BIS_fnc_taskCompleted || !alive _unit || {_unit call ace_medical_status_fnc_isInStableCondition && [_unit] call ace_common_fnc_isAwake})};
+waitUntil {sleep 5; 
+    _taskID call BIS_fnc_taskCompleted ||
+    !alive _unit ||
+    {
+        _unit call ace_medical_status_fnc_isInStableCondition &&
+        [_unit] call ace_common_fnc_isAwake
+    }
+};
 
 [[], [_veh, _group]] call btc_fnc_delete;
 
@@ -66,6 +80,6 @@ if !(alive _unit) exitWith {
     [_taskID, "FAILED"] call BIS_fnc_taskSetState;
 };
 
-10 call btc_fnc_rep_change;
+10 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_city_de_activate
+Function: btc_city_fnc_de_activate
 
 Description:
     Desactivate the city with the corresponding ID by storing all groups present inside and clean up dead bodies.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_city_de_activate;
+        _result = [] call btc_city_fnc_de_activate;
     (end)
 
 Author:
@@ -38,11 +38,11 @@ if !(_city getVariable ["active", false]) exitWith {};
     if !(_city getVariable ["active", false]) exitWith {};
 
     if (btc_debug) then {
-        [str _id, __FILE__, [btc_debug, btc_debug_log, true]] call btc_fnc_debug_message;
+        [str _id, __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
     };
 
     //Save all and delete
-    private _radius = _city getVariable ["radius", 0];
+    private _cachingRadius = _city getVariable ["cachingRadius", 0];
     private _has_en = _city getVariable ["occupied", false];
 
     if (_has_en) then {
@@ -56,12 +56,12 @@ if !(_city getVariable ["active", false]) exitWith {};
     private _has_suicider = false;
     {
         if (
-            (leader _x) inArea [_pos_city, _radius, _radius, 0, false] &&
+            (leader _x) inArea [_pos_city, _cachingRadius, _cachingRadius, 0, false] &&
             {side _x != btc_player_side} &&
             {!(_x getVariable ["no_cache", false])} &&
             {_x getVariable ["btc_city", _city] in [_city, objNull]}
         ) then {
-            private _data_group = _x call btc_fnc_data_get_group;
+            private _data_group = _x call btc_data_fnc_get_group;
             _data_units pushBack _data_group;
 
             if ((_data_group select 0) in [5, 7]) then {_has_suicider = true;};
@@ -72,7 +72,7 @@ if !(_city getVariable ["active", false]) exitWith {};
     {
         private _agent = agent _x;
         if (
-            _agent inArea [_pos_city, _radius, _radius, 0, false] &&
+            _agent inArea [_pos_city, _cachingRadius, _cachingRadius, 0, false] &&
             {alive _agent} &&
             {!(_x getVariable ["no_cache", false])} &&
             {_x getVariable ["btc_city", _city] in [_city, objNull]}
@@ -98,13 +98,17 @@ if !(_city getVariable ["active", false]) exitWith {};
             ];
             _x call CBA_fnc_deleteEntity;
         };
-    } forEach (btc_tags_server inAreaArray [_pos_city, _radius, _radius]);
+    } forEach (btc_tags_server inAreaArray [_pos_city, _cachingRadius, _cachingRadius]);
     btc_tags_server = btc_tags_server - [objNull];
 
+    (_city getVariable ["btc_city_intels", []]) call CBA_fnc_deleteEntity;
+
+    (_city getVariable ["btc_civ_flowers", []]) call CBA_fnc_deleteEntity;
+
     if (btc_debug_log) then {
-        [format ["data units = %1", _data_units], __FILE__, [false]] call btc_fnc_debug_message;
-        [format ["data animals = %1", _data_animals], __FILE__, [false]] call btc_fnc_debug_message;
-        [format ["data tags = %1", _data_tags], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["data units = %1", _data_units], __FILE__, [false]] call btc_debug_fnc_message;
+        [format ["data animals = %1", _data_animals], __FILE__, [false]] call btc_debug_fnc_message;
+        [format ["data tags = %1", _data_tags], __FILE__, [false]] call btc_debug_fnc_message;
     };
 
     _city setVariable ["has_suicider", _has_suicider];
@@ -113,10 +117,8 @@ if !(_city getVariable ["active", false]) exitWith {};
     _city setVariable ["data_tags", _data_tags];
     _city setVariable ["active", false];
 
-    if (!btc_hideout_cap_checking) then {
-        [] call btc_fnc_mil_check_cap;
-    };
+    [] call btc_mil_fnc_check_cap;
 
-    [] call btc_fnc_city_cleanUp;
+    [] call btc_city_fnc_cleanUp;
 
 }, [_city, _id]] call CBA_fnc_waitUntilAndExecute;

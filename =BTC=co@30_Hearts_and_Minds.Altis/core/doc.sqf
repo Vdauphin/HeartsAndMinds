@@ -4,6 +4,9 @@ player createDiarySubject [_MainCategory, _MainCategory];
 //Headless and Data base
 player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_HEADLESS_TITLE", localize "STR_BTC_HAM_DOC_HEADLESS_TEXT"]];
 
+//Door locked
+player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_DOOR_TITLE", localize "STR_BTC_HAM_DOC_DOOR_TEXT"]];
+
 //Chemical warfare
 player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TITLE", localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT"]];
 

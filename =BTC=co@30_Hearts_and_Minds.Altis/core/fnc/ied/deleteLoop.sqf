@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_deleteLoop
+Function: btc_ied_fnc_deleteLoop
 
 Description:
     Remove wreck generated around IED.
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        [vehicle player] call btc_fnc_ied_deleteLoop;
+        [vehicle player] call btc_ied_fnc_deleteLoop;
     (end)
 
 Author:
@@ -60,7 +60,7 @@ btc_ied_deleteOn = [{
     ) then {
         private _pos = getPosATL _ied;
         _ied call CBA_fnc_deleteEntity;
-        [btc_rep_bonus_IEDCleanUp, player] remoteExecCall ["btc_fnc_rep_change", 2];
+        [btc_rep_bonus_IEDCleanUp, player] remoteExecCall ["btc_rep_fnc_change", 2];
         ["btc_ied_deleted", [_pos, player]] call CBA_fnc_serverEvent;
     };
 }, 1, [_vehicle, (_maxWidth max _maxLength) / 2]] call CBA_fnc_addPerFrameHandler;

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_effect_shock_wave
+Function: btc_ied_fnc_effect_shock_wave
 
 Description:
     Create a shock wave.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [getPos player] call btc_fnc_ied_effect_shock_wave;
+        [getPos player] call btc_ied_fnc_effect_shock_wave;
     (end)
 
 Author:

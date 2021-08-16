@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_eh
+Function: btc_patrol_fnc_eh
 
 Description:
     Remove events and delete entity.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorTarget] call btc_fnc_patrol_eh;
+        [cursorTarget] call btc_patrol_fnc_eh;
     (end)
 
 Author:
@@ -24,11 +24,11 @@ params [
     ["_veh", objNull, [objNull, grpNull]]
 ];
 
-if (_veh getVariable ["btc_fnc_patrol_eh_fired", false]) exitWith {};
-_veh setVariable ["btc_fnc_patrol_eh_fired", true, true];
+if (_veh getVariable ["btc_patrol_fnc_eh_fired", false]) exitWith {};
+_veh setVariable ["btc_patrol_fnc_eh_fired", true, true];
 
 if (btc_debug_log) then {
-    [format ["%1, isRE %2", _veh, isRemoteExecuted], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["%1, isRE %2", _veh, isRemoteExecuted], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
 private _group = if (_veh isEqualType grpNull) then {
@@ -50,6 +50,6 @@ if (_veh isEqualType objNull) then {
     [[], [_veh, _group]] call btc_fnc_delete;
 } else {
     private _vehicle = (assignedVehicle leader _veh);
-    _vehicle setVariable ["btc_fnc_patrol_eh_fired", true, true];
+    _vehicle setVariable ["btc_patrol_fnc_eh_fired", true, true];
     [[], [_vehicle, _veh]] call btc_fnc_delete;
 };

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_place
+Function: btc_log_fnc_place
 
 Description:
     Carry and place an object with keys.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_log_place;
+        [cursorObject] call btc_log_fnc_place;
     (end)
 
 Author:
@@ -50,7 +50,7 @@ private _actionEH = [player, "DefaultAction", {true}, {btc_log_placing = false;}
 [localize "STR_BTC_HAM_LOG_PLACE_RELEASE", ""] call ace_interaction_fnc_showMouseHint;
 
 //add actions to keys
-private _place_EH_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", btc_fnc_log_place_key_down];
+private _place_EH_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", btc_log_fnc_place_key_down];
 
 [player] call ace_weaponselect_fnc_putWeaponAway;
 player forceWalk true;

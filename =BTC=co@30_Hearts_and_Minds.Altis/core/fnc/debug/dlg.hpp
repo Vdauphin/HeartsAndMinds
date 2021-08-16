@@ -2,7 +2,7 @@ class TER_fpscounter
 {
     idd = 73001;
     duration = 1e+1000;
-    onLoad = "_this call btc_fnc_debug_graph;";
+    onLoad = "_this call btc_debug_fnc_graph;";
     class controls
     {
         class IGUIBack_2200: IGUIBack

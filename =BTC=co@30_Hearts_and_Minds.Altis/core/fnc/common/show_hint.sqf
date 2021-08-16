@@ -110,7 +110,7 @@ private _text = switch (_type) do {
     case 21 : {
         _custom params ["_color", "_player"];
         [
-            [[name _player], [" "]] select (isNull _player || !(side group _player isEqualTo btc_player_side)),
+            [[name _player], [" "]] select (isNull _player || (side group _player isNotEqualTo btc_player_side)),
             ["\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa", 4, _color],
             [" "]
         ];

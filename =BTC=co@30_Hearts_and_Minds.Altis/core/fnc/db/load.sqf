@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_load
+Function: btc_db_fnc_load
 
 Description:
     Load database from profileNamespace depends one worldname
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["Altis"] call btc_fnc_db_load;
+        ["Altis"] call btc_db_fnc_load;
     (end)
 
 Author:
@@ -32,7 +32,8 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
 {
     _x params ["_id", "_initialized", "_spawn_more", "_occupied", "_data_units", "_has_ho", "_ho_units_spawned", "_ieds", "_has_suicider",
         ["_data_animals", [], [[]]],
-        ["_data_tags", [], [[]]]
+        ["_data_tags", [], [[]]],
+        ["_civKilled", [], [[]]]
     ];
 
     private _city = btc_city_all select _id;
@@ -47,6 +48,7 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
     _city setVariable ["has_suicider", _has_suicider];
     _city setVariable ["data_animals", _data_animals];
     _city setVariable ["data_tags", _data_tags];
+    _city setVariable ["btc_rep_civKilled", _civKilled];
 
     if (btc_debug) then {
         private _marker = _city getVariable ["marker", ""];
@@ -58,8 +60,8 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
         _marker setMarkerText format ["loc_%3 %1 %2 - [%4]", _city getVariable "name", _city getVariable "type", _id, _occupied];
     };
     if (btc_debug_log) then {
-        [format ["ID: %1 - IsOccupied %2", _id, _occupied], __FILE__, [false]] call btc_fnc_debug_message;
-        [format ["data_city: %1", _x], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["ID: %1 - IsOccupied %2", _id, _occupied], __FILE__, [false]] call btc_debug_fnc_message;
+        [format ["data_city: %1", _x], __FILE__, [false]] call btc_debug_fnc_message;
     };
 } forEach _cities_status;
 
@@ -67,7 +69,7 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
 private _array_ho = +(profileNamespace getVariable [format ["btc_hm_%1_ho", _name], []]);
 
 {
-    _x call btc_fnc_mil_create_hideout;
+    _x call btc_hideout_fnc_create;
 } forEach _array_ho;
 
 private _ho = profileNamespace getVariable [format ["btc_hm_%1_ho_sel", _name], 0];
@@ -91,14 +93,14 @@ btc_cache_pos = _cache_pos;
 btc_cache_n = _cache_n;
 btc_cache_info = _cache_info;
 
-[_cache_pos, btc_p_chem, [1, 0] select _isChem] call btc_fnc_cache_create;
+[_cache_pos, btc_p_chem, [1, 0] select _isChem] call btc_cache_fnc_create;
 btc_cache_obj setVariable ["btc_cache_unitsSpawned", _cache_unitsSpawned];
 
 btc_cache_markers = [];
 {
     _x params ["_pos", "_marker_name"];
 
-    [_pos, 0, _marker_name] call btc_fnc_info_cacheMarker;
+    [_pos, 0, _marker_name] call btc_info_fnc_cacheMarker;
 } forEach _cache_markers;
 
 btc_cache_pictures = _cache_pictures;
@@ -107,7 +109,7 @@ btc_cache_pictures = _cache_pictures;
         _x,
         btc_cache_n,
         btc_cache_pictures select 1 select _forEachindex
-    ] remoteExecCall ["btc_fnc_info_cachePicture", [0, -2] select isDedicated, true]);
+    ] remoteExecCall ["btc_info_fnc_cachePicture", [0, -2] select isDedicated, true]);
 } forEach (btc_cache_pictures select 0);
 
 //FOB
@@ -116,7 +118,7 @@ private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name]
 {
     _x params ["_fob_name", "_pos", ["_direction", 0, [0]]];
 
-    [_pos, _direction, _fob_name] call btc_fnc_fob_create_s;
+    [_pos, _direction, _fob_name] call btc_fob_fnc_create_s;
 } forEach _fobs;
 
 //REP
@@ -129,7 +131,7 @@ btc_vehicles = [];
 private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []]);
 [{ // Can't use ace_cargo for objects created during first frame.
     {
-        [_x] call btc_fnc_db_loadObjectStatus;
+        [_x] call btc_db_fnc_loadObjectStatus;
     } forEach _this;
 }, _objs] call CBA_fnc_execNextFrame;
 
@@ -144,7 +146,7 @@ private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name]
             "_veh_fuel",
             "_veh_AllHitPointsDamage",
             "_veh_cargo",
-            "_veh_cont",
+            "_veh_inventory",
             "_customization",
             ["_isMedicalVehicle", false, [false]],
             ["_isRepairVehicle", false, [false]],
@@ -158,25 +160,25 @@ private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name]
         ];
 
         if (btc_debug_log) then {
-            [format ["_veh = %1", _x], __FILE__, [false]] call btc_fnc_debug_message;
+            [format ["_veh = %1", _x], __FILE__, [false]] call btc_debug_fnc_message;
         };
 
-        private _veh = [_veh_type, _veh_pos, _veh_dir, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle, _EDENinventory, _veh_AllHitPointsDamage] call btc_fnc_log_createVehicle;
+        private _veh = [_veh_type, _veh_pos, _veh_dir, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle, _EDENinventory, _veh_AllHitPointsDamage] call btc_log_fnc_createVehicle;
         _veh setVectorDirAndUp _vectorPos;
         _veh setFuel _veh_fuel;
 
-        [_veh, _veh_cargo, _veh_cont] call btc_fnc_db_loadCargo;
+        [_veh, _veh_cargo, _veh_inventory] call btc_db_fnc_loadCargo;
 
         if !(alive _veh) then {
-            [_veh, objNull, objNull, false] call btc_fnc_veh_killed;
+            [_veh, objNull, objNull, false] call btc_veh_fnc_killed;
         };
-        if !(_ViV isEqualTo []) then {
+        if (_ViV isNotEqualTo []) then {
             {
                 private _vehToLoad = _x call _loadVehicle;
-                if !([_vehToLoad, _veh] call btc_fnc_tow_ViV) then {
+                if !([_vehToLoad, _veh] call btc_tow_fnc_ViV) then {
                     _vehToLoad setVehiclePosition [_veh, [], 100, "NONE"];
                     private _marker = _vehToLoad getVariable ["marker", ""];
-                    if !(_marker isEqualTo "") then {
+                    if (_marker isNotEqualTo "") then {
                         _marker setMarkerPos _vehToLoad;
                     };
                 };
@@ -199,7 +201,7 @@ private _id = ["ace_tagCreated", {
 {
     _x params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_typeObject", "_tagModel"];
     private _object = objNull;
-    if !(_typeObject isEqualTo "") then {
+    if (_typeObject isNotEqualTo "") then {
         _object = nearestObject [ASLToATL _tagPosASL, _typeObject];
     };
     [_tagPosASL, _vectorDirAndUp, _texture, _object, objNull, "",_tagModel] call ace_tagging_fnc_createTag;
@@ -223,7 +225,7 @@ private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1
     _marker setMarkerBrush _markerBrush;
     _marker setMarkerDir _markerDir;
     _marker setMarkerShape _markerShape;
-    if !(_markerPolyline isEqualTo []) then {
+    if (_markerPolyline isNotEqualTo []) then {
         _marker setMarkerPolyline _markerPolyline;
     };
 } forEach _markers_properties;

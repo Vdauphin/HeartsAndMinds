@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_side_checkpoint
+Function: btc_side_fnc_checkpoint
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [false, "btc_fnc_side_checkpoint"] spawn btc_fnc_side_create;
+        [false, "btc_side_fnc_checkpoint"] spawn btc_side_fnc_create;
     (end)
 
 Author:
@@ -25,17 +25,21 @@ params [
 ];
 
 //// Choose an occupied City \\\\
-private _useful = btc_city_all select {!(isNull _x) && _x getVariable ["occupied", false] && !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])};
-if (_useful isEqualTo []) exitWith {[] spawn btc_fnc_side_create;};
+private _useful = btc_city_all select {
+    !isNull _x &&
+    _x getVariable ["occupied", false] &&
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+};
+if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 private _city = selectRandom _useful;
 private _pos = getPos _city;
 
-[_taskID, 9, objNull, _city getVariable "name"] call btc_fnc_task_create;
+[_taskID, 9, objNull, _city getVariable "name"] call btc_task_fnc_create;
 
 _city setVariable ["spawn_more", true];
 
 private _statics = btc_type_gl + btc_type_mg;
-private _radius = _city getVariable ["radius", 0];
+private _radius = _city getVariable ["cachingRadius", 0];
 
 private _boxes = [];
 private _composition = [];
@@ -79,10 +83,10 @@ for "_i" from 1 to (1 + round random 2) do {
     //// Create checkpoint with static at _pos \\\\
     _pos params ["_x", "_y", "_z"];
     private _posStatic = [_x -2.39185*cos(-_direction) - 2.33984*sin(-_direction), _y  + 2.33984 *cos(-_direction) -2.39185*sin(-_direction), _z];
-    [_posStatic, _statics, _direction + 180, [], _city] call btc_fnc_mil_create_static;
+    [_posStatic, _statics, _direction + 180, [], _city] call btc_mil_fnc_create_static;
 
     private _posStatic = [_x + 2.72949*cos(-_direction) - -2.03857*sin(-_direction), _y -2.03857*cos(-_direction) +2.72949*sin(-_direction), _z];
-    [_posStatic, _statics, _direction, [], _city] call btc_fnc_mil_create_static;
+    [_posStatic, _statics, _direction, [], _city] call btc_mil_fnc_create_static;
 
     _composition append ([_pos, _direction, _composition_checkpoint] call btc_fnc_create_composition);
 
@@ -90,13 +94,13 @@ for "_i" from 1 to (1 + round random 2) do {
     _boxe setVariable ["ace_cookoff_enable", false, true];
     _boxe setVariable ["ace_cookoff_enableAmmoCookoff", false, true];
     private _destroy_taskID = _taskID + "dt" + str _i;
-    [[_destroy_taskID, _taskID], 23, _boxe, _type_box, false, false] call btc_fnc_task_create;
+    [[_destroy_taskID, _taskID], 23, _boxe, _type_box, false, false] call btc_task_fnc_create;
     [_boxe, _destroy_taskID] spawn {
         params ["_boxe", "_destroy_taskID"];
 
         private _pos = getPos _boxe;
         waitUntil {sleep 5; _destroy_taskID call BIS_fnc_taskCompleted || !(alive _boxe)};
-        if !(_destroy_taskID call BIS_fnc_taskState isEqualTo "CANCELED") then {
+        if (_destroy_taskID call BIS_fnc_taskState isNotEqualTo "CANCELED") then {
             [_destroy_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
             private _fx = "test_EmptyObjectForSmoke" createVehicle _pos;
             _fx setPos _pos;
@@ -107,15 +111,15 @@ for "_i" from 1 to (1 + round random 2) do {
     _boxes pushBack _boxe;
 };
 
-waitUntil {sleep 5; (
+waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||
-    _boxes select {alive _x} isEqualTo [])
+    _boxes select {alive _x} isEqualTo []
 };
 
 [[], _boxes + _composition] call btc_fnc_delete;
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
-80 call btc_fnc_rep_change;
+80 call btc_rep_fnc_change;
 
-[_taskID, "SUCCEEDED"] call btc_fnc_task_setState;
+[_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

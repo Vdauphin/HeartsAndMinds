@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_getRearmMagazines
+Function: btc_log_fnc_getRearmMagazines
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_getRearmMagazines;
+        _result = [] call btc_log_fnc_getRearmMagazines;
     (end)
 
 Author:
@@ -42,7 +42,7 @@ private _rearming_magazines = [];
         private _pylonMagazine = (getPylonMagazines _vehicle) select (_pylonIndex - 1);
 
         // Only care about pylons that have a magazine.
-        if (!(_pylonMagazine isEqualTo "")) then {
+        if ((_pylonMagazine isNotEqualTo "")) then {
             _magazineInfo pushBack _pylonMagazine;
         };
     } forEach _pylonConfigs;

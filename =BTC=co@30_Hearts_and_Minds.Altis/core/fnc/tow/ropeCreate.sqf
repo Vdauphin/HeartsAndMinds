@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tow_ropeCreate
+Function: btc_tow_fnc_ropeCreate
 
 Description:
     Tow a vehicle.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_tow_ropeCreate;
+        [cursorObject] call btc_tow_fnc_ropeCreate;
     (end)
 
 Author:
@@ -26,7 +26,7 @@ params [
     ["_vehicleSelected", btc_tow_vehicleSelected, [objNull]]
 ];
 
-if !([_tower, _vehicleSelected] call btc_fnc_tow_check) exitWith {};
+if !([_tower, _vehicleSelected] call btc_tow_fnc_check) exitWith {};
 private _alreadyLoaded = (getVehicleCargo _tower) findIf {isObjectHidden _x} isEqualTo -1;
 if (
     _alreadyLoaded &&
@@ -40,7 +40,7 @@ if (_alreadyLoaded) then {
     deleteVehicle _fakeVehicle;
 };
 if (_canViV_wreck) exitWith {
-    [_vehicleSelected, _tower] remoteExecCall ["btc_fnc_tow_ViV", 2];
+    [_vehicleSelected, _tower] remoteExecCall ["btc_tow_fnc_ViV", 2];
     btc_tow_vehicleSelected = objNull;
 };
 
@@ -55,13 +55,13 @@ private _attachTo = [
 ];
 _vehicleSelected attachTo [_tower, _attachTo];
 
-private _model_rear_tower = ([_tower] call btc_fnc_tow_hitch_points) select 1;
-private _model_front_selected = ([_vehicleSelected] call btc_fnc_tow_hitch_points) select 0;
+private _model_rear_tower = ([_tower] call btc_tow_fnc_hitch_points) select 1;
+private _model_front_selected = ([_vehicleSelected] call btc_tow_fnc_hitch_points) select 0;
 private _selected_front_relativeToTower = _tower worldToModel (_vehicleSelected modelToWorld _model_front_selected);
 private _rope1 = ropeCreate [_tower, _model_rear_tower, _tower, _selected_front_relativeToTower vectorAdd [-0.4, 0, 0]];
 private _rope2 = ropeCreate [_tower, _model_rear_tower, _tower, _selected_front_relativeToTower vectorAdd [0.4, 0, 0]];
 
-[_tower, "RopeBreak", {[_this, _thisArgs] call btc_fnc_tow_ropeBreak},
+[_tower, "RopeBreak", {[_this, _thisArgs] call btc_tow_fnc_ropeBreak},
     [_vehicleSelected, [_rope1, _rope2]]
 ] remoteExecCall ["CBA_fnc_addBISEventHandler", 2];
 

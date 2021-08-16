@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_allahu_akbar
+Function: btc_ied_fnc_allahu_akbar
 
 Description:
     Play song and trigger suicider bomb if suicider is alive and awake.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [trigger] call btc_fnc_ied_allahu_akbar;
+        [trigger] call btc_ied_fnc_allahu_akbar;
     (end)
 
 Author:

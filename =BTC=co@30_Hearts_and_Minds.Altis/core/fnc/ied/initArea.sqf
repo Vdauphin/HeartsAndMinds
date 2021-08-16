@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_initArea
+Function: btc_ied_fnc_initArea
 
 Description:
     Initialize positions of IEDS.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_ied_initArea;
+        _result = [] call btc_ied_fnc_initArea;
     (end)
 
 Author:
@@ -40,7 +40,7 @@ private _array = _city getVariable ["ieds", []];
         if (_roads isEqualTo []) then {
             _sel_pos = [_sel_pos, 0, 100, 1, false] call btc_fnc_findsafepos;
         } else {
-            private _arr = (selectRandom _roads) call btc_fnc_ied_randomRoadPos;
+            private _arr = (selectRandom _roads) call btc_ied_fnc_randomRoadPos;
             _sel_pos = _arr select 0;
             _dir = _arr select 1;
         };
@@ -55,7 +55,7 @@ private _array = _city getVariable ["ieds", []];
             _marker setMarkerSize [0.8, 0.8];
         };
         if (btc_debug_log) then {
-            [format ["_this = %1  POS %2 N %3(%4)", _this, _sel_pos, _i, _n], __FILE__, [false]] call btc_fnc_debug_message;
+            [format ["_this = %1  POS %2 N %3(%4)", _this, _sel_pos, _i, _n], __FILE__, [false]] call btc_debug_fnc_message;
         };
     };
 } forEach [true, false];

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_create_s
+Function: btc_log_fnc_create_s
 
 Description:
     Fill me when you edit me !
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_create_s;
+        _result = [] call btc_log_fnc_create_s;
     (end)
 
 Author:
@@ -37,8 +37,8 @@ if (getText (configFile >> "cfgVehicles" >> _objec_type >> "displayName") isEqua
 _obj setVectorUp _vector;
 _obj setPosASL _pos;
 
-if (getNumber(configFile >> "CfgVehicles" >> _objec_type >> "isUav") isEqualTo 1) then {
+if (unitIsUAV _obj) then {
     createVehicleCrew _obj;
 };
 
-[_obj] call btc_fnc_log_init;
+[_obj] call btc_log_fnc_init;

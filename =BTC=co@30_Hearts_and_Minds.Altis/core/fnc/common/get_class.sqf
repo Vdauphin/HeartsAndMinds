@@ -52,7 +52,7 @@ private _alldlc = [];
                 //If is BI check if it is really BI, some mod don't change the author
                 private _mod_folder = getText(_cfgFactionClasses >> _allfaction select _index >> "icon") select [if ((getText(_cfgFactionClasses >> _allfaction select _index >> "icon") select [0, 1]) isEqualTo "\") then {1} else {0}];
                 private _mod = _mod_folder select [0, _mod_folder find "\"];
-                if !(_mod isEqualTo "a3") then {
+                if (_mod isNotEqualTo "a3") then {
                     _dlc = (_allfaction select _index) select [0, (_allfaction select _index) find "_"];
                 };
             } else {

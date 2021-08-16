@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_rep_suppressed
+Function: btc_rep_fnc_suppressed
 
 Description:
     Detect if player is firing. Then add a random panic animation. If player fire in direction of a civilian without enemies around, punish him by applying reputation effect and reduce reputation.
@@ -16,7 +16,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject, objNull, player distance cursorObject, "", "", "", "", player] call btc_fnc_rep_suppressed;
+        [cursorObject, objNull, player distance cursorObject, "", "", "", "", player] call btc_rep_fnc_suppressed;
     (end)
 
 Author:
@@ -32,15 +32,15 @@ params [
     ["_ammoObject", objNull, [objNull]]
 ];
 
-if (_civ getVariable ["btc_fnc_rep_suppressed_fired", false] isEqualTo 2) exitWith {};
+if (_civ getVariable ["btc_rep_fnc_suppressed_fired", false] isEqualTo 2) exitWith {};
 if (_ammoObject isKindOf "SmokeShell") exitWith {};
-if !(side group _civ isEqualTo civilian) exitWith {_civ setVariable ["btc_fnc_rep_suppressed_fired", 2]};
+if (side group _civ isNotEqualTo civilian) exitWith {_civ setVariable ["btc_rep_fnc_suppressed_fired", 2]};
 
 if (
-    _civ getVariable ["btc_fnc_rep_suppressed_fired", 0] isEqualTo 0 &&
+    _civ getVariable ["btc_rep_fnc_suppressed_fired", 0] isEqualTo 0 &&
     {random 3 < 1}
 ) then {
-    _civ setVariable ["btc_fnc_rep_suppressed_fired", 1];
+    _civ setVariable ["btc_rep_fnc_suppressed_fired", 1];
     [_civ, selectRandom ["ApanPknlMstpSnonWnonDnon_G01", "ApanPknlMstpSnonWnonDnon_G02", "ApanPknlMstpSnonWnonDnon_G03", "ApanPpneMstpSnonWnonDnon_G01", "ApanPpneMstpSnonWnonDnon_G02", "ApanPpneMstpSnonWnonDnon_G03"], 1] call ace_common_fnc_doAnimation;
 };
 
@@ -51,14 +51,14 @@ if (
     {abs((_shooter getDir _civ) - getDir _shooter) < 150/(_shooter distance _civ)}
 ) then {
     if (isServer)  then {
-        [btc_rep_malus_civ_suppressed, _shooter] call btc_fnc_rep_change;
-        [getPos _civ] call btc_fnc_rep_eh_effects;
+        [btc_rep_malus_civ_suppressed, _shooter] call btc_rep_fnc_change;
+        [getPos _civ] call btc_rep_fnc_eh_effects;
     } else {
-        [btc_rep_malus_civ_suppressed, _shooter] remoteExecCall ["btc_fnc_rep_change", 2];
-        [getPos _civ] remoteExecCall ["btc_fnc_rep_eh_effects", 2];
+        [btc_rep_malus_civ_suppressed, _shooter] remoteExecCall ["btc_rep_fnc_change", 2];
+        [getPos _civ] remoteExecCall ["btc_rep_fnc_eh_effects", 2];
     };
 
     if (btc_debug_log) then {
-        [format ["GREP %1 THIS = %2", btc_global_reputation, _this], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["GREP %1 THIS = %2", btc_global_reputation, _this], __FILE__, [false]] call btc_debug_fnc_message;
     };
 };

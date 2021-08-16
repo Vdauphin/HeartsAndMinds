@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_debug_fps
+Function: btc_debug_fnc_fps
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_debug_fps;
+        _result = [] call btc_debug_fnc_fps;
     (end)
 
 Author:
@@ -32,7 +32,7 @@ if (isNull _display || !btc_debug_graph) exitWith {
     _display closeDisplay 1;
 };
 
-[11, objNull, "btc_debug_frames"] remoteExecCall ["btc_fnc_int_ask_var", 2];
+[11, objNull, "btc_debug_frames"] remoteExecCall ["btc_int_fnc_ask_var", 2];
 private _frames = btc_debug_frames;
 _TXTfps ctrlSetText format ["SERVER FPS: %1", _frames];
 
