@@ -52,6 +52,7 @@ respawn = "BASE";
 respawnDelay = 2;
 respawnDialog = 0;
 respawnOnStart = 0;
+respawnButton = 0;
 respawnTemplates[] = {"MenuPosition"};
 
 // Disable BI wreck system (H&M handle it internally)
