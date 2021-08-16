@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_place_key_down
+Function: btc_log_fnc_place_key_down
 
 Description:
     https://community.bistudio.com/wiki/DIK_KeyCodes
@@ -17,7 +17,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_place_key_down;
+        _result = [] call btc_log_fnc_place_key_down;
     (end)
 
 Author:

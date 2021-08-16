@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 
 def btc_fnc_generate_header(file_name, folder_name, parameters_array):
-    function_name = "btc_fnc_%s_%s" % (folder_name, file_name)
+    function_name = "btc_%s_fnc_%s" % (folder_name, file_name)
     parameters_string = ''
     for param in parameters_array:
         parameters_string = parameters_string + ('''    %s - [%s]\n''' % (param[0], param[1]))

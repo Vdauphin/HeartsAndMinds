@@ -46,12 +46,12 @@ if (_isMedicalVehicle && {!([_vehicle] call ace_medical_treatment_fnc_isMedicalV
 if (_isRepairVehicle && {!([_vehicle] call ace_repair_fnc_isRepairVehicle)}) then {
     _vehicle setVariable ["ACE_isRepairVehicle", _isRepairVehicle, true];
 };
-if !(_fuelSource isEqualTo []) then {
+if (_fuelSource isNotEqualTo []) then {
     _fuelSource params [
         ["_fuelCargo", 0, [0]],
         ["_hooks", nil, [[]]]
     ];
-    if ((!isNil "_hooks") && {!(_hooks isEqualTo (_vehicle getVariable ["ace_refuel_hooks", []]))}) then {
+    if ((!isNil "_hooks") && {_hooks isNotEqualTo (_vehicle getVariable ["ace_refuel_hooks", []])}) then {
         [_vehicle, _fuelCargo, _hooks] call ace_refuel_fnc_makeSource;
     } else {
         if (_fuelCargo != [_vehicle] call ace_refuel_fnc_getFuel) then {
@@ -59,8 +59,8 @@ if !(_fuelSource isEqualTo []) then {
         };
     };
 };
-if !(_pylons isEqualTo []) then {
-    private _pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
+if (_pylons isNotEqualTo []) then {
+    private _pylonPaths = (configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
     {
         _vehicle removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon")
     } forEach getPylonMagazines _vehicle;
@@ -73,7 +73,7 @@ if (_isContaminated) then {
         publicVariable "btc_chem_contaminated";
     };
 };
-if !(_supplyVehicle isEqualTo []) then {
+if (_supplyVehicle isNotEqualTo []) then {
     _supplyVehicle params [
         ["_isSupplyVehicle", false, [false]],
         ["_currentSupply", -1, [0]]

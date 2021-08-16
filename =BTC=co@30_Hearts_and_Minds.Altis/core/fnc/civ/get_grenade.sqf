@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_civ_get_grenade
+Function: btc_civ_fnc_get_grenade
 
 Description:
     Search for civilians at a position in a range to add grenade to their inventory.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [[0, 0, 0], 200] call btc_fnc_civ_get_grenade;
+        [[0, 0, 0], 200] call btc_civ_fnc_get_grenade;
     (end)
 
 Author:
@@ -41,10 +41,10 @@ if (_units isEqualTo []) exitWith {};
 
 {
     if (btc_debug_log) then {
-        [format ["%1 - %2", _x, side _x], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["%1 - %2", _x, side _x], __FILE__, [false]] call btc_debug_fnc_message;
     };
 
-    [_x] call btc_fnc_civ_add_grenade;
+    [_x] call btc_civ_fnc_add_grenade;
 
     private _group = createGroup [btc_enemy_side, true];
     _group setVariable ["btc_city", group _x getVariable ["btc_city", objNull]];

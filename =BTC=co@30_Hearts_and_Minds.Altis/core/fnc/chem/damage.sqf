@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_chem_damage
+Function: btc_chem_fnc_damage
 
 Description:
     Apply chemical damage.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject, true, ["head","body","hand_l","hand_r","leg_l","leg_r"], configFile >> "CfgGlasses"] call btc_fnc_chem_damage;
+        [cursorObject, true, ["head","body","hand_l","hand_r","leg_l","leg_r"], configFile >> "CfgGlasses"] call btc_chem_fnc_damage;
     (end)
 
 Author:
@@ -59,6 +59,14 @@ if (
     };
 };
 if (
+    isPlayer _unit &&
+    {_protection isEqualTo 0}
+) then {
+    if (_unit getVariable ["ace_medical_pain", 0] < 0.9) then {
+        [_unit, 0.01] call ace_medical_fnc_adjustPainLevel;
+    };
+};
+if (
     [
         "B_SCBA_01_base_F",
         "B_CombinationUnitRespirator_01_Base_F"
@@ -66,7 +74,7 @@ if (
 ) then {
     _protection = _protection + 0.1;
 };
-if !(_uniform isEqualTo "") then {
+if (_uniform isNotEqualTo "") then {
     _protection = _protection + 0.5;
     if (
         [

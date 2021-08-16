@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_usefulCity
+Function: btc_patrol_fnc_usefulCity
 
 Description:
     Return useful city based on starting city and activated city by player. Prefer cities in the opposite side of the active city relatively to the starting city.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [[selectRandom btc_city_all, selectRandom btc_city_all]] call btc_fnc_patrol_usefulCity;
+        [[selectRandom btc_city_all, selectRandom btc_city_all]] call btc_patrol_fnc_usefulCity;
     (end)
 
 Author:
@@ -36,9 +36,9 @@ _cities params [
 //Find a useful end city from the start city depending of vehicle type
 private _useful = [];
 if (_isBoat) then {
-    _useful = btc_city_all select {!(isNull _x) && { _x getVariable ["hasbeach", false]}};
+    _useful = btc_city_all select {!isNull _x && { _x getVariable ["hasbeach", false]}};
 } else {
-    _useful = btc_city_all select {!(isNull _x) && {_x getVariable ["type", ""] != "NameMarine"}};
+    _useful = btc_city_all select {!isNull _x && {_x getVariable ["type", ""] != "NameMarine"}};
 };
 private _cities = _useful inAreaArray [getPosWorld _active_city, _area, _area];
 private _cities = _cities - (_start_city getVariable ["btc_cities_inaccessible", []]);
@@ -49,7 +49,7 @@ _cities_dirTo = _cities select {
     private _ang = _active_city getDir _x;
     (abs(_ang - _dirTo) min (360 - abs(_ang - _dirTo)) < 45);
 };
-if !(_cities_dirTo isEqualTo []) then {
+if (_cities_dirTo isNotEqualTo []) then {
     _cities = _cities_dirTo;
 };
 

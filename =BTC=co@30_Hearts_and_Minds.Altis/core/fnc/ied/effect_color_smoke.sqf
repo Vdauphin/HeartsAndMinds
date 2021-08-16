@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_effect_color_smoke
+Function: btc_ied_fnc_effect_color_smoke
 
 Description:
     Add colored smoke effect.
@@ -17,7 +17,7 @@ Returns:
 
 Examples:
     (begin example)
-        [getPos player, getPosASL player, "sand"] call btc_fnc_ied_effect_color_smoke;
+        [getPos player, getPosASL player, "sand"] call btc_ied_fnc_effect_color_smoke;
     (end)
 
 Author:

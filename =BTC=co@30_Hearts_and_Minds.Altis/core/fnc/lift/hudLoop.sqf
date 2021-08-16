@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_lift_hudLoop
+Function: btc_lift_fnc_hudLoop
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_lift_hudLoop;
+        _result = [] call btc_lift_fnc_hudLoop;
     (end)
 
 Author:
@@ -35,7 +35,7 @@ if !((alive player && vehicle player != player) && btc_lift_hud) then {
 };
 
 private _chopper = vehicle player;
-private _array = [_chopper] call btc_fnc_lift_getLiftable;
+private _array = [_chopper] call btc_lift_fnc_getLiftable;
 private _cargo_array = nearestObjects [_chopper, _array, 30];
 if (_array isEqualTo []) then {_cargo_array = [];};
 _cargo_array = _cargo_array - [_chopper];
@@ -59,7 +59,7 @@ if (!isNull _cargo) then {
     _obj_img ctrlSetPosition [_hud_x_1, _hud_y_1];
     _obj_img ctrlCommit 0;
     private _pic_cargo = "";
-    private _cfgVehicles_cargo = configFile >> "CfgVehicles" >> typeOf _cargo;
+    private _cfgVehicles_cargo = configOf _cargo;
     if (_cargo isKindOf "LandVehicle") then {
         _pic_cargo = getText (_cfgVehicles_cargo >> "picture");
     };

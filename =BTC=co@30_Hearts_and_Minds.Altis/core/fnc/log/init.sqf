@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_init
+Function: btc_log_fnc_init
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_init;
+        _result = [] call btc_log_fnc_init;
     (end)
 
 Author:
@@ -37,20 +37,20 @@ if (
 private _type = typeOf _obj;
 if (_type in btc_log_def_loadable || {_type in btc_log_def_rc}) then {
     if (_type in btc_log_def_rc || {getNumber (configFile >> "CfgVehicles" >> _type >> "ace_cargo_canLoad") isEqualTo 0}) then {
-        [_obj, [_obj] call btc_fnc_log_get_rc] call ace_cargo_fnc_setSize;
+        [_obj, [_obj] call btc_log_fnc_get_rc] call ace_cargo_fnc_setSize;
 
         if (btc_debug_log) then {
-           [format ["ace_cargo_fnc_setSize to %1", _obj], __FILE__, [false]] call btc_fnc_debug_message;
+           [format ["ace_cargo_fnc_setSize to %1", _obj], __FILE__, [false]] call btc_debug_fnc_message;
         };
     };
 };
 
 if (_type in btc_log_def_can_load || {_type in btc_log_def_cc}) then {
     if (_type in btc_log_def_cc || {getNumber (configFile >> "CfgVehicles" >> _type >> "ace_cargo_hasCargo") isEqualTo 0}) then {
-        [_obj, [_obj] call btc_fnc_log_get_cc] call ace_cargo_fnc_setSpace;
+        [_obj, [_obj] call btc_log_fnc_get_cc] call ace_cargo_fnc_setSpace;
 
         if (btc_debug_log) then {
-            [format ["ace_cargo_fnc_setSpace to %1", _obj], __FILE__, [false]] call btc_fnc_debug_message;
+            [format ["ace_cargo_fnc_setSpace to %1", _obj], __FILE__, [false]] call btc_debug_fnc_message;
         };
     };
 };

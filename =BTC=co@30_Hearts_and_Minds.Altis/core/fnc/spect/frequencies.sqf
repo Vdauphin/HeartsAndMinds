@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_spect_frequencies
+Function: btc_spect_fnc_frequencies
 
 Description:
     Generate an array of frequency and amplitude based on object netID and position.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [player, allUnitsUAV] call btc_fnc_spect_frequencies;
+        [player, allUnitsUAV] call btc_spect_fnc_frequencies;
     (end)
 
 Author:

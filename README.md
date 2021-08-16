@@ -1,3 +1,24 @@
+### DEVELOPMENT NOTES:
+
+Process for successful github use!
+
+1. CREATE A BRANCH!
+2. Begin work on your branch, one step at a time.
+3. After each step is completed, remember to "Commit" your changes to your branch locally. Do this with a note on 
+   each commit exsplaining what you've done.
+4. "Push" to your branch.
+5. After your branch is complted, and you feel the feature is ready to be added, create a "Pull Request".
+6. Once a "pull" is submited another member of the team will organise a test of that branch, focusing on testing
+   the specific features which were modified/added.
+7. After a sucessfull test the Pull can be accepted and added into main.
+
+For Player Release!
+
+A player release is any test or gameplay involving members outside of the development team. These players should only ever interact with the
+ "Release" branch of gitgub, this branch is specifically setup for the players to enjoy, heavily tested for bugs etc. Players should never be hotseating the server for fixes. If a bug is found, it should be noted and repaired in the main branch for a seperate test. Repeated hotfixes on a live player test will not be tolerated.
+
+Also note: We will no longer be removing stale branches once they are merged. Instead they will just be left alone in a "merged" state for tracability.
+
 <p align="center">
     <img src="https://data.bistudio.com/assets/img/badges/medal/MWFMP.png" width="85">
     <img src="https://user-images.githubusercontent.com/14364400/120066018-bd52ed80-c074-11eb-87d6-61cdeada32f8.png" width="210">
@@ -5,8 +26,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.21.6">
-        <img src="https://img.shields.io/badge/Version-1.21.6-blue.svg?style=flat-square" alt="H&M Version">
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.21.5">
+        <img src="https://img.shields.io/badge/Version-1.21.5-blue.svg?style=flat-square" alt="H&M Version">
     </a>
     <a href="https://somsubhra.github.io/github-release-stats/?username=vdauphin&repository=HeartsAndMinds&page=1&per_page=300">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">
@@ -34,7 +55,7 @@ Online [wiki available](http://vdauphin.github.io/HeartsAndMinds/).
         - Request a lift
         - Discussion ([interpreter](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#intel))
         - Fleeing
-    - More than 18 [side mission](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#side-mission)
+    - More than 19 [side mission](http://vdauphin.github.io/HeartsAndMinds/InGame-documentation#side-mission)
 - Deep ACE3 support
     - Use mainly ACE interaction
     - Rearm system
@@ -63,7 +84,7 @@ The militia has an unknown number of hideouts in the island that need to be dest
 They have also ammo caches in various locations, destroy them to weaken its power.
 
 Bad actions cause bad effects.
-Infact there's a reputation system: helping the local population, fighting the "Oplitas", disarming IED will rise your reputation; killing civilians, mutilate alive/dead civilian, firing near civilians for no reason, damaging/destroying buildings, losing vehicles, respawns will decrease your reputation.
+Infact there's a reputation system: helping the local population, fighting the "Oplitas", disarming IED will rise your reputation; killing civilians, mutilate alive/dead civilian, firing near civilians for no reason, remove banana, damaging/destroying buildings, breaking locked door, losing vehicles, respawns will decrease your reputation.
 At the beginning you have a very low reputation level, so civilians won't help you revealing important information about Oplitas, they will likely lie instead.
 
 <p align="center">
@@ -74,5 +95,7 @@ At the beginning you have a very low reputation level, so civilians won't help y
 Any support or feedback is always welcome and appreciated!
 
 ### Credits:
+- ALL CREDIT FOR THE ORIGINAL MISSION GOES TO Vdaphin AND HIS TEAM!(https://github.com/Vdauphin/HeartsAndMinds)
 - =BTC= clan
 - [Contributors](https://github.com/Vdauphin/HeartsAndMinds/graphs/contributors)
+- Karmakut Development Team (DEVOPS) [NoACE,Tetlys]

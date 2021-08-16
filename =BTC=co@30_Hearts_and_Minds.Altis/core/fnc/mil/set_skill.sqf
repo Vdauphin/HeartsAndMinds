@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_set_skill
+Function: btc_mil_fnc_set_skill
 
 Description:
     Set skills to a unit.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_mil_set_skill;
+        [cursorObject] call btc_mil_fnc_set_skill;
     (end)
 
 Author:

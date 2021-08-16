@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_repair_wreck
+Function: btc_log_fnc_repair_wreck
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_repair_wreck;
+        _result = [] call btc_log_fnc_repair_wreck;
     (end)
 
 Author:
@@ -33,4 +33,4 @@ if (_array isEqualTo []) exitWith {(localize "STR_BTC_HAM_LOG_RWRECK_NOWRECK") c
 
 if (damage (_array select 0) != 1) exitWith {(localize "STR_BTC_HAM_LOG_RWRECK_NOTWRECK") call CBA_fnc_notify};
 
-[_array select 0] remoteExecCall ["btc_fnc_log_server_repair_wreck", 2];
+[_array select 0] remoteExecCall ["btc_log_fnc_server_repair_wreck", 2];

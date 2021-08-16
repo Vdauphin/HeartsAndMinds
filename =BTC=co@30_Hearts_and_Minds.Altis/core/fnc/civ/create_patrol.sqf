@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_civ_create_patrol
+Function: btc_civ_fnc_create_patrol
 
 Description:
     Create a civilian patrol around a city in a defined area.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        _isCreated = [createGroup civilian, _active_city] call btc_fnc_civ_create_patrol;
+        _isCreated = [createGroup civilian, _active_city] call btc_civ_fnc_create_patrol;
     (end)
 
 Author:
@@ -65,11 +65,11 @@ if (_roads isEqualTo []) then {
 _group setVariable ["btc_patrol_id", btc_civilian_id, btc_debug];
 btc_civilian_id = btc_civilian_id - 1;
 
-private _delay = [_group, _veh_type, [selectRandom btc_civ_type_units], _safe_pos] call btc_fnc_delay_createVehicle;
+private _delay = [_group, _veh_type, [selectRandom btc_civ_type_units], _safe_pos] call btc_delay_fnc_createVehicle;
 
 [{
-    _this call btc_fnc_patrol_init;
+    _this call btc_patrol_fnc_init;
     [[_this select 0]] call btc_fnc_set_groupsOwner;
-}, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
+}, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
 
 true

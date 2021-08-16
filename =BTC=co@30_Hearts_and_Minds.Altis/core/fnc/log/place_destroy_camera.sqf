@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_place_destroy_camera
+Function: btc_log_fnc_place_destroy_camera
 
 Description:
     Fill me when you edit me !
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_place_destroy_camera;
+        _result = [] call btc_log_fnc_place_destroy_camera;
     (end)
 
 Author:

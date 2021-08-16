@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_paste
+Function: btc_log_fnc_paste
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_paste;
+        _result = [] call btc_log_fnc_paste;
     (end)
 
 Author:
@@ -30,4 +30,4 @@ if ([_create_object_point] call btc_fnc_checkArea) exitWith {};
 
 if (isNil "_copy_container") exitWith {(localize "STR_BTC_HAM_O_PASTE_NOCOPIED") call CBA_fnc_notify};
 
-[_copy_container] remoteExecCall ["btc_fnc_db_loadObjectStatus", 2];
+[_copy_container] remoteExecCall ["btc_db_fnc_loadObjectStatus", 2];

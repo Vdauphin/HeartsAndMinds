@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_arsenal_weaponsFilter
+Function: btc_arsenal_fnc_weaponsFilter
 
 Description:
     Filter weapons allowed with the weapons allowed filter: array of item type ("AssaultRifle", "MissileLauncher"...), allowed ammo usage ("128 + 512": ammo against vehicles and armored vehicles) and array to check if weapons are parent to a parent.
@@ -16,7 +16,7 @@ Returns:
 
 Examples:
     (begin example)
-        _allowedWeapons = [["AssaultRifle", ""], ["RocketLauncher", ""]] call btc_fnc_arsenal_weaponsFilter;
+        _allowedWeapons = [["AssaultRifle", ""], ["RocketLauncher", ""]] call btc_arsenal_fnc_weaponsFilter;
     (end)
 
 Author:
@@ -38,7 +38,7 @@ private _weapons = ("true" configClasses (configFile >> "CfgWeapons") select {
 
 private _allowedWeapons = [];
 {
-    _allowedWeapons append ([_weapons, _x] call btc_fnc_arsenal_ammoUsage);
+    _allowedWeapons append ([_weapons, _x] call btc_arsenal_fnc_ammoUsage);
 } forEach _itemType_ammo_usageAllowed;
 
 private _cfgVehicles = configFile >> "CfgVehicles";

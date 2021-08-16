@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_disabled
+Function: btc_patrol_fnc_disabled
 
 Description:
     Delete vehicle disabled due to a high impact.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [veh] call btc_fnc_patrol_disabled;
+        [veh] call btc_patrol_fnc_disabled;
     (end)
 
 Author:
@@ -26,14 +26,14 @@ params [
     ["_damage", 0.2, [0]]
 ];
 
-if (_veh getVariable ["btc_fnc_patrol_disabled_fired", false]) exitWith {};
+if (_veh getVariable ["btc_patrol_fnc_disabled_fired", false]) exitWith {};
 
 if (_damage > 0.1) then {
-    _veh setVariable ["btc_fnc_patrol_disabled_fired", true, true];
+    _veh setVariable ["btc_patrol_fnc_disabled_fired", true, true];
     if (isServer) then {
-        [_veh] call btc_fnc_patrol_eh;
+        [_veh] call btc_patrol_fnc_eh;
     } else {
-        [_veh] remoteExecCall ["btc_fnc_patrol_eh", 2];
+        [_veh] remoteExecCall ["btc_patrol_fnc_eh", 2];
     };
 };
 

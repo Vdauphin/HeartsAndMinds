@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_delete
+Function: btc_db_fnc_delete
 
 Description:
     Delete database.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_db_delete;
+        [] call btc_db_fnc_delete;
     (end)
 
 Author:

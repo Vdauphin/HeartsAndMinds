@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_WPCheck
+Function: btc_patrol_fnc_WPCheck
 
 Description:
     Check if the waypoint has been completed and initialise a new patrol.
@@ -16,7 +16,7 @@ Returns:
 
 Examples:
     (begin example)
-        [group cursorTarget, 1000, getPos player, [0, 1, 2]] call btc_fnc_patrol_WPCheck;
+        [group cursorTarget, 1000, getPos player, [0, 1, 2]] call btc_patrol_fnc_WPCheck;
     (end)
 
 Author:
@@ -48,14 +48,14 @@ private _active_city = btc_city_all select _active_cityID;
 private _end_city = btc_city_all select _end_cityID;
 
 //Remove if too far from player
-if ([_active_city, _group, _area] call btc_fnc_patrol_playersInAreaCityGroup) exitWith {
-    [_group] call btc_fnc_patrol_eh;
+if ([_active_city, _group, _area] call btc_patrol_fnc_playersInAreaCityGroup) exitWith {
+    [_group] call btc_patrol_fnc_eh;
 };
 
 //Sometimes the waypoint is completed but too far due to obstacle (water for island etc)
 if ((leader _group) distance _last_wp_pos > 100) then {
     if (btc_debug || btc_debug_log) then {
-        [format ["Patrol ID: %1, %2 inaccessible (end city ID: %3)", _group getVariable ["btc_patrol_id", "Missing patrol ID"], _end_city getVariable ["name", "no name"], _end_city getVariable ["id", 0]], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+        [format ["Patrol ID: %1, %2 inaccessible (end city ID: %3)", _group getVariable ["btc_patrol_id", "Missing patrol ID"], _end_city getVariable ["name", "no name"], _end_city getVariable ["id", 0]], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
     };
 
     //Dynamically create a balcklist of cities inaccessible from the starting city
@@ -66,4 +66,4 @@ if ((leader _group) distance _last_wp_pos > 100) then {
     _end_city = _start_city;
 };
 
-[_group, [_end_city, _active_city], _area, _isBoat] call btc_fnc_patrol_init;
+[_group, [_end_city, _active_city], _area, _isBoat] call btc_patrol_fnc_init;

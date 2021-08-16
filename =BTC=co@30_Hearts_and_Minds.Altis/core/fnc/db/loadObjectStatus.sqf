@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_loadObjectStatus
+Function: btc_db_fnc_loadObjectStatus
 
 Description:
     Load object status like ACE cargo, inventory and position.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_db_loadObjectStatus;
+        _result = [] call btc_db_fnc_loadObjectStatus;
     (end)
 
 Author:
@@ -25,7 +25,7 @@ params [
 ];
 _object_data params [
     "_type",
-    "_posWorld",
+    "_pos",
     "_dir",
     "_magClass",
     "_cargo",
@@ -34,10 +34,10 @@ _object_data params [
     ["_isContaminated", false, [false]]
 ];
 
-private _obj = _type createVehicle _posWorld;
+private _obj = createVehicle [_type, ASLToATL _pos, [], 0, "CAN_COLLIDE"];
 
 _obj setDir _dir;
-_obj setPosWorld _posWorld;
+_obj setPosASL _pos;
 _obj setVectorDirAndUp _vectorPos;
 
 if (_isContaminated) then {
@@ -45,10 +45,10 @@ if (_isContaminated) then {
         publicVariable "btc_chem_contaminated";
     };
 };
-if !(_magClass isEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
-if (getNumber(configFile >> "CfgVehicles" >> _type >> "isUav") isEqualTo 1) then {
+if (_magClass isNotEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
+if (unitIsUAV _obj) then {
     createVehicleCrew _obj;
 };
 
-[_obj] call btc_fnc_log_init;
-[_obj, _cargo, _inventory] call btc_fnc_db_loadCargo;
+[_obj] call btc_log_fnc_init;
+[_obj, _cargo, _inventory] call btc_db_fnc_loadCargo;

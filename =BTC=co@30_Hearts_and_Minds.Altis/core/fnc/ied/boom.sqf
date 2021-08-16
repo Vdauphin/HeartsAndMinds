@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_boom
+Function: btc_ied_fnc_boom
 
 Description:
     Create the boom and the visual effect player side.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [wreck, ied] call btc_fnc_ied_boom;
+        [wreck, ied] call btc_ied_fnc_boom;
     (end)
 
 Author:
@@ -27,7 +27,7 @@ params [
 ];
 
 if (btc_debug_log) then {
-    [format ["%1 - POS %2", [_wreck, _ied], getPos _wreck], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["%1 - POS %2", [_wreck, _ied], getPos _wreck], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
 private _pos = getPos _ied;
@@ -35,6 +35,6 @@ deleteVehicle _ied;
 "Bo_GBU12_LGB_MI10" createVehicle _pos;
 deleteVehicle _wreck;
 
-[_pos] call btc_fnc_deaf_earringing;
-[_pos] remoteExecCall ["btc_fnc_ied_effects", [0, -2] select isDedicated];
+[_pos] call btc_deaf_fnc_earringing;
+[_pos] remoteExecCall ["btc_ied_fnc_effects", [0, -2] select isDedicated];
 ["btc_ied_boom", [_pos]] call CBA_fnc_localEvent;

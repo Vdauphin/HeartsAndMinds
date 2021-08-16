@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_addWP
+Function: btc_mil_fnc_addWP
 
 Description:
     Add waypoint to allready created units.
@@ -16,7 +16,7 @@ Returns:
 
 Examples:
     (begin example)
-        [group cursorObject, btc_city_all select 0, 200] call btc_fnc_mil_addWP;
+        [group cursorObject, btc_city_all select 0, 200] call btc_mil_fnc_addWP;
     (end)
 
 Author:
@@ -39,7 +39,7 @@ private _rpos = [_pos, _area] call btc_fnc_randomize_pos;
 switch (true) do {
     case (_wp <= _wp_house_probability) : {
         private _houses = [_city, _area] call btc_fnc_getHouses;
-        if !(_houses isEqualTo []) then {
+        if (_houses isNotEqualTo []) then {
             private _house = selectRandom _houses;
             [_group, _house] call btc_fnc_house_addWP;
             _group setVariable ["btc_inHouse", typeOf _house];
@@ -52,7 +52,7 @@ switch (true) do {
     };
     case (_wp > _wp_sentry_probability) : {
         [_group] call CBA_fnc_clearWaypoints;
-        [_group, _rpos, -1, "SENTRY", "AWARE", "RED", "UNCHANGED", "WEDGE", "(group this) call btc_fnc_data_add_group;", [18000, 36000, 54000]] call CBA_fnc_addWaypoint;
+        [_group, _rpos, -1, "SENTRY", "AWARE", "RED", "UNCHANGED", "WEDGE", "(group this) call btc_data_fnc_add_group;", [18000, 36000, 54000]] call CBA_fnc_addWaypoint;
     };
 };
 

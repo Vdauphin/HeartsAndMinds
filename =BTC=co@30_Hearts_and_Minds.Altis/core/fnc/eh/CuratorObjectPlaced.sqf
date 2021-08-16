@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_eh_CuratorObjectPlaced
+Function: btc_eh_fnc_CuratorObjectPlaced
 
 Description:
     Initialise object placed by curator.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_eh_CuratorObjectPlaced;
+        [cursorObject] call btc_eh_fnc_CuratorObjectPlaced;
     (end)
 
 Author:
@@ -27,12 +27,12 @@ params [
 ];
 
 if !((_object_placed isKindOf "AllVehicles") || (_object_placed isKindOf "Module_F")) then {
-    [_object_placed] remoteExecCall ["btc_fnc_log_init", 2];
+    [_object_placed] remoteExecCall ["btc_log_fnc_init", 2];
 
     if (btc_debug_log) then {
-        [format ["OBJECT %1", _object_placed], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["OBJECT %1", _object_placed], __FILE__, [false]] call btc_debug_fnc_message;
     };
     if (btc_debug) then {
-        [str _object_placed, __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
+        [str _object_placed, __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
     };
 };

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_fob_create_s
+Function: btc_fob_fnc_create_s
 
 Description:
    Create the FOB.
@@ -18,7 +18,7 @@ Returns:
 
 Examples:
     (begin example)
-        [getPos player, random 360, "My FOB"] call btc_fnc_fob_create_s;
+        [getPos player, random 360, "My FOB"] call btc_fob_fnc_create_s;
     (end)
 
 Author:
@@ -52,6 +52,6 @@ _marker setMarkerShape "ICON";
 (_fobs select 2) pushBack _flag;
 [_flag, "Deleted", {[_thisArgs select 0, _thisArgs select 1] call BIS_fnc_removeRespawnPosition}, [btc_player_side, _flag, _FOB_name] call BIS_fnc_addRespawnPosition] call CBA_fnc_addBISEventHandler;
 
-_structure addEventHandler ["Killed", btc_fnc_fob_killed];
+_structure addEventHandler ["Killed", btc_fob_fnc_killed];
 
 [_marker, _structure, _flag]

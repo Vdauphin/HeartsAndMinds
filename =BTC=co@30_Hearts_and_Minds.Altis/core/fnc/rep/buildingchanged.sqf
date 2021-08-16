@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_rep_buildingchanged
+Function: btc_rep_fnc_buildingchanged
 
 Description:
     Change reputation on building damage.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_rep_buildingchanged;
+        _result = [] call btc_rep_fnc_buildingchanged;
     (end)
 
 Author:
@@ -57,7 +57,7 @@ if (!_skipCategories) then {
 };
 
 if (btc_debug) then {
-    [format ["%1 to %2. Malus: %3", typeOf _from, typeOf _to, _malus], __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
+    [format ["%1 to %2. Malus: %3", typeOf _from, typeOf _to, _malus], __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
 };
 
-_malus call btc_fnc_rep_change;
+_malus call btc_rep_fnc_change;

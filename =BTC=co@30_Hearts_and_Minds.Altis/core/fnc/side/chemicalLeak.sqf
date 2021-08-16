@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_side_chemicalLeak
+Function: btc_side_fnc_chemicalLeak
 
 Description:
     Some containers has been broken and drop some contaminated objects. Clean up those contaminated objects under a big shower.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [false, "btc_fnc_side_chemicalLeak"] spawn btc_fnc_side_create;
+        [false, "btc_side_fnc_chemicalLeak"] spawn btc_side_fnc_create;
     (end)
 
 Author:
@@ -24,13 +24,17 @@ params [
     ["_taskID", "btc_side", [""]]
 ];
 
-private _useful = btc_city_all select {!(isNull _x) && !(_x getVariable ["occupied", false]) && !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])};
+private _useful = btc_city_all select {
+    !isNull _x &&
+    !(_x getVariable ["occupied", false]) &&
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+};
 if (_useful isEqualTo []) then {_useful = + (btc_city_all select {!(isNull _x)});};
 
 private _city = selectRandom _useful;
-private _pos = [getPos _city, 0, _city getVariable ["radius", 100], 30, false] call btc_fnc_findsafepos;
+private _pos = [getPos _city, 0, _city getVariable ["cachingRadius", 100], 30, false] call btc_fnc_findsafepos;
 
-[_taskID, 30, getPos _city, _city getVariable "name"] call btc_fnc_task_create;
+[_taskID, 30, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
 
 private _distance_between_fences = 3;
 private _number_of_fences = 2 * (3 + floor random 2);
@@ -62,7 +66,7 @@ for "_i" from -_number_of_fences to _number_of_fences do {
         [_barrier, 0, [_i * _distance_between_fences, _offset, 0]],
         [_barrier, 90, [ -_offset, _i * _distance_between_fences, 0]]
     ];
-    if !(_i isEqualTo 4) then {
+    if (_i isNotEqualTo 4) then {
         _composition_pattern pushBack [_barrier, 90, [_offset, _i * _distance_between_fences, 0]];
         if (random 1 > 0.7) then {
             _composition_pattern append [
@@ -144,7 +148,7 @@ for "_i" from 1 to (5 + round random 5) do {
     private _hazmat = createVehicle [selectRandom btc_type_hazmat, _m_pos, [], 2, "NONE"];
     _hazmat setDir random 360;
     _hazmat setVectorUp [random 1, random 1, random [-1, 0, 1]];
-    [_hazmat] call btc_fnc_log_init;
+    [_hazmat] call btc_log_fnc_init;
     _chemical pushBack _hazmat;
     if (_i < 3 || random 1 > 0.5) then {
         btc_chem_contaminated pushBack _hazmat;
@@ -154,33 +158,35 @@ for "_i" from 1 to (5 + round random 5) do {
 };
 
 private _bring_taskID = _taskID + "br";
-[[_bring_taskID, _taskID], 31, _pos, btc_containers_mat select 0] call btc_fnc_task_create;
+[[_bring_taskID, _taskID], 31, _pos, btc_containers_mat select 0] call btc_task_fnc_create;
 
-waitUntil {sleep 5; (
+waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||
-    !((nearestObjects [_pos, btc_containers_mat, 200]) isEqualTo [])
-)};
+    (nearestObjects [_pos, btc_containers_mat, 200]) isNotEqualTo []
+};
 
-if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {[[], _composition_objects + _chemical] call btc_fnc_delete;};
+if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
+    [[], _composition_objects + _chemical] call btc_fnc_delete;
+};
 
 [_bring_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
 
-[getPos _city, _pos getPos [_area_size * 2.5, _pos getDir _city]] call btc_fnc_civ_evacuate;
+[getPos _city, _pos getPos [_area_size * 2.5, _pos getDir _city]] call btc_civ_fnc_evacuate;
 
 private _locate_taskID = _taskID + "lc";
-[[_locate_taskID, _taskID], 32, _pos, typeOf((_chemical arrayIntersect btc_chem_contaminated) select 0)] call btc_fnc_task_create;
+[[_locate_taskID, _taskID], 32, _pos, typeOf((_chemical arrayIntersect btc_chem_contaminated) select 0)] call btc_task_fnc_create;
 private _clean_taskID = _taskID + "cl";
-[[_clean_taskID, _taskID], 33, btc_bigShower, typeOf btc_bigShower] call btc_fnc_task_create;
+[[_clean_taskID, _taskID], 33, btc_bigShower, typeOf btc_bigShower] call btc_task_fnc_create;
 
-waitUntil {sleep 5; (
+waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||
     (_chemical arrayIntersect btc_chem_contaminated) select {!isNull _x} isEqualTo []
-)};
+};
 
 [[], _composition_objects + _chemical] call btc_fnc_delete;
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
-50 call btc_fnc_rep_change;
+50 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

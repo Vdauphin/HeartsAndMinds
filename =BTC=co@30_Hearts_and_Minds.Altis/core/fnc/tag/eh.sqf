@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tag_eh
+Function: btc_tag_fnc_eh
 
 Description:
     Store texture for city de_activation, check if player try to remove a tag or store player tag to database.
@@ -37,7 +37,7 @@ if (_unit in btc_city_all) then {
                 [
                     [btc_rep_bonus_removeTagLetter, btc_rep_bonus_removeTag] select (_tagToRemove isKindOf "Graffiti_base_F"),
                     _unit
-                ] call btc_fnc_rep_change;
+                ] call btc_rep_fnc_change;
             };
             deleteVehicle _tagToRemove;
         };

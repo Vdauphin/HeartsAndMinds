@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_create_patrol
+Function: btc_mil_fnc_create_patrol
 
 Description:
     Fill me when you edit me !
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [2, (allPlayers#0), btc_patrol_area] call btc_fnc_mil_create_patrol;
+        [2, (allPlayers#0), btc_patrol_area] call btc_mil_fnc_create_patrol;
     (end)
 
 Author:
@@ -37,11 +37,11 @@ if (_random isEqualTo 0) then {
 };
 
 if (btc_debug_log) then {
-    [format ["_random = %1 _active_city %2 _area %3 btc_patrol_active = %4", _random, _active_city, _area, count btc_patrol_active], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["_random = %1 _active_city %2 _area %3 btc_patrol_active = %4", _random, _active_city, _area, count btc_patrol_active], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
 //Remove if too far from player
-if ([_active_city, grpNull, _area] call btc_fnc_patrol_playersInAreaCityGroup) exitWith {
+if ([_active_city, grpNull, _area] call btc_patrol_fnc_playersInAreaCityGroup) exitWith {
     _group call CBA_fnc_deleteEntity;
     false
 };
@@ -58,7 +58,7 @@ if (_usefuls isEqualTo []) exitWith {
 private _start_city = selectRandom _usefuls;
 private _pos = [];
 if (_start_city getVariable ["hasbeach", false]) then {
-    _pos = [getPos _start_city, _start_city getVariable ["radius", 100], btc_p_sea] call btc_fnc_randomize_pos;
+    _pos = [getPos _start_city, _start_city getVariable ["cachingRadius", 100], btc_p_sea] call btc_fnc_randomize_pos;
 } else {
     _pos = getPos _start_city;
 };
@@ -76,7 +76,7 @@ private _delay = switch (_random) do {
     case 1 : {
         _pos = [_pos, 0, 150, 10, false] call btc_fnc_findsafepos;
 
-        [_group, _pos, 5 + (round random 8)] call btc_fnc_mil_createUnits;
+        [_group, _pos, 5 + (round random 4)] call btc_mil_fnc_createUnits;
         0
     };
     case 2 : {
@@ -94,13 +94,13 @@ private _delay = switch (_random) do {
                 _pos = getPos selectRandom _roads;
             };
         };
-        [_group, _pos, _veh_type] call btc_fnc_mil_createVehicle
+        [_group, _pos, _veh_type] call btc_mil_fnc_createVehicle
     };
 };
 
 [{
-    _this call btc_fnc_patrol_init;
+    _this call btc_patrol_fnc_init;
     [[_this select 0]] call btc_fnc_set_groupsOwner;
-}, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
+}, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
 
 true
