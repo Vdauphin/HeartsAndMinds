@@ -1,6 +1,6 @@
 [] call compileScript ["core\fnc\city\init.sqf"];
 
-["Initialize"] call BIS_fnc_dynamicGroups;
+//["Initialize"] call BIS_fnc_dynamicGroups;
 setTimeMultiplier btc_p_acctime;
 
 ["btc_m", -1, objNull, "", false, false] call btc_task_fnc_create;
