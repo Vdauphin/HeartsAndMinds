@@ -1,3 +1,3 @@
 if (hasInterface) then {
-	[] call compileFinal preprocessFileLineNumbers "scripts\fireteams\addActions.sqf";
+	[] call compileFinal preprocessFileLineNumbers "core\Fireteams\addActions.sqf";
 };
