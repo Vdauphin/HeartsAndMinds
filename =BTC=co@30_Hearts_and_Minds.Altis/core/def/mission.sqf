@@ -128,7 +128,7 @@ if (isServer) then {
 
     //Database
     btc_db_load = _p_db;
-    btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
+    btc_db_serverCommandPassword = call compile preprocessFileLineNumbers "\userconfig\restart\myPass.hpp";
 
     //Hideout
     btc_hideouts = []; publicVariable "btc_hideouts";
