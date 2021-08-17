@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=24;
+		nextID=32;
 	};
 	class Camera
 	{
-		pos[]={10616.857,54.827419,9978.0479};
-		dir[]={-0.9848693,-0.087388031,-0.14968224};
-		up[]={-0.086461127,0.99616796,-0.013140709};
-		aside[]={-0.15025759,8.7311491e-007,0.98864961};
+		pos[]={10453.015,55.092983,9955.5645};
+		dir[]={0.80552626,-0.56340897,0.18358035};
+		up[]={0.54932642,0.826177,0.12519212};
+		aside[]={0.22220403,3.4924597e-008,-0.97500318};
 	};
 };
 binarizationWanted=0;
@@ -793,7 +793,7 @@ class Mission
 			position[]={10426.435,15.973372,9944.8623};
 			name="btc_base";
 			type="flag_NATO";
-			angle=342.30716;
+			angle=359.16864;
 			id=1;
 			atlOffset=9.5367432e-007;
 		};
@@ -37374,20 +37374,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10435.281,20.093214,9888.7852};
-				angles[]={0.050623242,5.4927535,6.2711854};
+				position[]={10435.281,20.092995,9888.7852};
+				angles[]={0.050614551,5.4927607,6.2711778};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]";
+				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
 				name="btc_veh_12";
 			};
 			id=959;
 			type="rhsusf_M977A4_BKIT_usarmy_d";
-			atlOffset=-0.0077800751;
+			atlOffset=-0.0079994202;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37417,20 +37417,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10439.118,19.897358,9891.7939};
-				angles[]={0.039977662,5.4708738,6.2818484};
+				position[]={10439.118,19.896908,9891.7939};
+				angles[]={0.039985489,5.4708743,6.2818413};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]";
+				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
 				name="btc_veh_16";
 			};
 			id=960;
 			type="rhsusf_M977A4_usarmy_d";
-			atlOffset=-0.013547897;
+			atlOffset=-0.013998032;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -39438,7 +39438,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10338.311,16.159348,9950.3828};
-				angles[]={-0,2.3561947,6.2605233};
+				angles[]={0,2.3561947,6.2605233};
 			};
 			side="Empty";
 			flags=5;
@@ -41722,13 +41722,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10509.555,19.831511,9978.6807};
-				angles[]={0.058599081,3.9269915,0.0013372133};
+				angles[]={0.058590703,3.9269907,0.0013439035};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
+				init="[this, 40] call ace_cargo_fnc_setSpace;";
 				name="btc_helo_1";
 			};
 			id=1293;
@@ -41864,7 +41865,7 @@ class Mission
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
-			angle=358.78238;
+			angle=358.78232;
 			id=1304;
 		};
 		class Item302
