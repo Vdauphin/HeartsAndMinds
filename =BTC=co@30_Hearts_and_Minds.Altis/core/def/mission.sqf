@@ -712,4 +712,4 @@ btc_units_owners = [];
 btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, independent] find btc_player_side);
 
 //Door
-btc_door_breaking_time = 60;
+btc_door_breaking_time = 2;
