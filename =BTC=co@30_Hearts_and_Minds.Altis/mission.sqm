@@ -12,22 +12,33 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1390;
+<<<<<<< Updated upstream
+		nextID=1417;
+=======
+		nextID=1420;
+>>>>>>> Stashed changes
 	};
 	class MarkerIDProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class LayerIndexProvider
 	{
-		nextID=32;
+		nextID=44;
 	};
 	class Camera
 	{
-		pos[]={10453.015,55.092983,9955.5645};
-		dir[]={0.80552626,-0.56340897,0.18358035};
-		up[]={0.54932642,0.826177,0.12519212};
-		aside[]={0.22220403,3.4924597e-008,-0.97500318};
+<<<<<<< Updated upstream
+		pos[]={10313.762,93.789665,9936.4219};
+		dir[]={0.86489344,-0.49450639,0.08625403};
+		up[]={0.49207085,0.86916989,0.049073271};
+		aside[]={0.099235393,2.2010681e-007,-0.99507254};
+=======
+		pos[]={10382.687,71.975403,9842.6572};
+		dir[]={0.21416251,-0.63096011,0.74571908};
+		up[]={0.17417595,0.77577776,0.60648841};
+		aside[]={0.96118701,8.8373781e-007,-0.27603844};
+>>>>>>> Stashed changes
 	};
 };
 binarizationWanted=0;
@@ -48,10 +59,12 @@ addons[]=
 	"rhsusf_c_MATV",
 	"rhsusf_c_stryker",
 	"A3_Structures_F_Exp_Military_Barracks_01",
-	"rhsusf_c_HEMTT_A4",
 	"rhsusf_c_fmtv",
 	"rhsusf_c_Caiman",
-	"RHS_US_A2Port_Armor",
+<<<<<<< Updated upstream
+=======
+	"rhsusf_c_HEMTT_A4",
+>>>>>>> Stashed changes
 	"RHS_US_A2_AirImport",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mil_Cargo",
@@ -62,13 +75,19 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_Ind_Cargo",
 	"A3_Props_F_Enoch_Military_Decontamination",
-	"A3_Supplies_F_Enoch_Ammoboxes"
+	"A3_Supplies_F_Enoch_Ammoboxes",
+	"RHS_US_A2Port_Armor",
+	"A3_Soft_F_Enoch_Truck_01",
+	"A3_Supplies_F_Heli_Slingload",
+	"ace_rearm",
+	"ace_refuel",
+	"ace_repair"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=30;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -167,80 +186,118 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="rhsusf_c_HEMTT_A4";
-			name="HEMMTT A4 Trucks";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item15
-		{
 			className="rhsusf_c_fmtv";
 			name="FMTV Trucks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item16
+		class Item15
 		{
 			className="rhsusf_c_Caiman";
 			name="Caiman MRAP";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item17
+		class Item16
 		{
-			className="RHS_US_A2Port_Armor";
-			name="M2 Bradley IFV";
+<<<<<<< Updated upstream
+=======
+			className="rhsusf_c_HEMTT_A4";
+			name="HEMMTT A4 Trucks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item18
+		class Item17
 		{
+>>>>>>> Stashed changes
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item19
+		class Item18
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item21
+		class Item20
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item21
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item22
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Enoch - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="RHS_US_A2Port_Armor";
+			name="M2 Bradley IFV";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item25
+		{
+			className="A3_Soft_F_Enoch";
+			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item27
+		{
+			className="ace_rearm";
+			name="ACE3 - Rearm";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item28
+		{
+			className="ace_refuel";
+			name="ACE3 - Refuel";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item29
+		{
+			className="ace_repair";
+			name="ACE3 - Repair";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -248,7 +305,8 @@ dlcs[]=
 {
 	"RHS_USAF",
 	"Expansion",
-	"Enoch"
+	"Enoch",
+	"Heli"
 };
 randomSeed=2442963;
 class ScenarioData
@@ -269,6 +327,25 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -329,25 +406,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -786,14 +844,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=308;
+		items=309;
 		class Item0
 		{
 			dataType="Marker";
 			position[]={10426.435,15.973372,9944.8623};
 			name="btc_base";
 			type="flag_NATO";
-			angle=359.16864;
+			angle=359.16858;
 			id=1;
 			atlOffset=9.5367432e-007;
 		};
@@ -2621,7 +2679,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10434.053,16.337965,9938.2979};
-												angles[]={0.019999012,2.1436653,0.065240532};
+												angles[]={0.020001473,2.1436658,0.065240405};
 											};
 											side="West";
 											flags=6;
@@ -2779,7 +2837,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10433.626,16.321476,9937.7256};
-												angles[]={0.019999012,2.1436734,0.065240532};
+												angles[]={0.020001473,2.1436658,0.065240405};
 											};
 											side="West";
 											flags=4;
@@ -2787,7 +2845,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -3113,15 +3171,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10433.275,16.29583,9937.9902};
-												angles[]={0.019999012,2.1490669,0.065240532};
+												position[]={10433.275,16.295336,9937.9902};
+												angles[]={0.020001473,2.1490588,0.065240405};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -3146,7 +3204,7 @@ class Mission
 											};
 											id=655;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.002494812;
+											atlOffset=0.0020008087;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -3272,14 +3330,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10432.494,16.272526,9937.165};
-												angles[]={0.05461248,2.1490726,6.2711854};
+												angles[]={0.054611351,2.1490762,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -3428,15 +3486,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10432.866,16.278418,9937.5586};
-												angles[]={0.019999012,2.1654994,0.065240532};
+												position[]={10432.866,16.27824,9937.5586};
+												angles[]={0.020001473,2.1654997,0.065240405};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-A Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -3461,7 +3519,7 @@ class Mission
 											};
 											id=657;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.0031776428;
+											atlOffset=0.0030002594;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -3586,8 +3644,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10433.42,16.288719,9938.8135};
-												angles[]={0.019999012,2.1490688,0.065240532};
+												position[]={10433.42,16.288265,9938.8135};
+												angles[]={0.020001473,2.1490762,0.065240405};
 											};
 											side="West";
 											flags=4;
@@ -3595,7 +3653,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-B Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -3620,7 +3678,7 @@ class Mission
 											};
 											id=658;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.0024547577;
+											atlOffset=0.0020008087;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -3745,15 +3803,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10432.179,16.263191,9937.4492};
-												angles[]={0.05461248,2.1490688,6.2711854};
+												position[]={10432.179,16.262739,9937.4492};
+												angles[]={0.054611351,2.1490762,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-B Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -3778,7 +3836,7 @@ class Mission
 											};
 											id=659;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.0024528503;
+											atlOffset=0.0020008087;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -3903,15 +3961,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10432.565,16.251389,9937.8896};
-												angles[]={0.019999012,2.1490688,0.065240532};
+												position[]={10432.565,16.250935,9937.8896};
+												angles[]={0.020001473,2.1490762,0.065240405};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-B Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -3936,7 +3994,7 @@ class Mission
 											};
 											id=660;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.0024547577;
+											atlOffset=0.0020008087;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -4061,15 +4119,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10433.002,16.270342,9938.3691};
-												angles[]={0.019999012,2.1490667,0.065240532};
+												position[]={10433.002,16.26989,9938.3691};
+												angles[]={0.020001473,2.1490588,0.065240405};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-B Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -4094,7 +4152,7 @@ class Mission
 											};
 											id=661;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=0.0024528503;
+											atlOffset=0.0020008087;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -4220,7 +4278,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10433.047,16.255291,9939.1455};
-												angles[]={0.019999012,2.1490667,0.065240532};
+												angles[]={0.020001473,2.1490588,0.065240405};
 											};
 											side="West";
 											flags=4;
@@ -4228,7 +4286,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-C Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -4378,14 +4436,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10432.312,16.234798,9938.1807};
-												angles[]={0.019999012,2.1490667,0.021331646};
+												angles[]={0.020001473,2.1490588,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-C Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -4536,14 +4594,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.889,16.252857,9937.6602};
-												angles[]={0.053282689,2.1490669,6.2711854};
+												angles[]={0.053284902,2.1490588,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-C Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -4693,14 +4751,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10432.704,16.24193,9938.6943};
-												angles[]={0.019999012,2.1490667,0.065240532};
+												angles[]={0.020001473,2.1490588,0.065240405};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-1""];}";
+												init="call{group this setgroupid [""Assassin 1-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-1-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -4885,8 +4943,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10432.458,16.206085,9939.7734};
-												angles[]={0.019999012,2.2112794,0.021331646};
+												position[]={10432.458,16.206083,9939.7734};
+												angles[]={0.020001473,2.2112799,0.021327924};
 											};
 											side="West";
 											flags=6;
@@ -4919,6 +4977,7 @@ class Mission
 											};
 											id=667;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5043,8 +5102,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.954,16.205044,9939.2871};
-												angles[]={0.019999012,2.2146587,0.021331646};
+												position[]={10431.954,16.205042,9939.2871};
+												angles[]={0.020001473,2.2146657,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -5052,7 +5111,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -5077,6 +5136,7 @@ class Mission
 											};
 											id=668;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5221,13 +5281,13 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10432.161,16.19437,9940.041};
-												angles[]={0.019999012,2.2166729,0.021331646};
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
-												skill=0.60000008;
+												skill=0.76265687;
 												rank="CORPORAL";
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2 Asst. Squad Leader";
@@ -5379,15 +5439,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.354,16.196812,9939.0586};
-												angles[]={0.019999012,2.220057,0.021331646};
+												position[]={10431.354,16.196791,9939.0586};
+												angles[]={0.020001473,2.2200587,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -5412,7 +5472,9 @@ class Mission
 											};
 											id=670;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-005;
+											atlOffset=-1.9073486e-006;
+<<<<<<< Updated upstream
+=======
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5537,15 +5599,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.718,16.192883,9939.6436};
-												angles[]={0.019999012,2.2166734,0.021331646};
+												position[]={10431.718,16.192881,9939.6436};
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -5570,7 +5632,175 @@ class Mission
 											};
 											id=671;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=-1.9073486e-006;
+											atlOffset=-3.8146973e-006;
+>>>>>>> Stashed changes
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="acex_headless_blacklist";
+													expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="ACE_NoVoice";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"SCALAR"
+																};
+															};
+															value=0.95999998;
+														};
+													};
+												};
+												class Attribute3
+												{
+													property="TFAR_freq_sr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="120.000";
+														};
+													};
+												};
+												class Attribute4
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="031.000";
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="hideObject";
+													expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=6;
+											};
+										};
+										class Item4
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+<<<<<<< Updated upstream
+												position[]={10431.718,16.192881,9939.6436};
+												angles[]={0.020001473,2.2166729,0.021327924};
+=======
+												position[]={10430.93,16.216812,9938.5518};
+												angles[]={0.053284902,2.2200587,6.2711778};
+>>>>>>> Stashed changes
+											};
+											side="West";
+											flags=4;
+											class Attributes
+											{
+												skill=0.60000008;
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+<<<<<<< Updated upstream
+												description="Assassin 1-2-A Asst. Automatic Rifleman";
+=======
+												description="Assassin 1-2-A Rifleman";
+>>>>>>> Stashed changes
+												isPlayable=1;
+												class Inventory
+												{
+													class binocular
+													{
+														name="Binocular";
+													};
+													class uniform
+													{
+														typeName="rhs_uniform_FROG01_wd";
+														isBackpack=0;
+													};
+													map="ItemMap";
+													compass="ItemCompass";
+													watch="ItemWatch";
+													radio="ItemRadio";
+													gps="ItemGPS";
+													goggles="rhs_googles_clear";
+													headgear="rhs_8point_marpatwd";
+												};
+											};
+											id=671;
+											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-3.8146973e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5695,16 +5925,27 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
+<<<<<<< Updated upstream
 												position[]={10430.93,16.216812,9938.5518};
-												angles[]={0.053282689,2.220057,6.2711854};
+												angles[]={0.053284902,2.2200587,6.2711778};
+=======
+												position[]={10431.871,16.183163,9940.293};
+												angles[]={0.020001473,2.2166729,0.021327924};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+<<<<<<< Updated upstream
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-A Rifleman";
+=======
+												rank="CORPORAL";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+												description="Assassin 1-2-B Fireteam Leader";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -5852,17 +6093,26 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
+<<<<<<< Updated upstream
 												position[]={10431.871,16.183163,9940.293};
-												angles[]={0.019999012,2.2166734,0.021331646};
+=======
+												position[]={10431.018,16.185961,9939.2422};
+>>>>>>> Stashed changes
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
+<<<<<<< Updated upstream
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-B Fireteam Leader";
+=======
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+												description="Assassin 1-2-B Automatic Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6011,16 +6261,24 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.018,16.185963,9939.2422};
-												angles[]={0.019999012,2.2166734,0.021331646};
+<<<<<<< Updated upstream
+												position[]={10431.018,16.185961,9939.2422};
+=======
+												position[]={10431.43,16.184074,9939.7764};
+>>>>>>> Stashed changes
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+<<<<<<< Updated upstream
 												description="Assassin 1-2-B Automatic Rifleman";
+=======
+												description="Assassin 1-2-B Asst. Automatic Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6044,6 +6302,7 @@ class Mission
 											};
 											id=674;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6168,16 +6427,25 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
+<<<<<<< Updated upstream
 												position[]={10431.43,16.184074,9939.7764};
-												angles[]={0.019999012,2.2166734,0.021331646};
+												angles[]={0.020001473,2.2166729,0.021327924};
+=======
+												position[]={10430.632,16.206028,9938.8213};
+												angles[]={0.053284902,2.2166729,6.2711778};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+<<<<<<< Updated upstream
 												description="Assassin 1-2-B Asst. Automatic Rifleman";
+=======
+												description="Assassin 1-2-B Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6326,16 +6594,27 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
+<<<<<<< Updated upstream
 												position[]={10430.632,16.206028,9938.8213};
-												angles[]={0.053282689,2.2166672,6.2711854};
+												angles[]={0.053284902,2.2166729,6.2711778};
+=======
+												position[]={10431.613,16.17238,9940.5566};
+												angles[]={0.020001473,2.2166729,0.021327924};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+<<<<<<< Updated upstream
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-B Rifleman";
+=======
+												rank="CORPORAL";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+												description="Assassin 1-2-C Fireteam Leader";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6359,6 +6638,7 @@ class Mission
 											};
 											id=676;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6483,17 +6763,26 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.613,16.172382,9940.5566};
-												angles[]={0.019999012,2.2166672,0.021331646};
+<<<<<<< Updated upstream
+												position[]={10431.613,16.17238,9940.5566};
+=======
+												position[]={10430.761,16.175219,9939.5059};
+>>>>>>> Stashed changes
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
+<<<<<<< Updated upstream
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-C Fireteam Leader";
+=======
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+												description="Assassin 1-2-C Automatic Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6517,6 +6806,7 @@ class Mission
 											};
 											id=677;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6641,16 +6931,24 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10430.761,16.17522,9939.5059};
-												angles[]={0.019999012,2.2166672,0.021331646};
+<<<<<<< Updated upstream
+												position[]={10430.761,16.175219,9939.5059};
+=======
+												position[]={10431.17,16.173254,9940.04};
+>>>>>>> Stashed changes
+												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+<<<<<<< Updated upstream
 												description="Assassin 1-2-C Automatic Rifleman";
+=======
+												description="Assassin 1-2-C Asst. Automatic Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6674,6 +6972,7 @@ class Mission
 											};
 											id=678;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6798,16 +7097,25 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10431.17,16.173256,9940.04};
-												angles[]={0.019999012,2.2166672,0.021331646};
+<<<<<<< Updated upstream
+												position[]={10431.17,16.173254,9940.04};
+												angles[]={0.020001473,2.2166729,0.021327924};
+=======
+												position[]={10430.373,16.195124,9939.084};
+												angles[]={0.053284902,2.2166729,6.2711778};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
+<<<<<<< Updated upstream
 												description="Assassin 1-2-C Asst. Automatic Rifleman";
+=======
+												description="Assassin 1-2-C Rifleman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6831,6 +7139,10 @@ class Mission
 											};
 											id=679;
 											type="rhsusf_usmc_marpat_wd_crewman";
+<<<<<<< Updated upstream
+											atlOffset=-1.9073486e-006;
+=======
+>>>>>>> Stashed changes
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6950,20 +7262,66 @@ class Mission
 												nAttributes=6;
 											};
 										};
+<<<<<<< Updated upstream
 										class Item13
+=======
+									};
+									class Attributes
+									{
+									};
+									id=666;
+									atlOffset=-1.9073486e-006;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="groupID";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Assassin 1-2";
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+								class Item26
+								{
+									dataType="Group";
+									side="West";
+									class Entities
+									{
+										items=14;
+										class Item0
+>>>>>>> Stashed changes
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10430.373,16.195126,9939.084};
-												angles[]={0.053282689,2.2166672,6.2711854};
+<<<<<<< Updated upstream
+												position[]={10430.373,16.195124,9939.084};
+												angles[]={0.053284902,2.2166729,6.2711778};
+=======
+												position[]={10431.046,16.1478,9941.1807};
+												angles[]={0.020001473,2.2542148,0.021327924};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];}";
+												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -6988,7 +7346,6 @@ class Mission
 											};
 											id=680;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -7113,6 +7470,7 @@ class Mission
 									{
 									};
 									id=666;
+									atlOffset=-1.9073486e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7149,17 +7507,28 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
+<<<<<<< Updated upstream
 												position[]={10431.046,16.1478,9941.1807};
-												angles[]={0.019999012,2.2542148,0.021331646};
+												angles[]={0.020001473,2.2542148,0.021327924};
+=======
+												position[]={10430.556,16.146912,9940.7021};
+												angles[]={0.020001473,2.2531853,0.021327924};
+>>>>>>> Stashed changes
 											};
 											side="West";
 											flags=6;
 											class Attributes
 											{
 												skill=0.60000008;
+<<<<<<< Updated upstream
 												rank="SERGEANT";
 												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3 Squad Leader@Assassin 1-3 (Infantry)";
+=======
+												rank="CORPORAL";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
+												description="Assassin 1-3 Corpsman";
+>>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -7328,7 +7697,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.556,16.146912,9940.7021};
-												angles[]={0.019999012,2.25319,0.021331646};
+												angles[]={0.020001473,2.2531853,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -7336,7 +7705,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -7664,8 +8033,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10429.779,16.134027,9940.5186};
-												angles[]={0.019999012,2.2473607,0.021331646};
+												position[]={10429.78,16.134048,9940.5186};
+												angles[]={0.020001473,2.2473559,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -7673,7 +8042,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -7824,14 +8193,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.22,16.133646,9941.0068};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -7981,15 +8350,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10429.234,16.158829,9940.0205};
-												angles[]={0.053282689,2.2473607,6.2711854};
+												position[]={10429.234,16.158876,9940.0195};
+												angles[]={0.053284902,2.2473559,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-A Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -8139,7 +8508,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.36,16.118307,9941.9248};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -8147,7 +8516,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-B Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -8298,7 +8667,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.402,16.116367,9940.999};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -8306,7 +8675,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-B Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -8457,14 +8826,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.897,16.119024,9941.3945};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-B Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -8615,14 +8984,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.91,16.140842,9940.4307};
-												angles[]={0.053282689,2.2473607,6.2711854};
+												angles[]={0.053284902,2.2473559,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-B Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -8772,7 +9141,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.95,16.102396,9942.2822};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -8780,7 +9149,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-C Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -8931,7 +9300,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.992,16.100513,9941.3545};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -8939,7 +9308,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-C Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -9090,14 +9459,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.485,16.103113,9941.751};
-												angles[]={0.019999012,2.2483621,0.021331646};
+												angles[]={0.020001473,2.248368,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-C Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -9248,14 +9617,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.497,16.126717,9940.7881};
-												angles[]={0.053282689,2.2483621,6.2711854};
+												angles[]={0.053284902,2.248368,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-3""];}";
+												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -9442,7 +9811,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.265,16.074894,9942.9258};
-												angles[]={0.019999012,2.2538309,0.021331646};
+												angles[]={0.020001473,2.2538309,0.021327924};
 											};
 											side="West";
 											flags=6;
@@ -9620,7 +9989,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.711,16.072674,9942.4463};
-												angles[]={0.019999012,2.2538104,0.021331646};
+												angles[]={0.020001473,2.2538135,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -9628,7 +9997,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -9798,7 +10167,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.843,16.058331,9943.3047};
-												angles[]={0.019999012,2.2605662,0.021331646};
+												angles[]={0.020001473,2.2605679,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -9806,7 +10175,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-A Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -9956,8 +10325,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10427.76,16.054947,9942.3184};
-												angles[]={0.019999012,2.2479811,0.021331646};
+												position[]={10427.76,16.054945,9942.3184};
+												angles[]={0.020001473,2.2479842,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -9965,7 +10334,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-C AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -9990,6 +10359,7 @@ class Mission
 											};
 											id=700;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -10114,8 +10484,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10428.317,16.057228,9942.7988};
-												angles[]={0.019999012,2.2479811,0.021331646};
+												position[]={10428.317,16.057226,9942.7988};
+												angles[]={0.020001473,2.2479842,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -10123,7 +10493,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-B Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -10148,6 +10518,7 @@ class Mission
 											};
 											id=701;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -10272,8 +10643,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10428.529,16.044144,9943.6797};
-												angles[]={0.019999012,2.2493262,0.021331646};
+												position[]={10428.53,16.044163,9943.6797};
+												angles[]={0.020001473,2.2493279,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -10281,7 +10652,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-A Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -10431,8 +10802,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10427.505,16.042393,9942.6748};
-												angles[]={0.019999012,2.2479811,0.021331646};
+												position[]={10427.505,16.042391,9942.6748};
+												angles[]={0.020001473,2.2479842,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -10440,7 +10811,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-C Assistant Gunner";
 												isPlayable=1;
 												class Inventory
@@ -10465,6 +10836,7 @@ class Mission
 											};
 											id=703;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -10590,14 +10962,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.003,16.043514,9943.1494};
-												angles[]={0.019999012,2.2493262,0.021331646};
+												angles[]={0.020001473,2.2493279,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-B Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -10747,8 +11119,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10428.172,16.028469,9944.082};
-												angles[]={0.019999012,2.2493262,0.021331646};
+												position[]={10428.172,16.028467,9944.082};
+												angles[]={0.020001473,2.2493279,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -10756,7 +11128,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-A Ammo Bearer";
 												isPlayable=1;
 												class Inventory
@@ -10781,6 +11153,7 @@ class Mission
 											};
 											id=705;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -10905,8 +11278,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10427.146,16.028275,9942.998};
-												angles[]={0.019999012,2.2479811,0.021331646};
+												position[]={10427.146,16.028273,9942.998};
+												angles[]={0.020001473,2.2479842,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -10914,7 +11287,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-D Assistant Gunner";
 												isPlayable=1;
 												class Inventory
@@ -10939,6 +11312,7 @@ class Mission
 											};
 											id=706;
 											type="rhsusf_usmc_marpat_wd_crewman";
+											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -11064,14 +11438,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.644,16.027836,9943.5498};
-												angles[]={0.019999012,2.2493262,0.021331646};
+												angles[]={0.020001473,2.2493279,0.021327924};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-B Ammo Bearer";
 												isPlayable=1;
 												class Inventory
@@ -11222,7 +11596,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.25,16.074402,9941.8682};
-												angles[]={0.019999012,2.2479811,0.021331646};
+												angles[]={0.020001473,2.2479842,0.021327924};
 											};
 											side="West";
 											flags=4;
@@ -11230,7 +11604,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-4""];}";
+												init="call{group this setgroupid [""Assassin 1-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-4-D AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -12121,7 +12495,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.738,16.337744,9936.1377};
-												angles[]={0.05461248,2.1894803,6.2711854};
+												angles[]={0.054611351,2.1894805,6.2711778};
 											};
 											side="West";
 											flags=6;
@@ -12279,7 +12653,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.304,16.366035,9935.7158};
-												angles[]={0.05461248,2.178997,6.2711854};
+												angles[]={0.054611351,2.1789911,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -12287,7 +12661,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -12456,7 +12830,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.485,16.327223,9936.3857};
-												angles[]={0.05461248,2.1897945,6.2711854};
+												angles[]={0.054611351,2.1897948,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -12614,14 +12988,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.586,16.391012,9935.416};
-												angles[]={0.05461248,2.1852107,6.2711854};
+												angles[]={0.054611351,2.1852045,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -12771,14 +13145,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.065,16.355677,9935.957};
-												angles[]={0.05461248,2.1897998,6.2711854};
+												angles[]={0.054611351,2.1897948,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -12928,14 +13302,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.263,16.419666,9934.9629};
-												angles[]={0.05461248,2.1852107,6.2711854};
+												angles[]={0.054611351,2.1852045,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-A Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -13085,7 +13459,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10431.194,16.311398,9936.7393};
-												angles[]={0.05461248,2.1894855,6.2711854};
+												angles[]={0.054611351,2.1894805,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -13093,7 +13467,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-B Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -13242,15 +13616,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10430.363,16.374313,9935.7705};
-												angles[]={0.05461248,2.1956992,6.2711854};
+												position[]={10430.363,16.374365,9935.7695};
+												angles[]={0.054611351,2.195694,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-B Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -13400,14 +13774,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.712,16.344555,9936.2383};
-												angles[]={0.05461248,2.1897998,6.2711854};
+												angles[]={0.054611351,2.1897948,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-B Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -13557,14 +13931,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.937,16.407761,9935.252};
-												angles[]={0.05461248,2.1852107,6.2711854};
+												angles[]={0.054611351,2.1852045,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-B Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -13713,8 +14087,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10430.846,16.298656,9937.0488};
-												angles[]={0.05461248,2.1894855,6.2711854};
+												position[]={10430.846,16.298607,9937.0498};
+												angles[]={0.054611351,2.1894805,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -13722,7 +14096,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-C Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -13872,14 +14246,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.018,16.361549,9936.0801};
-												angles[]={0.05461248,2.1956992,6.2711854};
+												angles[]={0.054611351,2.195694,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-C Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -14029,14 +14403,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.364,16.331812,9936.5479};
-												angles[]={0.05461248,2.1897998,6.2711854};
+												angles[]={0.054611351,2.1897948,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-C Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -14186,14 +14560,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.588,16.395081,9935.5605};
-												angles[]={0.05461248,2.1956992,6.2711854};
+												angles[]={0.054611351,2.195694,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-1""];}";
+												init="call{group this setgroupid [""Assassin 2-1""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-1-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -14340,6 +14714,7 @@ class Mission
 									};
 									class Attributes
 									{
+										init=";" \n "this setVariable [""interpreter"",true]";
 									};
 									id=717;
 									class CustomAttributes
@@ -14379,7 +14754,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10430.241,16.277271,9937.5732};
-												angles[]={0.053282689,2.2127633,6.2711854};
+												angles[]={0.053284902,2.2127633,6.2711778};
 											};
 											side="West";
 											flags=6;
@@ -14537,7 +14912,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.77,16.308723,9937.1006};
-												angles[]={0.05461248,2.2112508,6.2711854};
+												angles[]={0.054611351,2.2112448,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -14545,7 +14920,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -14713,8 +15088,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10429.903,16.263309,9937.9111};
-												angles[]={0.053282689,2.1967583,6.2711854};
+												position[]={10429.903,16.263308,9937.9111};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -14747,7 +15122,6 @@ class Mission
 											};
 											id=735;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -14873,14 +15247,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.009,16.322458,9937.0166};
-												angles[]={0.05461248,2.1952462,6.2711854};
+												angles[]={0.054611351,2.1952403,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15030,14 +15404,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.484,16.29122,9937.4834};
-												angles[]={0.05461248,2.1967654,6.2711854};
+												angles[]={0.054611351,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15187,14 +15561,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.548,16.348352,9936.6436};
-												angles[]={0.05461248,2.2012501,6.2711854};
+												angles[]={0.054611351,2.2012441,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-A Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15344,7 +15718,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.602,16.24905,9938.2461};
-												angles[]={0.053282689,2.1967654,6.2711854};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -15352,7 +15726,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-B Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -15501,15 +15875,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10428.68,16.308937,9937.3359};
-												angles[]={0.05461248,2.1967654,6.2711854};
+												position[]={10428.68,16.308935,9937.3359};
+												angles[]={0.054611351,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-B Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15534,7 +15908,6 @@ class Mission
 											};
 											id=740;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -15659,15 +16032,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10429.164,16.279842,9937.7676};
-												angles[]={0.053282689,2.1967654,6.2711854};
+												position[]={10429.164,16.27984,9937.7676};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-B Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15692,7 +16065,6 @@ class Mission
 											};
 											id=741;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -15818,14 +16190,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.235,16.332592,9937.001};
-												angles[]={0.05461248,2.2027693,6.2711854};
+												angles[]={0.054611351,2.2027626,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-B Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -15975,7 +16347,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10429.331,16.235897,9938.5537};
-												angles[]={0.053282689,2.1967654,6.2711854};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -15983,7 +16355,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-C Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -16132,15 +16504,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10428.408,16.295605,9937.6416};
-												angles[]={0.053282689,2.1967654,6.2711854};
+												position[]={10428.408,16.295603,9937.6416};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-C Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -16165,7 +16537,6 @@ class Mission
 											};
 											id=744;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -16291,14 +16662,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.894,16.266735,9938.0742};
-												angles[]={0.053282689,2.1967654,6.2711854};
+												angles[]={0.053284902,2.1967585,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-C Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -16448,14 +16819,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.964,16.319077,9937.3076};
-												angles[]={0.05461248,2.2027693,6.2711854};
+												angles[]={0.054611351,2.2027626,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-2""];}";
+												init="call{group this setgroupid [""Assassin 2-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-2-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -16641,7 +17012,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.097,16.141123,9940.833};
-												angles[]={0.053282689,2.1994987,6.2711854};
+												angles[]={0.053284902,2.1994989,6.2711778};
 											};
 											side="West";
 											flags=6;
@@ -16799,7 +17170,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.657,16.177109,9940.2578};
-												angles[]={0.053282689,2.199502,6.2711854};
+												angles[]={0.053284902,2.1994989,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -16807,7 +17178,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -16976,7 +17347,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.776,16.128414,9941.1436};
-												angles[]={0.053282689,2.1845422,6.2711854};
+												angles[]={0.053284902,2.1845415,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -16984,7 +17355,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-A Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -17134,14 +17505,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10425.842,16.201839,9939.9775};
-												angles[]={0.053282689,2.1834974,6.2711854};
+												angles[]={0.053284902,2.1834941,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-C AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -17291,7 +17662,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.299,16.165741,9940.5518};
-												angles[]={0.053282689,2.1834974,6.2711854};
+												angles[]={0.053284902,2.1834941,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -17299,7 +17670,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-B Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -17448,8 +17819,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10426.458,16.114613,9941.4746};
-												angles[]={0.053282689,2.1845422,6.2711854};
+												position[]={10426.458,16.114611,9941.4746};
+												angles[]={0.053284902,2.1845415,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -17457,7 +17828,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-A Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -17482,7 +17853,6 @@ class Mission
 											};
 											id=753;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -17608,14 +17978,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10425.419,16.19334,9940.2314};
-												angles[]={0.053282689,2.1834974,6.2711854};
+												angles[]={0.053284902,2.1834941,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-C Assistant Gunner";
 												isPlayable=1;
 												class Inventory
@@ -17765,14 +18135,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10425.93,16.151613,9940.8994};
-												angles[]={0.053282689,2.1845422,6.2711854};
+												angles[]={0.053284902,2.1845415,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-B Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -17922,7 +18292,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.134,16.104828,9941.7305};
-												angles[]={0.053282689,2.1845422,6.2711854};
+												angles[]={0.053284902,2.1845415,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -17930,7 +18300,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-A Ammo Bearer";
 												isPlayable=1;
 												class Inventory
@@ -18080,14 +18450,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10425.131,16.18219,9940.5059};
-												angles[]={0.053282689,2.1834974,6.2711854};
+												angles[]={0.053284902,2.1834941,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-D Assistant Gunner";
 												isPlayable=1;
 												class Inventory
@@ -18236,15 +18606,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10425.605,16.14188,9941.1543};
-												angles[]={0.053282689,2.1845422,6.2711854};
+												position[]={10425.605,16.14193,9941.1533};
+												angles[]={0.053284902,2.1845415,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-B Ammo Bearer";
 												isPlayable=1;
 												class Inventory
@@ -18394,14 +18764,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.191,16.209995,9939.7461};
-												angles[]={0.053282689,2.1834974,6.2711854};
+												angles[]={0.053284902,2.1834941,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-4""];}";
+												init="call{group this setgroupid [""Assassin 2-4""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-4-D AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -18587,7 +18957,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.783,16.208141,9939.1973};
-												angles[]={0.053282689,2.1997776,6.2711854};
+												angles[]={0.053284902,2.1997781,6.2711778};
 											};
 											side="West";
 											flags=6;
@@ -18745,7 +19115,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.411,16.237612,9938.7285};
-												angles[]={0.053282689,2.2026482,6.2711854};
+												angles[]={0.053284902,2.2026405,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -18753,7 +19123,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3 Corpsman";
 												isPlayable=1;
 												class Inventory
@@ -18922,7 +19292,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.568,16.196953,9939.4551};
-												angles[]={0.053282689,2.183773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -19080,14 +19450,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.781,16.256842,9938.5098};
-												angles[]={0.053282689,2.1866436,6.2711854};
+												angles[]={0.053284902,2.1866357,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-A Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -19237,14 +19607,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.16,16.227829,9938.9688};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-A Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -19394,14 +19764,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.404,16.284744,9938.0713};
-												angles[]={0.053282689,2.1926475,6.2711854};
+												angles[]={0.053284902,2.1926396,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-A Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -19551,7 +19921,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10428.271,16.183619,9939.7725};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -19559,7 +19929,7 @@ class Mission
 											{
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-B Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -19709,14 +20079,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.379,16.24892,9938.749};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-B Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -19865,15 +20235,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10427.813,16.214121,9939.3037};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												position[]={10427.813,16.214111,9939.3037};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-B Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -19898,7 +20268,6 @@ class Mission
 											};
 											id=769;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=9.5367432e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -20023,15 +20392,15 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={10426.999,16.278332,9938.2822};
-												angles[]={0.053282689,2.1926475,6.2711854};
+												position[]={10427,16.27832,9938.2822};
+												angles[]={0.053284902,2.1926396,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-B Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -20181,7 +20550,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.912,16.168745,9940.1318};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
@@ -20190,7 +20559,7 @@ class Mission
 												health=0.49718651;
 												skill=0.60000008;
 												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-C Fireteam Leader";
 												isPlayable=1;
 												class Inventory
@@ -20340,14 +20709,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.022,16.233906,9939.1104};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-C Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -20497,14 +20866,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10427.453,16.199251,9939.6631};
-												angles[]={0.053282689,2.1837773,6.2711854};
+												angles[]={0.053284902,2.1837735,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-C Asst. Automatic Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -20654,14 +21023,14 @@ class Mission
 											class PositionInfo
 											{
 												position[]={10426.643,16.263466,9938.6416};
-												angles[]={0.053282689,2.1897812,6.2711854};
+												angles[]={0.053284902,2.1897774,6.2711778};
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 2-3""];}";
+												init="call{group this setgroupid [""Assassin 2-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 2-3-C Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -32554,8 +32923,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10486.897,17.234829,9949.0869};
-				angles[]={0.15475266,5.3331184,0.0013372133};
+				position[]={10439.534,15.407827,9966.7666};
+				angles[]={0.02666023,5.3331184,0.046631888};
 			};
 			areaSize[]={200,0,200};
 			areaIsRectangle=1;
@@ -35585,8 +35954,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10434.5,15.013968,9974.25};
-				angles[]={0.035984326,5.4977875,0.02666023};
+				position[]={10434.5,15.014338,9974.25};
+				angles[]={0,5.497787,0};
 			};
 			side="Empty";
 			flags=5;
@@ -35595,15 +35964,38 @@ class Mission
 			};
 			id=923;
 			type="Land_Barracks_01_grey_F";
-			atlOffset=-0.0063695908;
+			atlOffset=-0.0060005188;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item37
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10421,14.771164,9988.25};
-				angles[]={6.2392149,5.4977875,6.2711854};
+				position[]={10421,14.771007,9988.25};
+				angles[]={0,5.497787,0};
 			};
 			side="Empty";
 			flags=5;
@@ -35612,15 +36004,38 @@ class Mission
 			};
 			id=925;
 			type="Land_Barracks_01_grey_F";
-			atlOffset=0.00015735626;
+<<<<<<< Updated upstream
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item38
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10425.243,20.011271,9879.3867};
-				angles[]={0.039977662,5.4495821,0.065240532};
+				position[]={10411.847,19.876781,9872.7275};
+				angles[]={6.2791886,6.2739286,0.057270125};
 			};
 			side="Empty";
 			flags=4;
@@ -35631,13 +36046,15 @@ class Mission
 			};
 			id=928;
 			type="rhsusf_M977A4_REPAIR_usarmy_d";
-			atlOffset=-0.023670197;
+			atlOffset=-0.0019779205;
+=======
+>>>>>>> Stashed changes
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					property="allowDamage";
+					expression="_this allowdamage _value;";
 					class Value
 					{
 						class data
@@ -35646,17 +36063,17 @@ class Mission
 							{
 								type[]=
 								{
-									"STRING"
+									"BOOL"
 								};
 							};
-							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit""],[2,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[10,2,2,2,4]],[[""ToolKit""],[1]],[[""rhsusf_falconii""],[1]]],false]";
+							value=0;
 						};
 					};
 				};
 				nAttributes=1;
 			};
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35699,7 +36116,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35742,7 +36159,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36006,7 +36423,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36381,164 +36798,16 @@ class Mission
 				nAttributes=2;
 			};
 		};
+<<<<<<< Updated upstream
 		class Item43
+=======
+		class Item42
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10473.262,19.62311,9923.7295};
-				angles[]={6.2378831,5.5166535,0.061256282};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true];";
-				name="btc_veh_1";
-				textures="Desert";
-			};
-			id=949;
-			type="RHS_M2A3_BUSKIII";
-			atlOffset=-0.042644501;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""arifle_MX_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_mag"",""100Rnd_65x39_caseless_mag"",""HandGrenade"",""MiniGrenade"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""SmokeShell"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellBlue"",""Titan_AT"",""Titan_AP"",""Titan_AA""],[12,6,6,6,6,3,3,3,3,8,8,8,8,2,2,2]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"ARRAY"
-								};
-							};
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"ARRAY"
-											};
-										};
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"ARRAY"
-											};
-										};
-										class value
-										{
-											items=4;
-											class Item0
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="DUKE_Hide";
-												};
-											};
-											class Item1
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-											class Item2
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="IFF_Panels_Hide";
-												};
-											};
-											class Item3
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-									};
-								};
-							};
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item44
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10443.173,21.189566,9894.1523};
+				position[]={10441.849,21.15448,9892.8174};
 				angles[]={0.045302324,5.4752364,0.08115413};
 			};
 			side="Empty";
@@ -36550,7 +36819,6 @@ class Mission
 			};
 			id=950;
 			type="rhsusf_M1230a1_usarmy_d";
-			atlOffset=-0.012075424;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36575,7 +36843,11 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item45
+<<<<<<< Updated upstream
+		class Item44
+=======
+		class Item43
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36950,7 +37222,11 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item46
+<<<<<<< Updated upstream
+		class Item45
+=======
+		class Item44
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37326,7 +37602,11 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item47
+<<<<<<< Updated upstream
+		class Item46
+=======
+		class Item45
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37369,13 +37649,22 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item48
+<<<<<<< Updated upstream
+		class Item47
+=======
+		class Item46
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10435.281,20.092995,9888.7852};
-				angles[]={0.050614551,5.4927607,6.2711778};
+<<<<<<< Updated upstream
+				position[]={10435.485,20.098482,9887.7246};
+				angles[]={0.050623242,5.4708743,6.2711854};
+=======
+				position[]={10437.29,20.003803,9889.5273};
+				angles[]={0.039977662,5.4708743,6.2818484};
+>>>>>>> Stashed changes
 			};
 			side="Empty";
 			flags=4;
@@ -37383,11 +37672,58 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
-				name="btc_veh_12";
+				name="btc_veh_16";
 			};
-			id=959;
-			type="rhsusf_M977A4_BKIT_usarmy_d";
-			atlOffset=-0.0079994202;
+			id=960;
+			type="rhsusf_M977A4_usarmy_d";
+<<<<<<< Updated upstream
+			atlOffset=-0.00022506714;
+=======
+>>>>>>> Stashed changes
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+<<<<<<< Updated upstream
+		class Item48
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10417.641,19.984194,9872.5273};
+				angles[]={0.065240532,0.039585259,0.057270125};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""btc_dont_delete"",true]";
+				name="btc_veh_13";
+			};
+			id=966;
+			type="rhsusf_M978A4_usarmy_d";
+			atlOffset=-0.0012722015;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37413,135 +37749,9 @@ class Mission
 			};
 		};
 		class Item49
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10439.118,19.896908,9891.7939};
-				angles[]={0.039985489,5.4708743,6.2818413};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
-				name="btc_veh_16";
-			};
-			id=960;
-			type="rhsusf_M977A4_usarmy_d";
-			atlOffset=-0.013998032;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item50
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10428.889,20.072197,9882.8428};
-				angles[]={0.033321146,5.4963231,0.071875811};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]";
-				name="btc_veh_13";
-			};
-			id=966;
-			type="rhsusf_M978A4_usarmy_d";
-			atlOffset=-0.020967484;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item51
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10431.886,20.193316,9885.6855};
-				angles[]={0.050623242,5.4951258,0.067895547};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]";
-				name="btc_veh_11";
-			};
-			id=967;
-			type="rhsusf_M977A4_AMMO_usarmy_d";
-			atlOffset=-0.012321472;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item52
+=======
+		class Item47
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37585,7 +37795,11 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item53
+<<<<<<< Updated upstream
+		class Item50
+=======
+		class Item48
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37628,7 +37842,11 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item54
+<<<<<<< Updated upstream
+		class Item51
+=======
+		class Item49
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37645,7 +37863,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item55
+<<<<<<< Updated upstream
+		class Item52
+=======
+		class Item50
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37661,7 +37883,11 @@ class Mission
 			id=973;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item56
+<<<<<<< Updated upstream
+		class Item53
+=======
+		class Item51
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37677,7 +37903,11 @@ class Mission
 			id=974;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item57
+<<<<<<< Updated upstream
+		class Item54
+=======
+		class Item52
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37694,7 +37924,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item58
+<<<<<<< Updated upstream
+		class Item55
+=======
+		class Item53
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37711,7 +37945,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item59
+<<<<<<< Updated upstream
+		class Item56
+=======
+		class Item54
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37728,7 +37966,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item60
+<<<<<<< Updated upstream
+		class Item57
+=======
+		class Item55
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37744,7 +37986,11 @@ class Mission
 			id=978;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item61
+<<<<<<< Updated upstream
+		class Item58
+=======
+		class Item56
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37761,7 +38007,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item62
+<<<<<<< Updated upstream
+		class Item59
+=======
+		class Item57
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37777,7 +38027,11 @@ class Mission
 			id=980;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item63
+<<<<<<< Updated upstream
+		class Item60
+=======
+		class Item58
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37794,7 +38048,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item64
+<<<<<<< Updated upstream
+		class Item61
+=======
+		class Item59
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37811,7 +38069,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item65
+<<<<<<< Updated upstream
+		class Item62
+=======
+		class Item60
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37828,7 +38090,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item66
+<<<<<<< Updated upstream
+		class Item63
+=======
+		class Item61
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37845,7 +38111,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item67
+<<<<<<< Updated upstream
+		class Item64
+=======
+		class Item62
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37862,7 +38132,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item68
+<<<<<<< Updated upstream
+		class Item65
+=======
+		class Item63
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37878,7 +38152,11 @@ class Mission
 			id=987;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item69
+<<<<<<< Updated upstream
+		class Item66
+=======
+		class Item64
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37894,7 +38172,11 @@ class Mission
 			id=988;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item70
+<<<<<<< Updated upstream
+		class Item67
+=======
+		class Item65
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37910,7 +38192,11 @@ class Mission
 			id=989;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item71
+<<<<<<< Updated upstream
+		class Item68
+=======
+		class Item66
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37926,7 +38212,11 @@ class Mission
 			id=990;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item72
+<<<<<<< Updated upstream
+		class Item69
+=======
+		class Item67
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37942,7 +38232,11 @@ class Mission
 			id=991;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item73
+<<<<<<< Updated upstream
+		class Item70
+=======
+		class Item68
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37959,7 +38253,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item74
+<<<<<<< Updated upstream
+		class Item71
+=======
+		class Item69
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37976,7 +38274,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item75
+<<<<<<< Updated upstream
+		class Item72
+=======
+		class Item70
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37993,7 +38295,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item76
+<<<<<<< Updated upstream
+		class Item73
+=======
+		class Item71
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38010,7 +38316,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item77
+<<<<<<< Updated upstream
+		class Item74
+=======
+		class Item72
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38026,7 +38336,11 @@ class Mission
 			id=996;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item78
+<<<<<<< Updated upstream
+		class Item75
+=======
+		class Item73
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38042,7 +38356,11 @@ class Mission
 			id=997;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item79
+<<<<<<< Updated upstream
+		class Item76
+=======
+		class Item74
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38059,7 +38377,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item80
+<<<<<<< Updated upstream
+		class Item77
+=======
+		class Item75
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38075,7 +38397,11 @@ class Mission
 			id=999;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item81
+<<<<<<< Updated upstream
+		class Item78
+=======
+		class Item76
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38092,7 +38418,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item82
+<<<<<<< Updated upstream
+		class Item79
+=======
+		class Item77
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38108,7 +38438,11 @@ class Mission
 			id=1001;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item83
+<<<<<<< Updated upstream
+		class Item80
+=======
+		class Item78
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38125,7 +38459,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item84
+<<<<<<< Updated upstream
+		class Item81
+=======
+		class Item79
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38142,7 +38480,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item85
+<<<<<<< Updated upstream
+		class Item82
+=======
+		class Item80
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38158,7 +38500,11 @@ class Mission
 			id=1004;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-		class Item86
+<<<<<<< Updated upstream
+		class Item83
+=======
+		class Item81
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38174,7 +38520,11 @@ class Mission
 			id=1038;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-		class Item87
+<<<<<<< Updated upstream
+		class Item84
+=======
+		class Item82
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38190,7 +38540,11 @@ class Mission
 			id=1039;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-		class Item88
+<<<<<<< Updated upstream
+		class Item85
+=======
+		class Item83
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38207,7 +38561,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.010020256;
 		};
-		class Item89
+<<<<<<< Updated upstream
+		class Item86
+=======
+		class Item84
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38224,7 +38582,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.059981346;
 		};
-		class Item90
+<<<<<<< Updated upstream
+		class Item87
+=======
+		class Item85
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38241,7 +38603,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.12333107;
 		};
-		class Item91
+<<<<<<< Updated upstream
+		class Item88
+=======
+		class Item86
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38258,7 +38624,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.05599308;
 		};
-		class Item92
+<<<<<<< Updated upstream
+		class Item89
+=======
+		class Item87
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38275,7 +38645,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.027331352;
 		};
-		class Item93
+<<<<<<< Updated upstream
+		class Item90
+=======
+		class Item88
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38292,7 +38666,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.12698555;
 		};
-		class Item94
+<<<<<<< Updated upstream
+		class Item91
+=======
+		class Item89
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38309,7 +38687,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.036664009;
 		};
-		class Item95
+<<<<<<< Updated upstream
+		class Item92
+=======
+		class Item90
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38326,7 +38708,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.05436039;
 		};
-		class Item96
+<<<<<<< Updated upstream
+		class Item93
+=======
+		class Item91
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38343,7 +38729,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item97
+<<<<<<< Updated upstream
+		class Item94
+=======
+		class Item92
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38360,7 +38750,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054359436;
 		};
-		class Item98
+<<<<<<< Updated upstream
+		class Item95
+=======
+		class Item93
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38377,7 +38771,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054359436;
 		};
-		class Item99
+<<<<<<< Updated upstream
+		class Item96
+=======
+		class Item94
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38394,7 +38792,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item100
+<<<<<<< Updated upstream
+		class Item97
+=======
+		class Item95
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38411,7 +38813,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item101
+<<<<<<< Updated upstream
+		class Item98
+=======
+		class Item96
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38427,7 +38833,11 @@ class Mission
 			id=1055;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item102
+<<<<<<< Updated upstream
+		class Item99
+=======
+		class Item97
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38444,7 +38854,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item103
+<<<<<<< Updated upstream
+		class Item100
+=======
+		class Item98
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38461,7 +38875,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item104
+<<<<<<< Updated upstream
+		class Item101
+=======
+		class Item99
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38478,7 +38896,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-		class Item105
+<<<<<<< Updated upstream
+		class Item102
+=======
+		class Item100
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38494,7 +38916,11 @@ class Mission
 			id=1059;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item106
+<<<<<<< Updated upstream
+		class Item103
+=======
+		class Item101
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38510,7 +38936,11 @@ class Mission
 			id=1060;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item107
+<<<<<<< Updated upstream
+		class Item104
+=======
+		class Item102
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38526,7 +38956,11 @@ class Mission
 			id=1061;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item108
+<<<<<<< Updated upstream
+		class Item105
+=======
+		class Item103
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38543,7 +38977,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item109
+<<<<<<< Updated upstream
+		class Item106
+=======
+		class Item104
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38559,7 +38997,11 @@ class Mission
 			id=1063;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item110
+<<<<<<< Updated upstream
+		class Item107
+=======
+		class Item105
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38575,7 +39017,11 @@ class Mission
 			id=1064;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item111
+<<<<<<< Updated upstream
+		class Item108
+=======
+		class Item106
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38591,7 +39037,11 @@ class Mission
 			id=1065;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item112
+<<<<<<< Updated upstream
+		class Item109
+=======
+		class Item107
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38607,7 +39057,11 @@ class Mission
 			id=1066;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item113
+<<<<<<< Updated upstream
+		class Item110
+=======
+		class Item108
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38623,7 +39077,11 @@ class Mission
 			id=1067;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item114
+<<<<<<< Updated upstream
+		class Item111
+=======
+		class Item109
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38639,7 +39097,11 @@ class Mission
 			id=1068;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item115
+<<<<<<< Updated upstream
+		class Item112
+=======
+		class Item110
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38655,7 +39117,11 @@ class Mission
 			id=1069;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item116
+<<<<<<< Updated upstream
+		class Item113
+=======
+		class Item111
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38671,7 +39137,11 @@ class Mission
 			id=1070;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item117
+<<<<<<< Updated upstream
+		class Item114
+=======
+		class Item112
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38687,7 +39157,11 @@ class Mission
 			id=1071;
 			type="Land_Mil_WallBig_4m_F";
 		};
-		class Item118
+<<<<<<< Updated upstream
+		class Item115
+=======
+		class Item113
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38703,13 +39177,17 @@ class Mission
 			id=1072;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-		class Item119
+<<<<<<< Updated upstream
+		class Item116
+=======
+		class Item114
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10393.25,27.636209,9962.25};
-				angles[]={6.2791886,3.9269915,0.041309625};
+				position[]={10393.25,27.635897,9962.25};
+				angles[]={6.2791877,3.9269905,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38718,15 +39196,42 @@ class Mission
 			};
 			id=1080;
 			type="Land_Cargo_Tower_V1_F";
-			atlOffset=0.14331341;
+			atlOffset=0.1430006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item120
+<<<<<<< Updated upstream
+		class Item117
+=======
+		class Item115
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10405.75,18.780472,9971};
-				angles[]={6.2738566,3.9269919,0.015994642};
+				position[]={10405.75,18.780077,9971};
+				angles[]={0,3.9269907,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38735,15 +39240,42 @@ class Mission
 			};
 			id=1081;
 			type="Land_Cargo_HQ_V1_F";
-			atlOffset=0.00039386749;
+			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item121
+<<<<<<< Updated upstream
+		class Item118
+=======
+		class Item116
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10404.75,18.876846,9955.25};
-				angles[]={0.02666023,2.356195,0.02399601};
+				position[]={10404.75,18.877001,9955.25};
+				angles[]={0,2.3561945,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38752,15 +39284,42 @@ class Mission
 			};
 			id=1082;
 			type="Land_Medevac_HQ_V1_F";
-			atlOffset=-0.0031547546;
+			atlOffset=-0.0030002594;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item122
+<<<<<<< Updated upstream
+		class Item119
+=======
+		class Item117
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={10451,19.459665,9956.25};
-				angles[]={0.046633169,5.4977875,6.2445378};
+				angles[]={0,5.497787,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38769,8 +39328,35 @@ class Mission
 			};
 			id=1083;
 			type="Land_MilOffices_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item123
+<<<<<<< Updated upstream
+		class Item120
+=======
+		class Item118
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38786,14 +39372,41 @@ class Mission
 			id=1084;
 			type="Land_Cargo_House_V1_F";
 			atlOffset=0.13891029;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item124
+<<<<<<< Updated upstream
+		class Item121
+=======
+		class Item119
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10419.75,16.896908,9934.5};
-				angles[]={0.035984326,3.9269915,0.018663859};
+				position[]={10419.75,16.896982,9934.5};
+				angles[]={0,3.9269907,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38802,15 +39415,42 @@ class Mission
 			};
 			id=1085;
 			type="Land_Cargo_House_V1_F";
-			atlOffset=0.046926498;
+			atlOffset=0.047000885;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item125
+<<<<<<< Updated upstream
+		class Item122
+=======
+		class Item120
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10424.5,17.119238,9929.75};
-				angles[]={0.058600098,3.9269915,0.018663859};
+				position[]={10424.5,17.119331,9929.75};
+				angles[]={0,3.9269907,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38819,15 +39459,42 @@ class Mission
 			};
 			id=1086;
 			type="Land_Cargo_House_V1_F";
-			atlOffset=0.0039043427;
+			atlOffset=0.0039978027;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item126
+<<<<<<< Updated upstream
+		class Item123
+=======
+		class Item121
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10429.25,17.427414,9925};
-				angles[]={0.058599081,3.9269915,0.0039967569};
+				position[]={10429.25,17.427319,9925};
+				angles[]={0,3.9269907,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38836,9 +39503,36 @@ class Mission
 			};
 			id=1087;
 			type="Land_Cargo_House_V1_F";
-			atlOffset=0.0070953369;
+			atlOffset=0.0069999695;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item127
+<<<<<<< Updated upstream
+		class Item124
+=======
+		class Item122
+>>>>>>> Stashed changes
 		{
 			dataType="Marker";
 			position[]={10426.421,15.973098,9944.8613};
@@ -38850,7 +39544,11 @@ class Mission
 			angle=45;
 			id=1088;
 		};
-		class Item128
+<<<<<<< Updated upstream
+		class Item125
+=======
+		class Item123
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38867,7 +39565,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.14019108;
 		};
-		class Item129
+<<<<<<< Updated upstream
+		class Item126
+=======
+		class Item124
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38884,7 +39586,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.00082397461;
 		};
-		class Item130
+<<<<<<< Updated upstream
+		class Item127
+=======
+		class Item125
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38901,7 +39607,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item131
+<<<<<<< Updated upstream
+		class Item128
+=======
+		class Item126
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38918,7 +39628,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.019105911;
 		};
-		class Item132
+<<<<<<< Updated upstream
+		class Item129
+=======
+		class Item127
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38935,7 +39649,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0020914078;
 		};
-		class Item133
+<<<<<<< Updated upstream
+		class Item130
+=======
+		class Item128
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38952,7 +39670,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item134
+<<<<<<< Updated upstream
+		class Item131
+=======
+		class Item129
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38969,7 +39691,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0035762787;
 		};
-		class Item135
+<<<<<<< Updated upstream
+		class Item132
+=======
+		class Item130
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38986,7 +39712,11 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0097818375;
 		};
-		class Item136
+<<<<<<< Updated upstream
+		class Item133
+=======
+		class Item131
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39003,7 +39733,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.00461483;
 		};
-		class Item137
+<<<<<<< Updated upstream
+		class Item134
+=======
+		class Item132
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39084,7 +39818,11 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item138
+<<<<<<< Updated upstream
+		class Item135
+=======
+		class Item133
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39101,7 +39839,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.048666954;
 		};
-		class Item139
+<<<<<<< Updated upstream
+		class Item136
+=======
+		class Item134
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39118,7 +39860,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item140
+<<<<<<< Updated upstream
+		class Item137
+=======
+		class Item135
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39134,7 +39880,11 @@ class Mission
 			id=1110;
 			type="Land_CncWall4_F";
 		};
-		class Item141
+<<<<<<< Updated upstream
+		class Item138
+=======
+		class Item136
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39150,7 +39900,11 @@ class Mission
 			id=1111;
 			type="Land_CncWall4_F";
 		};
-		class Item142
+<<<<<<< Updated upstream
+		class Item139
+=======
+		class Item137
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39167,7 +39921,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item143
+<<<<<<< Updated upstream
+		class Item140
+=======
+		class Item138
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39184,7 +39942,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item144
+<<<<<<< Updated upstream
+		class Item141
+=======
+		class Item139
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39201,7 +39963,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.018558502;
 		};
-		class Item145
+<<<<<<< Updated upstream
+		class Item142
+=======
+		class Item140
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39218,7 +39984,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item146
+<<<<<<< Updated upstream
+		class Item143
+=======
+		class Item141
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39234,7 +40004,11 @@ class Mission
 			id=1116;
 			type="Land_CncWall4_F";
 		};
-		class Item147
+<<<<<<< Updated upstream
+		class Item144
+=======
+		class Item142
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39250,7 +40024,11 @@ class Mission
 			id=1119;
 			type="Land_CncWall4_F";
 		};
-		class Item148
+<<<<<<< Updated upstream
+		class Item145
+=======
+		class Item143
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39267,7 +40045,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item149
+<<<<<<< Updated upstream
+		class Item146
+=======
+		class Item144
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39284,7 +40066,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044727325;
 		};
-		class Item150
+<<<<<<< Updated upstream
+		class Item147
+=======
+		class Item145
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39301,7 +40087,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.0024347305;
 		};
-		class Item151
+<<<<<<< Updated upstream
+		class Item148
+=======
+		class Item146
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39317,7 +40107,11 @@ class Mission
 			id=1123;
 			type="Land_CncWall4_F";
 		};
-		class Item152
+<<<<<<< Updated upstream
+		class Item149
+=======
+		class Item147
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39333,7 +40127,11 @@ class Mission
 			id=1124;
 			type="Land_CncWall4_F";
 		};
-		class Item153
+<<<<<<< Updated upstream
+		class Item150
+=======
+		class Item148
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39350,7 +40148,11 @@ class Mission
 			type="Land_CncWall1_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item154
+<<<<<<< Updated upstream
+		class Item151
+=======
+		class Item149
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39366,7 +40168,11 @@ class Mission
 			id=1126;
 			type="Land_CncWall4_F";
 		};
-		class Item155
+<<<<<<< Updated upstream
+		class Item152
+=======
+		class Item150
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39382,7 +40188,11 @@ class Mission
 			id=1127;
 			type="Land_CncWall4_F";
 		};
-		class Item156
+<<<<<<< Updated upstream
+		class Item153
+=======
+		class Item151
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39398,7 +40208,11 @@ class Mission
 			id=1128;
 			type="Land_CncWall4_F";
 		};
-		class Item157
+<<<<<<< Updated upstream
+		class Item154
+=======
+		class Item152
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39415,7 +40229,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item158
+<<<<<<< Updated upstream
+		class Item155
+=======
+		class Item153
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39432,7 +40250,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item159
+<<<<<<< Updated upstream
+		class Item156
+=======
+		class Item154
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39449,7 +40271,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item160
+<<<<<<< Updated upstream
+		class Item157
+=======
+		class Item155
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39466,7 +40292,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item161
+<<<<<<< Updated upstream
+		class Item158
+=======
+		class Item156
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39482,7 +40312,11 @@ class Mission
 			id=1133;
 			type="Land_CncWall4_F";
 		};
-		class Item162
+<<<<<<< Updated upstream
+		class Item159
+=======
+		class Item157
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39499,7 +40333,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044717789;
 		};
-		class Item163
+<<<<<<< Updated upstream
+		class Item160
+=======
+		class Item158
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39515,7 +40353,11 @@ class Mission
 			id=1135;
 			type="Land_CncWall4_F";
 		};
-		class Item164
+<<<<<<< Updated upstream
+		class Item161
+=======
+		class Item159
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39532,7 +40374,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item165
+<<<<<<< Updated upstream
+		class Item162
+=======
+		class Item160
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39549,7 +40395,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item166
+<<<<<<< Updated upstream
+		class Item163
+=======
+		class Item161
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39565,7 +40415,11 @@ class Mission
 			id=1138;
 			type="Land_CncWall4_F";
 		};
-		class Item167
+<<<<<<< Updated upstream
+		class Item164
+=======
+		class Item162
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39581,7 +40435,11 @@ class Mission
 			id=1139;
 			type="Land_CncWall4_F";
 		};
-		class Item168
+<<<<<<< Updated upstream
+		class Item165
+=======
+		class Item163
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39597,7 +40455,11 @@ class Mission
 			id=1140;
 			type="Land_CncWall4_F";
 		};
-		class Item169
+<<<<<<< Updated upstream
+		class Item166
+=======
+		class Item164
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39613,7 +40475,11 @@ class Mission
 			id=1141;
 			type="Land_CncWall4_F";
 		};
-		class Item170
+<<<<<<< Updated upstream
+		class Item167
+=======
+		class Item165
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39630,7 +40496,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044708252;
 		};
-		class Item171
+<<<<<<< Updated upstream
+		class Item168
+=======
+		class Item166
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39646,7 +40516,11 @@ class Mission
 			id=1143;
 			type="Land_CncWall4_F";
 		};
-		class Item172
+<<<<<<< Updated upstream
+		class Item169
+=======
+		class Item167
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39663,7 +40537,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item173
+<<<<<<< Updated upstream
+		class Item170
+=======
+		class Item168
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39679,7 +40557,11 @@ class Mission
 			id=1147;
 			type="Land_CncWall4_F";
 		};
-		class Item174
+<<<<<<< Updated upstream
+		class Item171
+=======
+		class Item169
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39695,7 +40577,11 @@ class Mission
 			id=1148;
 			type="Land_CncWall4_F";
 		};
-		class Item175
+<<<<<<< Updated upstream
+		class Item172
+=======
+		class Item170
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39711,7 +40597,11 @@ class Mission
 			id=1149;
 			type="Land_CncWall4_F";
 		};
-		class Item176
+<<<<<<< Updated upstream
+		class Item173
+=======
+		class Item171
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39728,7 +40618,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.018558502;
 		};
-		class Item177
+<<<<<<< Updated upstream
+		class Item174
+=======
+		class Item172
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39745,7 +40639,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item178
+<<<<<<< Updated upstream
+		class Item175
+=======
+		class Item173
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39761,7 +40659,11 @@ class Mission
 			id=1152;
 			type="Land_CncWall4_F";
 		};
-		class Item179
+<<<<<<< Updated upstream
+		class Item176
+=======
+		class Item174
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39778,7 +40680,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item180
+<<<<<<< Updated upstream
+		class Item177
+=======
+		class Item175
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39794,7 +40700,11 @@ class Mission
 			id=1157;
 			type="Land_CncWall4_F";
 		};
-		class Item181
+<<<<<<< Updated upstream
+		class Item178
+=======
+		class Item176
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39810,7 +40720,11 @@ class Mission
 			id=1158;
 			type="Land_CncWall4_F";
 		};
-		class Item182
+<<<<<<< Updated upstream
+		class Item179
+=======
+		class Item177
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39826,7 +40740,11 @@ class Mission
 			id=1159;
 			type="Land_CncWall4_F";
 		};
-		class Item183
+<<<<<<< Updated upstream
+		class Item180
+=======
+		class Item178
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39843,7 +40761,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item184
+<<<<<<< Updated upstream
+		class Item181
+=======
+		class Item179
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39859,7 +40781,11 @@ class Mission
 			id=1161;
 			type="Land_CncWall4_F";
 		};
-		class Item185
+<<<<<<< Updated upstream
+		class Item182
+=======
+		class Item180
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39875,7 +40801,11 @@ class Mission
 			id=1162;
 			type="Land_CncWall4_F";
 		};
-		class Item186
+<<<<<<< Updated upstream
+		class Item183
+=======
+		class Item181
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39891,7 +40821,11 @@ class Mission
 			id=1163;
 			type="Land_CncWall4_F";
 		};
-		class Item187
+<<<<<<< Updated upstream
+		class Item184
+=======
+		class Item182
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39908,7 +40842,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item188
+<<<<<<< Updated upstream
+		class Item185
+=======
+		class Item183
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39925,7 +40863,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=3.2424927e-005;
 		};
-		class Item189
+<<<<<<< Updated upstream
+		class Item186
+=======
+		class Item184
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39941,7 +40883,11 @@ class Mission
 			id=1166;
 			type="Land_CncWall4_F";
 		};
-		class Item190
+<<<<<<< Updated upstream
+		class Item187
+=======
+		class Item185
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39957,7 +40903,11 @@ class Mission
 			id=1167;
 			type="Land_CncWall4_F";
 		};
-		class Item191
+<<<<<<< Updated upstream
+		class Item188
+=======
+		class Item186
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39973,7 +40923,11 @@ class Mission
 			id=1168;
 			type="Land_CncWall4_F";
 		};
-		class Item192
+<<<<<<< Updated upstream
+		class Item189
+=======
+		class Item187
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39989,7 +40943,11 @@ class Mission
 			id=1177;
 			type="Land_CncWall4_F";
 		};
-		class Item193
+<<<<<<< Updated upstream
+		class Item190
+=======
+		class Item188
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40005,7 +40963,11 @@ class Mission
 			id=1178;
 			type="Land_CncWall4_F";
 		};
-		class Item194
+<<<<<<< Updated upstream
+		class Item191
+=======
+		class Item189
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40021,7 +40983,11 @@ class Mission
 			id=1179;
 			type="Land_CncWall4_F";
 		};
-		class Item195
+<<<<<<< Updated upstream
+		class Item192
+=======
+		class Item190
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40038,7 +41004,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item196
+<<<<<<< Updated upstream
+		class Item193
+=======
+		class Item191
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40054,7 +41024,11 @@ class Mission
 			id=1181;
 			type="Land_CncWall4_F";
 		};
-		class Item197
+<<<<<<< Updated upstream
+		class Item194
+=======
+		class Item192
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40071,7 +41045,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item198
+<<<<<<< Updated upstream
+		class Item195
+=======
+		class Item193
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40087,7 +41065,11 @@ class Mission
 			id=1183;
 			type="Land_CncWall4_F";
 		};
-		class Item199
+<<<<<<< Updated upstream
+		class Item196
+=======
+		class Item194
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40104,7 +41086,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item200
+<<<<<<< Updated upstream
+		class Item197
+=======
+		class Item195
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40120,7 +41106,11 @@ class Mission
 			id=1185;
 			type="Land_CncWall4_F";
 		};
-		class Item201
+<<<<<<< Updated upstream
+		class Item198
+=======
+		class Item196
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40137,7 +41127,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item202
+<<<<<<< Updated upstream
+		class Item199
+=======
+		class Item197
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40153,7 +41147,11 @@ class Mission
 			id=1187;
 			type="Land_CncWall4_F";
 		};
-		class Item203
+<<<<<<< Updated upstream
+		class Item200
+=======
+		class Item198
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40169,7 +41167,11 @@ class Mission
 			id=1188;
 			type="Land_CncWall4_F";
 		};
-		class Item204
+<<<<<<< Updated upstream
+		class Item201
+=======
+		class Item199
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40186,7 +41188,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item205
+<<<<<<< Updated upstream
+		class Item202
+=======
+		class Item200
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40202,7 +41208,11 @@ class Mission
 			id=1190;
 			type="Land_CncWall4_F";
 		};
-		class Item206
+<<<<<<< Updated upstream
+		class Item203
+=======
+		class Item201
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40218,7 +41228,11 @@ class Mission
 			id=1191;
 			type="Land_CncWall4_F";
 		};
-		class Item207
+<<<<<<< Updated upstream
+		class Item204
+=======
+		class Item202
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40234,7 +41248,11 @@ class Mission
 			id=1192;
 			type="Land_CncWall4_F";
 		};
-		class Item208
+<<<<<<< Updated upstream
+		class Item205
+=======
+		class Item203
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40250,7 +41268,11 @@ class Mission
 			id=1193;
 			type="Land_CncWall4_F";
 		};
-		class Item209
+<<<<<<< Updated upstream
+		class Item206
+=======
+		class Item204
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40267,7 +41289,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item210
+<<<<<<< Updated upstream
+		class Item207
+=======
+		class Item205
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40284,7 +41310,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item211
+<<<<<<< Updated upstream
+		class Item208
+=======
+		class Item206
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40300,7 +41330,11 @@ class Mission
 			id=1196;
 			type="Land_CncWall4_F";
 		};
-		class Item212
+<<<<<<< Updated upstream
+		class Item209
+=======
+		class Item207
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40317,7 +41351,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item213
+<<<<<<< Updated upstream
+		class Item210
+=======
+		class Item208
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40334,7 +41372,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item214
+<<<<<<< Updated upstream
+		class Item211
+=======
+		class Item209
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40351,7 +41393,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item215
+<<<<<<< Updated upstream
+		class Item212
+=======
+		class Item210
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40368,7 +41414,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=5.3405762e-005;
 		};
-		class Item216
+<<<<<<< Updated upstream
+		class Item213
+=======
+		class Item211
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40385,7 +41435,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item217
+<<<<<<< Updated upstream
+		class Item214
+=======
+		class Item212
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40402,7 +41456,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item218
+<<<<<<< Updated upstream
+		class Item215
+=======
+		class Item213
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40418,7 +41476,11 @@ class Mission
 			id=1203;
 			type="Land_CncWall4_F";
 		};
-		class Item219
+<<<<<<< Updated upstream
+		class Item216
+=======
+		class Item214
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40435,7 +41497,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item220
+<<<<<<< Updated upstream
+		class Item217
+=======
+		class Item215
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40451,7 +41517,11 @@ class Mission
 			id=1205;
 			type="Land_CncWall4_F";
 		};
-		class Item221
+<<<<<<< Updated upstream
+		class Item218
+=======
+		class Item216
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40467,7 +41537,11 @@ class Mission
 			id=1208;
 			type="Land_CncWall4_F";
 		};
-		class Item222
+<<<<<<< Updated upstream
+		class Item219
+=======
+		class Item217
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40484,7 +41558,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item223
+<<<<<<< Updated upstream
+		class Item220
+=======
+		class Item218
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40500,7 +41578,11 @@ class Mission
 			id=1210;
 			type="Land_CncWall4_F";
 		};
-		class Item224
+<<<<<<< Updated upstream
+		class Item221
+=======
+		class Item219
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40516,7 +41598,11 @@ class Mission
 			id=1211;
 			type="Land_CncWall4_F";
 		};
-		class Item225
+<<<<<<< Updated upstream
+		class Item222
+=======
+		class Item220
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40533,7 +41619,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item226
+<<<<<<< Updated upstream
+		class Item223
+=======
+		class Item221
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40550,7 +41640,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-2.2888184e-005;
 		};
-		class Item227
+<<<<<<< Updated upstream
+		class Item224
+=======
+		class Item222
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40567,7 +41661,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item228
+<<<<<<< Updated upstream
+		class Item225
+=======
+		class Item223
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40584,7 +41682,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.0037240982;
 		};
-		class Item229
+<<<<<<< Updated upstream
+		class Item226
+=======
+		class Item224
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40601,7 +41703,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item230
+<<<<<<< Updated upstream
+		class Item227
+=======
+		class Item225
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40618,7 +41724,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item231
+<<<<<<< Updated upstream
+		class Item228
+=======
+		class Item226
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40635,7 +41745,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item232
+<<<<<<< Updated upstream
+		class Item229
+=======
+		class Item227
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40651,7 +41765,11 @@ class Mission
 			id=1219;
 			type="Land_CncWall4_F";
 		};
-		class Item233
+<<<<<<< Updated upstream
+		class Item230
+=======
+		class Item228
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40668,7 +41786,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item234
+<<<<<<< Updated upstream
+		class Item231
+=======
+		class Item229
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40684,7 +41806,11 @@ class Mission
 			id=1221;
 			type="Land_CncWall4_F";
 		};
-		class Item235
+<<<<<<< Updated upstream
+		class Item232
+=======
+		class Item230
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40700,7 +41826,11 @@ class Mission
 			id=1222;
 			type="Land_CncWall4_F";
 		};
-		class Item236
+<<<<<<< Updated upstream
+		class Item233
+=======
+		class Item231
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40717,7 +41847,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item237
+<<<<<<< Updated upstream
+		class Item234
+=======
+		class Item232
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40733,7 +41867,11 @@ class Mission
 			id=1224;
 			type="Land_CncWall4_F";
 		};
-		class Item238
+<<<<<<< Updated upstream
+		class Item235
+=======
+		class Item233
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40750,7 +41888,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item239
+<<<<<<< Updated upstream
+		class Item236
+=======
+		class Item234
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40767,7 +41909,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item240
+<<<<<<< Updated upstream
+		class Item237
+=======
+		class Item235
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40783,7 +41929,11 @@ class Mission
 			id=1227;
 			type="Land_CncWall4_F";
 		};
-		class Item241
+<<<<<<< Updated upstream
+		class Item238
+=======
+		class Item236
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40800,7 +41950,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item242
+<<<<<<< Updated upstream
+		class Item239
+=======
+		class Item237
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40816,7 +41970,11 @@ class Mission
 			id=1229;
 			type="Land_CncWall4_F";
 		};
-		class Item243
+<<<<<<< Updated upstream
+		class Item240
+=======
+		class Item238
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40833,7 +41991,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item244
+<<<<<<< Updated upstream
+		class Item241
+=======
+		class Item239
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40849,7 +42011,11 @@ class Mission
 			id=1233;
 			type="Land_CncWall4_F";
 		};
-		class Item245
+<<<<<<< Updated upstream
+		class Item242
+=======
+		class Item240
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40866,7 +42032,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.23828602;
 		};
-		class Item246
+<<<<<<< Updated upstream
+		class Item243
+=======
+		class Item241
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40883,7 +42053,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.085718155;
 		};
-		class Item247
+<<<<<<< Updated upstream
+		class Item244
+=======
+		class Item242
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40900,7 +42074,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.030909538;
 		};
-		class Item248
+<<<<<<< Updated upstream
+		class Item245
+=======
+		class Item243
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40916,7 +42094,11 @@ class Mission
 			id=1237;
 			type="Land_CncWall4_F";
 		};
-		class Item249
+<<<<<<< Updated upstream
+		class Item246
+=======
+		class Item244
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40932,13 +42114,17 @@ class Mission
 			id=1241;
 			type="Land_CncWall4_F";
 		};
-		class Item250
+<<<<<<< Updated upstream
+		class Item247
+=======
+		class Item245
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={10408.672,19.330374,10008.342};
-				angles[]={6.2805333,2.3561947,0.0026520467};
+				angles[]={0,2.3561945,0};
 			};
 			side="Empty";
 			flags=5;
@@ -40947,8 +42133,35 @@ class Mission
 			};
 			id=1242;
 			type="Land_Cargo_Patrol_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item251
+<<<<<<< Updated upstream
+		class Item248
+=======
+		class Item246
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40965,7 +42178,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item252
+<<<<<<< Updated upstream
+		class Item249
+=======
+		class Item247
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40981,7 +42198,11 @@ class Mission
 			id=1244;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item253
+<<<<<<< Updated upstream
+		class Item250
+=======
+		class Item248
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40997,7 +42218,11 @@ class Mission
 			id=1245;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item254
+<<<<<<< Updated upstream
+		class Item251
+=======
+		class Item249
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41013,7 +42238,11 @@ class Mission
 			id=1246;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item255
+<<<<<<< Updated upstream
+		class Item252
+=======
+		class Item250
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41029,7 +42258,11 @@ class Mission
 			id=1247;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item256
+<<<<<<< Updated upstream
+		class Item253
+=======
+		class Item251
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41045,7 +42278,11 @@ class Mission
 			id=1248;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item257
+<<<<<<< Updated upstream
+		class Item254
+=======
+		class Item252
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41061,7 +42298,11 @@ class Mission
 			id=1249;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item258
+<<<<<<< Updated upstream
+		class Item255
+=======
+		class Item253
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41078,7 +42319,11 @@ class Mission
 			type="Land_DragonsTeeth_01_4x2_new_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item259
+<<<<<<< Updated upstream
+		class Item256
+=======
+		class Item254
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41094,7 +42339,11 @@ class Mission
 			id=1252;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item260
+<<<<<<< Updated upstream
+		class Item257
+=======
+		class Item255
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41110,7 +42359,11 @@ class Mission
 			id=1253;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item261
+<<<<<<< Updated upstream
+		class Item258
+=======
+		class Item256
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41126,7 +42379,11 @@ class Mission
 			id=1254;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item262
+<<<<<<< Updated upstream
+		class Item259
+=======
+		class Item257
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41142,7 +42399,11 @@ class Mission
 			id=1255;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item263
+<<<<<<< Updated upstream
+		class Item260
+=======
+		class Item258
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41158,7 +42419,11 @@ class Mission
 			id=1256;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item264
+<<<<<<< Updated upstream
+		class Item261
+=======
+		class Item259
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41174,58 +42439,56 @@ class Mission
 			id=1257;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-		class Item265
+<<<<<<< Updated upstream
+		class Item262
+=======
+		class Item260
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10400.034,16.504385,9929.0586};
-				angles[]={0.038647637,5.4977875,0.051953323};
+				position[]={10401.116,16.542641,9929.5244};
+				angles[]={0.038641591,5.497787,0.051958453};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1258;
 			type="Land_CncBarrierMedium_F";
-			atlOffset=-9.5367432e-007;
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item266
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10396.807,16.550966,9925.8115};
-				angles[]={0.075853623,5.4977875,0.014664836};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1259;
-			type="Land_CncBarrierMedium_F";
-			atlOffset=-9.5367432e-007;
-		};
-		class Item267
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10393.333,16.672844,9922.3066};
-				angles[]={0.039979152,5.4977875,0.06656827};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1260;
-			type="Land_CncBarrierMedium_F";
-			atlOffset=-9.5367432e-007;
-		};
-		class Item268
+<<<<<<< Updated upstream
+		class Item263
+=======
+		class Item261
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41237,11 +42500,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1261;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item269
+<<<<<<< Updated upstream
+		class Item264
+=======
+		class Item262
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41253,12 +42544,40 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1262;
 			type="Land_CncBarrierMedium_F";
 			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item270
+<<<<<<< Updated upstream
+		class Item265
+=======
+		class Item263
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41270,11 +42589,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1263;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item271
+<<<<<<< Updated upstream
+		class Item266
+=======
+		class Item264
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41286,11 +42633,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1264;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item272
+<<<<<<< Updated upstream
+		class Item267
+=======
+		class Item265
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41302,11 +42677,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1265;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item273
+<<<<<<< Updated upstream
+		class Item268
+=======
+		class Item266
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41318,11 +42721,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1266;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item274
+<<<<<<< Updated upstream
+		class Item269
+=======
+		class Item267
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41334,11 +42765,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1267;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item275
+<<<<<<< Updated upstream
+		class Item270
+=======
+		class Item268
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41350,11 +42809,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1268;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item276
+<<<<<<< Updated upstream
+		class Item271
+=======
+		class Item269
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41366,28 +42853,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1269;
 			type="Land_CncBarrierMedium_F";
-		};
-		class Item277
-		{
-			dataType="Object";
-			class PositionInfo
+			class CustomAttributes
 			{
-				position[]={10421.938,17.731527,9905.292};
-				angles[]={0.022662206,2.3561954,0.043970551};
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1270;
-			type="Land_CncBarrierMedium_F";
-			atlOffset=-4.0054321e-005;
 		};
-		class Item278
+<<<<<<< Updated upstream
+		class Item272
+=======
+		class Item270
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41399,11 +42897,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1271;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item279
+<<<<<<< Updated upstream
+		class Item273
+=======
+		class Item271
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41415,11 +42941,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1272;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item280
+<<<<<<< Updated upstream
+		class Item274
+=======
+		class Item272
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41431,11 +42985,39 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1273;
 			type="Land_CncBarrierMedium_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item281
+<<<<<<< Updated upstream
+		class Item275
+=======
+		class Item273
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41451,7 +43033,11 @@ class Mission
 			id=1275;
 			type="Land_CncWall4_F";
 		};
-		class Item282
+<<<<<<< Updated upstream
+		class Item276
+=======
+		class Item274
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41467,7 +43053,11 @@ class Mission
 			id=1276;
 			type="Land_CncWall4_F";
 		};
-		class Item283
+<<<<<<< Updated upstream
+		class Item277
+=======
+		class Item275
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41484,7 +43074,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item284
+<<<<<<< Updated upstream
+		class Item278
+=======
+		class Item276
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41500,7 +43094,11 @@ class Mission
 			id=1278;
 			type="Land_CncWall4_F";
 		};
-		class Item285
+<<<<<<< Updated upstream
+		class Item279
+=======
+		class Item277
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41516,7 +43114,11 @@ class Mission
 			id=1279;
 			type="Land_CncWall1_F";
 		};
-		class Item286
+<<<<<<< Updated upstream
+		class Item280
+=======
+		class Item278
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41533,7 +43135,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=4.0054321e-005;
 		};
-		class Item287
+<<<<<<< Updated upstream
+		class Item281
+=======
+		class Item279
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41549,7 +43155,11 @@ class Mission
 			id=1282;
 			type="Land_CncWall4_F";
 		};
-		class Item288
+<<<<<<< Updated upstream
+		class Item282
+=======
+		class Item280
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41565,7 +43175,11 @@ class Mission
 			id=1283;
 			type="Land_CncWall4_F";
 		};
-		class Item289
+<<<<<<< Updated upstream
+		class Item283
+=======
+		class Item281
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41582,7 +43196,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item290
+<<<<<<< Updated upstream
+		class Item284
+=======
+		class Item282
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41599,7 +43217,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item291
+<<<<<<< Updated upstream
+		class Item285
+=======
+		class Item283
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41615,7 +43237,11 @@ class Mission
 			id=1286;
 			type="Land_CncWall4_F";
 		};
-		class Item292
+<<<<<<< Updated upstream
+		class Item286
+=======
+		class Item284
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41631,7 +43257,11 @@ class Mission
 			id=1287;
 			type="Land_CncWall4_F";
 		};
-		class Item293
+<<<<<<< Updated upstream
+		class Item287
+=======
+		class Item285
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41648,7 +43278,11 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item294
+<<<<<<< Updated upstream
+		class Item288
+=======
+		class Item286
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41660,12 +43294,40 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1289;
 			type="Land_HelipadSquare_F";
 			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item295
+<<<<<<< Updated upstream
+		class Item289
+=======
+		class Item287
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41677,12 +43339,40 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1290;
 			type="Land_HelipadSquare_F";
 			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item296
+<<<<<<< Updated upstream
+		class Item290
+=======
+		class Item288
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41694,12 +43384,40 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1291;
 			type="Land_HelipadSquare_F";
 			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item297
+<<<<<<< Updated upstream
+		class Item291
+=======
+		class Item289
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41711,12 +43429,40 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1292;
 			type="Land_HelipadSquare_F";
 			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item298
+<<<<<<< Updated upstream
+		class Item292
+=======
+		class Item290
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41758,23 +43504,32 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item299
+<<<<<<< Updated upstream
+		class Item293
+=======
+		class Item291
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={10372.516,15.216643,9930.5381};
-				angles[]={0.043971907,0.78539819,0.019996032};
+				angles[]={0.043964844,0.78539819,0.020001473};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1294;
 			type="Land_HelipadRescue_F";
 		};
-		class Item300
+<<<<<<< Updated upstream
+		class Item294
+=======
+		class Item292
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41855,7 +43610,11 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item301
+<<<<<<< Updated upstream
+		class Item295
+=======
+		class Item293
+>>>>>>> Stashed changes
 		{
 			dataType="Marker";
 			position[]={10408.53,16.415726,9914.332};
@@ -41868,7 +43627,11 @@ class Mission
 			angle=358.78232;
 			id=1304;
 		};
-		class Item302
+<<<<<<< Updated upstream
+		class Item296
+=======
+		class Item294
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41931,7 +43694,11 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item303
+<<<<<<< Updated upstream
+		class Item297
+=======
+		class Item295
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41972,7 +43739,11 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item304
+<<<<<<< Updated upstream
+		class Item298
+=======
+		class Item296
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42033,7 +43804,11 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item305
+<<<<<<< Updated upstream
+		class Item299
+=======
+		class Item297
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42049,7 +43824,11 @@ class Mission
 			id=1380;
 			type="Tarp_01_Large_Black_F";
 		};
-		class Item306
+<<<<<<< Updated upstream
+		class Item300
+=======
+		class Item298
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42111,7 +43890,11 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item307
+<<<<<<< Updated upstream
+		class Item301
+=======
+		class Item299
+>>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42192,5 +43975,428 @@ class Mission
 				nAttributes=3;
 			};
 		};
+<<<<<<< Updated upstream
+		class Item302
+=======
+		class Item300
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10473.262,19.622755,9923.7295};
+				angles[]={6.2378764,5.516654,0.061261058};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""btc_dont_delete"",true];";
+				name="btc_veh_1";
+				textures="Desert";
+			};
+			id=1390;
+			type="RHS_M2A2";
+			atlOffset=-0.042999268;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MX_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_mag"",""100Rnd_65x39_caseless_mag"",""HandGrenade"",""MiniGrenade"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""SmokeShell"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellBlue"",""Titan_AT"",""Titan_AP"",""Titan_AA""],[12,6,6,6,6,3,3,3,3,8,8,8,8,2,2,2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=4;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="DUKE_Hide";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="IFF_Panels_Hide";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+<<<<<<< Updated upstream
+		class Item303
+=======
+		class Item301
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+<<<<<<< Updated upstream
+				position[]={10405.953,20.128649,9871.7998};
+				angles[]={0.049293593,0.025696108,0.057270125};
+=======
+				position[]={10423.262,20.866293,9875.0244};
+				angles[]={0.070549726,5.5045075,0.051953323};
+>>>>>>> Stashed changes
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""btc_dont_delete"",true]";
+				name="btc_veh_11";
+			};
+			id=1391;
+			type="B_Truck_01_flatbed_F";
+<<<<<<< Updated upstream
+			atlOffset=-0.00029945374;
+=======
+>>>>>>> Stashed changes
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+<<<<<<< Updated upstream
+		class Item304
+=======
+		class Item302
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10460.9,18.059231,9946.5537};
+				angles[]={0.029324362,3.9177289,0.055941612};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1392;
+			type="B_Slingload_01_Ammo_F";
+			atlOffset=-0.00041389465;
+		};
+<<<<<<< Updated upstream
+		class Item305
+=======
+		class Item303
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10448.695,18.200346,9934.6406};
+				angles[]={0.0013372133,3.9257989,0.021328852};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1394;
+			type="B_Slingload_01_Fuel_F";
+			atlOffset=-0.001739502;
+		};
+<<<<<<< Updated upstream
+		class Item306
+=======
+		class Item304
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10455.25,17.912806,9941.1035};
+				angles[]={0.034652505,3.9253318,0.042640556};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1395;
+			type="B_Slingload_01_Repair_F";
+			atlOffset=-0.0055217743;
+		};
+<<<<<<< Updated upstream
+		class Item307
+=======
+		class Item305
+>>>>>>> Stashed changes
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+<<<<<<< Updated upstream
+				position[]={10433.07,20.243471,9885.4395};
+				angles[]={0.050614551,5.4927607,6.2711778};
+=======
+				position[]={10433.688,20.203957,9886.0732};
+				angles[]={0.050623242,5.4927607,6.2711854};
+>>>>>>> Stashed changes
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
+				name="btc_veh_12";
+			};
+			id=1413;
+			type="rhsusf_M977A4_usarmy_d";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+<<<<<<< Updated upstream
+=======
+		class Item306
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10425.686,20.81212,9877.748};
+				angles[]={0.039977662,5.4824038,0.065240532};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this setVariable [""btc_dont_delete"",true]";
+				name="btc_veh_15";
+			};
+			id=1417;
+			type="B_Truck_01_flatbed_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit""],[2,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[10,2,2,2,4]],[[""ToolKit""],[1]],[[""rhsusf_falconii""],[1]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item307
+		{
+			dataType="Marker";
+			position[]={10429.146,18.190033,9881.3535};
+			name="Tracker_15";
+			text="M977A4";
+			type="mil_dot";
+			colorName="ColorKhaki";
+			alpha=0.74144375;
+			id=1418;
+			atlOffset=-9.727478e-005;
+		};
+		class Item308
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10430.013,20.192532,9882.1338};
+				angles[]={0.033321146,5.4927607,0.071875811};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""btc_dont_delete"",true]; [this, 20] call ace_cargo_fnc_setSpace;";
+				name="btc_veh_13";
+			};
+			id=1419;
+			type="rhsusf_M977A4_usarmy_d";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+>>>>>>> Stashed changes
 	};
 };
