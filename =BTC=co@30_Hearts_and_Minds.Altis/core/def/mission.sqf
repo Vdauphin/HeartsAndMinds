@@ -585,7 +585,7 @@ btc_log_def_cc = [
     btc_supplies_cargo, 20,
     btc_fob_mat, 0,
     "Land_Cargo20_military_green_F", 20,
-    "Land_Boxloader_iso_20ft_green", 20,
+    "Land_Boxloader_iso_20ft_green", 5,
     "Land_Cargo40_military_green_F", 40
 ];
 btc_log_def_rc = [
@@ -594,7 +594,7 @@ btc_log_def_rc = [
     btc_supplies_cargo, 8,
     btc_fob_mat, 8,
     "Land_Cargo20_military_green_F", 8,
-    "Land_Boxloader_iso_20ft_green", 8,
+    "Land_Boxloader_iso_20ft_green", 12,
     "B_Slingload_01_Fuel_F", 20,
     "Land_Pod_Heli_Transport_04_medevac_black_F", 8
 ];
@@ -735,4 +735,4 @@ btc_units_owners = [];
 btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, independent] find btc_player_side);
 
 //Door
-btc_door_breaking_time = 2;
+btc_door_breaking_time = 1;
