@@ -447,9 +447,9 @@ if (isServer) then {
         [
             "Fortifications",
             "Static",
-            "Ammobox",
+            "Supplies",
             "Containers",
-            "Logistics",
+            "FOB",
             "TruckModules",
             "Medical",
             "Vehicle Logistic"
@@ -489,19 +489,16 @@ if (isServer) then {
             ],
             _rearming_static + _magazines_static,
             [
-                //"Ammobox"
-                "Land_WoodenBox_F"
+                //"Supplies"
+                btc_supplies_cargo,
             ],
             [
                 //"Containers"
-                btc_supplies_cargo,
-                btc_fob_mat,
                 "Land_Boxloader_iso_20ft_green"
             ] + btc_containers_mat,
             [
-                //"Logistics"
-                "boxloader_pallet_jack",
-                "Land_Boxloader_Pallet_5_Net"
+                //"FOB"
+                btc_fob_mat,
             ],
             [
                 //"TruckModules"
@@ -530,7 +527,10 @@ if (isServer) then {
                 "PortableHelipadLight_01_white_F",
                 "PortableHelipadLight_01_yellow_F",
                 "Land_HelipadCircle_F",
-                "Land_HelipadRescue_F"
+                "Land_HelipadRescue_F",
+                "boxloader_pallet_jack",
+                "Land_Boxloader_Pallet_5_Net",
+                "Land_WoodenBox_F"
             ]
         ] + _rearming_magazines
     ];
