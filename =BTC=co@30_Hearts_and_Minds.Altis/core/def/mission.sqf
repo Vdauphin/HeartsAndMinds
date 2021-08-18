@@ -379,7 +379,7 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Boxloader_iso_20ft_black";
+btc_fob_mat = "Land_Cargo20_blue_F";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
@@ -402,7 +402,7 @@ btc_info_hideout_radius = 4000;
 btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F"];
 
 //Supplies
-btc_supplies_cargo = "Land_Boxloader_iso_20ft_aid";
+btc_supplies_cargo = "Land_Cargo20_IDAP_F";
 btc_supplies_mat = [
     _allClassSorted select {_x isKindOf "Land_FoodSack_01_cargo_base_F"},
     _allClassSorted select {_x isKindOf "Land_WaterBottle_01_stack_F"}
@@ -487,26 +487,14 @@ if (isServer) then {
                 "Land_Cargo_House_V1_F",
                 "Land_Cargo_HQ_V1_F"
             ],
-            [
-                //Static
-                "RHS_Stinger_AA_pod_D",
-                "UK3CB_B_Static_M240_Elcan_High_US_D",
-                "UK3CB_B_Static_M240_Elcan_Low_US_D",
-                "RHS_M2StaticMG_D",
-                "RHS_M2StaticMG_MiniTripod_D",
-                "RHS_TOW_TriPod_D",
-                "RHS_MK19_TriPod_D",
-                "UK3CB_B_Searchlight_NATO",
-                "RHS_M252_WD"
-            ] + _rearming_static + _magazines_static,
+            _rearming_static + _magazines_static,
             [
                 //"Supplies"
                 btc_supplies_cargo,
             ],
             [
                 //"Containers"
-                "Land_Boxloader_iso_20ft_green",
-                "Land_Boxloader_iso_tricon_green"
+                "Land_Boxloader_iso_20ft_green"
             ] + btc_containers_mat,
             [
                 //"FOB"
@@ -598,7 +586,6 @@ btc_log_def_cc = [
     btc_fob_mat, 0,
     "Land_Cargo20_military_green_F", 20,
     "Land_Boxloader_iso_20ft_green", 20,
-    "Land_Boxloader_iso_tricon_green", 10,
     "Land_Cargo40_military_green_F", 40
 ];
 btc_log_def_rc = [
@@ -608,7 +595,6 @@ btc_log_def_rc = [
     btc_fob_mat, 8,
     "Land_Cargo20_military_green_F", 8,
     "Land_Boxloader_iso_20ft_green", 8,
-    "Land_Boxloader_iso_tricon_green", 4,
     "B_Slingload_01_Fuel_F", 20,
     "Land_Pod_Heli_Transport_04_medevac_black_F", 8
 ];
