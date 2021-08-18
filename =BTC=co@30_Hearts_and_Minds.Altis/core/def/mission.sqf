@@ -457,23 +457,35 @@ if (isServer) then {
         [
             [
                 //"Fortifications"
-                "Land_Boxloader_Hesco_BigFlat",
-                "Land_Boxloader_Fort_Roof_Flat",
-                "Land_Boxloader_Camonet_Tan_Flat",
-                "Land_Boxloader_Fort_Wire_Flat",
-                "Land_Boxloader_Fort_Helipad_Tarp_Flat",
-                "Land_Boxloader_Hesco_Flat",
-                "Land_Boxloader_LME_Flat_Tan",
-                "Land_Boxloader_Sandbag_Pile2",
-                "Land_Boxloader_Sandbag_Pile2_tall",
-                "Land_Boxloader_Hesco_SmallFlat",
-                "land_boxloader_Temper_door_flat_tan",
-                "Land_Boxloader_Temper_End_Flat_Tan",
-                "Land_Boxloader_Temper_Lights_Flat",
-                "Land_Boxloader_Temper_Medsign_Flat",
-                "Land_Boxloader_Temper_Divider_Flat",
-                "Land_Boxloader_Temper_Vestibule_Flat_Tan",
-                "land_boxloader_Temper_window_flat_tan"
+                "Land_HBarrier_3_F",
+                "Land_HBarrier_5_F",
+                "Land_HBarrier_Big_F",
+                "Land_HBarrier_1_F",
+                "Land_HBarrierWall_corridor_F",
+                "Land_HBarrierWall_corner_F",
+                "Land_HBarrierWall6_F",
+                "Land_HBarrierWall4_F",
+                "Land_HBarrierTower_F",
+                "Land_BarGate_F",
+                "Land_New_WiredFence_10m_F",
+                "Land_New_WiredFence_5m_F",
+                "Land_Razorwire_F",
+                "Land_ConcreteHedgehog_01_F",
+                "Land_DragonsTeeth_01_4x2_new_redwhite_F",
+                "Land_LampHarbour_F",
+                "Land_Camping_Light_F",
+                "Land_PortableLight_double_F",
+                "Land_PortableLight_single_F",
+                "Land_MedicalTent_01_NATO_generic_open_F",
+                "Land_BagFence_Corner_F",
+                "Land_BagFence_Long_F",
+                "Land_BagFence_Round_F",
+                "Land_BagFence_Short_F",
+                "Land_BagFence_End_F",
+                "Land_BagBunker_Tower_F",
+                "Land_Cargo_Patrol_V1_F",
+                "Land_Cargo_House_V1_F",
+                "Land_Cargo_HQ_V1_F"
             ],
             _rearming_static + _magazines_static,
             [
@@ -501,13 +513,24 @@ if (isServer) then {
             [
                 //"Medical"
                 "DeconShower_01_F",
-                "Land_Boxloader_Fort_iso_Aid"
+                "Land_MedicalTent_01_MTP_closed_F",
+                "Land_Medevac_house_V1_F",
+                "Land_Medevac_HQ_V1_F"
             ],
             [
                 //"Vehicle logistic"
                 "ACE_Wheel",
                 "ACE_Track",
-                "FlexibleTank_01_sand_F"
+                "FlexibleTank_01_sand_F",
+                "Land_LampAirport_F",
+                "Land_PortableHelipadLight_01_F",
+                "PortableHelipadLight_01_blue_F",
+                "PortableHelipadLight_01_green_F",
+                "PortableHelipadLight_01_red_F",
+                "PortableHelipadLight_01_white_F",
+                "PortableHelipadLight_01_yellow_F",
+                "Land_HelipadCircle_F",
+                "Land_HelipadRescue_F"
             ]
         ] + _rearming_magazines
     ];
@@ -562,6 +585,7 @@ btc_log_def_cc = [
     btc_supplies_cargo, 20,
     btc_fob_mat, 0,
     "Land_Cargo20_military_green_F", 20,
+    "Land_Boxloader_iso_20ft_green", 20,
     "Land_Cargo40_military_green_F", 40
 ];
 btc_log_def_rc = [
@@ -570,6 +594,7 @@ btc_log_def_rc = [
     btc_supplies_cargo, 8,
     btc_fob_mat, 8,
     "Land_Cargo20_military_green_F", 8,
+    "Land_Boxloader_iso_20ft_green", 8,
     "B_Slingload_01_Fuel_F", 20,
     "Land_Pod_Heli_Transport_04_medevac_black_F", 8
 ];
