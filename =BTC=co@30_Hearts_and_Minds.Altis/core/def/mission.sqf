@@ -501,16 +501,16 @@ if (isServer) then {
             ],
             [
                 //"Supplies"
-                btc_supplies_cargo
+                btc_supplies_cargo,
             ],
             [
                 //"Containers"
-                "Land_Boxloader_iso_20ft_green"
+                "Land_Boxloader_iso_20ft_green",
                 "Land_Boxloader_iso_tricon_green"
             ] + btc_containers_mat,
             [
                 //"FOB"
-                btc_fob_mat
+                btc_fob_mat,
             ],
             [
                 //"TruckModules"
