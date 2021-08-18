@@ -12,11 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-<<<<<<< Updated upstream
-		nextID=1417;
-=======
 		nextID=1420;
->>>>>>> Stashed changes
 	};
 	class MarkerIDProvider
 	{
@@ -28,17 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-<<<<<<< Updated upstream
-		pos[]={10313.762,93.789665,9936.4219};
-		dir[]={0.86489344,-0.49450639,0.08625403};
-		up[]={0.49207085,0.86916989,0.049073271};
-		aside[]={0.099235393,2.2010681e-007,-0.99507254};
-=======
 		pos[]={10382.687,71.975403,9842.6572};
 		dir[]={0.21416251,-0.63096011,0.74571908};
 		up[]={0.17417595,0.77577776,0.60648841};
 		aside[]={0.96118701,8.8373781e-007,-0.27603844};
->>>>>>> Stashed changes
 	};
 };
 binarizationWanted=0;
@@ -61,10 +50,7 @@ addons[]=
 	"A3_Structures_F_Exp_Military_Barracks_01",
 	"rhsusf_c_fmtv",
 	"rhsusf_c_Caiman",
-<<<<<<< Updated upstream
-=======
 	"rhsusf_c_HEMTT_A4",
->>>>>>> Stashed changes
 	"RHS_US_A2_AirImport",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mil_Cargo",
@@ -200,8 +186,6 @@ class AddonsMetaData
 		};
 		class Item16
 		{
-<<<<<<< Updated upstream
-=======
 			className="rhsusf_c_HEMTT_A4";
 			name="HEMMTT A4 Trucks";
 			author="Red Hammer Studios";
@@ -209,7 +193,6 @@ class AddonsMetaData
 		};
 		class Item17
 		{
->>>>>>> Stashed changes
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
@@ -5473,8 +5456,6 @@ class Mission
 											id=670;
 											type="rhsusf_usmc_marpat_wd_crewman";
 											atlOffset=-1.9073486e-006;
-<<<<<<< Updated upstream
-=======
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5609,174 +5590,6 @@ class Mission
 												skill=0.60000008;
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-A Asst. Automatic Rifleman";
-												isPlayable=1;
-												class Inventory
-												{
-													class binocular
-													{
-														name="Binocular";
-													};
-													class uniform
-													{
-														typeName="rhs_uniform_FROG01_wd";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													radio="ItemRadio";
-													gps="ItemGPS";
-													goggles="rhs_googles_clear";
-													headgear="rhs_8point_marpatwd";
-												};
-											};
-											id=671;
-											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=-3.8146973e-006;
->>>>>>> Stashed changes
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="acex_headless_blacklist";
-													expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"BOOL"
-																};
-															};
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"STRING"
-																};
-															};
-															value="ACE_NoVoice";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"SCALAR"
-																};
-															};
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="TFAR_freq_sr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"STRING"
-																};
-															};
-															value="120.000";
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"STRING"
-																};
-															};
-															value="031.000";
-														};
-													};
-												};
-												class Attribute5
-												{
-													property="hideObject";
-													expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"BOOL"
-																};
-															};
-															value=0;
-														};
-													};
-												};
-												nAttributes=6;
-											};
-										};
-										class Item4
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-<<<<<<< Updated upstream
-												position[]={10431.718,16.192881,9939.6436};
-												angles[]={0.020001473,2.2166729,0.021327924};
-=======
-												position[]={10430.93,16.216812,9938.5518};
-												angles[]={0.053284902,2.2200587,6.2711778};
->>>>>>> Stashed changes
-											};
-											side="West";
-											flags=4;
-											class Attributes
-											{
-												skill=0.60000008;
-												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-<<<<<<< Updated upstream
-												description="Assassin 1-2-A Asst. Automatic Rifleman";
-=======
-												description="Assassin 1-2-A Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -5925,27 +5738,16 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10430.93,16.216812,9938.5518};
 												angles[]={0.053284902,2.2200587,6.2711778};
-=======
-												position[]={10431.871,16.183163,9940.293};
-												angles[]={0.020001473,2.2166729,0.021327924};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-<<<<<<< Updated upstream
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-A Rifleman";
-=======
-												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-												description="Assassin 1-2-B Fireteam Leader";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6093,11 +5895,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.871,16.183163,9940.293};
-=======
-												position[]={10431.018,16.185961,9939.2422};
->>>>>>> Stashed changes
 												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
@@ -6105,14 +5903,9 @@ class Mission
 											class Attributes
 											{
 												skill=0.60000008;
-<<<<<<< Updated upstream
 												rank="CORPORAL";
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-B Fireteam Leader";
-=======
-												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-												description="Assassin 1-2-B Automatic Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6261,11 +6054,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.018,16.185961,9939.2422};
-=======
-												position[]={10431.43,16.184074,9939.7764};
->>>>>>> Stashed changes
 												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
@@ -6274,11 +6063,7 @@ class Mission
 											{
 												skill=0.60000008;
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-<<<<<<< Updated upstream
 												description="Assassin 1-2-B Automatic Rifleman";
-=======
-												description="Assassin 1-2-B Asst. Automatic Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6427,13 +6212,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.43,16.184074,9939.7764};
 												angles[]={0.020001473,2.2166729,0.021327924};
-=======
-												position[]={10430.632,16.206028,9938.8213};
-												angles[]={0.053284902,2.2166729,6.2711778};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
@@ -6441,11 +6221,7 @@ class Mission
 											{
 												skill=0.60000008;
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-<<<<<<< Updated upstream
 												description="Assassin 1-2-B Asst. Automatic Rifleman";
-=======
-												description="Assassin 1-2-B Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6594,27 +6370,16 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10430.632,16.206028,9938.8213};
 												angles[]={0.053284902,2.2166729,6.2711778};
-=======
-												position[]={10431.613,16.17238,9940.5566};
-												angles[]={0.020001473,2.2166729,0.021327924};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
 											class Attributes
 											{
 												skill=0.60000008;
-<<<<<<< Updated upstream
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-B Rifleman";
-=======
-												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-												description="Assassin 1-2-C Fireteam Leader";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6638,7 +6403,6 @@ class Mission
 											};
 											id=676;
 											type="rhsusf_usmc_marpat_wd_crewman";
-											atlOffset=-1.9073486e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6763,11 +6527,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.613,16.17238,9940.5566};
-=======
-												position[]={10430.761,16.175219,9939.5059};
->>>>>>> Stashed changes
 												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
@@ -6775,14 +6535,9 @@ class Mission
 											class Attributes
 											{
 												skill=0.60000008;
-<<<<<<< Updated upstream
 												rank="CORPORAL";
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-2-C Fireteam Leader";
-=======
-												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-												description="Assassin 1-2-C Automatic Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -6931,11 +6686,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10430.761,16.175219,9939.5059};
-=======
-												position[]={10431.17,16.173254,9940.04};
->>>>>>> Stashed changes
 												angles[]={0.020001473,2.2166729,0.021327924};
 											};
 											side="West";
@@ -6944,11 +6695,7 @@ class Mission
 											{
 												skill=0.60000008;
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-<<<<<<< Updated upstream
 												description="Assassin 1-2-C Automatic Rifleman";
-=======
-												description="Assassin 1-2-C Asst. Automatic Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -7097,13 +6844,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.17,16.173254,9940.04};
 												angles[]={0.020001473,2.2166729,0.021327924};
-=======
-												position[]={10430.373,16.195124,9939.084};
-												angles[]={0.053284902,2.2166729,6.2711778};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
@@ -7111,11 +6853,7 @@ class Mission
 											{
 												skill=0.60000008;
 												init="call{group this setgroupid [""Assassin 1-2""];};" \n "this setVariable [""interpreter"",true]";
-<<<<<<< Updated upstream
 												description="Assassin 1-2-C Asst. Automatic Rifleman";
-=======
-												description="Assassin 1-2-C Rifleman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -7139,10 +6877,7 @@ class Mission
 											};
 											id=679;
 											type="rhsusf_usmc_marpat_wd_crewman";
-<<<<<<< Updated upstream
 											atlOffset=-1.9073486e-006;
-=======
->>>>>>> Stashed changes
 											class CustomAttributes
 											{
 												class Attribute0
@@ -7262,59 +6997,13 @@ class Mission
 												nAttributes=6;
 											};
 										};
-<<<<<<< Updated upstream
 										class Item13
-=======
-									};
-									class Attributes
-									{
-									};
-									id=666;
-									atlOffset=-1.9073486e-006;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="groupID";
-											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Assassin 1-2";
-												};
-											};
-										};
-										nAttributes=1;
-									};
-								};
-								class Item26
-								{
-									dataType="Group";
-									side="West";
-									class Entities
-									{
-										items=14;
-										class Item0
->>>>>>> Stashed changes
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10430.373,16.195124,9939.084};
 												angles[]={0.053284902,2.2166729,6.2711778};
-=======
-												position[]={10431.046,16.1478,9941.1807};
-												angles[]={0.020001473,2.2542148,0.021327924};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=4;
@@ -7507,28 +7196,17 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-<<<<<<< Updated upstream
 												position[]={10431.046,16.1478,9941.1807};
 												angles[]={0.020001473,2.2542148,0.021327924};
-=======
-												position[]={10430.556,16.146912,9940.7021};
-												angles[]={0.020001473,2.2531853,0.021327924};
->>>>>>> Stashed changes
 											};
 											side="West";
 											flags=6;
 											class Attributes
 											{
 												skill=0.60000008;
-<<<<<<< Updated upstream
 												rank="SERGEANT";
 												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
 												description="Assassin 1-3 Squad Leader@Assassin 1-3 (Infantry)";
-=======
-												rank="CORPORAL";
-												init="call{group this setgroupid [""Assassin 1-3""];};" \n "this setVariable [""interpreter"",true]";
-												description="Assassin 1-3 Corpsman";
->>>>>>> Stashed changes
 												isPlayable=1;
 												class Inventory
 												{
@@ -36004,51 +35682,6 @@ class Mission
 			};
 			id=925;
 			type="Land_Barracks_01_grey_F";
-<<<<<<< Updated upstream
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item38
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10411.847,19.876781,9872.7275};
-				angles[]={6.2791886,6.2739286,0.057270125};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="this setVariable [""btc_dont_delete"",true]";
-				name="btc_veh_15";
-			};
-			id=928;
-			type="rhsusf_M977A4_REPAIR_usarmy_d";
-			atlOffset=-0.0019779205;
-=======
->>>>>>> Stashed changes
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36798,11 +36431,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item43
-=======
 		class Item42
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36843,11 +36472,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item44
-=======
 		class Item43
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37222,11 +36847,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item45
-=======
 		class Item44
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37602,11 +37223,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item46
-=======
 		class Item45
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37649,22 +37266,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item47
-=======
 		class Item46
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-<<<<<<< Updated upstream
-				position[]={10435.485,20.098482,9887.7246};
-				angles[]={0.050623242,5.4708743,6.2711854};
-=======
 				position[]={10437.29,20.003803,9889.5273};
 				angles[]={0.039977662,5.4708743,6.2818484};
->>>>>>> Stashed changes
 			};
 			side="Empty";
 			flags=4;
@@ -37676,10 +37284,6 @@ class Mission
 			};
 			id=960;
 			type="rhsusf_M977A4_usarmy_d";
-<<<<<<< Updated upstream
-			atlOffset=-0.00022506714;
-=======
->>>>>>> Stashed changes
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37704,54 +37308,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item48
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10417.641,19.984194,9872.5273};
-				angles[]={0.065240532,0.039585259,0.057270125};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setVariable [""btc_dont_delete"",true]";
-				name="btc_veh_13";
-			};
-			id=966;
-			type="rhsusf_M978A4_usarmy_d";
-			atlOffset=-0.0012722015;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item49
-=======
 		class Item47
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37795,11 +37352,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item50
-=======
 		class Item48
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37842,11 +37395,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item51
-=======
 		class Item49
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37863,11 +37412,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item52
-=======
 		class Item50
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37883,11 +37428,7 @@ class Mission
 			id=973;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item53
-=======
 		class Item51
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37903,11 +37444,7 @@ class Mission
 			id=974;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item54
-=======
 		class Item52
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37924,11 +37461,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item55
-=======
 		class Item53
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37945,11 +37478,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item56
-=======
 		class Item54
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37966,11 +37495,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item57
-=======
 		class Item55
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37986,11 +37511,7 @@ class Mission
 			id=978;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item58
-=======
 		class Item56
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38007,11 +37528,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item59
-=======
 		class Item57
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38027,11 +37544,7 @@ class Mission
 			id=980;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item60
-=======
 		class Item58
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38048,11 +37561,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item61
-=======
 		class Item59
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38069,11 +37578,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item62
-=======
 		class Item60
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38090,11 +37595,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item63
-=======
 		class Item61
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38111,11 +37612,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item64
-=======
 		class Item62
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38132,11 +37629,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item65
-=======
 		class Item63
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38152,11 +37645,7 @@ class Mission
 			id=987;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item66
-=======
 		class Item64
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38172,11 +37661,7 @@ class Mission
 			id=988;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item67
-=======
 		class Item65
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38192,11 +37677,7 @@ class Mission
 			id=989;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item68
-=======
 		class Item66
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38212,11 +37693,7 @@ class Mission
 			id=990;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item69
-=======
 		class Item67
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38232,11 +37709,7 @@ class Mission
 			id=991;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item70
-=======
 		class Item68
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38253,11 +37726,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item71
-=======
 		class Item69
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38274,11 +37743,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item72
-=======
 		class Item70
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38295,11 +37760,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item73
-=======
 		class Item71
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38316,11 +37777,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item74
-=======
 		class Item72
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38336,11 +37793,7 @@ class Mission
 			id=996;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item75
-=======
 		class Item73
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38356,11 +37809,7 @@ class Mission
 			id=997;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item76
-=======
 		class Item74
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38377,11 +37826,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item77
-=======
 		class Item75
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38397,11 +37842,7 @@ class Mission
 			id=999;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item78
-=======
 		class Item76
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38418,11 +37859,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item79
-=======
 		class Item77
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38438,11 +37875,7 @@ class Mission
 			id=1001;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item80
-=======
 		class Item78
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38459,11 +37892,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item81
-=======
 		class Item79
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38480,11 +37909,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item82
-=======
 		class Item80
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38500,11 +37925,7 @@ class Mission
 			id=1004;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-<<<<<<< Updated upstream
-		class Item83
-=======
 		class Item81
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38520,11 +37941,7 @@ class Mission
 			id=1038;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-<<<<<<< Updated upstream
-		class Item84
-=======
 		class Item82
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38540,11 +37957,7 @@ class Mission
 			id=1039;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-<<<<<<< Updated upstream
-		class Item85
-=======
 		class Item83
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38561,11 +37974,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.010020256;
 		};
-<<<<<<< Updated upstream
-		class Item86
-=======
 		class Item84
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38582,11 +37991,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.059981346;
 		};
-<<<<<<< Updated upstream
-		class Item87
-=======
 		class Item85
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38603,11 +38008,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.12333107;
 		};
-<<<<<<< Updated upstream
-		class Item88
-=======
 		class Item86
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38624,11 +38025,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.05599308;
 		};
-<<<<<<< Updated upstream
-		class Item89
-=======
 		class Item87
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38645,11 +38042,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.027331352;
 		};
-<<<<<<< Updated upstream
-		class Item90
-=======
 		class Item88
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38666,11 +38059,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.12698555;
 		};
-<<<<<<< Updated upstream
-		class Item91
-=======
 		class Item89
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38687,11 +38076,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-0.036664009;
 		};
-<<<<<<< Updated upstream
-		class Item92
-=======
 		class Item90
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38708,11 +38093,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.05436039;
 		};
-<<<<<<< Updated upstream
-		class Item93
-=======
 		class Item91
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38729,11 +38110,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item94
-=======
 		class Item92
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38750,11 +38127,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054359436;
 		};
-<<<<<<< Updated upstream
-		class Item95
-=======
 		class Item93
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38771,11 +38144,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054359436;
 		};
-<<<<<<< Updated upstream
-		class Item96
-=======
 		class Item94
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38792,11 +38161,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item97
-=======
 		class Item95
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38813,11 +38178,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item98
-=======
 		class Item96
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38833,11 +38194,7 @@ class Mission
 			id=1055;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item99
-=======
 		class Item97
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38854,11 +38211,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item100
-=======
 		class Item98
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38875,11 +38228,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item101
-=======
 		class Item99
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38896,11 +38245,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.054361343;
 		};
-<<<<<<< Updated upstream
-		class Item102
-=======
 		class Item100
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38916,11 +38261,7 @@ class Mission
 			id=1059;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item103
-=======
 		class Item101
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38936,11 +38277,7 @@ class Mission
 			id=1060;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item104
-=======
 		class Item102
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38956,11 +38293,7 @@ class Mission
 			id=1061;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item105
-=======
 		class Item103
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38977,11 +38310,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item106
-=======
 		class Item104
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38997,11 +38326,7 @@ class Mission
 			id=1063;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item107
-=======
 		class Item105
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39017,11 +38342,7 @@ class Mission
 			id=1064;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item108
-=======
 		class Item106
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39037,11 +38358,7 @@ class Mission
 			id=1065;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item109
-=======
 		class Item107
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39057,11 +38374,7 @@ class Mission
 			id=1066;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item110
-=======
 		class Item108
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39077,11 +38390,7 @@ class Mission
 			id=1067;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item111
-=======
 		class Item109
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39097,11 +38406,7 @@ class Mission
 			id=1068;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item112
-=======
 		class Item110
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39117,11 +38422,7 @@ class Mission
 			id=1069;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item113
-=======
 		class Item111
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39137,11 +38438,7 @@ class Mission
 			id=1070;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item114
-=======
 		class Item112
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39157,11 +38454,7 @@ class Mission
 			id=1071;
 			type="Land_Mil_WallBig_4m_F";
 		};
-<<<<<<< Updated upstream
-		class Item115
-=======
 		class Item113
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39177,11 +38470,7 @@ class Mission
 			id=1072;
 			type="Land_Mil_WallBig_Corner_F";
 		};
-<<<<<<< Updated upstream
-		class Item116
-=======
 		class Item114
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39221,11 +38510,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item117
-=======
 		class Item115
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39265,11 +38550,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item118
-=======
 		class Item116
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39309,11 +38590,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item119
-=======
 		class Item117
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39352,11 +38629,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item120
-=======
 		class Item118
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39396,11 +38669,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item121
-=======
 		class Item119
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39440,11 +38709,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item122
-=======
 		class Item120
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39484,11 +38749,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item123
-=======
 		class Item121
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39528,11 +38789,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item124
-=======
 		class Item122
->>>>>>> Stashed changes
 		{
 			dataType="Marker";
 			position[]={10426.421,15.973098,9944.8613};
@@ -39544,11 +38801,7 @@ class Mission
 			angle=45;
 			id=1088;
 		};
-<<<<<<< Updated upstream
-		class Item125
-=======
 		class Item123
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39565,11 +38818,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.14019108;
 		};
-<<<<<<< Updated upstream
-		class Item126
-=======
 		class Item124
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39586,11 +38835,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.00082397461;
 		};
-<<<<<<< Updated upstream
-		class Item127
-=======
 		class Item125
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39607,11 +38852,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item128
-=======
 		class Item126
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39628,11 +38869,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.019105911;
 		};
-<<<<<<< Updated upstream
-		class Item129
-=======
 		class Item127
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39649,11 +38886,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0020914078;
 		};
-<<<<<<< Updated upstream
-		class Item130
-=======
 		class Item128
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39670,11 +38903,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item131
-=======
 		class Item129
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39691,11 +38920,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0035762787;
 		};
-<<<<<<< Updated upstream
-		class Item132
-=======
 		class Item130
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39712,11 +38937,7 @@ class Mission
 			type="Land_Mil_WallBig_4m_F";
 			atlOffset=0.0097818375;
 		};
-<<<<<<< Updated upstream
-		class Item133
-=======
 		class Item131
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39733,11 +38954,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.00461483;
 		};
-<<<<<<< Updated upstream
-		class Item134
-=======
 		class Item132
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39818,11 +39035,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item135
-=======
 		class Item133
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39839,11 +39052,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.048666954;
 		};
-<<<<<<< Updated upstream
-		class Item136
-=======
 		class Item134
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39860,11 +39069,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item137
-=======
 		class Item135
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39880,11 +39085,7 @@ class Mission
 			id=1110;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item138
-=======
 		class Item136
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39900,11 +39101,7 @@ class Mission
 			id=1111;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item139
-=======
 		class Item137
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39921,11 +39118,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item140
-=======
 		class Item138
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39942,11 +39135,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item141
-=======
 		class Item139
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39963,11 +39152,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.018558502;
 		};
-<<<<<<< Updated upstream
-		class Item142
-=======
 		class Item140
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39984,11 +39169,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item143
-=======
 		class Item141
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40004,11 +39185,7 @@ class Mission
 			id=1116;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item144
-=======
 		class Item142
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40024,11 +39201,7 @@ class Mission
 			id=1119;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item145
-=======
 		class Item143
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40045,11 +39218,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item146
-=======
 		class Item144
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40066,11 +39235,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044727325;
 		};
-<<<<<<< Updated upstream
-		class Item147
-=======
 		class Item145
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40087,11 +39252,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.0024347305;
 		};
-<<<<<<< Updated upstream
-		class Item148
-=======
 		class Item146
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40107,11 +39268,7 @@ class Mission
 			id=1123;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item149
-=======
 		class Item147
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40127,11 +39284,7 @@ class Mission
 			id=1124;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item150
-=======
 		class Item148
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40148,11 +39301,7 @@ class Mission
 			type="Land_CncWall1_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item151
-=======
 		class Item149
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40168,11 +39317,7 @@ class Mission
 			id=1126;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item152
-=======
 		class Item150
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40188,11 +39333,7 @@ class Mission
 			id=1127;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item153
-=======
 		class Item151
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40208,11 +39349,7 @@ class Mission
 			id=1128;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item154
-=======
 		class Item152
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40229,11 +39366,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item155
-=======
 		class Item153
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40250,11 +39383,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item156
-=======
 		class Item154
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40271,11 +39400,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item157
-=======
 		class Item155
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40292,11 +39417,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item158
-=======
 		class Item156
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40312,11 +39433,7 @@ class Mission
 			id=1133;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item159
-=======
 		class Item157
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40333,11 +39450,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044717789;
 		};
-<<<<<<< Updated upstream
-		class Item160
-=======
 		class Item158
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40353,11 +39466,7 @@ class Mission
 			id=1135;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item161
-=======
 		class Item159
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40374,11 +39483,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item162
-=======
 		class Item160
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40395,11 +39500,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item163
-=======
 		class Item161
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40415,11 +39516,7 @@ class Mission
 			id=1138;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item164
-=======
 		class Item162
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40435,11 +39532,7 @@ class Mission
 			id=1139;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item165
-=======
 		class Item163
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40455,11 +39548,7 @@ class Mission
 			id=1140;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item166
-=======
 		class Item164
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40475,11 +39564,7 @@ class Mission
 			id=1141;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item167
-=======
 		class Item165
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40496,11 +39581,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.0044708252;
 		};
-<<<<<<< Updated upstream
-		class Item168
-=======
 		class Item166
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40516,11 +39597,7 @@ class Mission
 			id=1143;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item169
-=======
 		class Item167
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40537,11 +39614,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item170
-=======
 		class Item168
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40557,11 +39630,7 @@ class Mission
 			id=1147;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item171
-=======
 		class Item169
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40577,11 +39646,7 @@ class Mission
 			id=1148;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item172
-=======
 		class Item170
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40597,11 +39662,7 @@ class Mission
 			id=1149;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item173
-=======
 		class Item171
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40618,11 +39679,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.018558502;
 		};
-<<<<<<< Updated upstream
-		class Item174
-=======
 		class Item172
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40639,11 +39696,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item175
-=======
 		class Item173
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40659,11 +39712,7 @@ class Mission
 			id=1152;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item176
-=======
 		class Item174
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40680,11 +39729,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item177
-=======
 		class Item175
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40700,11 +39745,7 @@ class Mission
 			id=1157;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item178
-=======
 		class Item176
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40720,11 +39761,7 @@ class Mission
 			id=1158;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item179
-=======
 		class Item177
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40740,11 +39777,7 @@ class Mission
 			id=1159;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item180
-=======
 		class Item178
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40761,11 +39794,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item181
-=======
 		class Item179
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40781,11 +39810,7 @@ class Mission
 			id=1161;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item182
-=======
 		class Item180
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40801,11 +39826,7 @@ class Mission
 			id=1162;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item183
-=======
 		class Item181
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40821,11 +39842,7 @@ class Mission
 			id=1163;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item184
-=======
 		class Item182
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40842,11 +39859,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item185
-=======
 		class Item183
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40863,11 +39876,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=3.2424927e-005;
 		};
-<<<<<<< Updated upstream
-		class Item186
-=======
 		class Item184
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40883,11 +39892,7 @@ class Mission
 			id=1166;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item187
-=======
 		class Item185
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40903,11 +39908,7 @@ class Mission
 			id=1167;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item188
-=======
 		class Item186
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40923,11 +39924,7 @@ class Mission
 			id=1168;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item189
-=======
 		class Item187
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40943,11 +39940,7 @@ class Mission
 			id=1177;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item190
-=======
 		class Item188
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40963,11 +39956,7 @@ class Mission
 			id=1178;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item191
-=======
 		class Item189
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -40983,11 +39972,7 @@ class Mission
 			id=1179;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item192
-=======
 		class Item190
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41004,11 +39989,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item193
-=======
 		class Item191
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41024,11 +40005,7 @@ class Mission
 			id=1181;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item194
-=======
 		class Item192
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41045,11 +40022,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item195
-=======
 		class Item193
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41065,11 +40038,7 @@ class Mission
 			id=1183;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item196
-=======
 		class Item194
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41086,11 +40055,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item197
-=======
 		class Item195
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41106,11 +40071,7 @@ class Mission
 			id=1185;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item198
-=======
 		class Item196
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41127,11 +40088,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item199
-=======
 		class Item197
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41147,11 +40104,7 @@ class Mission
 			id=1187;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item200
-=======
 		class Item198
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41167,11 +40120,7 @@ class Mission
 			id=1188;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item201
-=======
 		class Item199
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41188,11 +40137,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item202
-=======
 		class Item200
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41208,11 +40153,7 @@ class Mission
 			id=1190;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item203
-=======
 		class Item201
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41228,11 +40169,7 @@ class Mission
 			id=1191;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item204
-=======
 		class Item202
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41248,11 +40185,7 @@ class Mission
 			id=1192;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item205
-=======
 		class Item203
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41268,11 +40201,7 @@ class Mission
 			id=1193;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item206
-=======
 		class Item204
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41289,11 +40218,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item207
-=======
 		class Item205
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41310,11 +40235,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item208
-=======
 		class Item206
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41330,11 +40251,7 @@ class Mission
 			id=1196;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item209
-=======
 		class Item207
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41351,11 +40268,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item210
-=======
 		class Item208
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41372,11 +40285,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item211
-=======
 		class Item209
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41393,11 +40302,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item212
-=======
 		class Item210
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41414,11 +40319,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=5.3405762e-005;
 		};
-<<<<<<< Updated upstream
-		class Item213
-=======
 		class Item211
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41435,11 +40336,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item214
-=======
 		class Item212
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41456,11 +40353,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item215
-=======
 		class Item213
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41476,11 +40369,7 @@ class Mission
 			id=1203;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item216
-=======
 		class Item214
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41497,11 +40386,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item217
-=======
 		class Item215
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41517,11 +40402,7 @@ class Mission
 			id=1205;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item218
-=======
 		class Item216
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41537,11 +40418,7 @@ class Mission
 			id=1208;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item219
-=======
 		class Item217
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41558,11 +40435,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item220
-=======
 		class Item218
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41578,11 +40451,7 @@ class Mission
 			id=1210;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item221
-=======
 		class Item219
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41598,11 +40467,7 @@ class Mission
 			id=1211;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item222
-=======
 		class Item220
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41619,11 +40484,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item223
-=======
 		class Item221
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41640,11 +40501,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-2.2888184e-005;
 		};
-<<<<<<< Updated upstream
-		class Item224
-=======
 		class Item222
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41661,11 +40518,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item225
-=======
 		class Item223
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41682,11 +40535,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.0037240982;
 		};
-<<<<<<< Updated upstream
-		class Item226
-=======
 		class Item224
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41703,11 +40552,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item227
-=======
 		class Item225
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41724,11 +40569,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item228
-=======
 		class Item226
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41745,11 +40586,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item229
-=======
 		class Item227
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41765,11 +40602,7 @@ class Mission
 			id=1219;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item230
-=======
 		class Item228
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41786,11 +40619,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item231
-=======
 		class Item229
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41806,11 +40635,7 @@ class Mission
 			id=1221;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item232
-=======
 		class Item230
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41826,11 +40651,7 @@ class Mission
 			id=1222;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item233
-=======
 		class Item231
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41847,11 +40668,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item234
-=======
 		class Item232
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41867,11 +40684,7 @@ class Mission
 			id=1224;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item235
-=======
 		class Item233
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41888,11 +40701,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item236
-=======
 		class Item234
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41909,11 +40718,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item237
-=======
 		class Item235
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41929,11 +40734,7 @@ class Mission
 			id=1227;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item238
-=======
 		class Item236
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41950,11 +40751,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item239
-=======
 		class Item237
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41970,11 +40767,7 @@ class Mission
 			id=1229;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item240
-=======
 		class Item238
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -41991,11 +40784,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item241
-=======
 		class Item239
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42011,11 +40800,7 @@ class Mission
 			id=1233;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item242
-=======
 		class Item240
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42032,11 +40817,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.23828602;
 		};
-<<<<<<< Updated upstream
-		class Item243
-=======
 		class Item241
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42053,11 +40834,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=0.085718155;
 		};
-<<<<<<< Updated upstream
-		class Item244
-=======
 		class Item242
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42074,11 +40851,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-0.030909538;
 		};
-<<<<<<< Updated upstream
-		class Item245
-=======
 		class Item243
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42094,11 +40867,7 @@ class Mission
 			id=1237;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item246
-=======
 		class Item244
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42114,11 +40883,7 @@ class Mission
 			id=1241;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item247
-=======
 		class Item245
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42157,11 +40922,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item248
-=======
 		class Item246
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42178,11 +40939,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item249
-=======
 		class Item247
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42198,11 +40955,7 @@ class Mission
 			id=1244;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item250
-=======
 		class Item248
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42218,11 +40971,7 @@ class Mission
 			id=1245;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item251
-=======
 		class Item249
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42238,11 +40987,7 @@ class Mission
 			id=1246;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item252
-=======
 		class Item250
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42258,11 +41003,7 @@ class Mission
 			id=1247;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item253
-=======
 		class Item251
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42278,11 +41019,7 @@ class Mission
 			id=1248;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item254
-=======
 		class Item252
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42298,11 +41035,7 @@ class Mission
 			id=1249;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item255
-=======
 		class Item253
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42319,11 +41052,7 @@ class Mission
 			type="Land_DragonsTeeth_01_4x2_new_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item256
-=======
 		class Item254
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42339,11 +41068,7 @@ class Mission
 			id=1252;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item257
-=======
 		class Item255
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42359,11 +41084,7 @@ class Mission
 			id=1253;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item258
-=======
 		class Item256
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42379,11 +41100,7 @@ class Mission
 			id=1254;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item259
-=======
 		class Item257
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42399,11 +41116,7 @@ class Mission
 			id=1255;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item260
-=======
 		class Item258
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42419,11 +41132,7 @@ class Mission
 			id=1256;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item261
-=======
 		class Item259
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42439,11 +41148,7 @@ class Mission
 			id=1257;
 			type="Land_DragonsTeeth_01_4x2_new_F";
 		};
-<<<<<<< Updated upstream
-		class Item262
-=======
 		class Item260
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42484,11 +41189,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item263
-=======
 		class Item261
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42528,11 +41229,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item264
-=======
 		class Item262
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42573,11 +41270,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item265
-=======
 		class Item263
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42617,11 +41310,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item266
-=======
 		class Item264
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42661,11 +41350,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item267
-=======
 		class Item265
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42705,11 +41390,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item268
-=======
 		class Item266
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42749,11 +41430,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item269
-=======
 		class Item267
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42793,11 +41470,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item270
-=======
 		class Item268
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42837,11 +41510,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item271
-=======
 		class Item269
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42881,11 +41550,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item272
-=======
 		class Item270
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42925,11 +41590,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item273
-=======
 		class Item271
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -42969,11 +41630,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item274
-=======
 		class Item272
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43013,11 +41670,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item275
-=======
 		class Item273
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43033,11 +41686,7 @@ class Mission
 			id=1275;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item276
-=======
 		class Item274
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43053,11 +41702,7 @@ class Mission
 			id=1276;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item277
-=======
 		class Item275
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43074,11 +41719,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item278
-=======
 		class Item276
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43094,11 +41735,7 @@ class Mission
 			id=1278;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item279
-=======
 		class Item277
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43114,11 +41751,7 @@ class Mission
 			id=1279;
 			type="Land_CncWall1_F";
 		};
-<<<<<<< Updated upstream
-		class Item280
-=======
 		class Item278
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43135,11 +41768,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=4.0054321e-005;
 		};
-<<<<<<< Updated upstream
-		class Item281
-=======
 		class Item279
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43155,11 +41784,7 @@ class Mission
 			id=1282;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item282
-=======
 		class Item280
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43175,11 +41800,7 @@ class Mission
 			id=1283;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item283
-=======
 		class Item281
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43196,11 +41817,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=1.9073486e-006;
 		};
-<<<<<<< Updated upstream
-		class Item284
-=======
 		class Item282
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43217,11 +41834,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item285
-=======
 		class Item283
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43237,11 +41850,7 @@ class Mission
 			id=1286;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item286
-=======
 		class Item284
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43257,11 +41866,7 @@ class Mission
 			id=1287;
 			type="Land_CncWall4_F";
 		};
-<<<<<<< Updated upstream
-		class Item287
-=======
 		class Item285
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43278,11 +41883,7 @@ class Mission
 			type="Land_CncWall4_F";
 			atlOffset=-9.5367432e-007;
 		};
-<<<<<<< Updated upstream
-		class Item288
-=======
 		class Item286
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43323,11 +41924,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item289
-=======
 		class Item287
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43368,11 +41965,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item290
-=======
 		class Item288
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43413,11 +42006,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item291
-=======
 		class Item289
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43458,11 +42047,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item292
-=======
 		class Item290
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43504,11 +42089,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item293
-=======
 		class Item291
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43525,11 +42106,7 @@ class Mission
 			id=1294;
 			type="Land_HelipadRescue_F";
 		};
-<<<<<<< Updated upstream
-		class Item294
-=======
 		class Item292
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43610,11 +42187,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item295
-=======
 		class Item293
->>>>>>> Stashed changes
 		{
 			dataType="Marker";
 			position[]={10408.53,16.415726,9914.332};
@@ -43627,11 +42200,7 @@ class Mission
 			angle=358.78232;
 			id=1304;
 		};
-<<<<<<< Updated upstream
-		class Item296
-=======
 		class Item294
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43694,11 +42263,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item297
-=======
 		class Item295
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43739,11 +42304,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item298
-=======
 		class Item296
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43804,11 +42365,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item299
-=======
 		class Item297
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43824,11 +42381,7 @@ class Mission
 			id=1380;
 			type="Tarp_01_Large_Black_F";
 		};
-<<<<<<< Updated upstream
-		class Item300
-=======
 		class Item298
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43890,11 +42443,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item301
-=======
 		class Item299
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -43975,11 +42524,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item302
-=======
 		class Item300
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44131,22 +42676,13 @@ class Mission
 				nAttributes=2;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item303
-=======
 		class Item301
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-<<<<<<< Updated upstream
-				position[]={10405.953,20.128649,9871.7998};
-				angles[]={0.049293593,0.025696108,0.057270125};
-=======
 				position[]={10423.262,20.866293,9875.0244};
 				angles[]={0.070549726,5.5045075,0.051953323};
->>>>>>> Stashed changes
 			};
 			side="Empty";
 			flags=4;
@@ -44158,10 +42694,6 @@ class Mission
 			};
 			id=1391;
 			type="B_Truck_01_flatbed_F";
-<<<<<<< Updated upstream
-			atlOffset=-0.00029945374;
-=======
->>>>>>> Stashed changes
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44186,11 +42718,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-		class Item304
-=======
 		class Item302
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44207,11 +42735,7 @@ class Mission
 			type="B_Slingload_01_Ammo_F";
 			atlOffset=-0.00041389465;
 		};
-<<<<<<< Updated upstream
-		class Item305
-=======
 		class Item303
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44228,11 +42752,7 @@ class Mission
 			type="B_Slingload_01_Fuel_F";
 			atlOffset=-0.001739502;
 		};
-<<<<<<< Updated upstream
-		class Item306
-=======
 		class Item304
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44249,22 +42769,13 @@ class Mission
 			type="B_Slingload_01_Repair_F";
 			atlOffset=-0.0055217743;
 		};
-<<<<<<< Updated upstream
-		class Item307
-=======
 		class Item305
->>>>>>> Stashed changes
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-<<<<<<< Updated upstream
-				position[]={10433.07,20.243471,9885.4395};
-				angles[]={0.050614551,5.4927607,6.2711778};
-=======
 				position[]={10433.688,20.203957,9886.0732};
 				angles[]={0.050623242,5.4927607,6.2711854};
->>>>>>> Stashed changes
 			};
 			side="Empty";
 			flags=4;
@@ -44300,8 +42811,6 @@ class Mission
 				nAttributes=1;
 			};
 		};
-<<<<<<< Updated upstream
-=======
 		class Item306
 		{
 			dataType="Object";
@@ -44397,6 +42906,5 @@ class Mission
 				nAttributes=1;
 			};
 		};
->>>>>>> Stashed changes
 	};
 };
