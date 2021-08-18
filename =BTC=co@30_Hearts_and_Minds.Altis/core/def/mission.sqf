@@ -418,7 +418,7 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
 });
 
 //Containers
-btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_green_F"];
+btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Boxloader_iso_20ft_green", "Land_Cargo40_military_green_F"];
 
 if (isServer) then {
     //Player
@@ -490,15 +490,15 @@ if (isServer) then {
             _rearming_static + _magazines_static,
             [
                 //"Supplies"
-                btc_supplies_cargo,
+                btc_supplies_cargo
             ],
             [
                 //"Containers"
-                "Land_Boxloader_iso_20ft_green"
+
             ] + btc_containers_mat,
             [
                 //"FOB"
-                btc_fob_mat,
+                btc_fob_mat
             ],
             [
                 //"TruckModules"
