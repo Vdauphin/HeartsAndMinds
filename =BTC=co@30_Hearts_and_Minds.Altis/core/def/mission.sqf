@@ -449,67 +449,65 @@ if (isServer) then {
             "Static",
             "Ammobox",
             "Containers",
-            "Supplies",
-            "FOB",
-            "Decontamination",
+            "Logistics",
+            "TruckModules",
+            "Medical",
             "Vehicle Logistic"
         ] + (_rearming_vehicles apply {getText (_cfgVehicles >> _x >> "displayName")}),
         [
             [
                 //"Fortifications"
-                "Land_BagBunker_Small_F",
-                "Land_BagFence_Corner_F",
-                "Land_BagFence_End_F",
-                "Land_BagFence_Long_F",
-                "Land_BagFence_Round_F",
-                "Land_BagFence_Short_F",
-                "Land_HBarrier_1_F",
-                "Land_HBarrier_3_F",
-                "Land_HBarrier_5_F",
-                "Land_HBarrierBig_F",
-                "Land_Razorwire_F",
-                "Land_CncBarrier_F",
-                "Land_CncBarrierMedium_F",
-                "Land_CncBarrierMedium4_F",
-                "Land_CncWall1_F",
-                "Land_CncWall4_F",
-                "Land_Mil_ConcreteWall_F",
-                "Land_Mil_WallBig_4m_F",
-                "Land_Mil_WallBig_Corner_F",
-                "Land_PortableLight_double_F",
-                "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "Land_Boxloader_Hesco_BigFlat",
+                "Land_Boxloader_Fort_Roof_Flat",
+                "Land_Boxloader_Camonet_Tan_Flat",
+                "Land_Boxloader_Fort_Wire_Flat",
+                "Land_Boxloader_Fort_Helipad_Tarp_Flat",
+                "Land_Boxloader_Hesco_Flat",
+                "Land_Boxloader_LME_Flat_Tan",
+                "Land_Boxloader_Sandbag_Pile2",
+                "Land_Boxloader_Sandbag_Pile2_tall",
+                "Land_Boxloader_Hesco_SmallFlat",
+                "land_boxloader_Temper_door_flat_tan",
+                "Land_Boxloader_Temper_End_Flat_Tan",
+                "Land_Boxloader_Temper_Lights_Flat",
+                "Land_Boxloader_Temper_Medsign_Flat",
+                "Land_Boxloader_Temper_Divider_Flat",
+                "Land_Boxloader_Temper_Vestibule_Flat_Tan",
+                "land_boxloader_Temper_window_flat_tan"
             ],
             _rearming_static + _magazines_static,
             [
                 //"Ammobox"
                 "Land_WoodenBox_F"
-
-            ] + (_allClassSorted select {
-                _x isKindOf "ReammoBox_F" &&
-                {!(_x isKindOf "Slingload_01_Base_F")} &&
-                {!(_x isKindOf "Pod_Heli_Transport_04_base_F")}
-            }),
+            ],
             [
                 //"Containers"
-
+                btc_supplies_cargo,
+                btc_fob_mat,
+                "Land_Boxloader_iso_20ft_green"
             ] + btc_containers_mat,
             [
-                //"Supplies"
-                btc_supplies_cargo
+                //"Logistics"
+                "boxloader_pallet_jack",
+                "Land_Boxloader_Pallet_5_Net"
             ],
             [
-                //"FOB"
-                btc_fob_mat
+                //"TruckModules"
+                "Boxloader_BigPallet_Repair",
+                "Boxloader_VehicleAmmo_West",
+                "Boxloader_drumpallet_fuel",
+                "Boxloader_sixcon_fuel"
             ],
             [
-                //"Decontamination"
-                "DeconShower_01_F"
+                //"Medical"
+                "DeconShower_01_F",
+                "Land_Boxloader_Fort_iso_Aid"
             ],
             [
                 //"Vehicle logistic"
                 "ACE_Wheel",
-                "ACE_Track"
+                "ACE_Track",
+                "FlexibleTank_01_sand_F"
             ]
         ] + _rearming_magazines
     ];
