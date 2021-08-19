@@ -725,7 +725,7 @@ private _uniforms = [
     "rhs_uniform_FROG01_wd",
     "rhs_uniform_g3_mc"
 ];
-private _vests = [
+private _vests1 = [
     "V_PlateCarrierL_CTRG",
     "V_PlateCarrierH_CTRG",
     "rhsusf_iotv_ocp_Grenadier",
@@ -766,7 +766,7 @@ private _vests = [
     "rhsusf_spcs_ocp_teamleader"
 ];
 
-btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks, _uniforms,_vests];
+btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks, _uniforms, _headgear, _vests1];
 
 /*
     Here you can specify which equipment is loaded on player connection.
