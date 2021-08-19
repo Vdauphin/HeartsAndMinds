@@ -63,10 +63,9 @@ for "_id" from 0 to (count _locations - 1) do {
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
-        
+
         //if you want a safe area
-        if ((getMarkerPos "SafeArea") inArea [_position, 500, 500, 0, false]) exitWith {};
-        
+        if (_position distance getMarkerPos "SAFEAREA" < 500) exitWith {};
 
         private _city = [_position, _type, _name, _cachingRadius, false, _id] call btc_city_fnc_create;
         _cities pushBack _city;
