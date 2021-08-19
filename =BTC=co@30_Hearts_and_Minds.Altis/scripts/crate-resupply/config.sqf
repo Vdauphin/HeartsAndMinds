@@ -15,7 +15,7 @@
 // What provides a source for refililng and grabbing crates
 ResupplyCrateSourceClasses = [
 	// "B_Slingload_01_Ammo_F" // Huron Ammo Container
-    "Land_CargoBox_V1_F" // USMC Vehicle Service Point
+    "Land_Cargo10_light_blue_F" // USMC Vehicle Service Point
 ];
 
 // Maps a role description name to a shorthand flag that is used by the scripts to determine what ROLE someone belongs to
