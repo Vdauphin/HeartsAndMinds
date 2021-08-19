@@ -736,3 +736,23 @@ btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, i
 
 //Door
 btc_door_breaking_time = 1;
+
+// Permissions System
+[] call compileScript ["\userconfig\Permissions\UIDLIST.hpp"];
+ROTARY_PERMS = ROTARY_PERMS + ADMIN_PERMS;
+FIXEDWING_PERMS = FIXEDWING_PERMS + ADMIN_PERMS;
+ARMOUR_PERMS = ARMOUR_PERMS + ADMIN_PERMS;
+
+Player addEventHandler ["GetInMan", {
+    params ["_unit", "_role", "_vehicle", "_turret"];
+    private _ID = getPlayerUID _unit;
+    if (_vehicle isKindOf "Helicopter" && {assignedVehicleRole _unit in [['driver'], ['turret', [0]]]}) then {
+        if !(_ID in ROTARY_PERMS) then  {["You don't have permission to operate this vehicle"] spawn BIS_fnc_guiMessage;moveOut _unit;};
+    };
+    if (_vehicle isKindOf "Plane" && {assignedVehicleRole _unit in [['driver'], ['turret', [0]]]}) then {
+        if !(_ID in FIXEDWING_PERMS) then  {["You don't have permission to operate this vehicle"] spawn BIS_fnc_guiMessage;moveOut _unit;};
+    };
+    if (_vehicle isKindOf "Tank" && {assignedVehicleRole _unit in [['driver'], ['turret', [0]]]}) then {
+        if !(_ID in ARMOUR_PERMS) then  {["You don't have permission to operate this vehicle"] spawn BIS_fnc_guiMessage;moveOut _unit;};
+    };
+}];
