@@ -15,7 +15,7 @@
 // What provides a source for refililng and grabbing crates
 ResupplyCrateSourceClasses = [
 	// "B_Slingload_01_Ammo_F" // Huron Ammo Container
-    "USMC_WarfareBVehicleServicePoint" // USMC Vehicle Service Point
+    "Land_CargoBox_V1_F" // USMC Vehicle Service Point
 ];
 
 // Maps a role description name to a shorthand flag that is used by the scripts to determine what ROLE someone belongs to
@@ -277,8 +277,8 @@ ResupplyCrateAllocations = createHashMapFromArray [
         ]
 */
 // Default timer for specialty crates on grabbing / refill
-ResupplyDefaultSpecialtyCooldown = 3600; 
-ResupplyDefaultRecallCooldown = 3600; 
+ResupplyDefaultSpecialtyCooldown = 3600;
+ResupplyDefaultRecallCooldown = 3600;
 
 
 ResupplyCrates = createHashMapFromArray [
@@ -310,54 +310,54 @@ ResupplyCrates = createHashMapFromArray [
             ]
         ]
     ],
-    ["M72A7 Launchers", 
+    ["M72A7 Launchers",
         createHashMapFromArray [
             ["Model", "Box_NATO_WpsLaunch_F"],
             ["SquadLocks", []],
             ["WhitelistedRoles", []],
             ["BlacklistedRoles", ["MED", "FAC", "JFO", "IDF", "TL", "PJ"]],
              ["Offset", [0, 1.5, 1]],
-            ["Items", 
+            ["Items",
                 createHashMapFromArray [
                     ["rhs_weap_m72a7", 10]
-                ]   
-            ]   
+                ]
+            ]
         ]
     ],
-    ["5.56 NATO Ammunition", 
+    ["5.56 NATO Ammunition",
         createHashMapFromArray [
             ["Model", "Box_NATO_Ammo_F"],
             ["SquadLocks", []],
             ["WhitelistedRoles", []],
             ["BlacklistedRoles", ["MED", "FAC", "JFO", "IDF", "TL", "PJ"]],
-            ["Items", 
+            ["Items",
                 createHashMapFromArray [
                     ["rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan", 80],
                     ["rhsusf_200rnd_556x45_mixed_box", 15]
-                ]   
+                ]
             ]
         ]
     ],
-    ["7.62 NATO Ammunition", 
+    ["7.62 NATO Ammunition",
         createHashMapFromArray [
             ["Model", "Box_NATO_Ammo_F"],
             ["SquadLocks", []],
             ["WhitelistedRoles", []],
             ["BlacklistedRoles", ["MED", "FAC", "JFO", "IDF", "TL", "PJ"]],
-            ["Items", 
+            ["Items",
                 createHashMapFromArray [
                     ["rhsusf_100Rnd_762x51_m62_tracer", 25]
-                ]   
+                ]
             ]
         ]
     ],
-    ["Medical Supplies", 
+    ["Medical Supplies",
         createHashMapFromArray [
             ["Model", "ACE_medicalSupplyCrate_advanced"],
             ["SquadLocks", ["PLHQ", "CHQ", "LOGI", "PJ", "GI"]],
             ["WhitelistedRoles", ["MED", "LOGI", "ENG", "XO", "CO", "PJ", "TL"]],
             ["BlacklistedRoles", []],
-            ["Items", 
+            ["Items",
                 createHashMapFromArray [
                     ["ACE_bloodIV", 10],
                     ["ACE_bloodIV_250", 10],
@@ -372,7 +372,7 @@ ResupplyCrates = createHashMapFromArray [
                     ["ACE_surgicalKit", 2],
                     ["ACE_tourniquet", 5],
                     ["ACE_splint", 5]
-                ]   
+                ]
             ]
         ]
     ],
@@ -519,7 +519,7 @@ ResupplyModelsUsed = createHashMap;
     if(!_exists) then {
         ResupplyModelsUsed set [_model, true];
     };
-    
+
 
     private _category = _crateInfo get "Category";
 
@@ -542,20 +542,20 @@ if (isServer) then {
 
     "Server Init Config" call resupplyLog;
     {
-        
+
         private _flagInfo = _x;
 
-    
+
         private _squadNames = _flagInfo get "SquadNames";
         private _squadFlag = _flagInfo get "FlagName";
         format ["Squad Flag %1: %2", _squadFlag, _squadNames] call resupplyLog;
 
         private _specialtyResourceToStart = ResupplyCrateAllocations getOrDefault [_squadFlag, createHashMapFromArray [["SpecialtyAllocations", 0]]] get "SpecialtyAllocations";
 
-        
+
 
         {
-            
+
             private _squadName = _x;
             format ["SpecialtyResourceToStart set to %1 for %2", _specialtyResourceToStart, _squadName] call resupplyLog;
             // TODO: Verify this isn't going to break anything or have conflicts.
