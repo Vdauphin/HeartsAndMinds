@@ -1,3 +1,5 @@
+[player] remoteExec ["requestResupplyFlags", 2];
+
 
 // Vehicle Perms UID List
 ROTARY_PERMS = [
@@ -349,3 +351,5 @@ _RoleArray = assignedVehicleRole player;
 hint format ["%1",_RoleArray]
 In debug to find the slot for assignedVehicleRole
 */
+
+
