@@ -337,14 +337,13 @@ Player addEventHandler ["GetInMan", {
 }];
 
 
+
 /*
 To create a custom permission, choose or create a UID list from the permissions UID variables above,
 then use the bellow code to add a new section to the "GetInMan" Event handler:
     if (_vehicle isKindOf "VEHICLECLASSNAMEHERE" && {assignedVehicleRole _unit in [ROLESFROMABOVEDEBUGHERE]}) then {
         if !(_ID in PERMISSIONLISTHERE) then  {["KICKMESSAGEHERE"] spawn BIS_fnc_guiMessage;moveOut _unit;};
     };
-UID list can be created in this file or externally using precompile code:
-
 Use :
 _RoleArray = assignedVehicleRole player;
 hint format ["%1",_RoleArray]
