@@ -327,6 +327,9 @@ ARMOUR_PERMS = ARMOUR_PERMS + ADMIN_PERMS;
 Player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle", "_turret"];
     private _ID = getPlayerUID _unit;
+    if (_vehicle isKindOf "B_Parachute" && {assignedVehicleRole _unit in [['driver'], ['turret', [0]]]}) then {
+        if !(_ID in ROTARY_PERMS) then  moveInDriver _unit;};
+    };
     if (_vehicle isKindOf "Helicopter" && {assignedVehicleRole _unit in [['driver'], ['turret', [0]]]}) then {
         if !(_ID in ROTARY_PERMS) then  {["You don't have permission to operate this vehicle"] spawn BIS_fnc_guiMessage;moveOut _unit;};
     };
@@ -351,5 +354,3 @@ _RoleArray = assignedVehicleRole player;
 hint format ["%1",_RoleArray]
 In debug to find the slot for assignedVehicleRole
 */
-
-
