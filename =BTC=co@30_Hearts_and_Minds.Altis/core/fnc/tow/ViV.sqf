@@ -3,7 +3,7 @@
 Function: btc_fnc_tow_ViV
 
 Description:
-    Move selected vehicle in the tower cargo with an hiden vehicle.
+    Move selected vehicle in the tower cargo with a hidden vehicle.
 
 Parameters:
     _vehicleSelected - Vehicle to store in the tower cargo. [Object]
