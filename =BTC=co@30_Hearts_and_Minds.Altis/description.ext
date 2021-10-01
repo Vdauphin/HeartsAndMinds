@@ -1,8 +1,8 @@
 
 loadScreen = "core\img\sof.jpg";
-author = "JOHN-117 - Tony4298 - VDauphin";
-onLoadName = Spirit Of Fire - Projet OTAN;
-onLoadMission = Spirit Of Fire - Projet OTAN;
+author = "Vdauphin / Canprod / Tony4298";
+onLoadName = $STR_BTC_HAM_DESCR_NAME;
+onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"
