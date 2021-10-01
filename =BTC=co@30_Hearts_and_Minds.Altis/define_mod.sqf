@@ -1,9 +1,19 @@
 btc_custom_loc = [
-/*
-    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
-    Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine", "StrongpointArea", "BorderCrossing", "VegetationFir"
-    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
-*/
+[[18628,1803,0],"StrongpointArea","Est Oil Fields",1000,true],
+[[17859,2306,0],"StrongpointArea","Refinery",600,true],
+[[13606,1784,0],"BorderCrossing","Southern Pipes",700,true],
+[[12699,2660,0],"VegetationFir","Lowlands",1500,true],
+[[16723,2521,0],"VegetationFir","Estern Lowlands",1500,true],
+[[6931,13159,0],"Hill","Reapers Hill",1500,true],
+[[8658,15714,0],"StrongpointArea","Yasines Plateau",1000,true],
+[[14628,15517,0],"Hill","Devils Valley",1000,true],
+[[6561,11105,0],"NameVillage","Al Akmir",200,true],
+[[13993,10869,0],"NameVillage","Makar Akbir",200,true],
+[[1379,7754,0],"NameVillage","Golden Shores",200,true],
+[[11325,15414,0],"NameVillage","Constanir",200,true],
+[[10371,13070,0],"NameLocal","Al Boltar",200,true],
+[[11534,9719,0],"NameVillage","Missiar",200,true],
+[[18473,3691,0],"Airport","Al Safyrah Airport",500,true]
 ];
 
 /*
