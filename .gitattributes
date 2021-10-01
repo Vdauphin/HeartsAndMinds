@@ -1,6 +1,2 @@
+# Auto detect text files and perform LF normalization
 * text=auto
-
-*.png binary
-*.jpg binary
-*.paa binary
-*.7z binary
