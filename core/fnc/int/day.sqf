@@ -1,1 +1,0 @@
-skipTime ((6 - daytime + 24) % 24)

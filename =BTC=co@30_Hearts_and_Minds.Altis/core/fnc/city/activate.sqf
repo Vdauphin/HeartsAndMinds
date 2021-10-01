@@ -108,17 +108,17 @@ if !(_data_units isEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do {
-        case "Hill" : {3};
-        case "VegetationFir" : {2};
-        case "BorderCrossing" : {3};
-        case "NameLocal" : {4};
-        case "StrongpointArea" : {4};
-        case "NameVillage" : {5};
-        case "NameCity" : {6};
-        case "NameCityCapital" : {12};
-        case "Airport" : {10};
-        case "NameMarine" : {0};
-        default {0};
+        case "Hill" : {4};
+        case "VegetationFir" : {5};
+        case "BorderCrossing" : {4};
+        case "NameLocal" : {7};
+        case "StrongpointArea" : {6};
+        case "NameVillage" : {4};
+        case "NameCity" : {7};
+        case "NameCityCapital" : {9};
+        case "Airport" : {9};
+        case "NameMarine" : {4};
+        default {2};
     });
 
     if (_has_en) then {
@@ -136,14 +136,14 @@ if !(_data_units isEqualTo []) then {
 
         if (_has_en) then {
             private _max_number_group = (switch _type do {
-                case "VegetationFir" : {3};
+                case "VegetationFir" : {5};
                 case "BorderCrossing" : {3};
                 case "NameLocal" : {4};
                 case "StrongpointArea" : {6};
                 case "NameVillage" : {7};
-                case "NameCity" : {10};
-                case "NameCityCapital" : {10};
-                case "Airport" : {2};
+                case "NameCity" : {15};
+                case "NameCityCapital" : {15};
+                case "Airport" : {20};
                 default {0};
             });
             [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof;
@@ -152,11 +152,11 @@ if !(_data_units isEqualTo []) then {
         // Spawn civilians
         private _max_number_group = (switch _type do {
             case "VegetationFir" : {3};
-            case "BorderCrossing" : {0};
-            case "NameLocal" : {20};
-            case "StrongpointArea" : {0};
-            case "NameVillage" : {10};
-            case "NameCity" : {10};
+            case "BorderCrossing" : {3};
+            case "NameLocal" : {8};
+            case "StrongpointArea" : {10};
+            case "NameVillage" : {15};
+            case "NameCity" : {20};
             case "NameCityCapital" : {20};
             case "Airport" : {6};
             default {10};
@@ -191,7 +191,7 @@ if (btc_p_animals_group_ratio > 0) then {
             case "NameCityCapital" : {0};
             case "Airport" : {0};
             case "NameMarine" : {0};
-            default {0};
+            default {3};
         });
         for "_i" from 1 to (round (random _max_number_animalsGroup)) do {
             private _pos = [_city, _spawningRadius/3] call CBA_fnc_randPos;
