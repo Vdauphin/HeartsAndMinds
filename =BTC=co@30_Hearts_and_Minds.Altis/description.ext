@@ -1,6 +1,6 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+loadScreen = "core\img\sof.jpg";
+author = "Vdauphin / Canprod / Tony4298 / Raz0r";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
@@ -19,6 +19,66 @@ class RscTitles {
     };
     #include "core\fnc\lift\rsc.hpp"
     #include "core\fnc\debug\dlg.hpp"
+};
+
+class CfgUnitInsignia
+{
+	class Medic1
+	{
+		displayName = "Patch Medic 1"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic1.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic2
+	{
+		displayName = "Patch Medic 2"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic2.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic3
+	{
+		displayName = "Patch Medic 3"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic3.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic4
+	{
+		displayName = "Patch Medic 4"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic4.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic5
+	{
+		displayName = "Patch Medic 5"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic5.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic6
+	{
+		displayName = "Patch Medic 6"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic6.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic7
+	{
+		displayName = "Patch Medic 7"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic7.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+	class Medic8
+	{
+		displayName = "Patch Medic 8"; // Name displayed in Arsenal
+		author = "Raz0r"; // Author displayed in Arsenal
+		texture = "core\img\medic8.paa"; // Image path. Not sure this is right, try "\insig\us1.paa" otherweise
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
 };
 
 #include "core\def\param.hpp"
