@@ -121,7 +121,7 @@ if (isServer) then {
 
     //City
     btc_city_radius = _p_city_radius;
-    btc_city_blacklist = [];//NAME FROM CFG
+    btc_city_blacklist = ["Sagonisi"];//NAME FROM CFG
 
     //Civ
     btc_civ_veh_active = [];
@@ -166,7 +166,7 @@ if (isServer) then {
 
     //Rep
     btc_global_reputation = _p_rep;
-    btc_rep_militia_call_time = 600;
+    btc_rep_militia_call_time = 500;
     btc_rep_militia_called = - btc_rep_militia_call_time;
     btc_rep_delayed = [0, []];
 
@@ -284,7 +284,6 @@ if (isServer) then {
     //BTC Vehicles in missions.sqm
     btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40, btc_veh_41, btc_veh_42, btc_veh_43, btc_veh_44, btc_veh_45, btc_veh_46, btc_veh_47, btc_veh_48, btc_veh_49, btc_veh_50, btc_veh_51];
     btc_helo = [btc_helo_1,btc_helo_2,btc_helo_3,btc_helo_4,btc_helo_5,btc_helo_6];
-
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -454,6 +453,7 @@ if (isServer) then {
         [
             [
                 //"Fortifications"
+                "UK3CB_UN_B_Kornet",
                 "Land_BagBunker_Small_F",
                 "Land_BagFence_Corner_F",
                 "Land_BagFence_End_F",
@@ -475,7 +475,10 @@ if (isServer) then {
                 "Land_Mil_WallBig_Corner_F",
                 "Land_PortableLight_double_F",
                 "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "B_Slingload_01_Fuel_F",
+                "Land_HBarrierTower_F",
+                "Land_HBarrierWall_corner_F",
+                "Land_HBarrierWall6_F"
             ],
             _rearming_static + _magazines_static,
             [
@@ -506,7 +509,8 @@ if (isServer) then {
             [
                 //"Vehicle logistic"
                 "ACE_Wheel",
-                "ACE_Track"
+                "ACE_Track",
+                "Land_CanisterFuel_F"
             ]
         ] + _rearming_magazines
     ];
@@ -659,15 +663,15 @@ switch (_p_en) do {
         btc_type_mg = btc_type_mg;
         btc_type_gl = btc_type_gl;
     };*/
-    case "OPF_G_F" : {
-        btc_type_motorized = btc_type_motorized + ["I_Truck_02_transport_F", "I_Truck_02_covered_F"];
-        btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
-    };
     case "IND_C_F" : {
         btc_type_motorized = btc_type_motorized + ["I_G_Offroad_01_repair_F", "I_G_Offroad_01_F", "I_G_Quadbike_01_F", "I_G_Van_01_fuel_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F", "I_G_Offroad_01_F"];
         btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
     };
+    case "UK3CB_TKM_O" : {
+        btc_type_motorized = btc_type_motorized - ["UK3CB_TKA_O_L39_PYLON","UK3CB_TKA_O_Antonov_AN2","UK3CB_TKA_O_C130J","UK3CB_TKA_O_C130J_CARGO","UK3CB_TKA_O_MIG29S","UK3CB_TKA_O_Su25SM_CAS","UK3CB_TKA_O_Su25SM_Cluster","UK3CB_TKA_O_Su25SM_KH29"];
+        btc_type_motorized_armed = btc_type_motorized_armed - ["UK3CB_TKA_O_Antonov_AN2_Armed_Rockets","UK3CB_TKA_O_Cessna_T41_Armed","UK3CB_MDF_O_Mystere_AA1","UK3CB_MDF_O_Mystere_CAS1","UK3CB_TKA_O_T72B"];
+    }
 };
 
 //Chem
