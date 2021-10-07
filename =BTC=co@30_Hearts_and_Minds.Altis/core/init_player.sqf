@@ -50,7 +50,12 @@ btc_intro_done = [] spawn btc_fnc_intro;
 }] call CBA_fnc_waitUntilAndExecute;
 
 if (true) then {
+    private _time = serverTime;
     { // Prespawn all units and vehicles to limit client shuttering on city activation
         deleteVehicle (createSimpleObject [_x, [0, 0, 0], true]);
     } forEach (btc_type_motorized_armed + btc_type_ieds_ace + btc_civ_type_units + btc_civ_type_veh + btc_civ_type_boats + btc_animals_type + btc_type_units + btc_type_divers + [btc_type_crewmen] + btc_type_boats + btc_type_motorized);
+
+    if (btc_debug || btc_debug_log) then {
+        [format ["Delay of prespawn %1s", serverTime - _time], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
+    };
 };
