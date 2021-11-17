@@ -69,7 +69,7 @@ _group setVariable ["no_cache", true];
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
 _crew createUnit [_pos, _group];
 
-[_taskID, 13, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 13, _city, _city getVariable "name"] call btc_task_fnc_create;
 private _find_taskID = _taskID + "mv";
 [[_find_taskID, _taskID], 20, objNull, _crew] call btc_task_fnc_create;
 private _back_taskID = _taskID + "bk";

@@ -32,9 +32,8 @@ private _useful = btc_city_all select {
 if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 
 private _city = selectRandom _useful;
-private _pos = getPos _city;
 
-[_taskID, 6, _pos, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 6, _city, _city getVariable "name"] call btc_task_fnc_create;
 
 _city setVariable ["spawn_more", true];
 

@@ -180,7 +180,7 @@ if (isServer) then {
     btc_rep_delayed = [0, []];
 
     //Chem
-    btc_chem_decontaminate = [btc_bigShower];
+    btc_chem_decontaminate = [];
     btc_chem_contaminated = []; publicVariable "btc_chem_contaminated"; //Preserve reference
 
     //Spect

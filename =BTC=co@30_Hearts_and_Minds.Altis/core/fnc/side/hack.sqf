@@ -40,7 +40,7 @@ private _house = selectRandom ([_pos, 100] call btc_fnc_getHouses);
 if (isNil "_house") exitWith {[] spawn btc_side_fnc_create;};
 _pos = selectRandom (_house buildingPos -1);
 
-[_taskID, 16, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 16, _city, _city getVariable "name"] call btc_task_fnc_create;
 
 _city setVariable ["spawn_more",true];
 

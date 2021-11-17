@@ -35,7 +35,7 @@ private _city = selectRandom _useful;
 private _pos = [getPos _city, 100] call btc_fnc_randomize_pos;
 _pos = [_pos, 0, _city getVariable ["cachingRadius", 100], 20, false] call btc_fnc_findsafepos;
 
-[_taskID, 3, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 3, _city, _city getVariable "name"] call btc_task_fnc_create;
 private _move_taskID = _taskID + "mv";
 [[_move_taskID, _taskID], 18, _pos, btc_supplies_cargo] call btc_task_fnc_create;
 

@@ -1882,8 +1882,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
-				name="btc_bigShower";
+				init="";
 			};
 			id=200;
 			type="DeconShower_02_F";

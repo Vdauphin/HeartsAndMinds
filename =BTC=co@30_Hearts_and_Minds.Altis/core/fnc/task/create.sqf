@@ -35,5 +35,11 @@ params [
     ["_showNotification", true, [true]]
 ];
 
+if (
+    _destination isNotEqualTo objNull &&
+    {_destination in btc_city_all}
+) then {
+    _destination = _destination getVariable ["city_realPos", getPos _destination];
+};
 [btc_player_side, _task_ids, nil, _destination, ["CREATED", "ASSIGNED" ] select _isCurrent] call BIS_fnc_taskCreate;
 [_task_ids, btc_player_side, _description, _destination, 2, _showNotification, _location] remoteExecCall ["btc_task_fnc_setDescription", [0, -2] select isDedicated, true];

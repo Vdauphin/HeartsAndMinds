@@ -228,11 +228,11 @@ if (
 
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
-    private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), "SENTRY"] call btc_mil_fnc_create_group;
-    [_pos, 120, 1 + round random 2, "SENTRY"] call btc_mil_fnc_create_group;
-    [_pos, 120, 1 + round random 2, "SENTRY"] call btc_mil_fnc_create_group;
+    [_city, 20, 10 + round (_p_mil_group_ratio * random 6), "SENTRY"] call btc_mil_fnc_create_group;
+    [_city, 120, 1 + round random 2, "SENTRY"] call btc_mil_fnc_create_group;
+    [_city, 120, 1 + round random 2, "SENTRY"] call btc_mil_fnc_create_group;
     private _random = random 1;
+    private _pos = getPos _city;
     switch (true) do {
         case (_random <= 0.3) : {};
         case (_random > 0.3 && _random <= 0.75) : {
