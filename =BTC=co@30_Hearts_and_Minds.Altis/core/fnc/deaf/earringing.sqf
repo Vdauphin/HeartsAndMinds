@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_deaf_earringing
+Function: btc_deaf_fnc_earringing
 
 Description:
     Create earringing to all player in a radius of 100m.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [getPos (allPlayers select 0)] call btc_fnc_deaf_earringing;
+        [getPos (allPlayers select 0)] call btc_deaf_fnc_earringing;
     (end)
 
 Author:

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_hideout
+Function: btc_info_fnc_hideout
 
 Description:
     Add an random intel marker for the current hideout.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_info_hideout;
+        [] call btc_info_fnc_hideout;
     (end)
 
 Author:

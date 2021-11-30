@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_refuelSource
+Function: btc_log_fnc_refuelSource
 
 Description:
     Refuel a fuel source.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_log_refuelSource;
+        [] call btc_log_fnc_refuelSource;
     (end)
 
 Author:
@@ -24,7 +24,7 @@ params [
     ["_object", objNull, [objNull]]
 ];
 
-private _array = (nearestObjects [_object, ["LandVehicle", "Air", "Ship"] + btc_log_main_rc select {_x isEqualType ""}, 10]) select {!(
+private _array = (nearestObjects [_object, ["LandVehicle", "Air", "Ship", "Thing", "NonStrategic"], 10]) select {!(
     _x isKindOf "ACE_friesBase" OR
     _x isKindOf "ace_fastroping_helper"
 )};
@@ -36,7 +36,7 @@ private _failNotify = [
 if (_array isEqualTo []) exitWith {_failNotify call CBA_fnc_notify;};
 
 private _fuelSource = _array select 0;
-private _default_fuelCargo = getNumber (configFile >> "CfgVehicles" >> typeOf _fuelSource >> "ace_refuel_fuelCargo");
+private _default_fuelCargo = getNumber (configOf _fuelSource >> "ace_refuel_fuelCargo");
 
 if (_default_fuelCargo <= 0) exitWith {_failNotify call CBA_fnc_notify;};
 

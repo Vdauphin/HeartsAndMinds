@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_tow_unhook
+Function: btc_tow_fnc_unhook
 
 Description:
     Unhook the current tower/towed vehicle.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_tow_unhook;
+        [cursorObject] call btc_tow_fnc_unhook;
     (end)
 
 Author:

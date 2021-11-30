@@ -8,7 +8,7 @@ class btc_log_dlg_create {
         class btc_log_dlg_Apply : btc_dlg_button {
             idc = -1;
             text = $STR_ui_debug_but_apply; //Apply
-            action = "[] call btc_fnc_log_create_apply";
+            action = "[] call btc_log_fnc_create_apply";
             x = 0 * safezoneW + safezoneX;
             y = 0.25 * safezoneH + safezoneY;
             default = true;
@@ -23,7 +23,7 @@ class btc_log_dlg_create {
         };
         class btc_log_dlg_main_class : btc_dlg_comboBox {
             idc = 71;
-            onLBSelChanged = "[] call btc_fnc_log_create_change_target";
+            onLBSelChanged = "[] call btc_log_fnc_create_change_target";
             x = 0 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 0.4 * safezoneW;

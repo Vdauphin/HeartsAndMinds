@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_delete
+Function: btc_db_fnc_delete
 
 Description:
     Delete database.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_db_delete;
+        [] call btc_db_fnc_delete;
     (end)
 
 Author:
@@ -37,6 +37,8 @@ profileNamespace setVariable [format ["btc_hm_%1_fobs", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_vehs", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_objs", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_tags", _name], nil];
+profileNamespace setVariable [format ["btc_hm_%1_respawnTickets", _name], nil];
+profileNamespace setVariable [format ["btc_hm_%1_deadBodyPlayers", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_markers", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_db", _name], nil];
 

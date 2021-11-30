@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_city_cleanUp
+Function: btc_city_fnc_cleanUp
 
 Description:
     Delete all ground weapon holder (in range of 500 m), dead bodies (in range of 500 m) and empty group.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_city_cleanUp;
+        [] call btc_city_fnc_cleanUp;
     (end)
 
 Author:
@@ -39,7 +39,7 @@ _toRemove append (allDead select {
 
 _toRemove call CBA_fnc_deleteEntity;
 
-if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
+if (btc_delay_time < 0.001) then { // Don't remove group during units creation.
     (allGroups select {
         units _x isEqualTo [] &&
         !(

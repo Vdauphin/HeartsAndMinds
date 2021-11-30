@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_rep_notify
+Function: btc_rep_fnc_notify
 
 Description:
     Show reputation change with a picture and color nuance.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [-10] call btc_fnc_rep_notify;
+        [-10] call btc_rep_fnc_notify;
     (end)
 
 Author:

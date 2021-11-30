@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_int_orders_behaviour
+Function: btc_int_fnc_orders_behaviour
 
 Description:
     Fill me when you edit me !
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_int_orders_behaviour;
+        _result = [] call btc_int_fnc_orders_behaviour;
     (end)
 
 Author:
@@ -78,8 +78,7 @@ if (_order isEqualTo 4) then {
 _unit setVariable ["order", nil];
 _unit setUnitPos "AUTO";
 _unit enableAI "PATH";
-_unit doMove getPos _unit;
 
 if (_unit isEqualTo vehicle _unit) then {
-    [_group] call btc_fnc_civ_addWP;
+    [_group] call btc_civ_fnc_addWP;
 };

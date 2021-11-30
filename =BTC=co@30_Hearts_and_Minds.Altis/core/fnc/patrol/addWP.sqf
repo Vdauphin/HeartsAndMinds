@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_addWP
+Function: btc_patrol_fnc_addWP
 
 Description:
     Add waypoint to the end city.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [group cursorTarget, getPos player, "[group this, 1000, [0, 0, 0], [0, 1, 2], false] call btc_fnc_patrol_WPCheck;"] call btc_fnc_patrol_addWP;
+        [group cursorTarget, getPos player, "[group this, 1000, [0, 0, 0], [0, 1, 2], false] call btc_patrol_fnc_WPCheck;"] call btc_patrol_fnc_addWP;
     (end)
 
 Author:
@@ -29,7 +29,7 @@ params [
 ];
 
 if (isNull _group) exitWith {
-    [format ["_group isNull %1, waypointStatements = %2 ", isNull _group, _waypointStatements], __FILE__] call btc_fnc_debug_message;
+    [format ["_group isNull %1, waypointStatements = %2 ", isNull _group, _waypointStatements], __FILE__] call btc_debug_fnc_message;
 };
 
 private _vehicle = vehicle leader _group;
@@ -48,13 +48,21 @@ if (side _group isEqualTo civilian) then {
 if (_vehicle isKindOf "Air") then {
     [_group, _pos, -1, "MOVE", _behaviorMode, _combatMode, "LIMITED", "STAG COLUMN", _waypointStatements, [0, 0, 0], 20] call CBA_fnc_addWaypoint;
 } else {
-    [_group, _pos, -1, "MOVE", _behaviorMode, _combatMode, "LIMITED", "STAG COLUMN", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
+    [_group, _pos, -1, "MOVE", _behaviorMode, _combatMode, "LIMITED", "STAG COLUMN", "", [0, 0, 0], 50] call CBA_fnc_addWaypoint;
 
-    for "_i" from 0 to (2 + (floor (random 3))) do {
-        private _newPos = [_pos, 150] call CBA_fnc_randPos;
+    private _roadBlackList = [];
+    for "_i" from 0 to (2 + (floor random 3)) do {
+        private _nearestRoad = [_pos getPos [100, random 360], 100, _roadBlackList] call BIS_fnc_nearestRoad;
+        private _newPos = [];
+        if (isNull _nearestRoad) then {
+            _newPos = [_pos, 150] call CBA_fnc_randPos;
+        } else {
+            _roadBlackList pushBackUnique _nearestRoad;
+            _newPos = _nearestRoad;
+        };
         [_group, _newPos, -1, "MOVE", "UNCHANGED", "RED", "UNCHANGED", "NO CHANGE", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
     };
-    [_group, _pos, -1, "MOVE", "UNCHANGED", "NO CHANGE", "UNCHANGED", "NO CHANGE", _waypointStatements, [0, 0, 0], 20] call CBA_fnc_addWaypoint;
+    [_group, _pos, -1, "MOVE", "UNCHANGED", "NO CHANGE", "UNCHANGED", "NO CHANGE", _waypointStatements, [0, 0, 0], 50] call CBA_fnc_addWaypoint;
 };
 
 if (btc_debug) then {

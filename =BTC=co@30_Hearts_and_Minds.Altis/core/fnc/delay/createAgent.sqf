@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_delay_createAgent
+Function: btc_delay_fnc_createAgent
 
 Description:
     Create agent when all previous agents have been created. btc_delay_createagent define the time (in second) when the agent will be created.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["Sheep_random_F", getPosATL player] call btc_fnc_delay_createAgent;
+        ["Sheep_random_F", getPosATL player] call btc_delay_fnc_createAgent;
     (end)
 
 Author:
@@ -23,9 +23,11 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-btc_delay_createUnit = btc_delay_createUnit + 0.1;
+btc_delay_time = btc_delay_time + 0.1;
 
 [{
+    btc_delay_time = btc_delay_time - 0.1;
+
     params [
         ["_agentType", "", [""]],
         ["_pos", [0, 0, 0], [[]]],
@@ -33,9 +35,5 @@ btc_delay_createUnit = btc_delay_createUnit + 0.1;
         ["_city", objNull, [objNull]]
     ];
 
-    private _agent = createAgent [_agentType, _pos, [], 0, _special];
-    _agent setVariable ["btc_city", _city];
-    _agent setDir random 360; // https://feedback.bistudio.com/T155634
-
-    btc_delay_createUnit = btc_delay_createUnit - 0.1;
-}, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;
+    (createAgent [_agentType, _pos, [], 0, _special]) setVariable ["btc_city", _city];
+}, _this, btc_delay_time - 0.01] call CBA_fnc_waitAndExecute;

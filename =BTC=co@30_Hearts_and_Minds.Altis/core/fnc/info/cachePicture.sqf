@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_cachePicture
+Function: btc_info_fnc_cachePicture
 
 Description:
     Add picture to the diary.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [typeOf player, 0] call btc_fnc_info_cachePicture;
+        [typeOf player, 0] call btc_info_fnc_cachePicture;
     (end)
 
 Author:
@@ -29,7 +29,7 @@ params [
 ];
 
 if !(player diarySubjectExists "btc_diarylog") then {
-    player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG"];
+    player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
 };
 
 private _string = if (_is_building_with_the_cache) then {

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_task_setDescription
+Function: btc_task_fnc_setDescription
 
 Description:
     Set description to created task accordingly to player language.
@@ -18,7 +18,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["btc_1", btc_player_side, -1] remoteExecCall ["btc_fnc_task_setDescription", [0, -2] select isDedicated, true];
+        ["btc_1", btc_player_side, -1] remoteExecCall ["btc_task_fnc_setDescription", [0, -2] select isDedicated, true];
     (end)
 
 Author:
@@ -376,6 +376,22 @@ switch (_description) do {
             localize "STR_BTC_HAM_SIDE_RUBBISH_SPOT_TITLE"
         ];
         _type = "move";
+    };
+    case 40 : {
+        _description = [
+            format [localize "STR_BTC_HAM_SIDE_PANDEMIC_DESC", _location] + (["DeconShower_01_F"] call btc_fnc_typeOfPreview),
+            format [localize "STR_BTC_HAM_SIDE_PANDEMIC_TITLE", _location],
+            format [localize "STR_BTC_HAM_SIDE_PANDEMIC_TITLE", _location]
+        ];
+        _type = "danger";
+    };
+    case 41 : {
+        _description = [
+            (localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC") + ([_location] call btc_fnc_typeOfPreview),
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE",
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE"
+        ];
+        _type = "search";
     };
 };
 

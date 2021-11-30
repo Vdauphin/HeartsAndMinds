@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_create_load
+Function: btc_log_fnc_create_load
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_create_load;
+        _result = [] call btc_log_fnc_create_load;
     (end)
 
 Author:

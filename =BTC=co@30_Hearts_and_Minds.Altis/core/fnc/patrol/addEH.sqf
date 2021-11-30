@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_patrol_addEH
+Function: btc_patrol_fnc_addEH
 
 Description:
     Add events link to the patrol system.
@@ -28,7 +28,7 @@ if (
 ) exitWith {};
 
 _veh setVariable ["btc_crews", _group];
-[_veh, "Fuel", btc_fnc_patrol_eh] call CBA_fnc_addBISEventHandler;
+[_veh, "Fuel", btc_patrol_fnc_eh] call CBA_fnc_addBISEventHandler;
 if (side _group isEqualTo civilian) then {
-    [_veh, "GetOut", btc_fnc_patrol_eh] call CBA_fnc_addBISEventHandler;
+    [_veh, "GetOut", btc_patrol_fnc_eh] call CBA_fnc_addBISEventHandler;
 };

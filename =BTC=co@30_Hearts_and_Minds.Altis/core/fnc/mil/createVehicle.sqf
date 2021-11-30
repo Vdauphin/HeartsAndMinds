@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_createVehicle
+Function: btc_mil_fnc_createVehicle
 
 Description:
     Create a vehicle with desired crews.
@@ -20,10 +20,10 @@ Returns:
 
 Examples:
     (begin example)
-        [createGroup [btc_enemy_side, true], player getPos [10, direction player]] call btc_fnc_mil_createVehicle;
+        [createGroup [btc_enemy_side, true], player getPos [10, direction player]] call btc_mil_fnc_createVehicle;
     (end)
     (begin example)
-        [createGroup [btc_enemy_side, true], player getPos [10, direction player], "O_G_Van_02_vehicle_F"] call btc_fnc_mil_createVehicle;
+        [createGroup [btc_enemy_side, true], player getPos [10, direction player], "O_G_Van_02_vehicle_F"] call btc_mil_fnc_createVehicle;
     (end)
 
 Author:
@@ -31,7 +31,7 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-if (canSuspend) exitWith {[btc_fnc_mil_createVehicle, _this] call CBA_fnc_directCall};
+if (canSuspend) exitWith {[btc_mil_fnc_createVehicle, _this] call CBA_fnc_directCall};
 
 params [
     ["_group", grpNull, [grpNull]],
@@ -57,4 +57,4 @@ for "_i" from _crewSeats to (_totalSeats - 1) do {
     _units_type pushBack selectRandom _type_units;
 };
 
-[_group, _veh_type, _units_type, _pos, _dir, 1, _surfaceNormal] call btc_fnc_delay_createVehicle
+[_group, _veh_type, _units_type, _pos, _dir, 1, _surfaceNormal] call btc_delay_fnc_createVehicle

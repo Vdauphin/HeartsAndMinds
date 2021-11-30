@@ -1,8 +1,15 @@
 
+<<<<<<< Updated upstream
 loadScreen = "core\img\btc.paa";
 author = "Giallustio";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
+=======
+loadScreen = "core\img\sof.jpg";
+author = "JOHN-117 / Raz0rLegend / VDauphin";
+onLoadName = Spirit Of Fire - Projet OTAN;
+onLoadMission = Bienvenu sur le serveur Projet OTAN de la Communaute Spirit Of Fire. Amusez vous bien !;
+>>>>>>> Stashed changes
 enabledebugconsole = 1;
 
 #include "core\fnc\common\dlg.hpp"

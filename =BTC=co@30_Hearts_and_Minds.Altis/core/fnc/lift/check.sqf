@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_lift_check
+Function: btc_lift_fnc_check
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_lift_check;
+        _result = [] call btc_lift_fnc_check;
     (end)
 
 Author:
@@ -26,7 +26,7 @@ params [
 
 if (!(_chopper isKindOf "Helicopter" || (_chopper isKindOf "Ship")) || !isNull ((_chopper) getVariable ["cargo", objNull])) exitWith {false};
 
-private _array = [_chopper] call btc_fnc_lift_getLiftable;
+private _array = [_chopper] call btc_lift_fnc_getLiftable;
 if (_array isEqualTo []) exitWith {false};
 
 private _cargo_array = nearestObjects [_chopper, _array, 30];

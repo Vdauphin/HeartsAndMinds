@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_cache_create_attachto
+Function: btc_cache_fnc_create_attachto
 
 Description:
     Attach holder to an object at the desired position.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_cache_obj, "groundWeaponHolder" createVehicle btc_cache_obj, "TOP"] call btc_fnc_cache_create_attachto;
+        [btc_cache_obj, "groundWeaponHolder" createVehicle btc_cache_obj, "TOP"] call btc_cache_fnc_create_attachto;
     (end)
 
 Author:
@@ -31,12 +31,9 @@ params [
 ];
 
 private _bbr = (boundingBoxReal _object) params ["_p1", "_p2"];
-private _height_box = abs ((_p2 select 2) - (_p1 select 2));
+private _height_box = abs ((_p2 select 2) - (_p1 select 2)) + ((boundingCenter _object) select 2);
 private _maxWidth_box = abs ((_p2 select 0) - (_p1 select 0));
-private _corner_box = abs ((_p2 select 2) - (_p1 select 2)); 
-
-private _bbr = (boundingBoxReal _object) params ["_p1", "_p2"];
-private _height_weapon = abs ((_p2 select 2) - (_p1 select 2));
+private _height_weapon = (boundingBoxReal _holder select 1 select 2) - (boundingCenter _holder select 2);
 
 private _y = 0;
 private _p = 0;
@@ -44,27 +41,27 @@ private _r = 0;
 
 switch (_pos_type) do {
     case "FRONT": {
-        _holder attachTo [_object, [- _maxWidth_box/6, 0, _height_weapon/2 - 0.15]];
-        _y = 90;
-        _p = -10;
-        _r = 90;
+        _holder attachTo [_object, [- _maxWidth_box/6, 0, -0.1 + _offSet]];
+        _y = random [-20, 0, 20];
+        _p = random [-20, 0, 20];
+        _r = 255;
     };
     case "CORNER_L": {
-        _holder attachTo [_object, [- _maxWidth_box/6.5, _corner_box/2, _height_weapon/2 - 0.15]];
-        _y = -70;
-        _p = 10;
-        _r = 90;
+        _holder attachTo [_object, [- _maxWidth_box/6.5, 0, -0.1 + _offSet]];
+        _y = 40;
+        _p = random [-10, 0, 10];
+        _r = 255;
     };
     case "CORNER_R": {
-        _holder attachTo [_object, [- _maxWidth_box/6.5, -_corner_box/2, _height_weapon/2 - 0.15]];
-        _y = -110;
-        _p = 10;
-        _r = 90;
+        _holder attachTo [_object, [- _maxWidth_box/8.5, 0, -0.1 + _offSet]];
+        _y = -30;
+        _p = random [-10, 0, 10];
+        _r = 255;
     };
     default { // TOP
-        _holder attachTo [_object, [0, 0, _height_box/2 + 0.02 + _offSet]];
+        _holder attachTo [_object, [0, 0, _height_box + _height_weapon+ _offSet]];
         _y = random 180;
-        _p = 90;
+        _p = 0;
         _r = 0;
     };
 };

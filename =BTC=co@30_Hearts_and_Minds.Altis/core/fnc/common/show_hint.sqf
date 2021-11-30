@@ -110,10 +110,19 @@ private _text = switch (_type) do {
     case 21 : {
         _custom params ["_color", "_player"];
         [
-            [[name _player], [" "]] select (isNull _player || !(side group _player isEqualTo btc_player_side)),
+            [[name _player], [" "]] select (isNull _player || (side group _player isNotEqualTo btc_player_side)),
             ["\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa", 4, _color],
             [" "]
         ];
+    };
+    case 22 : {
+        localize "STR_BTC_HAM_O_COMMON_TICKETADD";
+    };
+    case 23 : {
+        localize "STR_BTC_HAM_O_COMMON_NOBODYBAG";
+    };
+    case 24 : {
+        format [localize "STR_BTC_HAM_O_COMMON_TICKETSLEFT", _custom];
     };
 };
 

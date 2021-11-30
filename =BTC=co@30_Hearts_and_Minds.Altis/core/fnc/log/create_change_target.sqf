@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_create_change_target
+Function: btc_log_fnc_create_change_target
 
 Description:
     Fill me when you edit me !
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_create_change_target;
+        _result = [] call btc_log_fnc_create_change_target;
     (end)
 
 Author:
@@ -29,9 +29,7 @@ lbClear 72;
 for "_i" from 0 to ((count _category) - 1) do {
     private _class = _category select _i;
     private _display = getText (configFile >> "cfgVehicles" >> _class >> "displayName");
-    if (_display isEqualTo "") then {
-        _display = getText (configfile >> "CfgMagazines" >> _class >> "displayName");
-    };
+
     private _index = lbAdd [72, _display];
     lbSetData [72, _index, _class];
     if (_i isEqualTo 0) then {lbSetCurSel [72, _index];};

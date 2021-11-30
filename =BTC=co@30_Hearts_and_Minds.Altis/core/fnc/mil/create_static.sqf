@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_create_static
+Function: btc_mil_fnc_create_static
 
 Description:
     Create a static.
@@ -17,7 +17,7 @@ Returns:
 
 Examples:
     (begin example)
-        _static = [getPosATL player] call btc_fnc_mil_create_static;
+        _static = [getPosATL player] call btc_mil_fnc_create_static;
     (end)
 
 Author:
@@ -36,11 +36,11 @@ params [
 private _group = createGroup btc_enemy_side;
 _group setVariable ["btc_city", _city];
 [_group] call CBA_fnc_clearWaypoints;
-[_group, _pos, selectRandom _statics_type, _dir, _surfaceNormal] call btc_fnc_mil_createVehicle;
+[_group, _pos, selectRandom _statics_type, _dir, _surfaceNormal] call btc_mil_fnc_createVehicle;
 
 _group setBehaviour "COMBAT";
 _group setCombatMode "RED";
 
 if (btc_debug_log) then {
-    [format ["POS %1", _pos], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["POS %1", _pos], __FILE__, [false]] call btc_debug_fnc_message;
 };

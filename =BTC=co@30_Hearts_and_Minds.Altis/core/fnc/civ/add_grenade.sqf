@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_civ_add_grenade
+Function: btc_civ_fnc_add_grenade
 
 Description:
     Add grenade to a unit.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [_unit] call btc_fnc_civ_add_grenade;
+        [_unit] call btc_civ_fnc_add_grenade;
     (end)
 
 Author:
@@ -39,7 +39,7 @@ _unit addEventHandler ["Fired", {
         [{
             params ["_unit"];
 
-            [group _unit] call btc_fnc_civ_addWP;
+            [group _unit] call btc_civ_fnc_addWP;
         }, [_unit], 20] call CBA_fnc_waitAndExecute;
     };
 }];

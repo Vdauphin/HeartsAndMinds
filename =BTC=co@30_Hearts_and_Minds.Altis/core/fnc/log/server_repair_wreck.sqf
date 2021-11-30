@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_server_repair_wreck
+Function: btc_log_fnc_server_repair_wreck
 
 Description:
     Repair wreck.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _veh = [my_vehicle] spawn btc_fnc_log_server_repair_wreck;
+        _veh = [my_vehicle] spawn btc_log_fnc_server_repair_wreck;
     (end)
 
 Author:
@@ -22,7 +22,7 @@ Author:
 
 params [
     ["_veh", objNull, [objNull]],
-    ["_blacklist", btc_helo, [[]]]
+    ["_blacklist", btc_veh_respawnable, [[]]]
 ];
 
 if (_veh in _blacklist) exitWith {
@@ -33,7 +33,7 @@ private _type = typeOf _veh;
 (getPosASL _veh) params ["_x", "_y", "_z"];
 private _dir = getDir _veh;
 private _marker = _veh getVariable ["marker", ""];
-private _vehProperties = [_veh] call btc_fnc_getVehProperties;
+private _vehProperties = [_veh] call btc_veh_fnc_propertiesGet;
 _vehProperties set [5, false];
 private _EDENinventory = _veh getVariable ["btc_EDENinventory", []];
 
@@ -44,14 +44,14 @@ if (_marker != "") then {
     remoteExecCall ["", _marker];
 };
 
-if !((getVehicleCargo _veh) isEqualTo []) then {
+if ((getVehicleCargo _veh) isNotEqualTo []) then {
     _veh setVehicleCargo objNull;
 };
+
+{moveOut _x} forEach crew _veh;
 
 [{
     deleteVehicle _this;
 }, _veh] call CBA_fnc_execNextFrame;
 
-[{
-    _this call btc_fnc_log_createVehicle;
-}, [_type, [_x, _y, 0.5 + _z], _dir] + _vehProperties + [_EDENinventory], 1] call CBA_fnc_waitAndExecute;
+[btc_log_fnc_createVehicle, [_type, [_x, _y, 0.5 + _z], _dir] + _vehProperties + [_EDENinventory], 1] call CBA_fnc_waitAndExecute;

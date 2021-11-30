@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_civ_class
+Function: btc_civ_fnc_class
 
 Description:
     Return civilian classe names sorted by units, boats and vehicules based on faction name.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        _civilian_classe_names = ["CIV_F"] call btc_fnc_civ_class;
+        _civilian_classe_names = ["CIV_F"] call btc_civ_fnc_class;
     (end)
 
 Author:
@@ -70,10 +70,10 @@ _factions = _factions apply {
 
 //Final filter unwanted units type
 _type_units = _type_units select {
-    !(getText (_cfgVehicles >> _x >> "role") isEqualTo "Crewman") &&
-    ((_x find "_unarmed_") isEqualTo -1) &&
-    !(getText (_cfgVehicles >> _x >> "vehicleClass") isEqualTo "MenVR")
+    getText (_cfgVehicles >> _x >> "role") isNotEqualTo "Crewman" &&
+    (_x find "_unarmed_") isEqualTo -1 &&
+    getText (_cfgVehicles >> _x >> "vehicleClass") isNotEqualTo "MenVR"
 };
-_type_veh = _type_veh select {!(getNumber (_cfgVehicles >> _x >> "isUav") isEqualTo 1) && !(_x isKindOf "Kart_01_Base_F")};
+_type_veh = _type_veh select {(getNumber (_cfgVehicles >> _x >> "isUav") isNotEqualTo 1) && !(_x isKindOf "Kart_01_Base_F")};
 
 [_type_units, _type_boats, _type_veh]

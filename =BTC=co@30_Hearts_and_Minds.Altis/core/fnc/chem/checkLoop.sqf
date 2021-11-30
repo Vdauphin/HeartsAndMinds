@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_chem_checkLoop
+Function: btc_chem_fnc_checkLoop
 
 Description:
     Loop over chemical objects, showers and check if player/objects is around. If yes, decontaminate player/objects or set damage to player.
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_chem_checkLoop;
+        [] call btc_chem_fnc_checkLoop;
     (end)
 
 Author:
@@ -40,13 +40,12 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         (0 boundingBoxReal _x) params ["_p1", "_p2"];
         private _maxWidth = abs ((_p2 select 0) - (_p1 select 0));
         private _maxLength = abs ((_p2 select 1) - (_p1 select 1));
-        private _pos = getPosWorld _x;
-        private _maxHeight = abs ((_p2 select 2) - (_p1 select 2)) + (_pos select 2);
+        private _maxHeight = abs ((_p2 select 2) - (_p1 select 2));
         private _sorted = _contaminated;
         if (_x isKindOf "DeconShower_01_F") then {
             _sorted = _unitsContaminated; // Small shower can only decontaminate units
         };
-        _objtToDecontaminate append (_sorted inAreaArray [_pos, _maxWidth/2, _maxLength/2, getDir _x, true, _maxHeight]);
+        _objtToDecontaminate append (_sorted inAreaArray [ASLToAGL getPosASL _x, _maxWidth/2, _maxLength/2, getDir _x, true, _maxHeight]);
     } forEach (_decontaminate select {_x animationSourcePhase "valve_source" isEqualTo 1});
     {
         if (!(local _x) && {_x in _units}) then {
@@ -72,8 +71,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         if (_x in _units) then {
             _range = _range / 1.5;
         };
-        private _pos = getPosWorld _x;
-        _unitContaminate append (_units inAreaArray [_pos, _range, _range, 0, false, 2 + (_pos select 2)]);
+        _unitContaminate append (_units inAreaArray [ASLToAGL getPosASL _x, _range, _range, 0, false, 2]);
     } forEach _contaminated;
 
     if (_unitContaminate isEqualTo []) exitWith {};
@@ -84,12 +82,10 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
             publicVariable "btc_chem_contaminated";
         };
         if (local _x) then {
-            [{
-                _this call btc_fnc_chem_damage;
-            }, [_x, _notAlready, _bodyParts, _cfgGlasses], _forEachIndex * _periode] call CBA_fnc_waitAndExecute;
+            [btc_chem_fnc_damage, [_x, _notAlready, _bodyParts, _cfgGlasses], _forEachIndex * _periode] call CBA_fnc_waitAndExecute;
         } else {
             if (_notAlready) then {
-                [_x] remoteExecCall ["btc_fnc_chem_damageLoop", _x];
+                [_x] remoteExecCall ["btc_chem_fnc_damageLoop", _x];
             };
         };
     } forEach _unitContaminate;

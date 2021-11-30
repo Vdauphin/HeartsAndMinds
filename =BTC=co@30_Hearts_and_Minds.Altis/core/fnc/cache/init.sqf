@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_cache_init
+Function: btc_cache_fnc_init
 
 Description:
     Initialise the ammo cache system with all necessary variable and start the search of a suitable position for it.
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [0, btc_cache_pictures] call btc_fnc_cache_init;
+        [0, btc_cache_pictures] call btc_cache_fnc_init;
     (end)
 
 Author:
@@ -34,5 +34,5 @@ btc_cache_markers = [];
 } forEach (_cache_pictures select 2);
 btc_cache_pictures = [[], [], []];
 btc_cache_info = btc_info_cache_def;
-btc_cache_pos = [] call btc_fnc_cache_find_pos;
-[btc_cache_pos] call btc_fnc_cache_create;
+btc_cache_pos = [] call btc_cache_fnc_find_pos;
+[btc_cache_pos] call btc_cache_fnc_create;

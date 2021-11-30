@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_veh_killed
+Function: btc_veh_fnc_killed
 
 Description:
     Create marker wreck and change reputation on vehicle destruction.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_veh_12] call btc_fnc_veh_killed;
+        [btc_veh_12] call btc_veh_fnc_killed;
     (end)
 
 Author:
@@ -33,13 +33,13 @@ params [
 private _marker = createMarker [format ["m_%1", _vehicle], getPos _vehicle];
 _marker setMarkerType "mil_box";
 _marker setMarkerColor "ColorRed";
-[_marker, "STR_BTC_HAM_O_EH_VEHKILLED_MRK", getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "displayName")] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker]; // %1 wreck
+[_marker, "STR_BTC_HAM_O_EH_VEHKILLED_MRK", getText (configOf _vehicle >> "displayName")] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker]; // %1 wreck
 
 _vehicle setVariable ["marker", _marker];
 if (_allowRepChange) then {
     if (isServer) then {
-        [btc_rep_malus_veh_killed, _killer] call btc_fnc_rep_change;
+        [btc_rep_malus_veh_killed, _killer] call btc_rep_fnc_change;
     } else {
-        [btc_rep_malus_veh_killed, _killer] remoteExecCall ["btc_fnc_rep_change", 2];
+        [btc_rep_malus_veh_killed, _killer] remoteExecCall ["btc_rep_fnc_change", 2];
     };
 };

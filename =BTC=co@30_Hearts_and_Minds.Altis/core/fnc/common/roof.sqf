@@ -43,7 +43,7 @@ if (_surface isEqualTo []) then { // Try to find again the roof with house posit
     _surface = lineIntersectsSurfaces [_ASL vectorAdd [0, 0, 10], getPosASL _house];
 };
 
-if !(_surface isEqualTo []) then {
+if (_surface isNotEqualTo []) then {
     private _intersect = _surface select 0;
     if (
         (_intersect select 2) isEqualTo _house &&

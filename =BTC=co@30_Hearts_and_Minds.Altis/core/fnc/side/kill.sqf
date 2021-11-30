@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_side_kill
+Function: btc_side_fnc_kill
 
 Description:
     Your objective is to assassinate a man and bring his dogtag to base for identification.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [false, "btc_fnc_side_kill"] spawn btc_fnc_side_create;
+        [false, "btc_side_fnc_kill"] spawn btc_side_fnc_create;
     (end)
 
 Author:
@@ -25,15 +25,19 @@ params [
 ];
 
 //// Choose an occupied City \\\\
-private _useful = btc_city_all select {!(isNull _x) && _x getVariable ["occupied", false] && !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])};
+private _useful = btc_city_all select {
+    !isNull _x &&
+    _x getVariable ["occupied", false] &&
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+};
 
-if (_useful isEqualTo []) exitWith {[] spawn btc_fnc_side_create;};
+if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 
 private _city = selectRandom _useful;
 
 //// Randomise position \\\\
 private _houses = [getPos _city, 100] call btc_fnc_getHouses;
-if (_houses isEqualTo []) exitWith {[] spawn btc_fnc_side_create;};
+if (_houses isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 
 _houses = _houses apply {[count (_x buildingPos -1), _x]};
 _houses sort false;
@@ -58,9 +62,9 @@ private _officer = _group_officer createUnit [_officerType, _pos, [], 0, "CAN_CO
 
 //// Data side mission
 private _officerName = name _officer;
-[_taskID, 25, objNull, [_officerName, _city getVariable "name"]] call btc_fnc_task_create;
+[_taskID, 25, objNull, [_officerName, _city getVariable "name"]] call btc_task_fnc_create;
 private _kill_taskID = _taskID + "ki";
-[[_kill_taskID, _taskID], 26, _officer, [_officerName, _city getVariable "name", _officerType]] call btc_fnc_task_create;
+[[_kill_taskID, _taskID], 26, _officer, [_officerName, _city getVariable "name", _officerType]] call btc_task_fnc_create;
 
 private _ehDeleted = [_officer, "Deleted", {
     params [
@@ -69,7 +73,7 @@ private _ehDeleted = [_officer, "Deleted", {
     _thisArgs params ["_taskID"];
 
     _officer removeEventHandler [_thisType, _thisID];
-    [_taskID, "FAILED"] call btc_fnc_task_setState;
+    [_taskID, "FAILED"] call btc_task_fnc_setState;
 }, [_taskID]] call CBA_fnc_addBISEventHandler;
 
 private _group = [];
@@ -82,7 +86,7 @@ private _group = [];
     _grp setVariable ["btc_city", _city];
 } forEach (_buildingPos - [_pos]);
 
-_trigger = createTrigger ["EmptyDetector", _pos];
+_trigger = createTrigger ["EmptyDetector", _pos, false];
 _trigger setVariable ["group", _group];
 _trigger setTriggerArea [20, 20, 0, false];
 _trigger setTriggerActivation [str btc_player_side, "PRESENT", true];
@@ -90,14 +94,17 @@ _trigger setTriggerStatements ["this", "private _group = thisTrigger getVariable
 
 private _toDelete = _group + [_group_officer, _trigger];
 
-waitUntil {sleep 5; (_taskID call BIS_fnc_taskCompleted || !alive _officer)};
+waitUntil {sleep 5; 
+    _taskID call BIS_fnc_taskCompleted ||
+    !alive _officer
+};
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
     [[], _toDelete] call btc_fnc_delete;
 };
 
 [_kill_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
 private _dogTag_taskID = _taskID + "dt";
-[[_dogTag_taskID, _taskID], 27, _officer, _officerName] call btc_fnc_task_create;
+[[_dogTag_taskID, _taskID], 27, _officer, _officerName] call btc_task_fnc_create;
 private _officer_dogtagData = [_officer] call ace_dogtags_fnc_getDogtagData;
 private _globalVariableName = format ["btc_%1", _dogTag_taskID];
 
@@ -110,9 +117,9 @@ private _globalVariableName = format ["btc_%1", _dogTag_taskID];
         _officer removeEventHandler ["Deleted", _ehDeleted];
 
         [_dogTag_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
-        [[_taskID + "bs", _taskID], 28, btc_create_object_point, [_officer_dogtagData select 0, typeOf btc_create_object_point]] call btc_fnc_task_create;
+        [[_taskID + "bs", _taskID], 28, btc_create_object_point, [_officer_dogtagData select 0, typeOf btc_create_object_point]] call btc_task_fnc_create;
         missionNamespace setVariable [_globalVariableName, _dogTag];
-        [_dogTag, _taskID] remoteExecCall ["btc_fnc_eh_trackItem", [0, -2] select isDedicated, _officer];
+        [_dogTag, _taskID] remoteExecCall ["btc_eh_fnc_trackItem", [0, -2] select isDedicated, _officer];
      };
 }, [_officer_dogtagData, _dogTag_taskID, _taskID, _globalVariableName, _officer, _ehDeleted]] call CBA_fnc_addEventHandlerArgs;
 
@@ -135,17 +142,17 @@ private _IDEH_HandleDisconnect = [missionNamespace, "HandleDisconnect", {
 
     if ((missionNamespace getVariable [_globalVariableName, ""]) in items _player) then {
         removeMissionEventHandler [_thisType, _thisID];
-        [_taskID, "FAILED"] call btc_fnc_task_setState;
+        [_taskID, "FAILED"] call btc_task_fnc_setState;
     };
 }, [_globalVariableName, _taskID]] call CBA_fnc_addBISEventHandler;
 
-waitUntil {sleep 5; (
+waitUntil {sleep 5; 
     true in (
         (
             allPlayers inAreaArray [getPosWorld btc_create_object_point, 100, 100]
         ) apply {(missionNamespace getVariable [_globalVariableName, ""]) in itemCargo vehicle _x}
     ) ||
-    _taskID call BIS_fnc_taskCompleted)
+    _taskID call BIS_fnc_taskCompleted
 };
 
 _group_officer setVariable ["no_cache", false];
@@ -155,8 +162,8 @@ _group_officer setVariable ["no_cache", false];
 
 [[], _toDelete] call btc_fnc_delete;
 removeMissionEventHandler ["HandleDisconnect", _IDEH_HandleDisconnect];
-if ((_taskID call BIS_fnc_taskState) in ["CANCELED", "FAILED"]) exitWith {[_taskID, _taskID call BIS_fnc_taskState] call btc_fnc_task_setState};
+if ((_taskID call BIS_fnc_taskState) in ["CANCELED", "FAILED"]) exitWith {[_taskID, _taskID call BIS_fnc_taskState] call btc_task_fnc_setState};
 
-40 call btc_fnc_rep_change;
+40 call btc_rep_fnc_change;
 
-[_taskID, "SUCCEEDED"] call btc_fnc_task_setState;
+[_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _can_see = [player, btc_helo_1] call btc_fnc_check_los;
+        _can_see = [player, cursorObject] call btc_fnc_check_los;
     (end)
 
 Author:

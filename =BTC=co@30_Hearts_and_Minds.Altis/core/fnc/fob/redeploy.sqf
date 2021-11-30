@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_fob_redeploy
+Function: btc_fob_fnc_redeploy
 
 Description:
     Create child statement to redeploy.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_fob_redeploy;
+        [] call btc_fob_fnc_redeploy;
     (end)
 
 Author:
@@ -33,7 +33,7 @@ private _actions = [];
 private _childStatement = {
     params ["_target", "_player", "_params"];
 
-    if ([] call btc_fnc_fob_redeployCheck) then {[_player, _params, false] call BIS_fnc_moveToRespawnPosition};
+    if ([] call btc_fob_fnc_redeployCheck) then {[_player, _params, false] call BIS_fnc_moveToRespawnPosition};
 };
 
 if (_params isEqualTo "") then { // Redeploy on marker like rallypoints

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_add_veh
+Function: btc_db_fnc_add_veh
 
 Description:
     Add vehicle to the wreck system.
@@ -12,7 +12,8 @@ Returns:
 
 Examples:
     (begin example)
-        [cursorObject] call btc_fnc_db_add_veh;
+        cursorObject remoteExecCall ["btc_db_fnc_add_veh", 2];
+        btc_curator addCuratorEditableObjects [btc_vehicles, false];
     (end)
 
 Author:
@@ -24,31 +25,35 @@ params [
     ["_veh", objNull, [objNull]]
 ];
 
-if !(isServer) exitWith {
-    _veh remoteExecCall ["btc_fnc_db_add_veh", 2];
+if (_veh getVariable ["btc_dont_delete", false]) exitWith {
+    if (btc_debug || btc_debug_log) then {
+        ["Vehicle added more than once in btc_vehicles", __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
+    }; 
 };
 
+_veh setVariable ["btc_dont_delete", true];
 btc_vehicles pushBackUnique _veh;
+
 _veh addMPEventHandler ["MPKilled", {
-    params ["_unit"];
-    if (
-        isServer &&
-        {_unit getVariable ["btc_killed", true]} // https://feedback.bistudio.com/T149510
-    ) then {
-        _unit setVariable ["btc_killed", false];
-        _this call btc_fnc_veh_killed;
+    if (isServer) then {
+        _this call btc_veh_fnc_killed;
     };
 }];
-if ((isNumber (configfile >> "CfgVehicles" >> typeOf _veh >> "ace_fastroping_enabled")) && !(typeOf _veh isEqualTo "RHS_UH1Y_d")) then {
+if ((isNumber (configOf _veh >> "ace_fastroping_enabled")) && (typeOf _veh isNotEqualTo "RHS_UH1Y_d")) then {
     [_veh] call ace_fastroping_fnc_equipFRIES
 };
 if (btc_p_respawn_location > 1) then {
-    if !(fullCrew [_veh, "cargo", true] isEqualTo []) then {
+    if (fullCrew [_veh, "cargo", true] isNotEqualTo []) then {
         if (
             (btc_p_respawn_location isEqualTo 2) && (_veh isKindOf "Air") ||
             btc_p_respawn_location > 2
         ) then {
-            [_veh, "Deleted", {_thisArgs call BIS_fnc_removeRespawnPosition}, [btc_player_side, _veh] call BIS_fnc_addRespawnPosition] call CBA_fnc_addBISEventHandler;
+            [
+                _veh,
+                "Deleted",
+                {_thisArgs call BIS_fnc_removeRespawnPosition},
+                [btc_player_side, _veh] call BIS_fnc_addRespawnPosition
+            ] call CBA_fnc_addBISEventHandler;
         };
     };
 };

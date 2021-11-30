@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_info_cache
+Function: btc_info_fnc_cache
 
 Description:
     Create cache intel with marker or picture.
@@ -17,7 +17,7 @@ Returns:
 Examples:
     (begin example)
         btc_cache_info = 100;
-        [true] call btc_fnc_info_cache;
+        [true] call btc_info_fnc_cache;
     (end)
 
 Author:
@@ -49,7 +49,7 @@ if (_cache_info < _info_cache_ratio) then {
     _classnames = _classnames - (btc_cache_pictures select 0);
 
     if (_classnames isEqualTo []) exitWith {
-        [[_cache_obj, _info_cache_ratio] call CBA_fnc_randPos, _info_cache_ratio] call btc_fnc_info_cacheMarker;
+        [[_cache_obj, _info_cache_ratio] call CBA_fnc_randPos, _info_cache_ratio] call btc_info_fnc_cacheMarker;
     };
     private _classname_object = selectRandom _classnames;
 
@@ -61,14 +61,14 @@ if (_cache_info < _info_cache_ratio) then {
         _classname_object,
         _cache_n,
         _is_building_with_the_cache
-    ] remoteExecCall ["btc_fnc_info_cachePicture", [0, -2] select isDedicated, true]);
+    ] remoteExecCall ["btc_info_fnc_cachePicture", [0, -2] select isDedicated, true]);
 
     _intelId = [
         [15, 14] select _is_building_with_the_cache,
         _classname_object
     ]
 } else {
-    btc_cache_info = [[_cache_obj, _cache_info] call CBA_fnc_randPos, _cache_info] call btc_fnc_info_cacheMarker;
+    btc_cache_info = [[_cache_obj, _cache_info] call CBA_fnc_randPos, _cache_info] call btc_info_fnc_cacheMarker;
 };
 
 _intelId remoteExecCall ["btc_fnc_show_hint", [0, -2] select isDedicated];

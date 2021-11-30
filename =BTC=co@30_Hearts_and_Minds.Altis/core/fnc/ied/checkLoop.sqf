@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_checkLoop
+Function: btc_ied_fnc_checkLoop
 
 Description:
     Loop over IED and check if player is around. If yes, trigger the explosion.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-       [_city, _ieds, _ieds_check] call btc_fnc_ied_checkLoop;
+       [_city, _ieds, _ieds_check] call btc_ied_fnc_checkLoop;
     (end)
 
 Author:
@@ -41,9 +41,9 @@ Author:
                             speed _x > 5
                         }
                     }) then {
-                        [_wreck, _ied] call btc_fnc_ied_boom;
+                        [_wreck, _ied] call btc_ied_fnc_boom;
                         if (0.5 < random 1) then {
-                            [getPos _wreck] call btc_fnc_rep_call_militia;
+                            [getPos _wreck] call btc_rep_fnc_call_militia;
                         };
                     };
                 } forEach (_ied nearEntities ["allvehicles", 10]);
@@ -51,7 +51,7 @@ Author:
                 _ieds_check = _ieds_check - [_ied];
             };
         } forEach _ieds_check;
-        [_city, _ieds, _ieds_check] call btc_fnc_ied_checkLoop;
+        [_city, _ieds, _ieds_check] call btc_ied_fnc_checkLoop;
     };
 
     private _data = [];
@@ -59,7 +59,7 @@ Author:
         _x params ["_wreck", "_type", "_ied"];
 
         if (!isNull _wreck && {alive _wreck}) then {
-            _data pushBack [getPosATL _wreck, _type, getDir _wreck, !(_ied isEqualTo objNull)];
+            _data pushBack [getPosATL _wreck, _type, getDir _wreck, _ied isNotEqualTo objNull];
 
             deleteVehicle _ied;
             deleteVehicle _wreck;
@@ -68,11 +68,8 @@ Author:
 
     _city setVariable ["ieds", _data];
 
-    if (btc_debug) then {
-        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
-    };
-    if (btc_debug_log) then {
-        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [false]] call btc_fnc_debug_message;
+    if (btc_debug || btc_debug_log) then {
+        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
     };
 
 }, _this, 1] call CBA_fnc_waitAndExecute;

@@ -1,9 +1,9 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_delay_createUnit
+Function: btc_delay_fnc_createUnit
 
 Description:
-    Create unit when all previous units have been created. btc_delay_createUnit define the time (in second) when the unit will be created.
+    Create unit when all previous units have been created. btc_delay_time define the time (in second) when the unit will be created.
 
 Parameters:
     _group - Group to add unit. [Group]
@@ -16,7 +16,7 @@ Returns:
 
 Examples:
     (begin example)
-        [createGroup (side player), typeOf player, getPosATL player] call btc_fnc_delay_createUnit;
+        [createGroup (side player), typeOf player, getPosATL player] call btc_delay_fnc_createUnit;
     (end)
 
 Author:
@@ -24,28 +24,26 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-btc_delay_createUnit = btc_delay_createUnit + 0.3;
+btc_delay_time = btc_delay_time + 0.2;
 
 [{
+    btc_delay_time = btc_delay_time - 0.2;
+
     params [
         ["_group", grpNull, [grpNull]],
         ["_unit_type", "", [""]],
-        ["_pos", [0, 0, 0], [[]]],
+        ["_pos", [0, 0, 0], [[], createHashMap]],
         ["_special", "CARGO", [""]],
         ["_vehicle", objNull, [objNull]]
     ];
 
-    if (isNull _group) exitWith {
-        [format ["isNull _group _this = %1", _this], __FILE__, [btc_debug, btc_debug_log, true]] call btc_fnc_debug_message;
-        btc_delay_createUnit = btc_delay_createUnit - 0.3;
+    if !(_pos isEqualType []) then {
+        _pos = _pos get "_pos";
     };
-
     private _unit = _group createUnit [_unit_type, _pos, [], 0, _special];
     [_unit] joinSilent _group;
 
     if (!isNull _vehicle) then {
         _unit moveInAny _vehicle;
     };
-
-    btc_delay_createUnit = btc_delay_createUnit - 0.3;
-}, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;
+}, _this, btc_delay_time - 0.01] call CBA_fnc_waitAndExecute;

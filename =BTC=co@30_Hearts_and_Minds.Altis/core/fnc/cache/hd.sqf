@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_cache_hd
+Function: btc_cache_fnc_hd
 
 Description:
     Destroy an ammo cache only when an explposive with damage > 0.6 is used.
@@ -18,7 +18,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_cache_hd;
+        _result = [] call btc_cache_fnc_hd;
     (end)
 
 Author:
@@ -36,17 +36,17 @@ params [
     ["_instigator", objNull, [objNull]]
 ];
 
-private _explosive = (getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0);
+private _explosive = getNumber (configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
 
 if (
-    !(_cache getVariable ["btc_fnc_cache_hd_fired", false]) &&
+    !(_cache getVariable ["btc_cache_fnc_hd_fired", false]) &&
     {_explosive} &&
     {_damage > 0.6}
 ) then {
-    _cache setVariable ["btc_fnc_cache_hd_fired", true];
+    _cache setVariable ["btc_cache_fnc_hd_fired", true];
 
     if (!isServer) exitWith {
-        _this remoteExecCall ["btc_fnc_cache_hd", 2];
+        _this remoteExecCall ["btc_cache_fnc_hd", 2];
     };
 
     //Effects
@@ -58,7 +58,7 @@ if (
             "M_PG_AT" createVehicle _this;
         }, _this, random [0.5, 2, 3]] call CBA_fnc_waitAndExecute;
     }, _pos, random [0.5, 2, 3]] call CBA_fnc_waitAndExecute;
-    [_pos] call btc_fnc_deaf_earringing;
+    [_pos] call btc_deaf_fnc_earringing;
     [attachedObjects _cache, btc_cache_obj, btc_cache_markers] call CBA_fnc_deleteEntity;
 
     private _marker = createMarker [format ["btc_cache_%1", btc_cache_n], btc_cache_pos];
@@ -68,15 +68,15 @@ if (
     _marker setMarkerColor "ColorRed";
 
     if (btc_debug_log) then {
-        [format ["DESTROYED: ID %1 POS %2", btc_cache_n, btc_cache_pos], __FILE__, [false]] call btc_fnc_debug_message;
+        [format ["DESTROYED: ID %1 POS %2", btc_cache_n, btc_cache_pos], __FILE__, [false]] call btc_debug_fnc_message;
     };
 
-    [btc_rep_bonus_cache, _instigator] call btc_fnc_rep_change;
+    [btc_rep_bonus_cache, _instigator] call btc_rep_fnc_change;
 
     //Notification
     [0] remoteExecCall ["btc_fnc_show_hint", 0];
 
-    [btc_cache_n + 1, btc_cache_pictures] call btc_fnc_cache_init;
+    [btc_cache_n + 1, btc_cache_pictures] call btc_cache_fnc_init;
 } else {
     0
 };
