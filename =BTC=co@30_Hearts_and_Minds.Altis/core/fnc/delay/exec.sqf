@@ -24,12 +24,12 @@ Author:
 btc_delay_time = btc_delay_time + 0.2;
 
 [{
+    btc_delay_time = btc_delay_time - 0.2;
+
     params [
         "_parameters",
         ["_code", {}, [{}]]
     ];
 
     _parameters call _code;
-
-    btc_delay_time = btc_delay_time - 0.2;
 }, _this, btc_delay_time - 0.01] call CBA_fnc_waitAndExecute;

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_db_fnc_add_veh
+Function: btc_veh_fnc_add
 
 Description:
     Add vehicle to the wreck system.
@@ -12,8 +12,8 @@ Returns:
 
 Examples:
     (begin example)
-        cursorObject remoteExecCall ["btc_db_fnc_add_veh", 2];
-        btc_curator addCuratorEditableObjects [btc_vehicles, false];
+        cursorObject remoteExecCall ["btc_veh_fnc_add", 2];
+        {_x addCuratorEditableObjects [btc_vehicles, false];} forEach allCurators;
     (end)
 
 Author:
@@ -25,14 +25,20 @@ params [
     ["_veh", objNull, [objNull]]
 ];
 
-if (_veh getVariable ["btc_dont_delete", false]) exitWith {
+if (isNil "btc_vehicles") then {
+    btc_vehicles = [];
+};
+if (isNil {_veh getVariable "btc_EDENinventory"}) then {
+    _veh setVariable ["btc_EDENinventory", _veh call btc_log_fnc_inventoryGet];
+};
+
+if (btc_vehicles pushBackUnique _veh isEqualTo -1) exitWith {
     if (btc_debug || btc_debug_log) then {
         ["Vehicle added more than once in btc_vehicles", __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
     }; 
 };
 
 _veh setVariable ["btc_dont_delete", true];
-btc_vehicles pushBackUnique _veh;
 
 _veh addMPEventHandler ["MPKilled", {
     if (isServer) then {

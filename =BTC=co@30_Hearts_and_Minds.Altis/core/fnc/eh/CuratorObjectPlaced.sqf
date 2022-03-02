@@ -26,7 +26,7 @@ params [
     ["_object_placed", objNull, [objNull]]
 ];
 
-if !((_object_placed isKindOf "AllVehicles") || (_object_placed isKindOf "Module_F")) then {
+if !((_object_placed isKindOf "allVehicles") || (_object_placed isKindOf "Module_F")) then {
     [_object_placed] remoteExecCall ["btc_log_fnc_init", 2];
 
     if (btc_debug_log) then {

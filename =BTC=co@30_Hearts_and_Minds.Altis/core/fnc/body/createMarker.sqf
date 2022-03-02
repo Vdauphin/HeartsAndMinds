@@ -6,7 +6,7 @@ Description:
     Create a KIA marker on dead body.
 
 Parameters:
-    _deadBody - Dead body or body bag. [Object]
+    _deadBody - Dead body. [Object]
 
 Returns:
 

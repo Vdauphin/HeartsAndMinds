@@ -27,6 +27,7 @@ params [
 private _group = createGroup [btc_enemy_side, true];
 [_suicider] joinSilent _group;
 _group setVariable ["suicider", true];
+_group setVariable ["acex_headless_blacklist", true];
 
 [group _suicider] call CBA_fnc_clearWaypoints;
 

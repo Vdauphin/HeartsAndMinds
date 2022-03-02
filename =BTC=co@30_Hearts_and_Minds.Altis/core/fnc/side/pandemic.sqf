@@ -26,8 +26,8 @@ params [
 
 private _minNumberOfSubTask = 2;
 private _useful = btc_city_all select {
-    !(isNull _x) &&
-    {_x getVariable ["type", ""] != "NameMarine"} &&
+    !isNull _x &&
+    {!(_x getVariable ["type", ""] in ["NameMarine", "StrongpointArea"])} &&
     {!(_x getVariable ["active", false])} &&
     {
         private _city = _x;
@@ -62,6 +62,7 @@ for "_i" from 0 to (_minNumberOfSubTask + _extraCiv - 1) do {
     }, {
         params ["_city", "_civPos", "_civType", "_deconta_taskID"];
         private _civ = (nearestObjects [_civPos, [_civType], 10]) select 0;
+        (group _civ) setVariable ["acex_headless_blacklist", true];
         btc_chem_contaminated pushBack _civ;
         publicVariable "btc_chem_contaminated";
 

@@ -28,5 +28,6 @@ if (_door isEqualTo "") exitWith {
     [player, objNull, ["isnotinside"]] call ace_common_fnc_canInteractWith
 }, {
     params ["_args"];
+    playSound3D ["\z\ace\addons\logistics_wirecutter\sound\wirecut.ogg", player];
     _args call btc_door_fnc_broke;
-}, {}, [_house, _door]] call CBA_fnc_progressBar;
+}, {}, [_house, _door, player, 0.2]] call CBA_fnc_progressBar;

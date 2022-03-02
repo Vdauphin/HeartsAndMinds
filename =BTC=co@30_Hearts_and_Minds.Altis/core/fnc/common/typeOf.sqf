@@ -30,7 +30,7 @@ if (isNil "btc_modelNamespace") then {
     btc_modelNamespace = call CBA_fnc_createNamespace;
 };
 
-private _CfgVehicles = configFile >> "CfgVehicles";
+private _cfgVehicles = configFile >> "cfgVehicles";
 
 _objectArray apply {
     private _type = typeOf _x;
@@ -41,7 +41,7 @@ _objectArray apply {
         _type = btc_modelNamespace getVariable _model;
         if (isNil "_type") then {
             private _objects = configProperties [
-                _CfgVehicles,
+                _cfgVehicles,
                 "(isClass _x) && {(((getText (_x >> 'model')) select [1]) == _model) || {(getText (_x >> 'model')) == _model}}",
                  true
             ];

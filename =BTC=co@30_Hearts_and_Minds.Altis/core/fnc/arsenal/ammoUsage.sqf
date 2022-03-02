@@ -9,7 +9,7 @@ Description:
         - and is not/is parent to a parent
 
 Parameters:
-    _weapons - Array of weapopns. [Array]
+    _weapons - Array of weapons. [Array]
     _itemType_ammo_usageAllowed - Weapons allowed filter: array of item type ("AssaultRifle", "MissileLauncher"...), allowed ammo usage ("128 + 512": ammo against vehicles and armored vehicles) and array to check if weapons are parent to a parent. [Array]
 
 Returns:

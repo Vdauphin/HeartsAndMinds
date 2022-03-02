@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _canTow = [cursorObject, btc_tow_vehicleSelected] call btc_tow_fnc_check;
+        _canTow = [btc_tow_vehicleTowing, cursorObject] call btc_tow_fnc_check;
     (end)
 
 Author:
@@ -44,11 +44,14 @@ private _model_front_towed = ([_towed] call btc_tow_fnc_hitch_points) select 0;
 private _pos_rearTower = _tower modelToWorld _model_rear_tower;
 private _pos_frontTowed = _towed modelToWorld _model_front_towed;
 
-if (
-        _pos_rearTower distance _pos_frontTowed > 5 ||
-        {!([_pos_rearTower, ((getDir _tower) + 180) mod 360, 100, _pos_frontTowed] call BIS_fnc_inAngleSector)}
-) exitWith {
+if (_pos_rearTower distance _pos_frontTowed > 5) exitWith {
     (localize "STR_BTC_HAM_TOW_TFAR") call CBA_fnc_notify;
+    false
+};
+if (
+    !([_pos_rearTower, ((getDir _tower) + 180) mod 360, 100, _pos_frontTowed] call BIS_fnc_inAngleSector)
+) exitWith {
+    (localize "STR_BTC_HAM_TOW_NOTA") call CBA_fnc_notify;
     false
 };
 

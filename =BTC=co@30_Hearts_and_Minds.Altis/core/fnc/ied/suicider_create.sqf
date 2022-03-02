@@ -44,9 +44,10 @@ if (_type_units isEqualTo "") then {
 
 private _group = createGroup [civilian, true];
 _group setVariable ["btc_city", _city];
+_group setVariable ["acex_headless_blacklist", true];
 private _suicider = _group createUnit [_type_units, _rpos, [], 0, "CAN_COLLIDE"];
 
-[_group] call btc_civ_fnc_addWP;
+[_group, btc_civ_fnc_addWP] call btc_delay_fnc_exec;
 _group setVariable ["suicider", true];
 
 [_suicider] call btc_ied_fnc_suiciderLoop;

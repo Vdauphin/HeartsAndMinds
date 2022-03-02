@@ -82,21 +82,11 @@ if (_enemy_side isEqualTo btc_player_side) exitWith {
 
     //Units
     _divers = _allclass_f select {[_x, ["AssaultRifle", "64 + 32"]] call btc_mil_fnc_ammoUsage};
-    if (_divers isEqualTo []) then {
-        _divers = if (_enemy_side isEqualTo east) then {
-            ["O_diver_F", "O_diver_exp_F", "O_diver_TL_F"]
-        } else {
-            ["I_diver_F", "I_diver_exp_F", "I_diver_TL_F"]
-        };
-    };
     _type_divers append _divers;
     _type_units append ((_allclass_f select {_x isKindOf "Man"}) - _divers);
 
     //Vehicles
     _type_boats append (_allclass_f select {_x isKindOf "Ship"});
-    if (_type_boats isEqualTo []) then {
-        _type_boats append ["I_Boat_Armed_01_minigun_F", "I_Boat_Transport_01_F", "I_SDV_01_F", "I_G_Boat_Transport_01_F"];
-    };
     _type_motorized append (
         if (_en_tank) then {
             _allclass_f select {(_x isKindOf "Tank") || (_x isKindOf "Car") || (_x isKindOf "Truck") || (_x isKindOf "Truck_F")}
@@ -104,18 +94,36 @@ if (_enemy_side isEqualTo btc_player_side) exitWith {
             _allclass_f select {(_x isKindOf "Car") || (_x isKindOf "Truck") || (_x isKindOf "Truck_F")}
         }
     );
-    _type_motorized_armed append (([_allclass_f select {((_x isKindOf "Air") || (_x isKindOf "Helicopter") || (_x isKindOf "Tank") || (_x isKindOf "Car"))}] call btc_fnc_find_veh_with_turret) select 0);
+    _type_motorized_armed append (
+        _allclass_f select {
+            ((_x isKindOf "Air") || (_x isKindOf "Helicopter") || (_x isKindOf "Tank") || (_x isKindOf "Car")) &&
+            {_x call BIS_fnc_allTurrets isNotEqualTo []}
+        }
+    );
 
     //Static
     _type_mg append (_allclass_f select {_x isKindOf "StaticMGWeapon"});
-    if (_type_mg isEqualTo []) then {
-        _type_mg = ["O_HMG_01_F", "O_HMG_01_high_F"];
-    };
     _type_gl append (_allclass_f select {_x isKindOf "StaticGrenadeLauncher"});
-    if (_type_gl isEqualTo []) then {
-        _type_gl = ["O_GMG_01_F", "O_GMG_01_high_F"];
-    };
+
 } forEach _factions;
+
+//Handle if no class name is found
+if (_type_divers isEqualTo []) then {
+    _type_divers = if (_enemy_side isEqualTo east) then {
+        ["O_diver_F", "O_diver_exp_F", "O_diver_TL_F"]
+    } else {
+        ["I_diver_F", "I_diver_exp_F", "I_diver_TL_F"]
+    };
+};
+if (_type_boats isEqualTo []) then {
+    _type_boats = ["I_Boat_Armed_01_minigun_F", "I_Boat_Transport_01_F", "I_SDV_01_F", "I_G_Boat_Transport_01_F"];
+};
+if (_type_mg isEqualTo []) then {
+    _type_mg = ["O_HMG_01_F", "O_HMG_01_high_F"];
+};
+if (_type_gl isEqualTo []) then {
+    _type_gl = ["O_GMG_01_F", "O_GMG_01_high_F"];
+};
 
 //Final filter unwanted units type
 if !(_en_AA) then {

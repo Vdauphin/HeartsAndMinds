@@ -75,13 +75,13 @@ if (
     _protection = _protection + 0.1;
 };
 if (_uniform isNotEqualTo "") then {
-    _protection = _protection + 0.5;
+    _protection = _protection + 0.4;
     if (
         [
             "cbrn"
         ] findIf {_x in _uniform} > -1
     ) then {
-        _protection = _protection + 0.1;
+        _protection = _protection + 0.2;
     };
 };
 

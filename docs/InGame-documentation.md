@@ -1,7 +1,7 @@
 # InGame Documentation
 
 ## Headless & Database
-This mission automatically uses one Headless client when available.
+This mission support ACE Headless.
 
 This mission has a database system. Enemy units, towns, hideouts, cache, objects created or static weapons assembled by players or Zeus, vehicles, vehicle in vehicle, tag, players markers on global channel are saved. All admin can save mission progress at any time with his self interaction key.
 
@@ -25,10 +25,10 @@ Electromagnetic field from UAV are safe but EMP have a range of 500m where vehic
 You can detect the origin of electromagnetic field with spectrum devices. The amplitude of the peak depend on the distance and angle between the emiter and the antenna. The maximum range is 1000m.
 
 ## Door locked
-###House doors:
+### House doors:
 Civilian house door can be close. Depend on reputation level, civilian will lock their door and stay inside. Under low, all doors are locked, above normal, all door are unlocked. 
-###Break locked door:
-You can still enter by breaking door lock with a wirecutter.
+### Break locked door:
+You can still enter by breaking door lock with a wirecutter. Or by using explosive.
 
 ## Vehicles
 ### Respawn:
@@ -141,7 +141,7 @@ At the beginning you have a very low reputation level, so civilians won't help y
 ### Good actions:
 Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
 ### Bad actions:
-Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
+Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 
 ## Civil Orders
 Any player can give orders to civilians. To do this, just open your self interaction menu and select 'ORDERS' or use one of the shortcuts. Shortcuts can changed under 'configure >> controls>> configure addons >> Hearts and Minds: Mission (drop down menu)'. Your options are:
@@ -150,6 +150,8 @@ Any player can give orders to civilians. To do this, just open your self interac
 - GO AWAY
 
 If you want to give an order to just one unit, interact with it (object interaction).
+
+You can also use a horn to ask civilians to stop their movement from a vehicle. Turning ON beacons or siren will continuously ask civilians to let you pass first. Combining beacons and siren will increase the range of effectiveness.
 
 You can also drop leaflets to ask all civilians in a circle of 200m to evacuate to a religious building (if not available a safe area) with a AR-2 drone.
 

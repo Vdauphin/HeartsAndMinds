@@ -69,7 +69,7 @@ private _delay = [_group, _veh_type, [selectRandom btc_civ_type_units], _safe_po
 
 [{
     _this call btc_patrol_fnc_init;
-    [[_this select 0]] call btc_fnc_set_groupsOwner;
-}, [_group, [_start_city, _active_city], _area, _pos_isWater], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
+    (_this select 0) setVariable ["acex_headless_blacklist", false];
+}, [_group, [_start_city, _active_city], _area, _pos_isWater], _delay] call btc_delay_fnc_waitAndExecute;
 
 true

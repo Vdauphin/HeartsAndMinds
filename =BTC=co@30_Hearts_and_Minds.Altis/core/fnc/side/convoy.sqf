@@ -27,7 +27,7 @@ params [
 //// Choose two Cities \\\\
 private _usefuls = btc_city_all select {
     !isNull _x &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"]) &&
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"]) &&
     !(_x getVariable ["occupied", false])
 };
 if (_usefuls isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
@@ -36,7 +36,7 @@ private _city2 = selectRandom _usefuls;
 private _area = (getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize"))/4;
 private _cities = btc_city_all select {!isNull _x && _x distance _city2 > _area};
 _usefuls = _cities select {
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"]) &&
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"]) &&
     _x getVariable ["occupied", false]
 };
 if (_usefuls isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
@@ -93,6 +93,7 @@ if (count _path <= 35) exitWith {
 //// Create convoy \\\\
 private _group = createGroup btc_enemy_side;
 _group setVariable ["no_cache", true];
+_group setVariable ["acex_headless_blacklist", true];
 [_group] call CBA_fnc_clearWaypoints;
 private _convoyLength = 3 + round random 2;
 private _listPositions = _path select [40, _convoyLength + 1];
@@ -112,11 +113,13 @@ for "_i" from 1 to _convoyLength do {
     [12] remoteExecCall ["btc_fnc_show_hint", [0, -2] select isDedicated];
 
     private _vehs = (units _group) apply {assignedVehicle _x};
-    btc_curator addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
+    {
+        _x addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
+    } forEach allCurators;
 }, [
     _group, _pos2, -1, "MOVE", "SAFE", "RED", "LIMITED", "COLUMN",
     format ["['%1', 'FAILED'] call BIS_fnc_taskSetState;", _taskID], [0, 0, 0], _radius/2
-], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
+], _delay] call btc_delay_fnc_waitAndExecute;
 
 waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||

@@ -36,7 +36,7 @@ private _road = if (_roads isEqualTo []) then {
 } else {
     selectRandom _roads
 };
-for "_i" from 1 to (_n * 1.5) do {
+for "_i" from 1 to _n do {
     private _sel_pos = [_city, _area] call CBA_fnc_randPos;
     private _sel_dir = 0;
     if !(surfaceIsWater _sel_pos) then {

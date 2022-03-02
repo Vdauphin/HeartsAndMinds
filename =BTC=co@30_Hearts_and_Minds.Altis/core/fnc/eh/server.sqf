@@ -41,6 +41,23 @@ addMissionEventHandler ["BuildingChanged", btc_rep_fnc_buildingchanged];
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
 ["ace_killed", btc_mil_fnc_unit_killed] call CBA_fnc_addEventHandler;
+["ace_repair_setWheelHitPointDamage", {
+    _this remoteExecCall ["btc_rep_fnc_wheelChange", 2];
+}] call CBA_fnc_addEventHandler;
+["ace_disarming_dropItems", btc_rep_fnc_foodRemoved] call CBA_fnc_addEventHandler;
+["btc_respawn_player", {
+    params ["", "_player"];
+    [btc_rep_malus_player_respawn, _player] call btc_rep_fnc_change;
+}] call CBA_fnc_addEventHandler;
+
+["ace_explosives_detonate", {
+    params ["_player", "_explosive", "_delay"];
+    [
+        btc_door_fnc_broke,
+        ([3, _explosive, 0.5] call btc_door_fnc_get) + [_player, 1, 2],
+        _delay
+    ] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
 
 addMissionEventHandler ["HandleDisconnect", {
     params ["_headless"];
@@ -58,8 +75,14 @@ if (btc_p_auto_db) then {
 if (btc_p_chem) then {
     ["ace_cargoLoaded", btc_chem_fnc_propagate] call CBA_fnc_addEventHandler;
     ["AllVehicles", "GetIn", {[_this select 0, _this select 2] call btc_chem_fnc_propagate}] call CBA_fnc_addClassEventHandler;
-    ["DeconShower_01_F", "init", {(_this select 0) setVariable ['bin_deconshower_disableAction',true]}] call CBA_fnc_addClassEventHandler;
-    ["DeconShower_02_F", "init", {(_this select 0) setVariable ['bin_deconshower_disableAction',true]}] call CBA_fnc_addClassEventHandler;
+    ["DeconShower_01_F", "init", {
+        btc_chem_decontaminate pushBack (_this select 0);
+        (_this select 0) setVariable ['bin_deconshower_disableAction', true];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["DeconShower_02_F", "init", {
+        btc_chem_decontaminate pushBack (_this select 0);
+        (_this select 0) setVariable ['bin_deconshower_disableAction', true];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
 };
 
 ["GroundWeaponHolder", "InitPost", {btc_groundWeaponHolder append _this}] call CBA_fnc_addClassEventHandler;
@@ -81,54 +104,14 @@ if (btc_p_set_skill) then {
         [_this select 0, "HandleDamage", btc_patrol_fnc_disabled] call CBA_fnc_addBISEventHandler;
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
-["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler;
-["ace_disarming_dropItems", btc_rep_fnc_foodRemoved] call CBA_fnc_addEventHandler; 
-["btc_respawn_player", {
-    params ["", "_player"];
-    [btc_rep_malus_player_respawn, _player] call btc_rep_fnc_change;
-}] call CBA_fnc_addEventHandler;
+["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler; 
 
 if (btc_p_respawn_ticketsAtStart >= 0) then {
-    ["btc_respawn_player", {
-        params ["_unit", "_player"];
-        _unit setVariable ["btc_dont_delete", true];
-        btc_body_deadPlayers pushBack _unit;
-        _unit setVariable ["btc_UID", getPlayerUID _player];
-        if !(btc_p_respawn_ticketsShare) then {
-            btc_respawn_tickets set [getPlayerUID _player, ([_player] call BIS_fnc_respawnTickets) - 1];
-        };
-
-        if (btc_p_body_timeBeforeShowMarker isEqualTo -1) exitwith {};
-        [btc_body_fnc_createMarker, _unit, btc_p_body_timeBeforeShowMarker] call CBA_fnc_waitAndExecute;
-    }] call CBA_fnc_addEventHandler;
-    ["ace_placedInBodyBag", {
-        params ["_patient", "_bodyBag"];
-        deleteMarker (_patient getVariable ["btc_body_deadMarker", ""]);
-        if (_patient getVariable ["btc_dont_delete", false]) then {
-            _bodyBag setVariable ["btc_isDeadPlayer", true];
-            _bodyBag setVariable ["btc_UID", _patient getVariable ["btc_UID", ""]];
-        };
-        [_bodyBag] call btc_log_fnc_init;
-    }] call CBA_fnc_addEventHandler;
+    ["btc_respawn_player", btc_respawn_fnc_player] call CBA_fnc_addEventHandler;
+    ["ace_placedInBodyBag", btc_body_fnc_setBodyBag] call CBA_fnc_addEventHandler;
 
     if !(btc_p_respawn_ticketsShare) then {
-        addMissionEventHandler ["PlayerConnected", {
-            params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
-            if (_name isEqualTo "__SERVER__") exitWith {};
-
-            [{
-                !isNull (_this call BIS_fnc_getUnitByUID)
-            }, {
-                private _tickets = btc_respawn_tickets getOrDefault [_this, btc_p_respawn_ticketsAtStart];
-                if (_tickets isEqualTo 0) then {
-                    _tickets = -1;
-                };
-                [
-                    _this call BIS_fnc_getUnitByUID,
-                    _tickets
-                ] call BIS_fnc_respawnTickets;
-            }, _uid, 4 * 60] call CBA_fnc_waitUntilAndExecute;
-        }];
+        addMissionEventHandler ["PlayerConnected", btc_respawn_fnc_playerConnected];
     };
 };
 
@@ -142,4 +125,4 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["CUP_MTVR_Base", "Truck_01_base_F", btc_supplies_cargo /*FIX: https://github.com/acemod/ACE3/pull/8344*/];
+} forEach ["CUP_MTVR_Base", "Truck_01_base_F"];

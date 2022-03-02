@@ -26,7 +26,7 @@ params [
     ["_rep", btc_global_reputation, [0]]
 ];
 
-private _houses = +(_city getVariable ["btc_city_houses", []]);
+private _houses = +(_city getVariable ["btc_city_housesEntrerable", []]);
 private _ratio = switch (true) do {
     case (_rep < 200): {1};
     case (_rep >= 200 && _rep < 500): {1/2};

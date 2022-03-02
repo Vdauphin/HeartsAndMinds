@@ -27,7 +27,9 @@ params [
     ["_radius", 100, [0]]
 ];
 
-private _houses = ([_city, _radius] call btc_fnc_getHouses) call BIS_fnc_arrayShuffle;
-_city setVariable ["btc_city_houses", _houses];
+([_city, _radius] call btc_fnc_getHouses) params ["_housesEntrerable", "_housesNotEntrerable"];
 
-_houses
+_city setVariable ["btc_city_housesEntrerable", _housesEntrerable call BIS_fnc_arrayShuffle];
+_city setVariable ["btc_city_housesNotEntrerable", _housesNotEntrerable call BIS_fnc_arrayShuffle];
+
+[_housesEntrerable, _housesNotEntrerable]

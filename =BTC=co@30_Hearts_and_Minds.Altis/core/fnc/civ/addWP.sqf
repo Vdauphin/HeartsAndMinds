@@ -31,7 +31,7 @@ params [
 [_group] call CBA_fnc_clearWaypoints;
 [_group, _pos, -1, "MOVE", "SAFE", "NO CHANGE", "LIMITED"] call CBA_fnc_addWaypoint;
 
-private _houses = [_pos, _radius] call btc_fnc_getHouses;
+private _houses = ([_pos, _radius] call btc_fnc_getHouses) select 0;
 if (_houses isNotEqualTo []) then {
     private _house = selectRandom _houses;
     [_group, _house] call btc_fnc_house_addWP_loop;

@@ -3,11 +3,13 @@
 Function: btc_int_fnc_orders
 
 Description:
-    Fill me when you edit me !
+    Send order to a unit or multiple units.
 
 Parameters:
-    _order - [Number]
-    _unit - [Object]
+    _order - Type of order [Number]
+    _unit - Unit targeted or not. [Object]
+    _radius - Radius of units search. [Number]
+    _vehicle - Who sent the order, player or vehicle. [Object]
 
 Returns:
 
@@ -23,16 +25,19 @@ Author:
 
 params [
     ["_order", 0, [0]],
-    ["_unit", objNull, [objNull]]
+    ["_unit", objNull, [objNull]],
+    ["_radius", btc_int_ordersRadius, [0]],
+    ["_vehicle", player, [objNull]]
 ];
 
-private _gesture = ["", "gestureFreeze", "gestureCover", "gestureGo", "gestureGo"] select _order;
+if (_vehicle isEqualTo player) then {
+    private _gesture = ["", "gestureFreeze", "gestureCover", "gestureGo", "gestureGo"] select _order;
+    _vehicle playActionNow _gesture;
+};
 
-player playActionNow _gesture;
-
-private _pos = getPos player;
-private _dir = getDir player;
-private _units = (_pos nearEntities [["Car", "Civilian_F"] + btc_civ_type_units, btc_int_radius_orders]) apply {driver _x};
+private _pos = getPos _vehicle;
+private _dir = getDir _vehicle;
+private _units = (_pos nearEntities [["Car", "Civilian_F"] + btc_civ_type_units, _radius]) apply {driver _x};
 
 if (_units isEqualTo []) exitWith {true};
 

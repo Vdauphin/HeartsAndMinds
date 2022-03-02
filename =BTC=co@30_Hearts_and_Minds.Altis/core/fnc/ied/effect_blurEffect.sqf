@@ -26,7 +26,7 @@ params [
     ["_caller", objNull, [objNull]]
 ];
 
-if (!isPlayer _caller) exitWith {};
+if !(isPlayer _caller) exitWith {};
 if (alive _caller) then {
     private _distance = (getPos _caller) distance _pos;
 

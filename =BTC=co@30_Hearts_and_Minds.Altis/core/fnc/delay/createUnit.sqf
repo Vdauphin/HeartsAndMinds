@@ -27,6 +27,8 @@ Author:
 btc_delay_time = btc_delay_time + 0.2;
 
 [{
+    btc_delay_time = btc_delay_time - 0.2;
+
     params [
         ["_group", grpNull, [grpNull]],
         ["_unit_type", "", [""]],
@@ -34,11 +36,6 @@ btc_delay_time = btc_delay_time + 0.2;
         ["_special", "CARGO", [""]],
         ["_vehicle", objNull, [objNull]]
     ];
-
-    if (isNull _group) exitWith {
-        [format ["isNull _group _this = %1", _this], __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
-        btc_delay_time = btc_delay_time - 0.2;
-    };
 
     if !(_pos isEqualType []) then {
         _pos = _pos get "_pos";
@@ -49,6 +46,4 @@ btc_delay_time = btc_delay_time + 0.2;
     if (!isNull _vehicle) then {
         _unit moveInAny _vehicle;
     };
-
-    btc_delay_time = btc_delay_time - 0.2;
 }, _this, btc_delay_time - 0.01] call CBA_fnc_waitAndExecute;

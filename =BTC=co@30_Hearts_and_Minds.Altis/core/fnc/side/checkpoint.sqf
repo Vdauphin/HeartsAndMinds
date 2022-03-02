@@ -28,7 +28,7 @@ params [
 private _useful = btc_city_all select {
     !isNull _x &&
     _x getVariable ["occupied", false] &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"])
 };
 if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 private _city = selectRandom _useful;
@@ -43,13 +43,15 @@ private _radius = _city getVariable ["cachingRadius", 0];
 
 private _boxes = [];
 private _composition = [];
-for "_i" from 1 to (1 + round random 2) do {
+private _blacklist = [];
+for "_i" from 1 to (2 + round random 2) do {
     //// Choose a road \\\\
     private _pos = [getPos _city, _radius/4] call btc_fnc_randomize_pos;
     private _roads = _pos nearRoads 200;
-    _roads = _roads select {isOnRoad _x};
-    if (_roads isEqualTo []) exitWith {_boxes pushBack objNull};
+    _roads = (_roads select {isOnRoad _x}) - _blacklist;
+    if (_roads isEqualTo []) then {continue};
     private _road = selectRandom _roads;
+    _blacklist pushBack _road;
     _pos = getPos _road;
 
     private _direction = [_road] call btc_fnc_road_direction;
@@ -110,6 +112,8 @@ for "_i" from 1 to (1 + round random 2) do {
     };
     _boxes pushBack _boxe;
 };
+
+if (_boxes isEqualTo []) then {[_taskID, "CANCELED"] call btc_task_fnc_setState;};
 
 waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||

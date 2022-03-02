@@ -29,16 +29,14 @@ private _useful = _city_all select {_x getVariable ["occupied", false] && {!(_x 
 
 if (_useful isEqualTo []) then {_useful = _city_all;};
 
-private _id = floor random count _useful;
-private _city = _useful select _id;
+private _city = selectRandom _useful;
 
 if (_city getVariable ["type", ""] in ["NameLocal", "Hill", "NameMarine"]) exitWith {
     [] call btc_cache_fnc_find_pos;
 };
 
-private _radius = _city getVariable ["cachingRadius", 200];
-private _pos = [getPos _city, _radius] call btc_fnc_randomize_pos;
-private _houses = [_pos, 50] call btc_fnc_getHouses;
+private _cachingRadius = _city getVariable ["cachingRadius", 200];
+private _houses = ([getPos _city, _cachingRadius/2] call btc_fnc_getHouses) select 0;
 
 if (_houses isEqualTo []) then {
     [] call btc_cache_fnc_find_pos

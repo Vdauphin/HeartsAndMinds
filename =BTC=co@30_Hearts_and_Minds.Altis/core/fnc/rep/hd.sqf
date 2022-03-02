@@ -47,7 +47,7 @@ if (
     }
 ) exitWith {_dam};
 
-if (!isServer) exitWith {
+if !(isServer) exitWith {
     _this remoteExecCall ["btc_rep_fnc_hd", 2];
     _dam
 };

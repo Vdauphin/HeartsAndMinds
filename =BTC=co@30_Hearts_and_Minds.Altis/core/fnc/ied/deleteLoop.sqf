@@ -6,6 +6,9 @@ Description:
     Remove wreck generated around IED.
 
 Parameters:
+    _unit - Not used. [Object]
+    _role - Not used. [String]
+    _vehicle - Vehice used. [Object]
 
 Returns:
 

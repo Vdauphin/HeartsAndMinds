@@ -24,7 +24,7 @@ params [
     ["_city", objNull, [objNull]]
 ];
 
-private _houses = +(_city getVariable ["btc_city_houses", []]);
+private _houses = +(_city getVariable ["btc_city_housesEntrerable", []]);
 
 private _numberOfHouses = count _houses;
 _houses = _houses select [0, round (_numberOfHouses * btc_p_info_houseDensity / 100)];

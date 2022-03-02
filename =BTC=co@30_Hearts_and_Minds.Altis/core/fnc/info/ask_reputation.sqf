@@ -3,16 +3,16 @@
 Function: btc_info_fnc_ask_reputation
 
 Description:
-    Fill me when you edit me !
+    Ask reputation level and display it.
 
 Parameters:
-    _man - [Object]
+    _man - Man. [Object]
 
 Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_info_fnc_ask_reputation;
+        cursorObject call btc_info_fnc_ask_reputation;
     (end)
 
 Author:

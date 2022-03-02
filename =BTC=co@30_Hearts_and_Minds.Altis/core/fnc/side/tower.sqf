@@ -27,7 +27,7 @@ params [
 private _useful = btc_city_all select {
     !isNull _x &&
     _x getVariable ["occupied", false] &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"])
 };
 if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 

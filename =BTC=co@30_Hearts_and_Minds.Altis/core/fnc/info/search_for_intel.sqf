@@ -3,10 +3,10 @@
 Function: btc_info_fnc_search_for_intel
 
 Description:
-    Fill me when you edit me !
+    Search a body for intel.
 
 Parameters:
-    _target - [Object]
+    _target - Body to search. [Object]
 
 Returns:
 

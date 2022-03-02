@@ -3,11 +3,11 @@
 Function: btc_info_fnc_has_intel
 
 Description:
-    Fill me when you edit me !
+    Check if the body or object have intel.
 
 Parameters:
-    _body - [Object]
-    _asker - [Object]
+    _body - Body or object to check. [Object]
+    _asker - Player asking for intel. [Object]
 
 Returns:
 

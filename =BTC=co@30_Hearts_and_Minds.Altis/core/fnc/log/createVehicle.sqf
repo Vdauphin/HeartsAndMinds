@@ -74,6 +74,6 @@ if (_flagTexture isNotEqualTo "") then {
     _veh forceFlagTexture _flagTexture;
 };
 
-_veh call btc_db_fnc_add_veh;
+_veh call btc_veh_fnc_add;
 
 _veh

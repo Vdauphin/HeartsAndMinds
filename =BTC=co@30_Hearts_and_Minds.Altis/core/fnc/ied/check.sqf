@@ -3,7 +3,7 @@
 Function: btc_ied_fnc_check
 
 Description:
-    Contantly check if player is around by calling btc_ied_fnc_checkLoop. If yes, trigger the explosion.
+    Constantly check if player is around by calling btc_ied_fnc_checkLoop. If yes, trigger the explosion.
 
 Parameters:
     _city - City where IED has been created. [Object]
@@ -29,11 +29,8 @@ if (_array isEqualTo []) exitWith {};
 
 private _ieds = _array apply {_x call btc_ied_fnc_create};
 
-if (btc_debug) then {
-    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
-};
-if (btc_debug_log) then {
-    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [false]] call btc_debug_fnc_message;
+if (btc_debug || btc_debug_log) then {
+    [format ["START CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
 };
 
 private _ieds_check = _ieds select {(_x select 2) isNotEqualTo objNull};

@@ -11,7 +11,7 @@ Parameters:
     _rinf_time - Not used. [Number]
     _cap_time - Time for next capture of city around. [Number]
     _id - Id of the city where the hideout is. [Number]
-    _markers_saved - Merkers find by player. [Array]
+    _markers_saved - Markers found by players. [Array]
 
 Returns:
 
@@ -75,12 +75,12 @@ if (_pos isEqualTo []) then {
     _city = btc_city_all select _id;
 };
 
+_city setVariable ["city_realPos", getPos _city];
 _city setPos _pos;
-_city setVariable ["ho_pos", _pos];
 if (btc_debug) then {deleteMarker format ["loc_%1", _id];};
 deleteVehicle (_city getVariable ["trigger_player_side", objNull]);
 
-[_pos, btc_hideouts_radius, _city, _city getVariable "occupied", _city getVariable "name", _city getVariable "type", _city getVariable "id"] call btc_city_fnc_trigger_player_side;
+[_city, btc_hideouts_radius, _city, _city getVariable "occupied", _city getVariable "name", _city getVariable "type", _city getVariable "id"] call btc_city_fnc_trigger_player_side;
 [{
     (_this select 0) findEmptyPositionReady (_this select 1)
 }, {}, [_pos, [0, _city getVariable ["cachingRadius", 100]]], 5 * 60] call CBA_fnc_waitUntilAndExecute;
@@ -97,6 +97,7 @@ _hideout setVariable ["cap_time", _cap_time];
 _hideout setVariable ["assigned_to", _city];
 
 _hideout addEventHandler ["HandleDamage", btc_hideout_fnc_hd];
+_hideout setVariable ["ace_cookoff_enable", false, true];
 
 private _markers = [];
 {

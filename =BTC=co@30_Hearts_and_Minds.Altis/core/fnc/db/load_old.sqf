@@ -55,7 +55,6 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
         } else {
             _marker setMarkerColor "colorGreen";
         };
-        _marker setMarkerText format ["loc_%3 %1 %2 - [%4]", _city getVariable "name", _city getVariable "type", _id, _occupied];
     };
     if (btc_debug_log) then {
         [format ["ID: %1 - IsOccupied %2", _id, _occupied], __FILE__, [false]] call btc_debug_fnc_message;
@@ -123,8 +122,11 @@ private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name]
 btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0];
 
 //Objects
-{deleteVehicle _x} forEach btc_vehicles;
-btc_vehicles = [];
+{deleteVehicle _x} forEach (getMissionLayerEntities "btc_vehicles" select 0);
+if !(isNil "btc_vehicles") then {
+    {deleteVehicle _x} forEach btc_vehicles;
+    btc_vehicles = [];
+};
 
 btc_load_fnc_migrateOldToNew_inventory = {
     params [
@@ -244,7 +246,7 @@ private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name]
         [_veh, _veh_cargo, _veh_cont call btc_load_fnc_migrateOldToNew_inventory] call btc_db_fnc_loadCargo;
 
         if !(alive _veh) then {
-            [_veh, objNull, objNull, false] call btc_veh_fnc_killed;
+            [_veh, objNull, objNull, nil, false] call btc_veh_fnc_killed;
         };
         if !(_ViV isEqualTo []) then {
             {

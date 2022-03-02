@@ -27,12 +27,10 @@ params [
 private _array = [_chopper] call btc_lift_fnc_getLiftable;
 private _cargo_array = nearestObjects [_chopper, _array, 30];
 _cargo_array = _cargo_array - [_chopper];
-_cargo_array = _cargo_array select {
-    !(
+_cargo_array = _cargo_array select {!(
     _x isKindOf "ACE_friesBase" OR
     _x isKindOf "ace_fastroping_helper"
-    )
-};
+)};
 if (_cargo_array isEqualTo []) exitWith {};
 private _cargo = _cargo_array select 0;
 

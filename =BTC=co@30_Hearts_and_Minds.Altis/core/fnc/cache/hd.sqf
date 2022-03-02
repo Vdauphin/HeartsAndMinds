@@ -36,7 +36,7 @@ params [
     ["_instigator", objNull, [objNull]]
 ];
 
-private _explosive = (getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0);
+private _explosive = getNumber (configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
 
 if (
     !(_cache getVariable ["btc_cache_fnc_hd_fired", false]) &&

@@ -49,6 +49,7 @@ _veh setPos _vehpos;
 private _unit_type = selectRandom btc_civ_type_units;
 private _group = createGroup civilian;
 _group setVariable ["no_cache", true];
+_group setVariable ["acex_headless_blacklist", true];
 private _unit = _group createUnit [_unit_type, _pos, [], 0, "NONE"];
 private _index = 1 + floor (random (_veh emptyPositions "cargo"));
 _unit assignAsCargoIndex [_veh, _index];

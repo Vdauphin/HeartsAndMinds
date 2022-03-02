@@ -40,7 +40,7 @@ btc_lift_action_hud = player addAction ["<t color=""#ED2744"">" + (localize "STR
         [] call btc_lift_fnc_hud;
     };
 }, [], -8, false, false, "", "true"]; //"<t color=""#ED2744"">" + ("Hud On\Off") + "</t>"
-btc_lift_action = player addAction ["<t color=""#ED2744"">" + (localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK") + "</t>",{[] call btc_lift_fnc_hook}, [], 9, true, false, "", "[] call btc_lift_fnc_check"]; //"<t color=""#ED2744"">" + ("Hook") + "</t>"
+btc_lift_action = player addAction ["<t color=""#ED2744"">" + (localize "STR_BTC_HAM_LOG_HOOK") + "</t>",{[] call btc_lift_fnc_hook}, [], 9, true, false, "", "[] call btc_lift_fnc_check"]; //"<t color=""#ED2744"">" + ("Hook") + "</t>"
 
 waitUntil {sleep 5; (vehicle player isEqualTo player)};
 

@@ -9,7 +9,7 @@ btc_custom_loc = [
 /*
     Here you can tweak spectator view during respawn screen.
 */
-BIS_respSpecAi = true;                   // Allow spectating of AI
+BIS_respSpecAi = false;                  // Allow spectating of AI
 BIS_respSpecAllowFreeCamera = false;     // Allow moving the camera independent from units (players)
 BIS_respSpecAllow3PPCamera = false;      // Allow 3rd person camera
 BIS_respSpecShowFocus = false;           // Show info about the selected unit (dissapears behind the respawn UI)

@@ -27,7 +27,7 @@ if !(btc_p_spect) exitWith {};
 
     if (_emp isEqualTo []) exitWith {};
 
-    private _vehiclesOn = vehicles select {isEngineOn _x && {_x isKindOf "AllVehicles"}};
+    private _vehiclesOn = vehicles select {isEngineOn _x && {_x isKindOf "allVehicles"}};
     private _vehiclesAround = [];
     {
         _vehiclesAround append (_vehiclesOn inAreaArray [getPosWorld _x, _range, _range]);

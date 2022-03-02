@@ -3,7 +3,7 @@
 Function: btc_fnc_create_composition
 
 Description:
-    Create a composition based on an array containing line for each object of a composition. An objects is describe by : [type of object, direction, real position].
+    Create a composition based on an array containing line for each object of a composition. An objects is describe by: [type of object, direction, real position].
 
 Parameters:
     _pos - Position where the composition will be created. [Array]

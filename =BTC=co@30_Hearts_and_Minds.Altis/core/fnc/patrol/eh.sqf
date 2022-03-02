@@ -49,7 +49,7 @@ if (_veh isEqualType objNull) then {
 
     [[], [_veh, _group]] call btc_fnc_delete;
 } else {
-    private _vehicle = (assignedVehicle leader _veh);
+    private _vehicle = assignedVehicle leader _veh;
     _vehicle setVariable ["btc_patrol_fnc_eh_fired", true, true];
     [[], [_vehicle, _veh]] call btc_fnc_delete;
 };

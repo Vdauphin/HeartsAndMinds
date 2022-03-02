@@ -3,13 +3,13 @@
 Function: btc_int_fnc_orders_give
 
 Description:
-    Fill me when you edit me !
+    Send order to units
 
 Parameters:
-    _units - [Array]
-    _dir - [Number]
-    _order - [Number]
-    _wp_pos - [Array]
+    _units - Units. [Array]
+    _dir - Direction of the order. [Number]
+    _order - Type of order. [Number]
+    _wp_pos - Position to reach (taxi). [Array]
 
 Returns:
 

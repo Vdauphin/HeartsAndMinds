@@ -59,16 +59,4 @@ switch (true) do {
     };
 };
 
-if (btc_debug || btc_debug_log) then {
-    [
-        format ["IsMedic: %1 IsAdvEngineer: %2 IsExplosiveSpecialist: %3 IsAT: %4 IsAA: %5",
-            _player getUnitTrait "medic",
-            _player getVariable ["ace_isEngineer", 0],
-            _player getUnitTrait "explosiveSpecialist",
-            [typeOf _player, ["MissileLauncher", "128 + 512"]] call btc_mil_fnc_ammoUsage,
-            [typeOf _player, ["MissileLauncher", "256"]] call btc_mil_fnc_ammoUsage
-        ], __FILE__, [btc_debug, btc_debug_log]
-    ] call btc_debug_fnc_message;
-};
-
 _type_ammoUsageAllowed

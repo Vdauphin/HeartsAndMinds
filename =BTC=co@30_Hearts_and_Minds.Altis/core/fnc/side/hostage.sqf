@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] spawn btc_side_fnc_hostage;
+        [false, "btc_side_fnc_hostage"] spawn btc_side_fnc_create;
     (end)
 
 Author:
@@ -28,7 +28,7 @@ params [
 private _useful = btc_city_all select {
     !isNull _x &&
     _x getVariable ["occupied", false] &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"])
 };
 
 if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
@@ -36,7 +36,8 @@ if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 private _city = selectRandom _useful;
 
 //// Randomise position \\\\
-private _houses = [getPos _city, 100] call btc_fnc_getHouses;
+private _houses = ([getPos _city, 100] call btc_fnc_getHouses) select 0;
+_houses = _houses select {count (_x buildingPos -1) > 1}; // Building with low enterable positions are not interesting
 if (_houses isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 _houses = _houses apply {[count (_x buildingPos -1), _x]};
 _houses sort false;
@@ -49,7 +50,7 @@ if (count _houses > 3) then {
 private _buildingPos = _house buildingPos -1;
 _buildingPos = _buildingPos select [0, count _buildingPos min 20];
 private _pos_number = count _buildingPos - 1;
-private _pos = _buildingPos select (_pos_number - round random 1);
+private _pos = _buildingPos select (_pos_number - ((round random 1) min _pos_number));
 
 _city setVariable ["spawn_more", true];
 

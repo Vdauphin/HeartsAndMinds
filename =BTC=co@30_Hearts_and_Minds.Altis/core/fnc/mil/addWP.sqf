@@ -35,17 +35,27 @@ private _rpos = [_pos, _area] call btc_fnc_randomize_pos;
 
 switch (_wp) do {
     case ("HOUSE") : {
-        private _houses = [_city, _area] call btc_fnc_getHouses;
+        private _houses = ([_city, _area] call btc_fnc_getHouses) select 0;
         if (_houses isNotEqualTo []) then {
             private _house = selectRandom _houses;
             [_group, _house] call btc_fnc_house_addWP;
             _group setVariable ["btc_inHouse", typeOf _house];
         } else {
-            [_group, _rpos, _area, 2 + floor (random 4), "MOVE", "SAFE", "RED", ["LIMITED", "NORMAL"] select ((vehicle leader _group) isKindOf "Air"), "STAG COLUMN", "", [5, 10, 20]] call CBA_fnc_taskPatrol;
+            [
+                _group, _rpos,
+                _area, 2 + floor (random 4), "MOVE", "SAFE", "RED",
+                ["LIMITED", "NORMAL"] select ((vehicle leader _group) isKindOf "Air"),
+                "STAG COLUMN", "", [5, 10, 20]
+            ] remoteExecCall ["CBA_fnc_taskPatrol", groupOwner _group];
         };
     };
     case ("PATROL") : {
-        [_group, _rpos, _area, 2 + floor (random 4), "MOVE", "AWARE", "RED", ["LIMITED", "NORMAL"] select ((vehicle leader _group) isKindOf "Air"), "STAG COLUMN", "", [5, 10, 20]] call CBA_fnc_taskPatrol;
+        [
+            _group, _rpos,
+            _area, 2 + floor (random 4), "MOVE", "AWARE", "RED",
+            ["LIMITED", "NORMAL"] select ((vehicle leader _group) isKindOf "Air"),
+            "STAG COLUMN", "", [5, 10, 20]
+        ] remoteExecCall ["CBA_fnc_taskPatrol", groupOwner _group];
     };
     case ("SENTRY") : {
         [_group] call CBA_fnc_clearWaypoints;

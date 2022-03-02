@@ -3,7 +3,7 @@
 Function: btc_int_fnc_shortcuts
 
 Description:
-    Fill me when you edit me !
+    Create CBA keybinds to orders.
 
 Parameters:
 

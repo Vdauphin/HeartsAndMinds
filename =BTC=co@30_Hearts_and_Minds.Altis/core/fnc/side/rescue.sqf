@@ -28,7 +28,7 @@ params [
 private _useful = btc_city_all select {
     !isNull _x &&
     _x getVariable ["occupied", false] &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"])
 };
 
 if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
@@ -40,6 +40,8 @@ private _pos = [getPos _city, (_city getVariable ["cachingRadius", 0])/2 - 100] 
 _pos = [_pos, 0, 50, 13, 0, 60 * (pi / 180), 0] call btc_fnc_findsafepos;
 
 _city setVariable ["spawn_more", true];
+
+waitUntil {!isNil "btc_vehicles"}; // Wait for loading vehicles from db
 
 private _heli_type = typeOf selectRandom ((btc_vehicles + btc_veh_respawnable) select {
     _x isKindOf "air" &&
@@ -69,7 +71,7 @@ _group setVariable ["no_cache", true];
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
 _crew createUnit [_pos, _group];
 
-[_taskID, 13, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 13, _city, _city getVariable "name"] call btc_task_fnc_create;
 private _find_taskID = _taskID + "mv";
 [[_find_taskID, _taskID], 20, objNull, _crew] call btc_task_fnc_create;
 private _back_taskID = _taskID + "bk";
@@ -86,7 +88,7 @@ private _triggers = [];
     //// Create trigger \\\\
     private _trigger = createTrigger ["EmptyDetector", getPos _city, false];
     _trigger setVariable ["unit", _x];
-    _trigger setTriggerArea [50, 50, 0, false, 10];
+    _trigger setTriggerArea [20, 20, 0, false, 10];
     _trigger setTriggerActivation [str btc_player_side, "PRESENT", false];
     _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_task_fnc_create;", _find_taskID, _back_taskID, _taskID], ""];
     _trigger attachTo [_x, [0, 0, 0]];

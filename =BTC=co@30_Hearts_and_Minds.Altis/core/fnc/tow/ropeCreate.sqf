@@ -23,7 +23,7 @@ Author:
 
 params [
     ["_tower", objNull, [objNull]],
-    ["_vehicleSelected", btc_tow_vehicleSelected, [objNull]]
+    ["_vehicleSelected", objNull, [objNull]]
 ];
 
 if !([_tower, _vehicleSelected] call btc_tow_fnc_check) exitWith {};
@@ -41,7 +41,7 @@ if (_alreadyLoaded) then {
 };
 if (_canViV_wreck) exitWith {
     [_vehicleSelected, _tower] remoteExecCall ["btc_tow_fnc_ViV", 2];
-    btc_tow_vehicleSelected = objNull;
+    btc_tow_vehicleTowing = objNull;
 };
 
 private _model_selected = (0 boundingBoxReal _vehicleSelected) select 1;
@@ -58,19 +58,16 @@ _vehicleSelected attachTo [_tower, _attachTo];
 private _model_rear_tower = ([_tower] call btc_tow_fnc_hitch_points) select 1;
 private _model_front_selected = ([_vehicleSelected] call btc_tow_fnc_hitch_points) select 0;
 private _selected_front_relativeToTower = _tower worldToModel (_vehicleSelected modelToWorld _model_front_selected);
-private _helper = createVehicle ["CBA_NamespaceDummy", _vehicleSelected modelToWorld _model_front_selected, [], 0, "CAN_COLLIDE"]; // Need helper since 2.06 https://feedback.bistudio.com/T161256
-_helper attachTo [_tower, _selected_front_relativeToTower];
-private _rope1 = ropeCreate [_tower, _model_rear_tower, _helper, [-0.4, 0, 0]];
-private _rope2 = ropeCreate [_tower, _model_rear_tower, _helper, [0.4, 0, 0]];
+private _rope1 = ropeCreate [_tower, _model_rear_tower, _tower, _selected_front_relativeToTower vectorAdd [-0.4, 0, 0]];
+private _rope2 = ropeCreate [_tower, _model_rear_tower, _tower, _selected_front_relativeToTower vectorAdd [0.4, 0, 0]];
 
-[_tower, "RopeBreak", {
-    [_this, _thisArgs] call btc_tow_fnc_ropeBreak;
-    deleteVehicle (_thisArgs select 2)
-},
-    [_vehicleSelected, [_rope1, _rope2], _helper]
+[
+    _tower, "RopeBreak",
+    {[_this, _thisArgs] call btc_tow_fnc_ropeBreak},
+    [_vehicleSelected, [_rope1, _rope2]]
 ] remoteExecCall ["CBA_fnc_addBISEventHandler", 2];
 
 [_tower, getMass _tower + (getMass _vehicleSelected)/1.5] remoteExecCall ["setMass", _tower];
 _tower setVariable ["btc_towing", _vehicleSelected, true];
 _vehicleSelected setVariable ["btc_towing", _tower, true];
-btc_tow_vehicleSelected = objNull;
+btc_tow_vehicleTowing = objNull;

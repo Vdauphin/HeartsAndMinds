@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_tow_vehicleSelected, cursorObject] call btc_tow_fnc_ViV;
+        [cursorObject, btc_tow_vehicleTowing] call btc_tow_fnc_ViV;
     (end)
 
 Author:

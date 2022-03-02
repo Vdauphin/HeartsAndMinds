@@ -3,7 +3,7 @@
 Function: btc_hideout_fnc_hd
 
 Description:
-    Fill me when you edit me !
+    Trigger hideout explosion if all condition are met.
 
 Parameters:
     _hideout - Object to destroy. [Object]
@@ -41,7 +41,8 @@ private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") 
 if (
     _explosive &&
     {!(_hideout getVariable ["btc_mil_fnc_hd_hideout_fired", false])} &&
-    {_damage > 0.6}
+    {_damage > 0.6} &&
+    {isPlayer [_instigator]}
 ) then {
     _hideout setVariable ["btc_mil_fnc_hd_hideout_fired", true];
 

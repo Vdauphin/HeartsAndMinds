@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [group player, ([getPos player] call btc_fnc_getHouses) select 0] call btc_fnc_house_addWP;
+        [group player, (([getPos player] call btc_fnc_getHouses) select 0) select 0] call btc_fnc_house_addWP;
     (end)
 
 Author:

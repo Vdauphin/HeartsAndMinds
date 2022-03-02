@@ -27,14 +27,14 @@ params [
 private _useful = btc_city_all select {
     !isNull _x &&
     !(_x getVariable ["occupied", false]) &&
-    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])
+    !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine", "StrongpointArea"])
 };
-if (_useful isEqualTo []) then {_useful = + (btc_city_all select {!(isNull _x)});};
+if (_useful isEqualTo []) then {_useful = + (btc_city_all select {!isNull _x});};
 
 private _city = selectRandom _useful;
 private _pos = [getPos _city, 0, _city getVariable ["cachingRadius", 100], 30, false] call btc_fnc_findsafepos;
 
-[_taskID, 30, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
+[_taskID, 30, _city, _city getVariable "name"] call btc_task_fnc_create;
 
 private _distance_between_fences = 3;
 private _number_of_fences = 2 * (3 + floor random 2);
@@ -140,7 +140,6 @@ _composition_pattern append [
 ];
 
 private _composition_objects = [_pos, random 360, _composition_pattern] call btc_fnc_create_composition;
-btc_chem_decontaminate append (_composition_objects select {_x isKindOf "DeconShower_01_F"});
 
 private _chemical = [];
 for "_i" from 1 to (5 + round random 5) do {
@@ -176,7 +175,8 @@ if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
 private _locate_taskID = _taskID + "lc";
 [[_locate_taskID, _taskID], 32, _pos, typeOf((_chemical arrayIntersect btc_chem_contaminated) select 0)] call btc_task_fnc_create;
 private _clean_taskID = _taskID + "cl";
-[[_clean_taskID, _taskID], 33, btc_bigShower, typeOf btc_bigShower] call btc_task_fnc_create;
+private _bigShower = selectRandom (btc_chem_decontaminate select {_x isKindOf "DeconShower_02_F"});
+[[_clean_taskID, _taskID], 33, _bigShower, typeOf _bigShower] call btc_task_fnc_create;
 
 waitUntil {sleep 5; 
     _taskID call BIS_fnc_taskCompleted ||

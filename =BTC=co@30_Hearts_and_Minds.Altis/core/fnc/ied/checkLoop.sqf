@@ -46,7 +46,7 @@ Author:
                             [getPos _wreck] call btc_rep_fnc_call_militia;
                         };
                     };
-                } forEach (_ied nearEntities ["allvehicles", 10]);
+                } forEach (_ied nearEntities ["allVehicles", btc_ied_range]);
             } else {
                 _ieds_check = _ieds_check - [_ied];
             };
@@ -68,11 +68,8 @@ Author:
 
     _city setVariable ["ieds", _data];
 
-    if (btc_debug) then {
-        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
-    };
-    if (btc_debug_log) then {
-        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [false]] call btc_debug_fnc_message;
+    if (btc_debug || btc_debug_log) then {
+        [format ["END CITY ID %1", _city getVariable "id"], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
     };
 
 }, _this, 1] call CBA_fnc_waitAndExecute;

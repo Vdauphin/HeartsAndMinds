@@ -3,14 +3,15 @@
 Function: btc_fnc_getHouses
 
 Description:
-    Get open houses around a position.
+    Get enterable and not enterable houses around a position.
 
 Parameters:
     _pos - Position to search for houses. [Array]
     _radius - Radius of search. [Number]
 
 Returns:
-	_useful - Useful open houses. [Array]
+	_enterable - Useful open houses. [Array]
+    _notEnterable - Useful not open houses. [Array]
 
 Examples:
     (begin example)
@@ -27,7 +28,21 @@ params [
     ["_radius", 100, [0]]
 ];
 
-private _buildings = nearestObjects [_pos, ["Building"], _radius];
-private _useful = _buildings select {(_x buildingPos -1) isNotEqualTo [] && {damage _x isEqualTo 0}};
+private _enterable = [];
+private _notEnterable = [];
+{
+    if (damage _x isNotEqualTo 0) then {continue;};
+    if ((_x buildingPos -1) isEqualTo []) then {
+        if (
+            _x isKindOf "Lamps_base_F" ||
+            {_x isKindOf "PowerLines_Small_base_F"} ||
+            {_x isKindOf "PowerLines_Wires_base_F"} ||
+            {_x isKindOf "Wall"}
+        ) then {continue;};
+        _notEnterable pushBack _x;
+    } else {
+        _enterable pushBack _x;
+    };
+} forEach (nearestObjects [_pos, ["Building"], _radius]);
 
-_useful
+[_enterable, _notEnterable]

@@ -28,7 +28,7 @@ params [
 _dogtagDataTaken params [
     ["_dogtagData", [], [[]]],
     ["_dogtagTaken", false, [false]],
-    ["_isDeadPlayer", false, [false]]
+    ["_UID", "", [""]]
 ];
 
 if (_dogtagData isNotEqualTo []) then {
@@ -36,5 +36,5 @@ if (_dogtagData isNotEqualTo []) then {
     if (_dogtagTaken) then {
         _deadBody setVariable ["ace_dogtags_dogtagTaken", _deadBody, true];
     };
-    _deadBody setVariable ["btc_isDeadPlayer", _isDeadPlayer];
+    _deadBody setVariable ["btc_UID", _UID];
 };

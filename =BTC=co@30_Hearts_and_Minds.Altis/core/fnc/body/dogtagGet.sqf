@@ -3,7 +3,7 @@
 Function: btc_body_fnc_dogtagGet
 
 Description:
-    Get ACE dogtag data.
+    Get ACE dogtag data and player UID.
 
 Parameters:
     _deadBody - Dead body or body bag. [Object]
@@ -27,5 +27,5 @@ params [
 [
     _unit call ace_dogtags_fnc_getDogtagData,
     !isNull (_unit getVariable ["ace_dogtags_dogtagTaken", objNull]),
-    _unit getVariable ["btc_isDeadPlayer", false]
+    _unit getVariable ["btc_UID", ""]
 ]

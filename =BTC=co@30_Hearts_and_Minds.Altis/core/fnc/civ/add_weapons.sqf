@@ -21,14 +21,10 @@ Author:
 ---------------------------------------------------------------------------- */
 
 params [
-    ["_unit", objNull, [objNull]]
+    ["_unit", objNull, [objNull]],
+    ["_weapon", "", [""]],
+    ["_magazine", "", [""]]
 ];
-
-private _playableUnits = playableUnits inAreaArray [getPosWorld _unit, 50, 50];
-private _hgun = _playableUnits findIf {[_x, _unit] call btc_fnc_check_los} != -1;
-
-private _weapon = selectRandom ([btc_w_civs select 0, btc_w_civs select 1] select _hgun);
-private _magazine = (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0;
 
 (uniformContainer _unit) addMagazineCargo [_magazine, 5];
 _unit addWeapon _weapon;

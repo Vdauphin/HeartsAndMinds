@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_create_object_point] call btc_arsenal_fnc_garage;
+        [btc_create_object_point] spawn btc_arsenal_fnc_garage;
     (end)
 
 Author:

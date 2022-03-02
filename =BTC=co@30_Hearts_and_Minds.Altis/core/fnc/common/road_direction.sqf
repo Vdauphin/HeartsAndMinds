@@ -25,9 +25,5 @@ params [
     ["_road", objNull, [objNull]]
 ];
 
-private _roadConnectedTo = roadsConnectedTo _road;
-if (_roadConnectedTo isEqualTo []) exitWith {0};
-private _connectedRoad = _roadConnectedTo select 0;
-private _direction = _road getDir _connectedRoad;
-
-_direction
+private _info = getRoadInfo _road;
+(_info select 6) getDir (_info select 7)

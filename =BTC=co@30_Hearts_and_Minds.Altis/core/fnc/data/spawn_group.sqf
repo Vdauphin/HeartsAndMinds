@@ -16,6 +16,7 @@ Parameters:
         _array_wp - Waypoints of group. [Array]
         _array_veh - Vehicle occupied by the group. [Array, String]
     _city - City. [Object]
+    _spawningRadius - Spawning radius. [Number]
 
 Returns:
     _delay - Delay due to vehicle spawn. [Number]
@@ -32,7 +33,8 @@ Author:
 
 params [
     ["_data_unit", [], [[]]],
-    ["_city", objNull, [objNull]]
+    ["_city", objNull, [objNull]],
+    ["_spawningRadius", 100, [0]]
 ];
 _data_unit params [
     ["_type", 1, [0]],
@@ -47,11 +49,11 @@ _data_unit params [
 
 private _delay = 0;
 if (_type isEqualTo 5) exitWith {
-    [_city, 100, _array_pos select 0, _array_type select 0] call btc_ied_fnc_suicider_create;
+    [_city, _spawningRadius, _array_pos select 0, _array_type select 0] call btc_ied_fnc_suicider_create;
     _delay
 };
 if (_type isEqualTo 7) exitWith {
-    [_city, 100, _array_pos select 0] call btc_ied_fnc_drone_create;
+    [_city, _spawningRadius, _array_pos select 0] call btc_ied_fnc_drone_create;
     _delay
 };
 
@@ -108,6 +110,6 @@ if (_type isEqualTo 1) then {
         [_group, _array_veh select 0] call btc_civ_fnc_addWP;
         _group setVariable ["btc_data_inhouse", _array_veh];
     };
-}, [_data_unit, _group], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
+}, [_data_unit, _group], _delay] call btc_delay_fnc_waitAndExecute;
 
 _delay

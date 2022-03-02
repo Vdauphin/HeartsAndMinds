@@ -27,7 +27,7 @@ params [
 private _minNumberOfSubTask = 2;
 private _useful = btc_city_all select {
     !isNull _x &&
-    {_x getVariable ["type", ""] != "NameMarine"} &&
+    {!(_x getVariable ["type", ""] in ["NameMarine", "StrongpointArea"])} &&
     {
         private _city = _x;
         ({

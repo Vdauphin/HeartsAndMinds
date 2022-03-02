@@ -9,6 +9,7 @@ Parameters:
     _vehicle - Vehicle object. [Object]
     _killer - Killer. [Object]
     _instigator - Person who pulled the trigger. [Object]
+    _useEffects - Same as useEffects in setDamage alt syntax. [Boolean]
     _allowRepChange - Allow reputation change. [Boolean]
 
 Returns:
@@ -27,6 +28,7 @@ params [
     ["_vehicle", objNull, [objNull]],
     ["_killer", objNull, [objNull]],
     ["_instigator", objNull, [objNull]],
+    ["_useEffects", true, [false]],
     ["_allowRepChange", true, [false]]
 ];
 

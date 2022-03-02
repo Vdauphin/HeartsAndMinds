@@ -85,7 +85,11 @@ for "_i" from 1 to _numberOfGroup do {
         case ("PATROL") : {
             [{
                 params ["_group", "_hashMapGroup", "_area"];
-                [_group, _hashMapGroup get "_pos", _area, 2 + floor (random 4), "MOVE", "SAFE", "RED", "LIMITED", "STAG COLUMN", "", [5, 10, 20]] call CBA_fnc_taskPatrol;
+                [
+                    _group, _hashMapGroup get "_pos", _area,
+                    2 + floor (random 4), "MOVE", "SAFE", "RED",
+                    "LIMITED", "STAG COLUMN", "", [5, 10, 20]
+                ] remoteExecCall ["CBA_fnc_taskPatrol", groupOwner _group];
             }, [_group, _hashMapGroup, _area], btc_delay_time] call CBA_fnc_waitAndExecute;
         };
         case ("SENTRY") : {

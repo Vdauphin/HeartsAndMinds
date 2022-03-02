@@ -31,65 +31,23 @@ switch true do {
     case (_type isKindOf "UGV_02_Base_F") : {};
     case (_type isKindOf "StaticWeapon") : {};
     case (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"}) : {
-        private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_tow_fnc_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_tow_fnc_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+        _type call btc_tow_fnc_int;
 
-        private _action = ["btc_flag_deployVeh", localize "STR_BTC_HAM_ACTION_VEHINIT_DEPLOYFLAG", "\A3\ui_f\data\map\markers\handdrawn\flag_CA.paa", {}, {
-            btc_p_flag > 0 &&
-            {getForcedFlagTexture _target isEqualTo ""} &&
-            {(driver vehicle player) isEqualTo player}
-        }, btc_flag_fnc_deploy] call ace_interact_menu_fnc_createAction;
-        [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["btc_flag_cutVeh", localize "STR_BTC_HAM_ACTION_VEHINIT_CUTFLAG", "\A3\ui_f\data\map\markers\handdrawn\flag_CA.paa", {
-            _target forceFlagTexture "";
-        }, {
-            btc_p_flag > 0 &&
-            {getForcedFlagTexture _target isNotEqualTo ""} &&
-            {(driver vehicle player) isEqualTo player}
-        }] call ace_interact_menu_fnc_createAction;
-        [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+        _type call btc_flag_fnc_int;
     };
     case (_type isKindOf "Helicopter") : {
-        private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_tow_fnc_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+        _type call btc_tow_fnc_int;
+
         //Lift
         _action = ["Deploy_ropes", localize "STR_ACE_Fastroping_Interaction_deployRopes", "\A3\ui_f\data\igui\cfg\simpleTasks\types\container_ca.paa", {[] spawn btc_lift_fnc_deployRopes;}, {!btc_ropes_deployed && {(driver vehicle player) isEqualTo player} && {(getPosATL player) select 2 > 4}}] call ace_interact_menu_fnc_createAction;
         [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
         _action = ["Cut_ropes", localize "STR_ACE_Fastroping_Interaction_cutRopes", "\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa", {[] call btc_lift_fnc_destroyRopes;}, {btc_ropes_deployed && {(driver vehicle player) isEqualTo player}}] call ace_interact_menu_fnc_createAction;
         [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-        private _action = ["btc_flag_deployVeh", localize "STR_BTC_HAM_ACTION_VEHINIT_DEPLOYFLAG", "\A3\ui_f\data\map\markers\handdrawn\flag_CA.paa", {}, {
-            btc_p_flag > 0 &&
-            {getForcedFlagTexture _target isEqualTo ""} &&
-            {(driver vehicle player) isEqualTo player}
-        }, btc_flag_fnc_deploy] call ace_interact_menu_fnc_createAction;
-        [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["btc_flag_cutVeh", localize "STR_BTC_HAM_ACTION_VEHINIT_CUTFLAG", "\A3\ui_f\data\map\markers\handdrawn\flag_CA.paa", {
-            _target forceFlagTexture "";
-        }, {
-            btc_p_flag > 0 &&
-            {getForcedFlagTexture _target isNotEqualTo ""} &&
-            {(driver vehicle player) isEqualTo player}
-        }] call ace_interact_menu_fnc_createAction;
-        [_type, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+        _type call btc_flag_fnc_int;
     };
     case (_type isKindOf "Plane") : {
-        private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_tow_fnc_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
-        [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+        _type call btc_tow_fnc_int;
     };
 };
 

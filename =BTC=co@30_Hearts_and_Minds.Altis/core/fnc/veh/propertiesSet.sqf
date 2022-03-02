@@ -79,7 +79,7 @@ if (_supplyVehicle isNotEqualTo []) then {
         ["_currentSupply", -1, [0]]
     ];
 
-    if (_isSupplyVehicle && !([_vehicle] call ace_rearm_fnc_isSource)) then {
+    if (_isSupplyVehicle) then {
         [_vehicle, _currentSupply] call ace_rearm_fnc_makeSource;
     };
 };

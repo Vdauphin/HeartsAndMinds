@@ -57,7 +57,6 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
         } else {
             _marker setMarkerColor "colorGreen";
         };
-        _marker setMarkerText format ["loc_%3 %1 %2 - [%4]", _city getVariable "name", _city getVariable "type", _id, _occupied];
     };
     if (btc_debug_log) then {
         [format ["ID: %1 - IsOccupied %2", _id, _occupied], __FILE__, [false]] call btc_debug_fnc_message;
@@ -125,8 +124,11 @@ private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name]
 btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0];
 
 //Objects
-{deleteVehicle _x} forEach btc_vehicles;
-btc_vehicles = [];
+{deleteVehicle _x} forEach (getMissionLayerEntities "btc_vehicles" select 0);
+if !(isNil "btc_vehicles") then {
+    {deleteVehicle _x} forEach btc_vehicles;
+    btc_vehicles = [];
+};
 
 private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []]);
 [{ // Can't use ace_cargo for objects created during first frame.
@@ -174,7 +176,7 @@ private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name]
         [_veh, _veh_cargo, _veh_inventory] call btc_db_fnc_loadCargo;
 
         if !(alive _veh) then {
-            [_veh, objNull, objNull, false] call btc_veh_fnc_killed;
+            [_veh, objNull, objNull, nil, false] call btc_veh_fnc_killed;
         };
         if (_ViV isNotEqualTo []) then {
             {
@@ -222,13 +224,12 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     private _deadBodyPlayers = +(profileNamespace getVariable [format ["btc_hm_%1_deadBodyPlayers", _name], []]);
     private _group = createGroup btc_player_side;
     btc_body_deadPlayers  = _deadBodyPlayers apply {
-        _x params ["_type", "_pos", "_dir", "_loadout", "_dogtagData", "_dogtagTaken", "_isContaminated",
-            ["_uid", "", [""]],
+        _x params ["_type", "_pos", "_dir", "_loadout", "_dogtag", "_isContaminated",
             ["_flagTexture", "", [""]]
         ];
         private _body = _group createUnit [_type, ASLToAGL _pos, [], 0, "CAN_COLLIDE"];
         _body setUnitLoadout _loadout;
-        [_body, [_dogtagData, _dogtagTaken]] call btc_body_fnc_dogtagSet;
+        [_body, _dogtag] call btc_body_fnc_dogtagSet;
 
         if (_isContaminated) then {
             if ((btc_chem_contaminated pushBackUnique _body) > -1) then {
@@ -237,7 +238,6 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         };
         _body setDamage 1;
         _body setVariable ["btc_dont_delete", true];
-        _body setVariable ["btc_UID", _uid];
         _body forceFlagTexture _flagTexture;
 
         [{

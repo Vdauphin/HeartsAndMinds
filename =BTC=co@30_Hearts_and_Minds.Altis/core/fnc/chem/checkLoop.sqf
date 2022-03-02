@@ -35,7 +35,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     } forEach allUnitsUAV;
     private _units = allUnits - _allUnitsUAV;
     private _objtToDecontaminate = [];
-    private _unitsContaminated = _contaminated select {_x in _units};
+    private _unitsContaminated = _contaminated arrayIntersect _units;
     {
         (0 boundingBoxReal _x) params ["_p1", "_p2"];
         private _maxWidth = abs ((_p2 select 0) - (_p1 select 0));
@@ -75,6 +75,7 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     } forEach _contaminated;
 
     if (_unitContaminate isEqualTo []) exitWith {};
+
     private _periode = 3 / count _unitContaminate;
     {
         private _notAlready = _contaminated pushBackUnique _x > -1;
