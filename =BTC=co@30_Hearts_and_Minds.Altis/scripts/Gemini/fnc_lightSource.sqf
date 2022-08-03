@@ -1,0 +1,10 @@
+﻿private _target = _this select 0;
+private _position = _this select 1;
+private _color = _this select 2;
+private _brightness = _this select 3;
+private _light = "#lightpoint" createVehicle (position _target);
+_light setLightBrightness _brightness;
+_light setLightAmbient [0.5, 0.5, 0.5];
+_light setLightColor _color;
+_light lightAttachObject [_target, _position];
+_light setLightAttenuation [3,6,6,0,3,12];

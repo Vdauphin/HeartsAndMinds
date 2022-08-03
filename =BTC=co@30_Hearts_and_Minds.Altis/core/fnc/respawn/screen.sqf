@@ -32,10 +32,6 @@ if !(btc_p_respawn_ticketsShare) then {
     [
         {[player] call BIS_fnc_respawnTickets isNotEqualTo -1},
         {
-            if (btc_debug_log) then {
-                [format ["_respawnTickets %1", [player] call BIS_fnc_respawnTickets], __FILE__, [false]] call btc_debug_fnc_message;
-            };
-
             if ([player] call BIS_fnc_respawnTickets > 0) exitWith {};
             [
                 {scriptDone btc_intro_done},

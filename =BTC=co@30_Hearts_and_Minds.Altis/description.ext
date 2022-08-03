@@ -1,6 +1,6 @@
 
 loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+author = "Giallustio & Proxno";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
@@ -28,7 +28,17 @@ class RscTitles {
 #include "core\fnc\task\taskTypes.hpp"
 
 class CfgFunctions {
-    // add your own functions below
+	#include "INC_undercover\cfgFunctions.hpp"
+};
+
+class CfgRemoteExec
+{
+   class Functions
+   {
+       mode = 2;
+       jip = 1;
+       #include "INC_undercover\functionsWhitelist.hpp"
+   };
 };
 
 // CBA XEH
@@ -46,14 +56,27 @@ class Extended_InitPost_EventHandlers {
     class Ship {
         #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
     };
+    class CAManBase {
+        init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
+    };
 };
 
 respawn = 3;
 respawnDelay = 2;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"MenuPosition", "Tickets"};
+respawnTemplates[] = {"MenuPosition", "Spectator", "Tickets"};
 
 // Disable BI wreck system (H&M handle it internally)
+disabledAI = 1; // 0: disabled - 1: enabled. Default: 0
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+// Channel ID: #, text, voice - If True = disabled.
+disableChannels[] = {
+	{ 0, true, true }, //Global
+  { 1, false, true }, //Side
+  { 2, true, true }, // Command
+  { 3, false, true }, // Group
+  { 4, false, true }, // Vehicle
+	{ 5, true, true } // Direct
+};

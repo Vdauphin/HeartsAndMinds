@@ -37,13 +37,9 @@ params [
 if !(_player isEqualTo objNull) then {
     private _ticketValue = [_player, _ticket] call BIS_fnc_respawnTickets;
     [24, _ticketValue] remoteExecCall ["btc_fnc_show_hint", _player];
-
-    if (btc_debug_log) then {
-        [format ["_ticketValue %1 _ticket %2 _uid %3", _ticketValue, _ticket, _uid], __FILE__, [false]] call btc_debug_fnc_message;
-    };
 };
 
 if (_uid isEqualTo "") exitWith {};
 
-private _ticketValue = _ticket + (btc_respawn_tickets getOrDefault [_uid, btc_p_respawn_ticketsAtStart]);
+private _ticketValue = _ticket + (btc_respawn_tickets getOrDefault [_uid, 0]);
 btc_respawn_tickets set [_uid, _ticketValue];

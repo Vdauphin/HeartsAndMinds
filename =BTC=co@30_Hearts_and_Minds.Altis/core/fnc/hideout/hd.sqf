@@ -61,7 +61,7 @@ if (
     private _city = _hideout getVariable ["assigned_to", _hideout];
     _city setVariable ["has_ho", false];
 
-    deleteVehicle (nearestObject [getPos _hideout, "Flag_Red_F"]);
+    deleteVehicle (nearestObject [getPos _hideout, "vn_flag_vc_dmg"]);
     _hideout setDamage 1;
 
     private _array = _hideout getVariable ["markers", []];

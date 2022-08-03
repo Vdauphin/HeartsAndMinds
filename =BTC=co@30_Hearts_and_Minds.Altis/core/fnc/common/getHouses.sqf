@@ -37,13 +37,7 @@ private _notEnterable = [];
             _x isKindOf "Lamps_base_F" ||
             {_x isKindOf "PowerLines_Small_base_F"} ||
             {_x isKindOf "PowerLines_Wires_base_F"} ||
-            {_x isKindOf "Wall"} ||
-            {_x isKindOf "Camping_base_F"} ||
-            {_x isKindOf "Land_Campfire_F"} ||
-            {_x isKindOf "Land_MetalBarrel_empty_F"} ||
-            {_x isKindOf "FlagCarrierCore"} ||
-            {_x isKindOf "Scrapyard_base_F"} ||
-            {_x isKindOf "Shelter_base_F"}
+            {_x isKindOf "Wall"}
         ) then {continue;};
         _notEnterable pushBack _x;
     } else {

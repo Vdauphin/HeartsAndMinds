@@ -17,7 +17,7 @@ Examples:
     (end)
 
 Author:
-    Giallustio
+    Giallustio & Proxno
 
 ---------------------------------------------------------------------------- */
 
@@ -25,35 +25,38 @@ params [
     ["_pos", [0, 0, 0], [[]]]
 ];
 
-private _type_bigbox = selectRandom ["Box_FIA_Ammo_F", "C_supplyCrate_F", "Box_East_AmmoVeh_F"];
-private _power = selectRandom btc_type_power;
+private _type_bigbox = selectRandom ["Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2", "Land_vn_pavn_weapons_stack3"];
+private _power = [];
 
 private _composition_hideout = [
-    [selectRandom btc_type_campfire,0,[-2.30957,-1.02979,0]],
-    [_type_bigbox,121.331,[0.675781,-1.52539,0]],
-    [selectRandom btc_type_bigbox,227.166,[2.66504,1.4126,0]],
-    [selectRandom btc_type_sleepingbag,135.477,[0.758789,-3.91309,0]],
-    [_power,77.6499,[0.418945,3.51855,0]],
-    [selectRandom btc_type_seat,171.123,[-2.08203,-3.39795,0]],
-    ["Flag_Red_F",0,[0,0,0]],
-    [selectRandom btc_type_sleepingbag,161.515,[-0.726563,-4.76953,0]],
-    [selectRandom btc_type_satelliteAntenna,304.749,[-3.71973,2.46143,0]],
-    [selectRandom btc_type_seat,279.689,[-4.52783,-0.76416,0]],
-    [selectRandom btc_type_seat,238.639,[-3.89014,-2.94873,0]],
-    [selectRandom btc_type_bigbox,346.664,[3.66455,-1.72998,0]],
-    [selectRandom btc_type_box,36.4913,[-2.65088,-4.5625,0]],
-    [selectRandom btc_type_tent,86.984,[3.19922,-4.36133,0]],
-    [selectRandom btc_type_tent,10,[-4.35303,-5.66309,0]],
-    [selectRandom btc_type_tent,300,[-8.47949,-1.64063,0]]
+    ["vn_flag_vc_dmg",0,[0,0,0]],
+    ["vn_campfire_burning_f",270,[-0.5,0.5,0]],
+    ["Land_vn_stand_meat_ep1",230,[-0.5,0.5,0]],
+    ["Land_vn_c_prop_pot_fire_01",90,[-1,0.5,0]],
+    ["Land_vn_o_shelter_06",90,[-4,-0.5,0]],
+    ["Land_vn_o_shelter_06",130,[-3,3,0]],
+    ["Land_vn_o_shelter_06",0,[0.5,4,0]],
+    ["Land_vn_bedrag_01",0,[-4,-0.5,0]],
+    ["Land_vn_bedrag_01",45,[-3,3,0]],
+    ["Land_vn_bedrag_01",270,[0.5,4,0]],
+    ["Land_vn_o_wallfoliage_01",180,[-5.5,0.5,0]],
+    ["Land_vn_o_wallfoliage_01",220,[-4,4,0]],
+    ["Land_vn_o_wallfoliage_01",275,[-0.5,5.5,0]],
+    ["Land_vn_o_wallfoliage_01",90,[1,-7.5,0]],
+    ["Land_vn_o_tower_02",315,[-4.5,-5.5,0]],
+    ["Land_vn_o_shelter_02",90,[4,-1,0]],
+    ["Land_vn_o_prop_cong_cage_01",90,[4,-1,0]],
+    ["Land_vn_o_shelter_01",0,[1,-5.5,0]],
+    ["vn_o_ammobox_wpn_08",0,[2,-5.5,0]],
+    ["Land_vn_pavn_weapons_stack1",225,[0.5,-5.5,0]],
+    ["vn_o_ammobox_full_09",0,[1.5,-6.5,0]],
+    ["vn_o_ammobox_full_09",0,[2,-6.5,0]],
+    ["vn_o_ammobox_full_09",0,[2.5,-6.5,0]],
+    ["vn_o_snipertree_02",275,[6,4,0]],
+    ["ModuleHideTerrainObjects_F",145,[0.5,-1,0]]
 ];
-if (
-    random 1 > 0.2 &&
-    {!(_power isKindOf "Land_JetEngineStarter_01_F")} &&
-    {!(_power isKindOf "Land_DieselGroundPowerUnit_01_F")} &&
-    {!(_power isKindOf "Land_WaterPump_01_F")}
-) then {
-    _composition_hideout pushBack [selectRandom (btc_type_camonet - ["Land_IRMaskingCover_02_F","CamoNet_BLUFOR_F","CamoNet_OPFOR_F","CamoNet_INDP_F","CamoNet_ghex_F","CamoNet_wdl_F"]),0,[-0.84668,-2.16113,0]];
-};
+
+private _composition_hideout pushBack [selectRandom (btc_type_camonet - ["Land_vn_camonet_nato","Land_vn_camonetb_nato"]),0,[-0.84668,-2.16113,0]];
 
 private _composition = [_pos, random 360, _composition_hideout] call btc_fnc_create_composition;
 

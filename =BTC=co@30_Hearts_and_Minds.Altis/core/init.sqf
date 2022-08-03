@@ -13,6 +13,14 @@ if (!isDedicated && hasInterface) then {
     [] call compileScript ["core\init_player.sqf"];
 };
 
+if (!isDedicated && hasInterface) then {
+    [] call compileScript ["core\init_playerlocal.sqf"];
+};
+
 if (!isDedicated && !hasInterface) then {
     [] call compileScript ["core\init_headless.sqf"];
+};
+
+if (!isDedicated && !hasInterface) then {
+    [] call compileScript ["core\fnc\aperture\fn_set_aperture_based_on_light_level.sqf"];
 };

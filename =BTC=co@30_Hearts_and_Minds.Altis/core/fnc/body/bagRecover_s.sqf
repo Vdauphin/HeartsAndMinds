@@ -53,5 +53,4 @@ if (btc_p_respawn_ticketsShare) then {
     };
 };
 
-deleteMarker (_bodyBag getVariable ["btc_body_deadMarker", ""]);
 _bodyBag call CBA_fnc_deleteEntity;

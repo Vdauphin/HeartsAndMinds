@@ -50,32 +50,26 @@ if (isNull _unit) then {
         ["btc_global_reputation"] remoteExecCall ["btc_int_fnc_ask_var", 2];
 
         [{!(isNil "btc_int_ask_data")}, {
-            params ["_unit", "_pos"];
             private _rep = btc_int_ask_data;
 
             if (_rep >= 500) then {
                 [name _unit, localize "STR_BTC_HAM_CON_INT_ORDERS_SHOWMAP"] call btc_fnc_showSubtitle;
                 openMap true;
-                addMissionEventHandler ["MapSingleClick", 
-                    {
-                        params ["_units", "_pos"];
-                        private _unit = _thisArgs select 0;
-                        if (surfaceIsWater _pos) then {
-                            [name _unit, localize "STR_BTC_HAM_CON_INT_ORDERS_ONLAND"] call btc_fnc_showSubtitle;
-                        } else {
-                            [[_unit], 0, 4, _pos] remoteExecCall ["btc_int_fnc_orders_give", _unit];
-                            removeMissionEventHandler ["MapSingleClick", _thisEventHandler];
-                            openMap false;
-                            private _textMap = selectRandom [
-                                    localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK1",
-                                    localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK2",
-                                    localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK3"
-                            ];
-                            [name _unit, _textMap] call btc_fnc_showSubtitle;
-                        };
-                    },
-                    [_unit]
-                ];
+                ["1", "onMapSingleClick", {
+                    if (surfaceIsWater _pos) then {
+                        [name (_this select 4), localize "STR_BTC_HAM_CON_INT_ORDERS_ONLAND"] call btc_fnc_showSubtitle;
+                    } else {
+                        [[_this select 4], 0, 4, _pos] remoteExecCall ["btc_int_fnc_orders_give", _this select 4];
+                        ["1", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
+                        openMap false;
+                        private _textMap = selectRandom [
+                                localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK1",
+                                localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK2",
+                                localize "STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK3"
+                        ];
+                        [name (_this select 4), _textMap] call btc_fnc_showSubtitle;
+                    };
+                }, [_unit]] call BIS_fnc_addStackedEventHandler;
             } else {
                 if !(player getVariable ["interpreter", false]) exitWith {
                     [name _unit, localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER"] call btc_fnc_showSubtitle;

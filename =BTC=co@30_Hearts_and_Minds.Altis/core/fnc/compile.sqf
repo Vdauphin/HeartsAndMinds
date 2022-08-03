@@ -221,6 +221,17 @@ if (isServer) then {
 };
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
+//DATA STRUCTURE
+btc_fnc_create_namespace = compileScript ["core\fnc\data\fn_create_namespace.sqf"];
+btc_fnc_delete_namespace = compileScript ["core\fnc\data\fn_delete_namespace.sqf"];
+btc_fnc_scheduler_subsystem_init = compileScript ["core\fnc\data\fn_scheduler_subsystem_init.sqf"];
+btc_fnc_scheduler_add_job = compileScript ["core\fnc\data\fn_scheduler_add_job.sqf"];
+btc_fnc_scheduler_start = compileScript ["core\fnc\data\fn_scheduler_start.sqf"];
+btc_fnc_scheduler_monitor = compileScript ["core\fnc\data\fn_scheduler_monitor.sqf"];
+
+//DAY & NIGHT CYCLE
+btc_day_night_job = compileScript ["core\fnc\cycle\fn_day_night_job.sqf"];
+btc_day_night_subsystem_init = compileScript ["core\fnc\cycle\fn_day_night_subsystem_init.sqf"];
 
 //CACHE
 btc_cache_fnc_hd = compileScript ["core\fnc\cache\hd.sqf"];
@@ -289,6 +300,9 @@ btc_veh_fnc_init = compileScript ["core\fnc\veh\init.sqf"];
 if (!isDedicated) then {
     //BODY
     btc_body_fnc_bagRecover = compileScript ["core\fnc\body\bagRecover.sqf"];
+
+    //APERTURE
+    btc_fnc_aperture = compileScript ["core\fnc\aperture\fn_set_aperture_based_on_light_level.sqf"];
 
     //COMMON
     btc_fnc_end_mission = compileScript ["core\fnc\common\end_mission.sqf"];
