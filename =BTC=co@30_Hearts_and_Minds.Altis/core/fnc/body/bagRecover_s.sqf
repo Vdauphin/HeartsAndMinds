@@ -71,7 +71,7 @@ if (_UID isEqualTo "" && _players isEqualTo []) exitWith {
 [22] remoteExecCall ["btc_fnc_show_hint", remoteExecutedOwner];
 
 if (btc_p_respawn_ticketsShare) then {
-    [btc_player_side, _ticket] call btc_respawn_fnc_addTicket;
+    [btc_player_side, _ticket, btc_player_side] call btc_respawn_fnc_addTicket;
 } else {
     if (_UID isEqualTo "") then {
         {
