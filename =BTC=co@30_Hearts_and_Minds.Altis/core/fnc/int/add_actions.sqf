@@ -228,3 +228,12 @@ if (btc_p_flag > 1) then {
     }, {getForcedFlagTexture _target isNotEqualTo ""}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToObject;
 };
+
+//Change day time and weather
+
+_action = ["set_day", localize "STR_BTC_HAM_ACTION_SET_DAY", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {((6 - daytime + 24) % 24) remoteExec ["skipTime", 0]}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+_action = ["set_night", localize "STR_BTC_HAM_ACTION_SET_NIGHT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {((22 - daytime + 24) % 24) remoteExec ["skipTime"], 0}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+_action = ["set_weather", localize "STR_BTC_HAM_ACTION_CHANGE_WEATHER", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", { 5 setrain 0; 5 setfog 0; 5 setOvercast 0; 10 setRainbow 1; forceWeatherChange;}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
