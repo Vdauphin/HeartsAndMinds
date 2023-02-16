@@ -401,7 +401,7 @@ private _CVO_A_Basic_Uniforms_SpecOps = [
 CVO_A_Basic = [];
 CVO_A_Basic append _CVO_A_Basic_Medical; 
 CVO_A_Basic append _CVO_A_Basic_Radios; 
-//CVO_A_Basic append _CVO_A_Basic_Uniforms; 
+CVO_A_Basic append _CVO_A_Basic_Uniforms; 
 CVO_A_Basic append _CVO_A_Basic_Vests; 
 CVO_A_Basic append _CVO_A_Basic_Backpacks;
 // CVO_A_Basic append _CVO_A_Basic_RespawnTent;
