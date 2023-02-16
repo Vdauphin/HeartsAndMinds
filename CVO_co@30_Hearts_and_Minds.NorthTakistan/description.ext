@@ -29,11 +29,17 @@ class RscTitles {
 
 class CfgFunctions {
     // add your own functions below
+    #include "cvo\cbrn\CfgFunctions.hpp"
+    #include "cvo\logistics\functions.hpp"
 };
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+
+    class CVO_CBRN_PreInit_EventHandler {
+        init = "call compileScript ['cvo\cbrn\XEH_PreInit.sqf'];";
+    };
 };
 
 class Extended_InitPost_EventHandlers {
@@ -62,7 +68,7 @@ disabledAI = 1;
 
 class CfgSounds {
     sounds[] = {};
-    #include "cvo\CfgSounds.hpp"
+    #include "cvo\cbrn\CfgSounds.hpp"
     #include "cvo\sandstorm\sound\sandstormsounds.hpp"
 };
 
