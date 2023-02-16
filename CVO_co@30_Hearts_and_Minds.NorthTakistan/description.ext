@@ -49,11 +49,37 @@ class Extended_InitPost_EventHandlers {
 };
 
 respawn = 3;
-respawnDelay = 2;
+respawnDelay = 15;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"MenuPosition", "Tickets"};
+respawnTemplates[] = {"MenuPosition", "Tickets", "Wave"};
 
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+disabledAI = 1;
+
+class CfgSounds {
+    sounds[] = {};
+    #include "cvo\CfgSounds.hpp"
+    #include "cvo\sandstorm\sound\sandstormsounds.hpp"
+};
+
+class CfgUnitInsignia {
+    #include "cvo\misc\cvo_insignia.hpp"
+};
+
+class CfgMusic
+{
+	tracks[] = {};
+	class CVO1
+	{
+		// display name
+		name	= "CVO1";
+
+		// filename, volume, pitch
+		sound[]	= { "cvo\sounds\cvo1.ogg", db + 0, 1.0 };
+        titles[] = {1,""};
+	};
+};
