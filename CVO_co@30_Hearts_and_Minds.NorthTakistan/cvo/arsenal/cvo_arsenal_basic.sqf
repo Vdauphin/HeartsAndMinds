@@ -234,15 +234,15 @@ private _CVO_A_Basic_Rifles = [
     "rhs_weap_ak74m_desert",
     "rhs_weap_ak74m_camo",
     "rhs_weap_ak74m",
-	"rhs_weap_ak105",
-	"rhs_weap_aks74u",
-	"rhs_weap_aks74un",
-	"rhs_weap_aks74n",
-	"rhs_weap_aks74n_2",
-	"rhs_weap_aks74",
-	"rhs_weap_aks74_2",
-	"rhs_weap_ak74n",
-	"rhs_weap_ak74n_2",
+//	"rhs_weap_ak105",
+//	"rhs_weap_aks74u",
+//	"rhs_weap_aks74un",
+//	"rhs_weap_aks74n",
+//	"rhs_weap_aks74n_2",
+//	"rhs_weap_aks74",
+//	"rhs_weap_aks74_2",
+//	"rhs_weap_ak74n",
+//	"rhs_weap_ak74n_2",
 	
 	"rhs_30Rnd_545x39_7N10_AK",
 	"rhs_30Rnd_545x39_7N10_plum_AK",
@@ -250,7 +250,6 @@ private _CVO_A_Basic_Rifles = [
 	"rhs_30Rnd_545x39_7N10_camo_AK",
 	"rhs_30Rnd_545x39_AK_plum_green",
 	"rhs_30Rnd_545x39_7N6M_plum_AK",
-	"rhs_30Rnd_545x39_7N10_2mag_plum_AK",
 	"rhs_30Rnd_545x39_7N10_2mag_desert_AK",
 	"rhs_30Rnd_545x39_7N10_2mag_camo_AK",
 	"rhs_30Rnd_545x39_7N10_2mag_AK",
@@ -260,26 +259,26 @@ private _CVO_A_Basic_Rifles = [
 	"rhs_30Rnd_545x39_AK_green",
 
 
-    "rhs_weap_ak104",
-    "rhs_weap_ak103",
-	"rhs_weap_akm",
-	"rhs_weap_akms",
-	"rhs_30Rnd_762x39mm_89",
-	"rhs_30Rnd_762x39mm_tracer",
-	"rhs_30Rnd_762x39mm_polymer_89",
-	"rhs_30Rnd_762x39mm_polymer_tracer",
-	"rhs_30Rnd_762x39mm_bakelite_89",
-	"rhs_30Rnd_762x39mm_bakelite_tracer",
+//    "rhs_weap_ak104",
+//    "rhs_weap_ak103",
+//	"rhs_weap_akm",
+//	"rhs_weap_akms",
+//	"rhs_30Rnd_762x39mm_89",
+//	"rhs_30Rnd_762x39mm_tracer",
+//	"rhs_30Rnd_762x39mm_polymer_89",
+//	"rhs_30Rnd_762x39mm_polymer_tracer",
+//	"rhs_30Rnd_762x39mm_bakelite_89",
+//	"rhs_30Rnd_762x39mm_bakelite_tracer",
 
 
-	"uk3cb_sks_01_sling",
-	"uk3cb_sks_01",
-	"uk3cb_10rnd_magazine_sks",
-	"uk3cb_muzzle_sks_bayonet",
+//	"uk3cb_sks_01_sling",
+//	"uk3cb_sks_01",
+//	"uk3cb_10rnd_magazine_sks",
+//	"uk3cb_muzzle_sks_bayonet",
 
-	"UK3CB_Enfield_Rail",
-	"UK3CB_Enfield_10rnd_Mag",
-	"UK3CB_Enfield_10rnd_Mag_YT",
+//	"UK3CB_Enfield_Rail",
+//	"UK3CB_Enfield_10rnd_Mag",
+//	"UK3CB_Enfield_10rnd_Mag_YT",
 
 	"rhs_weap_savz61",
 	"rhsgref_20rnd_765x17_vz61",
@@ -290,8 +289,8 @@ private _CVO_A_Basic_Rifles = [
 ];
 
 private _CVO_A_Basic_Pistols = [
-	"rhs_weap_pb_6p9",
-	"rhs_acc_6p9_suppressor",
+//	"rhs_weap_pb_6p9",
+//	"rhs_acc_6p9_suppressor",
 
 	"rhs_weap_makarov_pm",
 	"rhs_mag_9x18_8_57N181S",
@@ -327,13 +326,13 @@ private _CVO_A_Basic_attachments = [
 	"rhs_acc_pgs64_74un",
 	"rhs_acc_pgs64_74u",
 	"rhs_acc_pgs64",
-	"rhs_acc_dtk1l",
+	"rhs_acc_dtk1l"
 
 	// optics
-	"rhs_acc_1p63",
-	"rhs_acc_okp7_dovetail",
-	"rhs_acc_ekp8_02",
-	"rhs_acc_pkas"
+//	"rhs_acc_1p63",
+//	"rhs_acc_okp7_dovetail",
+//	"rhs_acc_ekp8_02",
+//	"rhs_acc_pkas"
 ];
 
 
@@ -417,9 +416,9 @@ CVO_A_Basic append _CVO_A_Basic_EXO;
 CVO_A_Basic append _CVO_A_Basic_Rifles;
 CVO_A_Basic append _CVO_A_Basic_Pistols;
 CVO_A_Basic append _CVO_A_Basic_attachments;
-CVO_A_Basic append _CVO_A_Basic_enhanced_basic;
-CVO_A_Basic append _CVO_A_Basic_suppressed;
-CVO_A_Basic append _CVO_A_Basic_suppressors;
+// CVO_A_Basic append _CVO_A_Basic_enhanced_basic;
+// CVO_A_Basic append _CVO_A_Basic_suppressed;
+// CVO_A_Basic append _CVO_A_Basic_suppressors;
 CVO_A_Basic append _CVO_A_Basic_Uniforms_SpecOps;
 
 
