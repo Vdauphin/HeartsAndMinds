@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [player, cursorObject, ["ACE_Banana"], 2] call btc_rep_fnc_foodRemoved;
+        [player, cursorObject, ["ACE_Humanitarian_Ration"], 2] call btc_rep_fnc_foodRemoved;
     (end)
 
 Author:
@@ -31,7 +31,7 @@ params ["_caller", "_target", "_listOfItemsToRemove",
 private _removedItem = _listOfItemsToRemove select 0;
 if (
     (side group _target) isEqualTo civilian &&
-    {_removedItem isKindOf ["ACE_Banana", configFile >> "CfgWeapons"]}
+    {_removedItem isKindOf ["ACE_Humanitarian_Ration", configFile >> "CfgWeapons"]}
 ) then {
     private _repChange = btc_rep_malus_foodRemove * _numberOfItems;
     if (isServer) then {
