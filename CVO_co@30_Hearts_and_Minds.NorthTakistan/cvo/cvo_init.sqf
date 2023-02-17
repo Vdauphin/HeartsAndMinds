@@ -31,10 +31,10 @@ execVM "cvo\arsenal\cvo_arsenal_init.sqf";
 execVM "cvo\sandstorm\cvo_ss_init.sqf";
 
 // Init CVO Environment Night Time Multiplyer
-// [compileScript ["cvo\env\cvo_env_init.sqf"]] call CBA_fnc_directCall;
+[compileScript ["cvo\env\cvo_env_init.sqf"]] call CBA_fnc_directCall;
 
 // Init CVO Intel - Placeable Flag to Marker
-// [compileScript ["cvo\intel\cvo_intel_flag_init.sqf"]] call CBA_fnc_directCall;
+[compileScript ["cvo\intel\cvo_intel_flag_init.sqf"]] call CBA_fnc_directCall;
 
 
 // Starts Server Restart Message + Save Script
@@ -44,15 +44,15 @@ execVM "cvo\sandstorm\cvo_ss_init.sqf";
 execVM "cvo\misc\JND_debugv2.sqf";
 
 // Init Players Job Board
-//execVM "cvo\misc\cvo_jobboard.sqf";
+execVM "cvo\misc\cvo_jobboard.sqf";
 
 // Init Support Drones
-//execVM "cvo\support\cvo_support_init.sqf";
+execVM "cvo\support\cvo_support_init.sqf";
 
 // Init Map Module
-// execVM "cvo\map\cvo_map_init.sqf";
+ execVM "cvo\map\cvo_map_init.sqf";
 
 // Init Fast Travel for Vehicles
-//execVM "cvo\FTVic\cvo_FTVic_init.sqf";
+execVM "cvo\FTVic\cvo_FTVic_init.sqf";
 
 diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");
