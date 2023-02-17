@@ -36,9 +36,9 @@ btc_construction_array = [
 		],
 
 		// Ammobox
-		[//"rhs_mags_crate",   	// Advanced Ammo Box
-		"rhs_3Ya40_1_single",	// AK Ammo 7N10
-		"rhs_7ya37_1_single",	// AK74M + Ammo
+		[//"rhs_mags_crate",   						// Advanced Ammo Box
+		//"rhs_3Ya40_1_single",						// AK Ammo 7N10
+		//"rhs_7ya37_1_single",						// AK74M + Ammo
 		"ACE_medicalSupplyCrate_advanced",
 		"ACE_fastropingSupplyCrate",
 		"ACE_Box_Chemlights",
@@ -54,23 +54,23 @@ btc_construction_array = [
 		// Containers
 		["Land_Cargo10_military_green_F",
 		 "Land_Cargo20_military_green_F",
-		"Land_Cargo40_military_green_F"],
+		 "Land_Cargo40_military_green_F"],
 
 		// Supplies
-		["Land_Cargo10_IDAP_F"],
+		["Land_Cargo20_IDAP_F"],
 
 		// FOB
-		["Land_Cargo10_blue_F"],
+		["Land_Cargo20_blue_F"],
 
 		// Decontamination 
 		["DeconShower_01_F"],
 
 		// Vehicle Logistic
-		["ACE_Wheel",
-		"ACE_Track",
-		"B_Slingload_01_Ammo_F",
-		"B_Slingload_01_Fuel_F",
-		"FlexibleTank_01_forest_F",
-		"FlexibleTank_01_sand_F"]
+		[	"ACE_Wheel",
+			"ACE_Track",
+			"B_Slingload_01_Ammo_F",
+			"B_Slingload_01_Fuel_F",
+			"FlexibleTank_01_forest_F",
+			"FlexibleTank_01_sand_F"]
 	]
 ];
