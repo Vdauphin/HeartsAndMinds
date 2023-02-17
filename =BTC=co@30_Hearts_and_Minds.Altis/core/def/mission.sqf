@@ -150,7 +150,7 @@ if (isServer) then {
     btc_civ_veh_active = [];
 
     //Database
-    btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
+    btc_db_serverCommandPassword = "cvo_password"; //Define the same password in server.cfg like this: serverCommandPassword = "cvo_password";
     btc_db_warningTimeAutoRestart = 5;
 
     //Hideout
