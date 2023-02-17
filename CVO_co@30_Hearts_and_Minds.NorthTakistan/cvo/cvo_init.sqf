@@ -17,7 +17,7 @@ execVM "cvo\arsenal\cvo_arsenal_init.sqf";
 [compileScript ["cvo\medical\cvo_medical_init_fullHeal.sqf"]] call CBA_fnc_directCall;
 
 // Init CVO Foritfy Preset
-//[compileScript ["cvo\logistics\cvo_logistics_init_fortify.sqf"]] call CBA_fnc_directCall;
+[compileScript ["cvo\logistics\cvo_logistics_init_fortify.sqf"]] call CBA_fnc_directCall;
 
 
 // Init CVO Logistics Custom Supply Create
