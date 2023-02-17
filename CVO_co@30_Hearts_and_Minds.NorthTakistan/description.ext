@@ -1,6 +1,6 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+loadScreen = "cvo\img\cvo_ham_title.paa";
+author = "Giallustio - Adapted for CVO by Zorn";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
@@ -27,11 +27,6 @@ class RscTitles {
 
 #include "core\fnc\task\taskTypes.hpp"
 
-class CfgFunctions {
-    // add your own functions below
-    #include "cvo\cbrn\CfgFunctions.hpp"
-    #include "cvo\logistics\functions.hpp"
-};
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
@@ -65,6 +60,12 @@ wreckManagerMode = 0;
 corpseManagerMode = 0;
 
 disabledAI = 1;
+
+class CfgFunctions {
+    // add your own functions below
+    #include "cvo\cbrn\CfgFunctions.hpp"
+    #include "cvo\logistics\functions.hpp"
+};
 
 class CfgSounds {
     sounds[] = {};
