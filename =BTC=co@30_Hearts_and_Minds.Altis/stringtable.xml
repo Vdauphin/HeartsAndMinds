@@ -212,13 +212,13 @@
         </Container>
         <Container name="Documentation: Hideout">
             <Key ID="STR_BTC_HAM_DOC_HIDEOUT_TEXT">
-                <Original>The hideouts are a place where the Oplitas organize their movements.&lt;br/&gt;They send reinforcements from here and can attack the closest city.&lt;br/&gt;If you notice a lot of activity in an area, probably there is an hideout closeby.&lt;br/&gt;If you want to defeat the Oplitas, you need to destroy all their hideouts.&lt;br/&gt;Here an example of an hideout:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;To destroy an hideout just place a satchel near the ammo box, it's close to the flag, and blow it off!</Original>
-                <Spanish>Los escondites son un lugar donde los Oplitas organizan sus movimientos.&lt;br/&gt;Enviarán refuerzos desde aquí y podrán atacar la ciudad más cercana.&lt;br/&gt;Si usted nota mucha actividad en un área, probablemente hay un escondite cerca.Si quieres derrotar a los Oplitas, tienes que destruir todos sus escondites.&lt;br/&gt;Aquí un ejemplo de un escondite:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Para destruir un escondite sólo tienes que colocar una explosivo tipo satchel cerca de la caja de municiones, cerca de la bandera, y volarla!</Spanish>
-                <German>In den Verstecken planen und organisieren die Oplitas ihre Einstäze und Bewegungen.&lt;br/&gt;Von hier wird Verstärkung auf umliegende Gebiete verteilt. Ebenso ist ein Angriff auf die nächste Stadt von hier aus möglich.&lt;br/&gt;Sollten Sie eine erhöhte feindliche Aktivität in der Gegend festestellen, so befindet sich möglicherweise ein Versteck in der Nähe.&lt;br/&gt;Wenn Sie die Oplitas besiegen wollen, so müssen Sie alle Verstecke zerstören.&lt;br/&gt;Hier ein kleines Beispiel für ein Versteck:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Das Versteck kann zerstört werden in dem man eine Sprengladung in der Nähe der Munitionskiste oder der Flagge zündet!</German>
+                <Original>The hideouts are a place where the Insurgents organize their movements.&lt;br/&gt;They send reinforcements from here and can attack the closest city.&lt;br/&gt;If you notice a lot of activity in an area, probably there is an hideout closeby.&lt;br/&gt;If you want to defeat the Insurgents, you need to destroy all their hideouts.&lt;br/&gt;Here an example of an hideout:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;To destroy an hideout just place a satchel near the ammo box, it's close to the flag, and blow it off!</Original>
+                <Spanish>Los escondites son un lugar donde los Insurgents organizan sus movimientos.&lt;br/&gt;Enviarán refuerzos desde aquí y podrán atacar la ciudad más cercana.&lt;br/&gt;Si usted nota mucha actividad en un área, probablemente hay un escondite cerca.Si quieres derrotar a los Insurgents, tienes que destruir todos sus escondites.&lt;br/&gt;Aquí un ejemplo de un escondite:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Para destruir un escondite sólo tienes que colocar una explosivo tipo satchel cerca de la caja de municiones, cerca de la bandera, y volarla!</Spanish>
+                <German>In den Verstecken planen und organisieren die Insurgents ihre Einstäze und Bewegungen.&lt;br/&gt;Von hier wird Verstärkung auf umliegende Gebiete verteilt. Ebenso ist ein Angriff auf die nächste Stadt von hier aus möglich.&lt;br/&gt;Sollten Sie eine erhöhte feindliche Aktivität in der Gegend festestellen, so befindet sich möglicherweise ein Versteck in der Nähe.&lt;br/&gt;Wenn Sie die Insurgents besiegen wollen, so müssen Sie alle Verstecke zerstören.&lt;br/&gt;Hier ein kleines Beispiel für ein Versteck:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Das Versteck kann zerstört werden in dem man eine Sprengladung in der Nähe der Munitionskiste oder der Flagge zündet!</German>
                 <Portuguese>Os esconderijos são um lugar onde as inimigos organizam seus movimentos.&lt;br/&gt;Daqui eles enviam reforços e podem atacar as cidades mais próximas.&lt;br/&gt;Se você notar muita atividade em uma área, provavelmente há um esconderijo por perto.&lt;br/&gt;Se você quiser derrotar o inimigo, terá que destruir todos os esconderijos.&lt;br/&gt;Veja um exemplo de um esconderijo:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Para destruir um esconderijo, basta colocar uma bolsa de explosivos perto da caixa de munição (que fica perto da bandeira) e explodí-lo!</Portuguese>
-                <Chinesesimp>藏匿点是Oplitas组织活动的地方。&lt;br/&gt;他们从这里派遣增援, 进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动, 那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败Oplitas, 你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点, 只需在靠近旗帜的弹药箱上放置一个炸药包, 然后炸掉它!</Chinesesimp>
-                <French>Les planques sont un lieu où les Oplitas organisent leurs déplacements.&lt;br/&gt;Ils envoient des renforts d'ici et peuvent attaquer la ville la plus proche.&lt;br/&gt;Si vous remarquez beaucoup d'activité dans une zone, il y a probablement une planque à proximité.&lt;br/&gt;Si vous voulez vaincre les Oplitas, vous devez détruire toutes leurs planques.&lt;br/&gt;Ici l'exemple d'une planque:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Pour détruire une planque, placez simplement une sacoche près de la boîte de munitions, elle est proche du drapeau, et faites-la exploser!</French>
-                <Czech>Úkryty jsou místem, kde Oplitové organizují svůj pohyb.&lt;br/&gt;Posílají odtud posily a mohou zaútočit na nejbližší město.&lt;br/&gt;Pokud si všimnete velkého ruchu v oblasti, pravděpodobně je poblíž úkryt.&lt;br/&gt;Pokud chcete porazit Oplitas, musíte zničit všechny jejich úkryty.&lt;br/&gt;Zde je příklad úkrytu:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Chcete-li zničit skrýš, stačí umístit brašnu blízko krabice s municí, je blízko vlajky, a odstřelit ji!</Czech>
+                <Chinesesimp>藏匿点是Insurgents组织活动的地方。&lt;br/&gt;他们从这里派遣增援, 进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动, 那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败Insurgents, 你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点, 只需在靠近旗帜的弹药箱上放置一个炸药包, 然后炸掉它!</Chinesesimp>
+                <French>Les planques sont un lieu où les Insurgents organisent leurs déplacements.&lt;br/&gt;Ils envoient des renforts d'ici et peuvent attaquer la ville la plus proche.&lt;br/&gt;Si vous remarquez beaucoup d'activité dans une zone, il y a probablement une planque à proximité.&lt;br/&gt;Si vous voulez vaincre les Insurgents, vous devez détruire toutes leurs planques.&lt;br/&gt;Ici l'exemple d'une planque:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Pour détruire une planque, placez simplement une sacoche près de la boîte de munitions, elle est proche du drapeau, et faites-la exploser!</French>
+                <Czech>Úkryty jsou místem, kde Oplitové organizují svůj pohyb.&lt;br/&gt;Posílají odtud posily a mohou zaútočit na nejbližší město.&lt;br/&gt;Pokud si všimnete velkého ruchu v oblasti, pravděpodobně je poblíž úkryt.&lt;br/&gt;Pokud chcete porazit Insurgents, musíte zničit všechny jejich úkryty.&lt;br/&gt;Zde je příklad úkrytu:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Chcete-li zničit skrýš, stačí umístit brašnu blízko krabice s municí, je blízko vlajky, a odstřelit ji!</Czech>
             </Key>
         </Container>
         <Container name="Documentation: IED">
@@ -254,13 +254,13 @@
                 <Czech>Reputace</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_REPUTATION_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint , remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
-                <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; La reputación se puede solicitar a los civiles&lt;br/&gt; Las malas acciones causan malos efectos sobre la reputacion.&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ayudar a la población local luchando contra los Oplitas y desarmando los artefactos explosivos improvisados aumentará tu reputación; matar civiles, mutilar civiles vivos/muertos, disparar cerca de civiles sin razón alguna, disparar a vehículos civiles, dañar/destruir edificios, perder vehículos, respawns de jugadores disminuirá tu reputación. Al principio tienes un nivel de reputación muy bajo, por lo que los civiles no te ayudarán a revelar información importante sobre los Oplitas, es probable que mientan en su lugar.&lt;br/&gt; Abortar una misión secundaria no afecta a la reputación.</Spanish>
-                <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; Ihr Ansehen bei der Bevölkerung können Sie bei Zivilisten erfragen &lt;br/&gt; Schlechte bzw. böse Handlungen habe zur Folge das ihr Ansehen sinkt. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Das Unterstützen der lokalen Bevölkerung, das Entschärfen von IEDs und der aktive Kampf gegen die Oplitas wird sich positiv auf ihr Ansehen auswirken. Negative Aktionen wie zb. das Töten oder verstümmeln von Zivlisten, das grundlose Abfeueren einer Waffe in der Nähe von Zivilisten, das Zerstören oder Beschädigen von Gebäuden, der Angriff auf zivile Fahrzeuge, der Verlust von Fahrzeugen im Allgemeinen oder das Respawnen haben hingegen einen nicht so guten Effekt. Zu Beginn ist Ihr Ansehen nur recht gering, weshalb es sein kann das Zivlisten eher zruückhaltend mit Informationen sind. In manchen Fällen werden die Zivilisten Sie auch einfach belügen.&lt;br/&gt; Das Abbrechen von Nebenaufgaben hat keine Auswirkung auf Ihr Ansehen.</German>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Insurgents, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Insurgents, disarming IED's, heal civilians, give banana, remove tag with spraypaint , remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
+                <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; La reputación se puede solicitar a los civiles&lt;br/&gt; Las malas acciones causan malos efectos sobre la reputacion.&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ayudar a la población local luchando contra los Insurgents y desarmando los artefactos explosivos improvisados aumentará tu reputación; matar civiles, mutilar civiles vivos/muertos, disparar cerca de civiles sin razón alguna, disparar a vehículos civiles, dañar/destruir edificios, perder vehículos, respawns de jugadores disminuirá tu reputación. Al principio tienes un nivel de reputación muy bajo, por lo que los civiles no te ayudarán a revelar información importante sobre los Insurgents, es probable que mientan en su lugar.&lt;br/&gt; Abortar una misión secundaria no afecta a la reputación.</Spanish>
+                <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; Ihr Ansehen bei der Bevölkerung können Sie bei Zivilisten erfragen &lt;br/&gt; Schlechte bzw. böse Handlungen habe zur Folge das ihr Ansehen sinkt. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Das Unterstützen der lokalen Bevölkerung, das Entschärfen von IEDs und der aktive Kampf gegen die Insurgents wird sich positiv auf ihr Ansehen auswirken. Negative Aktionen wie zb. das Töten oder verstümmeln von Zivlisten, das grundlose Abfeueren einer Waffe in der Nähe von Zivilisten, das Zerstören oder Beschädigen von Gebäuden, der Angriff auf zivile Fahrzeuge, der Verlust von Fahrzeugen im Allgemeinen oder das Respawnen haben hingegen einen nicht so guten Effekt. Zu Beginn ist Ihr Ansehen nur recht gering, weshalb es sein kann das Zivlisten eher zruückhaltend mit Informationen sind. In manchen Fällen werden die Zivilisten Sie auch einfach belügen.&lt;br/&gt; Das Abbrechen von Nebenaufgaben hat keine Auswirkung auf Ihr Ansehen.</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; A Reputação entre a população é obtida por meio dos civis &lt;br/&gt; Ações ruins ou más fazem a reputação diminuir. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ajudar a população local combatendo os inimigos e desarmando os IED's aumentará sua reputação. Matar civis, mutilar civis vivos/mortos, atirar perto de civis sem motivo, atirar nos veículos civis, danificar/destruir prédios, perder veículos civis, respawns de jogadores diminuirão a reputação. No começo, o nível de reputação é muito baixo, então, os civis não irão ajudá-lo a revelar informações importantes sobre os inimigos ou provavelmente irão mentir.&lt;br/&gt; Cancelar tarefas secundárias não afeta a reputação.</Portuguese>
-                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;系统:&lt;/marker&gt;&lt;br/&gt; 在任务开始时, 你只有很低的声誉, 所以平民不会向你展示关于Oplitas的重要信息, 他们更倾向于说谎。可以通过询问平民来获知声誉状况。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;善举:&lt;/marker&gt;&lt;br/&gt; 帮助当地居民反抗Oplitas, 拆除IED, 救助平民, 把香蕉送给平民, 使用红色喷漆去除涂鸦, 完成支线任务和摧毁武器箱/藏匿点将会提升你的声誉。&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;恶行:&lt;/marker&gt;&lt;br/&gt; 恶行将会酿成恶果: 击杀或残害平民/动物, 毫无理由地向平民身边射击, 攻击平民车辆, 拆卸平民车辆的轮胎, 拿走平民的香蕉, 毁坏或摧毁建筑物, 损失我方载具和玩家重生均会降低声誉。中止支线任务不会影响声誉。&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Chinesesimp>
-                <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Système:&lt;/marker&gt;&lt;br/&gt; Au début, vous avez un niveau de réputation très bas, donc les civils ne vous aideront pas à révéler des informations importantes sur les Oplitas, ils mentiront probablement à la place. La réputation peut être demandée à des civils. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bonnes actions:&lt;/marker&gt;&lt;br/&gt; Aider la population locale en combattant les Oplitas, en désarmant les engins piégés, en soignant les civils, donner une banane, en retirant le tag avec de la peinture rouge en spray, en réussissant la mission secondaire et en détruisant la cache d'arme / planque augmentera votre réputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Mauvaises actions:&lt;/marker&gt;&lt;br/&gt; Les mauvaises actions provoquent de mauvais effets: tuer des civils / animaux, mutiler des civils / animaux vivants / morts, tirer à proximité de civils sans raison, tirer sur une voiture civile, retirer les roues, retirer une banane, endommager / détruire des bâtiments, casser les serrures des portes, perdre les véhicules des joueurs et la réapparition des joueurs diminuera votre réputation. L'annulation d'une mission secondaire n'affecte pas la réputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </French>
-                <Czech>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; Na začátku máte velmi nízkou úroveň reputace, takže vám civilisté nepomohou prozradit důležité informace o Oplitas, ale pravděpodobně budou místo toho lhát. Reputaci lze požádat civilisty.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Dobré akce:&lt;/marker&gt;&lt;br/&gt; Pomoc místnímu obyvatelstvu bojem s Oplitas, odzbrojením IED, léčením civilistů, darováním banánu, odstraněním štítku sprejem, odstraněním štítku červeným sprejem, úspěšnou vedlejší misí a zničením cache/úkrytu zvýší vaši reputaci.&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Špatné akce mají špatné účinky: zabíjení civilistů/zvířat, mrzačení živých/mrtvých civilistů/zvířat, střelba v blízkosti civilistů bez důvodu, střelba do civilního auta, odstranění kol, odstranění banánu, poškození/zničení budov, rozbití zámku dveří, ztráta hráčských vozidel a respawny hráčů sníží vaši reputaci. Zrušení vedlejší mise nemá vliv na pověst. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Czech>
+                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;系统:&lt;/marker&gt;&lt;br/&gt; 在任务开始时, 你只有很低的声誉, 所以平民不会向你展示关于Insurgents的重要信息, 他们更倾向于说谎。可以通过询问平民来获知声誉状况。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;善举:&lt;/marker&gt;&lt;br/&gt; 帮助当地居民反抗Insurgents, 拆除IED, 救助平民, 把香蕉送给平民, 使用红色喷漆去除涂鸦, 完成支线任务和摧毁武器箱/藏匿点将会提升你的声誉。&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;恶行:&lt;/marker&gt;&lt;br/&gt; 恶行将会酿成恶果: 击杀或残害平民/动物, 毫无理由地向平民身边射击, 攻击平民车辆, 拆卸平民车辆的轮胎, 拿走平民的香蕉, 毁坏或摧毁建筑物, 损失我方载具和玩家重生均会降低声誉。中止支线任务不会影响声誉。&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Chinesesimp>
+                <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Système:&lt;/marker&gt;&lt;br/&gt; Au début, vous avez un niveau de réputation très bas, donc les civils ne vous aideront pas à révéler des informations importantes sur les Insurgents, ils mentiront probablement à la place. La réputation peut être demandée à des civils. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bonnes actions:&lt;/marker&gt;&lt;br/&gt; Aider la population locale en combattant les Insurgents, en désarmant les engins piégés, en soignant les civils, donner une banane, en retirant le tag avec de la peinture rouge en spray, en réussissant la mission secondaire et en détruisant la cache d'arme / planque augmentera votre réputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Mauvaises actions:&lt;/marker&gt;&lt;br/&gt; Les mauvaises actions provoquent de mauvais effets: tuer des civils / animaux, mutiler des civils / animaux vivants / morts, tirer à proximité de civils sans raison, tirer sur une voiture civile, retirer les roues, retirer une banane, endommager / détruire des bâtiments, casser les serrures des portes, perdre les véhicules des joueurs et la réapparition des joueurs diminuera votre réputation. L'annulation d'une mission secondaire n'affecte pas la réputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </French>
+                <Czech>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; Na začátku máte velmi nízkou úroveň reputace, takže vám civilisté nepomohou prozradit důležité informace o Insurgents, ale pravděpodobně budou místo toho lhát. Reputaci lze požádat civilisty.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Dobré akce:&lt;/marker&gt;&lt;br/&gt; Pomoc místnímu obyvatelstvu bojem s Insurgents, odzbrojením IED, léčením civilistů, darováním banánu, odstraněním štítku sprejem, odstraněním štítku červeným sprejem, úspěšnou vedlejší misí a zničením cache/úkrytu zvýší vaši reputaci.&lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Špatné akce mají špatné účinky: zabíjení civilistů/zvířat, mrzačení živých/mrtvých civilistů/zvířat, střelba v blízkosti civilistů bez důvodu, střelba do civilního auta, odstranění kol, odstranění banánu, poškození/zničení budov, rozbití zámku dveří, ztráta hráčských vozidel a respawny hráčů sníží vaši reputaci. Zrušení vedlejší mise nemá vliv na pověst. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Czech>
             </Key>
         </Container>
         <Container name="Documentation: Orders">
@@ -285,13 +285,13 @@
                 <Czech>Provoz</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_TRAFFIC_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Original>
-                <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Los civiles viajan en vehículo a través de las ciudades. Si tu reputación es más alta de lo normal, puedes pedir que te lleven a un lugar elegido en el mapa. Si te encuentras con una patrulla de Oplitas, no te preocupes, el conductor civil hará todo lo posible para esconderte en el coche.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Spanish>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Insurgents patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Original>
+                <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Los civiles viajan en vehículo a través de las ciudades. Si tu reputación es más alta de lo normal, puedes pedir que te lleven a un lugar elegido en el mapa. Si te encuentras con una patrulla de Insurgents, no te preocupes, el conductor civil hará todo lo posible para esconderte en el coche.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Spanish>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Zivlisten sind mit Fahrzeugen in den Städten unterwegs. Wenn Sie ein hohes Ansehen in der Bevölkerung genießen, so sind Zivlisten auch gerne mal dazu bereit Sie mitzunehmen (nutzen sie die Karte um den Zivlisten zu zeigen wo sie hinwollen). Sollten Sie dabei durch Zufall auf Feinde stoßen, so wird der Zivilist sein Bestes geben um sie im Fahrzeug zu verstecken.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civis estarão viajando de veículo pelo mapa, entre uma cidade e outra. Se sua reputação com a população local for alta, eles estarão dispostos a levá-lo a qualuqer lugar do mapa (use o mapa para mostrar onde você quer ir). Se vocês encontrarem uma patrulha inimiga, o civil fará todo possível para te esconder no veículo.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Portuguese>
-                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; 平民会在城市间开车穿梭。如果你的声誉够高, 平民会乐意载你一程(用地图指出你要去的地方)。如果你在途中遭遇了Oplitas巡逻队, 不要担心, 平民会尽其所能地把你藏在车里。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Chinesesimp>
+                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; 平民会在城市间开车穿梭。如果你的声誉够高, 平民会乐意载你一程(用地图指出你要去的地方)。如果你在途中遭遇了Insurgents巡逻队, 不要担心, 平民会尽其所能地把你藏在车里。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Chinesesimp>
                 <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Les civils se déplacent de ville en ville en véhicule. Si votre réputation est supérieure à "normal", vous pouvez lui demander de vous servir de taxi. Si en cours de route des ennemis sont présents, ne paniquez pas, votre conducteur fera en sorte de vous cacher du mieux possible.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</French>
-                <Czech>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilisté cestují autem napříč městy. Pokud je vaše reputace vyšší než obvykle, můžete požádat o odvoz na místo vybrané na mapě. Pokud narazíte na hlídku Oplitasu, nebojte se, civilní řidič udělá maximum, aby vás ukryl v autě.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Czech>
+                <Czech>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilisté cestují autem napříč městy. Pokud je vaše reputace vyšší než obvykle, můžete požádat o odvoz na místo vybrané na mapě. Pokud narazíte na hlídku Insurgentsu, nebojte se, civilní řidič udělá maximum, aby vás ukryl v autě.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Czech>
             </Key>
         </Container>
         <Container name="Documentation: Chemical warfare">
@@ -1105,7 +1105,7 @@
         </Container>
     </Package>
     <Package name="Missions">
-        <Container name="Mission: Defeat the Oplitas">
+        <Container name="Mission: Defeat the Insurgents">
             <Key ID="STR_BTC_HAM_MISSION_OBJ_DESC">
                 <Original>Objectives must be accomplished.</Original>
                 <German>Ziele müssen erreicht werden.</German>
@@ -1121,42 +1121,42 @@
                 <Czech>Hlavní úkol</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_TITLE">
-                <Original>Defeat the Oplitas</Original>
-                <Spanish>Derrotar a los Oplitas</Spanish>
-                <German>Besiege die Oplitas</German>
+                <Original>Defeat the Insurgents</Original>
+                <Spanish>Derrotar a los Insurgents</Spanish>
+                <German>Besiege die Insurgents</German>
                 <Portuguese>Derrote os Inimigos</Portuguese>
-                <Chinesesimp>打败Oplitas</Chinesesimp>
-                <French>Vaincre les Oplitas</French>
-                <Czech>Porazte Oplitas</Czech>
+                <Chinesesimp>打败Insurgents</Chinesesimp>
+                <French>Vaincre les Insurgents</French>
+                <Czech>Porazte Insurgents</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_DESC">
-                <Original>Defeat the Oplitas once and for all</Original>
-                <Spanish>Derrotar a los Oplitas de una vez por todas</Spanish>
-                <German>Besiegen Sie die Oplitas ein für allemal</German>
+                <Original>Defeat the Insurgents once and for all</Original>
+                <Spanish>Derrotar a los Insurgents de una vez por todas</Spanish>
+                <German>Besiegen Sie die Insurgents ein für allemal</German>
                 <Portuguese>Derrote todos os inimigos de uma vez por todas</Portuguese>
                 <Chinesesimp>彻底地打败敌军</Chinesesimp>
-                <French>Battez les Oplitas une fois pour toutes</French>
-                <Czech>Porazte Oplitas jednou provždy</Czech>
+                <French>Battez les Insurgents une fois pour toutes</French>
+                <Czech>Porazte Insurgents jednou provždy</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_WIN_TEXT">
-                <Original>Oplitas have been finally defeated!    Mission accomplished!</Original>
-                <Spanish>Las Oplitas han sido finalmente derrotados!    Misión cumplida!</Spanish>
-                <German>Die Oplitas wurde endgültig besiegt!    Mission erfüllt!</German>
+                <Original>Insurgents have been finally defeated!    Mission accomplished!</Original>
+                <Spanish>Las Insurgents han sido finalmente derrotados!    Misión cumplida!</Spanish>
+                <German>Die Insurgents wurde endgültig besiegt!    Mission erfüllt!</German>
                 <Portuguese>Todos os inimigos foram derrotados! Missão cumprida!</Portuguese>
                 <Chinesesimp>敌军终于被打败了!    任务完成!</Chinesesimp>
-                <French>L'Oplitas a finalement été vaincu!    Mission accomplie!</French>
-                <Czech>Oplitas byli konečně poraženi! Mise splněna!</Czech>
+                <French>L'Insurgents a finalement été vaincu!    Mission accomplie!</French>
+                <Czech>Insurgents byli konečně poraženi! Mise splněna!</Czech>
             </Key>
         </Container>
         <Container name="Mission: Destroy all the hideouts">
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_DESC">
-                <Original>Destroy all the hideouts of the Oplitas</Original>
-                <Spanish>Destruye todos los escondites de los Oplitas</Spanish>
-                <German>Zerstören Sie sämtliche Verstecke der Oplitas</German>
+                <Original>Destroy all the hideouts of the Insurgents</Original>
+                <Spanish>Destruye todos los escondites de los Insurgents</Spanish>
+                <German>Zerstören Sie sämtliche Verstecke der Insurgents</German>
                 <Portuguese>Destrua todos os esconderijos dos inimigos</Portuguese>
-                <Chinesesimp>摧毁所有Oplitas藏匿点</Chinesesimp>
-                <French>Détruire toutes les planques de l'Oplitas</French>
-                <Czech>Zničte všechny úkryty Oplitas</Czech>
+                <Chinesesimp>摧毁所有Insurgents藏匿点</Chinesesimp>
+                <French>Détruire toutes les planques de l'Insurgents</French>
+                <Czech>Zničte všechny úkryty Insurgents</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_TITLE">
                 <Original>Destroy all the hideouts</Original>
@@ -1170,13 +1170,13 @@
         </Container>
         <Container name="Mission: Seize the last positions">
             <Key ID="STR_BTC_HAM_MISSION_SEIZE_TITLE">
-                <Original>Seize the last Oplitas positions</Original>
-                <Spanish>Toma las últimas posiciones de Oplitas</Spanish>
+                <Original>Seize the last Insurgents positions</Original>
+                <Spanish>Toma las últimas posiciones de Insurgents</Spanish>
                 <German>Erobern Sie die letzten Stellungen</German>
                 <Portuguese>Conquiste as últimas posições inimigas</Portuguese>
-                <Chinesesimp>夺取最后一个Oplitas据点</Chinesesimp>
-                <French>Conquérir les dernières positions Oplitas</French>
-                <Czech>Obsaďte poslední pozice Oplitas</Czech>
+                <Chinesesimp>夺取最后一个Insurgents据点</Chinesesimp>
+                <French>Conquérir les dernières positions Insurgents</French>
+                <Czech>Obsaďte poslední pozice Insurgents</Czech>
             </Key>
         </Container>
     </Package>
@@ -1332,21 +1332,21 @@
                 <Czech>Konec konvoje</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_TITLE">
-                <Original>Destroy Oplitas convoy attacking %1</Original>
-                <Spanish>Destruir el convoy de Oplitas atacando %1</Spanish>
+                <Original>Destroy Insurgents convoy attacking %1</Original>
+                <Spanish>Destruir el convoy de Insurgents atacando %1</Spanish>
                 <German>Bewaffneter Konvoi unterwegs nach %1</German>
                 <Portuguese>Destrua o comboio armado inimigo %1</Portuguese>
-                <Chinesesimp>摧毁进攻 %1 地区的Oplitas车队</Chinesesimp>
-                <French>Détruire le convoi d'Oplitas attaquant %1</French>
-                <Czech>Zničte konvoj Oplitas útočící na %1</Czech>
+                <Chinesesimp>摧毁进攻 %1 地区的Insurgents车队</Chinesesimp>
+                <French>Détruire le convoi d'Insurgents attaquant %1</French>
+                <Czech>Zničte konvoj Insurgents útočící na %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
-                <Original>An armed Oplitas convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
-                <Spanish>Un convoy armado de Oplitas va a atacar %1. La población local está pidiendo su ayuda para destruirlo antes de que llegue allí!</Spanish>
-                <German>Ein bewaffneter Konvoi der Oplitas will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
+                <Original>An armed Insurgents convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
+                <Spanish>Un convoy armado de Insurgents va a atacar %1. La población local está pidiendo su ayuda para destruirlo antes de que llegue allí!</Spanish>
+                <German>Ein bewaffneter Konvoi der Insurgents will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
                 <Portuguese>Um comboio armado inimigo vai atacar %1. Proteja a população local dentruindo o comboio antes que ele chegue</Portuguese>
-                <Chinesesimp>一队Oplitas武装车队将要攻打 %1。当地居民请求在其抵达之前将其摧毁!</Chinesesimp>
-                <French>Un convoi armé d'Oplitas va attaquer %1. La population locale demande votre aide pour la détruire avant qu'elle n'arrive !</French>
+                <Chinesesimp>一队Insurgents武装车队将要攻打 %1。当地居民请求在其抵达之前将其摧毁!</Chinesesimp>
+                <French>Un convoi armé d'Insurgents va attaquer %1. La population locale demande votre aide pour la détruire avant qu'elle n'arrive !</French>
                 <Czech>Braňte terminál, dokud nebude střela hacknuta!</Czech>
             </Key>
         </Container>
@@ -1584,13 +1584,13 @@
                 <Czech>Zničte věž v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_TOWER_DESC">
-                <Original>A Oplitas communications tower has been located in %1. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
-                <Spanish>En %1 se ha ubicado una torre de comunicaciones de Oplitas. La población local está pidiendo tu ayuda para destruirlo! (Use un explosivo satchel M183)</Spanish>
-                <German>Ein Funkturm der Oplitas befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
+                <Original>A Insurgents communications tower has been located in %1. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
+                <Spanish>En %1 se ha ubicado una torre de comunicaciones de Insurgents. La población local está pidiendo tu ayuda para destruirlo! (Use un explosivo satchel M183)</Spanish>
+                <German>Ein Funkturm der Insurgents befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
                 <Portuguese>A torre de comunicação inimiga foi localizada em %1. A população local está pedindo sua ajuda para destruí-las. (Use a mochila de explosivos M183)</Portuguese>
-                <Chinesesimp>%1 地区发现了一座 Oplitas 通讯信号塔。当地居民请求您将其摧毁。(使用一个M183炸药包)</Chinesesimp>
-                <French>Une tour de communication Oplitas a été localisée dans %1. La population locale demande votre aide pour le détruire ! (Utilisez une sacoche explosive M183)</French>
-                <Czech>Komunikační věž Oplitas byla umístěna v %1. Místní obyvatelstvo žádá o vaši pomoc při jeho zničení! (Použijte jednu výbušnou brašnu M183)</Czech>
+                <Chinesesimp>%1 地区发现了一座 Insurgents 通讯信号塔。当地居民请求您将其摧毁。(使用一个M183炸药包)</Chinesesimp>
+                <French>Une tour de communication Insurgents a été localisée dans %1. La population locale demande votre aide pour le détruire ! (Utilisez une sacoche explosive M183)</French>
+                <Czech>Komunikační věž Insurgents byla umístěna v %1. Místní obyvatelstvo žádá o vaši pomoc při jeho zničení! (Použijte jednu výbušnou brašnu M183)</Czech>
             </Key>
         </Container>
         <Container name="Underwater generator">
@@ -1653,13 +1653,13 @@
                 <Czech>Free %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_DESC">
-                <Original>%1 has been conquered by the Oplitas! The Local population is being terrorized, they are asking for help!</Original>
-                <Spanish>%1 ha sido conquistado por los Oplitas! La población local está siendo aterrorizada, están pidiendo ayuda!</Spanish>
-                <German>%1 wurde von der Oplitas erobert! Die lokale Bevölkerung wird terrorisiert, greifen Sie ein!</German>
+                <Original>%1 has been conquered by the Insurgents! The Local population is being terrorized, they are asking for help!</Original>
+                <Spanish>%1 ha sido conquistado por los Insurgents! La población local está siendo aterrorizada, están pidiendo ayuda!</Spanish>
+                <German>%1 wurde von der Insurgents erobert! Die lokale Bevölkerung wird terrorisiert, greifen Sie ein!</German>
                 <Portuguese>Os inimigos estão conquistando a cidade %1. A população local está sendo aterrorizada. Ajude-os!</Portuguese>
-                <Chinesesimp>%1 已被Oplitas占领! 当地居民受到恐吓, 他们正在请求帮助!</Chinesesimp>
-                <French>La ville de %1 a été conquise par les Oplitas ! La population locale est terrorisée, elle demande de l'aide !</French>
-                <Czech>%1 bylo dobyto Oplitas! Místní obyvatelstvo je terorizováno, žádají o pomoc!</Czech>
+                <Chinesesimp>%1 已被Insurgents占领! 当地居民受到恐吓, 他们正在请求帮助!</Chinesesimp>
+                <French>La ville de %1 a été conquise par les Insurgents ! La population locale est terrorisée, elle demande de l'aide !</French>
+                <Czech>%1 bylo dobyto Insurgents! Místní obyvatelstvo je terorizováno, žádají o pomoc!</Czech>
             </Key>
         </Container>
         <Container name="Kill">
@@ -2683,13 +2683,13 @@
                 <Czech>Intel o nalezeném úkrytu!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
-                <Original>In the last hideout we found important intel about all the cities occupied by the Oplitas! Size the last positions held by the enemies and defeat them once and for all</Original>
-                <Spanish>En el último escondite encontramos información importante sobre todas las ciudades ocupadas por los Oplitas! Evalúa las últimas posiciones de los enemigos y derrótalos de una vez por todas.</Spanish>
-                <German>Im letzten Versteck haben wir wichtige Informationen über alle durch die Oplitas besetzten Städte gefunden! Greife die letzten Überreste des Feindes an und besiege ihn endgültig.</German>
+                <Original>In the last hideout we found important intel about all the cities occupied by the Insurgents! Size the last positions held by the enemies and defeat them once and for all</Original>
+                <Spanish>En el último escondite encontramos información importante sobre todas las ciudades ocupadas por los Insurgents! Evalúa las últimas posiciones de los enemigos y derrótalos de una vez por todas.</Spanish>
+                <German>Im letzten Versteck haben wir wichtige Informationen über alle durch die Insurgents besetzten Städte gefunden! Greife die letzten Überreste des Feindes an und besiege ihn endgültig.</German>
                 <Portuguese>No último esconderijo encontramos informações importantes sobre as cidades ocupadas pelos inimigos! Conquites as últimas posições dos inimigos e derrote-os de uma vez por todas</Portuguese>
-                <Chinesesimp>在上个敌军藏匿点中, 我们发现了写有Oplitas占领的全部城市的重要情报! 夺取最后一个敌军据点, 一举消灭他们! </Chinesesimp>
-                <French>Dans la dernière planque, nous avons trouvé des informations importantes sur toutes les villes occupées par les Oplitas ! Il faut prendre les dernières positions détenues par les ennemis et les vaincre une fois pour toutes</French>
-                <Czech>V posledním úkrytu jsme našli důležité informace o všech městech obsazených Oplitas! Musíte zaujmout poslední pozice držené nepřáteli a porazit je jednou provždy</Czech>
+                <Chinesesimp>在上个敌军藏匿点中, 我们发现了写有Insurgents占领的全部城市的重要情报! 夺取最后一个敌军据点, 一举消灭他们! </Chinesesimp>
+                <French>Dans la dernière planque, nous avons trouvé des informations importantes sur toutes les villes occupées par les Insurgents ! Il faut prendre les dernières positions détenues par les ennemis et les vaincre une fois pour toutes</French>
+                <Czech>V posledním úkrytu jsme našli důležité informace o všech městech obsazených Insurgents! Musíte zaujmout poslední pozice držené nepřáteli a porazit je jednou provždy</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_7">
                 <Original>%1 has been deployed!</Original>
@@ -2853,13 +2853,13 @@
         </Container>
         <Container name="Other: Endmission">
             <Key ID="STR_BTC_HAM_O_COMMON_ENDMISSION">
-                <Original>All the hideouts are destroyed, finally the Oplitas has been defeated! Mission accomplished</Original>
-                <Spanish>Todos los escondites fueron destruidos, finalmente el Oplitas han sido derrotados! Misión cumplida</Spanish>
-                <German>Alle Verstecke sind zerstört, nun sind die Oplitas besiegt! Mission erfüllt</German>
+                <Original>All the hideouts are destroyed, finally the Insurgents has been defeated! Mission accomplished</Original>
+                <Spanish>Todos los escondites fueron destruidos, finalmente el Insurgents han sido derrotados! Misión cumplida</Spanish>
+                <German>Alle Verstecke sind zerstört, nun sind die Insurgents besiegt! Mission erfüllt</German>
                 <Portuguese>Todos os esconderijos foram destruídos, finalmente os inimigos foram derrotados! Missão cumprida</Portuguese>
                 <Chinesesimp>所有敌军藏匿点已被摧毁, 敌军终于被打败了! 任务完成</Chinesesimp>
-                <French>Toutes les planques sont détruites, enfin l'Oplitas a été vaincue ! Mission accomplie</French>
-                <Czech>Všechny úkryty jsou zničeny, konečně byli Oplitas poraženi! Mise splněna</Czech>
+                <French>Toutes les planques sont détruites, enfin l'Insurgents a été vaincue ! Mission accomplie</French>
+                <Czech>Všechny úkryty jsou zničeny, konečně byli Insurgents poraženi! Mise splněna</Czech>
             </Key>
         </Container>
         <Container name="Other: Markers ">
