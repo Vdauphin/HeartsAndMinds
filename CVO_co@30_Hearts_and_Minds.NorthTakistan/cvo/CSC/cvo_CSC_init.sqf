@@ -26,11 +26,11 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	[
 		["rhs_10Rnd_762x54mmR_7N1", 30],
 		["rhs_30Rnd_545x39_7N10_AK", 30],
-		["rhs_100Rnd_762x54mmR_green", 6],
+//		["rhs_100Rnd_762x54mmR_green", 6],
 		["greenmag_beltlinked_762x54_basic_100",10],
-		["greenmag_ammo_762x54_basic_60Rnd",10],
-		["greenmag_ammo_762x39_basic_60Rnd",20],
-		["greenmag_ammo_545x39_basic_60Rnd",5],
+		["greenmag_ammo_762x54_basic_60Rnd",5],
+//		["greenmag_ammo_762x39_basic_60Rnd",5],
+		["greenmag_ammo_545x39_basic_60Rnd",20],
 		["greenmag_item_speedloader",5]
 		
 	],
@@ -51,8 +51,8 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 		["ACE_salineIV", 10],
 		["ACE_salineIV_500", 20],
 
-		["ACE_fieldDressing", 20],
-		["ACE_packingBandage", 20],
+		["ACE_fieldDressing",  40],
+		["ACE_packingBandage", 40],
 		["ACE_elasticBandage", 50]
 
 	],
@@ -64,23 +64,30 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	_cvo_csc_source, 
 	"Combat Patrol Package",
 	[
-		["ACE_bodyBag", 10],
+	
 		["ACE_personalAidKit", 5],
 		["ACE_salineIV_500", 5],
 		["ACE_Humanitarian_Ration", 10],
+		["ACE_fieldDressing", 20],
+		["ACE_packingBandage", 20],
+		["ACE_elasticBandage", 10],
+
+
 		["ace_marker_flags_red", 25],
 		["ace_marker_flags_green", 25],
+
 		["ACE_EarPlugs", 10],
 		["ACE_SpraypaintRed", 2],
 		["ACE_CableTie", 20],
+
 		["ACE_HandFlare_White", 10],
-		["rhs_30Rnd_545x39_7N10_AK", 10],
 		["rhs_weap_rsp30_white", 20],
 		["rhs_VG40OP_white", 20],
-		["ACE_fieldDressing", 20],
-		["ACE_packingBandage", 20],
-		["ACE_elasticBandage", 10]
 
+		["rhs_30Rnd_545x39_7N10_AK", 10],
+		["rhs_weap_rpg18", 1],
+
+		["ACE_bodyBag", 10]
 	],
 	"rhs_7ya37_1_single",
 	[
@@ -93,10 +100,11 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	"Night Fight Package",
 	[
 		["ACE_HandFlare_White", 50],
-		["rhs_30Rnd_545x39_AK_green", 10],
 		["rhs_weap_rsp30_white", 50],
-		["rhs_VG40OP_white", 50],
+
 		["rhs_weap_ak74m_gp25", 1]
+		["rhs_30Rnd_545x39_AK_green", 10],
+		["rhs_VG40OP_white", 50],
 
 	],
 	"rhs_7ya37_1_single"
@@ -114,8 +122,6 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	],
 	"rhs_7ya37_1_single"
 ] call cvo_CSC_fnc_addCSC;
-
-
 
 [
 	_cvo_csc_source, 
