@@ -98,10 +98,10 @@ When you select the option an hint will show all the keys required to move the o
 
 
 ## Hideout
-The hideouts are a place where the Oplitas organize their movements.
+The hideouts are a place where the Insurgents organize their movements.
 They send reinforcements from here and can attack the closest city.
 If you notice a lot of activity in an area, probably there is an hideout closeby.
-If you want to defeat the Oplitas, you need to destroy all their hideouts.
+If you want to defeat the Insurgents, you need to destroy all their hideouts.
 To destroy an hideout just place a satchel near the ammo box, it's close to the flag and blow it off!
 
 
@@ -137,9 +137,9 @@ When you destroy an hideout or an ammo cache, all the markers related to it will
 
 ## Reputation
 ### System:
-At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian.
+At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Insurgents, they will likely lie instead. Reputation can be ask to civilian.
 ### Good actions:
-Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
+Helping the local population by fighting the Insurgents, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
 ### Bad actions:
 Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 
@@ -156,4 +156,4 @@ You can also use a horn to ask civilians to stop their movement from a vehicle. 
 You can also drop leaflets to ask all civilians in a circle of 200m to evacuate to a religious building (if not available a safe area) with a AR-2 drone.
 
 ## Traffic
-Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.
+Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Insurgents patrol, don't worry, the civilian driver will do their best to hide you in the car.
