@@ -316,7 +316,7 @@ private _CVO_A_Basic_attachments = [
 	"rhs_acc_2dpZenit_ris",
 
 	// muzzle
-	"rhs_acc_dtkakm",
+//	"rhs_acc_dtkakm",
 	"rhs_acc_dtk",
 	"rhs_acc_dtk1983",
 	"rhs_acc_dtk1",
@@ -454,13 +454,13 @@ CVO_A_TeamLeader = [
 CVO_A_GL = [
 	"rhs_weap_ak74m_fullplum_gp25",
     "rhs_weap_ak74m_gp25",
-	"rhs_weap_akm_gp25",
-	"rhs_weap_akmn_gp25",
+//	"rhs_weap_akm_gp25",
+//	"rhs_weap_akmn_gp25",
 	"rhs_weap_aks74_gp25",
-	"rhs_weap_ak103_gp25",
+//	"rhs_weap_ak103_gp25",
 	"rhs_weap_ak74n_gp25",
 	"rhs_weap_ak74n_2_gp25",
-	"rhs_weap_akms_gp25",
+//	"rhs_weap_akms_gp25",
 	"rhs_weap_aks74n_gp25",
 
 	"rhs_VOG25",
@@ -497,17 +497,25 @@ CVO_A_Medic = [
 
 CVO_A_MG = [
 	"ACE_SpareBarrel_Item",
-	"UK3CB_RPK_74",
-	"UK3CB_RPK_74_BLK",
-	"UK3CB_RPK_74_PLUM",
+
+	"rhs_weap_rpk74m",
+	"rhs_acc_dtkrpk",
 	"rhs_45Rnd_545X39_7N10_AK",
 	"rhs_45Rnd_545X39_AK_Green",
-	"rhs_60Rnd_545X39_AK_Green",
+	"rhs_60Rnd_545X39_7N10_AK",
 
-	"rhs_weap_pkm",
-	"rhs_100Rnd_762x54mmR_7N13",
-	"rhs_100Rnd_762x54mmR",
-	"rhs_100Rnd_762x54mmR_green"
+
+	"UK3CB_RPK",
+	"rhs_75Rnd_762x39mm_tracer",
+	"rhs_75Rnd_762x39mm_89",
+	"rhs_75Rnd_762x39mm",
+
+
+
+//	"rhs_weap_pkm",
+//	"rhs_100Rnd_762x54mmR_7N13",
+//	"rhs_100Rnd_762x54mmR",
+//	"rhs_100Rnd_762x54mmR_green"
 
 	];
 
@@ -525,10 +533,14 @@ CVO_A_Marksman = [
 	"optic_khs_old",
 	"rhsusf_acc_harris_swivel"];
 
-CVO_A_AT = ["rhs_weap_rpg7", 
+CVO_A_AT = [
+	"rhs_weap_rpg18",
+
+	"rhs_weap_rpg7", 
 	"rhs_acc_pgo7v",
 	"rhs_rpg7_PG7V_mag",
-	"rhs_rpg7_OG7V_mag"];
+	"rhs_rpg7_OG7V_mag"
+	];
 
 CVO_A_AA = [
 	"rhs_weap_igla",
@@ -589,8 +601,8 @@ CVO_A_MG_late = [
 ];
 
 
-CVO_A_Marksman append CVO_A_Marksman_late;
-CVO_A_MG append CVO_A_MG_late;
+// CVO_A_Marksman append CVO_A_Marksman_late;
+// CVO_A_MG append CVO_A_MG_late;
 
 
 _modLoaded = isClass (configfile >> "CfgPatches" >> "greenmag_main");
