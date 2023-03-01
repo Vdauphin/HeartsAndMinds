@@ -55,7 +55,7 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
         if (_city getVariable ["occupied", false]) then {
             _marker setMarkerColor "colorRed";
         } else {
-            _marker setMarkerColor "colorGreen";
+            _marker setMarkerColor "colorBLUFOR";
         };
     };
     if (btc_debug_log) then {

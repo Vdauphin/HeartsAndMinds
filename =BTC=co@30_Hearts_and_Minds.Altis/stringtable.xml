@@ -71,7 +71,7 @@
     <Package name="Intro">
         <Container name="Intro">
             <Key ID="STR_BTC_HAM_INTRO_ARSENAL_REDEPLOY">
-                <Original>Arsenal/Re-deploy</Original>
+                <Original>HQ</Original>
                 <Spanish>Arsenal/Re-deploy</Spanish>
                 <German>Arsenal/Verlegen</German>
                 <Portuguese>Arsenal/Ressurgir</Portuguese>
@@ -80,7 +80,7 @@
                 <Czech>Arsenal/Opětovné nasazení</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_INTRO_LOGPOINT">
-                <Original>Rearm/Repair and Objects</Original>
+                <Original>Logic Point</Original>
                 <Spanish>Rearmado/Reparaciones y Objetos</Spanish>
                 <German>Aufmunitionieren und Reparieren von Fahrzeugen</German>
                 <Portuguese>Municiamento e Reparação de Veículos</Portuguese>
@@ -89,7 +89,7 @@
                 <Czech>Přezbrojení/oprava a Objekty</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_INTRO_ONLYRESPAWN">
-                <Original>Only Respawnable</Original>
+                <Original>Mobile Spawn Point</Original>
                 <Spanish>Solo Respawneable</Spanish>
                 <German>Respawnt bei Zertörung</German>
                 <Portuguese>Único Respawnável</Portuguese>
@@ -212,7 +212,7 @@
         </Container>
         <Container name="Documentation: Hideout">
             <Key ID="STR_BTC_HAM_DOC_HIDEOUT_TEXT">
-                <Original>The hideouts are a place where the Oplitas organize their movements.&lt;br/&gt;They send reinforcements from here and can attack the closest city.&lt;br/&gt;If you notice a lot of activity in an area, probably there is an hideout closeby.&lt;br/&gt;If you want to defeat the Oplitas, you need to destroy all their hideouts.&lt;br/&gt;Here an example of an hideout:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;To destroy an hideout just place a satchel near the ammo box, it's close to the flag, and blow it off!</Original>
+                <Original>The hideouts are a place where the Gangs organize their movements.&lt;br/&gt;They send reinforcements from here and can attack the closest city.&lt;br/&gt;If you notice a lot of activity in an area, probably there is an hideout closeby.&lt;br/&gt;If you want to defeat the Gangs, you need to destroy all their hideouts.&lt;br/&gt;Here an example of an hideout:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;To destroy an hideout just place a satchel near the ammo box, it's close to the flag, and blow it off!</Original>
                 <Spanish>Los escondites son un lugar donde los Oplitas organizan sus movimientos.&lt;br/&gt;Enviarán refuerzos desde aquí y podrán atacar la ciudad más cercana.&lt;br/&gt;Si usted nota mucha actividad en un área, probablemente hay un escondite cerca.Si quieres derrotar a los Oplitas, tienes que destruir todos sus escondites.&lt;br/&gt;Aquí un ejemplo de un escondite:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Para destruir un escondite sólo tienes que colocar una explosivo tipo satchel cerca de la caja de municiones, cerca de la bandera, y volarla!</Spanish>
                 <German>In den Verstecken planen und organisieren die Oplitas ihre Einstäze und Bewegungen.&lt;br/&gt;Von hier wird Verstärkung auf umliegende Gebiete verteilt. Ebenso ist ein Angriff auf die nächste Stadt von hier aus möglich.&lt;br/&gt;Sollten Sie eine erhöhte feindliche Aktivität in der Gegend festestellen, so befindet sich möglicherweise ein Versteck in der Nähe.&lt;br/&gt;Wenn Sie die Oplitas besiegen wollen, so müssen Sie alle Verstecke zerstören.&lt;br/&gt;Hier ein kleines Beispiel für ein Versteck:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Das Versteck kann zerstört werden in dem man eine Sprengladung in der Nähe der Munitionskiste oder der Flagge zündet!</German>
                 <Portuguese>Os esconderijos são um lugar onde as inimigos organizam seus movimentos.&lt;br/&gt;Daqui eles enviam reforços e podem atacar as cidades mais próximas.&lt;br/&gt;Se você notar muita atividade em uma área, provavelmente há um esconderijo por perto.&lt;br/&gt;Se você quiser derrotar o inimigo, terá que destruir todos os esconderijos.&lt;br/&gt;Veja um exemplo de um esconderijo:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;Para destruir um esconderijo, basta colocar uma bolsa de explosivos perto da caixa de munição (que fica perto da bandeira) e explodí-lo!</Portuguese>
@@ -254,7 +254,7 @@
                 <Czech>Reputace</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_REPUTATION_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint , remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Gangs, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Gangs, disarming IED's, heal civilians, give banana, remove tag with spraypaint , remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
                 <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; La reputación se puede solicitar a los civiles&lt;br/&gt; Las malas acciones causan malos efectos sobre la reputacion.&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ayudar a la población local luchando contra los Oplitas y desarmando los artefactos explosivos improvisados aumentará tu reputación; matar civiles, mutilar civiles vivos/muertos, disparar cerca de civiles sin razón alguna, disparar a vehículos civiles, dañar/destruir edificios, perder vehículos, respawns de jugadores disminuirá tu reputación. Al principio tienes un nivel de reputación muy bajo, por lo que los civiles no te ayudarán a revelar información importante sobre los Oplitas, es probable que mientan en su lugar.&lt;br/&gt; Abortar una misión secundaria no afecta a la reputación.</Spanish>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; Ihr Ansehen bei der Bevölkerung können Sie bei Zivilisten erfragen &lt;br/&gt; Schlechte bzw. böse Handlungen habe zur Folge das ihr Ansehen sinkt. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Das Unterstützen der lokalen Bevölkerung, das Entschärfen von IEDs und der aktive Kampf gegen die Oplitas wird sich positiv auf ihr Ansehen auswirken. Negative Aktionen wie zb. das Töten oder verstümmeln von Zivlisten, das grundlose Abfeueren einer Waffe in der Nähe von Zivilisten, das Zerstören oder Beschädigen von Gebäuden, der Angriff auf zivile Fahrzeuge, der Verlust von Fahrzeugen im Allgemeinen oder das Respawnen haben hingegen einen nicht so guten Effekt. Zu Beginn ist Ihr Ansehen nur recht gering, weshalb es sein kann das Zivlisten eher zruückhaltend mit Informationen sind. In manchen Fällen werden die Zivilisten Sie auch einfach belügen.&lt;br/&gt; Das Abbrechen von Nebenaufgaben hat keine Auswirkung auf Ihr Ansehen.</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; A Reputação entre a população é obtida por meio dos civis &lt;br/&gt; Ações ruins ou más fazem a reputação diminuir. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ajudar a população local combatendo os inimigos e desarmando os IED's aumentará sua reputação. Matar civis, mutilar civis vivos/mortos, atirar perto de civis sem motivo, atirar nos veículos civis, danificar/destruir prédios, perder veículos civis, respawns de jogadores diminuirão a reputação. No começo, o nível de reputação é muito baixo, então, os civis não irão ajudá-lo a revelar informações importantes sobre os inimigos ou provavelmente irão mentir.&lt;br/&gt; Cancelar tarefas secundárias não afeta a reputação.</Portuguese>
@@ -285,7 +285,7 @@
                 <Czech>Provoz</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_TRAFFIC_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a Oplitas patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civilians are travelling by vehicle across cities. If your reputation is higher than normal, you can ask for a lift to a location chosen on the map. If you bump into a German patrol, don't worry, the civilian driver will do their best to hide you in the car.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Original>
                 <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Los civiles viajan en vehículo a través de las ciudades. Si tu reputación es más alta de lo normal, puedes pedir que te lleven a un lugar elegido en el mapa. Si te encuentras con una patrulla de Oplitas, no te preocupes, el conductor civil hará todo lo posible para esconderte en el coche.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Spanish>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Zivlisten sind mit Fahrzeugen in den Städten unterwegs. Wenn Sie ein hohes Ansehen in der Bevölkerung genießen, so sind Zivlisten auch gerne mal dazu bereit Sie mitzunehmen (nutzen sie die Karte um den Zivlisten zu zeigen wo sie hinwollen). Sollten Sie dabei durch Zufall auf Feinde stoßen, so wird der Zivilist sein Bestes geben um sie im Fahrzeug zu verstecken.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; Civis estarão viajando de veículo pelo mapa, entre uma cidade e outra. Se sua reputação com a população local for alta, eles estarão dispostos a levá-lo a qualuqer lugar do mapa (use o mapa para mostrar onde você quer ir). Se vocês encontrarem uma patrulha inimiga, o civil fará todo possível para te esconder no veículo.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Argo\Images\AssetMaldenTerrain_co.paa' width='355' height='200'/&gt;</Portuguese>
@@ -1121,7 +1121,7 @@
                 <Czech>Hlavní úkol</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_TITLE">
-                <Original>Defeat the Oplitas</Original>
+                <Original>Defeat the Gangs</Original>
                 <Spanish>Derrotar a los Oplitas</Spanish>
                 <German>Besiege die Oplitas</German>
                 <Portuguese>Derrote os Inimigos</Portuguese>
@@ -1130,7 +1130,7 @@
                 <Czech>Porazte Oplitas</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_DESC">
-                <Original>Defeat the Oplitas once and for all</Original>
+                <Original>Defeat the Gangs once and for all</Original>
                 <Spanish>Derrotar a los Oplitas de una vez por todas</Spanish>
                 <German>Besiegen Sie die Oplitas ein für allemal</German>
                 <Portuguese>Derrote todos os inimigos de uma vez por todas</Portuguese>
@@ -1139,7 +1139,7 @@
                 <Czech>Porazte Oplitas jednou provždy</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_WIN_TEXT">
-                <Original>Oplitas have been finally defeated!    Mission accomplished!</Original>
+                <Original>The Gangs have been finally defeated!    Mission accomplished!</Original>
                 <Spanish>Las Oplitas han sido finalmente derrotados!    Misión cumplida!</Spanish>
                 <German>Die Oplitas wurde endgültig besiegt!    Mission erfüllt!</German>
                 <Portuguese>Todos os inimigos foram derrotados! Missão cumprida!</Portuguese>
@@ -1150,7 +1150,7 @@
         </Container>
         <Container name="Mission: Destroy all the hideouts">
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_DESC">
-                <Original>Destroy all the hideouts of the Oplitas</Original>
+                <Original>Destroy all the hideouts of the Gangs</Original>
                 <Spanish>Destruye todos los escondites de los Oplitas</Spanish>
                 <German>Zerstören Sie sämtliche Verstecke der Oplitas</German>
                 <Portuguese>Destrua todos os esconderijos dos inimigos</Portuguese>
@@ -1170,7 +1170,7 @@
         </Container>
         <Container name="Mission: Seize the last positions">
             <Key ID="STR_BTC_HAM_MISSION_SEIZE_TITLE">
-                <Original>Seize the last Oplitas positions</Original>
+                <Original>Seize the last Gang positions</Original>
                 <Spanish>Toma las últimas posiciones de Oplitas</Spanish>
                 <German>Erobern Sie die letzten Stellungen</German>
                 <Portuguese>Conquiste as últimas posições inimigas</Portuguese>
@@ -1231,7 +1231,7 @@
         </Container>
         <Container name="Checkpoint">
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_TITLE">
-                <Original>Destroy checkpoints in %1</Original>
+                <Original>Destroy checkpoints</Original>
                 <Spanish>Destruir los puestos de control en %1</Spanish>
                 <German>Kontrollpunkte zerstören in %1</German>
                 <Portuguese>Destruir ponto de verificação em %1</Portuguese>
@@ -1240,7 +1240,7 @@
                 <Czech>Zničte kontrolní body v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESC">
-                <Original>Checkpoints have been located in %1. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
+                <Original>Checkpoints have been located. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
                 <Spanish>Los puntos de control se han localizado en %1. La población local está pidiendo su ayuda para destruir la caja de municiones en todos los puntos de control!</Spanish>
                 <German>Kontrollpunkt wurden in der Nähe von %1 gesichtet. Die lokale Bevölkerung bittet Sie darum, alle Munitionskisten und den jeweiligen Kontrollpunkt zu beseitigen!</German>
                 <Portuguese>Os pontos de verificação foram localizados em %1. A população local está pedindo sua ajuda para destruidir todas as caixas de munições em todos os pontos de verificação!</Portuguese>
@@ -1274,7 +1274,7 @@
                 <Czech>Lékařské nouzové volání na moři</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization.</Original>
+                <Original>A civilian is calling for a medic, treat and wait for patient stabilization.</Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente.</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert.</German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1294,7 +1294,7 @@
                 <Czech>Civil potřebuje pomoc</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_TITLE">
-                <Original>Medical emergency call in %1</Original>
+                <Original>Medical emergency call</Original>
                 <Spanish>Llamada de emergencia médica en %1</Spanish>
                 <German>Medizinischer Notruf aus %1</German>
                 <Portuguese>Chamada de emergência médica em %1</Portuguese>
@@ -1303,7 +1303,7 @@
                 <Czech>Lékařské tísňové volání v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization </Original>
+                <Original>A civilian is calling for a medic, treat and wait for patient stabilization </Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert </German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1332,7 +1332,7 @@
                 <Czech>Konec konvoje</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_TITLE">
-                <Original>Destroy Oplitas convoy attacking %1</Original>
+                <Original>Destroy Gang convoy</Original>
                 <Spanish>Destruir el convoy de Oplitas atacando %1</Spanish>
                 <German>Bewaffneter Konvoi unterwegs nach %1</German>
                 <Portuguese>Destrua o comboio armado inimigo %1</Portuguese>
@@ -1341,7 +1341,7 @@
                 <Czech>Zničte konvoj Oplitas útočící na %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
-                <Original>An armed Oplitas convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
+                <Original>An armed Gang convoy is going to attack. Local population is asking for your help to destroy it before it gets there!</Original>
                 <Spanish>Un convoy armado de Oplitas va a atacar %1. La población local está pidiendo su ayuda para destruirlo antes de que llegue allí!</Spanish>
                 <German>Ein bewaffneter Konvoi der Oplitas will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
                 <Portuguese>Um comboio armado inimigo vai atacar %1. Proteja a população local dentruindo o comboio antes que ele chegue</Portuguese>
@@ -1370,7 +1370,7 @@
                 <Czech>Začněte hackovat</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_TITLE">
-                <Original>Hack missile near %1</Original>
+                <Original>Hack missile</Original>
                 <Spanish>Hackear misil cerca de %1</Spanish>
                 <German>Rakete hacken in der Nähe von %1</German>
                 <Portuguese>Hackeie o míssil em %1</Portuguese>
@@ -1379,7 +1379,7 @@
                 <Czech>Hacknout raketu poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
-                <Original>Hack a prototype missile with a terminal available in %1. Defend your position until the process is done!</Original>
+                <Original>Hack a prototype missile with a terminal available. Defend your position until the process is done!</Original>
                 <Spanish>Hackear un misil prototipo con un terminal disponible en %1. Defiende tu posición hasta que el proceso haya terminado!</Spanish>
                 <German>Hacke eine Prototyp-Rakete mit einem in %1 verfügbaren Terminal. Verteidige deine Position, bis der Prozess abgeschlossen ist!</German>
                 <Portuguese>Hackei o terminal de protótipo de míssil em %1. Defenda sua posição até que o processo seja concluído!</Portuguese>
@@ -1411,7 +1411,7 @@
         </Container>
         <Container name="Hostage">
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_TITLE">
-                <Original>Liberate hostage near %1</Original>
+                <Original>Liberate hostage</Original>
                 <Spanish>Liberar rehén cerca de %1</Spanish>
                 <German>Geisel befreien: %1</German>
                 <Portuguese>Liberte o refém próximo a %1</Portuguese>
@@ -1420,7 +1420,7 @@
                 <Czech>Osvoboďte rukojmí poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_DESC">
-                <Original>Liberate a civilian hostage in %1. The Local population is asking for your help!</Original>
+                <Original>Liberate a civilian hostage. The Local population is asking for your help!</Original>
                 <Spanish>Liberar a un rehén civil en %1. La población local está pidiendo su ayuda!</Spanish>
                 <German>Befreien Sie eine Geisel in %1 aus den Händen der Terroristen. Die lokale Bevölkerung bittet um Ihre Hilfe!</German>
                 <Portuguese>Liberte o civil refém em %1 das mãos dos terroristas. A população local está pedindo sua ajuda!</Portuguese>
@@ -1431,7 +1431,7 @@
         </Container>
         <Container name="Mines">
             <Key ID="STR_BTC_HAM_SIDE_MINES_TITLE">
-                <Original>Minefield near %1</Original>
+                <Original>Minefield</Original>
                 <Spanish>Campo minado cerca de %1</Spanish>
                 <German>Minenfeld in der Nähe von %1</German>
                 <Portuguese>Campo minado perto de %1</Portuguese>
@@ -1440,7 +1440,7 @@
                 <Czech>Minové pole poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MINES_DESC">
-                <Original>There is a minefield near %1, clear it!</Original>
+                <Original>There is a minefield, clear it!</Original>
                 <Spanish>Hay un campo minado cerca de %1, ¡despejenlo!</Spanish>
                 <German>Es gibt ein Minenfeld in der Nähe von %1, räumen Sie es!</German>
                 <Portuguese>Campo minado próximo a %1. Limpe-os!</Portuguese>
@@ -1451,7 +1451,7 @@
         </Container>
         <Container name="Rescue">
             <Key ID="STR_BTC_HAM_SIDE_RESC_TITLE">
-                <Original>Rescue downed pilot near %1</Original>
+                <Original>Rescue downed pilot</Original>
                 <Spanish>Rescate de piloto caído cerca de %1</Spanish>
                 <German>Abgestürzter Piloten in der Nähe %1</German>
                 <Portuguese>Resgate de piloto abatido perto de %1</Portuguese>
@@ -1460,7 +1460,7 @@
                 <Czech>Záchrana sestřeleného pilota poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_DESC">
-                <Original>MAYDAY-MAYDAY, a pilot crashed his helicopter near %1. Command is asking for your help to rescue and bring him back to base!</Original>
+                <Original>MAYDAY-MAYDAY, a pilot crashed his helicopter. Command is asking for your help to rescue and bring him back to base!</Original>
                 <Spanish>MAYDAY-MAYDAY, un piloto estrelló su helicóptero cerca de %1. ¡El Comando está pidiendo su ayuda para rescatarlo y traerlo de vuelta a la base!</Spanish>
                 <German>MAYDAY-MAYDAY, ein Pilot stürzte mit seinem Helikopter in der Nähe von %1 ab. Sie haben den Befehl ihn zu retten und sicher zur Basis zurückzubringen!</German>
                 <Portuguese>MAYDAY-MAYDAY, um piloto caiu com seu helicóptero próximo a %1. O comando solicitou sua ajuda para resgatá-lo e trazê-lo de volta a base!</Portuguese>
@@ -1527,7 +1527,7 @@
         </Container>
         <Container name="Supply">
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_TITLE">
-                <Original>Supply %1</Original>
+                <Original>Supply</Original>
                 <Spanish>Suministrar %1</Spanish>
                 <German>Versorgung nach %1 bringen</German>
                 <Portuguese>Envie Suprimentos para %1</Portuguese>
@@ -1536,7 +1536,7 @@
                 <Czech>Supply %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_DESC">
-                <Original>The citizens of %1 are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
+                <Original>The citizens are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
                 <Spanish>Los ciudadanos de %1 están al borde de la muerte de hambre, ¡tráiganles algunos suministros presentes en el punto logístico!</Spanish>
                 <German>Die Bewohner der Stadt %1 sind am verdusten und verhungern. Versorgen Sie die Bürger mit den nötigen Nahrungsmitteln. Den benötigten Nachschubcontainer finden sie am Versorgungspunkt.</German>
                 <Portuguese>O população de %1 estão passando fome! Forneça suprimentos! Os suprimentos podem ser solicitados no ponto logístico.</Portuguese>
@@ -1575,7 +1575,7 @@
         </Container>
         <Container name="Tower">
             <Key ID="STR_BTC_HAM_SIDE_TOWER_TITLE">
-                <Original>Destroy tower in %1</Original>
+                <Original>Destroy tower</Original>
                 <Spanish>Destruir torre de radio en %1</Spanish>
                 <German>Funkturm zerstören: %1</German>
                 <Portuguese>Destrua a torre de rádio em %1</Portuguese>
@@ -1584,7 +1584,7 @@
                 <Czech>Zničte věž v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_TOWER_DESC">
-                <Original>A Oplitas communications tower has been located in %1. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
+                <Original>An opposition communications tower has been located. Local population is asking for your help to destroy it!</Original>
                 <Spanish>En %1 se ha ubicado una torre de comunicaciones de Oplitas. La población local está pidiendo tu ayuda para destruirlo! (Use un explosivo satchel M183)</Spanish>
                 <German>Ein Funkturm der Oplitas befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
                 <Portuguese>A torre de comunicação inimiga foi localizada em %1. A população local está pedindo sua ajuda para destruí-las. (Use a mochila de explosivos M183)</Portuguese>
@@ -1604,7 +1604,7 @@
                 <Czech>Generator</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_TITLE">
-                <Original>Destroy underwater generator in %1</Original>
+                <Original>Destroy underwater generator</Original>
                 <Spanish>Destruir el generador subacuático en %1</Spanish>
                 <German>Zerstöre den Unterwassergenerator in %1</German>
                 <Portuguese>Destrua o gerador subaquático em %1</Portuguese>
@@ -1613,7 +1613,7 @@
                 <Czech>Zničte podvodní generátor v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_DESC">
-                <Original>An underwater generator has been located in %1. Local population is asking for your help to destroy it!</Original>
+                <Original>An underwater generator has been located. Local population is asking for your help to destroy it!</Original>
                 <Spanish>Se ha localizado un generador submarino en %1. La población local está pidiendo tu ayuda para destruirlo!</Spanish>
                 <German>Ein Unterwassergenerator wurde in der Nähe von %1 aufgeklärt. Die zivile Bevölkerung bittet um die Zerstörung des Aggregats!</German>
                 <Portuguese>O gerador subaquático foi localizado em %1. A população local está pedindo sua ajuda para destruí-lo!</Portuguese>
@@ -1624,7 +1624,7 @@
         </Container>
         <Container name="Vehicle">
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_TITLE">
-                <Original>Vehicle needs assistance near %1</Original>
+                <Original>Vehicle needs assistance</Original>
                 <Spanish>Vehículo necesita asistencia cerca de %1</Spanish>
                 <German>Fahrzeug braucht Unterstützung in der Nähe von %1</German>
                 <Portuguese>Veículos necessitando de assistência em %1</Portuguese>
@@ -1633,7 +1633,7 @@
                 <Czech>Vozidlo potřebuje asistenci poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
-                <Original>A vehicle damaged by an IED needs assistance near %1! Repair it!</Original>
+                <Original>A vehicle damaged by an IED needs assistance! Repair it!</Original>
                 <Spanish>Un vehículo dañado por IED necesita asistencia cerca de %1! ¡Repárelo!</Spanish>
                 <German>Ein Fahrzeug wurde durch eine IED beschädigt und braucht nun Unterstützung in der Nähe von %1! Repariere Sie es!</German>
                 <Portuguese>Um veículo foi danificado por um IED precisa de reparo em %1! Conserte-o!</Portuguese>
@@ -1644,7 +1644,7 @@
         </Container>
         <Container name="Conquer">
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_TITLE">
-                <Original>Free %1</Original>
+                <Original>Free!</Original>
                 <Spanish>Liberar %1</Spanish>
                 <German>Befreie %1</German>
                 <Portuguese>Liberte %1</Portuguese>
@@ -1653,7 +1653,7 @@
                 <Czech>Free %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_DESC">
-                <Original>%1 has been conquered by the Oplitas! The Local population is being terrorized, they are asking for help!</Original>
+                <Original>Town has been conquered! The Local population is being terrorized, they are asking for help!</Original>
                 <Spanish>%1 ha sido conquistado por los Oplitas! La población local está siendo aterrorizada, están pidiendo ayuda!</Spanish>
                 <German>%1 wurde von der Oplitas erobert! Die lokale Bevölkerung wird terrorisiert, greifen Sie ein!</German>
                 <Portuguese>Os inimigos estão conquistando a cidade %1. A população local está sendo aterrorizada. Ajude-os!</Portuguese>
@@ -1685,7 +1685,7 @@
                 <Czech>Zabijte %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_DESC">
-                <Original>Kill %1 in %2.</Original>
+                <Original>Kill %1.</Original>
                 <German>Töten Sie %1 in %2.</German>
                 <Chinesesimp>在 %2 地区杀死 %1。</Chinesesimp>
                 <French>Tuez %1 dans la ville de %2.</French>
@@ -1722,14 +1722,14 @@
         </Container>
         <Container name="Chemical Leak">
             <Key ID="STR_BTC_HAM_SIDE_CHEM_TITLE">
-                <Original>Chemical leak in %1</Original>
+                <Original>Chemical leak</Original>
                 <German>Chemieunfall in %1</German>
                 <Chinesesimp>处理 %1 地区的化学品泄露</Chinesesimp>
                 <French>Fuite chimique dans la ville de %1</French>
                 <Czech>Chemický únik v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
-                <Original>Some containers with a dangerous chemical agent have been broken in %1. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
+                <Original>Some containers with a dangerous chemical agent have been broken. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
                 <German>In %1 wurden einige Behälter mit gefährlichen chemischen Stoffen beschädigt. Laut Aussagen der Zivilbevölkerung scheinen aber nur kleinere Objekte mit dieser Substanz in Berührungen gekommen zu sein. Finden und beseitigen Sie die kontaminierten Objekte, in dem Sie diese unter eine große Dusche stellen.</German>
                 <Chinesesimp>在 %1 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Chinesesimp>
                 <French>Certains conteneurs contenant un agent chimique dangereux ont été cassés dans la ville de %1. La population civile a signalé que seuls quelques petits objets étaient contaminés. Éliminez la contamination en déplaçant ces objets sous une grande douche.</French>
@@ -1780,14 +1780,14 @@
         </Container>
         <Container name="EMP">
             <Key ID="STR_BTC_HAM_SIDE_EMP_TITLE">
-                <Original>EMP in %1</Original>
+                <Original>EMP</Original>
                 <German>EMP in %1</German>
                 <Chinesesimp>摧毁 %1 地区的 EMP 装置</Chinesesimp>
                 <French>EMP dans la ville de %1</French>
                 <Czech>EMP v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_EMP_DESC">
-                <Original>Civilian population reported that vehicles have electronic fail around %1. They are requesting your help to investigate the origin. %2</Original>
+                <Original>Civilian population reported that vehicles have electronic fail. They are requesting your help to investigate the origin.</Original>
                 <German>Die Bevölkerung hat um %1 Probleme mit der Elektronik ihrer Fahrzeugen. Sie brauchen unsere Unterstützung um den Grund dafür zu finden. %2</German>
                 <Chinesesimp>平民报告称, %1 地区附近存在载具上的电子设备失效的情况。平民请求对来源进行调查。%2</Chinesesimp>
                 <French>La population civile a signalé que les véhicules ont une panne électronique autour de %1. Ils demandent votre aide pour enquêter sur l'origine. %2</French>
@@ -1810,14 +1810,14 @@
         </Container>
         <Container name="Remove rubbish">
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_TITLE">
-                <Original>Remove rubbish in %1</Original>
+                <Original>Remove rubbish</Original>
                 <German>Entferne Müll in %1</German>
                 <Chinesesimp>清除 %1 地区的垃圾</Chinesesimp>
                 <French>Retirer les déchets à %1</French>
                 <Czech>Odstraňte odpad v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_DESC">
-                <Original>Civilian population reported many rubbish on road making driving difficult around %1. They are requesting your help to remove them with a Nemmera.</Original>
+                <Original>The civilian population have reported rubbish on road making driving difficult. They are requesting your help to remove them.</Original>
                 <German>Die Bevölkerung meldet viel Müll auf den Straßen bei %1. Dieser macht das fahren auf den Straßen fast unmöglich. Sie benötigen unsere Unterstützung um den Müll mit dem Nemera zu entfernen</German>
                 <Chinesesimp>平民报告称 %1 附近的道路上有许多垃圾, 导致行车困难。平民请求您派遣豹式装甲车(Nemmera)来清除这些垃圾。</Chinesesimp>
                 <French>La population civile a signalé de nombreux déchets sur la route rendant la conduite difficile autour de %1. Ils demandent votre aide pour les supprimer avec un Nemmera.</French>
@@ -1840,14 +1840,14 @@
         </Container>
         <Container name="Pandemic">
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_TITLE">
-                <Original>Contaminate civilians in %1</Original>
+                <Original>Contaminated civilians</Original>
                 <German>Kontaminierte Zivilisten bei %1</German>
                 <Chinesesimp>%1 地区的平民受到感染</Chinesesimp>
                 <Czech>Kontaminovaný civilisti v %1</Czech>
                 <French>Civils contaminés dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_DESC">
-                <Original>Civilians get contaminated by a chemical agent around %1. They are requesting your help to decontaminate those civilans with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
+                <Original>Civilians are contaminated by a chemical agent. They are requesting your help to decontaminate them  with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
                 <German>Zivilisten werden durch einen chemischen Kampfstoff bei %1 kontaminiert. Sie benötigen unsere Unterstützung. Dekontaminiere die Zivilisten mit einer kleinen Decon Dusche. Um die Zivilisten zu finden, suche bei der Unteraufgabe nach Bluttropfen und nutze deinen chemischen Detekor.</German>
                 <Chinesesimp>%1 附近的平民感染了一种化学试剂。平民请求您使用小型淋浴器来净化受感染的村民。要确定平民的位置, 请查看次级任务, 跟随红色的血滴并使用化学探测器。</Chinesesimp>
                 <Czech>Civilisté jsou kontaminováni chemickou látkou kolem %1. Žádají vaši pomoc při dekontaminaci těch civilistů malou sprchou. Chcete-li najít civilisty, přejděte na dílčí úkol, postupujte podle kapky červené krve a použijte svůj chemický detektor.</Czech>
@@ -1902,7 +1902,7 @@
                 <Czech>Logistic</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQOBJ">
-                <Original>Require object</Original>
+                <Original>Build Menu</Original>
                 <Spanish>Solicitar Objeto</Spanish>
                 <German>Nachschub anfordern</German>
                 <Portuguese>Solicitar reabastecimento</Portuguese>
@@ -1920,7 +1920,7 @@
                 <Czech>Opravit</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQVEH">
-                <Original>Require vehicle</Original>
+                <Original>Vehicle Menu</Original>
                 <Spanish>Solicitar vehiculo</Spanish>
                 <German>Fahrzeug anfordern</German>
                 <Portuguese>Solicitar veículo</Portuguese>
@@ -1941,7 +1941,7 @@
                 <French>Ravitailler la source de ravaitaillement</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_BODYBAG">
-                <Original>Get tickets from body bag or prisoner</Original>
+                <Original>Collect Tickets</Original>
                 <German>Erhalte Tickets durch Leichensäcke oder Gefangene</German>
                 <Chinesesimp>回收尸体袋或囚犯以获得重生票数</Chinesesimp>
                 <Czech>Získejte Životy z vaku na tělo nebo vězně</Czech>
@@ -1950,7 +1950,7 @@
         </Container>
         <Container name="Action(ACE): FOB">
             <Key ID="STR_BTC_HAM_ACTION_FOB_MOUNT">
-                <Original>Mount FOB</Original>
+                <Original>Build FOB</Original>
                 <Spanish>Armar FOB</Spanish>
                 <German>FOB aufbauen</German>
                 <Portuguese>Montar a FOB</Portuguese>
@@ -2015,7 +2015,7 @@
                 <Czech>Taxi</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_ORDERS_ASKINFO">
-                <Original>Ask info</Original>
+                <Original>Ask for Intel</Original>
                 <Spanish>Pedir información</Spanish>
                 <German>Nach Informationen fragen</German>
                 <Portuguese>Pedir informações</Portuguese>
@@ -2024,7 +2024,7 @@
                 <Czech>Zeptejte se info</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_ORDERS_ASKREP">
-                <Original>Ask Reputation</Original>
+                <Original>Ask about Reputation</Original>
                 <Spanish>Pregunte su reputación</Spanish>
                 <German>Nach dem Ansehen fragen</German>
                 <Portuguese>Peça a reputação</Portuguese>
@@ -2062,14 +2062,14 @@
         </Container>
         <Container name="Action(ACE): Re-deploy">
             <Key ID="STR_BTC_HAM_ACTION_BIRESPAWN">
-                <Original>BI respawn</Original>
+                <Original>Respawn</Original>
                 <German>BI Respawn</German>
                 <Chinesesimp>BI重生</Chinesesimp>
                 <French>BI respawn</French>
                 <Czech>BI respawn</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYBASE">
-                <Original>Re-deploy base</Original>
+                <Original>Teleport</Original>
                 <German>Wiedereinstieg Basis</German>
                 <Chinesesimp>重新部署至基地</Chinesesimp>
                 <French>Se redéployer sur base</French>
@@ -2137,7 +2137,7 @@
         </Container>
         <Container name="Action(ACE): Copy Paste">
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_COPY">
-                <Original>Copy container</Original>
+                <Original>Copy container Contents</Original>
                 <Spanish>Copiar container</Spanish>
                 <German>Container kopieren</German>
                 <Portuguese>Copiar Contêiner</Portuguese>
@@ -2146,7 +2146,7 @@
                 <Czech>Kopírovat kontejner</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_PASTE">
-                <Original>Paste container</Original>
+                <Original>Paste container Contents</Original>
                 <Spanish>Pegar container</Spanish>
                 <German>Container einfügen</German>
                 <Portuguese>Colar Contâiner</Portuguese>
@@ -2155,10 +2155,10 @@
                 <Czech>Vložit kontejner</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_COPYI">
-                <Original>Copy inventory</Original>
+                <Original>Copy object inventory</Original>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_PASTEI">
-                <Original>Paste inventory</Original>
+                <Original>Paste object inventory</Original>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_RESTOREI">
                 <Original>Restore inventory</Original>
@@ -2173,33 +2173,11 @@
                 <Czech>Rozbijte zámek dveří</Czech>
             </Key>
         </Container>
-        <Container name="Action(ACE): Change day time and weather">
-            <Key ID="STR_BTC_HAM_ACTION_SET_DAY">
-                <Original>Set day time</Original>
-                <French>Mettre le jour</French>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_SET_NIGHT">
-                <Original>Set night time</Original>
-                <French>Mettre la nuit</French>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_CHANGE_WEATHER">
-                <Original>Change weather</Original>
-                <French>Changer la météo</French>
-            </Key>
-            <Key ID="STR_BTC_HAM_CHANGE_TIME_ENABLEARSENAL">
-                <Original>Enable change day time for officer on the arsenal box:</Original>
-                <French>Autoriser le changement d'heure pour les officiers sur la caisse arsenal:</French>
-            </Key>
-            <Key ID="STR_BTC_HAM_CHANGE_WEATHER_ENABLEARSENAL">
-                <Original>Enable change weather for officer on the arsenal box:</Original>
-                <French>Autoriser le changement de météo pour les officiers sur la caisse arsenal:</French>
-            </Key>
-        </Container>
     </Package>
     <Package name="Conversations">
         <Container name="Conversations: Info">
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_NOINTER">
-                <Original>I can't understand what is saying</Original>
+                <Original>I can't understand what they are saying</Original>
                 <Spanish>No puedo entender lo que está diciendo</Spanish>
                 <German>Ich verstehe nicht was Sie sagen</German>
                 <Portuguese>Não consigo entender o que está dizendo</Portuguese>
@@ -2208,7 +2186,7 @@
                 <Czech>nerozumím tomu co říkáš</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_HIDEOUTS">
-                <Original>I heard about %1 hideouts left.</Original>
+                <Original>I heard about %1 hideouts left in this region!</Original>
                 <Spanish>Escuché que quedaban %1 escondite</Spanish>
                 <German>Ich habe gehört, dass es noch %1 Verstecke gibt.</German>
                 <Portuguese>Ouvi dizer que há ainda %1 esconderijo(s) por perto.</Portuguese>
@@ -2217,7 +2195,7 @@
                 <Czech>Slyšel jsem, že stále existuje %1 skrytých míst.</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_VLOW">
-                <Original>very low</Original>
+                <Original>very low, You are not welcome here!</Original>
                 <Spanish>muy baja</Spanish>
                 <German>sehr niedrig</German>
                 <Portuguese>muito baixa</Portuguese>
@@ -2226,7 +2204,7 @@
                 <Czech>velmi nízká</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_LOW">
-                <Original>low</Original>
+                <Original>low, You need to earn our trust!</Original>
                 <Spanish>baja</Spanish>
                 <German>niedrig</German>
                 <Portuguese>baixa</Portuguese>
@@ -2280,7 +2258,7 @@
                 <Czech>Mám bolesti!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_WOUNDED3">
-                <Original>Injure!</Original>
+                <Original>Owwwww!</Original>
                 <Spanish>¡Lesionado!</Spanish>
                 <German>Ich bin Verletzt!</German>
                 <Portuguese>Eu estou ferido!</Portuguese>
@@ -2298,7 +2276,7 @@
                 <Czech>Mám otevřenou ránu!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS">
-                <Original>I already answered to your question!</Original>
+                <Original>I already answered your questions!</Original>
                 <Spanish>¡Ya respondí a tu pregunta!</Spanish>
                 <German>Ich habe Ihnen bereits alles gesagt!</German>
                 <Portuguese>Eu já respondi a sua pergunta!</Portuguese>
@@ -2316,7 +2294,7 @@
                 <Czech>Nemám pro vás žádné informace</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_CACHEMAP">
-                <Original>I'll show you some hint on the map</Original>
+                <Original>I'll show you a hint on the map</Original>
                 <Spanish>Te mostraré alguna pista en el map</Spanish>
                 <German>Ich habe etwas auf der Karte markiert</German>
                 <Portuguese>Eu vou te mostrar uma dica no mapa</Portuguese>
@@ -2325,7 +2303,7 @@
                 <Czech>Ukážu vám nějakou nápovědu na mapě</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_TRUE">
-                <Original>I saw a lot of militia activity towards %1, %2 meter from here. Probably there is an hideout!</Original>
+                <Original>I saw a lot of militia activity towards %1, %2 meter from here. I heard there is a hideout!</Original>
                 <Spanish>Vi mucha actividad de la milicia en direccion a %1, %2 metros de aqui. ¡Probablemente haya un escondite!</Spanish>
                 <German>Ich habe mehrer bewaffnete Personen in Richtung %1, ca. %2m entfernt, gesehen. Möglicherweise ist dort ein Versteck!</German>
                 <Portuguese>Eu vi várias pessoas armadas indo para %1, a cerca de %2 metros distância. Talvez haja um esconderijo!</Portuguese>
@@ -2502,7 +2480,7 @@
                 <French>IED PARTOUT</French>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_DWY">
-                <Original>DRONE WATCHING YOU</Original>
+                <Original>WERE WATCHING YOU</Original>
                 <French>LES DRONES VOUS OBSERVENT</French>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_WHY">
@@ -2510,7 +2488,7 @@
                 <French>ON VOUS DETESTE</French>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_YGD">
-                <Original>YOU GONNA DIE</Original>
+                <Original>YOURE GONNA DIE</Original>
                 <French>VOUS ALLEZ MOURIR</French>
             </Key>
         </Container>
@@ -2683,7 +2661,7 @@
                 <Czech>Intel o nalezeném úkrytu!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
-                <Original>In the last hideout we found important intel about all the cities occupied by the Oplitas! Size the last positions held by the enemies and defeat them once and for all</Original>
+                <Original>In the last hideout we found important intel about all the cities occupied by the Gangs! Size the last positions held by the enemies and defeat them once and for all</Original>
                 <Spanish>En el último escondite encontramos información importante sobre todas las ciudades ocupadas por los Oplitas! Evalúa las últimas posiciones de los enemigos y derrótalos de una vez por todas.</Spanish>
                 <German>Im letzten Versteck haben wir wichtige Informationen über alle durch die Oplitas besetzten Städte gefunden! Greife die letzten Überreste des Feindes an und besiege ihn endgültig.</German>
                 <Portuguese>No último esconderijo encontramos informações importantes sobre as cidades ocupadas pelos inimigos! Conquites as últimas posições dos inimigos e derrote-os de uma vez por todas</Portuguese>
@@ -2756,7 +2734,7 @@
                 <Czech>Není to vedlejší mise, nelze ji zrušit</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_REBOOT">
-                <Original>Server reboot in %1min, leave it NOW!</Original>
+                <Original>Server reboot in %1min, Please RTB and Disconnect.</Original>
                 <German>Serverneustart in %1 Minuten. JETZT den Server verlassen</German>
                 <Chinesesimp>Server reboot in %1min, leave it NOW!</Chinesesimp>
                 <French>Redémarrage du serveur dans %1min, décconectez-vous maintenant !</French>
@@ -2853,7 +2831,7 @@
         </Container>
         <Container name="Other: Endmission">
             <Key ID="STR_BTC_HAM_O_COMMON_ENDMISSION">
-                <Original>All the hideouts are destroyed, finally the Oplitas has been defeated! Mission accomplished</Original>
+                <Original>All the hideouts are destroyed, finally the Gangs have been defeated! Mission accomplished</Original>
                 <Spanish>Todos los escondites fueron destruidos, finalmente el Oplitas han sido derrotados! Misión cumplida</Spanish>
                 <German>Alle Verstecke sind zerstört, nun sind die Oplitas besiegt! Mission erfüllt</German>
                 <Portuguese>Todos os esconderijos foram destruídos, finalmente os inimigos foram derrotados! Missão cumprida</Portuguese>
@@ -2977,7 +2955,7 @@
                 <Czech>Příliš daleko!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_NOTA">
-                <Original>Not align!</Original>
+                <Original>Not aligned!</Original>
                 <German>Nicht korekt ausgerichtet</German>
                 <Chinesesimp>没有对齐!</Chinesesimp>
                 <Czech>Nezarovnáno!</Czech>

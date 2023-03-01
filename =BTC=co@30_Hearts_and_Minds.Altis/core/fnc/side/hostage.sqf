@@ -110,6 +110,6 @@ if !(alive _captive) exitWith {
     [[], _group + [_group_civ, _trigger, _mine]] call btc_fnc_delete;
 };
 
-40 call btc_rep_fnc_change;
+100 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

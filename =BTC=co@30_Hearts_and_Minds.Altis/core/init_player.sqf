@@ -3,7 +3,7 @@ if !(isNil "btc_custom_loc") then {
     {
         _x params ["_pos", "_cityType", "_cityName", "_radius"];
         private _location = createLocation [_cityType, _pos, _radius, _radius];
-        _location setText _cityName;
+        //_location setText _cityName;
     } forEach btc_custom_loc;
 };
 btc_intro_done = [] spawn btc_respawn_fnc_intro;
@@ -12,10 +12,11 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
+    execVM "scripts\empty_vehicles_marker.sqf";
 
     btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    //["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
     [player] call btc_eh_fnc_player;
 
@@ -60,3 +61,21 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
         }] call CBA_fnc_waitUntilAndExecute;
     };
 }] call CBA_fnc_waitUntilAndExecute;
+
+//EDEN - CONFIG - Admin Slot WL
+
+WHITELISTED = [
+    "76561198047333011", // Tetlys
+    "76561197992739622", // Paladin
+    "76561198010606123", // Kyle
+    "76561199182684233", // NARBAR
+    "76561199078232622", // SOV
+    "76561198011818172", // Cashton
+    "76561199142040782", // JakMc
+    "76561198807583841" // Cryptic
+];
+
+
+if (player getVariable ["Reserved", false]) then {
+    if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
+};

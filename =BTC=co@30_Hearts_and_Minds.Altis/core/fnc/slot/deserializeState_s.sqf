@@ -30,7 +30,7 @@ private _data = btc_slots_serialized getOrDefault [_key, []];
 if (_data isEqualTo []) exitWith {};
 if (_data select 4) then {
     if ((btc_chem_contaminated pushBackUnique _player) > -1) then {
-        publicVariable "btc_chem_contaminated";
+     //   publicVariable "btc_chem_contaminated";
     };
 };
 _data remoteExecCall ["btc_slot_fnc_deserializeState", _player];

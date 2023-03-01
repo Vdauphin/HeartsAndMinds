@@ -142,11 +142,65 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 //Cargo
 [btc_fob_mat, "InitPost", {
     params ["_obj"];
-    [_obj, -1] call ace_cargo_fnc_setSpace;
+    [_obj, 50] call ace_cargo_fnc_setSpace; // CONFIG - Changed FOB container size
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+//X-LARGE
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 100] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach [
+"RHS_CH_47F", 
+"rhsusf_m1240a1_m2crows_usarmy_wd"
+]; // CONFIG - Vehicle ACE Cargo size
+
+//LARGE
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["CUP_MTVR_Base", "Truck_01_base_F"];
+} forEach [
+"rhsusf_stryker_m1127_m2_wd", 
+"rhsusf_stryker_m1132_m2_wd", 
+"rhsusf_m1151_m2_v2_usarmy_wd", 
+"rhsusf_m1151_mk19_v2_usarmy_wd", 
+"rhsusf_M1220_M153_M2_usarmy_wd", 
+"RHS_M2A3_BUSKI_wd", 
+"RHS_M6_wd", 
+"rhsusf_M977A4_BKIT_M2_usarmy_wd", 
+"RHS_UH1Y_UNARMED"
+]; // CONFIG - Vehicle ACE Cargo size
+
+//MEDIUM 
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 25] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach [
+"B_UAV_06_F",
+"rhsusf_mkvsoc", 
+"rhsgref_hidf_rhib", 
+"B_SDV_01_F", 
+"fza_ah64d_b2e", 
+"RHS_MELB_AH6M", 
+"RHS_MELB_MH6M"
+]; // CONFIG - Vehicle ACE Cargo size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

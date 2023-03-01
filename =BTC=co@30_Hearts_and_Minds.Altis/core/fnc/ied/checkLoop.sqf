@@ -34,11 +34,11 @@ Author:
                     if (side _x isEqualTo btc_player_side && {
                         (
                             _x isKindOf "UGV_02_Base_F" &&
-                            {speed _x > 10}
+                            {speed _x > 15}
                         ) ||
                         !(_x isKindOf "UGV_02_Base_F") && {
                             driver _x != _x ||
-                            speed _x > 5
+                            speed _x > 8
                         }
                     }) then {
                         [_wreck, _ied] call btc_ied_fnc_boom;

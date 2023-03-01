@@ -99,7 +99,7 @@ for "_i" from 1 to _n do {
         if (btc_debug) then {
             private _marker = createMarker [format ["btc_tag_%1", _sel_pos], _sel_pos];
             _marker setMarkerType "mil_dot";
-            _marker setMarkerColor "ColorGreen";
+            _marker setMarkerColor "colorBLUFOR";
             _marker setMarkerText "Tag";
             _marker setMarkerSize [0.8, 0.8];
         };

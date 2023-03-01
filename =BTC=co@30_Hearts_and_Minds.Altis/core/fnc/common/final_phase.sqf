@@ -41,7 +41,7 @@ btc_city_remaining = [];
             _marker setMarkerColor "colorRed";
             btc_city_remaining pushBack _y;
         } else {
-            _marker setMarkerColor "colorGreen";
+            _marker setMarkerColor "colorBLUFOR";
             _marker setMarkerAlpha 0;
         };
         _y setVariable ["marker", _marker];

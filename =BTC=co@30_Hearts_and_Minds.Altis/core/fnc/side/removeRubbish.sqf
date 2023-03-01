@@ -84,6 +84,6 @@ if !("SUCCEEDED" in (_tasksID apply {_x call BIS_fnc_taskState})) exitWith {
     [_taskID, "FAILED"] call BIS_fnc_taskSetState;
 };
 
-2 call btc_rep_fnc_change;
+50 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

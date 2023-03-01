@@ -41,7 +41,7 @@ if (btc_debug) then {
     _marker setMarkerBrush "SolidBorder";
     _marker setMarkerSize [_cachingRadius + btc_city_radiusOffset, _cachingRadius + btc_city_radiusOffset];
     _marker setMarkerAlpha 0.3;
-    _marker setMarkerColor (["colorGreen", "colorRed"] select _has_en);
+    _marker setMarkerColor (["colorBLUFOR", "colorRed"] select _has_en);
     _trigger setVariable ["marker", _marker];
 
     private _marke = createMarker [format ["locn_%1", _id], _trigger];

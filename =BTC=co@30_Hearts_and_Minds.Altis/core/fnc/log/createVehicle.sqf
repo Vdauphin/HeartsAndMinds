@@ -63,6 +63,9 @@ if (unitIsUAV _veh) then {
     createVehicleCrew _veh;
 };
 
+//Remove Item inv
+clearItemCargoGlobal _veh;
+
 if (_allHitPointsDamage isNotEqualTo []) then {
     {//Disable explosion effect on vehicle creation
         [_veh, _forEachindex, _x, false] call ace_repair_fnc_setHitPointDamage;

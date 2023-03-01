@@ -152,7 +152,7 @@ if (_units select {alive _x} isEqualTo []) then {
             (([_x] call ace_dogtags_fnc_getDogtagData) select 0) in _dogTagList
         } count (nearestObjects [btc_create_object_point, ["ACE_bodyBagObject"], 100]) >= count _units
     };
-    _rep = 40;
+    _rep = 100;
 };
 
 {

@@ -148,6 +148,6 @@ if (_taskID call BIS_fnc_taskState isEqualTo "FAILED") exitWith {
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
-50 call btc_rep_fnc_change;
+100 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

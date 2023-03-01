@@ -35,5 +35,16 @@ Author:
 
             [{visibleWatch}, btc_chem_fnc_updateDetector, [_obj]] call CBA_fnc_waitUntilAndExecute;
         };
+
+        if (
+            (_key in actionKeys "Watch" || _key in actionKeys "WatchToggle") &&
+            {!visibleWatch} &&
+            {"ItemWatch" in (assignedItems player)} // CONFIG - Detector Additional Item
+        ) then {
+            private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
+            private _obj = _ui displayCtrl 101;
+
+            [{visibleWatch}, btc_chem_fnc_updateDetector, [_obj]] call CBA_fnc_waitUntilAndExecute;
+        };
     }];
 }] call CBA_fnc_waitUntilAndExecute;

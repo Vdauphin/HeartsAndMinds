@@ -191,6 +191,12 @@ if (btc_debug) then {
     [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 };
 
+//Debug ADMIN
+    _action = ["Debug_graph", "Disable debug graph", "\a3\Ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", {btc_debug_graph = !btc_debug_graph}, {serverCommandAvailable "#logout"}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+    _action = ["Debug_graph", "Enable debug graph", "\a3\Ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", {btc_debug_graph = true; 73001 cutRsc ["TER_fpscounter", "PLAIN"];}, {serverCommandAvailable "#logout"}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
 //Re-deploy
 private _actions = [];
 _actions pushBack ["redeploy", localize "STR_BTC_HAM_ACTION_BIRESPAWN", "\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa", {
@@ -229,7 +235,7 @@ if (btc_p_arsenal_Type < 3) then {
 if (btc_p_arsenal_Type > 0) then {
     [btc_gear_object, btc_p_arsenal_Restrict isNotEqualTo 1, false] call ace_arsenal_fnc_initBox;
     if (btc_p_arsenal_Type in [2, 4]) then {
-        btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"];
+        //btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"]; // CONFIG - Disable Arsenal
     };
 };
 if (btc_p_arsenal_Restrict isNotEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_arsenal_fnc_data;};
@@ -250,19 +256,50 @@ if (btc_p_flag > 1) then {
     [player, 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToObject;
 };
 
-//Change day time and weather
-_action = ["env_menu", localize "str_a3_credits_environment", "", {}, {player getVariable ["side_mission", false] && (btc_p_change_time || btc_p_change_weather)}] call ace_interact_menu_fnc_createAction;
-[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["set_day", localize "STR_BTC_HAM_ACTION_SET_DAY", "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa", {
-    private _hour = date call BIS_fnc_sunriseSunsetTime select 0;
-    ((_hour + 1 - dayTime + 24) % 24) remoteExecCall ["skipTime", 2];
-}, {btc_p_change_time && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
-[btc_gear_object, 0, ["ACE_MainActions", "env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["set_night", localize "STR_BTC_HAM_ACTION_SET_NIGHT", "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa", {
-    private _hour = date call BIS_fnc_sunriseSunsetTime select 1;
-    ((_hour + 1 - dayTime + 24) % 24) remoteExecCall ["skipTime", 2];
-}, {btc_p_change_time && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 
-[btc_gear_object, 0, ["ACE_MainActions", "env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["set_weather", localize "STR_BTC_HAM_ACTION_CHANGE_WEATHER", "a3\3den\data\attributes\slidertimeday\sun_ca.paa", {[] remoteExecCall ["btc_fnc_changeWeather", 2]}, {btc_p_change_weather && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
-[btc_gear_object, 0, ["ACE_MainActions","env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
+//EDEN 
+//Loading Additions
+
+{
+  private _action = [
+      "Logistic",
+      localize "STR_BTC_HAM_ACTION_LOC_MAIN",
+      "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa",
+      {},
+      {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}
+  ] call ace_interact_menu_fnc_createAction;
+  [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+} forEach Eden_Containers;
+{
+  _action = [
+      "log_tow",
+      localize "STR_ACE_Towing_displayName",
+      "",
+      {btc_tow_vehicleTowing = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;},
+      {
+          isNull (_target getVariable ["btc_towing", objNull]) &&
+          alive _target
+      }
+  ] call ace_interact_menu_fnc_createAction;
+  [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+    } forEach Eden_Containers;
+    {
+      _action = [
+          "log_hook",
+          localize "STR_ACE_Towing_attach",
+          "\z\ace\addons\attach\UI\attach_ca.paa",
+          {[btc_tow_vehicleTowing, _target] call btc_tow_fnc_ropeCreate;},
+          {!isNull btc_tow_vehicleTowing && {btc_tow_vehicleTowing != _target}}
+      ] call ace_interact_menu_fnc_createAction;
+      [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+} forEach Eden_Containers;
+{
+  _action = [
+      "log_unhook",
+      localize "STR_ACE_Towing_detach",
+      "\z\ace\addons\attach\UI\detach_ca.paa",
+      {_target call btc_tow_fnc_unhook;},
+      {!isNull (_target getVariable ["btc_towing", objNull]);}
+  ] call ace_interact_menu_fnc_createAction;
+  [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+} forEach Eden_Containers;

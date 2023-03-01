@@ -92,7 +92,7 @@ if !("SUCCEEDED" in (_tasksID apply {_x call BIS_fnc_taskState})) exitWith {
 
 {
     if (_x call BIS_fnc_taskState isEqualTo "SUCCEEDED") then {
-        15 call btc_rep_fnc_change;
+        100 call btc_rep_fnc_change;
     };
 } forEach _tasksID;
 

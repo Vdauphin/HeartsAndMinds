@@ -24,6 +24,9 @@ if (btc_p_db_autoRestartTime > 0) then {
         [19, btc_db_warningTimeAutoRestart] remoteExecCall ["btc_fnc_show_hint", [0, -2] select isDedicated];
         [btc_db_fnc_autoRestart, [], btc_db_warningTimeAutoRestart * 60] call CBA_fnc_waitAndExecute;
     }, [], btc_p_db_autoRestartTime * 60 * 60 - btc_db_warningTimeAutoRestart * 60] call CBA_fnc_waitAndExecute;
+    [{
+        [19, btc_db_warningTimeAutoRestart1] remoteExecCall ["btc_fnc_show_hint", [0, -2] select isDedicated];
+           }, [], btc_p_db_autoRestartTime * 60 * 60 - btc_db_warningTimeAutoRestart1 * 60] call CBA_fnc_waitAndExecute;
 };
 
 btc_p_db_autoRestartHour = btc_p_db_autoRestartHour - [-1];

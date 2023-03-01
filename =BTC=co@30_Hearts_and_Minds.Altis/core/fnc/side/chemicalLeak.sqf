@@ -186,6 +186,6 @@ waitUntil {sleep 5;
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
-50 call btc_rep_fnc_change;
+200 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

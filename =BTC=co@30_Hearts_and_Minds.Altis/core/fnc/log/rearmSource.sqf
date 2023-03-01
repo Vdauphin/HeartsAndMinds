@@ -36,7 +36,7 @@ private _failNotify = [
 if (_array isEqualTo []) exitWith {_failNotify call CBA_fnc_notify;};
 
 private _rearmSource = _array select 0;
-private _default_rearmCargo = _rearmSource getVariable ["btc_EDEN_defaultSupply", _rearmSource call ace_rearm_fnc_getSupplyCount];
+private _default_rearmCargo = getNumber (configOf _rearmSource >> "ace_rearm_defaultSupply");
 
 if (_default_rearmCargo <= 0) exitWith {_failNotify call CBA_fnc_notify;};
 

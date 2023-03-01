@@ -51,7 +51,7 @@ with uiNamespace do {
     {
         private _type = typeOf _x;
         private _pos = getPosASL _x;
-        private _dir = getDir _current_garage;
+        private _dir = getDir _x;
         private _customization = [_x] call BIS_fnc_getVehicleCustomization;
 
         _x call CBA_fnc_deleteEntity;

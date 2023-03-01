@@ -44,7 +44,7 @@ private _model_front_towed = ([_towed] call btc_tow_fnc_hitch_points) select 0;
 private _pos_rearTower = _tower modelToWorld _model_rear_tower;
 private _pos_frontTowed = _towed modelToWorld _model_front_towed;
 
-if (_pos_rearTower distance _pos_frontTowed > 5) exitWith {
+if (_pos_rearTower distance _pos_frontTowed > 10) exitWith {
     (localize "STR_BTC_HAM_TOW_TFAR") call CBA_fnc_notify;
     false
 };

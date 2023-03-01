@@ -104,6 +104,6 @@ _fx attachTo [_rocket, [0, 0, 0]];
 
 [[], [_rocket, _terminal, _fx]] call btc_fnc_delete;
 
-80 call btc_rep_fnc_change;
+100 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

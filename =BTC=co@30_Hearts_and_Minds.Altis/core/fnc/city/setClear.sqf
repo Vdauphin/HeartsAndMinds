@@ -40,7 +40,7 @@ if (_remainEnemyUnits isNotEqualTo []) then {
 };
 
 if (_city getVariable ["marker", ""] != "") then {
-    (_city getVariable ["marker", ""]) setMarkerColor "ColorGreen";
+    (_city getVariable ["marker", ""]) setMarkerColor "colorBLUFOR";
 };
 
 if (btc_final_phase) then {
@@ -49,5 +49,5 @@ if (btc_final_phase) then {
 
 if (btc_debug) then {
     private _id = _city getVariable "id";
-    (format ["loc_%1", _id]) setMarkerColor "ColorGreen";
+    (format ["loc_%1", _id]) setMarkerColor "colorBLUFOR";
 };

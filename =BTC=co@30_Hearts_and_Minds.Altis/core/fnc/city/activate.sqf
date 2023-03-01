@@ -43,6 +43,11 @@ if (btc_debug) then {
 _city enableSimulation false;
 _city setVariable ["active", true];
 
+// Create Scaling Multiplier 
+private _CurrentPlayers = count allPlayers;
+//private _currentPlayers = west countSide allUnits;
+private _PlayerScale = (floor (_CurrentPlayers / 6)) max 1;
+
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];
 private _type = _city getVariable ["type", ""];
@@ -111,7 +116,7 @@ if (_data_units isNotEqualTo []) then {
     });
 
     if (_has_en) then {
-        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup;
+        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup * _PlayerScale;
         private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
         for "_i" from 1 to round _finalNumberOfGroup do {
             [
@@ -185,7 +190,7 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    private _finalNumberOfGroup = _p_mil_group_ratio * 5;
+    private _finalNumberOfGroup = _p_mil_group_ratio * 5 * _PlayerScale;
     private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
     for "_i" from 1 to round _finalNumberOfGroup do {
         [
@@ -258,6 +263,9 @@ if !(_city getVariable ["has_suicider", false]) then {
         _delay = _delay + btc_delay_unit;
     };
 };
+
+
+//CONFIG - Disable tags
 
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {

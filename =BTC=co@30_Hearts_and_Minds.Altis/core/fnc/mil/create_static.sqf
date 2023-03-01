@@ -27,7 +27,7 @@ Author:
 
 params [
     ["_pos", [0, 0, 0], [[]]],
-    ["_statics_type", btc_type_mg, [[]]],
+    ["_statics_type",  btc_type_mg, [[]]],
     ["_dir", 0, [0]],
     ["_surfaceNormal", [], [[]]],
     ["_city", objNull, [objNull]]
