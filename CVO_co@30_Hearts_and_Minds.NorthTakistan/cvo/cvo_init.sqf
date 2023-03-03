@@ -6,7 +6,7 @@ cvo_fnc_music = compile preprocessFile "cvo\misc\cvo_music.sqf";
 ["INITZEUS"] call cvo_fnc_music;
 
 // Init CVO Arsenal
-execVM "cvo\arsenal\cvo_arsenal_init.sqf";
+[compileScript ["cvo\arsenal\cvo_arsenal_init.sqf"]] call CBA_fnc_directCall;
 
 
 // Init SideMission Condition
@@ -56,3 +56,4 @@ execVM "cvo\support\cvo_support_init.sqf";
 execVM "cvo\FTVic\cvo_FTVic_init.sqf";
 
 diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");
+
