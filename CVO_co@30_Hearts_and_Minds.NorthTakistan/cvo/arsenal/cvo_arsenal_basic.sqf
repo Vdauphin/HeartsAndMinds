@@ -496,6 +496,15 @@ CVO_A_Medic = [
 	"ACE_suture"];
 
 CVO_A_MG = [
+
+
+//	"rhs_weap_pkm",
+//	"rhs_100Rnd_762x54mmR_7N13",
+//	"rhs_100Rnd_762x54mmR",
+//	"rhs_100Rnd_762x54mmR_green"
+
+
+
 	"ACE_SpareBarrel_Item",
 
 	"rhs_weap_rpk74m",
@@ -508,14 +517,8 @@ CVO_A_MG = [
 	"UK3CB_RPK",
 	"rhs_75Rnd_762x39mm_tracer",
 	"rhs_75Rnd_762x39mm_89",
-	"rhs_75Rnd_762x39mm",
+	"rhs_75Rnd_762x39mm"
 
-
-
-//	"rhs_weap_pkm",
-//	"rhs_100Rnd_762x54mmR_7N13",
-//	"rhs_100Rnd_762x54mmR",
-//	"rhs_100Rnd_762x54mmR_green"
 
 	];
 
@@ -531,7 +534,8 @@ CVO_A_Marksman = [
 	"rhs_acc_pso1m2",
 	"ACE_RangeCard",
 	"optic_khs_old",
-	"rhsusf_acc_harris_swivel"];
+	"rhsusf_acc_harris_swivel"	
+];
 
 CVO_A_AT = [
 	"rhs_weap_rpg18",
