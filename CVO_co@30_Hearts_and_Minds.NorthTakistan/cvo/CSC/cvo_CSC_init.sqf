@@ -102,9 +102,9 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 		["ACE_HandFlare_White", 50],
 		["rhs_weap_rsp30_white", 50],
 
-		["rhs_weap_ak74m_gp25", 1]
+		["rhs_weap_ak74m_gp25", 1],
 		["rhs_30Rnd_545x39_AK_green", 10],
-		["rhs_VG40OP_white", 50],
+		["rhs_VG40OP_white", 50]
 
 	],
 	"rhs_7ya37_1_single"
