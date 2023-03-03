@@ -139,9 +139,9 @@ When you destroy an hideout or an ammo cache, all the markers related to it will
 ### System:
 At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Insurgents, they will likely lie instead. Reputation can be ask to civilian.
 ### Good actions:
-Helping the local population by fighting the Insurgents, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
+Helping the local population by fighting the Insurgents, disarming IED's, heal civilians, give Humanitarian Ration, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
 ### Bad actions:
-Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
+Bad actions cause bad effects: killing civilians/animals, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove Humanitarian Ration, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 
 ## Civil Orders
 Any player can give orders to civilians. To do this, just open your self interaction menu and select 'ORDERS' or use one of the shortcuts. Shortcuts can changed under 'configure >> controls>> configure addons >> Hearts and Minds: Mission (drop down menu)'. Your options are:
