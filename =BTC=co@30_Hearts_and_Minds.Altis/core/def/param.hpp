@@ -135,7 +135,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SLOT_ISSHARE"]);
         values[]={0,1};
         texts[]={$STR_DISABLED, $STR_ENABLED};
-        default = 1;
+        default = 0;
     };
     class btc_p_type_title { // << Faction options >>
         title = $STR_BTC_HAM_PARAM_FAC_TITLE;
