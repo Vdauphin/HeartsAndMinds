@@ -178,8 +178,10 @@ private _CVO_A_Basic_Tools = [
 	"immersion_cigs_cigar0",
 	"immersion_cigs_cigar0_nv",
 
+	"tsp_paperclip",
 
 	"ACE_Humanitarian_Ration",
+
 	"ACE_MapTools",
 	"ace_marker_flags_yellow",
 	"ace_marker_flags_red",
@@ -396,6 +398,14 @@ private _CVO_A_Basic_Uniforms_SpecOps = [
 	"rhs_scarf"
 ];
 
+private _CVO_A_FaceCamo = [
+//	"FISH_Cream_Kit_Snow",
+//	"FISH_Cream_Kit_Tropical",
+
+	"FISH_Cream_Kit_Europe",
+	"FISH_Cream_Kit_Desert"
+];
+
 
 CVO_A_Basic = [];
 CVO_A_Basic append _CVO_A_Basic_Medical; 
@@ -420,7 +430,7 @@ CVO_A_Basic append _CVO_A_Basic_attachments;
 // CVO_A_Basic append _CVO_A_Basic_suppressed;
 // CVO_A_Basic append _CVO_A_Basic_suppressors;
 CVO_A_Basic append _CVO_A_Basic_Uniforms_SpecOps;
-
+CVO_A_Basic append _CVO_A_FaceCamo;
 
 
 /*
