@@ -191,7 +191,28 @@ if (isServer) then {
     btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
     btc_ied_list = [];
     btc_ied_range = 10;
-    btc_ied_power = ["Bo_GBU12_LGB_MI10", "R_MRAAWS_HE_F"] select btc_p_ied_power;
+    btc_ied_power = ["Bo_GBU12_LGB_MI10", "R_MRAAWS_HE_F", "RANDOM"] select btc_p_ied_power;
+
+    CVO_weightedArrayIED = [
+ 
+        "GrenadeHand",               5,
+        "mini_Grenade",              5,
+        "BombCluster_01_Ammo_F",    0.5, 
+        "BombCluster_02_Ammo_F",    0.5, 
+        "BombCluster_03_Ammo_F",    0.5, 
+        "BombDemine_01_Ammo_F",       5,
+        "M_Jian_AT",                1,
+        "M_SPG9_HE",                1,
+        "M_SPG9_HEAT",              1,
+        "M_70mm_SAAMI",             1,
+        "R_PG7_F",                  5,
+        "R_80mm_HE",                1,
+        "M_Scalpel_AT",             1, 
+        "R_MRAAWS_HE_F",            1,
+        "Bomb_04_F",                0.1,
+        "Bo_GBU12_LGB_MI10",        0.5
+    ];
+
 
     //FOB
     btc_fobs = [[], [], []];
@@ -745,4 +766,4 @@ btc_flag_textures = [
 btc_body_bagTicketPlayer = 1;
 btc_body_prisonerTicket = 0.5;
 
-btc_startDate = [1986, 1, 12, 4, 45];
+btc_startDate = [1996, 1, 12, 4, 45];
