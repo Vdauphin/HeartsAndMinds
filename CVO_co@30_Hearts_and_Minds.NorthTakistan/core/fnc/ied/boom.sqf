@@ -31,7 +31,22 @@ if (btc_debug_log) then {
 };
 
 private _pos = getPos _ied;
+
 deleteVehicle _ied;
+
+
+if (btc_ied_power isEqualTo "RANDOM") then {
+
+    (selectRandomWeighted CVO_weightedArrayIED) createVehicle _pos;
+
+} else {
+
+    btc_ied_power createVehicle _pos;
+
+};
+
+
+
 btc_ied_power createVehicle _pos;
 deleteVehicle _wreck;
 
