@@ -53,7 +53,7 @@ respawn = 3;
 respawnDelay = 15;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"MenuPosition", "Tickets", "Wave"};
+respawnTemplates[] = {"Tickets", "Wave"};
 
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
