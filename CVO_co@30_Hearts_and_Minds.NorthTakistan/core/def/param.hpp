@@ -135,7 +135,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SLOT_ISSHARE"]);
         values[]={0,1};
         texts[]={$STR_DISABLED, $STR_ENABLED};
-        default = 0;
+        default = 1;
     };
     class btc_p_type_title { // << Faction options >>
         title = $STR_BTC_HAM_PARAM_FAC_TITLE;
@@ -195,19 +195,19 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 50;
+        default = 0;
     };
     class btc_p_mil_static_group_ratio { // Enemy static density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 30;
+        default = 0;
     };
     class btc_p_civ_group_ratio { // Civilian density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 100;
+        default = 60;
     };
     class btc_p_animals_group_ratio { // Animal density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ANIMALS_DENSITY"]);
@@ -237,7 +237,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIV_MAX_VEH"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
         texts[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
-        default = 15;
+        default = 10;
     };
     class btc_p_IED_title { // << IED options >>
         title = $STR_BTC_HAM_PARAM_IED_TITLE;
@@ -249,7 +249,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_RATIO"]);
         values[]={0, 1, 2, 3};
         texts[]={$STR_DISABLED,$STR_A3_TIME_TRIALS_MISCTT_ROF_25,$STR_3DEN_ATTRIBUTES_SPEEDMODE_NORMAL,$STR_A3_TIME_TRIALS_MISCTT_ROF_21}; //texts[]={"Off","Low","Normal","High"};
-        default = 1;
+        default = 3;
     };
     class btc_p_ied_spot { // IEDs spotting difficulty:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_SPOT"]);
@@ -266,8 +266,8 @@ class Params {
 	class btc_p_ied_power { // Power of IED explosion:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_POWER"]);
         values[]={0, 1};
-        texts[]={$STR_MEDIUM,$STR_SMALL};
-        default = 0;
+        texts[]={$STR_MEDIUM,$STR_SMALL, "Randomise IEDs"};
+        default = 2;
 	};
     class btc_p_ied_drone { // Drone bomber:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_DRONE"]);
@@ -477,7 +477,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_CITYFREE"]);
         values[]={0,1,2,3};
         texts[]={$STR_DISABLED,"1","2","3"};
-        default = 0;
+        default = 3;
     };
     class btc_p_flag { // Allow the use of flag:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_ALLOWFLAG"]);
