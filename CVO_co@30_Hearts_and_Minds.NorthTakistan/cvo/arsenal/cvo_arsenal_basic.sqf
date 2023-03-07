@@ -178,8 +178,6 @@ private _CVO_A_Basic_Tools = [
 	"immersion_cigs_cigar0",
 	"immersion_cigs_cigar0_nv",
 
-	"tsp_paperclip",
-
 	"ACE_Humanitarian_Ration",
 
 	"ACE_MapTools",
@@ -455,7 +453,9 @@ CVO_A_Officer = [
 	"H_Beret_blk",
 	"rhs_cossack_visor_cap_tan"];
 
-CVO_A_Interpreter = [];
+CVO_A_Interpreter = [
+	"tsp_lockpick"
+];
 
 CVO_A_TeamLeader = [
 	"ACRE_PRC148"
@@ -533,6 +533,9 @@ CVO_A_MG = [
 	];
 
 CVO_A_Marksman = [
+	"rhs_acc_1p78",			
+	"rhs_acc_1p29",
+
 	"UK3CB_SVD_OLD",
 	"rhs_10Rnd_762x54mmR_7N1",
 
@@ -562,16 +565,23 @@ CVO_A_AA = [
 
 CVO_A_Engineer = [
 	"ACE_VMM3","ACE_VMH3", 
+
 	"ACE_wirecutter", "ToolKit", 
+
 	"ACE_Fortify", "ACE_DefusalKit",
 	
 	"DemoCharge_Remote_Mag",
+	"ACE_DemoCharge_Remote_Mag_Throwable",
+
+	// "SatchelCharge_Remote_Mag",
+	// "ACE_SatchelCharge_Remote_Mag_Throwable",
 
 	"rhs_ec75_sand_mag",
 	"rhs_ec200_sand_mag",
 	"rhs_ec400_sand_mag",
 
 	"tsp_frameCharge_mag",
+
 	"tsp_stickCharge_mag",
 	"tsp_stickCharge_auto_mag"];
 
@@ -598,8 +608,9 @@ CVO_A_EW = [
 
 CVO_A_Rifleman = [
 	"rhs_acc_1p78",
+	
 	"tsp_paperclip"
-];
+	];
 
 CVO_A_Marksman_late = [
 "rhs_weap_vss",
