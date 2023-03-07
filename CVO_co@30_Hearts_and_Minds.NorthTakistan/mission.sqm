@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=2227;
+		nextID=2233;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=503;
+		nextID=698;
 	};
 	class Camera
 	{
-		pos[]={6327.6807,446.21494,7078.4775};
-		dir[]={-0.64046657,-0.26997438,-0.71896899};
-		up[]={-0.17957774,0.96286744,-0.20158869};
-		aside[]={-0.74669564,-1.4901161e-008,0.66516578};
+		pos[]={6945.957,432.89709,6670.4043};
+		dir[]={-0.48752472,-0.42329648,-0.76363587};
+		up[]={-0.22778089,0.90599126,-0.35678536};
+		aside[]={-0.84287345,2.9802322e-008,0.53811198};
 	};
 };
 binarizationWanted=0;
-sourceName="CVO_co@30_Hearts_and_Minds";
+sourceName="cvo_co@30_hearts_and_minds";
 addons[]=
 {
 	"UK3CB_Factions_KDF_O",
@@ -737,8 +737,8 @@ class Mission
 		year=2020;
 		month=10;
 		day=6;
-		hour=6;
-		minute=7;
+		hour=4;
+		minute=-2;
 		startFogBase=83.000977;
 		forecastFogBase=250;
 		startFogDecay=0.015416095;
@@ -2417,7 +2417,7 @@ class Mission
 							};
 							id=887;
 							type="UK3CB_ARD_I_Hilux_Open";
-							atlOffset=-0.056671143;
+							atlOffset=-0.05670166;
 						};
 						class Item8
 						{
@@ -6581,7 +6581,7 @@ class Mission
 						};
 					};
 					id=1530;
-					atlOffset=0.59442139;
+					atlOffset=-669.65002;
 				};
 				class Item4
 				{
@@ -8204,7 +8204,7 @@ class Mission
 				};
 			};
 			id=865;
-			atlOffset=-1.8069763;
+			atlOffset=-19.094269;
 		};
 		class Item1
 		{
