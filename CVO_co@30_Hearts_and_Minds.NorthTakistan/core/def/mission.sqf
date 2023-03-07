@@ -193,26 +193,6 @@ if (isServer) then {
     btc_ied_range = 10;
     btc_ied_power = ["Bo_GBU12_LGB_MI10", "R_MRAAWS_HE_F", "RANDOM"] select btc_p_ied_power;
 
-    CVO_weightedArrayIED = [
- 
-        "GrenadeHand",               5,
-        "mini_Grenade",              5,
-        "BombCluster_01_Ammo_F",    0.5, 
-        "BombCluster_02_Ammo_F",    0.5, 
-        "BombCluster_03_Ammo_F",    0.5, 
-        "BombDemine_01_Ammo_F",       5,
-        "M_Jian_AT",                1,
-        "M_SPG9_HE",                1,
-        "M_SPG9_HEAT",              1,
-        "M_70mm_SAAMI",             1,
-        "R_PG7_F",                  5,
-        "R_80mm_HE",                1,
-        "M_Scalpel_AT",             1, 
-        "R_MRAAWS_HE_F",            1,
-        "Bomb_04_F",                0.1,
-        "Bo_GBU12_LGB_MI10",        0.5
-    ];
-
 
     //FOB
     btc_fobs = [[], [], []];
@@ -719,23 +699,23 @@ btc_spect_updateOn = -1;
 //Rep
 btc_rep_bonus_cache = 100;
 btc_rep_bonus_civ_hh = 3;
-btc_rep_bonus_disarm = 25;
+btc_rep_bonus_disarm = 15;
 btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 1;
-btc_rep_bonus_IEDCleanUp = 25;
+btc_rep_bonus_IEDCleanUp = 15;
 btc_rep_bonus_removeTag = 3;
 btc_rep_bonus_removeTagLetter = 0.5;
 btc_rep_bonus_foodGive = 5;
 
 btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;
-btc_rep_malus_civ_killed = - 15;
+btc_rep_malus_civ_killed = - 20;
 btc_rep_malus_animal_killed = - 5;
 btc_rep_malus_civ_suppressed = - 4;
 btc_rep_malus_player_respawn = - 10;
-btc_rep_malus_veh_killed = - 25;
+btc_rep_malus_veh_killed = - 15;
 btc_rep_malus_building_damaged = - 2.5;
-btc_rep_malus_building_destroyed = - 5;
+btc_rep_malus_building_destroyed = - 30;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
 btc_rep_malus_breakDoor = - 2;
 btc_rep_malus_wheelChange = - 7;
@@ -764,6 +744,6 @@ btc_flag_textures = [
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
-btc_body_prisonerTicket = 0.5;
+btc_body_prisonerTicket = 1;
 
 btc_startDate = [1996, 1, 12, 4, 45];
