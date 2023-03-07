@@ -21,8 +21,9 @@ CVO_weightedArrayIED = [
     "Bo_GBU12_LGB_MI10",        0.5
 ];	
 
-if true exitWith {};
+// if true exitWith {};
 
+/*
 params [
 	["_classname", 			"", 		   [""]],
 	["_needSetDamage", 		false, 		[false]],
@@ -32,38 +33,42 @@ params [
 	["_canCookOff", 		false, 		[false]],
 	["_doesBlurry", 		false, 		[false]],
 	["_doesHearing", 		false, 		[false]],
-	["_canDelay",    	[false,0], 	[[false,0]]]
+	["_canDelay",    	[true, 7], 	[[true, 7]]]
 ];
-
+*/
 
 CVO_weightedArrayIED = [
-// very large -> very rare
 //      0                          1       2        3      4       5     6        7,    8          
 //["classname",			 	  _setDmg, _setDir, [_setVel,[vector]], _aLti, _cook, _blurry, _hear, [canDelay, time], 1,
 
-["ammo_Missile_Cruise_01", 	  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 0.25,
-["Bo_GBU12_LGB", 			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 1,
+// very large -> very rare
+["ammo_Missile_Cruise_01", 	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 0.25,
+["Bo_GBU12_LGB", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
 
 // Large
-["APERSBoundingMine_Range_Ammo ",true,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["R_80mm_HE", 				  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["Rocket_04_HE_F", 			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["BombDemine_01_Ammo_F",	  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
+["APERSBoundingMine_Range_Ammo", true,   false,   [false,[0,0,0]], false, false, true,  true,   [false,7]], 2,
+["R_80mm_HE", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["Rocket_04_HE_F", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["BombDemine_01_Ammo_F",	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
 
 // Medium
-["Missile_AA_04_F",			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_Titan_AP", 		 		  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_AT", 			  		  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_70mm_SAAMI", 			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_Jian_AT", 				  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["R_TBG32V_F", 			  		false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
+["Missile_AA_04_F",			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_Titan_AP", 		 		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_AT", 			  		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_70mm_SAAMI", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_Jian_AT", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["R_TBG32V_F", 			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
 
 // Small
-["M_SPG9_HE",			  		false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_Scalpel_AT",			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["ammo_Bomb_SDB",			  	false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_Titan_AT",			  		false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_SPG9_HEAT",			  		false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["M_NLAW_AT_F",			  		false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2,
-["R_MRAAWS_HEAT55_F",			false,   false,   [false,[0,0,0]], false, false, false, false, [false,0]], 2
+["M_SPG9_HE",			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_Scalpel_AT",			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["ammo_Bomb_SDB",			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_Titan_AT",			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_SPG9_HEAT",			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["M_NLAW_AT_F",			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["R_MRAAWS_HEAT55_F",			false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+
+// Hand Grenades
+["mini_Grenade",		    	false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 4,
+["GrenadeHand",	        		false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 4
 ];

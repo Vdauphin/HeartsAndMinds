@@ -3,7 +3,7 @@ if (!canSuspend) exitWith {_this spawn cvo_ied_fnc_failedIED_fx};
 
 params [
 	["_obj", 	[0,0,0], 	[objNull,[]], [2,3]	],
-	["_duration", 	13, 		[0]					]
+	["_duration", 	7, 		[0]					]
 ];
 
 private "_pos";
