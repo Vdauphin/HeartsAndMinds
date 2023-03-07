@@ -28,7 +28,7 @@ params [
     ["_vehicle", objNull, [objNull]]
 ];
 
-if !(_vehicle isKindOf "B_APC_Tracked_01_CRV_F" || _vehicle isKindOf "rhsusf_stryker_m1132_m2_base") exitWith {};
+if !(_vehicle isKindOf "UK3CB_KRG_B_MTLB_PKT" || _vehicle isKindOf "rhsusf_stryker_m1132_m2_base") exitWith {};
 
 if (btc_ied_deleteOn > -1) exitWith {};
 

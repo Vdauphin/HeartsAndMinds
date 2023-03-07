@@ -363,7 +363,7 @@ switch (_description) do {
     };
     case 38 : {
         _description = [
-            format [localize "STR_BTC_HAM_SIDE_RUBBISH_DESC", _location] + (["B_APC_Tracked_01_CRV_F"] call btc_fnc_typeOfPreview),
+            format [localize "STR_BTC_HAM_SIDE_RUBBISH_DESC", _location] + (["UK3CB_KRG_B_MTLB_PKT"] call btc_fnc_typeOfPreview),
             format [localize "STR_BTC_HAM_SIDE_RUBBISH_TITLE", _location],
             format [localize "STR_BTC_HAM_SIDE_RUBBISH_TITLE", _location]
         ];
