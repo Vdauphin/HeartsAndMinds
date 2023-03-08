@@ -23,11 +23,15 @@ CVO_arsenal_paperwork 	= [
 // set default loadout at spawn
 player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");                                                                                   
 
+//// This really needs to be in initPlayerLocal.sqf for JIP
+/*
 // adds EH when respawning, using the previously saved loadout 
-player addEventHandler ["Respawn", { 
+player addEventHandler ["Respawn", {
+	params ["_unit", "_corpse"]; 
 	player setUnitLoadout (player getVariable ["CVO_Loadout", []]);
 	diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout loaded"); 
 }];                                 
+*/
 
 // adds EH setting the loadout when closing the arsenal
 ["ace_arsenal_displayClosed", {player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");}] call CBA_fnc_addEventHandler;      

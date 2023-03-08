@@ -4,4 +4,6 @@
 
 [compileScript ["cvo\misc\cvo_acre_unconcious.sqf"]] call CBA_fnc_directCall;
 
-// [] execVM "thanks.sqf";
+player addEventHandler ["Respawn", {
+	player setUnitLoadout (player getVariable ["CVO_Loadout", []]);
+}];                    
