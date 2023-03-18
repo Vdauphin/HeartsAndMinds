@@ -2,6 +2,7 @@ cvo_ied_fnc_failedIED 		= compileScript	["cvo\IED\cvo_ied_fnc_failedIED.sqf", 		
 cvo_ied_fnc_failedIED_fx 	= compileScript	["cvo\IED\cvo_ied_fnc_failedIED_fx.sqf", 			false, ""];
 cvo_ied_fnc_delay_fx        = compileScript ["cvo\IED\cvo_ied_fnc_delay_fx.sqf",                false, ""];
 
+/*
 CVO_weightedArrayIED = [
     "GrenadeHand",               5,
     "mini_Grenade",              5,
@@ -20,7 +21,7 @@ CVO_weightedArrayIED = [
     "Bomb_04_F",                0.1,
     "Bo_GBU12_LGB_MI10",        0.5
 ];	
-
+*/
 // if true exitWith {};
 
 /*
@@ -44,6 +45,8 @@ CVO_weightedArrayIED = [
 // very large -> very rare
 ["ammo_Missile_Cruise_01", 	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 0.25,
 ["Bo_GBU12_LGB", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
+["Bo_GBU12_LGB_MI10", 			false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
+
 
 // Large
 ["APERSBoundingMine_Range_Ammo", true,   false,   [false,[0,0,0]], false, false, true,  true,   [false,7]], 2,
@@ -69,6 +72,9 @@ CVO_weightedArrayIED = [
 ["R_MRAAWS_HEAT55_F",			false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
 
 // Hand Grenades
+["ACE_M14",		    	        false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 2,
+["rhs_charge_sb3kg_mag",		false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 1,
+["rhs_charge_tnt_x2_mag",		false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 1,
 ["mini_Grenade",		    	false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 4,
 ["GrenadeHand",	        		false,   false,   [false,[0,0,0]], false, true,  false, false,  [false,7]], 4
 ];
