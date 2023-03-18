@@ -40,6 +40,9 @@ private _structure = createVehicle [_fob_structure, _pos, [], 0, "CAN_COLLIDE"];
 
 _structure setDir _direction;
 
+_flag setObjectTextureGlobal [0,(getMissionPath "\cvo\img\CVO_MapBoard_Default_CO.paa")];
+_flag setMass 0.001;
+
 private _marker = createMarker [_FOB_name, _pos];
 _marker setMarkerSize [1, 1];
 _marker setMarkerType "b_hq";
