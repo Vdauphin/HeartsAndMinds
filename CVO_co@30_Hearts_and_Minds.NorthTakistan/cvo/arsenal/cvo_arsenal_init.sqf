@@ -4,14 +4,16 @@ CVO_arsenal_boxes 		= [
 	CVO_arsenal,
 	CVO_arsenal_1,
 	CVO_arsenal_2,
-	CVO_arsenal_3
+	CVO_arsenal_3,
+	CVO_arsenal_4
 	];
 // Array of Objects to add the "paperwork" function (manual save current loadout)
 CVO_arsenal_paperwork 	= [
 	cvo_arsenal_loadout,
 	cvo_arsenal_loadout_1,
 	cvo_arsenal_loadout_2,
-	cvo_arsenal_loadout_3
+	cvo_arsenal_loadout_3,
+	cvo_arsenal_loadout_4
 	];
 
 // Loads the Arsenal Database
