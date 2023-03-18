@@ -113,7 +113,7 @@ private _CVO_A_Basic_Helmets = [
 ];
 
 private _CVO_A_Basic_Face = [
-	"G_Respirator_white_F",
+	"G_Respirator_white_F",				
     "rhsusf_shemagh_od",
     "rhsusf_shemagh2_od",
     "rhsusf_shemagh_tan",
@@ -261,14 +261,14 @@ private _CVO_A_Basic_Rifles = [
 
 //    "rhs_weap_ak104",
 //    "rhs_weap_ak103",
-//	"rhs_weap_akm",
-//	"rhs_weap_akms",
-//	"rhs_30Rnd_762x39mm_89",
-//	"rhs_30Rnd_762x39mm_tracer",
-//	"rhs_30Rnd_762x39mm_polymer_89",
-//	"rhs_30Rnd_762x39mm_polymer_tracer",
-//	"rhs_30Rnd_762x39mm_bakelite_89",
-//	"rhs_30Rnd_762x39mm_bakelite_tracer",
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_30Rnd_762x39mm_89",
+	"rhs_30Rnd_762x39mm_tracer",
+	"rhs_30Rnd_762x39mm_polymer_89",
+	"rhs_30Rnd_762x39mm_polymer_tracer",
+	"rhs_30Rnd_762x39mm_bakelite_89",
+	"rhs_30Rnd_762x39mm_bakelite_tracer",
 
 
 //	"uk3cb_sks_01_sling",
@@ -396,12 +396,25 @@ private _CVO_A_Basic_Uniforms_SpecOps = [
 	"rhs_scarf"
 ];
 
-private _CVO_A_FaceCamo = [
+private _CVO_A_Basic_FaceCamo = [
 //	"FISH_Cream_Kit_Snow",
 //	"FISH_Cream_Kit_Tropical",
 
 	"FISH_Cream_Kit_Europe",
 	"FISH_Cream_Kit_Desert"
+];
+
+private _CVO_A_Basic_Rappeling = [
+//	"AUR_Rappel_Rope_70",
+//	"AUR_Rappel_Rope_50",
+//	"AUR_Rappel_Rope_30",
+//	"AUR_Rappel_Rope_20",
+	"AUR_Rappel_Rope_10",
+	"AUR_Rappel_Gear"
+];
+
+private _CVO_A_Basic_personalCBRN = [
+	"G_AirPurifyingRespirator_01_F"
 ];
 
 
@@ -428,8 +441,9 @@ CVO_A_Basic append _CVO_A_Basic_attachments;
 // CVO_A_Basic append _CVO_A_Basic_suppressed;
 // CVO_A_Basic append _CVO_A_Basic_suppressors;
 CVO_A_Basic append _CVO_A_Basic_Uniforms_SpecOps;
-CVO_A_Basic append _CVO_A_FaceCamo;
-
+CVO_A_Basic append _CVO_A_Basic_FaceCamo;
+CVO_A_Basic append _CVO_A_Basic_Rappeling;
+CVO_A_Basic append _CVO_A_Basic_personalCBRN;
 
 /*
 private _CVO_A_Basic_csw = [
@@ -464,13 +478,13 @@ CVO_A_TeamLeader = [
 CVO_A_GL = [
 	"rhs_weap_ak74m_fullplum_gp25",
     "rhs_weap_ak74m_gp25",
-//	"rhs_weap_akm_gp25",
+	"rhs_weap_akm_gp25",
 //	"rhs_weap_akmn_gp25",
 	"rhs_weap_aks74_gp25",
 //	"rhs_weap_ak103_gp25",
 	"rhs_weap_ak74n_gp25",
 	"rhs_weap_ak74n_2_gp25",
-//	"rhs_weap_akms_gp25",
+	"rhs_weap_akms_gp25",
 	"rhs_weap_aks74n_gp25",
 
 	"rhs_VOG25",
@@ -512,7 +526,6 @@ CVO_A_MG = [
 //	"rhs_100Rnd_762x54mmR_7N13",
 //	"rhs_100Rnd_762x54mmR",
 //	"rhs_100Rnd_762x54mmR_green"
-
 
 
 	"ACE_SpareBarrel_Item",
