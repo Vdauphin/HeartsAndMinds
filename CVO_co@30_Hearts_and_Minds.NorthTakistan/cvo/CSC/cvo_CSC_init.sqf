@@ -67,9 +67,9 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	
 		["ACE_personalAidKit", 5],
 		["ACE_salineIV_500", 5],
-		["ACE_Humanitarian_Ration", 10],
-		["ACE_fieldDressing", 20],
-		["ACE_packingBandage", 20],
+		["ACE_Humanitarian_Ration", 25],
+		["ACE_fieldDressing", 30],
+		["ACE_packingBandage", 30],
 		["ACE_elasticBandage", 10],
 
 
