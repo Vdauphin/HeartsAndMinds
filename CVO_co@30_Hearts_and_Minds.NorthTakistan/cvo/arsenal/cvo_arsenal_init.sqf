@@ -26,6 +26,7 @@ CVO_arsenal_paperwork 	= [
 player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");                                                                                   
 
 //// This really needs to be in initPlayerLocal.sqf for JIP
+
 /*
 // adds EH when respawning, using the previously saved loadout 
 player addEventHandler ["Respawn", {

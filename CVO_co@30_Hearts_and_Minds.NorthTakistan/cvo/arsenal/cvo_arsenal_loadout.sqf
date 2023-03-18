@@ -17,7 +17,7 @@ _code = {
 			5,								// Duration of progressBar in secounds
 			{true},							// Condition, will check every frame
 			{
-				player setVariable ["CVO_Loadout", getUnitLoadoutplayer];		// The actual fucking code
+				player setVariable ["CVO_Loadout", getUnitLoadout player];		// The actual fucking code
 			}								// codeblock to be executed on completion
 		] call CBA_fnc_progressBar;			// Executing a CBA progressBar from an Ace Interaction results in crash. Delay execution by 1 frame!!!
 	}] call CBA_fnc_execNextFrame;			// <- this will delay the execution by 1 Frame. 
