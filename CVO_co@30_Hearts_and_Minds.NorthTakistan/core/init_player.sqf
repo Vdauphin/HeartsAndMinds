@@ -15,7 +15,7 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
     btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 
     [player] call btc_eh_fnc_player;
 
