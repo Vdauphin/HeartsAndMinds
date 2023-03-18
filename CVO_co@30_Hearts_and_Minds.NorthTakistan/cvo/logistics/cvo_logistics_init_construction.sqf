@@ -12,10 +12,12 @@ btc_construction_array = [
 	[ 	// Vehicles
 		[	//"Land_Pod_Heli_Transport_04_medevac_black_F",
 			//"UK3CB_TKA_B_M113_AMB",
-			//"UK3CB_TKP_B_UAZ_Open",
+			"UK3CB_TKP_B_UAZ_Open",
 			//"UK3CB_TKP_B_UAZ_Closed",
 			//"UK3CB_ARD_B_GAZ_Vodnik_MedEvac",
-			//"UK3CB_ARD_B_Hilux_Ambulance",
+			"UK3CB_TKP_B_LandRover_Closed",
+			"UK3CB_TKP_B_LandRover_Open",
+			"UK3CB_ARD_B_Hilux_Ambulance",
 			"UK3CB_KDF_O_Gaz66_Ammo",
 			"UK3CB_KDF_O_Gaz66_Med",
 			"UK3CB_TKP_B_Lada_Police",
@@ -36,9 +38,10 @@ btc_construction_array = [
 		],
 
 		// Ammobox
-		[//"rhs_mags_crate",   						// Advanced Ammo Box
-		//"rhs_3Ya40_1_single",						// AK Ammo 7N10
-		//"rhs_7ya37_1_single",						// AK74M + Ammo
+		[
+		"rhs_mags_crate",   						// Advanced Ammo Box
+		"rhs_3Ya40_1_single",						// AK Ammo 7N10
+		"rhs_7ya37_1_single",						// AK74M + Ammo
 		"ACE_medicalSupplyCrate_advanced",
 		"ACE_fastropingSupplyCrate",
 		"ACE_Box_Chemlights",
@@ -60,7 +63,7 @@ btc_construction_array = [
 		["Land_Cargo20_IDAP_F"],
 
 		// FOB
-		["Land_Cargo20_blue_F"],
+		["Land_Cargo10_blue_F"],
 
 		// Decontamination 
 		["DeconShower_01_F"],
