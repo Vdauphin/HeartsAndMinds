@@ -10,6 +10,7 @@ _greenMag_Basic_items = [
    	"greenmag_ammo_762x39_basic_30Rnd",
 	"greenmag_ammo_762x39_basic_60Rnd",
 
+	// some pistol calibre? maybe the scorpion
    	"greenmag_ammo_765x17_basic_30Rnd",
 	"greenmag_ammo_765x17_basic_60Rnd",
 
