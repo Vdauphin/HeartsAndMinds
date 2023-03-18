@@ -57,4 +57,6 @@ _marker setMarkerShape "ICON";
 
 _structure addEventHandler ["Killed", btc_fob_fnc_killed];
 
+publicVariable "btc_fobs";
+
 [_marker, _structure, _flag]
