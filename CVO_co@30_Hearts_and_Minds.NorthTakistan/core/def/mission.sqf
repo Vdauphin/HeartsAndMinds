@@ -419,15 +419,18 @@ btc_w_civs = [
     ["srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"],
     ["hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"]
 ];
-btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
+btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84", "ACE_M14", "rhs_charge_sb3kg_mag", "rhs_charge_tnt_x2_mag"];
+
+
+
 
 // ANIMALS
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Cargo20_blue_F";
-btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "Flag_NATO_F";
+btc_fob_mat = "Land_Cargo10_blue_F";
+btc_fob_structure = "Flag_TKP";
+btc_fob_flag = "Land_MapBoard_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
@@ -446,7 +449,7 @@ btc_int_hornDelay = time;
 //Info
 btc_info_intel_type = [80, 95];//cache - hd - both
 btc_info_hideout_radius = 4000;
-btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F", "Land_File1_F", "Land_FilePhotos_F", "Land_File2_F", "Land_File_research_F", "Land_MobilePhone_old_F", "Land_PortableLongRangeRadio_F", "Land_Laptop_02_unfolded_F"];
+btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F", "Land_MobilePhone_old_F", "Land_PortableLongRangeRadio_F", "Land_Laptop_02_unfolded_F"];
 private _mapsIntel = switch (worldName) do {
     case "Altis": {["Land_Map_altis_F", "Land_Map_unfolded_Altis_F"]};
     case "Stratis": {["Land_Map_stratis_F", "Land_Map_unfolded_F"]};
