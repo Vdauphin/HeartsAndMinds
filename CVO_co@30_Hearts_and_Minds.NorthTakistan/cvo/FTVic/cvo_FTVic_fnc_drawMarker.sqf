@@ -32,19 +32,17 @@ private _locations 		= [];
 
 // Check _locInput if objects or positions, if objects, getPos in 2D format.
 // Create sanitsed _locations array = [[x,y], [x,y]];
-
 {
 	if (_x isEqualType objNull) then {
 		_pos3D = getPos _x;
 		_locations pushBack [_pos3D#0, _pos3D#1];
 	};
-
 	if (_x isEqualType []) then {
-		if (count _x == 2) then {	_locations pushBack _x;			};
+		if (count _x == 2) then {	_locations pushBack _x;				};
 		if (count _x == 3) then {	_locations pushBack [_x#0,_x#1];	};
 	};
-
 } forEach _locInput;
+
 
 // drawing of Markers + creation of aray _markerArray
 {
@@ -57,9 +55,8 @@ private _locations 		= [];
 	_name setMarkerBrushLocal "Solid"; 
 	_name setMarkerColorLocal "ColorOrange";
 	_name setMarkerAlphaLocal 1;
-
-
 } forEach _locations;
+
 
 // return
 _markerArray

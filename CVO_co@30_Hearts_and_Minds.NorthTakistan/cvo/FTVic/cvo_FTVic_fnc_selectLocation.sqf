@@ -28,7 +28,7 @@ params [
 ];
 
 // draws marker for the client that wants to fast travel
-[([] + [btc_gear_object] + btc_fobs#1), cvo_FTVic_radius] call cvo_FTVic_fnc_drawMarker;
+CVO_FTVic_markerArray = [([] + [btc_gear_object] + btc_fobs#1), cvo_FTVic_radius] call cvo_FTVic_fnc_drawMarker;
 openMap [true, false];
 ["<t color='#FFFF00' size='1'>## Deploying with Vehicle ## <br /> Click on Destination</t> <br /> <t color='#ffa500' size='0.75'>Orange Circle </t>", -1, -1, 10, 1] spawn BIS_fnc_dynamicText;
 
@@ -52,6 +52,9 @@ cvo_FTVic_EHID = addMissionEventHandler ["MapSingleClick",
 			openMap [false, false];
 
 			[_obj, _pos, cvo_FTVic_radius] spawn cvo_FTVic_fnc_teleport;
+			// remove marker
+			{deleteMarker _x;} forEach CVO_FTVic_markerArray;
+			CVO_FTVic_markerArray = nil;
 
 		} else {
 
@@ -67,6 +70,11 @@ cvo_FTVic_EHID = addMissionEventHandler ["MapSingleClick",
 cvo_FTVic_handle_waitUntil = [] spawn {
 	waitUntil {!visibleMap};
 	removeMissionEventHandler ["MapSingleClick", cvo_FTVic_EHID];
+
 	cvo_FTVic_EHID = nil;
 	cvo_FTVic_handle_waitUntil = nil;
+
+	// remove marker
+	{deleteMarker _x;} forEach CVO_FTVic_markerArray;
+	CVO_FTVic_markerArray = nil;
 };
