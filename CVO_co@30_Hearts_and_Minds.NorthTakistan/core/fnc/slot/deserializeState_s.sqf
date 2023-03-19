@@ -26,6 +26,8 @@ params [
     ["_key", "", ["", []]]
 ];
 
+[format ["_player %1 _key %2", _player, _key], __FILE__, [false, btc_debug_log, false]] call btc_debug_fnc_message;
+
 private _data = btc_slots_serialized getOrDefault [_key, []];
 
 // if (_data isEqualTo []) exitWith {};
