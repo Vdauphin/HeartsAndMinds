@@ -33,10 +33,11 @@ if (isNull _ho) then {
 
 private _pos = [getPos _ho, btc_info_hideout_radius] call CBA_fnc_randPos;
 
-private _marker = createMarker [format ["%1", _pos], _pos];
-_marker setMarkerType "hd_warning";
-_marker setMarkerText format ["%1m", btc_info_hideout_radius];
-_marker setMarkerSize [0.5, 0.5];
+private _marker = createMarkerLocal [format ["%1", _pos], _pos];
+_marker setMarkerTypeLocal "hd_warning";
+_marker setMarkerTextLocal format ["%1m", btc_info_hideout_radius];
+_marker setMarkerSizeLocal [0.5, 0.5];
+_marker setMarkerAlphaLocal 0.5;
 _marker setMarkerColor "ColorRed";
 
 private _array = _ho getVariable ["markers", []];

@@ -36,7 +36,7 @@ switch (_color) do
 
 if (isNull _flag || _colorMarker == "") exitwith {};
 
-private _marker = createMarker [format ["cvo_flag_%1_%2", CVO_flag_counter, _colorMarker],_flag];
+private _marker = createMarkerLocal [format ["cvo_flag_%1_%2", CVO_flag_counter, _colorMarker],_flag];
 
 CVO_flag_counter = CVO_flag_counter + 1;
 

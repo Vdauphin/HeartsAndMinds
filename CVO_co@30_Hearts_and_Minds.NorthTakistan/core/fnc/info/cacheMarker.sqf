@@ -32,10 +32,11 @@ params [
     ["_info_cache_ratio", btc_info_cache_ratio, [0]]
 ];
 
-private _marker = createMarker [format ["%1", _pos], _pos];
-_marker setMarkerType "hd_unknown";
-_marker setMarkerText ([_marker_name, format ["%1m", _radius]] select (_marker_name isEqualTo ""));
-_marker setMarkerSize [0.5, 0.5];
+private _marker = createMarkerLocal [format ["%1", _pos], _pos];
+_marker setMarkerTypeLocal "hd_unknown";
+_marker setMarkerTextLocal ([_marker_name, format ["%1m", _radius]] select (_marker_name isEqualTo ""));
+_marker setMarkerSizeLocal [0.5, 0.5];
+_marker setMarkerAlphaLocal 0.5;
 _marker setMarkerColor "ColorRed";
 
 btc_cache_markers pushBack _marker;
