@@ -199,6 +199,8 @@ private _greenTab = [
 "greenmag_ammo_9x39_basic_60Rnd",
 
 "CVO_greenmag_ammo_9x39_basic_60Rnd",
+"CVO_greenmag_ammo_765x17_basic_30Rnd",
+"CVO_greenmag_ammo_765x17_basic_60Rnd",
 
 "greenmag_item_speedloader"];
 
