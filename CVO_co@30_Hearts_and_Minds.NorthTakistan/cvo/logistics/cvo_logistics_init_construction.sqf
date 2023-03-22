@@ -39,7 +39,7 @@ btc_construction_array = [
 
 		// Ammobox
 		[
-		"rhs_mags_crate",   						// Advanced Ammo Box
+		// "rhs_mags_crate",   						// Advanced Ammo Box - nono, cause has a lot of wierd stuff like 40mmTB etc
 		"rhs_3Ya40_1_single",						// AK Ammo 7N10
 		"rhs_7ya37_1_single",						// AK74M + Ammo
 		"ACE_medicalSupplyCrate_advanced",
