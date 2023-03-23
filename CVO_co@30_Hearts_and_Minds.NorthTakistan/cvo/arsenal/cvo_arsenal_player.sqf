@@ -67,11 +67,11 @@ if (player getUnitTrait "UAVHacker") then {
 	_roleKit append CVO_A_RTO;
 };
 
-
+/*
 if (player getVariable ["CBRN",false]) then {
 	_roleKit append CVO_A_CBRN;
 };
-
+*/
 
 if (0 < player getVariable ["ace_medical_medicClass", 0]) then {
 	_roleKit append CVO_A_Medic;
@@ -79,6 +79,7 @@ if (0 < player getVariable ["ace_medical_medicClass", 0]) then {
 
 if (0 < player getVariable ["ACE_IsEngineer",0]) then {
 	_roleKit append CVO_A_Engineer;
+	_roleKit append CVO_A_CBRN;
 };
 
 {[_x, _roleKit, false] call ace_arsenal_fnc_addVirtualItems;} forEach CVO_arsenal_boxes;
