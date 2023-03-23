@@ -645,16 +645,3 @@ CVO_A_MG_late = [
 
 _modLoaded = isClass (configfile >> "CfgPatches" >> "greenmag_main");
 if (_modLoaded) then {[compileScript ["cvo\arsenal\cvo_arsenal_mod_greenmag.sqf"]] call CBA_fnc_directCall;};
-
-if (count CVO_arsenal_boxes isEqualTo 0) exitWith {};
-
-{
-	[_x, false, false] 			call ace_arsenal_fnc_initBox;				// Initialises ACE Arsenal on boxes
-	[_x, CVO_A_Basic, false] 	call ace_arsenal_fnc_addVirtualItems;		// Adds the basic list to the arsenal
-
-	[_x, false] 				call ace_dragging_fnc_setDraggable;			// Disables Dragging
-	[_x, false] 				call ace_dragging_fnc_setCarryable;			// Disables Carrying
-	[_x, -1] 					call ace_cargo_fnc_setSize;					// Disables Ace Cargo Loading
-	_x setVariable ["ace_cargo_noRename", true];							// Disables Ace Cargo Renaming
-} forEach CVO_arsenal_boxes;
-

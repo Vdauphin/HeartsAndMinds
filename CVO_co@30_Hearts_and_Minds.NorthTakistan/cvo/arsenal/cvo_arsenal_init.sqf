@@ -16,25 +16,38 @@ CVO_arsenal_paperwork 	= [
 	cvo_arsenal_loadout_4
 	];
 
+// Primes the Arsenal Box Attributes - Only needs to be done once initially.
+if (0 < count CVO_arsenal_boxes) then {
+	{
+		[_x, false] 				call ace_dragging_fnc_setDraggable;			// Disables Dragging
+		[_x, false] 				call ace_dragging_fnc_setCarryable;			// Disables Carrying
+		[_x, -1] 					call ace_cargo_fnc_setSize;					// Disables Ace Cargo Loading
+		_x setVariable ["ace_cargo_noRename", true];							// Disables Ace Cargo Renaming
+	} forEach CVO_arsenal_boxes;
+};
+
 // Loads the Arsenal Database
 [compileScript ["cvo\arsenal\cvo_arsenal_basic.sqf"]] call CBA_fnc_directCall;
 
 // adds Paperwork Interaction
-[compileScript ["cvo\arsenal\cvo_arsenal_loadout.sqf"]] call CBA_fnc_directCall;
+[compileScript ["cvo\arsenal\cvo_arsenal_paperwork.sqf"]] call CBA_fnc_directCall;
 
 // set default loadout at spawn
 player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");                                                                                   
 
 //// This really needs to be in initPlayerLocal.sqf for JIP
 
-/*
-// adds EH when respawning, using the previously saved loadout 
+/* 
+//// doesnt really seem to work ->>>> instead USE onPlayerResapwn.sqf
+
+// adds EH when respawning, using the previously saved loadout  
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"]; 
 	player setUnitLoadout (player getVariable ["CVO_Loadout", []]);
 	diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout loaded"); 
 }];                                 
 */
+
 
 // adds EH setting the loadout when closing the arsenal
 ["ace_arsenal_displayClosed", {player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");}] call CBA_fnc_addEventHandler;      
@@ -43,4 +56,4 @@ diag_log ("[CVO] [LOADOUT] - " + str player + " - init completed");
 // Init CVO Arsenal Tab
 [compileScript ["cvo\arsenal\cvo_arsenal_Tab_medical.sqf"]] call CBA_fnc_directCall;
 
-
+// [compileScript ["cvo\arsenal\cvo_arsenal_personalKit.sqf"]] call CBA_fnc_directCall;
