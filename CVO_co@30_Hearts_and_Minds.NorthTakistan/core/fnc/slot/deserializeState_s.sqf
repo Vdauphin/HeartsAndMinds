@@ -30,8 +30,12 @@ params [
 
 private _data = btc_slots_serialized getOrDefault [_key, []];
 
+[format ["Data %1", _data ], __FILE__, [false, btc_debug_log, false]] call btc_debug_fnc_message;
+
+
+if (!cvo_debug) exitWith {};
 if (_data isEqualTo []) exitWith {};
-// if (true) exitWith {};
+
 
 if (_data select 4) then {
     if ((btc_chem_contaminated pushBackUnique _player) > -1) then {
