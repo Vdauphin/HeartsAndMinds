@@ -234,6 +234,10 @@ private _CVO_A_Basic_Rifles = [
     "rhs_weap_ak74m_desert",
     "rhs_weap_ak74m_camo",
     "rhs_weap_ak74m",
+
+	"rhs_acc_dtk",				//muzzle
+	"rhs_acc_dtk1983",			//muzzle
+
 //	"rhs_weap_ak105",
 //	"rhs_weap_aks74u",
 //	"rhs_weap_aks74un",
@@ -263,6 +267,9 @@ private _CVO_A_Basic_Rifles = [
 //    "rhs_weap_ak103",
 	"rhs_weap_akm",
 	"rhs_weap_akms",
+	"rhs_acc_dtk1l",			//muzzle
+	"rhs_acc_dtkakm",			//muzzle
+
 	"rhs_30Rnd_762x39mm_89",
 	"rhs_30Rnd_762x39mm_tracer",
 	"rhs_30Rnd_762x39mm_polymer_89",
@@ -316,9 +323,6 @@ private _CVO_A_Basic_attachments = [
 	"rhs_acc_2dpZenit_ris",
 
 	// muzzle
-//	"rhs_acc_dtkakm",
-	"rhs_acc_dtk",
-	"rhs_acc_dtk1983",
 	"rhs_acc_dtk1",
 	"rhs_acc_dtk3",
 	"rhs_acc_dtk2",
@@ -414,9 +418,11 @@ private _CVO_A_Basic_Rappeling = [
 ];
 
 private _CVO_A_Basic_personalCBRN = [
-	"G_AirPurifyingRespirator_01_F"
+	"U_C_CBRN_Suit_01_Blue_F", 
+	"G_AirPurifyingRespirator_01_F",
+	"G_RegulatorMask_F", 
+	"B_SCBA_01_F"
 ];
-
 
 CVO_A_Basic = [];
 CVO_A_Basic append _CVO_A_Basic_Medical; 
@@ -535,6 +541,7 @@ CVO_A_MG = [
 	"rhs_45Rnd_545X39_7N10_AK",
 	"rhs_45Rnd_545X39_AK_Green",
 	"rhs_60Rnd_545X39_7N10_AK",
+	"rhs_60Rnd_545X39_AK_Green",
 
 
 	"UK3CB_RPK",
@@ -599,12 +606,7 @@ CVO_A_Engineer = [
 	"tsp_stickCharge_auto_mag"];
 
 
-CVO_A_CBRN = [
-	"U_C_CBRN_Suit_01_Blue_F", 
-	"U_B_CBRN_Suit_01_White_F",
-	"G_AirPurifyingRespirator_01_F",
-	"G_RegulatorMask_F", 
-	"B_SCBA_01_F"];
+
 
 CVO_A_EW = [
 	"hgun_esd_01_F",
@@ -615,15 +617,16 @@ CVO_A_EW = [
 	"ACE_UAVBattery",
 	"B_UavTerminal",
 	//"B_UAV_01_backpack_F",
-	"B_UAV_06_backpack_F",
-	"B_UGV_02_Demining_backpack_F",
-	"B_UGV_02_Science_backpack_F"]; 
+	"B_UAV_06_backpack_F",					// Transport one
+	"B_UGV_02_Demining_backpack_F",			// Eddie
+	"B_UGV_02_Science_backpack_F"			// Eddie
+]; 
 
 CVO_A_Rifleman = [
 	"rhs_acc_1p78",
 	
 	"tsp_paperclip"
-	];
+];
 
 CVO_A_Marksman_late = [
 "rhs_weap_vss",
