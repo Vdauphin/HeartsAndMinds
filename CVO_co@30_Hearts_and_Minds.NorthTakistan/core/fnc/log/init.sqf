@@ -43,3 +43,6 @@ if (
 ) then {
     [_obj, round ((sizeOf _type)/1.3)] call ace_cargo_fnc_setSpace;
 };
+
+
+[missionNamespace, "HAM_EH_Init_Object", [_obj]] call BIS_fnc_callScriptedEventHandler;
