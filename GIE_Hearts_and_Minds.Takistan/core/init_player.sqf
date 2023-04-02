@@ -13,7 +13,6 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
 
-    btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
     ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
@@ -25,9 +24,7 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
     };
     [] call btc_int_fnc_add_actions;
 
-    if (player getVariable ["interpreter", false]) then {
-        player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
-    };
+    player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
 
     switch (btc_p_autoloadout) do {
         case 1: {
@@ -37,6 +34,7 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
             removeAllWeapons player;
         };
         default {
+                player setUnitLoadout [[],[],[],["U_B_BDU_2acr",[["ACE_splint",1],["ACE_epinephrine",1],["ACE_morphine",2],["ACE_packingBandage",4],["ACE_elasticBandage",4],["ACE_EarPlugs",1],["ACE_tourniquet",2],["ACE_Flashlight_MX991",1],["ACE_MapTools",1],["ACE_CableTie",1],["ACE_Chemlight_IR",2,1],["ACE_Chemlight_HiRed",2,1],["ACE_Chemlight_HiGreen",2,1]]],[],[],"cap_patrel_dcu","G_Shades_tactical",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]];
         };
     };
 
@@ -59,4 +57,21 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
             ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", btc_debug_fnc_marker];
         }] call CBA_fnc_waitUntilAndExecute;
     };
+
+    [{time > 25}, {
+        private _color = "#B71C1C";
+        [
+            [format ["<t color='%1' align='center'>Bonjour %2</t>", _color, name player]],
+            [format ["Bienvenue à toi sur le serveur du <t color='%1'>GIE</t>", _color]],
+            [format ["Il y a actuellement %1 joueur(s) connecté(s). Passe un bon moment :)", (count (allPlayers) - count entities "HeadlessClient_F")]],
+            [format ["Afin de communiquer avec nous, nous t'invitons à rejoindre notre <t color='%1'>TS</t>:", _color]],
+            ["ts.team-gie.com"],
+            ["Attention, n'oublie pas qu'ici, chacune de tes action a des conséquences sur la mission :)"],
+            [format ["<t color='%1' align='center'>Le Staff</t>", _color]],
+            false
+        ] call CBA_fnc_notify;
+
+        [] spawn gie_presence_fnc_init;
+        [] spawn gie_teamspeak_fnc_checkStatus;
+    }] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_waitUntilAndExecute;

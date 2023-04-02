@@ -176,11 +176,11 @@ _action = ["Civil_Go_away", localize "STR_BTC_HAM_ACTION_ORDERS_GOAWAY", "\A3\ui
 } forEach btc_civ_type_units;
 
 //Side missions
-_action = ["side_mission", localize "STR_BTC_HAM_DOC_SIDEMISSION_TITLE", "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa", {}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission", localize "STR_BTC_HAM_DOC_SIDEMISSION_TITLE", "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa", {[player call BIS_fnc_taskCurrent] call btc_task_fnc_abort}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa", {[player call BIS_fnc_taskCurrent] call btc_task_fnc_abort}, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_side_fnc_create", 2]}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_side_fnc_create", 2]}, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 //Debug
@@ -256,13 +256,35 @@ _action = ["env_menu", localize "str_a3_credits_environment", "", {}, {player ge
 _action = ["set_day", localize "STR_BTC_HAM_ACTION_SET_DAY", "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa", {
     private _hour = date call BIS_fnc_sunriseSunsetTime select 0;
     ((_hour + 1 - dayTime + 24) % 24) remoteExecCall ["skipTime", 2];
-}, {btc_p_change_time && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+}, {btc_p_change_time}] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, ["ACE_MainActions", "env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
 _action = ["set_night", localize "STR_BTC_HAM_ACTION_SET_NIGHT", "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa", {
     private _hour = date call BIS_fnc_sunriseSunsetTime select 1;
     ((_hour + 1 - dayTime + 24) % 24) remoteExecCall ["skipTime", 2];
-}, {btc_p_change_time && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
+}, {btc_p_change_time}] call ace_interact_menu_fnc_createAction;
 
 [btc_gear_object, 0, ["ACE_MainActions", "env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
 _action = ["set_weather", localize "STR_BTC_HAM_ACTION_CHANGE_WEATHER", "a3\3den\data\attributes\slidertimeday\sun_ca.paa", {[] remoteExecCall ["btc_fnc_changeWeather", 2]}, {btc_p_change_weather && player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, ["ACE_MainActions","env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+// Formation interprete
+_action = ["setInterpreter","Devenir interprète","",{[player, true] call gie_fnc_interpreter;}, {({_x getVariable ["interpreter", false] && isPlayer _x} count allUnits < 6) && !(player getVariable ["interpreter", false])}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+_action = ["removeInterpreter","Quitte l'interprète","",{[player, false] call gie_fnc_interpreter;}, {player getVariable ["interpreter", false]}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+// Medical tent
+_action = ["full_heal", "Se soigner", "", {
+    [objNull, player] call ace_medical_treatment_fnc_fullHeal; 
+    hint "Vous avez été soigné par les médecins de la base";
+}, {true}] call ace_interact_menu_fnc_createAction;
+[btc_medical, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_action = ["full_heal_area", "Soigner les unités aux alentours", "", {
+    private _soldiers = (btc_medical nearEntities 15) select {isPlayer _x};
+    {
+        [objNull, _x] call ace_medical_treatment_fnc_fullHeal;
+        ["Vous avez été soigné par les médecins de la base"] remoteExec ["hint", _x, false];
+    } forEach _soldiers;
+}, {true}] call ace_interact_menu_fnc_createAction;
+[btc_medical, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;

@@ -431,6 +431,16 @@ if (!isDedicated) then {
 
     //SLOT
     btc_slot_fnc_deserializeState = compileScript ["core\fnc\slot\deserializeState.sqf"];
+
+    // ZEUS
+    gie_zeus_fnc_addZeusToPlayerRemote = compileScript ["core\fnc\zeus\addZeusToPlayerRemote.sqf"];
+
+    // PRESENCE (Discord)
+    gie_presence_fnc_init = compileScript ["core\fnc\presence\init.sqf"];
+    gie_presence_fnc_evaluatePresenceContent = compileScript ["core\fnc\presence\evaluatePresenceContent.sqf"];
+
+    // Scripts GIE
+    gie_teamspeak_fnc_checkStatus = compileScript ["core\fnc\gie\checkTeamspeakStatus.sqf"];
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\

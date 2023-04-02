@@ -3,22 +3,22 @@
     <Package name="Description">
         <Container name="Description: Main">
             <Key ID="STR_BTC_HAM_DESCR_NAME">
-                <Original>Hearts and Minds</Original>
-                <Spanish>Hearts and Minds</Spanish>
-                <German>Hearts and Minds</German>
-                <Portuguese>Corações e Mentes</Portuguese>
-                <Chinesesimp>心灵与智慧</Chinesesimp>
-                <French>Hearts and Minds</French>
-                <Czech>Hearts and Minds</Czech>
+                <Original>[G.I.E] Hearts and Minds</Original>
+                <Spanish>[G.I.E] Hearts and Minds</Spanish>
+                <German>[G.I.E] Hearts and Minds</German>
+                <Portuguese>[G.I.E] Hearts and Minds</Portuguese>
+                <Chinesesimp>[G.I.E] Hearts and Minds</Chinesesimp>
+                <French>[G.I.E] Hearts and Minds</French>
+                <Czech>[G.I.E] Hearts and Minds</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DESCR_MISSION">
-                <Original>github.com/Vdauphin/HeartsAndMinds</Original>
-                <Spanish>github.com/Vdauphin/HeartsAndMinds</Spanish>
-                <German>github.com/Vdauphin/HeartsAndMinds</German>
-                <Portuguese>github.com/Vdauphin/HeartsAndMinds</Portuguese>
-                <Chinesesimp>github.com/Vdauphin/HeartsAndMinds</Chinesesimp>
-                <French>github.com/Vdauphin/HeartsAndMinds</French>
-                <Czech>github.com/Vdauphin/HeartsAndMinds</Czech>
+                <Original>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Original>
+                <Spanish>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Spanish>
+                <German>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</German>
+                <Portuguese>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Portuguese>
+                <Chinesesimp>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Chinesesimp>
+                <French>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</French>
+                <Czech>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Czech>
             </Key>
         </Container>
     </Package>

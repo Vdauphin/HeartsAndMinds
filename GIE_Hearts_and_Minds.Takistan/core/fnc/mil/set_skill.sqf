@@ -24,6 +24,8 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
+if (side _unit isEqualTo btc_player_side) exitWith {};
+
 _unit setskill ["general", btc_AI_skill select 0];
 _unit setskill ["aimingAccuracy", btc_AI_skill select 1];
 _unit setskill ["aimingShake", btc_AI_skill select 2];

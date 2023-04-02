@@ -50,6 +50,9 @@ addMissionEventHandler ["BuildingChanged", btc_rep_fnc_buildingchanged];
         _player getVariable ["btc_slot_key", [0, 0, 0]],
         [] // Reset serialized data if slot died
     ];
+
+    // Reset loadout
+    [player, [[],[],[],["U_B_BDU_2acr",[["ACE_splint",1],["ACE_epinephrine",1],["ACE_morphine",2],["ACE_packingBandage",4],["ACE_elasticBandage",4],["ACE_EarPlugs",1],["ACE_tourniquet",2],["ACE_Flashlight_MX991",1],["ACE_MapTools",1],["ACE_CableTie",1],["ACE_Chemlight_IR",2,1],["ACE_Chemlight_HiRed",2,1],["ACE_Chemlight_HiGreen",2,1]]],[],[],"cap_patrel_dcu","G_Shades_tactical",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]]] remoteExecCall ["setUnitLoadout", _player];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_explosives_detonate", {
