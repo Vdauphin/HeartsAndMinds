@@ -1,9 +1,16 @@
 
 loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+author = "Giallustio || modifié par la team G.I.E";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
-enabledebugconsole = 1;
+enableDebugConsole[] = {
+	"76561198058210193", // Morba
+	"76561198296724481", // Tisma
+	"76561198163980017", // Chocox
+	"76561199096816859" // Alban
+};
+
+disabledAI = 1;
 
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
@@ -57,3 +64,5 @@ respawnTemplates[] = {"MenuPosition", "Tickets"};
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+EnableTargetDebug=1;
