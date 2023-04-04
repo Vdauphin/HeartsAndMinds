@@ -20,8 +20,13 @@ cvo_fnc_music = compile preprocessFile "cvo\misc\cvo_music.sqf";
 [compileScript ["cvo\logistics\cvo_logistics_init_fortify.sqf"]] call CBA_fnc_directCall;
 
 
-// Init CVO Logistics Custom Supply Create
+// Initialize Logistics module
+[compileScript ["cvo\logistics\init.sqf"]] call CBA_fnc_directCall;
+
+
+// Initialize CSC module
 [compileScript ["cvo\CSC\cvo_CSC_init.sqf"]] call CBA_fnc_directCall;
+
 
 // Init CVO Custom Spawnable Objects
 //cvo_p_logistics_custom_construction_array
