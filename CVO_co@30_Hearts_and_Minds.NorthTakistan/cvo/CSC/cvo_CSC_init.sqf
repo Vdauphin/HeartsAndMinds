@@ -153,6 +153,7 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	"rhs_7ya37_1_single"
 ] call cvo_CSC_fnc_addCSC;
 
+/*
 [
 	_cvo_csc_source, 
 	"PKM Package",
@@ -165,6 +166,7 @@ _cvo_csc_source = "UK3CB_KDF_O_Gaz66_Ammo";
 	],
 	"rhs_7ya37_1_single"
 ] call cvo_CSC_fnc_addCSC;
+*/
 
 [
 	_cvo_csc_source, 
