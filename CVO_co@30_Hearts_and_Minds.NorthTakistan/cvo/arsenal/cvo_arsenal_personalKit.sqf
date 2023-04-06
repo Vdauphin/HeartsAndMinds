@@ -18,14 +18,15 @@ CVO_PK_PKM = [
 CVO_PK_DB = createHashMap;
 
 //							Key: PlayerUserIDs 	Value: [[array of kits or individual classnames]]
+// KEY: User Steam ID:
 // Username:
-// User Steam ID:
 // Array of Kits or Classnames. 
 
-CVO_PK_DB set [	"01234",	[	], "username"];
+// Overlord Zorn
+_userArray = 	[];
+_customItems = 	[];
 
-
-
+CVO_PK_DB set [	"76561197970306509", ["Overlord Zorn", (flatten [_userArray, _customItems])]];
 
 
 
@@ -36,7 +37,7 @@ publicVariable CVO_PK_DB;
 /*
 Example on how to Extract said Array
 
-CVO_PK_DB_Array = [
+ = [
 	[CVO_PK_xyz, _uidArray,[""]]
 ];
 
@@ -44,6 +45,7 @@ CVO_PK_DB_Array = [
 
 
 private _UID = getPlayerUID player; //string
+
 {	_x params ["_kitName", "_uidArray", "_customItems"];
 	if (_UID in _uidArray) 		then { _roleKit append _kitName;			};
 	if (0 < count _customItems) then { _roleKit append _customItems;		};

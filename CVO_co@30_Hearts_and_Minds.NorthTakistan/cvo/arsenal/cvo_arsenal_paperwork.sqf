@@ -25,13 +25,15 @@ _code = {
 	}] call CBA_fnc_execNextFrame;			// <- this will delay the execution by 1 Frame. 
 }; 											// This is the code you want the interaction to execute.
 
+
 _cvo_saveLoadout = [
 	"CVO_Arsenal_saveLoadout",				// Action Name
-	"Fillout the Stupid Armory Paperwork (save Respawn Loadout)",	// Name for the ACE Interaction Menu
-	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa ",										// Statement - i have no fucking clue what that is supposed to mean
+	"Fillout the Stupid Armory Paperwork (save Respawn Loadout)",								// Name for the ACE Interaction Menu
+	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa",										// Statement - i have no fucking clue what that is supposed to mean
 	_code,									// the coe you're executing
 	{true}									// Condition
 ] call ace_interact_menu_fnc_createAction;
+
 
 // Here we Attach the Action to the Object
 {
