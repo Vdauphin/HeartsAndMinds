@@ -52,10 +52,6 @@ execVM "cvo\support\cvo_support_init.sqf";
 // Init Map Module
  execVM "cvo\map\cvo_map_init.sqf";
 
-// Init Fast Travel for Vehicles
-execVM "cvo\FTVic\cvo_FTVic_init.sqf";
-
-diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");
 
 // Init for CVO IED's
 execVM "cvo\IED\cvo_ied_init.sqf";
@@ -64,3 +60,10 @@ execVM "cvo\IED\cvo_ied_init.sqf";
 cvo_misc_fnc_gateAnimation = compile preprocessFile "cvo\misc\cvo_gateAnimation.sqf";
 
 cvo_debug = false;
+
+
+
+
+
+
+diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");
