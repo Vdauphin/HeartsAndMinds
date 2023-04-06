@@ -33,6 +33,10 @@ if (_playlist isEqualTo "INITZEUS") exitWith {
 	_action = ["cvo_music_zeus_pl_tense","Tense","\A3\ui_f\data\igui\cfg\simpleTasks\types\takeoff_ca.paa",{["tense"] call cvo_fnc_music},{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","cvo_music_zeus_node","cvo_music_zeus_playlists"], _action] call ace_interact_menu_fnc_addActionToZeus;
 
+	_action = ["cvo_music_zeus_pl_ChorniVoron","ChorniVoron","\A3\ui_f\data\igui\cfg\simpleTasks\types\takeoff_ca.paa",{["ChorniVoron"] call cvo_fnc_music},{true}] call ace_interact_menu_fnc_createAction;
+	[["ACE_ZeusActions","cvo_music_zeus_node","cvo_music_zeus_playlists"], _action] call ace_interact_menu_fnc_addActionToZeus;
+
+
 	diag_log ("[CVO] [MUSIC] - Zeus Actions Established");
 };
 
@@ -98,7 +102,7 @@ _selection = switch (_playlist) do {
 			"OM_Music03",
 			"Track_O_14",
 			"Track_O_13",
-			"Track_O_07",
+			"Track_O_07",	
 			"Track_O_05",
 			"Track_C_20",
 			"Track_C_18",
@@ -137,13 +141,14 @@ _selection = switch (_playlist) do {
 			"AmbientTrack01a_F_Tacops"			
 		];
 	};
+	case "ChorniVoron": {["CVO1"];};
 }; 
+
 diag_log format ["[CVO] [MUSIC] - Selection: %1.",_selection];
 
 _song = _selection call BIS_fnc_selectRandom;
 
-
 _song remoteExec ["playMusic", 0, false]; 
 (format ["[CVO] [MUSIC] - playing song: %1.",_song]) remoteExec ["systemChat", 0, false]; 
 
-diag_log format ["[CVO] [MUSIC] - playing song: %1.",_song];
+// diag_log format ["[CVO] [MUSIC] - playing song: %1.",_song];
