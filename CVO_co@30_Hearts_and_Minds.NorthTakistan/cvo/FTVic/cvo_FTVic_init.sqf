@@ -1,3 +1,5 @@
+// This init needs to be executed via initPlayerLocal.sqf
+
 cvo_FTVic_fnc_drawMarker 			= compileScript ["cvo\FTVic\cvo_FTVic_fnc_drawMarker.sqf", 			false, ""];
 cvo_FTVic_fnc_checkDistanceArray 	= compileScript ["cvo\FTVic\cvo_FTVic_fnc_checkDistanceArray.sqf", 	false, ""];
 cvo_FTVic_fnc_teleport				= compileScript ["cvo\FTVic\cvo_FTVic_fnc_teleport.sqf", 			false, ""];
