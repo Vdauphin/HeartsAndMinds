@@ -18,6 +18,7 @@ btc_construction_array = [
 			"UK3CB_TKP_B_LandRover_Closed",
 			"UK3CB_TKP_B_LandRover_Open",
 			"UK3CB_ARD_B_Hilux_Ambulance",
+			"UK3CB_KDF_O_Gaz66_Repair",
 			"UK3CB_KDF_O_Gaz66_Ammo",
 			"UK3CB_KDF_O_Gaz66_Med",
 			"UK3CB_TKP_B_Lada_Police",
