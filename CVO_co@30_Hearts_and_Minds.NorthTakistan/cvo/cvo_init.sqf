@@ -66,9 +66,4 @@ cvo_misc_fnc_gateAnimation = compile preprocessFile "cvo\misc\cvo_gateAnimation.
 
 cvo_debug = false;
 
-
-
-
-
-
 diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");
