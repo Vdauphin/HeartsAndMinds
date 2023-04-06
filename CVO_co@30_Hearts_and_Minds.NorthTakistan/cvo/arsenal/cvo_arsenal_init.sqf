@@ -33,7 +33,11 @@ if (0 < count CVO_arsenal_boxes) then {
 [compileScript ["cvo\arsenal\cvo_arsenal_paperwork.sqf"]] call CBA_fnc_directCall;
 
 // set default loadout at spawn
-player setVariable ["CVO_Loadout", getUnitLoadout player]; diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved");                                                                                   
+[] spawn {
+	if (!hasInterface) exitWith {};
+	sleep 20;
+	player setVariable ["CVO_Loadout", getUnitLoadout player];
+	diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout saved"); };
 
 //// This really needs to be in initPlayerLocal.sqf for JIP
 
