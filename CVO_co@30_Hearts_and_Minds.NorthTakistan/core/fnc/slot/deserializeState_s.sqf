@@ -23,7 +23,8 @@ Author:
 
 params [
     ["_player", objNull, [objNull]],
-    ["_key", "", ["", []]]
+    ["_key", "", ["", []]],
+    ["_owner", -1, [0]]
 ];
 
 [format ["_player %1 _key %2", _player, _key], __FILE__, [false, btc_debug_log, false]] call btc_debug_fnc_message;
@@ -42,4 +43,5 @@ if (_data select 4) then {
         publicVariable "btc_chem_contaminated";
     };
 };
-_data remoteExecCall ["btc_slot_fnc_deserializeState", _player];
+
+_data remoteExecCall ["btc_slot_fnc_deserializeState", _owner];
