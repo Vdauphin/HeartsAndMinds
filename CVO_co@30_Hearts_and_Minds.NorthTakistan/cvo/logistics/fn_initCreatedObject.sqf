@@ -33,7 +33,7 @@ if (!((typeOf _object) isKindOf "Static")) then {
 
     _action = [
         "CVO_Logistics_LoadInCargo_Action",
-        "Load in cargo",
+        "Load object onto vehicle (ViV)",
         "",
         {
         	params ["_cargo"];
