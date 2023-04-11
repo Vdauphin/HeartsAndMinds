@@ -1,7 +1,7 @@
 /*
 	Author: Skippie [CVO]
 
-	Description: Contaminates the given objects and their ACE cargo.
+	Description: Contaminates the given objects and their ACE cargo. SHOULD BE EXECUTED ON THE SERVER.
 
 	Syntax:
 		[object1, object2, ...] call cvo_cbrn_fnc_contaminateObjects;
