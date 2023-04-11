@@ -94,7 +94,7 @@ class CfgMusic
 class zen_context_menu_actions {
     class CVO_ZEN_HAM_ContextAction {
         displayName = "Hearts and Minds";
-        icon = ""; // probably put the Laws of War humanitarian icon
+        icon = "\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa";
         priority = 29;
 
         #include "cvo\cbrn\CfgContext.hpp"
