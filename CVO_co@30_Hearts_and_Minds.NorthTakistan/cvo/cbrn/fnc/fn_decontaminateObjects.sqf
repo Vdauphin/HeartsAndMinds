@@ -1,7 +1,7 @@
 /*
 	Author: Skippie [CVO]
 
-	Description: Decontaminates the given objects and their ACE cargo.
+	Description: Decontaminates the given objects and their ACE cargo. SHOULD BE EXECUTED ON THE SERVER.
 
 	Syntax:
 		[object1, object2, ...] call cvo_cbrn_fnc_decontaminateObjects;

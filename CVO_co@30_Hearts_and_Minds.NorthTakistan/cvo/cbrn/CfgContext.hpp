@@ -11,13 +11,13 @@ class CVO_ZEN_CBRN_ContextAction {
 		priority = 100;
 
 		condition = "(count _objects) > 0";
-		statement = "_objects call cvo_cbrn_fnc_contaminateObjects";
+		statement = "_objects remoteExec ['cvo_cbrn_fnc_contaminateObjects', 2, false]";
 	};
 
 	class CVO_ZEN_CBRN_DecontaminateObjects_ContextAction : CVO_ZEN_CBRN_ContaminateObjects_ContextAction {
 		displayName = "Decontaminate Objects";
 		priority = 99;
 
-		statement = "_objects call cvo_cbrn_fnc_decontaminateObjects";
+		statement = "_objects remoteExec ['cvo_cbrn_fnc_decontaminateObjects', 2, false]";
 	};
 };
