@@ -5,7 +5,9 @@ class CVO_CBRN {
 		file = "cvo\cbrn\fnc";
 
 		class contaminateObject;
+		class contaminateObjects;
 		class decontaminateObject;
+		class decontaminateObjects;
 	};
 
 	class EventHandlers {
