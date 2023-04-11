@@ -3104,5 +3104,10 @@
                 <Czech>Nelze smazat objekt, který nevytvořil Logistic Point</Czech>
             </Key>
         </Container>
+        <Container name="Logistic: Rearm">
+            <Key ID="STR_BTC_HAM_LOG_REARM_COMPLETED">
+                <Original>Rearm completed.</Original>
+            </Key>
+        </Container>
     </Package>
 </Project>
