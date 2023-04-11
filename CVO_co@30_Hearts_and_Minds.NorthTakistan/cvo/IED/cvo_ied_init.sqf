@@ -44,23 +44,23 @@ CVO_weightedArrayIED = [
 
 // very large -> very rare
 ["ammo_Missile_Cruise_01", 	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 0.25,
-["Bo_GBU12_LGB", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
-["Bo_GBU12_LGB_MI10", 			false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
+["Bo_GBU12_LGB", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 0.5,
+["Bo_GBU12_LGB_MI10", 			false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 0.5,
 
 
 // Large
-["APERSBoundingMine_Range_Ammo", true,   false,   [false,[0,0,0]], false, false, true,  true,   [false,7]], 2,
-["R_80mm_HE", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["Rocket_04_HE_F", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["BombDemine_01_Ammo_F",	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["APERSBoundingMine_Range_Ammo", true,   false,   [false,[0,0,0]], false, false, true,  true,   [false,7]], 1,
+["R_80mm_HE", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
+["Rocket_04_HE_F", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
+["BombDemine_01_Ammo_F",	  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1,
 
 // Medium
-["Missile_AA_04_F",			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["M_Titan_AP", 		 		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["M_AT", 			  		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["M_70mm_SAAMI", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["M_Jian_AT", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
-["R_TBG32V_F", 			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
+["Missile_AA_04_F",			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
+["M_Titan_AP", 		 		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
+["M_AT", 			  		  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
+["M_70mm_SAAMI", 			  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
+["M_Jian_AT", 				  	false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
+["R_TBG32V_F", 			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 1.5,
 
 // Small
 ["M_SPG9_HE",			  		false,   false,   [false,[0,0,0]], false, false, true,  true,   [true, 7]], 2,
