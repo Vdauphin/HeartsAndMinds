@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: gie_teamspeak_check_status
+Function: gie_teamspeak_fnc_checkStatus
 
 Description:
     Check TeamSpeak status, and if not connected to TeamSpeak, disable movement and visual
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] spawn gie_teamspeak_check_status;
+        [] spawn gie_teamspeak_fnc_checkStatus;
     (end)
 
 Author:

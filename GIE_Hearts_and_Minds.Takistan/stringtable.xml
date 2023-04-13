@@ -12,13 +12,13 @@
                 <Czech>[G.I.E] Hearts and Minds</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DESCR_MISSION">
-                <Original>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Original>
-                <Spanish>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Spanish>
-                <German>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</German>
-                <Portuguese>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Portuguese>
-                <Chinesesimp>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Chinesesimp>
-                <French>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</French>
-                <Czech>github.com/Vdauphin/HeartsAndMinds<br/>https://github.com/Morbakos/GIE_Hearts_and_Mind</Czech>
+                <Original>github.com/Morbakos/GIE_Hearts_and_Mind</Original>
+                <Spanish>github.com/Morbakos/GIE_Hearts_and_Mind</Spanish>
+                <German>github.com/Morbakos/GIE_Hearts_and_Mind</German>
+                <Portuguese>github.com/Morbakos/GIE_Hearts_and_Mind</Portuguese>
+                <Chinesesimp>github.com/Morbakos/GIE_Hearts_and_Mind</Chinesesimp>
+                <French>github.com/Morbakos/GIE_Hearts_and_Mind</French>
+                <Czech>github.com/Morbakos/GIE_Hearts_and_Mind</Czech>
             </Key>
         </Container>
     </Package>

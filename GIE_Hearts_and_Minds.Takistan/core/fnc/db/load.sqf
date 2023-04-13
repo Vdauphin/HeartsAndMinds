@@ -270,3 +270,21 @@ private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1
         _marker setMarkerPolyline _markerPolyline;
     };
 } forEach _markers_properties;
+
+
+["Loading save", __FILE__, [false, true]] call btc_debug_fnc_message;
+{
+    _x params ["_name", "_val"];
+    [format ["%1: %2", _name, _val], __FILE__, [false, true]] call btc_debug_fnc_message;
+} forEach [
+    ["DATE", +(profileNamespace getVariable [format ["btc_hm_%1_date", _name], date])],
+    ["CITIES", +(profileNamespace getVariable [format ["btc_hm_%1_cities", _name], []])],
+    ["HIDEOUT", +(profileNamespace getVariable [format ["btc_hm_%1_ho", _name], []])],
+    ["CACHE", +(profileNamespace getVariable [format ["btc_hm_%1_cache", _name], []])],
+    ["FOB", +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name], []])],
+    ["REPUTATION", profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0]],
+    ["VEHICLES", +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name], []])],
+    ["TICKETS", +(profileNamespace getVariable [format ["btc_hm_%1_respawnTickets", _name], btc_respawn_tickets])],
+    ["SLOTS", +(profileNamespace getVariable [format ["btc_hm_%1_slotsSerialized", _name], createHashMap])],
+    ["MARKERS", +(profileNamespace getVariable [format ["btc_hm_%1_markers", _name], []])]
+];

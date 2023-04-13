@@ -75,6 +75,7 @@ if (isServer) then {
     btc_db_fnc_autoRestart = compileScript ["core\fnc\db\autoRestart.sqf"];
     btc_db_fnc_setTurretMagazines = compileScript ["core\fnc\db\setTurretMagazines.sqf"];
     btc_db_fnc_autoRestartLoop = compileScript ["core\fnc\db\autoRestartLoop.sqf"];
+    gie_db_fnc_autoSave = compileScript ["core\fnc\db\autoSave.sqf"];
 
     //DELAY
     btc_delay_fnc_createUnit = compileScript ["core\fnc\delay\createUnit.sqf"];
@@ -310,6 +311,7 @@ if (!isDedicated) then {
     btc_fnc_get_composition = compileScript ["core\fnc\common\get_composition.sqf"];
     btc_fnc_checkArea = compileScript ["core\fnc\common\checkArea.sqf"];
     btc_fnc_typeOfPreview = compileScript ["core\fnc\common\typeOfPreview.sqf"];
+    gie_fnc_interpreter = compileScript ["core\fnc\common\interpreter.sqf"];
 
     //CHEM
     btc_chem_fnc_biopsy = compileScript ["core\fnc\chem\biopsy.sqf"];
@@ -441,6 +443,8 @@ if (!isDedicated) then {
 
     // Scripts GIE
     gie_teamspeak_fnc_checkStatus = compileScript ["core\fnc\gie\checkTeamspeakStatus.sqf"];
+    gie_loadout_fnc_setDefaultLoadout = compileScript ["core\fnc\gie\setDefaultLoadout.sqf"];
+    gie_loadout_fnc_getParadropLoadout = compileScript ["core\fnc\gie\getParadropLoadout.sqf"];
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\

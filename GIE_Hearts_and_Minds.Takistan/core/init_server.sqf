@@ -8,6 +8,7 @@ setTimeMultiplier btc_p_acctime;
 [["btc_dty", "btc_m"], 1] call btc_task_fnc_create;
 
 if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldName], false]}) then {
+    ["Loading save", __FILE__, [false, true]] call btc_debug_fnc_message;
     if ((profileNamespace getVariable [format ["btc_hm_%1_version", worldName], 1.13]) in [btc_version select 1, 22.1]) then {
         [] call compileScript ["core\fnc\db\load.sqf"];
     } else {
@@ -66,3 +67,5 @@ if (
     };
     [btc_player_side, _tickets] call BIS_fnc_respawnTickets;
 };
+
+[] call gie_db_fnc_autoSave;

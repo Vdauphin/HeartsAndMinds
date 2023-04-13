@@ -151,7 +151,7 @@ if (isServer) then {
 
     //Database
     btc_db_serverCommandPassword = "yehog"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
-    btc_db_warningTimeAutoRestart = 5;
+    btc_db_warningTimeAutoRestart = 15;
 
     //Hideout
     btc_hideouts = []; publicVariable "btc_hideouts";
@@ -495,7 +495,13 @@ btc_construction_array =
             "Land_Mil_WallBig_4m_F",
             "Land_Mil_WallBig_Corner_F",
             "Land_PortableLight_double_F",
-            "Land_Pod_Heli_Transport_04_medevac_black_F"
+            "Land_Pod_Heli_Transport_04_medevac_black_F",
+            "Land_HBarrierTower_F",
+            "Land_HBarrierWall_corridor_F",
+            "Land_HBarrierWall6_F",
+            "Land_HBarrierWall_corner_F",
+            "Land_HBarrierWall4_F",
+            "Land_BagBunker_Tower_F"
         ],
         [
             //"Static"
@@ -713,7 +719,7 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_green_CO.paa",
     "\A3\Data_F\Flags\flag_blue_CO.paa",
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
-    "\A3\Data_F\Flags\flag_NATO_CO.paa"
+    "\A3\Data_F\Flags\flag_us_co.paa"
 ];
 
 //Respawn

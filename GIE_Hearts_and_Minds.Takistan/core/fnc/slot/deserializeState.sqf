@@ -40,7 +40,7 @@ Author:
     ];
 
     if (
-        player distance ASLToAGL _previousPos > 50 || // Don't set loadout when near main base
+        !(_previousPos inArea safeZone) || // Don't set loadout when near main base
         btc_p_autoloadout isEqualTo 0
     ) then { 
         [{[player, _this] call CBA_fnc_setLoadout;}, _loadout] call CBA_fnc_execNextFrame;
