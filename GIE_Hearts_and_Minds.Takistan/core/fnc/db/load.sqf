@@ -279,12 +279,16 @@ private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1
 } forEach [
     ["DATE", +(profileNamespace getVariable [format ["btc_hm_%1_date", _name], date])],
     ["CITIES", +(profileNamespace getVariable [format ["btc_hm_%1_cities", _name], []])],
-    ["HIDEOUT", +(profileNamespace getVariable [format ["btc_hm_%1_ho", _name], []])],
+    ["HIDEOUTS", +(profileNamespace getVariable [format ["btc_hm_%1_ho", _name], []])],
+    ["SELECTED HIDEOUT", profileNamespace getVariable [format ["btc_hm_%1_ho_sel", _name], 0]],
     ["CACHE", +(profileNamespace getVariable [format ["btc_hm_%1_cache", _name], []])],
-    ["FOB", +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name], []])],
+    ["FOBS", +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name], []])],
     ["REPUTATION", profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0]],
+    ["OBJECTS", +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []])],
     ["VEHICLES", +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name], []])],
-    ["TICKETS", +(profileNamespace getVariable [format ["btc_hm_%1_respawnTickets", _name], btc_respawn_tickets])],
+    ["TAGS", +(profileNamespace getVariable [format ["btc_hm_%1_tags", _name], []])],
+    ["RESPAWN TICKETS", +(profileNamespace getVariable [format ["btc_hm_%1_respawnTickets", _name], btc_respawn_tickets])],
+    ["DEAD BODY PLAYER", +(profileNamespace getVariable [format ["btc_hm_%1_deadBodyPlayers", _name], []])],
     ["SLOTS", +(profileNamespace getVariable [format ["btc_hm_%1_slotsSerialized", _name], createHashMap])],
     ["MARKERS", +(profileNamespace getVariable [format ["btc_hm_%1_markers", _name], []])]
 ];
