@@ -1,6 +1,9 @@
 // by Zorn - Based on ALIAS' Duststorm Script
 // Gradual Dust Storm SCRIPT 
 
+
+// Example: [5, windDir, 0.5] spawn cvo_ss_fnc_sandstorm;
+
 if (!isServer) exitWith {};
 if (!canSuspend) exitWith {_this spawn cvo_ss_fnc_sandstorm};
 
@@ -10,15 +13,22 @@ if (cvo_ss_running) exitWith 	{diag_log "[CVO] [Sandstorm] (Start) - Exit: Dusts
 params [
 	["_duration", 30, [0]],
 	["_direction", windDir, [0]],
-	["_intensity", 1, [0]]
+	["_intensity", (random 1), [0]]
 ];
 
+// Prepare Parameters
 
-// converts _duration from minutes into secounds.
+_intensity =  (round (_intensity * 100) / 100) min 1; 	// Maximum Intensity is 1, with a resolution of 2 digits (0.00);
 
-_duration = _duration * 60;
+_duration = 5 max (round _duration);					// Minimum Duration is 5 Minutes; Only full minutes;
+
+_duration = _duration * 60; // converts _duration from minutes into secounds.
 cvo_ss_duration = _duration;
 publicVariable "cvo_ss_duration";
+
+cvo_ss_intensity = _intensity;
+publicVariable "cvo_ss_intensity";
+
 
 // ######### 
 // Establish Killswitch
@@ -119,12 +129,13 @@ ss_windgusts		= gusts;
 // FOG CONTROL
 
 [] spawn {
+
 	diag_log ("[CVO] [SandStorm] (FogControl) - Init");
 
 	//  ######## Definition
 	_ss_fog_stage	= [0.03, 0.005, 200];
-	_ss_fog_max 	= [0.03, 0.006, 600];
-	_ss_fog_post	= [0.03, 0.005, 400];
+	_ss_fog_max 	= [0.03, 0.006, 400 + (200 * cvo_ss_intensity)];
+	_ss_fog_post	= [0.03, 0.005, 200 + (200 * cvo_ss_intensity)];
 	
 	//  ######## Execution
 	[(2 * cvo_ss_phasetime), _ss_fog_stage, true] 	spawn cvo_ss_fnc_setFogFlexible;
