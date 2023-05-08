@@ -145,7 +145,8 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
         ["_flagTexture", "", [""]],
         ["_turretMagazines", [], [[]]],
         ["_notuse", "", [""]],
-        ["_tagTexture", "", [""]]
+        ["_tagTexture", "", [""]],
+        ["_properties", [], [[]]]
     ];
 
     private _data = [];
@@ -163,6 +164,7 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
     _data pushBack _flagTexture;
     _data pushBack _turretMagazines;
     _data pushBack _tagTexture;
+    _data pushBack _properties;
 
     private _fakeViV = isVehicleCargo attachedTo _x;
     if (
