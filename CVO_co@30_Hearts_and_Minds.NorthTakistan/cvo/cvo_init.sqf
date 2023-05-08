@@ -66,4 +66,7 @@ cvo_misc_fnc_gateAnimation = compile preprocessFile "cvo\misc\cvo_gateAnimation.
 
 cvo_debug = false;
 
+//CVO Earthquake Function
+cvo_misc_fnc_eq = compile preprocessFile "cvo\misc\cvo_eq.sqf";
+
 diag_log ("[CVO] [INIT] (cvo_init.sqf) - END");

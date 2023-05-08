@@ -30,7 +30,7 @@ if (!cvo_ss_running) 		exitWith {};
 	enableCamShake true;
 
 	while {sleep 5; cvo_ss_running && (cvo_ss_phase <= 8)} do {
-		addCamShake [0.1,27,17];
+		addCamShake [0.1 + (cvo_ss_intensity * 0.1),27,17];
 		sleep 15+random 120;
 	};
 
@@ -188,7 +188,7 @@ cc_02 = [	0.98,	0.93,	0.08,		// Brightness	-	Contrast	-	Contrast Offset
 			_local_fog_array pushback _alias_local_fog_1;
 		};
 
-		if (cvo_ss_phase >= 5 && cvo_ss_phase <= 8) then {
+		if (cvo_ss_phase >= 5 && cvo_ss_phase <= 8 && cvo_ss_intensity >= 0.6) then {
 			_alias_local_fog_2 = "#particlesource" createVehicleLocal (getpos player); 
 			if (vehicle player != player) then {_alias_local_fog_2 attachto [vehicle player, [0,_offset,0]];} else {_alias_local_fog_2 attachto [player, [0,_offset,0]];};
 			_alias_local_fog_2 setParticleCircle [60, [3, 3, 0]];
@@ -197,7 +197,7 @@ cc_02 = [	0.98,	0.93,	0.08,		// Brightness	-	Contrast	-	Contrast Offset
 			_local_fog_array pushback _alias_local_fog_2;
 		};
 
-		if (cvo_ss_phase >= 3) then {
+		if (cvo_ss_phase >= 3&& cvo_ss_intensity >= 0.4) then {
 			_alias_local_fog_3 = "#particlesource" createVehicleLocal (getpos player); 
 			if (vehicle player != player) then {_alias_local_fog_3 attachto [vehicle player, [0,_offset,0]];} else {_alias_local_fog_3 attachto [player, [0,_offset,0]];};
 			_alias_local_fog_3 setParticleCircle [90, [3, 3, 0]];
@@ -206,7 +206,7 @@ cc_02 = [	0.98,	0.93,	0.08,		// Brightness	-	Contrast	-	Contrast Offset
 			_local_fog_array pushback _alias_local_fog_3;
 		};
 
-		if (cvo_ss_phase >= 4 && cvo_ss_phase <= 7) then {
+		if (cvo_ss_phase >= 4 && cvo_ss_phase <= 7 && cvo_ss_intensity >= 0.25) then {
 			_alias_local_fog_4 = "#particlesource" createVehicleLocal (getpos player); 
 			if (vehicle player != player) then {_alias_local_fog_4 attachto [vehicle player, [0,_offset,0]];} else {_alias_local_fog_4 attachto [player, [0,_offset,0]];};
 			_alias_local_fog_4 setParticleCircle [130, [3, 3, 0]];

@@ -35,7 +35,8 @@ if (isServer) then {
 [{
 	params ["_unit", "_object", "_cost"];
 
-	private _condition1 = (_unit) getVariable ["Engineer", false];									 	// player needs setVariable ["Engineer", true]
+
+	private _condition1 = (_unit getVariable ["ACE_IsEngineer",0]) > 0;								 	// player needs ACE Engineering Trait
 	private _condition2 = 1 >= cvo_engineerVehicleClass countType (_unit nearEntities ["Tank",100]); 	// scans near entities, filtered by tanks. Then counts the amount of 
 
 	private _case1 = if (_condition1) then {true}

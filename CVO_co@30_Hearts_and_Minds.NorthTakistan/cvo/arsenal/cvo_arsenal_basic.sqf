@@ -288,9 +288,11 @@ private _CVO_A_Basic_Rifles = [
 //	"UK3CB_Enfield_10rnd_Mag_YT",
 
 	"rhs_weap_savz61",
+	"rhs_weap_savz61_folded",
 	"rhsgref_20rnd_765x17_vz61",
 
 	"rhs_weap_pp2000",
+	"rhs_weap_pp2000_folded",
 	"rhs_mag_9x19mm_7n21_44",
 	"rhs_mag_9x19mm_7n21_20"
 ];
