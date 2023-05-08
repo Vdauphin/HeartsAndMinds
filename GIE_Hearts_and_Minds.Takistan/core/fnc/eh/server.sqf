@@ -44,12 +44,14 @@ addMissionEventHandler ["BuildingChanged", btc_rep_fnc_buildingchanged];
 ["ace_repair_setWheelHitPointDamage", btc_rep_fnc_wheelChange] call CBA_fnc_addEventHandler;
 ["ace_disarming_dropItems", btc_rep_fnc_foodRemoved] call CBA_fnc_addEventHandler;
 ["btc_respawn_player", {
-    params ["", "_player"];
+    params ["", "_player", "_killer"];
     [btc_rep_malus_player_respawn] call btc_rep_fnc_change;
     btc_slots_serialized set [
         _player getVariable ["btc_slot_key", [0, 0, 0]],
         [] // Reset serialized data if slot died
     ];
+
+    [_player, _killer] call gie_discord_activity_fnc_playerKilled;
 }] call CBA_fnc_addEventHandler;
 
 ["ace_explosives_detonate", {
@@ -110,6 +112,7 @@ if (btc_p_set_skill) then {
     if (_vehicle isNotEqualTo objNull) then {
         [[], [_vehicle]] call btc_fnc_delete;
     };
+
 }] call CBA_fnc_addEventHandler;
 {
     [_x, "InitPost", {
@@ -150,3 +153,5 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 } forEach ["CUP_MTVR_Base", "Truck_01_base_F"];
+
+["gie_activity", gie_discord_activity_fnc_send] call CBA_fnc_addEventHandler;

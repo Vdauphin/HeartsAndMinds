@@ -23,7 +23,7 @@ Author:
 if (!isServer) exitWith {};
 
 if (isNil "GIE_db_nextSaveTime") then {
-    GIE_db_nextSaveTime = time + 30 * 60; 
+    GIE_db_nextSaveTime = time + 2 * 60; 
     ["Init autosave database, waiting for save time", __FILE__, [false, true]] call btc_debug_fnc_message;
 };
 

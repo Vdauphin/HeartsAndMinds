@@ -32,14 +32,14 @@ params [
     _unit call gie_loadout_fnc_setDefaultLoadout;
 }] call CBA_fnc_addBISEventHandler;
 ["ace_killed", {
-    params ["_unit"];
+    params ["_unit", "", "_killer"];
     if (_unit isNotEqualTo player) exitWith {};
     if (ace_map_mapIllumination) then {ace_map_mapIllumination = false;};
     if (isObjectHidden player) exitWith {};
     if !(isServer) then { // Don't add twice the event in player host
         ["btc_respawn_player", [_unit, player]] call CBA_fnc_localEvent;
     };
-    ["btc_respawn_player", [_unit, player]] call CBA_fnc_serverEvent;
+    ["btc_respawn_player", [_unit, player, _killer]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
 {
     _x addEventHandler ["CuratorObjectPlaced", btc_eh_fnc_CuratorObjectPlaced];

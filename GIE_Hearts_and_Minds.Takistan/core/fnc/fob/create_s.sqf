@@ -54,4 +54,6 @@ _marker setMarkerShape "ICON";
 
 _structure addEventHandler ["Killed", btc_fob_fnc_killed];
 
+[_structure] call gie_patrols_fnc_fob;
+
 [_marker, _structure, _flag]

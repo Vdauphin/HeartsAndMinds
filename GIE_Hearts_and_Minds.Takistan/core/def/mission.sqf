@@ -638,6 +638,7 @@ _p_en = _allfaction select _p_en; //Select faction selected from mission paramet
 _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create classes from factions, you can combine factions like that: [[_p_en , "IND_F"], _p_en_AA, _p_en_tank] call btc_mil_fnc_class;
 
 //Save class name to global variable
+btc_enemy_faction = _p_en;
 btc_enemy_side = _allclasse select 0;
 btc_type_units = _allclasse select 1;
 btc_type_divers = _allclasse select 2;

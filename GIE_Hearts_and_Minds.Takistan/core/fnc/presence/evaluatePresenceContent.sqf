@@ -20,7 +20,7 @@ Author:
 ---------------------------------------------------------------------------- */
 
 private _evaluateDetails = {
-	format ["%1%2", briefingName, if (!isMultiplayer) then {" - test"} else {""}]
+	format ["%1%2", serverName, if (!isMultiplayer) then {" - test"} else {""}]
 };
 
 private _evaluateState = {
@@ -33,7 +33,16 @@ private _evaluateState = {
 			worldSize/2,
 			(getPos player)
 		]#0;
-		format ["En patrouille près de %1", getText(configfile >> "cfgworlds" >> worldname >> "names" >> className _nearestLocation >> "name")];
+
+		private _locationName = getText(configfile >> "cfgworlds" >> worldname >> "names" >> className _nearestLocation >> "name");
+
+		format [
+			"En patrouille %1", 
+			[
+				format ["près de %1", _locationName],
+				""
+			] select (_locationName == "")
+		];
 	};
 	_res;
 };
@@ -52,7 +61,7 @@ private _result = [
 	["UpdateDetails",call _evaluateDetails],
 	["UpdateState",call _evaluateState],
 	["UpdateLargeImageKey",call _getRandomAsset],
-	["UpdateLargeImageText","Hearts and Mind"],
+	["UpdateLargeImageText","[G.I.E] Hearts and Mind"],
 	["UpdateSmallImageKey",call _getRandomAsset],
 	["UpdateSmallImageText","G.I.E"],
 	["UpdateButtons",["Discord","https://discord.com/invite/E5fMr3z3kF"]]

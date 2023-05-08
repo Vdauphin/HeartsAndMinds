@@ -228,6 +228,13 @@ if (isServer) then {
     btc_veh_fnc_propertiesSet = compileScript ["core\fnc\veh\propertiesSet.sqf"];
     btc_veh_fnc_add = compileScript ["core\fnc\veh\add.sqf"];
     btc_veh_fnc_inventoryRestore = compileScript ["core\fnc\veh\inventoryRestore.sqf"];
+
+    // Scripts GIE
+    gie_discord_activity_fnc_send = compileScript ["core\fnc\gie\discord\sendActivity.sqf"];
+    gie_discord_activity_fnc_playerKilled = compileScript ["core\fnc\gie\discord\playerKilled.sqf"];
+    gie_discord_activity_fnc_cityCaptured = compileScript ["core\fnc\gie\discord\cityCaptured.sqf"];
+    
+    gie_patrols_fnc_fob = compileScript ["core\fnc\gie\patrols\fob.sqf"];
 };
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
