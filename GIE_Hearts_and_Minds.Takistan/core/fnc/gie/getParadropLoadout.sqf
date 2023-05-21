@@ -1,4 +1,4 @@
-[ 
+private _paradrop = [ 
     [ 
         "B_supplyCrate_F","Munitions","", 
         { 
@@ -44,3 +44,38 @@
     ],
 	"ACE_medicalSupplyCrate_advanced"
 ];
+
+if (!isNil "GIE_paradrop_box") then {
+    _paradrop pushBack [typeof GIE_paradrop_box, "Matériel personnalisé", "",
+        {
+            clearItemCargoGlobal _this;  
+            clearBackpackCargoGlobal _this;  
+            clearWeaponCargoGlobal _this;  
+            clearMagazineCargoGlobal _this;
+
+            private _items = getItemCargo GIE_paradrop_box;
+            { 
+                _this addItemCargoGlobal [_x, (_items select 1 select _forEachIndex)]; 
+            } forEach (_items select 0);
+
+            private _backpacks = getBackpackCargo GIE_paradrop_box;
+            { 
+                _this addBackpackCargoGlobal [_x, (_backpacks select 1 select _forEachIndex)]; 
+            } forEach (_backpacks select 0);
+
+            private _weapons = getWeaponCargo GIE_paradrop_box;
+            { 
+                _this addWeaponCargoGlobal [_x, (_weapons select 1 select _forEachIndex)]; 
+            } forEach (_weapons select 0);
+
+            private _magazines = getMagazineCargo GIE_paradrop_box;
+            { 
+                _this addMagazineCargoGlobal [_x, (_magazines select 1 select _forEachIndex)]; 
+            } forEach (_magazines select 0);
+
+            GIE_paradrop_box call CBA_fnc_deleteEntity;  
+        }
+    ]
+};
+
+_paradrop;

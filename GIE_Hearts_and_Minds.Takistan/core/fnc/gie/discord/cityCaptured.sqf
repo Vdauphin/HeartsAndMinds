@@ -21,14 +21,29 @@ Author:
 
 params ["_city", objNull, [objNull]];
 
+if (time <= 20) exitWith {}; // prevent spam on mission load
+
+[format ["%1: %2 %3", (_city getVariable "id"), (_city getVariable "name"), (_city getVariable "occupied")], __FILE__, [btc_debug, btc_debug_log]] call btc_debug_fnc_message;
+
 private _activityHashMap = createHashMap;
 private _activityFieldHashMap = createHashMap;
 
+private _formatCityPos = {
+    private _pos = mapGridPosition (getPos _city);
+    format ["%1-%2", _pos select [0,3], _pos select [3, 6]];
+};
+
 _activityFieldHashMap set ["title", "Ville capturée"];
 _activityFieldHashMap set ["content", format [
-    "La ville de %1 a été capturée par %2", 
-    _city getVariable "name",
-    [getText(configFile >> "CfgFactionClasses" >> btc_enemy_faction >> "displayName"), "l'US Army"] select (_city getVariable "occupied")
+    "%1 a été capturée par %2", 
+    [
+        format ["La ville de %1 (%2)", _city getVariable "name", call _formatCityPos],
+        format ["Le point %1", call _formatCityPos]
+    ] select ((_city getVariable ["name", ""]) != ""),
+    [
+        "l'US Army",
+        getText(configFile >> "CfgFactionClasses" >> btc_enemy_faction >> "displayName")
+    ] select (_city getVariable "occupied")
 ]];
 _activityFieldHashMap set ["inline", true];
 
