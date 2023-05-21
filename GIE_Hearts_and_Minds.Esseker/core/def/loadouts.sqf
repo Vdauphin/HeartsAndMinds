@@ -1,7 +1,7 @@
 // Base
 private _brief = ["Briefing", [[],[],[],["amf_uniform_03_CE_2",[]],[],[],"AMF_BERET_INFANTERIE","",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]]];
 private _briefFs = ["Briefing RPIMa", [[],[],[],["amf_uniform_03_MTP_2",[]],[],[],"AMF_BERET_RPIMa","G_Bandanna_oli",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]]];
-private _briefFs = ["Briefing ALAT", [[],[],[],["amf_uniform_04_ce_2",[]],[],[],"AMF_BERET_ALAT_OR","",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]]];
+private _briefAlat = ["Briefing ALAT", [[],[],[],["amf_uniform_04_ce_2",[]],[],[],"AMF_BERET_ALAT_OR","",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]]];
 
 // Infanterie
 private _infCdg = ["[INFANTERIE] Chef de groupe", [["AMF_614_long_01_F","","OFrP_pointer_PIRAT_EL9B","AMF_Aimpoint_CompM5",["AMF_Stanag_556x45_30Rnd_Mag",30],[],"amf_acc_614_grip3"],[],["AMF_Glock_17_TAN","","","",["AMF_Glock_17_9x19_17Rnd_Mag",17],[],""],["amf_uniform_01_CE_OD",[["ACE_epinephrine",1],["ACE_morphine",2],["ACE_packingBandage",3],["ACE_elasticBandage",3],["ACE_EarPlugs",1],["ACRE_PRC343",1],["ACE_CableTie",2],["ACE_MapTools",1],["ACE_tourniquet",2],["ACE_Flashlight_MX991",1],["ACE_Chemlight_IR",1,1]]],["amf_SMB_LEADER_TDF",[["AMF_Glock_17_9x19_17Rnd_Mag",1,17],["AMF_GR_DEFF1",1,1],["AMF_GR_OFF1",1,1],["SmokeShell",4,1],["SmokeShellBlue",1,1],["SmokeShellRed",1,1],["AMF_Stanag_556x45_30Rnd_Mag",7,30]]],["AMF_FELIN_BACKPACK_LIGHT_TDF",[["ACRE_ER314",1],["ACRE_ER328",1],["AMF_Stanag_556x45_30Rnd_Mag",3,30],["B_IR_Grenade",1,1]]],"AMF_FELIN_L03_CE","",["R3F_JIM_LR","","","",["Laserbatteries",1],[],""],["ItemMap","","","ItemCompass","ItemWatch","OFrP_Lucie"]]];
@@ -40,7 +40,7 @@ private _rafHeloPilot = ["[ALAT] Pilote hélico", [["R3F_MP7A2","","R3F_POINTEUR
 } forEach [
 	_brief,
 	_briefFs,
-	_briefFs,
+	_briefAlat,
 	_infCdg,
 	_infMedic,
 	_infGenieEOD,

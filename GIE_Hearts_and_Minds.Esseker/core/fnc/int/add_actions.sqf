@@ -227,10 +227,12 @@ if (btc_p_arsenal_Type < 3) then {
 };
 //ACE
 if (btc_p_arsenal_Type > 0) then {
-    [btc_gear_object, btc_p_arsenal_Restrict isNotEqualTo 1, false] call ace_arsenal_fnc_initBox;
-    if (btc_p_arsenal_Type in [2, 4]) then {
-        btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"];
-    };
+    {
+        [_x, btc_p_arsenal_Restrict isNotEqualTo 1, false] call ace_arsenal_fnc_initBox;
+        if (btc_p_arsenal_Type in [2, 4]) then {
+            _x addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"];
+        };
+    } forEach [btc_gear_object, btc_gear_object_1];
 };
 if (btc_p_arsenal_Restrict isNotEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_arsenal_fnc_data;};
 
