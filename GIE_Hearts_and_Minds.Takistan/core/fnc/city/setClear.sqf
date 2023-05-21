@@ -51,5 +51,3 @@ if (btc_debug) then {
     private _id = _city getVariable "id";
     (format ["loc_%1", _id]) setMarkerColor "ColorGreen";
 };
-
-[_city] call gie_discord_activity_fnc_cityCaptured;

@@ -31,4 +31,4 @@ if (btc_debug_log) then {
     !isNull ((_this select 1) call BIS_fnc_getUnitByUID)
 }, {
     ["btc_playerConnected", [(_this select 1) call BIS_fnc_getUnitByUID, _this]] call CBA_fnc_localEvent;
-}, _this] call CBA_fnc_waitUntilAndExecute;
+}, _this, 20 * 60] call CBA_fnc_waitUntilAndExecute;

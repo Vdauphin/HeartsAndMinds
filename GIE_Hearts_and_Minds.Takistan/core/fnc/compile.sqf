@@ -75,7 +75,6 @@ if (isServer) then {
     btc_db_fnc_autoRestart = compileScript ["core\fnc\db\autoRestart.sqf"];
     btc_db_fnc_setTurretMagazines = compileScript ["core\fnc\db\setTurretMagazines.sqf"];
     btc_db_fnc_autoRestartLoop = compileScript ["core\fnc\db\autoRestartLoop.sqf"];
-    gie_db_fnc_autoSave = compileScript ["core\fnc\db\autoSave.sqf"];
 
     //DELAY
     btc_delay_fnc_createUnit = compileScript ["core\fnc\delay\createUnit.sqf"];
@@ -228,13 +227,6 @@ if (isServer) then {
     btc_veh_fnc_propertiesSet = compileScript ["core\fnc\veh\propertiesSet.sqf"];
     btc_veh_fnc_add = compileScript ["core\fnc\veh\add.sqf"];
     btc_veh_fnc_inventoryRestore = compileScript ["core\fnc\veh\inventoryRestore.sqf"];
-
-    // Scripts GIE
-    gie_discord_activity_fnc_send = compileScript ["core\fnc\gie\discord\sendActivity.sqf"];
-    gie_discord_activity_fnc_playerKilled = compileScript ["core\fnc\gie\discord\playerKilled.sqf"];
-    gie_discord_activity_fnc_cityCaptured = compileScript ["core\fnc\gie\discord\cityCaptured.sqf"];
-    
-    gie_patrols_fnc_fob = compileScript ["core\fnc\gie\patrols\fob.sqf"];
 };
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
@@ -318,7 +310,6 @@ if (!isDedicated) then {
     btc_fnc_get_composition = compileScript ["core\fnc\common\get_composition.sqf"];
     btc_fnc_checkArea = compileScript ["core\fnc\common\checkArea.sqf"];
     btc_fnc_typeOfPreview = compileScript ["core\fnc\common\typeOfPreview.sqf"];
-    gie_fnc_interpreter = compileScript ["core\fnc\common\interpreter.sqf"];
 
     //CHEM
     btc_chem_fnc_biopsy = compileScript ["core\fnc\chem\biopsy.sqf"];
@@ -440,18 +431,6 @@ if (!isDedicated) then {
 
     //SLOT
     btc_slot_fnc_deserializeState = compileScript ["core\fnc\slot\deserializeState.sqf"];
-
-    // ZEUS
-    gie_zeus_fnc_addZeusToPlayerRemote = compileScript ["core\fnc\zeus\addZeusToPlayerRemote.sqf"];
-
-    // PRESENCE (Discord)
-    gie_presence_fnc_init = compileScript ["core\fnc\presence\init.sqf"];
-    gie_presence_fnc_evaluatePresenceContent = compileScript ["core\fnc\presence\evaluatePresenceContent.sqf"];
-
-    // Scripts GIE
-    gie_teamspeak_fnc_checkStatus = compileScript ["core\fnc\gie\checkTeamspeakStatus.sqf"];
-    gie_loadout_fnc_setDefaultLoadout = compileScript ["core\fnc\gie\setDefaultLoadout.sqf"];
-    gie_loadout_fnc_getParadropLoadout = compileScript ["core\fnc\gie\getParadropLoadout.sqf"];
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\

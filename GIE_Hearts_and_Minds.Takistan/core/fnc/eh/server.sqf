@@ -76,8 +76,8 @@ addMissionEventHandler ["HandleDisconnect", {
 }];
 ["ace_unconscious", btc_slot_fnc_serializeState] call CBA_fnc_addEventHandler;
 ["btc_playerConnected", { 
-    params ["_player"];
-    [_player, _player call btc_slot_fnc_createKey] call btc_slot_fnc_deserializeState_s;
+    params ["_player", "_ids"];
+    [_player, _player call btc_slot_fnc_createKey, _ids select 4] call btc_slot_fnc_deserializeState_s;
 }] call CBA_fnc_addEventHandler;
 if (btc_p_auto_db) then {
     addMissionEventHandler ["HandleDisconnect", {
