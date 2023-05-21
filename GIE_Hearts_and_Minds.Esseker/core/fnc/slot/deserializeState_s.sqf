@@ -23,7 +23,8 @@ Author:
 
 params [
     ["_player", objNull, [objNull]],
-    ["_key", "", ["", []]]
+    ["_key", "", ["", []]],
+    ["_owner", -1, [0]]
 ];
 
 private _data = btc_slots_serialized getOrDefault [_key, []];
@@ -33,4 +34,5 @@ if (_data select 4) then {
         publicVariable "btc_chem_contaminated";
     };
 };
-_data remoteExecCall ["btc_slot_fnc_deserializeState", _player];
+
+_data remoteExecCall ["btc_slot_fnc_deserializeState", _owner];

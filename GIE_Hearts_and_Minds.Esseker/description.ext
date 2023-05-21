@@ -33,8 +33,7 @@ class RscTitles {
 #include "core\fnc\mil\aiskill.hpp"
 
 #include "core\fnc\task\taskTypes.hpp"
-
-#include "core\fnc\presence\param.hpp"
+#include "core\fnc\gie\presence\param.hpp"
 
 class CfgFunctions {
     // add your own functions below
