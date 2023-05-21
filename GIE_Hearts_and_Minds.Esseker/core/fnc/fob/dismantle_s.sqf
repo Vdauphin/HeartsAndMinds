@@ -32,6 +32,13 @@ params [
     private _pos = getPosASL _flag;
     private _element = (btc_fobs select 2) find _flag;
 
+    private _guards = ((btc_fobs select 1) select _element) getVariable ["gie_fob_guards", grpNull];
+
+    if (!isNull _guards) then {
+        [_guards]  call CBA_fnc_deleteEntity;
+    };
+
+
     [(btc_fobs select 1) select _element, objNull, objNull, true, true] call btc_fob_fnc_killed;
 
     [btc_fob_mat, _pos, surfaceNormal _pos] call btc_log_fnc_create_s;

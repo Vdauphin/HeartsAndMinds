@@ -35,6 +35,9 @@ if (isNull _fob) exitWith {};
 	] call BIS_fnc_spawnGroup;
 	_group deleteGroupWhenEmpty true;
 
+	_group setVariable ["btc_dont_delete", true];
+	_fob setVariable ["gie_fob_guards", _group];
+
 	[_group, getPos _fob, 100, 1, 0.5, 0.3] call CBA_fnc_taskDefend;
 	[format ["Patrol created at %1", getPos leader _group], __FILE__, [false, true]] call btc_debug_fnc_message;
 }, [_fob], 10] call CBA_fnc_waitAndExecute;
