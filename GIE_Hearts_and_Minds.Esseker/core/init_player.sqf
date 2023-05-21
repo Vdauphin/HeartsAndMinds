@@ -63,7 +63,7 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
         [
             [format ["<t color='%1' align='center'>Bonjour %2</t>", _color, name player]],
             [format ["Bienvenue à toi sur le serveur du <t color='%1'>GIE</t>", _color]],
-            [format ["Il y a actuellement %1 joueur(s) connecté(s). Passe un bon moment :)", (count (allPlayers) - count entities "HeadlessClient_F")]],
+            [format ["Il y a actuellement %1 joueur(s) connecté(s). Passe un bon moment :)", (count (allPlayers - entities "HeadlessClient_F"))]],
             [format ["Afin de communiquer avec nous, nous t'invitons à rejoindre notre <t color='%1'>TS</t>:", _color]],
             ["ts.team-gie.com"],
             ["Attention, n'oublie pas qu'ici, chacune de tes action a des conséquences sur la mission :)"],
