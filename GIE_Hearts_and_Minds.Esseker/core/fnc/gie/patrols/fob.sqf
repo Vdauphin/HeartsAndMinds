@@ -31,10 +31,10 @@ if (isNull _fob) exitWith {};
 	private _group = [
 		_pos,
 		btc_player_side,
-		configfile >> "CfgGroups" >> "West" >> "BLU_2acr_05_sof_F" >> "Infantry_2acr_05_D" >> "BUS_2acr_05_InfSquad_Weapons_D"
+		configfile >> "CfgGroups" >> "West" >> "R3F_MIS_BLUFOR_Group" >> "R3F_BLUFOR_Infanterie" >> "R3F_MIS_INF_BLUFOR"
 	] call BIS_fnc_spawnGroup;
 	_group deleteGroupWhenEmpty true;
 
-	[_group, getPos _fob, 100] call CBA_fnc_taskDefend;
+	[_group, getPos _fob, 100, 1, 0.5, 0.3] call CBA_fnc_taskDefend;
 	[format ["Patrol created at %1", getPos leader _group], __FILE__, [false, true]] call btc_debug_fnc_message;
 }, [_fob], 10] call CBA_fnc_waitAndExecute;
