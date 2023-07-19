@@ -1,0 +1,102 @@
+
+loadScreen = "cvo\img\cvo_ham_title.paa";
+author = "Giallustio - Adapted for CVO by Zorn";
+onLoadName = $STR_BTC_HAM_DESCR_NAME;
+onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
+enabledebugconsole = 1;
+
+#include "core\fnc\common\dlg.hpp"
+#include "core\fnc\fob\dlg.hpp"
+#include "core\fnc\log\dlg.hpp"
+#include "core\fnc\debug\defines.hpp"
+
+class RscTitles {
+    class Default {
+        idd = -1;
+        fadein = 0;
+        fadeout = 0;
+        duration = 0;
+    };
+    #include "core\fnc\lift\rsc.hpp"
+    #include "core\fnc\debug\dlg.hpp"
+};
+
+#include "core\def\param.hpp"
+
+#include "core\fnc\mil\aiskill.hpp"
+
+#include "core\fnc\task\taskTypes.hpp"
+
+
+// CBA XEH
+class Extended_PreInit_EventHandlers {
+    #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+
+    class CVO_CBRN_PreInit_EventHandler {
+        init = "call compileScript ['cvo\cbrn\XEH_PreInit.sqf'];";
+    };
+};
+
+class Extended_InitPost_EventHandlers {
+    class LandVehicle {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Air {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Ship {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+};
+
+respawn = 3;
+respawnDelay = 15;
+respawnDialog = 0;
+respawnOnStart = 0;
+respawnTemplates[] = {"Tickets", "Wave"};
+
+// Disable BI wreck system (H&M handle it internally)
+wreckManagerMode = 0;
+corpseManagerMode = 0;
+
+disabledAI = 1;
+
+class CfgFunctions {
+    // add your own functions below
+    #include "cvo\cbrn\CfgFunctions.hpp"
+    #include "cvo\logistics\functions.hpp"
+};
+
+class CfgSounds {
+    sounds[] = {};
+    #include "cvo\cbrn\CfgSounds.hpp"
+    #include "cvo\sandstorm\sound\sandstormsounds.hpp"
+};
+
+class CfgUnitInsignia {
+    #include "cvo\misc\cvo_insignia.hpp"
+};
+
+class CfgMusic
+{
+	tracks[] = {};
+	class CVO1
+	{
+		// display name
+		name	= "CVO1";
+
+		// filename, volume, pitch
+		sound[]	= { "cvo\sounds\cvo1.ogg", db + 0, 1.0 };
+        titles[] = {1,""};
+	};
+};
+
+class zen_context_menu_actions {
+    class CVO_ZEN_HAM_ContextAction {
+        displayName = "Hearts and Minds";
+        icon = "\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa";
+        priority = 29;
+
+        #include "cvo\cbrn\CfgContext.hpp"
+    };
+};

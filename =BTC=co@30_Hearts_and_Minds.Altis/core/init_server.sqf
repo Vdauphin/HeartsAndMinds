@@ -60,7 +60,7 @@ if (
     btc_p_respawn_ticketsShare &&
     {btc_p_respawn_ticketsAtStart >= 0}
 ) then {
-    private _tickets = btc_respawn_tickets getOrDefault [btc_player_side, btc_p_respawn_ticketsAtStart];;
+    private _tickets =  getOrDefault [btc_player_side, btc_p_respawn_ticketsAtStart];;
     if (_tickets isEqualTo 0) then {
         _tickets = -1;
     };

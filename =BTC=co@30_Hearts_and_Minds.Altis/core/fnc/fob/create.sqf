@@ -56,7 +56,7 @@ if (ctrlText 777 == "") exitWith {
 
 private _name = ctrlText 777;
 
-private _FOB_name = "FOB " + _name;
+private _FOB_name = "Station " + _name;
 private _name_to_check = toUpper _FOB_name;
 private _array_markers = allMapMarkers apply {toUpper _x};
 
