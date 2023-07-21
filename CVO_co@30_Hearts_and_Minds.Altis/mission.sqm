@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=312;
+		nextID=342;
 	};
 	class Camera
 	{
-		pos[]={8434.8555,209.03218,18292.191};
-		dir[]={-0.065334819,-0.60860842,-0.79090208};
-		up[]={-0.050107706,0.79345,-0.60655999};
-		aside[]={-0.99670213,1.2384044e-007,0.082335584};
+		pos[]={4699.7529,311.50671,21364.912};
+		dir[]={-0.89963061,-0.33976233,0.27443731};
+		up[]={-0.32498997,0.94050741,0.099140465};
+		aside[]={0.29179573,3.3160904e-007,0.95652455};
 	};
 };
 binarizationWanted=0;
@@ -518,6 +518,7 @@ randomSeed=10619953;
 class ScenarioData
 {
 	author="Overlord Zorn";
+	saving=0;
 };
 class CustomAttributes
 {
@@ -552,11 +553,99 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="ENH_AddObjectsToZeus";
+			expression="    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then    {      [] spawn      {        scriptName 'ENH_Attribute_AddObjectsToZeus';        while {true} do        {          {          _x addCuratorEditableObjects            [              entities [[], ['Logic'], true],              true            ];          } count allCurators;          sleep 60;        };      };    }";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ENH_SPR";
+			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then      {        ENH_SPR_Ruleset = _value param [0, 0];        ENH_SPR_Delay = _value param [1, 20];        ENH_SPR_CanDie = _value param [2, false];        ENH_SPR_RestoreLoadout = _value param [3, false];        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);        ENH_SPR_Positions =        [          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}        ];        {          _x setVariable ['ENH_SPR_OriginalSide', side group _x];          _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];          _x addEventHandler ['handleDamage',          {            params ['_unit', '', '_damage', '', '', '_index'];            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};            if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              _damage;            };            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              1;            };            if (_index < 8 && (_damage min 0.95) == 0.95) then            {              setAccTime 1;              _unit allowDamage false;              _unit setCaptive true;              _unit setUnconscious true;              _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};              moveOut _unit;              _unit spawn ENH_fnc_SPR_respawnTimer;            };            _damage min 0.95;          }];        } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                ENH_fnc_SPR_respawn =        {          scriptName 'ENH_Attribute_SPR_Respawn';          params ['_unit'];          if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};          if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;          private _positions = ENH_SPR_Positions select _sideID;          if (_positions isNotEqualTo []) then          {            switch (ENH_SPR_Ruleset) do            {              case 3:              {                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);              };              case 2:              {                _unit setPos selectRandom _positions;              };            };          };          _unit setUnconscious false;          _unit allowDamage true;          _unit setDamage 0;          _unit switchMove '';          _unit call ENH_SPR_OnRespawnCode;          _unit spawn          {            sleep 8;            _this setCaptive false;          };        };                ENH_fnc_SPR_respawnTimer =        {          scriptName 'ENH_Attribute_SPR_RespawnTimer';          params ['_unit'];          private _respawnTime = time + ENH_SPR_Delay;          if (isPlayer _unit) then          {            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];            _ctrlRespawnTimer ctrlCommit 0;            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];            0 cutText ['', 'BLACK OUT', 0.3];            0.3 fadeSound 0;            0.3 fadeMusic 0;            0.3 fadeRadio 0;            0.3 fadeSpeech 0;            0.3 fadeEnvironment 0;            showChat false;            while {time < _respawnTime} do            {              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];              sleep 0.1;            };            ctrlDelete _ctrlRespawnTimer;            0 cutText ['', 'BLACK IN', 8];            8 fadeSound (ENH_SPR_OriginalVolume # 0);            8 fadeMusic (ENH_SPR_OriginalVolume # 1);            8 fadeRadio (ENH_SPR_OriginalVolume # 2);            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);            showChat true;            [              ['Respawned'],              [format ['GRID: %1', mapGridPosition _unit]],              [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]            ] spawn BIS_fnc_EXP_camp_SITREP;          }          else          {            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then            {              [                str _unit, 'onEachFrame',                {                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];                },                [_unit, _respawnTime]              ] call BIS_fnc_addStackedEventHandler;            };            sleep ENH_SPR_Delay;          };          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;          _unit call ENH_fnc_SPR_respawn;        };      }";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=5;
+						class Item0
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=20;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=0;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=0;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="STRING";
+								value="";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=3;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.34733933;
 		startWind=0.1;
@@ -577,7 +666,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=14;
+		items=5;
 		class Item0
 		{
 			dataType="Layer";
@@ -8872,7 +8961,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={8907.582,140.82381,18544.479};
-							angle=0.24478213;
+							angle=0.24478211;
 							class Attributes
 							{
 								text="GateTrigger AUX";
@@ -12278,8 +12367,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12291,8 +12380,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12325,8 +12414,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12338,8 +12427,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12372,8 +12461,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12385,8 +12474,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -22046,7 +22135,7 @@ class Mission
 							};
 							id=2208;
 							type="gm_ge_dbp_man_01_80_blu";
-							atlOffset=3.0517578e-005;
+							atlOffset=0.014968872;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -24866,6 +24955,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Oreokastro";
+			state=1;
 			class Entities
 			{
 				items=17;
@@ -26510,6 +26600,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=2293;
+					atlOffset=185.97;
 				};
 				class Item8
 				{
@@ -26704,6 +26795,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=2300;
+					atlOffset=185.97;
 				};
 				class Item9
 				{
@@ -26915,7 +27007,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=2306;
-					atlOffset=1.1098022;
+					atlOffset=185.97;
 				};
 				class Item10
 				{
@@ -27126,6 +27218,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=2308;
+					atlOffset=185.97;
 				};
 				class Item11
 				{
@@ -27320,6 +27413,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=2328;
+					atlOffset=185.97;
 				};
 				class Item12
 				{
@@ -27327,7 +27421,7 @@ class Mission
 					name="Decoration";
 					class Entities
 					{
-						items=29;
+						items=38;
 						class Item0
 						{
 							dataType="Object";
@@ -28491,9 +28585,287 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item29
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4680.4336,296.51935,21381.057};
+								angles[]={0,5.3989096,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2347;
+							type="Land_SandbagBarricade_01_half_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item30
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4688.6685,298.14825,21361.211};
+								angles[]={0,4.5777979,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2350;
+							type="Land_SandbagBarricade_01_half_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item31
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4688.644,298.1188,21363.318};
+								angles[]={0,1.4690908,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2351;
+							type="Land_SandbagBarricade_01_half_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item32
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4695.5591,298.03018,21370.039};
+								angles[]={6.2821641,1.4261575,0.023922173};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2354;
+							type="Land_SandbagBarricade_01_half_F";
+							atlOffset=0.0038757324;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item33
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4695.6694,298.10495,21367.936};
+								angles[]={6.2821641,4.5348682,0.023922173};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2355;
+							type="Land_SandbagBarricade_01_half_F";
+							atlOffset=0.0007019043;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item34
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4684.7979,297.15912,21382.441};
+								angles[]={0.02364379,2.8828578,0.0037316943};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2356;
+							type="Land_SandbagBarricade_01_half_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item35
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4682.7217,296.80908,21382.09};
+								angles[]={0.02364379,5.9915752,0.0037316943};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								createAsLocalObject=1;
+								disableSimulation=1;
+							};
+							id=2357;
+							type="Land_SandbagBarricade_01_half_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item36
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4695.9717,305.21396,21357.863};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=2352;
+							type="Land_TentLamp_01_suspended_F";
+							atlOffset=2.77948;
+						};
+						class Item37
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4693.4688,303.60477,21351.568};
+								angles[]={4.712389,1.7484551e-007,1.0738227};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=2353;
+							type="Land_TentLamp_01_suspended_F";
+							atlOffset=2.7794189;
+						};
 					};
 					id=2342;
-					atlOffset=3.2778931;
+					atlOffset=3.2317505;
 				};
 				class Item13
 				{
@@ -28562,152 +28934,7 @@ class Mission
 				};
 			};
 			id=2288;
-			atlOffset=-0.46960449;
-		};
-		class Item5
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4680.4336,296.51935,21381.057};
-				angles[]={0,5.3989096,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2347;
-			type="Land_SandbagBarricade_01_half_F";
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4688.6685,298.14825,21361.211};
-				angles[]={0,4.5777979,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2350;
-			type="Land_SandbagBarricade_01_half_F";
-		};
-		class Item7
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4688.644,298.1188,21363.318};
-				angles[]={0,1.4690908,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2351;
-			type="Land_SandbagBarricade_01_half_F";
-		};
-		class Item8
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4695.9717,305.21396,21357.863};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=2352;
-			type="Land_TentLamp_01_suspended_F";
-			atlOffset=2.77948;
-		};
-		class Item9
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4693.4688,303.60477,21351.568};
-				angles[]={4.712389,1.7484551e-007,1.0738227};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=2353;
-			type="Land_TentLamp_01_suspended_F";
-			atlOffset=2.7794189;
-		};
-		class Item10
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4695.5591,298.03018,21370.039};
-				angles[]={6.2821641,1.4261575,0.023922173};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2354;
-			type="Land_SandbagBarricade_01_half_F";
-			atlOffset=0.0038757324;
-		};
-		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4695.6694,298.10495,21367.936};
-				angles[]={6.2821641,4.5348682,0.023922173};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2355;
-			type="Land_SandbagBarricade_01_half_F";
-			atlOffset=0.0007019043;
-		};
-		class Item12
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4684.7979,297.15912,21382.441};
-				angles[]={0.02364379,2.8828578,0.0037316943};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2356;
-			type="Land_SandbagBarricade_01_half_F";
-		};
-		class Item13
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4682.7217,296.80908,21382.09};
-				angles[]={0.02364379,5.9915752,0.0037316943};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=2357;
-			type="Land_SandbagBarricade_01_half_F";
+			atlOffset=16.894989;
 		};
 	};
 };

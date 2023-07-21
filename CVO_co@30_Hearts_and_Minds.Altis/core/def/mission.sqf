@@ -722,7 +722,7 @@ _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create cl
 diag_log ("_allclasse = " + str _allclasse);
 
 //Save class name to global variable
-btc_enemy_side = east;                                                 // _allclasse select 0;
+btc_enemy_side = resistance;                                            // _allclasse select 0;
 
 btc_type_units = [
 //  "gm_xx_army_antitank_hk53a2_rpg7_80_oli",                           // RPG Guy for later
