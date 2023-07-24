@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=342;
+		nextID=402;
 	};
 	class Camera
 	{
-		pos[]={4699.7529,311.50671,21364.912};
-		dir[]={-0.89963061,-0.33976233,0.27443731};
-		up[]={-0.32498997,0.94050741,0.099140465};
-		aside[]={0.29179573,3.3160904e-007,0.95652455};
+		pos[]={4461.2979,331.27271,21222.686};
+		dir[]={0.35180163,-0.28986633,-0.89006943};
+		up[]={0.10654974,0.95706725,-0.26957408};
+		aside[]={-0.92999578,-4.156027e-008,-0.36758256};
 	};
 };
 binarizationWanted=0;
-sourceName="cvo_co@30_hearts_and_minds";
+sourceName="CVO_co@30_Hearts_and_Minds";
 addons[]=
 {
 	"A3_Modules_F",
@@ -8961,7 +8961,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={8907.582,140.82381,18544.479};
-							angle=0.24478211;
+							angle=0.24478205;
 							class Attributes
 							{
 								text="GateTrigger AUX";

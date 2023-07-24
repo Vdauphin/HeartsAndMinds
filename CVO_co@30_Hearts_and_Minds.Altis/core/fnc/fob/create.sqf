@@ -24,7 +24,7 @@ params [
     ["_mat", objNull, [objNull]]
 ];
 
-if (((position _mat) isFlatEmpty [1, 0, 0.9, 1, 0, false, _mat]) isEqualTo []) exitWith {(localize "STR_BTC_HAM_O_FOB_CREATE_H_AREA") call CBA_fnc_notify;};
+if (((position _mat) isFlatEmpty [-1, -1, -1, 1, 0, false, _mat]) isEqualTo []) exitWith {(localize "STR_BTC_HAM_O_FOB_CREATE_H_AREA") call CBA_fnc_notify;};
 
 if (_mat inArea [getMarkerPos "btc_base", btc_fob_minDistance, btc_fob_minDistance, 0, false]) exitWith {(localize "STR_BTC_HAM_O_FOB_CREATE_H_DBASE") call CBA_fnc_notify;};
 
@@ -56,7 +56,7 @@ if (ctrlText 777 == "") exitWith {
 
 private _name = ctrlText 777;
 
-private _FOB_name = "FOB " + _name;
+private _FOB_name = "Station " + _name;
 private _name_to_check = toUpper _FOB_name;
 private _array_markers = allMapMarkers apply {toUpper _x};
 
