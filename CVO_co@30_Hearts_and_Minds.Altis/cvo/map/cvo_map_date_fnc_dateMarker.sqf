@@ -23,7 +23,7 @@ if (_mode isEqualTo "INIT") exitWith {
 	diag_log format["[CVO] [Map] (dateMarker) - %1", "INIT Detected."];
 	diag_log format["[CVO] [Map] (dateMarker) - Init Params: %1", _this];
 
-	_position = [(worldSize * 0.05), (worldSize * 1.05)];
+	private _position = [(worldSize * 0.05), (worldSize * 1.05)];
 	cvo_dateMarker = createMarkerLocal ["cvo_dateMarker", _position];
 	"cvo_dateMarker" setMarkerTypeLocal "EmptyIcon";
 	"cvo_dateMarker" setMarkerColorLocal "ColorRed";
@@ -36,10 +36,11 @@ if (_mode isEqualTo "INIT") exitWith {
 		params [["_startDate", missionStart]];
 		while {cvo_dateMarker_active} do {
 			date params ["_year", "_month", "_day", "_hours", "_minutes"];
-			_pastDays = floor ([_startDate, date, "d"] call BIS_fnc_calculateDateTime);
-			_dateString = format ["Date: %1-%2-%3 # %4:%5 #  Day %6", _year, _month, _day, _hours, _minutes, _pastDays];
+			private _pastDays = floor ([_startDate, date, "d"] call BIS_fnc_calculateDateTime);
+			private _tickets =  [btc_player_side] call BIS_fnc_respawnTickets;
+			private _dateString = format ["Date: %1-%2-%3 # %4:%5 #  Day %6 # Remaining Tickets: %7", _year, _month, _day, _hours, _minutes, _pastDays, _tickets];
 			"cvo_dateMarker" setMarkerText _dateString;
-			sleep 60;
+			sleep 300;
 		};
 	};
 };
