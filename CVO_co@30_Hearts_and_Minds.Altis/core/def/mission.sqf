@@ -722,7 +722,7 @@ _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create cl
 diag_log ("_allclasse = " + str _allclasse);
 
 //Save class name to global variable
-btc_enemy_side = resistance;                                            // _allclasse select 0;
+btc_enemy_side = east;                                                   // _allclasse select 0;
 
 btc_type_units = [
 //  "gm_xx_army_antitank_hk53a2_rpg7_80_oli",                           // RPG Guy for later
@@ -733,7 +733,11 @@ btc_type_units = [
     "gm_xx_army_engineer_hk33a2_80_brn",
     "gm_xx_army_rifleman_01_akm_alp",
     "gm_xx_army_assault_ak74nk_80_wdl",
-    "gm_xx_army_squadleader_m16a1_80_grn"
+    "gm_xx_army_squadleader_m16a1_80_grn",
+    "APLIF_Soldier_TL", 
+    "APLIF_soldier_lite", 
+    "APLIF_Soldier_AR", 
+    "APLIF_Soldier_AT_Lite"
 ]; // _allclasse select 1;
 
 btc_type_divers = ["gm_xx_army_rifleman_01_akm_alp"];                                                   // _allclasse select 2;
@@ -757,7 +761,9 @@ btc_type_motorized = [
     "gm_ge_civ_w123", 
     "gm_gc_civ_ural375d_cargo", 
     "gm_gc_civ_p601", 
-    "gm_ge_civ_typ247"
+    "gm_ge_civ_typ247",
+    "ACM_APLIF_Iltis", 
+    "ACM_APLIF_Motorbike" 
 ];                                                                      // _allclasse select 5;
 
 btc_type_motorized_armed = [
@@ -767,7 +773,8 @@ btc_type_motorized_armed = [
     "gm_ge_civ_w123", 
     "gm_gc_civ_ural375d_cargo", 
     "gm_gc_civ_p601", 
-    "gm_ge_civ_typ247"
+    "gm_ge_civ_typ247",
+    "ACM_APLIF_Iltis_Milan"
 ];                                                                      // _allclasse select 6;
 
 btc_type_mg = ["gm_gc_army_dshkm_aatripod"];                            // _allclasse select 7;
