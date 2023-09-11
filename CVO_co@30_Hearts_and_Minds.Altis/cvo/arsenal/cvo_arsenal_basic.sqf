@@ -46,7 +46,7 @@ private _CVO_A_Basic_Vests = [
 // unlock later
 //	"V_SmershVest_01_black_F",				
 //	"V_SmershVest_01_radio_black_F",
-//	"V_CarrierRigKBT_01_light_DarkOlive_F",
+	"V_CarrierRigKBT_01_light_DarkOlive_F",
 	"V_CarrierRigKBT_01_DarkOlive_F"
 ];
 
@@ -168,7 +168,6 @@ private _CVO_A_Basic_EXO = [
 ];
 
 private _CVO_A_Basic_Rifles = [
-	
 // Shotgun
 	"gm_hk512_ris_wud",
 	"gm_hk512_wud",
@@ -199,7 +198,6 @@ private _CVO_A_Basic_Rifles = [
 
 // Attachments
 
-	"gm_maglite_2d_hkslim_blk",
 	"gm_surefire_l75_ir_surefire_blk",
 	"gm_surefire_l72_red_surefire_blk",
 	"gm_surefire_l72_grn_surefire_blk",
@@ -294,6 +292,37 @@ private _CVO_A_Basic_personalCBRN = [
 ];
 
 
+
+
+private _CVO_A_Basic_AgiosDionysios_Package = [
+	// G3A3
+		"gm_g3a3_blk",
+		"gm_10Rnd_762x51mm_B_DM111_g3_blk",		//10Rnd Magazine
+		"gm_maglite_2d_hkslim_blk",
+		// Uniform
+	"ACM_APD_Clothes_3",
+		// Helmets
+	"gm_ge_headgear_m92_cover_blk",
+	"gm_ge_headgear_m92_cover_glasses_blk",
+		// Vests
+	"gm_ge_bgs_vest_type3_gry",
+	"gm_ge_bgs_vest_type18_blk",
+	"gm_ge_bgs_vest_type3a1_gry"
+];
+
+private _CVO_A_Basic_for_later = [
+"eou_gorka_1",
+"U_O_R_Gorka_01_black_F",
+"U_B_GEN_Commander_F",
+"gm_ge_uniform_pilot_commando_rolled_blk",
+"gm_ge_uniform_pilot_commando_blk",
+"gm_ge_uniform_pilot_commando_rolled_gry",
+"gm_ge_uniform_pilot_commando_gry"
+];
+
+
+
+
 CVO_A_Basic = [];
 CVO_A_Basic append _CVO_A_Basic_Medical; 
 CVO_A_Basic append _CVO_A_Basic_Radios; 
@@ -320,7 +349,9 @@ CVO_A_Basic append _CVO_A_Basic_Uniforms_SpecOps;
 CVO_A_Basic append _CVO_A_Basic_Rappeling;
 CVO_A_Basic append _CVO_A_Basic_personalCBRN;
 
+CVO_A_Basic append _CVO_A_Basic_AgiosDionysios_Package;
 
+// CVO_A_Basic append _CVO_A_Basic_for_later;
 
 //// Specific Kit, for certain "Roles" only
 
