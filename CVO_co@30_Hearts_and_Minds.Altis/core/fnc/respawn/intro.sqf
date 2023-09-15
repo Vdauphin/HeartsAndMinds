@@ -36,7 +36,7 @@ _create_object_pos params ["_create_object_pos_x", "_create_object_pos_y", "_cre
 private _array = [
     ['\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa',        _color, (getPos player), 1.1, 1.1, 0, "You", 1],                                                                        //Player
     ['\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa',  _color, _gear_object_pos, 1.1, 1.1, 0, "Redeploy at Whiteboard", 1],                                                    //Re-deploy
-    ['\A3\ui_f\data\igui\cfg\simpleTasks\types\rifle_ca.paa',       _color, (getPos CVO_Arsenal), 1.1, 1.1, 0, "The Arsenal", 1],                                                           //Arsenal
+    ['\A3\ui_f\data\igui\cfg\simpleTasks\types\rifle_ca.paa',       _color, (getPos CVO_Arsenal_1), 1.1, 1.1, 0, "The Arsenal", 1],                                                           //Arsenal
 
     ['\A3\Ui_f\data\Logos\a_64_ca.paa', _color, [_gear_object_pos_x, _gear_object_pos_y, _gear_object_pos_z + 2], 1.1, 1.1, 0, "", 1],
     //['\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa', _color, [_create_object_pos_x, _create_object_pos_y, _create_object_pos_z + 5], 0.9, 0.9, 90, "", 1],
