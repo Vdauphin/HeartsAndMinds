@@ -43,6 +43,7 @@ _box setVariable ["ace_cargo_customname", _name, true];
 
 
 // Empties the inventory of the Box
+clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearItemCargoGlobal _box;
