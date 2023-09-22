@@ -340,6 +340,7 @@ CVO_A_BASE append [
 	// G3A3
 		"gm_g3a3_blk",
 		"gm_10Rnd_762x51mm_B_DM111_g3_blk",		//10Rnd Magazine
+		"gm_20Rnd_762x51mm_B_DM111_g3_blk",		//20Rnd Magazine
 		"gm_maglite_2d_hkslim_blk",
 	// Uniform
 		"ACM_APD_Clothes_3",
