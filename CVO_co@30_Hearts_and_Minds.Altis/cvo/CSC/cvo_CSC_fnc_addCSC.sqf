@@ -108,7 +108,7 @@ private _action = [
 	_actionname,													// Action Name
 	_actionstring,													// Name for the ACE Interaction Menu
 	"\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa",																// Custom Icon 
-	{_this call cvo_CSC_fnc_spawnCSC},								// Statement
+	{_this call cvo_CSC_fnc_spawnCSC_old},							// Statement
 	{true},															// Condition
 	{},
 	[_BoxType, _spawnloc, _name, _array, _backpacks]
