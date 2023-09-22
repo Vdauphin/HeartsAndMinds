@@ -62,8 +62,12 @@ if (!hasInterface) exitWith {};
 // #####################################################
 // ###### DEFINE ARSENAL BOXES HERE - objects that give accesss to the CVO Arsenal
 // #####################################################
+// ###### Ether Define the CVO_Arsenal_Boxes directly via array or by putting all boxes in one layer called "CVO_ARSENAL_BOXES"
+// #####################################################
 
-CVO_arsenal_boxes = [
+CVO_Arsenal_boxes = [];
+
+/*CVO_arsenal_boxes append [
 	cvo_arsenal_1,
 	cvo_arsenal_2,
 	cvo_arsenal_3,
@@ -76,6 +80,11 @@ CVO_arsenal_boxes = [
 	cvo_arsenal_10,
 	cvo_arsenal_11
 ];
+*/
+
+private _layerArray = getMissionLayerEntities "cvo_arsenal_boxes";
+if (!(_layerArray isEqualTo [])) then {CVO_Arsenal_boxes append getMissionLayerEntities "cvo_arsenal_boxes" # 0;};
+
 
 // #####################################################
 // ###### DEFINE BASE KIT HERE - AVAILABLE FOR EVERYONE
