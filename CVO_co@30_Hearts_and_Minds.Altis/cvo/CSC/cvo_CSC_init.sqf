@@ -46,11 +46,12 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	_cvo_csc_source, 
 	"Basic Ammo Package",
 	[
-		["gm_30Rnd_9x19mm_B_DM11_mp5a3_blk",20],
 		["gm_30Rnd_9x19mm_BSD_DM81_mp5a3_blk",20],
 		["gm_30Rnd_9x19mm_AP_DM91_mp5a3_blk",20],
-		["gm_30Rnd_9x19mm_B_DM51_mp5_blk",20],
-		["gm_30Rnd_9x19mm_B_DM11_mp5_blk",20],
+		["gm_20Rnd_556x45mm_B_T_M856_stanag_gry", 20],
+		["gm_20Rnd_556x45mm_B_T_M196_stanag_gry", 20],
+		["gm_20Rnd_762x51mm_B_DM111_g3_blk", 20],
+
 		["gm_7rnd_12ga_hk512_slug",20],
 		["gm_7rnd_12ga_hk512_pellet",20]
 		
@@ -85,14 +86,12 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	_cvo_csc_source, 
 	"Combat Patrol Package",
 	[
-	
 		["ACE_personalAidKit", 5],
 		["ACE_salineIV_500", 5],
 		["ACE_Humanitarian_Ration", 25],
 		["ACE_fieldDressing", 30],
 		["ACE_packingBandage", 30],
 		["ACE_elasticBandage", 10],
-
 
 		["ace_marker_flags_red", 25],
 		["ace_marker_flags_green", 25],
@@ -104,7 +103,8 @@ _cvo_csc_source = "ACM_APD_Unimog";
 		["ACE_HandFlare_White", 20],
 
 		["gm_30Rnd_9x19mm_B_DM51_mp5a3_blk",20],
-
+		["gm_20Rnd_556x45mm_B_T_M196_stanag_gry", 20],
+		["gm_20Rnd_762x51mm_B_DM111_g3_blk", 20],
 
 		["ACE_bodyBag", 10]
 
