@@ -13,8 +13,9 @@ cvo_fnc_music = compile preprocessFile "cvo\misc\cvo_music.sqf";
 // cvo_side_fnc_distanceCondition = compile preprocessFile "core\fnc\side\cvo_side_fnc_distanceCondition.sqf";
 
 
-// Init CVO fullHeal at GAZ66 Medical
-[compileScript ["cvo\medical\cvo_medical_init_fullHeal.sqf"]] call CBA_fnc_directCall;
+// Init CVO fullHeal at Unimog Medical
+["gm_ge_ff_u1300l_medic"] call CVO_Others_fnc_fullHeal;
+
 
 // Init CVO Foritfy Preset
 [compileScript ["cvo\logistics\cvo_logistics_init_fortify.sqf"]] call CBA_fnc_directCall;
