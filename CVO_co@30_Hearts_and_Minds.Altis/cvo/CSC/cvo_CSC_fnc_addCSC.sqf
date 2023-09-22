@@ -13,10 +13,33 @@
  * Return Value:
  * None
  *
- * Example:
- * [btc_create_object, "Monkey Care Package",[["Ace_banana", 100],["ace_maptools",100]]] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
- * [btc_create_object, "CBRN Package", [["U_C_CBRN_Suit_01_Blue_F",6],["G_RegulatorMask_F",6]],"LandWoodenBox_F",objNull,[["B_SCBA_01_F",6]]] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
- * 
+ * Examples:
+ 
+[
+	btc_create_object, 
+	"Monkey Care Package",
+	[
+		["Ace_banana", 100],
+		["ace_maptools",100]
+	]
+] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
+
+[
+	"ACM_APD_Unimog", 
+	"CBRN Package", 
+	[
+		["U_C_CBRN_Suit_01_Blue_F",6],
+		["G_RegulatorMask_F",6]
+	],
+	"LandWoodenBox_F",
+	objNull,
+	[
+		["B_SCBA_01_F",6]
+	]
+] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
+
+
+
  *
  * Public: maybe idfk
  *
