@@ -70,26 +70,8 @@ class CfgFunctions {
 class CfgSounds {
     sounds[] = {};
     #include "cvo\cbrn\CfgSounds.hpp"
-    #include "cvo\sandstorm\sound\sandstormsounds.hpp"
 };
 
-class CfgUnitInsignia {
-    #include "cvo\misc\cvo_insignia.hpp"
-};
-
-class CfgMusic
-{
-	tracks[] = {};
-	class CVO1
-	{
-		// display name
-		name	= "CVO1";
-
-		// filename, volume, pitch
-		sound[]	= { "cvo\sounds\cvo1.ogg", db + 0, 1.0 };
-        titles[] = {1,""};
-	};
-};
 
 class zen_context_menu_actions {
     class CVO_ZEN_HAM_ContextAction {
