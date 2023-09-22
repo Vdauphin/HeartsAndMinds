@@ -67,7 +67,7 @@ if (!hasInterface) exitWith {};
 
 CVO_Arsenal_boxes = [];
 
-/*CVO_arsenal_boxes append [
+CVO_arsenal_boxes append [
 	cvo_arsenal_1,
 	cvo_arsenal_2,
 	cvo_arsenal_3,
@@ -80,10 +80,10 @@ CVO_Arsenal_boxes = [];
 	cvo_arsenal_10,
 	cvo_arsenal_11
 ];
-*/
 
-private _layerArray = getMissionLayerEntities "cvo_arsenal_boxes";
-if (!(_layerArray isEqualTo [])) then {CVO_Arsenal_boxes append getMissionLayerEntities "cvo_arsenal_boxes" # 0;};
+
+/*private _layerArray = getMissionLayerEntities "cvo_arsenal_boxes";
+if (!(_layerArray isEqualTo [])) then {CVO_Arsenal_boxes append getMissionLayerEntities "cvo_arsenal_boxes" # 0;};*/
 
 
 // #####################################################
