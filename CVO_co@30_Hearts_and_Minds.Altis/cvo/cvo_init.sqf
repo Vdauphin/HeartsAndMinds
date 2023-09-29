@@ -1,9 +1,5 @@
 diag_log ("[CVO] [INIT] (cvo_init.sqf) - START");
 
-// Init CVO Music
-cvo_fnc_music = compile preprocessFile "cvo\misc\cvo_music.sqf";
-// Attaches Zeus Interaction to manually start music. 
-["INITZEUS"] call cvo_fnc_music;
 
 // Init CVO Arsenal
 [compileScript ["cvo\arsenal\cvo_arsenal_init.sqf"]] call CBA_fnc_directCall;
