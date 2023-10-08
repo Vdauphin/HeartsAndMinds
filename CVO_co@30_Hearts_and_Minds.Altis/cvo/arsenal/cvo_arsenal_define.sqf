@@ -361,6 +361,27 @@ CVO_A_BASE append [
 		"gm_ge_bgs_vest_type18_blk",
 		"gm_ge_bgs_vest_type3a1_gry"];
 
+CVO_A_Base append [		
+		// Mags
+		"gm_30Rnd_545x39mm_B_T_7T3_ak74_blk",
+		"gm_30Rnd_545x39mm_B_T_7T3_ak74_org",
+		"gm_30Rnd_545x39mm_B_T_7T3_ak74_prp",
+		"gm_30Rnd_545x39mm_B_7N6_ak74_blk",
+		"gm_30Rnd_545x39mm_B_7N6_ak74_org",
+		"gm_30Rnd_545x39mm_B_7N6_ak74_prp",
+		// Light
+		"gm_flashlightp2_wht_akkhandguard_blu",
+		// Rifles
+		"gm_mpiaks74nk_prp",
+		"gm_mpiaks74nk_blk",
+		"gm_mpiaks74nk_brn",
+		"gm_mpiaks74n_prp",
+		"gm_mpiaks74n_blk",
+		"gm_mpiaks74n_brn",
+		"gm_mpiak74n_brn",
+		"gm_mpiak74n_blk",
+		"gm_mpiak74n_prp"];
+
 
 CVO_A_BASE append [		// M16A1 Kit
 
@@ -374,15 +395,12 @@ CVO_A_BASE append [		// M16A1 Kit
 //	"gm_30Rnd_556x45mm_B_M193_stanag_gry",
 //	"gm_30Rnd_556x45mm_B_M855_stanag_gry",
 	
-
 //	"gm_colt4x20_ar15_blk",						// Scope
 
 //	"gm_suppressor_atec150_556mm_blk",			// Suppressor
 
 	"gm_m16a1_blk"
 ];
-
-
 
 // Lategame Uniforms and Wear
 /*
@@ -403,8 +421,6 @@ CVO_A_BASE append [
 	"gm_ge_facewear_stormhood_blk"	
 	];
 */
-
-
 
 
 
@@ -471,6 +487,7 @@ CVO_A_HASH_RoleKit = createHashMapFromArray [
 
 CVO_A_HASH_PlayerKit = createHashMapFromArray [
 	["_SP_PLAYER_", 		["Editor Debug", 	["ACE_Banana"],		{systemChat "this is a test"; 	["ACE_Banana"]}		]	],	
-	["76561197970306509", 	["Zorn", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un", "G_Spectacles_Tinted", "G_Balaclava_blk", "H_Beret_blk"],	{[]}	]],
+	["76561197970306509", 	["Zorn", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un", "G_Spectacles_Tinted", "G_Balaclava_blk", "H_Beret_blk", "gm_flashlightp2_brk_akkhandguard_dino"],	{[]}	]],
+	["76561198090236234", 	["Recon", 			[	"gm_flashlightp2_brk_akkhandguard_dino"				 ],	{[]}	]],
 	["76561198147307775", 	["Clone", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un"],	{[]}	]] 	
 ];
