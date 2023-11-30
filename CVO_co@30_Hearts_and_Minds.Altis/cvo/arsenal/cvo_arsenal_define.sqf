@@ -159,7 +159,9 @@ CVO_A_BASE append [
 	"Binocular"];
 
 // NVGs
-CVO_A_BASE append [];
+CVO_A_BASE append [
+	"gm_ferod51_oli"
+];
 
 
 // Rappeling Rope 
@@ -172,7 +174,7 @@ CVO_A_BASE append [
 	"AUR_Rappel_Gear"];
 
 // Radios
-CVO_A_BASE append  ["ACRE_BF888S"];
+CVO_A_BASE append  ["ACRE_BF888S, ACRE_PRC343"];
 
 // ###### Wearables ###### 
 
@@ -390,18 +392,76 @@ CVO_A_BASE append [		// M16A1 Kit
 	"gm_20Rnd_556x45mm_B_T_M856_stanag_gry",
 	"gm_20Rnd_556x45mm_B_T_M196_stanag_gry",
 
-//	"gm_30Rnd_556x45mm_B_T_M196_stanag_gry",	//30r Mags
-//	"gm_30Rnd_556x45mm_B_T_M856_stanag_gry",
-//	"gm_30Rnd_556x45mm_B_M193_stanag_gry",
-//	"gm_30Rnd_556x45mm_B_M855_stanag_gry",
+	"gm_30Rnd_556x45mm_B_T_M196_stanag_gry",	//30r Mags
+	"gm_30Rnd_556x45mm_B_T_M856_stanag_gry",
+	"gm_30Rnd_556x45mm_B_M193_stanag_gry",
+	"gm_30Rnd_556x45mm_B_M855_stanag_gry",
 	
-//	"gm_colt4x20_ar15_blk",						// Scope
+	"gm_colt4x20_ar15_blk",						// Scope
 
-//	"gm_suppressor_atec150_556mm_blk",			// Suppressor
+	"gm_suppressor_atec150_556mm_blk",			// Suppressor
 
 	"gm_m16a1_blk"
 ];
 
+CVO_A_BASE append [		// ASAS Upgrade Kit
+	"gm_suppressor_atec150_762mm_blk",         // G3/33 Accessories
+	"gm_diavari_da_stanagClaw_oli",
+	"gm_diavari_da_stanagClaw_blk",
+	"gm_colt4x20_stanagClaw_blk",
+	"gm_suppressor_atec150_762mm_long_blk",
+	"gm_suppressor_atec150_556mm_long_blk",
+
+	"gm_g3ka4_blk",							// G3/33 Rifles
+	"gm_g3ka4_oli",
+	"gm_g3a4_blk",
+	"gm_g3a4_oli",
+	"gm_hk33ka3_blk",
+	"gm_hk33a3_blk",
+
+	"gm_40Rnd_556x45mm_B_DM11_hk33_blk",	// 40 rnd mags for the G33
+	"gm_40Rnd_556x45mm_B_T_DM21_hk33_blk",
+
+	"gm_rpkn_wud",							//RPK/N
+	"gm_rpk_wud",
+
+	"gm_zln1k_ir_dovetail_gry",				//RPK Accs
+	"gm_zln1k_ir_dovetail_blk",
+	"gm_pka_dovetail_gry",
+	"gm_pka_dovetail_blk",
+	"gm_zvn64_rpk",
+	"gm_suppressor_pbs1_762mm_blk",
+
+	"gm_75Rnd_762x39mm_AP_7N23_ak47_blk",  //RPK 75rnd drums
+	"gm_75Rnd_762x39mm_BSD_57N231U_ak47_blk",
+	"gm_75Rnd_762x39mm_B_T_57N231P_ak47_blk",
+	"gm_75Rnd_762x39mm_B_57N231_ak47_blk",
+
+	"gm_svd_wud",							//SVD
+	
+	"gm_suppressor_tgpv_762mm_blk",			//SVD Accs
+	"gm_nspu_dovetail_gry",
+	"gm_nspu_dovetail_blk",
+	"gm_pso6x36_1_dovetail_gry",
+	"gm_pso6x36_1_dovetail_blk",
+	"gm_pso1_dovetail_gry",
+	"gm_pso1_dovetail_blk",
+
+	"gm_10Rnd_762x54mmR_B_T_7t2_svd_blk",  //SVD Ammo
+	"gm_10Rnd_762x54mmR_API_7bz3_svd_blk",
+	"gm_10Rnd_762x54mmR_AP_7N1_svd_blk",
+
+	"gm_pzf44_2_oli",					//PzF44-2 and accessories
+	"gm_feroz2x17_pzf44_2_blk",
+	"gm_1Rnd_44x537mm_heat_dm32_pzf44_2",
+
+	"gm_handgrenade_frag_dm51a1",   //New grenades, explosive and smoke
+	"gm_smokeshell_grn_dm21",
+	"gm_smokeshell_red_dm23",
+	"gm_smokeshell_wht_dm25",
+	"gm_smokeshell_org_dm32",
+	"gm_smokeshell_yel_dm26"
+];
 // Lategame Uniforms and Wear
 /*
 CVO_A_BASE append [
@@ -473,7 +533,7 @@ CVO_A_HASH_RoleKit = createHashMapFromArray [
 		"gm_ge_headgear_psh77_up_oli",				"gm_ge_headgear_psh77_down_oli"], 
 		{}]],
 	["Officer", [
-		["H_Beret_blk",	"gm_ge_headgear_beret_blk"],
+		["H_Beret_blk",	"gm_ge_headgear_beret_blk", "ACRE_PRC148"],
 		{}	
 	]] 
 ];
