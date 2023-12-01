@@ -483,8 +483,6 @@ btc_w_civs = [
 btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84", "ACE_M14"];
 
 
-
-
 // ANIMALS
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
@@ -510,7 +508,7 @@ btc_int_hornDelay = time;
 //Info
 btc_info_intel_type = [80, 95];//cache - hd - both
 btc_info_hideout_radius = 4000;
-btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F", "Land_File1_F", "Land_FilePhotos_F", "Land_File2_F", "Land_File_research_F", "Land_MobilePhone_old_F", "Land_PortableLongRangeRadio_F", "Land_Laptop_02_unfolded_F"];
+btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F", "Land_MobilePhone_old_F", "Land_PortableLongRangeRadio_F", "Land_Laptop_02_unfolded_F"];
 private _mapsIntel = switch (worldName) do {
     case "Altis": {["Land_Map_altis_F", "Land_Map_unfolded_Altis_F"]};
     case "Stratis": {["Land_Map_stratis_F", "Land_Map_unfolded_F"]};
