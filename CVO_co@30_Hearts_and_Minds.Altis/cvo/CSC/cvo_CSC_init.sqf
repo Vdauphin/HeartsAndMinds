@@ -16,7 +16,11 @@ cvo_CSC_fnc_spawnCSC_old = 		compileScript ["cvo\CSC\cvo_CSC_fnc_spawnCSC.sqf", 
 	"Land_WoodenCrate_01_F"
 ] call cvo_CSC_fnc_addCSC_old;
 */
+// ################
 
+// ################
+// GM Ammo Crates
+// ################
 /*
 "gm_ammobox_aluminium_01_empty", 
 "gm_ammobox_aluminium_02_empty", 
@@ -46,15 +50,22 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	_cvo_csc_source, 
 	"Basic Ammo Package",
 	[
-		["gm_30Rnd_9x19mm_BSD_DM81_mp5a3_blk",20],
-		["gm_30Rnd_9x19mm_AP_DM91_mp5a3_blk",20],
-		["gm_20Rnd_556x45mm_B_T_M856_stanag_gry", 20],
-		["gm_20Rnd_556x45mm_B_T_M196_stanag_gry", 20],
-		["gm_20Rnd_762x51mm_B_DM111_g3_blk", 20],
+		["gm_30Rnd_9x19mm_AP_DM91_mp5a3_blk",5],
+		["gm_20Rnd_556x45mm_B_T_M856_stanag_gry",20],
+		["gm_20Rnd_762x51mm_B_DM111_g3_blk",20],
 
-		["gm_7rnd_12ga_hk512_slug",20],
-		["gm_7rnd_12ga_hk512_pellet",20]
-		
+		["greenmag_ammo_556x45_basic_60Rnd",10],
+		["greenmag_ammo_762x51_basic_60Rnd",15],
+
+		["greenmag_ammo_545x39_basic_60Rnd",10],
+		["greenmag_ammo_762x39_basic_60Rnd",10],
+
+		["gm_handgrenade_frag_dm51a1",5],
+		["gm_smokeshell_grn_dm21",5],
+		["gm_smokeshell_red_dm23",5],
+		["gm_smokeshell_wht_dm25",5],
+
+		["greenmag_item_speedloader", 4]
 	],
 	"gm_ammobox_aluminium_03_empty"
 ] call cvo_CSC_fnc_addCSC_old;
@@ -65,7 +76,7 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	"Medical Package",
 	[
 		["ACE_surgicalKit", 1],
-		["ACE_suture", 50],
+		["ACE_suture", 100],
 
 		["ACE_bodyBag", 25],
 		["ACE_personalAidKit", 15],
@@ -103,7 +114,7 @@ _cvo_csc_source = "ACM_APD_Unimog";
 		["ACE_HandFlare_White", 20],
 
 		["gm_30Rnd_9x19mm_B_DM51_mp5a3_blk",20],
-		["gm_20Rnd_556x45mm_B_T_M196_stanag_gry", 20],
+		["gm_20Rnd_556x45mm_B_T_M856_stanag_gry", 20],
 		["gm_20Rnd_762x51mm_B_DM111_g3_blk", 20],
 
 		["ACE_bodyBag", 10]
@@ -112,6 +123,7 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	"gm_ammobox_aluminium_01_empty"
 ] call cvo_CSC_fnc_addCSC_old;
 
+/*
 [
 	_cvo_csc_source, 
 	"General Purpose Patrol Package",
@@ -140,7 +152,7 @@ _cvo_csc_source = "ACM_APD_Unimog";
 	],
 	"gm_ammobox_aluminium_01_empty"
 ] call cvo_CSC_fnc_addCSC_old;
-
+*/
 
 
 /*
@@ -175,11 +187,11 @@ _cvo_csc_source = "ACM_APD_Unimog";
 
 [
 	_cvo_csc_source, 
-	"CBRN Package",
+	"CBRN Package (4 Kits)",
 	[
 		["U_C_CBRN_Suit_01_Blue_F", 4],
 		["G_RegulatorMask_F", 4],
-		["ChemicalDetector_01_watch_F", 2]
+		["ChemicalDetector_01_watch_F", 4]
 	],
 	"Land_PlasticCase_01_large_CBRN_F",									
 	[
