@@ -498,6 +498,15 @@ CVO_A_BASE append [
 // CUSTOM ROLES
 // Formatting Template: [  "KEY/ROLENAME",	[  ["ARRAY OF CLASSNAMES"],{"Optional CODEBLOCK"}  ]  ]
 
+// #####################################################
+// ## HOW TO DEFINE A UNIT AS A SPECIFIC ROLE:
+// ## UNIT INIT FIELD IN THE EDITOR:
+// this setVariable ["CVO_A_Roles",["Officer"]];
+// ## Furhter Notes: 
+// -- "Medic" and "Engineer" are autoDetected based on ACE Skill Level  
+// #####################################################
+
+
 CVO_A_HASH_RoleKit = createHashMapFromArray [
 	["Medic", [[
 		"gm_ge_backpack_satchel_80_san",
@@ -553,7 +562,7 @@ CVO_A_HASH_RoleKit = createHashMapFromArray [
 
 
 CVO_A_HASH_PlayerKit = createHashMapFromArray [
-	["_SP_PLAYER_", 		["Editor Debug", 	["ACE_Banana"],		{systemChat "this is a test"; 	["ACE_Banana"]}		]	],	
+	["_SP_PLAYER_", 		["Editor Debug", 	["ACE_Banana"],		{systemChat "CVO_A_Playerkit test Successful - Banana Given"; 	["ACE_Banana"]}		]	],	
 	["76561197970306509", 	["Zorn", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un", "G_Spectacles_Tinted", "G_Balaclava_blk", "H_Beret_blk", "gm_flashlightp2_brk_akkhandguard_dino"],	{[]}	]],
 	["76561198090236234", 	["Recon", 			[	"gm_flashlightp2_brk_akkhandguard_dino"				 ],	{[]}	]],
 	["76561198147307775", 	["Clone", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un"],	{[]}	]] 	
