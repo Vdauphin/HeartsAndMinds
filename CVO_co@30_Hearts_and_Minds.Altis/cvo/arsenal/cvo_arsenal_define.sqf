@@ -174,7 +174,7 @@ CVO_A_BASE append [
 	"AUR_Rappel_Gear"];
 
 // Radios
-CVO_A_BASE append  ["ACRE_BF888S, ACRE_PRC343"];
+CVO_A_BASE append  ["ACRE_PRC343"];
 
 // ###### Wearables ###### 
 
@@ -422,6 +422,11 @@ CVO_A_BASE append [		// ASAS Upgrade Kit
 	"gm_40Rnd_556x45mm_B_DM11_hk33_blk",	// 40 rnd mags for the G33
 	"gm_40Rnd_556x45mm_B_T_DM21_hk33_blk",
 
+	"gm_20Rnd_762x51mm_AP_DM151_g3_blk",   //Improved G3 ammo
+	"gm_20Rnd_762x51mm_B_T_DM21A2_g3_blk",
+	"gm_10Rnd_762x51mm_AP_DM151_g3_blk",   
+	"gm_10Rnd_762x51mm_B_T_DM21A2_g3_blk",
+
 	"gm_rpkn_wud",							//RPK/N
 	"gm_rpk_wud",
 
@@ -460,7 +465,9 @@ CVO_A_BASE append [		// ASAS Upgrade Kit
 	"gm_smokeshell_red_dm23",
 	"gm_smokeshell_wht_dm25",
 	"gm_smokeshell_org_dm32",
-	"gm_smokeshell_yel_dm26"
+	"gm_smokeshell_yel_dm26",
+
+	"ACRE_PRC343"					//AN-PRC 343 Short range radio
 ];
 // Lategame Uniforms and Wear
 /*
