@@ -74,6 +74,7 @@ _action = [
 		diag_log ("[CVO] [LOADOUT] - " + str player + " - Loadout loaded"); 
 	}];                                 
 
+/* // Not needed anymore due to coming with its own Medical Tab Now
 // #####################################################
 // ###### MEDICAL TAB
 // #####################################################
@@ -90,7 +91,7 @@ _action = [
 	];
 	[_medicalTab, "Medical", getMissionPath "\cvo\arsenal\img\whiteCrystal.paa"] call ace_arsenal_fnc_addRightPanelButton;
 	diag_log "[CVO] [ARSENAL] - Medical Tab Applied";
-
+*/
 
 // #####################################################
 // ###### greenMag TAB
