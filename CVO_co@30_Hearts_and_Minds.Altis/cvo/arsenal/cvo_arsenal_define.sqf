@@ -527,7 +527,7 @@ CVO_A_BASE append [
 // ## HOW TO DEFINE A UNIT AS A SPECIFIC ROLE:
 // ## UNIT INIT FIELD IN THE EDITOR:
 // this setVariable ["CVO_A_Roles",["Officer"]];
-// ## Furhter Notes: 
+// ## Further Notes: 
 // -- "Medic" and "Engineer" are autoDetected based on ACE Skill Level  
 // #####################################################
 
