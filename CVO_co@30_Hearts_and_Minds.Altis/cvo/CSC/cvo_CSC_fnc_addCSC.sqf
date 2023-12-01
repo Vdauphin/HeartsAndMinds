@@ -8,7 +8,7 @@
  * 2: Nested Array of content EXCEPT BACKPACKS [["class0", amount], ["classN",#]] <Nested Array>
  * 3: Class of Crate to be used <OBJECT> <Optional - Default: "LandWoodenBox_F">
  * 4: Nested Array of Content BACKPACKS Only [[class0, #], [classN,#]] <Nested Array > <optional - Default: []>
- * 5: Spawn Location - ideally a invisible helipad or Tarp_01_Large_Black_F <Object> <optional - default: objNull>
+ * 5: Spawn Location - ideally a invisible helipad or Tarp_01_Large_Black_F <Object> <optional - default: objNull> // Not Implemented lol
  * 
  * Return Value:
  * None
@@ -22,7 +22,7 @@
 		["Ace_banana", 100],
 		["ace_maptools",100]
 	]
-] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
+] call cvo_CSC_fnc_addCSC;
 
 [
 	"ACM_APD_Unimog", 
@@ -32,11 +32,12 @@
 		["G_RegulatorMask_F",6]
 	],
 	"LandWoodenBox_F",
-	objNull,
 	[
 		["B_SCBA_01_F",6]
-	]
-] call cvo_logistics_fnc_addCustomSupplyBoxAceActionToObject;
+	],
+	objNull
+
+] call cvo_CSC_fnc_addCSC;
 
 
 
