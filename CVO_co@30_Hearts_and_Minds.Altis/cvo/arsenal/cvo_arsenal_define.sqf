@@ -95,6 +95,31 @@ CVO_A_BASE = [];
 // ###### Baseline Equipment ###### 
 // The Following can be mostly left as default
 
+if (CVO_A_modLoaded_GreenMag) then {
+		CVO_A_BASE append [
+			"greenmag_ammo_556x45_basic_60Rnd",
+			"greenmag_ammo_556x45_basic_30Rnd",
+
+			"greenmag_ammo_762x51_basic_60Rnd",
+			"greenmag_ammo_762x51_basic_30Rnd",
+
+			"greenmag_ammo_545x39_basic_60Rnd",
+			"greenmag_ammo_545x39_basic_30Rnd",
+
+			"greenmag_ammo_762x39_basic_60Rnd",
+			"greenmag_ammo_762x39_basic_30Rnd",
+			
+			"greenmag_ammo_9x19_basic_60Rnd",
+			"greenmag_ammo_9x19_basic_30Rnd",
+			
+			"greenmag_ammo_762x54_basic_60Rnd",
+			"greenmag_ammo_762x54_basic_30Rnd",
+
+			"greenmag_item_speedloader"
+		];
+};
+
+
 // Medical 
 CVO_A_BASE append [
 	"ACE_packingBandage",

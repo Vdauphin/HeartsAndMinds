@@ -97,10 +97,10 @@ _action = [
 // ###### greenMag TAB
 // #####################################################
 
-_modLoaded = isClass (configfile >> "CfgPatches" >> "greenmag_main");
-if (_modLoaded) then {
+CVO_A_modLoaded_GreenMag = isClass (configfile >> "CfgPatches" >> "greenmag_main");
+if (CVO_A_modLoaded_GreenMag) then {
 	// Creates List of all GreenMag Classnames
-		private _greenTab = "('greenmag' in configName _x) && !('core' in configName _x)" configClasses (configFile >> "CfgWeapons") apply {configName _x}; 
+		private _greenTab = "('greenmag' in configName _x) && !('core' in configName _x)" configClasses (configFile >> "CfgWeapons") apply {configName _x};
 
 	// Creates GreenMag Arsenal Tab
 		[_greenTab, "greenMag", getMissionPath "\cvo\arsenal\img\greenMag.paa"] call ace_arsenal_fnc_addRightPanelButton;
