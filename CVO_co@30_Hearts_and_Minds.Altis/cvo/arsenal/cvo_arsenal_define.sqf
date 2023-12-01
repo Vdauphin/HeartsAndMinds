@@ -310,10 +310,10 @@ CVO_A_BASE append [
 	"gm_m49_blk",
 	"gm_8Rnd_9x19mm_B_DM11_p210_blk",
 	"gm_8Rnd_9x19mm_B_DM51_p210_blk",
-	"gm_pm63_blk",
-	"gm_pm63_handgun_blk",
-	"gm_15Rnd_9x18mm_B_pst_pm63_blk",
-	"gm_25Rnd_9x18mm_B_pst_pm63_blk",
+	//"gm_pm63_blk",             Rest in peace sweet prince, your mags are usable with the SVD for some reason
+	//"gm_pm63_handgun_blk",
+	//"gm_15Rnd_9x18mm_B_pst_pm63_blk",
+	//"gm_25Rnd_9x18mm_B_pst_pm63_blk",
 
 	"gm_lp1_blk",
 	"gm_1Rnd_265mm_smoke_single_vlt_DM24",
