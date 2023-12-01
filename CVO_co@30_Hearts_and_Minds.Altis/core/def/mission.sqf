@@ -477,8 +477,8 @@ btc_civ_type_boats = [
 
 
 btc_w_civs = [
-    ["srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"],
-    ["hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"]
+    [],
+    []
 ];
 btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84", "ACE_M14"];
 
