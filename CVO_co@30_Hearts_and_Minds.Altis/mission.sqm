@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4058;
+		nextID=4150;
 	};
 	class Camera
 	{
-		pos[]={8430.5371,186.05191,18213.418};
-		dir[]={0.23501162,-0.34345952,-0.90928829};
-		up[]={0.085945241,0.9391675,-0.33253253};
-		aside[]={-0.96818542,-7.4505806e-009,-0.25023401};
+		pos[]={8432.1436,186.05191,18219.998};
+		dir[]={-0.48096079,-0.44448188,-0.75572145};
+		up[]={-0.23864819,0.89578789,-0.37498227};
+		aside[]={-0.84363872,3.3542165e-008,0.53691334};
 	};
 };
 binarizationWanted=0;
-sourceName="cvo_co@30_hearts_and_minds";
+sourceName="CVO_co@30_Hearts_and_Minds";
 addons[]=
 {
 	"A3_Modules_F",
@@ -887,7 +887,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -12482,8 +12482,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12495,8 +12495,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12529,8 +12529,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12542,8 +12542,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12575,8 +12575,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
-									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
+									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -12588,8 +12588,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
-									expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
+									property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
+									expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 									class Value
 									{
 										class data
@@ -13236,14 +13236,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8435.9678,180.66475,18201.307};
-										angles[]={0,6.1311088,0};
+										position[]={8435.9678,180.66492,18201.307};
+										angles[]={0,6.1311145,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-1 SL";
 										isPlayable=1;
 										class Inventory
@@ -13290,7 +13290,7 @@ class Mission
 									};
 									id=2092;
 									type="B_G_Survivor_F";
-									atlOffset=0.2958374;
+									atlOffset=0.29600525;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -13813,14 +13813,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8441.249,180.651,18201.555};
-										angles[]={0,6.1311088,0};
+										position[]={8441.249,180.65079,18201.555};
+										angles[]={0,6.1311145,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-2 SL";
 										isPlayable=1;
 										class Inventory
@@ -13867,7 +13867,7 @@ class Mission
 									};
 									id=2099;
 									type="B_G_Survivor_F";
-									atlOffset=0.4032135;
+									atlOffset=0.40299988;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -14390,14 +14390,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8446.0742,180.634,18202.182};
-										angles[]={0,6.1311088,0};
+										position[]={8446.0742,180.63429,18202.182};
+										angles[]={0,6.1311145,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-3 SL";
 										isPlayable=1;
 										class Inventory
@@ -14444,7 +14444,7 @@ class Mission
 									};
 									id=2106;
 									type="B_G_Survivor_F";
-									atlOffset=0.45271301;
+									atlOffset=0.45300293;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -14967,14 +14967,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8450.3516,180.62541,18202.553};
-										angles[]={0,6.1311088,0};
+										position[]={8450.3516,180.62523,18202.553};
+										angles[]={0,6.1311145,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-4 SL";
 										isPlayable=1;
 										class Inventory
@@ -15021,7 +15021,7 @@ class Mission
 									};
 									id=2113;
 									type="B_G_Survivor_F";
-									atlOffset=0.46118164;
+									atlOffset=0.46099854;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -15544,13 +15544,13 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8432.5693,180.69965,18200.953};
+										position[]={8432.5693,180.69943,18200.953};
 									};
 									side="West";
 									flags=7;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];" \n "this setVariable [""ACE_IsEngineer"",1];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];" \n "this setVariable [""ACE_IsEngineer"",1];";
 										description="1-5 SL";
 										isPlayable=1;
 										class Inventory
@@ -15597,7 +15597,7 @@ class Mission
 									};
 									id=2120;
 									type="B_G_Survivor_F";
-									atlOffset=0.23822021;
+									atlOffset=0.23800659;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -15943,7 +15943,7 @@ class Mission
 									flags=7;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-6  PL";
 										isPlayable=1;
 										class Inventory
@@ -16125,7 +16125,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Rifleman"",true];" \n "this setVariable [""ace_medical_medicClass"", 2];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Rifleman"",true];" \n "this setVariable [""ace_medical_medicClass"", 2];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-6  Doc";
 										isPlayable=1;
 										class Inventory
@@ -16247,7 +16247,7 @@ class Mission
 									flags=7;
 									class Attributes
 									{
-										init="this setVariable [""interpreter"",true];" \n "this setVariable [""Officer"",true];";
+										init="this setVariable [""interpreter"",true];" \n "this setVariable [""CVO_A_Roles"",[""Officer""]];";
 										description="1-0 COY CO";
 										isPlayer=1;
 										isPlayable=1;
@@ -16331,7 +16331,7 @@ class Mission
 												};
 												class ItemCargo
 												{
-													items=3;
+													items=2;
 													class Item0
 													{
 														name="ACE_EarPlugs";
@@ -16340,11 +16340,6 @@ class Mission
 													class Item1
 													{
 														name="ACE_Humanitarian_Ration";
-														count=2;
-													};
-													class Item2
-													{
-														name="ACRE_BF888S";
 														count=2;
 													};
 												};
@@ -22366,7 +22361,7 @@ class Mission
 							};
 							id=2208;
 							type="gm_ge_dbp_man_01_80_blu";
-							atlOffset=3.0517578e-005;
+							atlOffset=0.014968872;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -52048,13 +52043,13 @@ class Mission
 										angles[]={0.015455357,0.37130219,6.2714396};
 									};
 									side="Independent";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 									};
 									id=11528;
 									type="AAFGM_soldier";
-									atlOffset=1.6800613;
+									atlOffset=0.039167404;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -52182,13 +52177,13 @@ class Mission
 										angles[]={0.041309625,0,0.0026520467};
 									};
 									side="Independent";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 									};
 									id=11533;
 									type="AAFGM_soldier";
-									atlOffset=2.2024174;
+									atlOffset=0.14577293;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -72604,7 +72599,7 @@ class Mission
 					};
 					id=12743;
 					type="AAFGM_Crew";
-					atlOffset=0.00016212463;
+					atlOffset=-0.0039978027;
 				};
 				class Item1
 				{
@@ -72615,12 +72610,13 @@ class Mission
 						angles[]={0.1780934,0,6.2805147};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=12744;
 					type="AAFGM_Crew";
-					atlOffset=2.7270622;
+					atlOffset=-0.0039978027;
 				};
 				class Item2
 				{
@@ -72631,13 +72627,13 @@ class Mission
 						angles[]={0.1780934,0,6.2805147};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=12745;
 					type="AAFGM_Crew";
-					atlOffset=2.7270622;
+					atlOffset=-0.0039978027;
 				};
 			};
 			class Attributes
@@ -82326,7 +82322,7 @@ class Mission
 							};
 							id=13739;
 							type="Land_PierWooden_01_16m_F";
-							atlOffset=1.1753963;
+							atlOffset=1.1753964;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -83444,7 +83440,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2156.5767,1.0334955,11542.237};
+						position[]={2156.5767,1.0334957,11542.237};
 						angles[]={0,4.8345337,0.219862};
 					};
 					side="Empty";
@@ -83453,7 +83449,7 @@ class Mission
 					};
 					id=14304;
 					type="Land_Boat_02_abandoned_F";
-					atlOffset=0.67907536;
+					atlOffset=0.67907548;
 				};
 				class Item15
 				{
@@ -84155,7 +84151,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2733.3875,0.70331931,9809.5029};
+						position[]={2733.3875,0.70331943,9809.5029};
 						angles[]={6.1624427,0.46364751,0.033321146};
 					};
 					side="Empty";
@@ -84167,6 +84163,7 @@ class Mission
 					};
 					id=14620;
 					type="Land_FishingGear_02_F";
+					atlOffset=8.9406967e-008;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -84980,7 +84977,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2726.8113,0.09452948,9804.041};
+						position[]={2726.8113,0.094529569,9804.041};
 						angles[]={0,0.051572319,0};
 					};
 					side="Empty";
@@ -84992,6 +84989,7 @@ class Mission
 					};
 					id=14877;
 					type="Land_CrabCages_F";
+					atlOffset=8.9406967e-008;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -85188,7 +85186,7 @@ class Mission
 					};
 					id=14872;
 					type="Land_PierWooden_02_barrel_F";
-					atlOffset=0.40260804;
+					atlOffset=0.40260813;
 					class CustomAttributes
 					{
 						class Attribute0
