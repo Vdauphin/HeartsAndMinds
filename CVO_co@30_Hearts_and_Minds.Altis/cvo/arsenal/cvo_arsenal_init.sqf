@@ -1,8 +1,5 @@
 if (!hasInterface) exitWith {};
 
-// Inits the arsenal data-base
-[compileScript ["cvo\arsenal\cvo_arsenal_define.sqf"]] call CBA_fnc_directCall;
-
 // #####################################################
 // Functions
 // #####################################################
@@ -108,3 +105,6 @@ if (CVO_A_modLoaded_GreenMag) then {
 };
 
 diag_log ("[CVO] [LOADOUT] - " + str player + " - init completed");
+
+// Inits the arsenal data-base
+[compileScript ["cvo\arsenal\cvo_arsenal_define.sqf"]] call CBA_fnc_directCall;
