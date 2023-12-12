@@ -6,7 +6,7 @@ it creates the cvo_virtual_arsenal box and updates the content of said arsenal.
 If the player opened it before and the cvo_virtual_arsenal exists already, it will 
 */
 
-if (isNull cvo_virtual_arsenal) then { cvo_virtual_arsenal = ni;};
+if (isNull cvo_virtual_arsenal) then { cvo_virtual_arsenal = nil;};
 
 if (isNil "cvo_virtual_arsenal") then {
 
