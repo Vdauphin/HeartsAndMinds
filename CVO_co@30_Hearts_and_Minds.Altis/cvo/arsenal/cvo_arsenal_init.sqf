@@ -29,29 +29,6 @@ if (false) then {
 	};
 };
 
-// #####################################################
-// ###### ACE INTERACTIONS
-// #####################################################
-
-// Create Action
-_action = [
-	"CVO_Arsenal_Open",				// ActionName
-	"Open the Arsenal",				// Name of the Action shown in the menu
-	"\A3\ui_f\data\igui\cfg\simpleTasks\types\rifle_ca.paa",		// Icon
-	{[] call cvo_A_fnc_open},		// Statement (The actual Code)
-	{true}							// condition
-] call ace_interact_menu_fnc_createAction;
-// Attach the Action
-
-{
-	[
-		_x, 
-		0, 
-		["ACE_MainActions"], 
-		_action
-	] call ace_interact_menu_fnc_addActionToObject;	
-} forEach CVO_arsenal_boxes;
-
 
 // #####################################################
 // ###### EVENT HANDLERS
@@ -106,5 +83,36 @@ if (CVO_A_modLoaded_GreenMag) then {
 
 diag_log ("[CVO] [LOADOUT] - " + str player + " - init completed");
 
-// Inits the arsenal data-base
+
+// #####################################################
+// ###### INIT ARSENAL_DEFINE
+// #####################################################
+// Needs to be 
+// before ACE Interaction due to CVO_ARSENAL_BOXES 
+// and after greenMag TAB due to CVO_A_modLoaded_GreenMag
+
 [compileScript ["cvo\arsenal\cvo_arsenal_define.sqf"]] call CBA_fnc_directCall;
+
+
+// #####################################################
+// ###### ACE INTERACTIONS
+// #####################################################
+
+// Create Action
+_action = [
+	"CVO_Arsenal_Open",				// ActionName
+	"Open the Arsenal",				// Name of the Action shown in the menu
+	"\A3\ui_f\data\igui\cfg\simpleTasks\types\rifle_ca.paa",		// Icon
+	{[] call cvo_A_fnc_open},		// Statement (The actual Code)
+	{true}							// condition
+] call ace_interact_menu_fnc_createAction;
+// Attach the Action
+
+{
+	[
+		_x, 
+		0, 
+		["ACE_MainActions"], 
+		_action
+	] call ace_interact_menu_fnc_addActionToObject;	
+} forEach CVO_arsenal_boxes;
