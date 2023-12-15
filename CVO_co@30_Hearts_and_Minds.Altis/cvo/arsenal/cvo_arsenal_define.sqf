@@ -58,6 +58,8 @@ PLAYER KIT gets updated each time the arsenal opens as it CAN be dependend on ot
 
 
 if (!hasInterface) exitWith {};
+diag_log ("[CVO] [Arsenal_Define] - start");
+
 
 // #####################################################
 // ###### DEFINE ARSENAL BOXES HERE - objects that give accesss to the CVO Arsenal
@@ -96,6 +98,7 @@ CVO_A_BASE = [];
 // The Following can be mostly left as default
 
 if (CVO_A_modLoaded_GreenMag) then {
+
 		CVO_A_BASE append [
 			"greenmag_ammo_556x45_basic_60Rnd",
 			"greenmag_ammo_556x45_basic_30Rnd",
@@ -117,6 +120,7 @@ if (CVO_A_modLoaded_GreenMag) then {
 
 			"greenmag_item_speedloader"
 		];
+	diag_log "[CVO] [ARSENAL_DEFINE] - GreenMag added";
 };
 
 
@@ -592,3 +596,5 @@ CVO_A_HASH_PlayerKit = createHashMapFromArray [
 	["76561198090236234", 	["Recon", 			[	"gm_flashlightp2_brk_akkhandguard_dino"				 ],	{[]}	]],
 	["76561198147307775", 	["Clone", 			[	"gm_pl_headgear_beret_blu",	"gm_ge_headgear_beret_un"],	{[]}	]] 	
 ];
+
+diag_log ("[CVO] [Arsenal_Define] - completed");
