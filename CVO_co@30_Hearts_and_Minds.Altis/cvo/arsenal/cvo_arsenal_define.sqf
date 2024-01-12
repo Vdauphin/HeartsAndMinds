@@ -447,6 +447,10 @@ CVO_A_BASE append [		// ASAS Upgrade Kit
 	"gm_g3a4_oli",
 	"gm_hk33ka3_blk",
 	"gm_hk33a3_blk",
+	"gm_g3a3_oli",
+	"gm_g3a3_blk",
+	"gm_hk33a2_blk",
+	"gm_hk33ka2_blk",
 
 	"gm_40Rnd_556x45mm_B_DM11_hk33_blk",	// 40 rnd mags for the G33
 	"gm_40Rnd_556x45mm_B_T_DM21_hk33_blk",
