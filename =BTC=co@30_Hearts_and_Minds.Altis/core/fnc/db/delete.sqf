@@ -7,7 +7,6 @@ Description:
 
 Parameters:
     _showHint - Show the hint telling the database has been deleted. [Boolean]
-    _name - Name of the current database. [String]
 
 Returns:
 
@@ -22,28 +21,27 @@ Author:
 ---------------------------------------------------------------------------- */
 
 params [
-    ["_showHint", true, [true]],
-    ["_name", worldName, [""]]
+    ["_showHint", true, [true]]
 ];
 
-profileNamespace setVariable [format ["btc_hm_%1_version", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_date", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_cities", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_ho", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_ho_sel", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_cache", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_rep", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_fobs", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_vehs", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_objs", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_tags", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_respawnTickets", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_deadBodyPlayers", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_slotsSerialized", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_markers", _name], nil];
-profileNamespace setVariable [format ["btc_hm_%1_db", _name], nil];
+missionProfileNamespace setVariable ["btc_hm_version", nil];
+missionProfileNamespace setVariable ["btc_hm_date", nil];
+missionProfileNamespace setVariable ["btc_hm_cities", nil];
+missionProfileNamespace setVariable ["btc_hm_ho", nil];
+missionProfileNamespace setVariable ["btc_hm_ho_sel", nil];
+missionProfileNamespace setVariable ["btc_hm_cache", nil];
+missionProfileNamespace setVariable ["btc_hm_rep", nil];
+missionProfileNamespace setVariable ["btc_hm_fobs", nil];
+missionProfileNamespace setVariable ["btc_hm_vehs", nil];
+missionProfileNamespace setVariable ["btc_hm_objs", nil];
+missionProfileNamespace setVariable ["btc_hm_tags", nil];
+missionProfileNamespace setVariable ["btc_hm_respawnTickets", nil];
+missionProfileNamespace setVariable ["btc_hm_deadBodyPlayers", nil];
+missionProfileNamespace setVariable ["btc_hm_slotsSerialized", nil];
+missionProfileNamespace setVariable ["btc_hm_markers", nil];
+missionProfileNamespace setVariable ["btc_hm_db", nil];
 
-saveProfileNamespace;
+saveMissionProfileNamespace;
 
 if (_showHint) then {
     [10] remoteExecCall ["btc_fnc_show_hint", 0];
