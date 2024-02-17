@@ -57,3 +57,5 @@ respawnTemplates[] = {"MenuPosition", "Tickets"};
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+missionGroup = __EVAL("=BTC=co@30_Hearts_and_Minds-" + worldName);

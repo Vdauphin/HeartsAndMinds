@@ -3,16 +3,15 @@
 Function: btc_db_fnc_load
 
 Description:
-    Load database from profileNamespace depends one worldname
+    Load database from missionProfileNamespace depends one worldname
 
 Parameters:
-    _name - Name of the saved game. [String]
 
 Returns:
 
 Examples:
     (begin example)
-        ["Altis"] call btc_db_fnc_load;
+        [] call btc_db_fnc_load;
     (end)
 
 Author:
@@ -20,14 +19,10 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-params [
-    ["_name", worldName, [""]]
-];
-
-setDate +(profileNamespace getVariable [format ["btc_hm_%1_date", _name], date]);
+setDate +(missionProfileNamespace getVariable ["btc_hm_date", date]);
 
 //CITIES
-private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_cities", _name], []]);
+private _cities_status = +(missionProfileNamespace getVariable ["btc_hm_cities", []]);
 
 {
     _x params ["_id", "_initialized", "_spawn_more", "_occupied", "_data_units", "_has_ho", "_ho_units_spawned", "_ieds", "_has_suicider",
@@ -73,13 +68,13 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
 } forEach _cities_status;
 
 //HIDEOUT
-private _array_ho = +(profileNamespace getVariable [format ["btc_hm_%1_ho", _name], []]);
+private _array_ho = +(missionProfileNamespace getVariable ["btc_hm_ho", []]);
 
 {
     _x call btc_hideout_fnc_create;
 } forEach _array_ho;
 
-private _ho = profileNamespace getVariable [format ["btc_hm_%1_ho_sel", _name], 0];
+private _ho = missionProfileNamespace getVariable ["btc_hm_ho_sel", 0];
 private _select_ho = (btc_hideouts apply {_x getVariable "id"}) find _ho;
 if (_select_ho isEqualTo - 1) then {
     btc_hq = objNull;
@@ -90,7 +85,7 @@ if (_select_ho isEqualTo - 1) then {
 if (btc_hideouts isEqualTo []) then {[] spawn btc_fnc_final_phase;};
 
 //CACHE
-private _array_cache = +(profileNamespace getVariable [format ["btc_hm_%1_cache", _name], []]);
+private _array_cache = +(missionProfileNamespace getVariable ["btc_hm_cache", []]);
 _array_cache params ["_cache_pos", "_cache_n", "_cache_info", "_cache_markers", "_cache_pictures",
     ["_isChem", false, [true]],
     ["_cache_unitsSpawned", false, [true]]
@@ -120,7 +115,7 @@ btc_cache_pictures = _cache_pictures;
 } forEach (btc_cache_pictures select 0);
 
 //FOB
-private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name], []]);
+private _fobs = +(missionProfileNamespace getVariable ["btc_hm_fobs", []]);
 
 {
     _x params ["_fob_name", "_pos", ["_direction", 0, [0]]];
@@ -129,7 +124,7 @@ private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name]
 } forEach _fobs;
 
 //REP
-btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0];
+btc_global_reputation = missionProfileNamespace getVariable ["btc_hm_rep", 0];
 
 //Objects
 {deleteVehicle _x} forEach (getMissionLayerEntities "btc_vehicles" select 0);
@@ -138,7 +133,7 @@ if !(isNil "btc_vehicles") then {
     btc_vehicles = [];
 };
 
-private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []]);
+private _objs = +(missionProfileNamespace getVariable ["btc_hm_objs", []]);
 [{ // Can't use ace_cargo for objects created during first frame.
     {
         [_x] call btc_db_fnc_loadObjectStatus;
@@ -146,7 +141,7 @@ private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name]
 }, _objs] call CBA_fnc_execNextFrame;
 
 //VEHICLES
-private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name], []]);
+private _vehs = +(missionProfileNamespace getVariable ["btc_hm_vehs", []]);
 [{ // Can't be executed just after because we can't delete and spawn vehicle during the same frame.
     private _loadVehicle = {
         params [
@@ -209,7 +204,7 @@ private _vehs = +(profileNamespace getVariable [format ["btc_hm_%1_vehs", _name]
 }, _vehs] call CBA_fnc_execNextFrame;
 
 //Player Tags
-private _tags_properties = +(profileNamespace getVariable [format ["btc_hm_%1_tags", _name], []]);
+private _tags_properties = +(missionProfileNamespace getVariable ["btc_hm_tags", []]);
 private _id = ["ace_tagCreated", {
     params ["_tag", "_texture", "_object"];
     btc_tags_player pushBack [_tag, _texture, _object];
@@ -226,14 +221,14 @@ private _id = ["ace_tagCreated", {
 
 //Player respawn tickets
 if (btc_p_respawn_ticketsAtStart >= 0) then {
-    btc_respawn_tickets = +(profileNamespace getVariable [format ["btc_hm_%1_respawnTickets", _name], btc_respawn_tickets]);
+    btc_respawn_tickets = +(missionProfileNamespace getVariable ["btc_hm_respawnTickets", btc_respawn_tickets]);
 
-    private _deadBodyPlayers = +(profileNamespace getVariable [format ["btc_hm_%1_deadBodyPlayers", _name], []]);
+    private _deadBodyPlayers = +(missionProfileNamespace getVariable ["btc_hm_deadBodyPlayers", []]);
     btc_body_deadPlayers  = [_deadBodyPlayers] call btc_body_fnc_create;
 };
 
 //Player slots
-private _slots_serialized = +(profileNamespace getVariable [format ["btc_hm_%1_slotsSerialized", _name], createHashMap]);
+private _slots_serialized = +(missionProfileNamespace getVariable ["btc_hm_slotsSerialized", createHashMap]);
 [{
     {
         if (_y isEqualTo []) then {continue};
@@ -249,7 +244,7 @@ private _slots_serialized = +(profileNamespace getVariable [format ["btc_hm_%1_s
 btc_slots_serialized = _slots_serialized;
 
 //Player Markers
-private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1_markers", _name], []]);
+private _markers_properties = +(missionProfileNamespace getVariable ["btc_hm_markers", []]);
 {
     _x params ["_markerText", "_markerPos", "_markerColor", "_markerType", "_markerSize", "_markerAlpha", "_markerBrush", "_markerDir", "_markerShape",
         ["_markerPolyline", [], [[]]],

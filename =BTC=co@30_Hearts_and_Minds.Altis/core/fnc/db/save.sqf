@@ -3,10 +3,9 @@
 Function: btc_db_fnc_save
 
 Description:
-    Save the current game into profileNamespace.
+    Save the current game into missionProfileNamespace.
 
 Parameters:
-    _name - Name of the game saved. [String]
 
 Returns:
 
@@ -20,10 +19,6 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-params [
-    ["_name", worldName, [""]]
-];
-
 if (btc_debug) then {
     ["...1", __FILE__, [btc_debug, false, true]] call btc_debug_fnc_message;
 };
@@ -33,10 +28,10 @@ if (btc_debug) then {
 [false] call btc_db_fnc_delete;
 
 //Version
-profileNamespace setVariable [format ["btc_hm_%1_version", _name], btc_version select 1];
+missionProfileNamespace setVariable ["btc_hm_version", btc_version select 1];
 
 //World Date
-profileNamespace setVariable [format ["btc_hm_%1_date", _name], date];
+missionProfileNamespace setVariable ["btc_hm_date", date];
 
 //City status
 private _cities_status = [];
@@ -64,7 +59,7 @@ private _cities_status = [];
         [format ["ID %1 - IsOccupied %2", _y getVariable "id", _y getVariable "occupied"], __FILE__, [false]] call btc_debug_fnc_message;
     };
 } forEach btc_city_all;
-profileNamespace setVariable [format ["btc_hm_%1_cities", _name], +_cities_status];
+missionProfileNamespace setVariable ["btc_hm_cities", +_cities_status];
 
 //HIDEOUT
 private _array_ho = [];
@@ -90,9 +85,9 @@ private _array_ho = [];
     };
     _array_ho pushBack _data;
 } forEach btc_hideouts;
-profileNamespace setVariable [format ["btc_hm_%1_ho", _name], +_array_ho];
+missionProfileNamespace setVariable ["btc_hm_ho", +_array_ho];
 
-profileNamespace setVariable [format ["btc_hm_%1_ho_sel", _name], btc_hq getVariable ["id", 0]];
+missionProfileNamespace setVariable ["btc_hm_ho_sel", btc_hq getVariable ["id", 0]];
 
 if (btc_debug) then {
     ["...2", __FILE__, [btc_debug, false, true]] call btc_debug_fnc_message;
@@ -114,10 +109,10 @@ _array_cache pushBack _cache_markers;
 _array_cache pushBack [btc_cache_pictures select 0, btc_cache_pictures select 1, []];
 _array_cache pushBack (btc_cache_obj in btc_chem_contaminated);
 _array_cache pushBack (btc_cache_obj getVariable ["btc_cache_unitsSpawned", false]);
-profileNamespace setVariable [format ["btc_hm_%1_cache", _name], +_array_cache];
+missionProfileNamespace setVariable ["btc_hm_cache", +_array_cache];
 
 //REPUTATION
-profileNamespace setVariable [format ["btc_hm_%1_rep", _name], btc_global_reputation];
+missionProfileNamespace setVariable ["btc_hm_rep", btc_global_reputation];
 
 //FOBS
 private _fobs = [];
@@ -128,7 +123,7 @@ private _fobs = [];
         _fobs pushBack [markerText _x, _pos, _direction];
     };
 } forEach (btc_fobs select 0);
-profileNamespace setVariable [format ["btc_hm_%1_fobs", _name], +_fobs];
+missionProfileNamespace setVariable ["btc_hm_fobs", +_fobs];
 
 //Vehicles status
 private _array_veh = [];
@@ -186,7 +181,7 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
         [format ["VEH %1 DATA %2", _x, _data], __FILE__, [false]] call btc_debug_fnc_message;
     };
 } forEach (_vehiclesNotInCargo + _vehiclesInCargo);
-profileNamespace setVariable [format ["btc_hm_%1_vehs", _name], +_array_veh];
+missionProfileNamespace setVariable ["btc_hm_vehs", +_array_veh];
 
 //Objects status
 private _array_obj = [];
@@ -200,7 +195,7 @@ private _array_obj = [];
     isNull objectParent _x &&
     isNull isVehicleCargo _x
 });
-profileNamespace setVariable [format ["btc_hm_%1_objs", _name], +_array_obj];
+missionProfileNamespace setVariable ["btc_hm_objs", +_array_obj];
 
 //Player Tags
 private _tags = btc_tags_player select {alive (_x select 0)};
@@ -214,14 +209,14 @@ private _tags_properties = _tags apply {
         typeOf _tag
     ]
 };
-profileNamespace setVariable [format ["btc_hm_%1_tags", _name], +_tags_properties];
+missionProfileNamespace setVariable ["btc_hm_tags", +_tags_properties];
 
 //Player respawn tickets
 if (btc_p_respawn_ticketsAtStart >= 0) then {
-    profileNamespace setVariable [format ["btc_hm_%1_respawnTickets", _name], +btc_respawn_tickets];
+    missionProfileNamespace setVariable ["btc_hm_respawnTickets", +btc_respawn_tickets];
 
     private _deadBodyPlayers = [btc_body_deadPlayers] call btc_body_fnc_get;
-    profileNamespace setVariable [format ["btc_hm_%1_deadBodyPlayers", _name], +_deadBodyPlayers];
+    missionProfileNamespace setVariable ["btc_hm_deadBodyPlayers", +_deadBodyPlayers];
 };
 
 //Player slots
@@ -242,18 +237,18 @@ private _slots_serialized = +btc_slots_serialized;
     };
     _y set [6, typeOf _vehicle];
 } forEach _slots_serialized;
-profileNamespace setVariable [format ["btc_hm_%1_slotsSerialized", _name], +_slots_serialized];
+missionProfileNamespace setVariable ["btc_hm_slotsSerialized", +_slots_serialized];
 
 //Player Markers
 private _player_markers = allMapMarkers select {"_USER_DEFINED" in _x};
 private _markers_properties = _player_markers apply {
     [markerText _x, markerPos _x, markerColor _x, markerType _x, markerSize _x, markerAlpha _x, markerBrush _x, markerDir _x, markerShape _x, markerPolyline _x, markerChannel _x]
 };
-profileNamespace setVariable [format ["btc_hm_%1_markers", _name], +_markers_properties];
+missionProfileNamespace setVariable ["btc_hm_markers", +_markers_properties];
 
 //End
-profileNamespace setVariable [format ["btc_hm_%1_db", _name], true];
-saveProfileNamespace;
+missionProfileNamespace setVariable ["btc_hm_db", true];
+saveMissionProfileNamespace;
 if (btc_debug) then {
     ["...3", __FILE__, [btc_debug, false, true]] call btc_debug_fnc_message;
 };
