@@ -9,7 +9,7 @@ Parameters:
     _unit - Object to destroy. [Object]
     _part - Not use. [String]
     _dam - Amount of damage get by the object. [Number]
-    _injurer - Not use. [Object]
+    _injurer - The source unit that caused the damage. [Object]
     _ammo - Type of ammo use to make damage. [String]
     _hitIndex - Hit part index of the hit point, -1 otherwise. [Number]
     _instigator - Person who pulled the trigger. [Object]
@@ -38,7 +38,13 @@ params [
     ["_instigator", objNull, [objNull]]
 ];
 
-if (!isPlayer _instigator || {_dam <= 0.05}) exitWith {_dam};
+if (_dam <= 0.05) exitWith {_dam};
+if (
+    !isPlayer _instigator &&
+    _injurer isNotEqualTo btc_explosives_objectSide &&
+    !isPlayer _injurer
+) exitWith {_dam};
+
 private _isAgent = isAgent teamMember _unit;
 if (
     !_isAgent && {
@@ -52,6 +58,9 @@ if !(isServer) exitWith {
     _dam
 };
 
+if (isNull _instigator && isPlayer _injurer) then {
+    _instigator = _injurer;
+};
 [
     [btc_rep_malus_civ_hd, btc_rep_malus_animal_hd] select _isAgent,
     _instigator

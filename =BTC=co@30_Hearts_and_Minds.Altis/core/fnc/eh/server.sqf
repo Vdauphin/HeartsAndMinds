@@ -150,3 +150,9 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 } forEach ["CUP_MTVR_Base", "Truck_01_base_F"];
+
+["ace_explosives_place", {
+    params ["_explosive", "_dir", "_pitch", "_unit"];
+    _explosive setVariable ["btc_side", side group _unit];
+    btc_explosives pushBack _this;
+}] call CBA_fnc_addEventHandler; 

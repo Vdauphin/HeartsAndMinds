@@ -30,8 +30,15 @@ if (random 100 > btc_info_intel_chance) then {
     _unit setVariable ["intel", true];
 };
 
-if (isPlayer _instigator) then {
+if (
+    isPlayer _instigator ||
+    _killer isEqualTo btc_explosives_objectSide ||
+    isPlayer _killer
+) then {
     private _repValue = btc_rep_bonus_mil_killed;
+    if (isNull _instigator && isPlayer _killer) then {
+        _instigator = _killer;
+    };
     if (
         _unit getVariable ["ace_captives_isHandcuffed", false] ||
         _unit getVariable ["ace_captives_isSurrendering", false]

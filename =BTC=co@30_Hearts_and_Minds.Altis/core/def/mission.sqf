@@ -378,6 +378,10 @@ if (isServer) then {
     btc_delay_unit = 0.2;
     btc_delay_vehicle = 0.3;
     btc_delay_exec = 0.1;
+
+    //Explosives
+    btc_explosives = [];
+    btc_explosives_objectSide = createVehicle ["CBA_NamespaceDummy", [-1000, -1000, 0], [], 0, "NONE"];
 };
 
 //Civ

@@ -28,8 +28,15 @@ if (
     {!isAgent teamMember _unit}
 ) exitWith {};
 
-if (isPlayer _instigator) then {
+if (
+    isPlayer _instigator ||
+    _killer isEqualTo btc_explosives_objectSide ||
+    isPlayer _killer
+) then {
     private _isAgent = isAgent teamMember _unit;
+    if (isNull _instigator && isPlayer _killer) then {
+        _instigator = _killer;
+    };
     [
         [btc_rep_malus_civ_killed, btc_rep_malus_animal_killed] select _isAgent,
         _instigator

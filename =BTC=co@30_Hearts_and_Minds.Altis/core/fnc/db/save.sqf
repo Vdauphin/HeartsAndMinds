@@ -246,6 +246,30 @@ private _markers_properties = _player_markers apply {
 };
 missionProfileNamespace setVariable ["btc_hm_markers", +_markers_properties];
 
+//Explosives
+private _explosives = [];
+{
+    _x params ["_explosive", "_dir", "_pitch"];
+    if (isNull _explosive) then {continue};
+    _explosives pushBack [
+        typeOf _explosive,
+        _dir,
+        _pitch,
+        getPosATL _explosive,
+        _explosive getVariable ["btc_side", sideEmpty]
+    ]
+} forEach btc_explosives;
+{
+    _explosives pushBack [
+        typeOf _x,
+        getDir _x,
+        0,
+        getPosATL _x,
+        _x getVariable ["btc_side", side group ((getShotParents _x) select 0)]
+    ]
+} forEach (allMines select {_x isKindOf "APERSMineDispenser_Mine_Ammo"});
+profileNamespace setVariable [format ["btc_hm_%1_explosives", _name], +_explosives];
+
 //End
 missionProfileNamespace setVariable ["btc_hm_db", true];
 saveMissionProfileNamespace;

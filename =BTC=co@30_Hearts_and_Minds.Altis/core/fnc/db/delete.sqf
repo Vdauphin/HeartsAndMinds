@@ -39,6 +39,7 @@ missionProfileNamespace setVariable ["btc_hm_respawnTickets", nil];
 missionProfileNamespace setVariable ["btc_hm_deadBodyPlayers", nil];
 missionProfileNamespace setVariable ["btc_hm_slotsSerialized", nil];
 missionProfileNamespace setVariable ["btc_hm_markers", nil];
+missionProfileNamespace setVariable [format ["btc_hm_%1_explosives", _name], nil];
 missionProfileNamespace setVariable ["btc_hm_db", nil];
 
 saveMissionProfileNamespace;
