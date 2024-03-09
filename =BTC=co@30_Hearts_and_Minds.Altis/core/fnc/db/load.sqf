@@ -244,7 +244,7 @@ private _slots_serialized = +(missionProfileNamespace getVariable ["btc_hm_slots
 btc_slots_serialized = _slots_serialized;
 
 //Explosives
-private _explosives = +(missionProfileNamespace getVariable [format ["btc_hm_%1_explosives", _name], []]);
+private _explosives = +(missionProfileNamespace getVariable ["btc_hm_explosives", []]);
 btc_explosives = _explosives apply {
     _x params ["_explosiveType", "_dir", "_pitch", "_pos", "_side"];
     private _explosive = createVehicle [_explosiveType, _pos, [], 0, "CAN_COLLIDE"];

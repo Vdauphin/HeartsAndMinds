@@ -268,7 +268,7 @@ private _explosives = [];
         _x getVariable ["btc_side", side group ((getShotParents _x) select 0)]
     ]
 } forEach (allMines select {_x isKindOf "APERSMineDispenser_Mine_Ammo"});
-missionProfileNamespace setVariable [format ["btc_hm_%1_explosives", _name], +_explosives];
+missionProfileNamespace setVariable ["btc_hm_explosives", +_explosives];
 
 //End
 missionProfileNamespace setVariable ["btc_hm_db", true];
