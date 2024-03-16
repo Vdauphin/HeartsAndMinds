@@ -357,6 +357,7 @@
         <Container name="Parameters: Server management">
             <Key ID="STR_BTC_HAM_PARAM_DB_TITLE">
                 <Original>&lt;&lt; Server management &gt;&gt;</Original>
+                <French>&lt;&lt; Gestion du serveur &gt;&gt;</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_DB_LOAD">
                 <Original>Load the savegame (if available)</Original>
@@ -410,6 +411,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_DB_HRESTARTTIME">
                 <Original>Hour of auto restart/shutdown server</Original>
+                <French>Heure de l'auto restart/arrêt du serveur</French>
             </Key>
         </Container>
         <Container name="Parameters: Factions">
@@ -667,7 +669,7 @@
                 <Original>Density of intel in house:</Original>
                 <Chinesesimp>房屋内的情报密度:</Chinesesimp>
                 <Czech>Hustota intelu v domě:</Czech>
-                <French>Densité du renseignements dans les maisons: </French>
+                <French>Densité du renseignements dans les maisons :</French>
             </Key>
         </Container>
         <Container name="Parameters: Respawn">
@@ -743,6 +745,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETSLOST">
                 <Original>Number of tickets lost per death:</Original>
+                <French>Nombre de ticket perdu par mort :</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETSHARE">
                 <Original>Tickets are share between:</Original>
@@ -760,18 +763,23 @@
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETPRISONER">
                 <Original>Attribute tickets from prisoners to (Enable only if tickets are not share):</Original>
+                <French>Nombre de ticket que rapporte un prisonier (Activer cette option seulement si les tickets ne sont pas partagés) : </French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_ALLCONNECTED">
                 <Original>All connected players</Original>
+                <French>A tous les joueurs connectés</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_PLAYER">
                 <Original>To the player interacting with the logistic point</Original>
+                <French>Au joueur interagissant avec le point logistique</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_DEADPLAYER">
                 <Original>To connected player with 0 ticket left</Original>
+                <French>Au joueur connecté avec un solde de 0 ticket</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_LOWESTPLAYER">
                 <Original>To connected player with the lowest ticket number (0 included)</Original>
+                <French>Au joueur avec le plus faible solde de ticket (0 inclus)</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_NOTSHARE">
                 <Original>Not share</Original>
@@ -796,6 +804,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SLOT_ISSHARE">
                 <Original>Each slot is share between players</Original>
+                <French>Les slots sont partagés entre tous les joueurs</French>
             </Key>
         </Container>
         <Container name="Parameters: AI Skill">
@@ -820,7 +829,7 @@
                 <German>Verwackeln beim Zielen</German>
                 <Portuguese>Habilidade de Pontaria</Portuguese>
                 <Chinesesimp>瞄准抖动(AimingShake)</Chinesesimp>
-                <French>TremblementDeVisée</French>
+                <French>Tremblement de visée</French>
                 <Czech>Třes zaměřování</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SKILL_AIMSPEED">
@@ -828,7 +837,7 @@
                 <German>Zielgeschwindigkeit</German>
                 <Portuguese>Velocidade de Pontaria</Portuguese>
                 <Chinesesimp>瞄准速度(AimingSpeed)</Chinesesimp>
-                <French>VitesseDeVisée</French>
+                <French>Vitesse de visée</French>
                 <Czech>Rychlost zaměřování</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SKILL_SPOTDIST">
@@ -836,7 +845,7 @@
                 <German>Aufklärungsentfernung</German>
                 <Portuguese>Distância de Reconhecimento</Portuguese>
                 <Chinesesimp>目标识别距离(SpotDistance)</Chinesesimp>
-                <French>DistanceDeRepérage</French>
+                <French>Distance de repérage</French>
                 <Czech>SpotDistance</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SKILL_SPOTTIME">
@@ -844,7 +853,7 @@
                 <German>Aufklärungsgeschwindigkeit</German>
                 <Portuguese>Velocidade de Reconhecimento</Portuguese>
                 <Chinesesimp>目标识别时间(SpotTime)</Chinesesimp>
-                <French>TempsDétection</French>
+                <French>Temps de détection</French>
                 <Czech>SpotTime</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SKILL_COURAGE">
@@ -860,7 +869,7 @@
                 <German>Nachladegeschwindigkeit</German>
                 <Portuguese>Velocidade de Recarga</Portuguese>
                 <Chinesesimp>装填时间(ReloadSpeed)</Chinesesimp>
-                <French>VitesseDeRechargement</French>
+                <French>Vitesse de rechargement</French>
                 <Czech>Rychlost přebíjení</Czech>
             </Key>
         </Container>
@@ -1078,6 +1087,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_FLAGVEHLEADER">
                 <Original>On vehicle and team leader</Original>
+                <French>Sur les véhicules et le team leader</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_FLAGVEHPLAYER">
                 <Original>On vehicle and players</Original>
@@ -2156,19 +2166,22 @@
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_COPYI">
                 <Original>Copy inventory</Original>
+                <French>Copier l'inventaire</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_COPYPASTE_PASTEI">
                 <Original>Paste inventory</Original>
+                <French>Coller l'inventaire</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_RESTOREI">
                 <Original>Restore inventory</Original>
+                <French>Restorer l'inventaire</French>
             </Key>
         </Container>
         <Container name="Action(ACE): Door">
             <Key ID="STR_BTC_HAM_ACTION_DOOR_BREAK">
                 <Original>Break door lock</Original>
                 <German>Brich die Tür auf</German>
-                <French>Casser la serrure</French>
+                <French>Forcer la serrure</French>
                 <Chinesesimp>撬锁</Chinesesimp>
                 <Czech>Rozbijte zámek dveří</Czech>
             </Key>
@@ -2785,6 +2798,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_NOPLAYERFTICKET">
                 <Original>None player need ticket</Original>
+                <French>Aucun joueur n'a besoin de ticket</French>
             </Key>
         </Container>
         <Container name="Other: Shortcuts">
@@ -2846,9 +2860,11 @@
             </Key>
             <Key ID="STR_BTC_HAM_O_PASTE_NOCOPIEDI">
                 <Original>No copied inventory!</Original>
+                <French>L'inventaire n'a pas été copié</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COPY_NOOBJECTS">
                 <Original>No objects around!</Original>
+                <French>Pas d'objet dans les environs !</French>
             </Key>
         </Container>
         <Container name="Other: Endmission">
@@ -3107,6 +3123,7 @@
         <Container name="Logistic: Rearm">
             <Key ID="STR_BTC_HAM_LOG_REARM_COMPLETED">
                 <Original>Rearm completed.</Original>
+                <French>Réarmement effectué.</French>
             </Key>
         </Container>
     </Package>

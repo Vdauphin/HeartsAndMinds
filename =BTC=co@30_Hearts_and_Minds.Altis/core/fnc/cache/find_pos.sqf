@@ -22,7 +22,7 @@ Author:
 ---------------------------------------------------------------------------- */
 
 params [
-    ["_city_all", [], [[]]]
+    ["_city_all", values btc_city_all, [[]]]
 ];
 
 private _useful = _city_all select {_x getVariable ["occupied", false] && {!(_x getVariable ["type", ""] in ["NameLocal", "Hill", "NameMarine"])}};
