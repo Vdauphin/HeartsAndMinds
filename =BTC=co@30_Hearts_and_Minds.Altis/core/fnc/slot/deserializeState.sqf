@@ -39,6 +39,8 @@ Author:
         ["_field_rations", [], [[]]]
     ];
 
+    if (!btc_p_slot_isSaved) exitWith {};
+
     if (
         player distance ASLToAGL _previousPos > 50 || // Don't set loadout when near main base
         btc_p_autoloadout isEqualTo 0

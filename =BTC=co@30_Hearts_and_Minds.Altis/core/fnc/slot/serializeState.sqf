@@ -25,7 +25,8 @@ params [
 ];
 
 if (
-    isNil {_unit getVariable "btc_slot_key"}
+    isNil {_unit getVariable "btc_slot_key"} || 
+    {!btc_p_slot_isSaved}
 ) exitWith {};
 
 private _loadout = [_unit] call CBA_fnc_getLoadout;
