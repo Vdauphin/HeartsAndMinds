@@ -687,12 +687,19 @@
                 <French>Emplacements de réapparition disponibles:</French>
                 <Czech>Dostupná místa obnovení:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_RESP_FOBTOBASE">
-                <Original>Allow respawn from FOB to base:</Original>
-                <German>Erlaube Respawn von FOB zur Basis:?</German>
-                <Chinesesimp>允许从FOB重新部署至基地</Chinesesimp>
-                <French>Autoriser la réapparition sur FOB à la base:</French>
-                <Czech>Povolit respawn z FOB na základnu:</Czech>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDEBASE">
+                <Original>Enable respawn menu access from outside the base:</Original>
+                <German>Enable respawn menu access from outside the base:</German>
+                <Chinesesimp>Enable respawn menu access from outside the base:</Chinesesimp>
+                <French>Enable respawn menu access from outside the base:</French>
+                <Czech>Enable respawn menu access from outside the base:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDETIMEOUT">
+                <Original>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Original>
+                <German>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</German>
+                <Chinesesimp>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Chinesesimp>
+                <French>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</French>
+                <Czech>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLY">
                 <Original>FOB and Rallypoint</Original>
@@ -701,12 +708,26 @@
                 <French>FOB et Rallypoint</French>
                 <Czech>FOB and Rallypoint</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOB">
+                <Original>FOB</Original>
+                <German>FOB</German>
+                <Chinesesimp>FOB</Chinesesimp>
+                <French>FOB</French>
+                <Czech>FOB</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELO">
                 <Original>FOB, Rallypoint and Helo</Original>
                 <German>FOB, Ralleypoints und Helo</German>
                 <Chinesesimp>FOB、集合点和可重生载具</Chinesesimp>
                 <French>FOB, Rallypoint et Helo</French>
                 <Czech>FOB, Rallypoint and Helo</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELO">
+                <Original>FOB and Helo</Original>
+                <German>FOB und Helo</German>
+                <Chinesesimp>FOB and Helo</Chinesesimp>
+                <French>FOB et Helo</French>
+                <Czech>FOB and Helo</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELI">
                 <Original>FOB, Rallypoint and Transport helicopter</Original>
@@ -715,12 +736,26 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport</French>
                 <Czech>FOB, Rallypoint a Transportní vrtulník</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELI">
+                <Original>FOB and Transport helicopter</Original>
+                <German>FOB und Transporthubschrauber</German>
+                <Chinesesimp>FOB and Transport helicopter</Chinesesimp>
+                <French>FOB et Hélicoptère de transport</French>
+                <Czech>FOB a Transportní vrtulník</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHI">
                 <Original>FOB, Rallypoint, Transport helicopter and Transport vehicle</Original>
                 <German>FOB, Rallypoints, Transporthubschrauber und Transportfahrzeuge</German>
                 <Chinesesimp>FOB、集合点、运输直升机和运输车辆</Chinesesimp>
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník a Transportní vozidlo</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHI">
+                <Original>FOB, Transport helicopter and Transport vehicle</Original>
+                <German>FOB, Transporthubschrauber und Transportfahrzeuge</German>
+                <Chinesesimp>FOB, Transport helicopter and Transport vehicle</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport</French>
+                <Czech>FOB, Transportní vrtulník a Transportní vozidlo</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHILEADER">
                 <Original>FOB, Rallypoint, Transport helicopter, Transport vehicle and Leader</Original>
@@ -729,12 +764,41 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport et Leader</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER">
+                <Original>FOB, Transport helicopter, Transport vehicle and Player</Original>
+                <German>FOB, Transport helicopter, Transport vehicle and Player</German>
+                <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Player</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport et Joueur</French>
+                <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Player</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_RALLYTIMER">
                 <Original>Time before rallypoint self-destruction:</Original>
                 <German>Zeit, bevor sich Ralleypoints selbst zerstören:?</German>
                 <Chinesesimp>集合点自毁时间:</Chinesesimp>
                 <French>Temps avant l'autodestruction du point de ralliement:</French>
                 <Czech>Doba před sebezničením shromažďovacího bodu:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER">
+                <Original>FOB, Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER">
+                <Original>Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER">
+                <Original>Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTVEHIPLAYER">
+                <Original>Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTPLAYER">
+                <Original>Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
+                <Original>Re-deploy FOB/vehicles</Original>
+                <German>Wiedereinstieg FOB/Fahrzeugen</German>
+                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
+                <French>Se redéployer sur FOB/vehicles</French>
+                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETSATSTART">
                 <Original>Number of tickets at mission start:</Original>
@@ -2091,13 +2155,6 @@
                 <Chinesesimp>重新部署至集合点</Chinesesimp>
                 <French>Se redéployer au point de ralliement</French>
                 <Czech>Znovu rozmístěte shromažďovací body</Czech>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
-                <Original>Re-deploy FOB/vehicles</Original>
-                <German>Wiedereinstieg FOB/Fahrzeugen</German>
-                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
-                <French>Se redéployer sur FOB/vehicles</French>
-                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
         </Container>
         <Container name="Action : Arsenal (BIS)">

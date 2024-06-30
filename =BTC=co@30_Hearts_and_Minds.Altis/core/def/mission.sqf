@@ -24,7 +24,8 @@ btc_p_change_weather = ("btc_p_change_weather" call BIS_fnc_getParamValue) isEqu
 
 //<< Respawn options >>
 btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;
-btc_p_respawn_fromFOBToBase = ("btc_p_respawn_fromFOBToBase" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_respawn_fromOutsideBase = "btc_p_respawn_fromOutsideBase" call BIS_fnc_getParamValue;
+btc_p_respawn_fromOutsideTimeout = "btc_p_respawn_fromOutsideTimeout" call BIS_fnc_getParamValue;
 btc_p_rallypointTimer = "btc_p_rallypointTimer" call BIS_fnc_getParamValue;
 btc_p_respawn_arsenal = ("btc_p_respawn_arsenal" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_respawn_ticketsAtStart = "btc_p_respawn_ticketsAtStart" call BIS_fnc_getParamValue;
@@ -413,6 +414,7 @@ btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
+btc_fob_timeout = 1 * 60;
 
 //IED
 btc_type_ieds_ace = ["IEDLandBig_F", "IEDLandSmall_F"];
