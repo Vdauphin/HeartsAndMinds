@@ -802,6 +802,9 @@
                 <French>Arsenal ACE disponible après avoir était tué:</French>
                 <Czech>ACE Arsenal dostupný při respawnu po zabití:</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_PARAM_SLOT_ISSAVED">
+                <Original>Each slot's position and loadout is saved between connections</Original>
+            </Key>
             <Key ID="STR_BTC_HAM_PARAM_SLOT_ISSHARE">
                 <Original>Each slot is share between players</Original>
                 <French>Les slots sont partagés entre tous les joueurs</French>
