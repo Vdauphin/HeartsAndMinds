@@ -60,6 +60,7 @@ if (isServer) then {
     btc_civ_fnc_create_patrol = compileScript ["core\fnc\civ\create_patrol.sqf"];
     btc_civ_fnc_evacuate = compileScript ["core\fnc\civ\evacuate.sqf"];
     btc_civ_fnc_createFlower = compileScript ["core\fnc\civ\createFlower.sqf"];
+    btc_civ_fnc_createGrave = compileScript ["core\fnc\civ\createGrave.sqf"];
 
     //DATA
     btc_data_fnc_add_group = compileScript ["core\fnc\data\add_group.sqf"];
@@ -168,6 +169,7 @@ if (isServer) then {
     btc_rep_fnc_notify = compileScript ["core\fnc\rep\notify.sqf"];
     btc_rep_fnc_killed = compileScript ["core\fnc\rep\killed.sqf"];
     btc_rep_fnc_wheelChange = compileScript ["core\fnc\rep\wheelChange.sqf"];
+    btc_rep_fnc_grave = compileScript ["core\fnc\rep\grave.sqf"];
 
     //RESPAWN
     btc_respawn_fnc_addTicket = compileScript ["core\fnc\respawn\addTicket.sqf"];

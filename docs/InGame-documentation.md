@@ -139,7 +139,7 @@ When you destroy an hideout or an ammo cache, all the markers related to it will
 ### System:
 At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian.
 ### Good actions:
-Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
+Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, put civilians killed by players in grave near church or chapel (50 m), give banana, remove tag with spraypaint red, succed side mission and destroy cache/hideout will rise your reputation.
 ### Bad actions:
 Bad actions cause bad effects: killing civilians/animals/surrounded or captive enemy, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking locked door, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation.
 

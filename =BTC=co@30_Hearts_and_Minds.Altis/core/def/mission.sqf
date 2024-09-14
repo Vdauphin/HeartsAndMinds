@@ -689,6 +689,7 @@ btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
 btc_rep_bonus_removeTagLetter = 0.5;
 btc_rep_bonus_foodGive = 0.5;
+btc_rep_bonus_grave = 5;
 
 btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;

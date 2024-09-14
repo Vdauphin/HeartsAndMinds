@@ -46,6 +46,7 @@ if (
     };
 
     if !(_isAgent) then {
+        _unit setVariable ["btc_rep_playerKiller", getPlayerUID _instigator];
         private _city = (group _unit) getVariable ["btc_city", objNull];
         if !(isNull _city) then {
             private _civKilled = _city getVariable ["btc_rep_civKilled", []];

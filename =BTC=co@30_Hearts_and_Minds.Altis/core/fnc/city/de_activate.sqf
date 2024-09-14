@@ -98,6 +98,8 @@ btc_tags_server = btc_tags_server - [objNull];
 
 (_city getVariable ["btc_civ_flowers", []]) call CBA_fnc_deleteEntity;
 
+(_city getVariable ["btc_civ_graves", []]) call CBA_fnc_deleteEntity;
+
 if (btc_debug_log) then {
     [format ["count data_units = %1", count _data_units], __FILE__, [false]] call btc_debug_fnc_message;
     [format ["count data_animals = %1", count _data_animals], __FILE__, [false]] call btc_debug_fnc_message;
