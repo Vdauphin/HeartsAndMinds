@@ -123,7 +123,7 @@ private _globalVariableName = format ["btc_%1", _dogTag_taskID];
      };
 }, [_officer_dogtagData, _dogTag_taskID, _taskID, _globalVariableName, _officer, _ehDeleted]] call CBA_fnc_addEventHandlerArgs;
 
-["ace_dogtags_addDogtagItem", {
+["ace_dogtags_broadcastDogtagInfo", {
     params ["_dogTag", "_dogTagData"];
     _thisArgs params ["_officer_dogTagData", "_dogTag_taskID", "_taskID", "_globalVariableName"];
 
