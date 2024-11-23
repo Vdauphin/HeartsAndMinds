@@ -133,8 +133,8 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
             _unit in btc_body_deadPlayers
         ) then {
             deleteMarker (_unit getVariable ["btc_body_deadMarker", ""]);
-            private _deadUnits  = [[[_unit]] call btc_body_fnc_get] call btc_body_fnc_create;
-            private _deadUnit = _deadUnits select 0;
+            private _deadUnits = [[[_unit]] call btc_body_fnc_get] call btc_body_fnc_create;
+            _deadUnit = _deadUnits select 0;
             btc_body_deadPlayers pushBack _deadUnit;
         };
     }];
@@ -156,4 +156,18 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     params ["_explosive", "_dir", "_pitch", "_unit"];
     _explosive setVariable ["btc_side", side group _unit];
     btc_explosives pushBack _this;
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;
+
+["ace_placedInBodyBag", {
+    params ["_patient", "_bodyBag", "_isGrave", "_medic"];
+    if (
+        isNil {_patient getVariable "btc_rep_playerKiller"}
+    ) exitWith {};
+
+    private _killer = _patient getVariable "btc_rep_playerKiller";
+    if (_isGrave) then {
+        [btc_rep_fnc_grave, [_bodyBag, _medic], 0.2] call CBA_fnc_waitAndExecute;
+    } else {
+        _bodyBag setVariable ["btc_rep_playerKiller", _killer];
+    };
+}] call CBA_fnc_addEventHandler;

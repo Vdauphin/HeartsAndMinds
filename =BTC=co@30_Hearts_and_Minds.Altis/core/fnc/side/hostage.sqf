@@ -60,6 +60,12 @@ private _civType = selectRandom btc_civ_type_units;
 private _captive = _group_civ createUnit [_civType, _pos, [], 0, "CAN_COLLIDE"];
 waitUntil {local _captive};
 [_captive, true] call ACE_captives_fnc_setHandcuffed;
+private _i = 0;
+while {insideBuilding _captive < 0.1 && _i < count _buildingPos} do {
+    _pos = _buildingPos select _i;
+    _captive setPosATL _pos;
+    _i = _i + 1;
+};
 
 //// Data side mission
 [_taskID, 15, _captive, [_city getVariable "name", _civType]] call btc_task_fnc_create;

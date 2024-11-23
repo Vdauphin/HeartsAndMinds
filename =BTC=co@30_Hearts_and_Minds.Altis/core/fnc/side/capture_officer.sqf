@@ -140,7 +140,7 @@ for "_i" from 1 to _convoyLength do {
     _trigger setVariable ["captive", _captive];
     _trigger setTriggerArea [15, 15, 0, false];
     _trigger setTriggerActivation [str btc_player_side, "PRESENT", true];
-    _trigger setTriggerStatements ["this", format ["_captive = thisTrigger getVariable 'captive'; deleteVehicle thisTrigger; doStop _captive; [_captive, true] call ace_captives_fnc_setSurrendered; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%4'], 29, _captive] call btc_task_fnc_create; [['%3', '%4'], 21, btc_create_object_point, typeOf btc_create_object_point] call btc_task_fnc_create;", _surrender_taskID, _handcuff_taskID, _back_taskID, _taskID], ""];
+    _trigger setTriggerStatements ["this", format ["_captive = thisTrigger getVariable 'captive'; deleteVehicle thisTrigger; moveOut _captive; doStop _captive; [_captive, true] call ace_captives_fnc_setSurrendered; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%4'], 29, _captive] call btc_task_fnc_create; [['%3', '%4'], 21, btc_create_object_point, typeOf btc_create_object_point] call btc_task_fnc_create;", _surrender_taskID, _handcuff_taskID, _back_taskID, _taskID], ""];
     _trigger attachTo [_captive, [0, 0, 0]];
 
     ["ace_captiveStatusChanged", {

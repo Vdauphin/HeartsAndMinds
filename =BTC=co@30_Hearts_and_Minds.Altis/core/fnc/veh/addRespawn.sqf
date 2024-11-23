@@ -77,13 +77,18 @@ _vehicle addMPEventHandler ["MPKilled", {
         [btc_rep_malus_veh_killed, _instigator] call btc_rep_fnc_change;
     };
 }];
-if (btc_p_respawn_location > 0) then {
-    if (fullCrew [_vehicle, "cargo", true] isNotEqualTo []) then {
+
+if (fullCrew [_vehicle, "cargo", true] isNotEqualTo []) then {
+    if (btc_p_respawn_location > 0) then {
         [
             _vehicle,
             "Deleted",
             {_thisArgs call BIS_fnc_removeRespawnPosition},
             [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition
         ] call CBA_fnc_addBISEventHandler;
+    };
+
+    if (btc_p_respawn_location > 1) then {
+        [_vehicle, false, btc_p_respawn_fromOutsideTimeout >= 4] remoteExecCall ["btc_fob_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
     };
 };
