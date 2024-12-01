@@ -961,6 +961,14 @@
                 <French>Guerre chimique:</French>
                 <Czech>Chemická válka:</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_SIDES">
+                <Original>Chemical side missions:</Original>
+                <French>Missions secondaires chimiques:</French>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY">
+                <Original>Chemical weapon cache probability:</Original>
+                <French>Probabilité de cache d'armes chimique:</French>
+            </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_SPECT">
                 <Original>Spectrum devices:</Original>
                 <French>Appareils à spectre:</French>

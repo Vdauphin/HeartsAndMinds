@@ -401,11 +401,23 @@ class Params {
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
     };
-    class btc_p_chem { // Chemical warfare
+    class btc_p_chem { // Chemical warfare ON / OFF
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM"]);
         values[] = {0,1};
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
+    };
+    class btc_p_chem_sides { // Advanced Chemical warfare setting to activate / deactivate chemical side missions
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_SIDES"]);
+        values[] = {0,1};
+        texts[] = {$STR_DISABLED,$STR_ENABLED};
+        default = 1;
+    };
+    class btc_p_chem_cache_probability { // Advanced Chemical warfare setting to change probability of a chemical weapon cache
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY"]);
+        values[]={0,10,20,30,40,50,60,70,80,90,100};
+        texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
+        default = 50;
     };
     class btc_p_spect { // Spectrum devices
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SPECT"]);
