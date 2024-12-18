@@ -26,8 +26,7 @@ Author:
 params [
     ["_group", grpNull, [grpNull]],
     ["_active_city", objNull, [objNull]],
-    ["_area", btc_patrol_area, [0]],
-    ["_p_chem", btc_p_chem, [false]]
+    ["_area", btc_patrol_area, [0]]
 ];
 
 if (isNil "btc_civilian_id") then {btc_civilian_id = -1;};

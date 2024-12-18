@@ -100,7 +100,7 @@ btc_cache_pos = _cache_pos;
 btc_cache_n = _cache_n;
 btc_cache_info = _cache_info;
 
-[_cache_pos, btc_p_chem, [1, 0] select _isChem] call btc_cache_fnc_create;
+[_cache_pos, btc_p_chem_cache_probability > 0, [1, 0] select _isChem] call btc_cache_fnc_create;
 btc_cache_obj setVariable ["btc_cache_unitsSpawned", _cache_unitsSpawned];
 
 btc_cache_markers = [];

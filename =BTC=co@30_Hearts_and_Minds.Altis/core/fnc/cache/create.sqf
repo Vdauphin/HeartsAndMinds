@@ -8,7 +8,7 @@ Description:
 Parameters:
     _cache_pos - Position of the cache. [Array]
     _p_chem - Allow chemical cache. [Boolean]
-    _probabilityNotChemical - Probability to not create a chemical cache. [Number]
+    _probabilityChemical - Probability to create a chemical cache. [Number]
 
 Returns:
 
@@ -28,13 +28,13 @@ Author:
 
 params [
     ["_cache_pos", btc_cache_pos, [[]]],
-    ["_p_chem", btc_p_chem, [true]],
-    ["_probabilityNotChemical", 0.5, [0]]
+    ["_p_chem", btc_p_chem_cache_probability > 0, [true]],
+    ["_probabilityChemical", btc_p_chem_cache_probability, [0]]
 ];
 
 private _isChem = false;
 if (_p_chem) then {
-    _isChem = random 1 > _probabilityNotChemical;
+    _isChem = random 1 < _probabilityChemical;
 };
 private _cacheType = selectRandom (btc_cache_type select 0);
 btc_cache_obj = _cacheType createVehicle _cache_pos;

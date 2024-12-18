@@ -71,7 +71,7 @@ _player addEventHandler ["WeaponAssembled", {
     _this remoteExecCall ["btc_log_fnc_init", 2];
 }] call CBA_fnc_addEventHandler;
 
-if (btc_p_chem) then {
+if (btc_p_chem_sides || (btc_p_chem_cache_probability > 0)) then {
     // Add biopsy
     [missionNamespace, "probingEnded", btc_chem_fnc_biopsy] call BIS_fnc_addScriptedEventHandler;
 
