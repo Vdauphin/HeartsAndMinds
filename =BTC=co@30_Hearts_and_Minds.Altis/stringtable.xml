@@ -162,7 +162,7 @@
         </Container>
         <Container name="Documentation: Respawn tickets">
             <Key ID="STR_BTC_HAM_DOC_RESPAWN_TEXT">
-                <Original>&lt;img image='\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Introduction:&lt;/marker&gt;&lt;br/&gt; By default, each player has a limited number of respawn tickets. On first join, you get the default number of tickets (20). After, each time you respawn, your number of tickets will decrease by one and a kill in action (KIA) marker will appear after 10 minutes.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_104_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Get new tickets:&lt;/marker&gt;&lt;br/&gt; Players can increase by one ticket if they retrieve their dead body back to base. Prisoners also increase by one ticket but to all currently connected players.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_118_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\medical_gui\ui\bodybag.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Dead player body:&lt;/marker&gt;&lt;br/&gt; Any player can retrieve dead player body by:&lt;br/&gt; - &lt;img image='\z\ace\addons\medical_treatment\ui\bodybag_ca.paa' width='13' height='13'/&gt; Putting dead body in a body bag. Watch out if your vehicle get destroyed, all body bag will be lost!&lt;br/&gt; - Carry it to the logistic point&lt;br/&gt; - Interact with the logistic point&lt;br/&gt; - &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='13' height='13'/&gt; Select "Get tickets from body bag or prisoner"&lt;br/&gt; The ticket from the body bag will go to the player owned the dead body (even if he is not connected).&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_Bodybag_01_black_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\captives\UI\handcuff_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Prisoners:&lt;/marker&gt;&lt;br/&gt; Prisoners &lt;img image='\z\ace\addons\captives\UI\Surrender_ca.paa' width='13' height='13'/&gt; follow the same process as dead player body without the need of body bag. The prisonner need to be alive but it could be unconcious.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_106_co.paa' width='355' height='200'/&gt;</Original>
+                <Original>&lt;img image='\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Introduction:&lt;/marker&gt;&lt;br/&gt; By default, each player has a limited number of respawn tickets. On first join, you get the default number of tickets (20). After, each time you respawn, your number of tickets will decrease by one and a kill in action (KIA) marker will appear after 10 minutes.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_104_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Get new tickets:&lt;/marker&gt;&lt;br/&gt; Players can increase by one ticket if they retrieve their dead body back to base. Prisoners also increase by one ticket but to all currently connected players.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_118_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\medical_gui\ui\bodybag.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Dead player body:&lt;/marker&gt;&lt;br/&gt; Any player can retrieve dead player body by:&lt;br/&gt; - &lt;img image='\z\ace\addons\medical_treatment\ui\bodybag_ca.paa' width='13' height='13'/&gt; Putting dead body in a body bag. Watch out if your vehicle get destroyed, all body bag will be lost!&lt;br/&gt; - Carry it to the logistic point&lt;br/&gt; - Interact with the logistic point&lt;br/&gt; - &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='13' height='13'/&gt; Select "Get tickets from body bag or prisoner"&lt;br/&gt; The ticket from the body bag will go to the player owned the dead body (even if he is not connected). Dead body can also be directly processed. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_Bodybag_01_black_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\captives\UI\handcuff_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Prisoners:&lt;/marker&gt;&lt;br/&gt; Prisoners &lt;img image='\z\ace\addons\captives\UI\Surrender_ca.paa' width='13' height='13'/&gt; follow the same process as dead player body without the need of body bag. The prisonner need to be alive but it could be unconcious.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_106_co.paa' width='355' height='200'/&gt;</Original>
                 <German>&lt;img image='\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Einführung:&lt;/marker&gt;&lt;br/&gt; Standardmäßig hat jeder Spieler eine begrenzte Anzahl von Respawn Tickets. Beim ersten Spawen erhält jeder Spieler standartmäßig 20 Tickets. Mit jedem Respawn wird ein Ticket abgezogen und eine Kill in Action (KIA) Markierung erscheint nach 10 Minuten.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_104_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Tickets auffüllen:&lt;/marker&gt;&lt;br/&gt; Spieler können ein Ticket dazu erhalten, wenn sie ihren Leiche zurück zur Basis bringen. Für jeden zur Basis gebrachten Gefangenen erhält jeder Spieler, welcher sich aktuell auf den Server befindet, ein Ticket dazu.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_118_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\medical_gui\ui\bodybag.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Leiche eines Spielers:&lt;/marker&gt;&lt;br/&gt; Jeder Spieler kann einen toten Spieler bergen, in dem er:&lt;br/&gt; - &lt;img image='\z\ace\addons\medical_treatment\ui\bodybag_ca.paa' width='13' height='13'/&gt; die Leiche eines Spielers in einen Leichensack packt. Achtung! Wenn das Fahrzeug mit Leichensäcken zerstört wird, sind diese verloren!&lt;br/&gt; - Trage die Leichensäcke zum Logistik Punkt&lt;br/&gt; - Interagiere mit dem Logistikpunkt&lt;br/&gt; - &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='13' height='13'/&gt; Wähle: "Erhalte ein Ticket durch Leichensack oder Gefangenen"&lt;br/&gt; Die Leiche des Spielers, welche im Leichensack war, erhält ein Ticket, auch wenn er aktuell nicht auf dem Server ist.&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_Bodybag_01_black_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\captives\UI\handcuff_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Prisoners:&lt;/marker&gt;&lt;br/&gt; Gefangene &lt;img image='\z\ace\addons\captives\UI\Surrender_ca.paa' width='13' height='13'/&gt; folge den gleichen Schritten wie bei Leichen von Spielern, nur ohne Leichensack. Gefangene müssen am Leben sein, können aber Ohnmächtig sein.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_106_co.paa' width='355' height='200'/&gt;</German>
                 <Chinesesimp>&lt;img image='\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;介绍:&lt;/marker&gt;&lt;br/&gt; 默认情况下, 每名玩家都有受限的重生票数。首次进入服务器时, 你会获得默认的重生票数(20)。此后, 每次重生都会使你的重生票数减一, 且地图上将于10分钟后出现阵亡(KIA)标记。&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_104_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;获得新的重生票数:&lt;/marker&gt;&lt;br/&gt; 玩家可以通过将他们的尸体带回基地, 来获得一枚重生票数。带回囚犯也可以为全体在线玩家每人增加一枚重生票数。&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_118_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\medical_gui\ui\bodybag.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;阵亡玩家的尸体:&lt;/marker&gt;&lt;br/&gt; 玩家都可以通过以下方式回收尸体:&lt;br/&gt; - &lt;img image='\z\ace\addons\medical_treatment\ui\bodybag_ca.paa' width='13' height='13'/&gt; 将尸体放进尸体袋。小心, 如果你的载具被摧毁, 其中所有尸体袋都会丢失!&lt;br/&gt; - 将尸体搬运到后勤点&lt;br/&gt; - 与后勤点互动&lt;br/&gt; - &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='13' height='13'/&gt; 选择"回收尸体袋或囚犯以获得重生票数"&lt;br/&gt; 获得的重生票数将会发放给该尸体对应的玩家(即使他不在线)。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_Bodybag_01_black_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\captives\UI\handcuff_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Prisoners:&lt;/marker&gt;&lt;br/&gt; 囚犯 &lt;img image='\z\ace\addons\captives\UI\Surrender_ca.paa' width='13' height='13'/&gt; 遵循与回收玩家尸体相同的流程, 但无需尸体袋。被回收的囚犯必须活着, 但可以出于昏迷状态。&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_106_co.paa' width='355' height='200'/&gt;</Chinesesimp>
                 <Czech>&lt;img image='\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Úvod:&lt;/marker&gt;&lt;br/&gt; Ve výchozím nastavení má každý hráč omezený počet respawn tiketů. Při prvním připojení získáte výchozí počet tiketů (20). Poté, co se znovu objevíte, se váš počet lístků sníží o jeden a po 10 minutách se objeví značka zabití v akci (KIA).&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_104_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Získejte nové vstupenky:&lt;/marker&gt;&lt;br/&gt; Hráči mohou zvýšit o jeden tiket, pokud získají své mrtvé tělo zpět na základnu. Vězni se také zvyšují o jeden tiket, ale všem aktuálně připojeným hráčům.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_118_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\medical_gui\ui\bodybag.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Tělo mrtvého hráče:&lt;/marker&gt;&lt;br/&gt; Každý hráč může získat tělo mrtvého hráče:&lt;br/&gt; - &lt;img image='\z\ace\addons\medical_treatment\ui\bodybag_ca.paa' width='13' height='13'/&gt; Vkládání mrtvého těla do vaku na tělo. Dávejte pozor, pokud se vaše vozidlo zničí, všechno se ztratí!&lt;br/&gt; - Odneste to do logistického bodu.&lt;br/&gt; - Komunikujte s logistickým bodem&lt;br/&gt; - &lt;img image='\A3\Data_F_AoW\Logos\arma3_aow_logo_ca.paa' width='13' height='13'/&gt; Vyberte „Získejte lístky z vaku na tělo nebo vězně“&lt;br/&gt; Lístek z pytle na mrtvoly dostane mrtvé tělo hráče (i když není připojen).&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_Bodybag_01_black_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\captives\UI\handcuff_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt; Vězni &lt;img image='\z\ace\addons\captives\UI\Surrender_ca.paa' width='13' height='13'/&gt; postupujte stejným způsobem jako tělo mrtvého hráče bez potřeby vaku na tělo. Vězeň musí být naživu, ale může být v bezvědomí.&lt;br/&gt;&lt;br/&gt; &lt;img image='a3\Missions_F_AoW\Data\Img\Artwork\Landscape\showcase_aow_picture_106_co.paa' width='355' height='200'/&gt;</Czech>
@@ -254,7 +254,7 @@
                 <Czech>Reputace</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_REPUTATION_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, give banana, remove tag with spraypaint, remove tag with spraypaint red, succeed side mission and destroy cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals surrounded or captive enemy, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;System:&lt;/marker&gt;&lt;br/&gt; At the beginning you have a very low reputation level, so civilians won't help you in revealing important information about the Oplitas, they will likely lie instead. Reputation can be ask to civilian. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_picture_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Good actions:&lt;/marker&gt;&lt;br/&gt; Helping the local population by fighting the Oplitas, disarming IED's, heal civilians, put civilians killed by players in grave near church or chapel (50 m), give banana, remove tag with spraypaint, remove tag with spraypaint red, succeed side mission and destroy, cache/hideout will rise your reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_4_co.paa' width='355' height='200' /&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Bad actions:&lt;/marker&gt;&lt;br/&gt; Bad actions cause bad effects: killing civilians/animals surrounded or captive enemy, mutilating alive/dead civilians/animals, firing near civilians for no reason, firing to civilian car, remove wheels, remove banana, damaging/destroying buildings, breaking door lock, losing player's vehicles and player respawns will decrease your reputation. Aborting a side mission does not affect reputation. &lt;br/&gt;&lt;br/&gt; &lt;img image='\a3\missions_f_orange\Data\Img\AAN\aan_3_3_co.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Data_F_Orange\Logos\arma3_orange_artwork.jpg' width='362' height='512' /&gt; </Original>
                 <Spanish>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; La reputación se puede solicitar a los civiles&lt;br/&gt; Las malas acciones causan malos efectos sobre la reputacion.&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ayudar a la población local luchando contra los Oplitas y desarmando los artefactos explosivos improvisados aumentará tu reputación; matar civiles, mutilar civiles vivos/muertos, disparar cerca de civiles sin razón alguna, disparar a vehículos civiles, dañar/destruir edificios, perder vehículos, respawns de jugadores disminuirá tu reputación. Al principio tienes un nivel de reputación muy bajo, por lo que los civiles no te ayudarán a revelar información importante sobre los Oplitas, es probable que mientan en su lugar.&lt;br/&gt; Abortar una misión secundaria no afecta a la reputación.</Spanish>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; Ihr Ansehen bei der Bevölkerung können Sie bei Zivilisten erfragen &lt;br/&gt; Schlechte bzw. böse Handlungen habe zur Folge das ihr Ansehen sinkt. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Das Unterstützen der lokalen Bevölkerung, das Entschärfen von IEDs und der aktive Kampf gegen die Oplitas wird sich positiv auf ihr Ansehen auswirken. Negative Aktionen wie zb. das Töten oder verstümmeln von Zivlisten, das grundlose Abfeueren einer Waffe in der Nähe von Zivilisten, das Zerstören oder Beschädigen von Gebäuden, der Angriff auf zivile Fahrzeuge, der Verlust von Fahrzeugen im Allgemeinen oder das Respawnen haben hingegen einen nicht so guten Effekt. Zu Beginn ist Ihr Ansehen nur recht gering, weshalb es sein kann das Zivlisten eher zruückhaltend mit Informationen sind. In manchen Fällen werden die Zivilisten Sie auch einfach belügen.&lt;br/&gt; Das Abbrechen von Nebenaufgaben hat keine Auswirkung auf Ihr Ansehen.</German>
                 <Portuguese>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; A Reputação entre a população é obtida por meio dos civis &lt;br/&gt; Ações ruins ou más fazem a reputação diminuir. &lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; Ajudar a população local combatendo os inimigos e desarmando os IED's aumentará sua reputação. Matar civis, mutilar civis vivos/mortos, atirar perto de civis sem motivo, atirar nos veículos civis, danificar/destruir prédios, perder veículos civis, respawns de jogadores diminuirão a reputação. No começo, o nível de reputação é muito baixo, então, os civis não irão ajudá-lo a revelar informações importantes sobre os inimigos ou provavelmente irão mentir.&lt;br/&gt; Cancelar tarefas secundárias não afeta a reputação.</Portuguese>
@@ -687,12 +687,19 @@
                 <French>Emplacements de réapparition disponibles:</French>
                 <Czech>Dostupná místa obnovení:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_RESP_FOBTOBASE">
-                <Original>Allow respawn from FOB to base:</Original>
-                <German>Erlaube Respawn von FOB zur Basis:?</German>
-                <Chinesesimp>允许从FOB重新部署至基地</Chinesesimp>
-                <French>Autoriser la réapparition sur FOB à la base:</French>
-                <Czech>Povolit respawn z FOB na základnu:</Czech>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDEBASE">
+                <Original>Enable respawn menu access from outside the base:</Original>
+                <German>Enable respawn menu access from outside the base:</German>
+                <Chinesesimp>Enable respawn menu access from outside the base:</Chinesesimp>
+                <French>Enable respawn menu access from outside the base:</French>
+                <Czech>Enable respawn menu access from outside the base:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDETIMEOUT">
+                <Original>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Original>
+                <German>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</German>
+                <Chinesesimp>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Chinesesimp>
+                <French>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</French>
+                <Czech>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLY">
                 <Original>FOB and Rallypoint</Original>
@@ -701,12 +708,26 @@
                 <French>FOB et Rallypoint</French>
                 <Czech>FOB and Rallypoint</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOB">
+                <Original>FOB</Original>
+                <German>FOB</German>
+                <Chinesesimp>FOB</Chinesesimp>
+                <French>FOB</French>
+                <Czech>FOB</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELO">
                 <Original>FOB, Rallypoint and Helo</Original>
                 <German>FOB, Ralleypoints und Helo</German>
                 <Chinesesimp>FOB、集合点和可重生载具</Chinesesimp>
                 <French>FOB, Rallypoint et Helo</French>
                 <Czech>FOB, Rallypoint and Helo</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELO">
+                <Original>FOB and Helo</Original>
+                <German>FOB und Helo</German>
+                <Chinesesimp>FOB and Helo</Chinesesimp>
+                <French>FOB et Helo</French>
+                <Czech>FOB and Helo</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELI">
                 <Original>FOB, Rallypoint and Transport helicopter</Original>
@@ -715,12 +736,26 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport</French>
                 <Czech>FOB, Rallypoint a Transportní vrtulník</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELI">
+                <Original>FOB and Transport helicopter</Original>
+                <German>FOB und Transporthubschrauber</German>
+                <Chinesesimp>FOB and Transport helicopter</Chinesesimp>
+                <French>FOB et Hélicoptère de transport</French>
+                <Czech>FOB a Transportní vrtulník</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHI">
                 <Original>FOB, Rallypoint, Transport helicopter and Transport vehicle</Original>
                 <German>FOB, Rallypoints, Transporthubschrauber und Transportfahrzeuge</German>
                 <Chinesesimp>FOB、集合点、运输直升机和运输车辆</Chinesesimp>
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník a Transportní vozidlo</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHI">
+                <Original>FOB, Transport helicopter and Transport vehicle</Original>
+                <German>FOB, Transporthubschrauber und Transportfahrzeuge</German>
+                <Chinesesimp>FOB, Transport helicopter and Transport vehicle</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport</French>
+                <Czech>FOB, Transportní vrtulník a Transportní vozidlo</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHILEADER">
                 <Original>FOB, Rallypoint, Transport helicopter, Transport vehicle and Leader</Original>
@@ -729,12 +764,41 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport et Leader</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER">
+                <Original>FOB, Transport helicopter, Transport vehicle and Player</Original>
+                <German>FOB, Transport helicopter, Transport vehicle and Player</German>
+                <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Player</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport et Joueur</French>
+                <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Player</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_RALLYTIMER">
                 <Original>Time before rallypoint self-destruction:</Original>
                 <German>Zeit, bevor sich Ralleypoints selbst zerstören:?</German>
                 <Chinesesimp>集合点自毁时间:</Chinesesimp>
                 <French>Temps avant l'autodestruction du point de ralliement:</French>
                 <Czech>Doba před sebezničením shromažďovacího bodu:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER">
+                <Original>FOB, Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER">
+                <Original>Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER">
+                <Original>Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTVEHIPLAYER">
+                <Original>Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTPLAYER">
+                <Original>Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
+                <Original>Re-deploy FOB/vehicles</Original>
+                <German>Wiedereinstieg FOB/Fahrzeugen</German>
+                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
+                <French>Se redéployer sur FOB/vehicles</French>
+                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETSATSTART">
                 <Original>Number of tickets at mission start:</Original>
@@ -896,6 +960,14 @@
                 <Chinesesimp>化学战:</Chinesesimp>
                 <French>Guerre chimique:</French>
                 <Czech>Chemická válka:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_SIDES">
+                <Original>Chemical side missions:</Original>
+                <French>Missions secondaires chimiques :</French>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY">
+                <Original>Chemical weapon cache probability:</Original>
+                <French>Probabilité de cache d'armes chimiques :</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_SPECT">
                 <Original>Spectrum devices:</Original>
@@ -1877,6 +1949,18 @@
                 <Czech>Prohledejte a dekontaminujte tohoto civilistu. Sledujte kapku červené krve a použijte svůj chemický detektor.</Czech>
                 <French>Recherchez et décontaminez ce civil. Suivez les gouttes de sang rouge et utilisez votre détecteur chimique.</French>
             </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_TITLE">
+                <Original>%1 massacre</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_DESC">
+                <Original>Civilians were brutally killed in %1. They are requesting your help to move dead bodies in a grave next to a religious building. To locate killed civilians go to the subtask.</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_TITLE">
+                <Original>%1</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_DESC">
+                <Original>Move this killed civilian next to a church and dig a grave.</Original>
+            </Key>
         </Container>
     </Package>
     <Package name="Actions">
@@ -2091,13 +2175,6 @@
                 <Chinesesimp>重新部署至集合点</Chinesesimp>
                 <French>Se redéployer au point de ralliement</French>
                 <Czech>Znovu rozmístěte shromažďovací body</Czech>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
-                <Original>Re-deploy FOB/vehicles</Original>
-                <German>Wiedereinstieg FOB/Fahrzeugen</German>
-                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
-                <French>Se redéployer sur FOB/vehicles</French>
-                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
         </Container>
         <Container name="Action : Arsenal (BIS)">

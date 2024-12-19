@@ -33,7 +33,8 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
     _x params ["_id", "_initialized", "_spawn_more", "_occupied", "_data_units", "_has_ho", "_ho_units_spawned", "_ieds", "_has_suicider",
         ["_data_animals", [], [[]]],
         ["_data_tags", [], [[]]],
-        ["_civKilled", [], [[]]]
+        ["_civKilled", [], [[]]],
+        ["_graves", [], [[]]]
     ];
 
     private _city = btc_city_all get _id;
@@ -49,6 +50,7 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
     _city setVariable ["data_animals", _data_animals];
     _city setVariable ["data_tags", _data_tags];
     _city setVariable ["btc_rep_civKilled", _civKilled];
+    _city setVariable ["btc_rep_graves", _graves];
 
     if (btc_debug) then {
         private _marker = _city getVariable ["marker", ""];
@@ -100,7 +102,7 @@ btc_cache_pos = _cache_pos;
 btc_cache_n = _cache_n;
 btc_cache_info = _cache_info;
 
-[_cache_pos, btc_p_chem, [1, 0] select _isChem] call btc_cache_fnc_create;
+[_cache_pos, btc_p_chem_cache_probability > 0, [1, 0] select _isChem] call btc_cache_fnc_create;
 btc_cache_obj setVariable ["btc_cache_unitsSpawned", _cache_unitsSpawned];
 
 btc_cache_markers = [];
@@ -274,7 +276,7 @@ private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1
         ["_markerChannel", 0, [0]]
     ];
 
-    private _marker = createMarker [format ["_USER_DEFINED #0/%1/%2", _forEachindex, _markerChannel], _markerPos, _markerChannel];
+    private _marker = createMarker [format ["_USER_DEFINED #0/%1/%2 btc_hm", _forEachindex, _markerChannel], _markerPos, _markerChannel];
     _marker setMarkerText _markerText;
     _marker setMarkerColor _markerColor;
     _marker setMarkerType _markerType;

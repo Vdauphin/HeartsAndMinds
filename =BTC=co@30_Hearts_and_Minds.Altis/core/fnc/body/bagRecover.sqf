@@ -27,11 +27,8 @@ params [
 
 private _array = nearestObjects [_logistic, ["ACE_bodyBagObject", "CAManBase"], 10];
 _array = _array select {
-    alive _x && (
-        (_x isKindOf "CAManBase" &&
-        side group _x isEqualTo btc_enemy_side) ||
-        _x isKindOf "ACE_bodyBagObject"
-    )
+    _x isKindOf "CAManBase" ||
+    _x isKindOf "ACE_bodyBagObject"
 };
 if (_array isEqualTo []) exitWith {
     localize "STR_BTC_HAM_O_BODYBAG_NO" call CBA_fnc_notify;

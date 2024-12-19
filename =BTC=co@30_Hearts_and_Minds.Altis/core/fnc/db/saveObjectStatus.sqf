@@ -42,7 +42,8 @@ private _cargo = (_object getVariable ["ace_cargo_loaded", []]) apply {
             _x call btc_body_fnc_dogtagGet,
             magazinesAllTurrets _x,
             _x getVariable ["ace_cargo_customName", ""],
-            [_x] call btc_veh_fnc_propertiesGet
+            [_x] call btc_veh_fnc_propertiesGet,
+            _x getVariable ["btc_rep_playerKiller", ""]
         ]
     };    
 };
@@ -56,5 +57,6 @@ _data pushBack (magazinesAllTurrets _object);
 _data pushBack (_object getVariable ["ace_cargo_customName", ""]);
 _data pushBack (_object getVariable ["btc_tag_vehicle", ""]);
 _data pushBack ([_object] call btc_veh_fnc_propertiesGet);
+_data pushBack (_object getVariable ["btc_rep_playerKiller", ""]);
 
 _data

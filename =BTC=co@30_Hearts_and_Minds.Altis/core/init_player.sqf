@@ -23,6 +23,8 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
     if (btc_p_arsenal_Restrict isEqualTo 3) then {
         [_arsenal_trait select 1] call btc_arsenal_fnc_weaponsFilter;
     };
+
+    btc_fob_timeout = btc_fob_timeout + CBA_missionTime;
     [] call btc_int_fnc_add_actions;
 
     if (player getVariable ["interpreter", false]) then {

@@ -37,7 +37,8 @@ _object_data params [
     ["_turretMagazines", [], [[]]],
     ["_customName", "", [""]],
     ["_tagTexture", "", [""]],
-    ["_properties", [], [[]]]
+    ["_properties", [], [[]]],
+    ["_playerKiller", "", [""]]
 ];
 
 private _obj = createVehicle [_type, ASLToATL _pos, [], 0, "CAN_COLLIDE"];
@@ -74,6 +75,10 @@ if (_tagTexture isNotEqualTo "") then {
 
 if (_properties isNotEqualTo []) then {
     ([_obj] + _properties) call btc_veh_fnc_propertiesSet;
+};
+
+if (_playerKiller isNotEqualTo "") then {
+    _obj setVariable ["btc_rep_playerKiller", _playerKiller];
 };
 
 [_obj] call btc_log_fnc_init;

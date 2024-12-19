@@ -60,6 +60,7 @@ if (isServer) then {
     btc_civ_fnc_create_patrol = compileScript ["core\fnc\civ\create_patrol.sqf"];
     btc_civ_fnc_evacuate = compileScript ["core\fnc\civ\evacuate.sqf"];
     btc_civ_fnc_createFlower = compileScript ["core\fnc\civ\createFlower.sqf"];
+    btc_civ_fnc_createGrave = compileScript ["core\fnc\civ\createGrave.sqf"];
 
     //DATA
     btc_data_fnc_add_group = compileScript ["core\fnc\data\add_group.sqf"];
@@ -168,6 +169,7 @@ if (isServer) then {
     btc_rep_fnc_notify = compileScript ["core\fnc\rep\notify.sqf"];
     btc_rep_fnc_killed = compileScript ["core\fnc\rep\killed.sqf"];
     btc_rep_fnc_wheelChange = compileScript ["core\fnc\rep\wheelChange.sqf"];
+    btc_rep_fnc_grave = compileScript ["core\fnc\rep\grave.sqf"];
 
     //RESPAWN
     btc_respawn_fnc_addTicket = compileScript ["core\fnc\respawn\addTicket.sqf"];
@@ -195,6 +197,7 @@ if (isServer) then {
     btc_side_fnc_EMP = compileScript ["core\fnc\side\EMP.sqf"];
     btc_side_fnc_removeRubbish = compileScript ["core\fnc\side\removeRubbish.sqf"];
     btc_side_fnc_pandemic = compileScript ["core\fnc\side\pandemic.sqf"];
+    btc_side_fnc_massacre = compileScript ["core\fnc\side\massacre.sqf"];
 
     //TAG
     btc_tag_fnc_initArea = compileScript ["core\fnc\tag\initArea.sqf"];
@@ -351,6 +354,7 @@ if (!isDedicated) then {
     btc_fob_fnc_rallypointAssemble = compileScript ["core\fnc\fob\rallypointAssemble.sqf"];
     btc_fob_fnc_redeploy = compileScript ["core\fnc\fob\redeploy.sqf"];
     btc_fob_fnc_redeployCheck = compileScript ["core\fnc\fob\redeployCheck.sqf"];
+    btc_fob_fnc_addInteraction = compileScript ["core\fnc\fob\addInteraction.sqf"];
 
     //INT
     btc_int_fnc_add_actions = compileScript ["core\fnc\int\add_actions.sqf"];

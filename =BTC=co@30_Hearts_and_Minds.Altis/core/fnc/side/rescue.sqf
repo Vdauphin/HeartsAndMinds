@@ -78,6 +78,7 @@ private _back_taskID = _taskID + "bk";
 private _units = [];
 private _triggers = [];
 {
+    _x setVariable ["kjw_imposters_core_ignore", true, true]; // Prevent KJW Imposters from resetting captive state
     _x setCaptive true;
     removeAllWeapons _x;
     _x setBehaviour "CARELESS";

@@ -30,7 +30,11 @@ private _ticket = 0;
 private _UID = _bodyBag getVariable ["btc_UID", ""];
 private _players = [];
 if (_UID isEqualTo "") then {
-    if (alive _bodyBag && _bodyBag isKindOf "CAManBase") then {
+    if (
+        alive _bodyBag &&
+        _bodyBag isKindOf "CAManBase" &&
+         side group _bodyBag isEqualTo btc_enemy_side
+    ) then {
         _ticket = btc_body_prisonerTicket;
 
         switch (btc_p_respawn_ticketsFromPrisoners) do { 

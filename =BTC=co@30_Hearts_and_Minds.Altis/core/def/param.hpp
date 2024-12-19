@@ -77,17 +77,23 @@ class Params {
         texts[]={""};
         default = 0;
     };
+    class btc_p_respawn_fromOutsideBase { // Enable respawn menu access from outside the base:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_OUTSIDEBASE"]);
+        values[]={0,1,2,3,4,5};
+        texts[]={$STR_DISABLED, $STR_BTC_HAM_RESP_FOB, $STR_BTC_HAM_RESP_FOBHELO, $STR_BTC_HAM_RESP_FOBHELI, $STR_BTC_HAM_RESP_FOBHELIVEHI, $STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER};
+        default = 0;
+    };
+    class btc_p_respawn_fromOutsideTimeout { // Add a 1 min timeout for accessing the respawn menu for:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_OUTSIDETIMEOUT"]);
+        values[]={0,1,2,3,4,5};
+        texts[]={$STR_DISABLED, $STR_BTC_HAM_RESP_TIMEOUTPLAYER, $STR_BTC_HAM_RESP_TIMEOUTVEHIPLAYER, $STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER, $STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER, $STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER};
+        default = 0;
+    };
     class btc_p_respawn_location { // Respawn locations available:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_LOCATION"]);
         values[]={0,1,2,3,4};
         texts[]={$STR_BTC_HAM_RESP_FOBRALLY, $STR_BTC_HAM_RESP_FOBRALLYHELO, $STR_BTC_HAM_RESP_FOBRALLYHELI, $STR_BTC_HAM_RESP_FOBRALLYHELIVEHI, $STR_BTC_HAM_RESP_FOBRALLYHELIVEHILEADER};
         default = 4;
-    };
-    class btc_p_respawn_fromFOBToBase { // Allow respawn from FOB to base:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_FOBTOBASE"]);
-        values[]={0,1};
-        texts[]={$STR_DISABLED, $STR_ENABLED};
-        default = 0;
     };
     class btc_p_rallypointTimer { // Time before rallypoint self-destruction:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_RALLYTIMER"]);
@@ -395,11 +401,17 @@ class Params {
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
     };
-    class btc_p_chem { // Chemical warfare
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM"]);
+    class btc_p_chem_sides { // Toggle chemical side missions:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_SIDES"]);
         values[] = {0,1};
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
+    };
+    class btc_p_chem_cache_probability { // Chemical weapon cache probability:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY"]);
+        values[]={0,10,20,30,40,50,60,70,80,90,100};
+        texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
+        default = 50;
     };
     class btc_p_spect { // Spectrum devices
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SPECT"]);

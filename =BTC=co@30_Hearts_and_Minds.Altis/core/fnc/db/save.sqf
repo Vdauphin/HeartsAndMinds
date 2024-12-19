@@ -58,6 +58,7 @@ private _cities_status = [];
     _city_status pushBack (_y getVariable ["data_animals", []]);
     _city_status pushBack (_y getVariable ["data_tags", []]);
     _city_status pushBack (_y getVariable ["btc_rep_civKilled", []]);
+    _city_status pushBack (_y getVariable ["btc_rep_graves", []]);
 
     _cities_status pushBack _city_status;
     if (btc_debug_log) then {
@@ -146,7 +147,8 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
         ["_turretMagazines", [], [[]]],
         ["_notuse", "", [""]],
         ["_tagTexture", "", [""]],
-        ["_properties", [], [[]]]
+        ["_properties", [], [[]]],
+        ["_playerKiller", "", [""]]
     ];
 
     private _data = [];
@@ -165,6 +167,7 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
     _data pushBack _turretMagazines;
     _data pushBack _tagTexture;
     _data pushBack _properties;
+    _data pushBack _playerKiller;
 
     private _fakeViV = isVehicleCargo attachedTo _x;
     if (
