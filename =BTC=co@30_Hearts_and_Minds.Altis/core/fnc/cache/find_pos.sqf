@@ -31,6 +31,8 @@ if (_useful isEqualTo []) then {_useful = _city_all;};
 
 private _city = selectRandom _useful;
 
+if (!(btc_cache_cityID isEqualTo []) && count btc_cache_cityID > btc_cache_n) then {_city = btc_city_all get (btc_cache_cityID select btc_cache_n)};
+
 if (_city getVariable ["type", ""] in ["NameLocal", "Hill", "NameMarine"]) exitWith {
     [] call btc_cache_fnc_find_pos;
 };
