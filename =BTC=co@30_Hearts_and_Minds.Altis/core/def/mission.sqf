@@ -197,7 +197,7 @@ if (isServer) then {
     btc_spect_emp = []; publicVariable "btc_spect_emp"; //Preserve reference
 
     //Cache
-	btc_cache_cityID = []; // List of city ID visible in debug mode for custom cache location
+    btc_cache_cityID = []; // List of city ID visible in debug mode for custom cache location
     btc_cache_type = [
         _allClassSorted select {
             _x isKindOf "ReammoBox_F" &&
