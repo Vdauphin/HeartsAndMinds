@@ -27,11 +27,13 @@ params [
 
 private _useful = _city_all select {_x getVariable ["occupied", false] && {!(_x getVariable ["type", ""] in ["NameLocal", "Hill", "NameMarine"])}};
 
+if (!(btc_cache_cityID isEqualTo []) && count btc_cache_cityID > btc_cache_n) then {
+    _useful = _useful select {_x getVariable ["id",-1] == (btc_cache_cityID select btc_cache_n)};
+};
+
 if (_useful isEqualTo []) then {_useful = _city_all;};
 
 private _city = selectRandom _useful;
-
-if (!(btc_cache_cityID isEqualTo []) && count btc_cache_cityID > btc_cache_n) then {_city = btc_city_all get (btc_cache_cityID select btc_cache_n)};
 
 if (_city getVariable ["type", ""] in ["NameLocal", "Hill", "NameMarine"]) exitWith {
     [] call btc_cache_fnc_find_pos;
