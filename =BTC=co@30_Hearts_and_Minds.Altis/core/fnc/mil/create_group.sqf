@@ -50,7 +50,7 @@ if (_wp isEqualTo "HOUSE") then { // Find building
 };
 
 _group_structure params ["_numberOfGroup", "_structure"];
-private _pos_iswater = surfaceIsWater _pos;
+private _pos_iswater = (surfaceIsWater _pos) && {getTerrainHeightASL _pos < -1};
 private _hashMapGroup = createHashMap;
 _hashMapGroup set ["_pos", _pos];
 if (
