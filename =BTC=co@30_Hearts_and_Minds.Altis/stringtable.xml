@@ -473,14 +473,14 @@
                 <French>&lt;&lt; Options de spawn &gt;&gt;</French>
                 <Czech>&lt;&lt; Spawn možnosti &gt;&gt;</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_ISOCCUPIED_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_ISOCCUPIED_DENSITY">
                 <Original>Density of occupied city:</Original>
                 <German>Density of occupied city:</German>
                 <Chinesesimp>被敌军占领城市的密度:</Chinesesimp>
                 <French>Densité de villes occupées:</French>
                 <Czech>Hustota obsazeného města:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_ENEMY_DENSITY">
                 <Original>Enemy density:</Original>
                 <German>Feinddichte:</German>
                 <Chinesesimp>敌军密度:</Chinesesimp>
@@ -488,13 +488,13 @@
                 <French>Densité des énnemies:</French>
                 <Czech>Hustota nepřátel:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_ENEMY_STATIC_DENSITY">
                 <Original>Enemy static density:</Original>
                 <Chinesesimp>敌军固定式武器密度:</Chinesesimp>
                 <French>Densité des armes statiques ennemies:</French>
                 <Czech>Statická hustota nepřítele:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_CIVILIAN_DENSITY">
                 <Original>Civilian density:</Original>
                 <German>Zivilistendichte:</German>
                 <Chinesesimp>平民密度:</Chinesesimp>
@@ -502,13 +502,13 @@
                 <French>Densité des civil:</French>
                 <Czech>Civilní hustota:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_ANIMALS_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_ANIMALS_DENSITY">
                 <Original>Animal density:</Original>
                 <Chinesesimp>动物密度:</Chinesesimp>
                 <French>Densité des animaux:</French>
                 <Czech>Hustota zvířat:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_MIL_INHOUSE_DENSITY">
                 <Original>Density of military in house:</Original>
                 <German>Feinddichte in Gebäuden:</German>
                 <Chinesesimp>建筑物中的敌军密度:</Chinesesimp>
@@ -532,7 +532,7 @@
                 <French>Ajouter des véhicules armés dans les missions secondaires / les caches d'armes:</French>
                 <Czech>Přidejte ozbrojená vozidla do vedlejší mise/mezipaměti:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_PATROL_MAX">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_PATROL_MAX">
                 <Original>Maximum number of military patrol:</Original>
                 <German>Maximale Anzahl feindl. Patrouillen:</German>
                 <Chinesesimp>敌方巡逻队数量上限:</Chinesesimp>
@@ -540,7 +540,7 @@
                 <French>Nombre maximum de patrouilles militaires:</French>
                 <Czech>Maximální počet vojenských hlídek:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_PARAM_SPWAN_CIV_MAX_VEH">
+            <Key ID="STR_BTC_HAM_PARAM_SPAWN_CIV_MAX_VEH">
                 <Original>Maximum number of civilian patrol:</Original>
                 <German>Maximale Anzahl an ziviler Fahrzeuge:</German>
                 <Chinesesimp>民用车辆数量上限:</Chinesesimp>

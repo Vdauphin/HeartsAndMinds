@@ -186,37 +186,37 @@ class Params {
         default = 0;
     };
     class btc_p_density_of_occupiedCity { // Density of city occupied:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ISOCCUPIED_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ISOCCUPIED_DENSITY"]);
         values[]={0,10,20,30,40,45,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","45%","50%","60%","70%","80%","90%","100%"};
         default = 45;
     };
     class btc_p_mil_group_ratio { // Enemy density:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ENEMY_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 40;
     };
     class btc_p_wp_houseDensity { // Density of military in house: (Can't be above 100%)
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_MIL_INHOUSE_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 50;
     };
     class btc_p_mil_static_group_ratio { // Enemy static density:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ENEMY_STATIC_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 30;
     };
     class btc_p_civ_group_ratio { // Civilian density:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_CIVILIAN_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 50;
     };
     class btc_p_animals_group_ratio { // Animal density:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ANIMALS_DENSITY"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ANIMALS_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 100;
@@ -234,13 +234,13 @@ class Params {
         default = 0;
     };
     class btc_p_patrol_max { // Maximum number of military patrol:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_PATROL_MAX"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_PATROL_MAX"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"1","2","3","4","5","6","7","8","9","10"};
         default = 9;
     };
     class btc_p_civ_max_veh { // Maximum number of civilian patrol:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIV_MAX_VEH"]);
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_CIV_MAX_VEH"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
         texts[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
         default = 10;
